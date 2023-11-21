@@ -1,0 +1,76 @@
+{% extends "layout-gov.html" %}
+
+{% block pageTitle %}
+Create your profile
+{% endblock %}
+
+{% block content %}
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+        <form id="profileSetupPage" name="profileDetails" action="/hcp-e2e-journey-v06/profile-06" method="post">
+            
+            <!-- ERROR STATE -->
+            <div class="govuk-error-summary" data-module="govuk-error-summary">
+                <div role="alert">
+                  <h2 class="govuk-error-summary__title">
+                    There is a problem
+                  </h2>
+                  <div class="govuk-error-summary__body">
+                    <ul class="govuk-list govuk-error-summary__list">
+                      <li>
+                        <a href="#organisationName">Enter your organisation's name</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+            <div class="govuk-form-group govuk-form-group--error">
+                <fieldset class="govuk-fieldset">
+                    <legend class="govuk-fieldset__legend govuk-fieldset__legend--l"
+                        for="organisationName">
+                        <span class="govuk-caption-l">Section 5 of 6</span>
+                        <h1 class="govuk-fieldset__heading">
+                            What is the name of the organisation where you work?
+                        </h1>
+                    </legend>
+                    <div id="organisationName-hint" class="govuk-hint">This could be your Trust, Clinical Commissioning Group (CCG), or surgery. </div>
+                    <!--ERROR LEGEND -->
+                    <p id="role-error" class="govuk-error-message">
+                        <span class="govuk-visually-hidden">Error:</span> Enter your organisation's name
+                    </p>
+                    <!-- END ERROR -->
+                    <input class="govuk-input govuk-input--width-20" id="organisationName"
+                    name="organisationName" type="text" autocomplete="off">
+
+
+                </fieldset>
+            </div>
+
+            <!-- Submit button -->
+            <div class="govuk-button-group">
+                <button id="" class="govuk-button" data-module="govuk-button" onclick="saveHCPOrgNamev06(); resetChangeFn();">
+                    Save and continue
+                </button>
+            </div>
+        </form>
+
+    </div>
+
+    <!-- Side panel 
+    <div class="govuk-grid-column-one-third">
+        <div class="app-step-nav-related app-step-nav-related--singular">
+            <h2 class="app-step-nav-related__heading">Get help</h2>
+            <p class="govuk-body"><a class="govuk-link"
+                    href="https://ds1500-prototype.herokuapp.com/sr1-1/sr1-guidance#patients-may-not-know-true-nature-of-illness"
+                    target="_blank">How to complete the SR1 form (opens in a new tab)</a></p>
+            <ul class="govuk-list">
+                <li>Email: <a href="mailto:sr1.servicedesk@nhs.net">sr1.servicedesk@nhs.net</a></li>
+                <li>Telephone: 0300 303 5035</li>
+            </ul>
+        </div>
+    </div>
+    -->
+</div>
+{% endblock %}

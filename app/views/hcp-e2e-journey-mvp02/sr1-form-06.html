@@ -1,0 +1,124 @@
+{% extends "layout-gov-reduced.html" %}
+
+{% block pageTitle %}
+What date did the patient meet the Special Rules? – Send an SR1 – GOV.UK
+{% endblock %}
+
+{% block content %}
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+        <form id="sendAnSR1Form" action="/hcp-e2e-journey-mvp02/sr1-form-09-radio" method="post">
+            <div class="govuk-form-group">
+                <fieldset class="govuk-fieldset">
+                    <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+                        <span class="govuk-caption-l"> Question 7 of 17</span>
+                        <h1 class="govuk-fieldset__heading">
+                            What date did the patient meet the Special Rules?
+                        </h1>
+                    </legend>
+
+                    <!-- Date from which the patient is thought to meet the Special Rules -->
+                    <p class="govuk-body">
+                        This could be any date from the date of diagnosis to when you complete this SR1 form. If you do not know the exact day, use the first of the month.
+                    </p>
+                    <p class="govuk-body">
+                        Providing this information will ensure your patient is paid from the correct date.
+                    </p>
+                    <div id="dateofSpecialRules-hint" class="govuk-hint">
+                        For example, 27 3 2007.
+                    </div>
+                    <div class="govuk-date-input" id="dateofSpecialRules">
+                        <div class="govuk-date-input__item">
+                            <div class="govuk-form-group">
+                                <label class="govuk-label govuk-date-input__label" for="dateofSpecialRules-day">
+                                    Day
+                                </label>
+                                <input autocomplete="off"
+                                    class="govuk-input govuk-date-input__input govuk-input--width-2"
+                                    id="dateofSpecialRules-day" name="dateofSpecialRules-day" type="text"
+                                    inputmode="numeric" onkeypress="return isNumberKey(event)" maxlength="2">
+                            </div>
+                        </div>
+                        <div class="govuk-date-input__item">
+                            <div class="govuk-form-group">
+                                <label class="govuk-label govuk-date-input__label" for="dateofSpecialRules-month">
+                                    Month
+                                </label>
+                                <input autocomplete="off"
+                                    class="govuk-input govuk-date-input__input govuk-input--width-2"
+                                    id="dateofSpecialRules-month" name="dateofSpecialRules-month" type="text"
+                                    inputmode="numeric" onkeypress="return isNumberKey(event)" maxlength="2">
+                            </div>
+                        </div>
+                        <div class="govuk-date-input__item">
+                            <div class="govuk-form-group">
+                                <label class="govuk-label govuk-date-input__label" for="dateofSpecialRules-year">
+                                    Year
+                                </label>
+                                <input autocomplete="off"
+                                    class="govuk-input govuk-date-input__input govuk-input--width-4"
+                                    id="dateofSpecialRules-year" name="dateofSpecialRules-year" type="text"
+                                    inputmode="numeric" onkeypress="return isNumberKey(event)" maxlength="4">
+                            </div>
+                        </div>
+                    </div>
+
+                </fieldset>
+            </div>
+
+            <!-- Submit button -->
+            <div class="govuk-button-group">
+                <button id="" class="govuk-button" data-module="govuk-button"
+                    onclick="saveDateofSpecialRulesSR1Formmvp02()">
+                    Save and continue
+                </button>
+                <a class="govuk-link" onclick="saveAndLeave()" style="color:#1d70b8;" aria-label="Return to SR1 form question list" href="#">Return to SR1 form question list</a>
+            </div>
+        </form>
+        <div class="govuk-!-padding-bottom-9"></div>
+
+        <!--Get help bottom-->
+        <hr class="govuk-section-break govuk-section-break--visible" aria-hidden="true">
+        <section class="govuk-width-container govuk-!-margin-top-7 govuk-!-margin-bottom-7 ">
+            <div class="govuk-grid-row">
+                <div class="govuk-grid-column-full">
+                    <h2 class="govuk-heading-m">Get help</h2>
+                    <p class="govuk-body"><a class="govuk-link"
+                            href="https://www.gov.uk/government/publications/special-rules-for-end-of-life-healthcare-professional-resources"
+                            target="_blank">How to complete the SR1 form (opens in a new tab)</a></p>
+                    <ul class="govuk-list">
+                        <li>Email: <a href="mailto:ssd.nationalservicedesk@nhs.net">ssd.nationalservicedesk@nhs.net</a></li>
+                        <li>Telephone: 0300 303 5035</li>
+                        <li class="govuk-!-margin-top-5">All services are available Monday to Friday, 9am to 5pm (except public holidays)</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+    <!-- Side panel
+        <div class="govuk-grid-column-one-third">
+            <div class="app-step-nav-related app-step-nav-related--singular">
+                <h2 class="app-step-nav-related__heading">Get help</h2>
+                <p class="govuk-body"><a  class="govuk-link" href="https://www.gov.uk/government/publications/special-rules-for-end-of-life-healthcare-professional-resources" target="_blank">How to complete the SR1 form (opens in a new tab)</a></p>
+                <ul class="govuk-list">
+                    <li>Email: <a href="mailto:sr1.servicedesk@nhs.net">sr1.servicedesk@nhs.net</a></li>
+                    <li>Telephone: 0300 303 5035</li>
+                </ul>
+            </div>
+        </div> -->
+</div>
+
+<script>
+    // get and set in this order - this ensures what is sent in query is the same as what is in the localStorage
+    const saveAndLeave = () => {
+       //saveDateofSpecialRulesSR1Formmvp02();
+
+        const origin = window.location.origin;
+        const url = getUrlWithSR1DataAsQueryParamsmvp02(origin, "/hcp-e2e-journey-mvp02/task-list-sr1-form");
+
+        window.location.replace(url.toString());
+    }
+</script>
+{% endblock %}

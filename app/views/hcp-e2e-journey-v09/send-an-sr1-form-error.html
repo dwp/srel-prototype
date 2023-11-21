@@ -1,0 +1,515 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Send an SR1 form
+{% endblock %}
+
+{% block content %}
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+        <form id="sendAnSR1Form" action="/hcp-e2e-journey-v09/check-sr1-form" method="post" autocomplete="off">
+            <div class="govuk-form-group">
+                <div class="govuk-error-summary" data-module="govuk-error-summary">
+
+                    <div role="alert">
+                        <h2 class="govuk-error-summary__title">
+                            A field is missing
+                        </h2>
+
+                        <div class="govuk-error-summary__body">
+                            <ul class="govuk-list govuk-error-summary__list">
+                                <li>
+                                    <a href="#treatment">Enter treatment details</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <fieldset class="govuk-fieldset">
+                    <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+                        <h1 class="govuk-fieldset__heading">
+                            Send an SR1 form
+                        </h1>
+                    </legend>
+
+                    <p class="govuk-body">You can save your progress after each section. Your profile details have
+                        automatically been used to complete parts of this form.</p>
+                    <p class="govuk-body">Incomplete SR1 forms will be deleted after 30 days.</p>
+
+                    <!-- PATIENT DETAILS -->
+                    <h2 class="govuk-heading-l">Patient details</h2>
+
+                    <!-- First name -->
+                    <div class="govuk-form-group">
+                        <label class="govuk-label" for="firstName">
+                            <strong>First name</strong>
+                        </label>
+                        <input class="govuk-input govuk-input--width-20" id="firstName" name="firstName" type="text"
+                            value="Gina" spellcheck="false" onkeypress="return isNumberKey(event)"
+                            autocomplete="firstName">
+                    </div>
+
+                    <!-- Surname -->
+                    <div class="govuk-form-group">
+                        <label class="govuk-label" for="surname">
+                            <strong>Last name</strong>
+                        </label>
+                        <input class="govuk-input govuk-input--width-20" id="surname" name="surname" type="text"
+                            value="Jones" spellcheck="false" onkeypress="return isNumberKey(event)"
+                            autocomplete="surname">
+                    </div>
+
+                    <!-- Patient address -->
+                    <div class="govuk-form-group">
+                        <label class="govuk-label" for="patientaddressline1">
+                            <strong>Address</strong>
+                        </label>
+                        <textarea class="govuk-textarea govuk-input--width-20" id="patientaddressline1" name="patientaddressline1"
+                            rows="5" autocomplete="patientaddressline1">10 Candy Street, Brighton</textarea>
+                    </div>
+
+                    <!-- Patient postcode -->
+                    <div class="govuk-form-group">
+                        <label class="govuk-label" for="patientPostcode">
+                            <strong>Postcode</strong>
+                        </label>
+                        <input autocomplete="off" class="govuk-input govuk-input--width-10" id="patientPostcode"
+                            name="patientPostcode" type="text" value="B13 EG" spellcheck="false"
+                            onkeypress="return isNumberKey(event)" autocomplete="patientPostcode">
+                    </div>
+
+                    <!-- Date of birth -->
+                    <div class="govuk-form-group">
+                        <fieldset class="govuk-fieldset" role="group" aria-describedby="dob-hint">
+                            <legend class="govuk-fieldset__legend">
+                                <strong>Date of birth</strong>
+                            </legend>
+                            <div id="dob-hint" class="govuk-hint">
+                                For example, 27 3 2007
+                            </div>
+                            <div class="govuk-date-input" id="dob">
+                                <div class="govuk-date-input__item">
+                                    <div class="govuk-form-group">
+                                        <label class="govuk-label govuk-date-input__label" for="dob-day">
+                                            Day
+                                        </label>
+                                        <input class="govuk-input govuk-date-input__input govuk-input--width-2"
+                                            id="dob-day" name="dob-day" type="text" inputmode="numeric" value="01"
+                                            autocomplete="dob-day" onkeypress="return isNumberKey(event)" maxlength="2">
+                                    </div>
+                                </div>
+                                <div class="govuk-date-input__item">
+                                    <div class="govuk-form-group">
+                                        <label class="govuk-label govuk-date-input__label" for="dob-month">
+                                            Month
+                                        </label>
+                                        <input class="govuk-input govuk-date-input__input govuk-input--width-2"
+                                            id="dob-month" name="dob-month" type="text" inputmode="numeric" value="10"
+                                            autocomplete="dob-month" onkeypress="return isNumberKey(event)"
+                                            maxlength="2">
+                                    </div>
+                                </div>
+                                <div class="govuk-date-input__item">
+                                    <div class="govuk-form-group">
+                                        <label class="govuk-label govuk-date-input__label" for="dob-year">
+                                            Year
+                                        </label>
+                                        <input class="govuk-input govuk-date-input__input govuk-input--width-5"
+                                            id="dob-year" name="dob-year" type="text" inputmode="numeric" value="1948"
+                                            autocomplete="dob-year" onkeypress="return isNumberKey(event)"
+                                            maxlength="4">
+                                    </div>
+                                </div>
+                            </div>
+
+                        </fieldset>
+                    </div>
+
+                    <!-- National Insurance number -->
+                    <div class="govuk-form-group">
+                        <label class="govuk-label" for="niNo">
+                            <strong>National Insurance number</strong>
+                        </label>
+                        <input class="govuk-input govuk-input--width-10" id="niNo" name="niNo" type="text"
+                            value="AS947091" spellcheck="false" autocomplete="niNo">
+                    </div>
+
+                    <!-- Date from which the patient is thought to meet the Special Rules -->
+                    <div class="govuk-form-group">
+                        <fieldset class="govuk-fieldset" role="group" aria-describedby="dateofSpecialRules-hint">
+                            <legend class="govuk-fieldset__legend">
+                                <strong>Date from which the patient is thought to meet the Special Rules</strong>
+                            </legend>
+                            <div id="dateofSpecialRules-hint" class="govuk-hint">
+                                For example, 27 3 2007
+                            </div>
+                            <div class="govuk-date-input" id="dateofSpecialRules">
+                                <div class="govuk-date-input__item">
+                                    <div class="govuk-form-group">
+                                        <label class="govuk-label govuk-date-input__label" for="dateofSpecialRules-day">
+                                            Day
+                                        </label>
+                                        <input class="govuk-input govuk-date-input__input govuk-input--width-2"
+                                            id="dateofSpecialRules-day" name="dateofSpecialRules-day" type="text"
+                                            inputmode="numeric" value="30" autocomplete="off"
+                                            onkeypress="return isNumberKey(event)" maxlength="2">
+                                    </div>
+                                </div>
+                                <div class="govuk-date-input__item">
+                                    <div class="govuk-form-group">
+                                        <label class="govuk-label govuk-date-input__label"
+                                            for="dateofSpecialRules-month">
+                                            Month
+                                        </label>
+                                        <input class="govuk-input govuk-date-input__input govuk-input--width-2"
+                                            id="dateofSpecialRules-month" name="dateofSpecialRules-month" type="text"
+                                            inputmode="numeric" value="10" autocomplete="off" onkeypress="return"
+                                            onkeypress="return isNumberKey(event)" maxlength="2">
+                                    </div>
+                                </div>
+                                <div class="govuk-date-input__item">
+                                    <div class="govuk-form-group">
+                                        <label class="govuk-label govuk-date-input__label"
+                                            for="dateofSpecialRules-year">
+                                            Year
+                                        </label>
+                                        <input class="govuk-input govuk-date-input__input govuk-input--width-5"
+                                            id="dateofSpecialRules-year" name="dateofSpecialRules-year" type="text"
+                                            inputmode="numeric" value="2022" autocomplete="dateofSpecialRules-year"
+                                            onkeypress="return isNumberKey(event)" maxlength="4">
+                                    </div>
+                                </div>
+                            </div>
+
+                        </fieldset>
+                    </div>
+
+                    <!-- Save patient details progress button -->
+                    <div class="govuk-button-group">
+                        <button id="savePatientDetailsBtn" class="govuk-button govuk-button--secondary"
+                            data-module="govuk-button" onclick="hcpv09SavePatientDetails(event)">
+                            Save as draft
+                        </button>
+                    </div>
+
+                    <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+
+
+
+                    <!-- DIAGNOSIS -->
+                    <h2 class="govuk-heading-l">Diagnosis</h2>
+
+                    <!-- What is the diagnosis? -->
+                    <div class="govuk-character-count" data-module="govuk-character-count" data-maxlength="250">
+                        <div class="govuk-form-group">
+                            <label class="govuk-label" for="whatIsTheDiagnosis">
+                                <strong>What is the diagnosis?</strong>
+                            </label>
+                            <textarea class="govuk-textarea govuk-input--width-20 govuk-js-character-count"
+                                id="whatIsTheDiagnosis" name="whatIsTheDiagnosis" rows="5"
+                                autocomplete="whatIsTheDiagnosis"
+                                onkeyup="resetSaveDiagnosisDetailsBtn()">End stage COPD</textarea>
+                        </div>
+                        <div id="whatIsTheDiagnosis-info" class="govuk-hint govuk-character-count__message">You can
+                            enter up to 250 characters</div>
+                    </div>
+
+
+                    <!-- Date of diagnosis -->
+                    <div class="govuk-form-group">
+                        <fieldset class="govuk-fieldset" role="group" aria-describedby="dod-hint">
+                            <legend class="govuk-fieldset__legend">
+                                <strong>Date of diagnosis</strong>
+                            </legend>
+                            <div id="dod-hint" class="govuk-hint">
+                                For example, 3 2007
+                            </div>
+                            <div class="govuk-date-input" id="dod">
+                                <div class="govuk-date-input__item">
+                                    <div class="govuk-form-group">
+                                        <label class="govuk-label govuk-date-input__label" for="dod-month">
+                                            Month
+                                        </label>
+                                        <input class="govuk-input govuk-date-input__input govuk-input--width-2"
+                                            id="dod-month" name="dod-month" type="text" inputmode="numeric" value="08"
+                                            autocomplete="dod-month" onkeypress="return isNumberKey(event)"
+                                            maxlength="2">
+                                    </div>
+                                </div>
+                                <div class="govuk-date-input__item">
+                                    <div class="govuk-form-group">
+                                        <label class="govuk-label govuk-date-input__label" for="dod-year">
+                                            Year
+                                        </label>
+                                        <input class="govuk-input govuk-date-input__input govuk-input--width-5"
+                                            id="dod-year" name="dod-year" type="text" inputmode="numeric" value="2022"
+                                            autocomplete="dod-year" onkeypress="return isNumberKey(event)"
+                                            maxlength="4">
+                                    </div>
+                                </div>
+                            </div>
+
+                        </fieldset>
+                    </div>
+
+                    <!-- Other relevant diagnosis? (optional) -->
+                    <div class="govuk-character-count" data-module="govuk-character-count" data-maxlength="250">
+                        <div class="govuk-form-group">
+                            <label class="govuk-label" for="otherRelevantDiagnosis">
+                                <strong>Other relevant diagnosis? (optional)</strong>
+                            </label>
+                            <textarea class="govuk-textarea govuk-input--width-20 govuk-js-character-count"
+                                id="otherRelevantDiagnosis" name="otherRelevantDiagnosis" rows="5"
+                                aria-describedby="otherRelevantDiagnosis-info"
+                                autocomplete="otherRelevantDiagnosis-info"
+                                onkeyup="resetSaveDiagnosisDetailsBtn()">Frailty</textarea>
+                        </div>
+                        <div id="otherRelevantDiagnosis-info" class="govuk-hint govuk-character-count__message">You can
+                            enter up to 200 characters</div>
+                    </div>
+
+                    <!-- Is the patient aware of their diagnosis? -->
+                    <div class="govuk-form-group">
+                        <fieldset class="govuk-fieldset">
+                            <legend class="govuk-fieldset__legend">
+                                <strong>Is the patient aware of their diagnosis?</strong>
+                            </legend>
+
+                            <div class="govuk-radios govuk-radios--inline" data-module="govuk-radios">
+                                <div class="govuk-radios__item">
+                                    <input class="govuk-radios__input" id="awareOfDiagnosisYes" name="awareOfDiagnosis"
+                                        type="radio" value="yes"
+                                        onclick="hcp4AwareOfDiagnosis(this); resetSaveDiagnosisDetailsBtn()">
+                                    <label class="govuk-label govuk-radios__label" for="awareOfDiagnosis">
+                                        Yes
+                                    </label>
+                                </div>
+                                <div class="govuk-radios__item">
+                                    <input class="govuk-radios__input" id="awareOfDiagnosisNo" name="awareOfDiagnosis"
+                                        type="radio" value="no"
+                                        onclick="hcpv09AwareOfDiagnosis(this); resetSaveDiagnosisDetailsBtn()">
+                                    <label class="govuk-label govuk-radios__label" for="awareOfDiagnosis">
+                                        No
+                                    </label>
+                                </div>
+                            </div>
+                        </fieldset>
+                    </div>
+
+                    <!-- Is the patient aware of their prognosis? -->
+                    <div class="govuk-form-group">
+                        <fieldset class="govuk-fieldset">
+                            <legend class="govuk-fieldset__legend">
+                                <strong>Is the patient aware of their prognosis?</strong>
+                            </legend>
+
+                            <div class="govuk-radios govuk-radios--inline" data-module="govuk-radios">
+                                <div class="govuk-radios__item">
+                                    <input class="govuk-radios__input" id="awareOfPrognosisYes" name="awareOfPrognosis"
+                                        type="radio" value="yes"
+                                        onclick="hcpv09AwareOfPrognosis(this); resetSaveDiagnosisDetailsBtn()"
+                                        autocomplete="awareOfPrognosis">
+                                    <label class="govuk-label govuk-radios__label" for="awareOfPrognosis">
+                                        Yes
+                                    </label>
+                                </div>
+                                <div class="govuk-radios__item">
+                                    <input class="govuk-radios__input" id="awareOfPrognosisNo" name="awareOfPrognosis"
+                                        type="radio" value="no"
+                                        onclick="hcpv09AwareOfPrognosis(this); resetSaveDiagnosisDetailsBtn()"
+                                        autocomplete="awareOfPrognosis">
+                                    <label class="govuk-label govuk-radios__label" for="awareOfPrognosis">
+                                        No
+                                    </label>
+                                </div>
+                            </div>
+                        </fieldset>
+                    </div>
+
+                    <!-- Save diagnosis details progress button -->
+                    <div class="govuk-button-group">
+                        <button id="saveDiagnosisDetailsBtn" class="govuk-button govuk-button--secondary"
+                            data-module="govuk-button" onclick="hcpv09SaveDiagnosisDetails(event)">
+                            Save as draft
+                        </button>
+                    </div>
+
+                    <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+
+
+
+                    <!-- CLINICAL FEATURES -->
+                    <h2 class="govuk-heading-l">Clinical features</h2>
+
+                    <!-- Give the details of the clinical features that indicate a severe progressive condition -->
+                    <div class="govuk-character-count" data-module="govuk-character-count" data-maxlength="250">
+                        <div class="govuk-form-group">
+                            <label class="govuk-label" for="detailsOfClinicalFeatures">
+                                <strong>Give the details of the clinical features that indicate a severe progressive
+                                    condition.</strong>
+                            </label>
+                            <div id="detailsOfClinicalFeatures-hint" class="govuk-hint">
+                                For example: rate of progression, recurrence, staging, tumour markers, bulbar
+                                involvement, respiratory and heart failure etc.
+                            </div>
+                            <textarea class="govuk-textarea govuk-input--width-20 govuk-js-character-count"
+                                id="detailsOfClinicalFeatures" name="detailsOfClinicalFeatures" rows="5"
+                                aria-describedby="detailsOfClinicalFeatures-info"
+                                autocomplete="detailsOfClinicalFeatures"
+                                onkeyup="resetSaveClinicalFeaturesDetailsBtn()">Worsening symptoms, rapid decline, despite optimal management, severe frailty.</textarea>
+                        </div>
+                        <div id="detailsOfClinicalFeatures-info" class="govuk-hint govuk-character-count__message">You
+                            can enter up to 250 characters</div>
+                    </div>
+
+                    <!-- Save clinical features progress button -->
+                    <div class="govuk-button-group">
+                        <button id="saveClinicalFeaturesDetailsBtn" class="govuk-button govuk-button--secondary"
+                            data-module="govuk-button" onclick="hcpv09SaveClinicalFeatures(event)">
+                            Save as draft
+                        </button>
+                    </div>
+
+                    <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+
+
+
+                    <!-- TREATMENT -->
+                    <h2 class="govuk-heading-l">Treatment</h2>
+
+                    <!-- Tell us about the purpose of any treatment and the response. -->
+                    <div class="govuk-form-group govuk-form-group--error" data-module="govuk-character-count"
+                        data-maxlength="250">
+                        <div class="govuk-form-group">
+                            <label class="govuk-label" for="treatment">
+                                <strong>Tell us about the purpose of any treatment and the response.</strong>
+                            </label>
+                            <div id="treatment-hint" class="govuk-hint">Treament may be ongoing, palliative or none
+                                available.</div>
+                            <p id="national-insurance-number-error" class="govuk-error-message"> <span
+                                    class="govuk-visually-hidden">Error:</span> Please specify the purpose of the
+                                treatment and the response</p>
+                            <textarea class="govuk-textarea govuk-input--width-20 govuk-js-character-count"
+                                id="treatment" name="treatment" rows="5" aria-describedby="treatment-info"
+                                autocomplete="treatment" onkeyup="resetTreatmentDetailsBtn()"></textarea>
+                        </div>
+                        <div id="treatment-info" class="govuk-hint govuk-character-count__message">You can enter up to
+                            250 characters</div>
+                    </div>
+
+                    <!-- Save clinical features progress button -->
+                    <div class="govuk-button-group">
+                        <button id="saveTreatmentDetailsBtn" class="govuk-button govuk-button--secondary"
+                            data-module="govuk-button" onclick="hcpv09SaveTreatment(event)">
+                            Save as draft
+                        </button>
+                    </div>
+
+                    <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+
+
+
+                    <!-- YOUR DETAILS -->
+                    <h2 class="govuk-heading-l">Your details</h2>
+
+                    <!-- I am the patient's -->
+                    <!-- I am the patient's -->
+                    <div class="govuk-form-group">
+                        <label class="govuk-label" for="yourRole"><strong>I am the patient's</strong></label>
+                        <input autocomplete="off" class="govuk-input govuk-input--width-20" id="yourRole"
+                            name="yourRole" type="text" spellcheck="false" readonly disabled>
+                    </div>
+
+
+                    <!-- Your full name -->
+                    <div class="govuk-form-group">
+                        <label class="govuk-label" for="yourFullName"><strong>Your full name</strong></label>
+                        <input class="govuk-input govuk-input--width-20" id="yourFullName" name="yourFullName"
+                            type="text" spellcheck="false" autocomplete="off">
+                    </div>
+
+                    <!-- Your Organisation address -->
+                    <div class="govuk-form-group">
+                        <p><strong>Your organisation address</strong></p>
+
+                        <div id="treatment-hint" class="govuk-hint">If you are part of a trust, this coule be your
+                            Clinical Commissioning Group (CCG) or surgery.</div>
+
+                        <!-- Organisation name -->
+                        <label class="govuk-label" for="organisationName"><strong>Organisation name</strong></label>
+                        <input class="govuk-input govuk-input--width-20" id="organisationName" name="organisationName"
+                            type="text" spellcheck="false" autocomplete="off">
+                    </div>
+
+                    <!-- Building and street -->
+                    <div class="govuk-form-group">
+                        <label class="govuk-label" for="organisationAddressLine1"><strong>Building and
+                                street</strong></label>
+                        <input class="govuk-input" id="organisationAddressLine1" name="organisationAddressLine1"
+                            type="text" spellcheck="false" autocomplete="off">
+                    </div>
+                    <div class="govuk-form-group">
+                        <input class="govuk-input" id="organisationAddressLine2" name="organisationAddressLine2"
+                            type="text" spellcheck="false" autocomplete="off">
+                    </div>
+
+                    <!-- Town or city -->
+                    <div class="govuk-form-group">
+                        <label class="govuk-label" for="townOrCity"><strong>Town or city</strong></label>
+                        <input class="govuk-input govuk-input--width-20" id="townOrCity" name="townOrCity" type="text"
+                            spellcheck="false" autocomplete="off">
+                    </div>
+
+                    <!-- Postcode -->
+                    <div class="govuk-form-group">
+                        <label class="govuk-label" for="thePostcode"><strong>Postcode</strong></label>
+                        <input class="govuk-input govuk-input--width-5" id="thePostcode" name="thePostcode" type="text"
+                            spellcheck="false" autocomplete="off">
+                    </div>
+
+                    <!-- Your mobile number -->
+                    <div class="govuk-form-group">
+                        <label class="govuk-label" for="mobileNumber">
+                            <strong>Your mobile number</strong>
+                        </label>
+                        <input class="govuk-input govuk-input--width-10" id="mobileNumber" name="mobileNumber"
+                            type="text" spellcheck="false" autocomplete="off">
+                    </div>
+
+                </fieldset>
+            </div>
+
+            <!-- Update profile details -->
+            <div class="govuk-button-group">
+                <a href="/hcp-e2e-journey-v09/profile-setup" onclick="updateProfileDetailsFromSendSR1FormPage()"
+                    class="govuk-button govuk-button--secondary">
+                    Update profile information
+                </a>
+            </div>
+
+            <!-- Submit button -->
+            <div class="govuk-button-group">
+                <button id="" class="govuk-button" data-module="govuk-button" onclick="saveAndContinueSR1Form()">
+                    Save and continue
+                </button>
+            </div>
+        </form>
+
+    </div>
+
+    <!-- Side panel -->
+    <div class="govuk-grid-column-one-third">
+        <div class="app-step-nav-related app-step-nav-related--singular">
+            <h2 class="app-step-nav-related__heading">Get help</h2>
+            <p class="govuk-body"><a class="govuk-link"
+                    href="https://ds1500-prototype.herokuapp.com/sr1-1/sr1-guidance#patients-may-not-know-true-nature-of-illness"
+                    target="_blank">How to complete the SR1 form (opens in a new tab)</a></p>
+            <ul class="govuk-list">
+                <li>Email: <a href="mailto:sr1.servicedesk@nhs.net">sr1.servicedesk@nhs.net</a></li>
+                <li>Telephone: 0300 303 5035</li>
+            </ul>
+        </div>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,89 @@
+{% extends "layout.html" %}
+{% block pageTitle %}
+    What is your address?
+{% endblock %}
+{% block content %}
+    <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds">
+            
+            <fieldset class="govuk-fieldset">
+                <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+                <h1 class="govuk-fieldset__heading">
+                    What is your address?
+                </h1>
+                </legend>
+            
+                <div class="govuk-form-group">
+                <label class="govuk-label" for="address-line-1">
+                    Address line 1
+                </label>
+                <input class="govuk-input" id="address-line-1" name="address-line-1" type="text" autocomplete="address-line1">
+                </div>
+            
+                <div class="govuk-form-group">
+                <label class="govuk-label" for="address-line-2">
+                    Address line 2 (optional)
+                </label>
+                <input class="govuk-input" id="address-line-2" name="address-line-2" type="text" autocomplete="address-line2">
+                </div>
+            
+                <div class="govuk-form-group">
+                <label class="govuk-label" for="address-town">
+                    Town or city
+                </label>
+                <input class="govuk-input govuk-!-width-two-thirds" id="address-town" name="address-town" type="text" autocomplete="address-level2">
+                </div>
+            
+                <div class="govuk-form-group">
+                <label class="govuk-label" for="address-county">
+                    County (optional)
+                </label>
+                <input class="govuk-input govuk-!-width-two-thirds" id="address-county" name="address-county" type="text">
+                </div>
+            
+                <div class="govuk-form-group">
+                <label class="govuk-label" for="address-postcode">
+                    Postcode
+                </label>
+                <input class="govuk-input govuk-input--width-10" id="address-postcode" name="address-postcode" type="text" autocomplete="postal-code">
+                </div>
+
+                <!-- Can we send letters about your claim to this address? -->
+                <div class="govuk-form-group">
+                    <label class="govuk-label govuk-label--s" for="dob">
+                        Can we send letters about your claim to this address?
+                    </label>
+                    <div class="govuk-radios govuk-radios--inline" data-module="govuk-radios">
+                        
+                        <div class="govuk-radios__item">
+                            <input class="govuk-radios__input" id="sendLettersYes" name="sendLetters" type="radio" value="yes">
+                            <label class="govuk-label govuk-radios__label" for="sendLettersYes">
+                                Yes
+                            </label>
+                        </div>
+
+                        <div class="govuk-radios__item">
+                            <input class="govuk-radios__input" id="sendLettersNo" name="sendLetters" type="radio" value="no">
+                            <label class="govuk-label govuk-radios__label" for="sendLettersNo">
+                                No
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </fieldset>
+
+            <!-- Continue -->
+            <div class="govuk-button-group">
+                <a href="check-your-answers" class="govuk-button" data-module="govuk-button">
+                    Continue
+                </a>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
+
+
+
+
+

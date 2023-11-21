@@ -1,0 +1,54 @@
+{% extends "layout.html" %}
+{% block pageTitle %}
+    Do you have a mobile number?
+{% endblock %}
+{% block content %}
+    <div class="govuk-grid-row">
+
+        <div class="govuk-grid-column-two-thirds">
+            <h1 class="govuk-heading-xl">Do you have a mobile number?</h1>
+        <!-- </div>
+        
+        <div class="govuk-grid-column-one-half"> -->
+
+            <!-- Do you have a mobile number? -->
+            <div class="govuk-form-group">
+                <div id="contact-hint" class="govuk-hint">
+                    We will use this number to contact you about your claim.
+                </div>
+                <div class="govuk-radios" data-module="govuk-radios">
+                <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="hasMobileNumber" name="mobileNumber" type="radio" value="yes" data-aria-controls="conditional-mobileNumber">
+                    <label class="govuk-label govuk-radios__label" for="hasMobileNumber">
+                    Yes
+                    </label>
+                </div>
+                <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-mobileNumber">
+                    <div class="govuk-form-group">
+                    <label class="govuk-label" for="whatMobileNumber">
+                        Mobile number
+                    </label>
+                    <input class="govuk-input govuk-input--width-10" id="whatMobileNumber" name="whatMobileNumber" type="text" spellcheck="false" autocomplete="text">
+                    </div>
+                </div>
+
+                <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="hasNoMobileNumber" name="mobileNumber" type="radio" value="no">
+                    <label class="govuk-label govuk-radios__label" for="hasNoMobileNumber">
+                        No
+                    </label>
+                </div>
+                </div>
+            </div>
+
+            <!-- Continue conditionally -->
+            <div class="govuk-button-group">
+                <a href="telephone-number" class="govuk-button" data-module="govuk-button">
+                    Continue
+                </a>
+            </div>
+
+
+        </div>
+    </div>
+{% endblock %}

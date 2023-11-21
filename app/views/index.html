@@ -1,0 +1,251 @@
+{% extends "layout.html" %}
+{% block pageTitle %}
+Prototypes home - Special Rules for End of Life
+{% endblock %}
+{% block content %}
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+    <h1 class="govuk-heading-xl">Special Rules for End Life Prototypes</h1>
+    <!-- <p class="govuk-body-l">Below are a collection of prototypes.</p> -->
+
+    <!-- Current prototype(s) -->
+    <!-- #################### -->
+    <div class="govuk-width-container govuk-!-margin-bottom-9">
+      <h2 class="govuk-heading-l">Private beta</h2>
+      <div class="govuk-width-container">
+        <table class="govuk-table govuk-!-margin-bottom-9">
+          <caption class="govuk-table__caption govuk-table__caption--m">Active prototypes</caption>
+          <thead class="govuk-table__head">
+            <tr class="govuk-table__row">
+              <th scope="col" class="govuk-table__header">Prototype</th>
+              <th scope="col" class="govuk-table__header ">Details</th>
+              <th scope="col" class="govuk-table__header ">Journey</th>
+              <th scope="col" class="govuk-table__header ">User</th>
+              <th scope="col" class="govuk-table__header ">Forms</th>
+              <th scope="col" class="govuk-table__header ">Action</th>
+            </tr>
+          </thead>
+          <tbody class="govuk-table__body">
+            <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__header">MVP 03</th>
+              <td class="govuk-table__cell ">Finalised MVP ready for 'Private beta' tech handover. It includes improvements driven by CASA constraints and by user insights of previous user testing sessions.</td>
+              <td class="govuk-table__cell ">HCP E2E journey - No profile creation</td>
+              <td class="govuk-table__cell ">First time</td>
+              <td class="govuk-table__cell ">Limited time session</td>
+              <td class="govuk-table__cell "><a href="/hcp-e2e-journey-mvp03/">Open prototype</a>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="govuk-width-container govuk-!-margin-bottom-6">
+        <table class="govuk-table">
+          <caption class="govuk-table__caption govuk-table__caption--m">MVP's service unavailable pages</caption>
+          <thead class="govuk-table__head">
+            <tr class="govuk-table__row">
+              <th scope="col" class="govuk-table__header">Page</th>
+              <th scope="col" class="govuk-table__header ">User need</th>
+              <th scope="col" class="govuk-table__header ">Module</th>
+              <th scope="col" class="govuk-table__header ">Action</th>
+            </tr>
+          </thead>
+          <tbody class="govuk-table__body">
+            <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__header">No permission</th>
+              <td class="govuk-table__cell ">User needs to be told they cannot access as they're not registered with NHS
+                England</td>
+              <td class="govuk-table__cell ">20</td>
+              <td class="govuk-table__cell "><a href="/hcp-e2e-journey-mvp03/no-permission">Open page</a>
+              </td>
+            </tr>
+          </tbody>
+          <tbody class="govuk-table__body">
+            <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__header">No permission</th>
+              <td class="govuk-table__cell ">User needs to be told they don't have the role to access the service</td>
+              <td class="govuk-table__cell ">21</td>
+              <td class="govuk-table__cell "><a href="/hcp-e2e-journey-mvp03/no-permission-role">Open page</a>
+              </td>
+            </tr>
+          </tbody>
+          <tbody class="govuk-table__body">
+            <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__header">Submission not successful</th>
+              <td class="govuk-table__cell ">User needs to be told the SR1 form couldn't be sent to DWP</td>
+              <td class="govuk-table__cell ">16</td>
+              <td class="govuk-table__cell "><a href="/hcp-e2e-journey-mvp03/submission-not-successful">Open page</a>
+              </td>
+            </tr>
+          </tbody>
+          <tbody class="govuk-table__body">
+            <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__header">Sign out</th>
+              <td class="govuk-table__cell ">User needs to get a confirmation they've sucessfully signed out of the
+                service</td>
+              <td class="govuk-table__cell ">12</td>
+              <td class="govuk-table__cell "><a href="/hcp-e2e-journey-mvp03/signout">Open page</a>
+              </td>
+            </tr>
+          </tbody>
+          <tbody class="govuk-table__body">
+            <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__header">Automatically signed out</th>
+              <td class="govuk-table__cell">User needs to be informed they've been automatically signed out of the
+                session
+                after 15 mins of inactivity</td>
+              <td class="govuk-table__cell">13</td>
+              <td class="govuk-table__cell"><a href="/hcp-e2e-journey-mvp03/signedout">Open page</a>
+              </td>
+            </tr>
+          </tbody>
+          <tbody class="govuk-table__body">
+            <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__header">Page not found (404)</th>
+              <td class="govuk-table__cell">User needs to be informed the page doesn't exist</td>
+              <td class="govuk-table__cell">22</td>
+              <td class="govuk-table__cell"><a href="/hcp-e2e-journey-mvp03/page-not-found">Open page</a>
+              </td>
+            </tr>
+          </tbody>
+          <tbody class="govuk-table__body">
+            <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__header">Service outrage (500)</th>
+              <td class="govuk-table__cell">User needs to be informed the service had an outrage and it's not available
+                at
+                the moment</td>
+              <td class="govuk-table__cell">23</td>
+              <td class="govuk-table__cell"><a href="/hcp-e2e-journey-mvp03/problem-with-service">Open page</a>
+              </td>
+            </tr>
+          </tbody>
+          <tbody class="govuk-table__body">
+            <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__header">Planned service availability (503)</th>
+              <td class="govuk-table__cell">User needs to be informed when the service will be available</td>
+              <td class="govuk-table__cell">17</td>
+              <td class="govuk-table__cell"><a href="/hcp-e2e-journey-mvp03/service-unavailable">Open page</a>
+              </td>
+            </tr>
+          </tbody>
+          <tbody class="govuk-table__body">
+            <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__header">Cookies</th>
+              <td class="govuk-table__cell">User needs to be informed on the Cookie policy of the service</td>
+              <td class="govuk-table__cell">23</td>
+              <td class="govuk-table__cell"><a href="/hcp-e2e-journey-mvp03/cookies">Open page</a>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!--<div class="govuk-grid-row govuk-!-margin-bottom-6">
+        <div class="govuk-grid-column-two-thirds">
+          <h3 class="govuk-heading-m">Gov.uk route</h3>
+          <p class="govuk-body">
+            <a href="/hcp-e2e-journey-mvp03/guidance">Click here</a> to access the page HCP will see if they access
+            from GOV.uk (this needs to be implemented in the future).
+          </p>
+        </div>
+      </div>-->
+
+
+      <div class="govuk-grid-row govuk-!-margin-bottom-6">
+        <div class="govuk-grid-column-two-thirds">
+          <h3 class="govuk-heading-m">Error states</h3>
+          <p class="govuk-body">
+            <a href="/error-states">Click here</a> to access the error states pages.
+          </p>
+        </div>
+      </div>
+      <div class="govuk-width-container">
+        <table class="govuk-table govuk-!-margin-bottom-6">
+          <caption class="govuk-table__caption govuk-table__caption--m">Archived prototypes</caption>
+          <thead class="govuk-table__head">
+            <tr class="govuk-table__row">
+              <th scope="col" class="govuk-table__header">Prototype</th>
+              <th scope="col" class="govuk-table__header ">Details</th>
+              <th scope="col" class="govuk-table__header ">Journey</th>
+              <th scope="col" class="govuk-table__header ">User</th>
+              <th scope="col" class="govuk-table__header ">Forms</th>
+              <th scope="col" class="govuk-table__header ">Action</th>
+            </tr>
+          </thead>
+          <tbody class="govuk-table__body">
+            <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__header">MVP 02</th>
+              <td class="govuk-table__cell ">It included a task list page with 17 'questions'. Iterated to MVP03 to improve usability of task list based on CASA requirements and user needs.</td>
+              <td class="govuk-table__cell ">HCP E2E journey - No profile creation</td>
+              <td class="govuk-table__cell ">First time</td>
+              <td class="govuk-table__cell ">Limited time session</td>
+              <td class="govuk-table__cell "><a href="/hcp-e2e-journey-mvp02/">Open prototype</a>
+              </td>
+            </tr>
+          </tbody>
+          <tbody class="govuk-table__body">
+            <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__header">MVP01</th>
+              <td class="govuk-table__cell ">Tested with 5 users before tech handover. To be iterated (to MVP02) on the back of user insights.</td>
+              <td class="govuk-table__cell ">HCP E2E journey - No profile creation</td>
+              <td class="govuk-table__cell ">First time</td>
+              <td class="govuk-table__cell ">Limited time session</td>
+              <td class="govuk-table__cell "><a href="/hcp-e2e-journey-mvp01/">Open prototype</a>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="govuk-width-container govuk-!-margin-bottom-9">
+      <h2 class="govuk-heading-l">Public beta future iterations</h2>
+      <div class="govuk-width-container">
+        <table class="govuk-table govuk-!-margin-bottom-9">
+          <caption class="govuk-table__caption govuk-table__caption--m">Active prototypes</caption>
+          <thead class="govuk-table__head">
+            <tr class="govuk-table__row">
+              <th scope="col" class="govuk-table__header">Prototype</th>
+              <th scope="col" class="govuk-table__header ">Details</th>
+              <th scope="col" class="govuk-table__header ">Journey</th>
+              <th scope="col" class="govuk-table__header ">User</th>
+              <th scope="col" class="govuk-table__header ">Forms</th>
+              <th scope="col" class="govuk-table__header ">Action</th>
+            </tr>
+          </thead>
+          <tbody class="govuk-table__body">
+            <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__header">BETA 01</th>
+              <td class="govuk-table__cell ">Firts iteration post MVP</td>
+              <td class="govuk-table__cell ">HCP E2E journey - Profile creation</td>
+              <td class="govuk-table__cell ">First time</td>
+              <td class="govuk-table__cell ">Limited time session</td>
+              <td class="govuk-table__cell "><a href="/#">Open prototype</a>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="govuk-grid-column-two-thirds govuk-!-margin-bottom-9">
+    <h2 class="govuk-heading-l">Alpha</h2>
+    <p><a href="/alpha">These prototypes</a> have been presented to Alpha assessment.</p>
+  </div>
+
+  <div class="govuk-width-container govuk-!-margin-bottom-9">
+    <main class="govuk-main-wrapper govuk-main-wrapper--l">
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds">
+          <h2 class="govuk-heading-l">Archived pages</h2>
+          <p><a href="/archived-pages">These pages</a> have been tested with users and iterated based on their
+            feedback.</p>
+        </div>
+      </div>
+    </main>
+  </div>
+
+</div>
+{% endblock %}

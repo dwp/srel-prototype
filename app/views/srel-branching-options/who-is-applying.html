@@ -1,0 +1,64 @@
+{% extends "layout.html" %}
+{% block pageTitle %}
+  Who is applying?
+{% endblock %}
+{% block content %}
+    <div class="govuk-grid-row">
+        <div class="govuk-grid-column-full">
+            <form id="srelWhoIsApplying" action="/srel-branching-options/national-insurance-number" method="post">
+                <div class="govuk-form-group">
+                    <fieldset class="govuk-fieldset" aria-describedby="sign-in-hint">
+                        <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+                            <h1 class="govuk-fieldset__heading">
+                                Who is applying?
+                            </h1>
+                        </legend>
+
+                        <div class="govuk-radios" data-module="govuk-radios">
+                            
+                            <!-- Myself -->
+                            <div class="govuk-radios__item">
+                                <input class="govuk-radios__input" id="myself" name="who-is-applying" type="radio" value="I am applying for myself" aria-describedby="myself-hint" onclick="srelWhoIsApplyingFn(this)">
+                                <label class="govuk-label govuk-radios__label" for="myself">
+                                    I am applying for myself
+                                </label>
+                            </div>
+
+                            <!-- Someone else -->
+                            <div class="govuk-radios__item">
+                                <input class="govuk-radios__input" id="someoneElse" name="who-is-applying" type="radio" value="I am applying for someone else" aria-describedby="someoneElse-hint" onclick="srelWhoIsApplyingFn(this)">
+                                <label class="govuk-label govuk-radios__label" for="someoneElse">
+                                    I am applying for somone else
+                                </label>
+                                <div id="someoneElse-hint" class="govuk-hint govuk-radios__hint govuk-!-width-three-quarters">
+                                    I am a registered appointee, deputy, power of attorney or belong to a corporate acting body (CAB)
+                                </div>
+                            </div>
+
+                            <!-- I am helping someone apply -->
+                            <div class="govuk-radios__item">
+                                <input class="govuk-radios__input" id="helpingSomeoneApply" name="who-is-applying" type="radio" value="I am helping someone apply" aria-describedby="helpingSomeoneApply-hint" onclick="srelWhoIsApplyingFn(this)">
+                                <label class="govuk-label govuk-radios__label" for="helpingSomeoneApply">
+                                    I am helping someone apply
+                                </label>
+                                <div id="helpingSomeoneApply-hint" class="govuk-hint govuk-radios__hint govuk-!-width-three-quarters">
+                                    The applicant is giving me the answers and I am supporting them with their application
+                                </div>
+                            </div>
+
+                        </div>
+                
+                    </fieldset>
+                    
+                </div>
+
+                <!-- Continue -->
+                <div class="govuk-button-group">
+                    <button id="srelWhoIsApplyingSubmitBtn" class="govuk-button" data-module="govuk-button" >
+                        Continue
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+{% endblock %}

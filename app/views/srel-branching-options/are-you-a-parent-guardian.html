@@ -1,0 +1,49 @@
+{% extends "layout.html" %}
+{% block pageTitle %}
+    Are you a parent or a guardian?
+{% endblock %}
+{% block content %}
+
+    <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds">
+            <form id="srelAreYouAParentOrGuardian" action="/srel-branching-options/are-you-a-parent-guardian/answer" method="post">
+                <div class="govuk-form-group">
+                    <fieldset class="govuk-fieldset" aria-describedby="changed-name-hint">
+                        <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+                            <h1 class="govuk-fieldset__heading">
+                                Are you a parent or a guardian?
+                            </h1>
+                        </legend>
+                        <!-- <div id="srelAreYouAParentOrGuardian-hint" class="govuk-hint">
+                            You can receive this prognosis from other healthcare professionals, such as hospital consultants and registered nurses.
+                        </div> -->
+                        <div class="govuk-radios govuk-radios--inline" data-module="govuk-radios">
+                            <div class="govuk-radios__item">
+                                <input class="govuk-radios__input" id="srelreYouAParentOrGuardian-yes" name="srelAreYouAParentOrGuardian" type="radio" value="yes">
+                                <label class="govuk-label govuk-radios__label" for="srelAreYouAParentOrGuardian-yes">
+                                    Yes
+                                </label>
+                            </div>
+                            <div class="govuk-radios__item">
+                                <input class="govuk-radios__input" id="srelAreYouAParentOrGuardian-no" name="srelAreYouAParentOrGuardian" type="radio" value="no">
+                                <label class="govuk-label govuk-radios__label" for="srelAreYouAParentOrGuardian-no">
+                                    No
+                                </label>
+                            </div>
+                        </div>
+                
+                    </fieldset>
+                </div>
+
+                <!-- Continue -->
+                <div class="govuk-button-group">
+                    <button id="srelAreYouAParentOrGuardianSubmitBtn" class="govuk-button" data-module="govuk-button" onclick="srelAreYouAParentOrGuardian()">
+                        Continue
+                    </button>
+                </div>
+                
+            </form>
+
+        </div>
+    </div>
+{% endblock %}

@@ -1,0 +1,63 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Edit your profile
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+        <form id="profileSetupPage" name="profileDetails" action="/hcp-e2e-journey-v05/profile-02" method="post">
+            <div class="govuk-form-group">
+                <fieldset class="govuk-fieldset">
+                    <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+                        <span class="govuk-caption-l">Section 1 of 6</span>
+                        <h1 class="govuk-fieldset__heading">
+                            What is your full name?
+                        </h1>
+                    </legend>
+
+                    <!-- Full name -->
+                    <div class="govuk-form-group">
+                        <!--
+                        <label class="govuk-label" for="fullName">Full name</label>
+                        -->
+                        <input class="govuk-input" id="fullName" name="fullName" type="text" autocomplete="off">
+                    </div>
+
+                    <!-- Surname 
+                        <div class="govuk-form-group">
+                            <label class="govuk-label" for="surname">Last name</label>
+                            <input  autocomplete="off" class="govuk-input govuk-input--width-20" id="surname" name="surname" type="text" spellcheck="false">
+                        </div> -->
+
+                </fieldset>
+            </div>
+
+            <!-- Submit button -->
+            <div class="govuk-button-group">
+                <button id="" class="govuk-button" data-module="govuk-button" onclick="saveHCPNamev05(); resetChangeFn();">
+                    Save and continue
+                </button>
+            </div>
+        </form>
+
+    </div>
+
+    <!-- Side panel 
+    <div class="govuk-grid-column-one-third">
+        <div class="app-step-nav-related app-step-nav-related--singular">
+            <h2 class="app-step-nav-related__heading">Get help</h2>
+            <p class="govuk-body"><a class="govuk-link"
+                    href="https://ds1500-prototype.herokuapp.com/sr1-1/sr1-guidance#patients-may-not-know-true-nature-of-illness"
+                    target="_blank">How to complete the SR1 form (opens in a new tab)</a></p>
+            <ul class="govuk-list">
+                <li>Email: <a href="mailto:sr1.servicedesk@nhs.net">sr1.servicedesk@nhs.net</a></li>
+                <li>Telephone: 0300 303 5035</li>
+            </ul>
+        </div>
+    </div>
+    -->
+</div>
+{% endblock %}

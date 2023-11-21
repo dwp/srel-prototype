@@ -1,0 +1,79 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Send an SR1 form
+{% endblock %}
+
+{% block content %}
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+        <form id="sendAnSR1Form" action="/hcp-e2e-journey-v07/sr1-form-diagnosis" method="post" novalidate>
+            <div class="govuk-form-group">
+                <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+                    <span class="govuk-caption-l">Send an SR1 form</span>
+                    <h1 class="govuk-fieldset__heading">
+                        Patient's address
+                    </h1>
+                </legend>
+
+                <!--
+                <p class="govuk-body">You can save your progress after each section. Your profile details have
+                    automatically been used to complete parts of this form.</p>
+                <p class="govuk-body">Incomplete SR1 forms will be deleted after 30 days.</p>
+                -->
+            </div>
+
+            <div class="govuk-form-group">
+                <fieldset class="govuk-fieldset">
+
+                    <!-- Patient postcode -->
+                    <div class="govuk-form-group">
+                        <label class="govuk-label" for="patientPostcode">Postcode</label>
+                        <div class="govuk-heading-s govuk-!-margin-top-0" id="patientPostcode">SE1 ABC&nbsp;&nbsp;&nbsp;<a id="postcode-finder-link" style="text-indent:4em" class="govuk-link" rel="external" href="/hcp-e2e-journey-v07/sr1-form-02">Change</a></div>
+                    </div>
+                    <div class="govuk-form-group">
+                        <label class="govuk-label" for="address-line-1">
+                            Select an address
+                        </label>
+                        <select class="govuk-select" id="address-line-1" name="address-line-1" aria-describedby="address-line-1-hint" onchange="savePatientv07AddressFn()">
+                            <option value="choose" selected>2 Addresses found</option>
+                            <option class="govuk-select" id="address-line-1" value="86 Claremont Cove">86 Claremont Cove, London SE1 ABC</option>
+                            <option class="govuk-select" id="address-line-1" value="88 Claremont Cove">88 Claremont Cove, London SE1 ABC</option>
+                        </select>
+                    </div>
+                    <div class="govuk-form-group">
+                        <label class="govuk-label" for="cannot-find-address"><a id="postcode-finder-link" class="govuk-link" rel="external" href="/hcp-e2e-journey-v07/sr1-form-patient-address-manual">I can't find the address on the list</a></label>
+                    </div>
+                </fieldset>
+            </div>
+
+
+            <!-- Submit button -->
+            <div class="govuk-button-group">
+                <button id="" class="govuk-button" data-module="govuk-button">
+                    Save and continue
+                </button>
+                <a class="govuk-link" href="/hcp-e2e-journey-v07/edit-incomplete-form-saved">Save and come back later</a>
+            </div>
+
+        </form>
+    </div>
+
+    <!-- Side panel -->
+    <div class="govuk-grid-column-one-third">
+        <div class="app-step-nav-related app-step-nav-related--singular">
+            <h2 class="app-step-nav-related__heading">Get help</h2>
+            <p class="govuk-body"><a class="govuk-link"
+                    href="https://ds1500-prototype.herokuapp.com/sr1-1/sr1-guidance#patients-may-not-know-true-nature-of-illness"
+                    target="_blank">How to complete the SR1 form (opens in a new tab)</a></p>
+            <ul class="govuk-list">
+                <li>Email: <a href="mailto:sr1.servicedesk@nhs.net">sr1.servicedesk@nhs.net</a></li>
+                <li>Telephone: 0300 303 5035</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+
+
+{% endblock %}

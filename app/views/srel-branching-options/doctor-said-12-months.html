@@ -1,0 +1,49 @@
+{% extends "layout.html" %}
+{% block pageTitle %}
+    Has your doctor said you might have less than 12 months to live?
+{% endblock %}
+{% block content %}
+
+    <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds">
+            <form id="whoIsApplying" action="/srel-branching-options/doctor-said-12-months/answer" method="post">
+                <div class="govuk-form-group">
+                    <fieldset class="govuk-fieldset" aria-describedby="changed-name-hint">
+                        <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+                            <h1 class="govuk-fieldset__heading">
+                                Has your doctor said you might have less than 12 months to live?
+                            </h1>
+                        </legend>
+                        <div id="12MonthsToLive-hint" class="govuk-hint">
+                            You can receive this prognosis from other healthcare professionals, such as hospital consultants and registered nurses.
+                        </div>
+                        <div class="govuk-radios govuk-radios--inline" data-module="govuk-radios">
+                            <div class="govuk-radios__item">
+                                <input class="govuk-radios__input" id="12MonthsToLive-yes" name="doctor-said-12-months" type="radio" value="yes">
+                                <label class="govuk-label govuk-radios__label" for="12MonthsToLive-yes">
+                                    Yes
+                                </label>
+                            </div>
+                            <div class="govuk-radios__item">
+                                <input class="govuk-radios__input" id="12MonthsToLive-no" name="doctor-said-12-months" type="radio" value="no">
+                                <label class="govuk-label govuk-radios__label" for="12MonthsToLive-no">
+                                    No
+                                </label>
+                            </div>
+                        </div>
+                
+                    </fieldset>
+                </div>
+
+                <!-- Continue -->
+                <div class="govuk-button-group">
+                    <button id="12MonthsToLiveSubmitBtn" class="govuk-button" data-module="govuk-button">
+                        Continue
+                    </button>
+                </div>
+                
+            </form>
+
+        </div>
+    </div>
+{% endblock %}

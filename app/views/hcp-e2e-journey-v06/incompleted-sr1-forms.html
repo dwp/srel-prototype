@@ -1,0 +1,256 @@
+{% extends "layout-gov.html" %}
+
+{% block pageTitle %}
+Incomplete SR1 forms
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <h1 class="govuk-heading-xl">Incomplete SR1 forms</h1>
+
+      <div class="govuk-warning-text">
+        <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+        <strong class="govuk-warning-text__text">
+          <span class="govuk-warning-text__assistive">Warning</span>
+        Incomplete SR1 forms will be deleted after 30 days. If the form is deleted, you will have to start it again.
+        <!-- An incomplete SR1 form can delay your patient's Special Rules claim. Complete them now. --></strong>
+      </div>
+
+      <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+      <div>
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="searchfield">
+            <strong>Search by patient name<!-- or reference number --></strong>
+          </label>
+          <label for="searchField" class="sr-only govuk-visually-hidden">Search by patient name</label>
+          <input class="govuk-input govuk-input--width-10" id="searchField" name="searchField" type="text">
+          &nbsp;&nbsp;
+          <button class="govuk-button govuk-button--secondary" data-module="govuk-button">Search</button>
+          &nbsp;&nbsp;
+          <a class="govuk-link" href="#" onclick="clearSearchTerms()">Clear search</a>
+        </div>
+      </div>
+
+      <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+
+      {% macro row(name, daysToSubmit, daysToSubmitColor, dataFunc) %}
+        <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header">{{ name }}</th>
+          <span class="govuk-visually-hidden">{{ name }}'s SR1 form</span>
+          <td class="govuk-table__cell govuk-table__cell--numeric">
+            <strong class="govuk-tag govuk-tag--{{ daysToSubmitColor }}">{{ daysToSubmit }}</strong>
+          </td>
+          <td class="govuk-table__cell">
+            <a onclick="{{ dataFunc }}" style="color:#1d70b8;">Complete</a>
+          </td>
+        </tr>
+      {% endmacro %}
+
+      <table id="column5" class="govuk-table">
+        <thead class="govuk-table__head">
+          <tr class="govuk-table__row">
+            <th scope="col" class="govuk-table__header">Patient name</th>
+            <th scope="col" class="govuk-table__header govuk-table__header--numeric">Days left to submit</th>
+            <th scope="col" class="govuk-table__header">Action</th>
+          </tr>
+        </thead>
+        <tbody class="govuk-table__body">
+          <!-- Urgent set -->
+          {{ row('Rachael Summers', '3 days', 'red', 'rachelSummers()') }}
+          {{ row('Gina Jones', '3 days', 'red', 'ginaGones()') }}
+          {{ row('Connor Gold', '10 days', 'red', 'connorGold()') }}
+
+          <!-- Non-urgent set -->
+          {{ row('Irene Adler', '12 days', 'yellow', 'ireneAdler()') }}
+          {{ row('Rachel Scott', '12 days', 'yellow', 'rachelScott()') }}
+          {{ row('Martin Jason', '14 days', 'yellow', 'martinJason()') }}
+          {{ row('Robert Drake', '17 days', 'yellow', 'robertDrake()') }}
+          {{ row('Diana Jones', '19 days', 'yellow', 'dianaJones()') }}
+          {{ row('Jamiee Dee', '19 days', 'yellow', 'jamieeDee()') }}
+          {{ row('Abigail Brand', '21 days', 'blue', 'abigailBrand()') }}
+        </tbody>
+      </table>
+
+      <!-- Pagination -->
+      <nav class="govuk-pagination" role="navigation" aria-label="results">
+        <ul class="govuk-pagination__list">
+          <li class="govuk-pagination__item govuk-pagination__item--current">
+            <span class="govuk-visually-hidden"> Page 1</span>
+            <a
+              id="page1Link"
+              class="govuk-link govuk-pagination__link"
+              href="/hcp-e2e-journey-v06/incompleted-sr1-forms"
+              aria-label="Page 1"
+              aria-current="page"
+            >
+              1
+            </a>
+          </li>
+          <li class="govuk-pagination__item">
+            <span class="govuk-visually-hidden"> Page 2</span>
+            <a
+              id="page2Link"
+              class="govuk-link govuk-pagination__link"
+              href="/hcp-e2e-journey-v06/incompleted-sr1-forms-2"
+              aria-label="Page 2"
+            >
+              2
+            </a>
+          </li>
+          <li class="govuk-pagination__item">
+            <span class="govuk-visually-hidden"> Page 3</span>
+            <a
+              id="page3Link"
+              class="govuk-link govuk-pagination__link"
+              href="/hcp-e2e-journey-v06/incompleted-sr1-forms-3"
+              aria-label="Page 3"
+            >
+              3
+            </a>
+          </li>
+        </ul>
+        <div class="govuk-pagination__next">
+          <a class="govuk-link govuk-pagination__link" href="/hcp-e2e-journey-v06/incompleted-sr1-forms-2" rel="next">
+            <span class="govuk-pagination__link-title">Next</span>
+            <span class="govuk-visually-hidden"> Next page</span>
+            <svg
+            class="govuk-pagination__icon govuk-pagination__icon--next" xmlns="http://www.w3.org/2000/svg" height="13"
+            width="15" aria-hidden="true" focusable="false" viewBox="0 0 15 13">
+              <path
+              d="m8.107-0.0078125-1.4136 1.414 4.2926 4.293h-12.986v2h12.896l-4.1855 3.9766 1.377 1.4492 6.7441-6.4062-6.7246-6.7266z"></path>
+            </svg>
+          </a>
+        </div>
+      </nav>
+    </div>
+
+    <!-- Side panel -->
+    <div class="govuk-grid-column-one-third">
+      <div class="app-step-nav-related app-step-nav-related--singular">
+        <h2 class="app-step-nav-related__heading">Get help</h2>
+        <p class="govuk-body">
+          <a class="govuk-link"
+          href="https://ds1500-prototype.herokuapp.com/sr1-1/sr1-guidance#patients-may-not-know-true-nature-of-illness"
+          target="_blank">How to complete the SR1 form (opens in a new tab)</a>
+        </p>
+        <ul class="govuk-list">
+          <li>Email: <a href="mailto:sr1.servicedesk@nhs.net">sr1.servicedesk@nhs.net</a>
+          </li>
+          <li>Telephone: 0300 303 5035</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const clearData = () => {
+      localStorage.removeItem('hcpv06PatientFullName');
+      localStorage.removeItem('hcpv06DobDay');
+      localStorage.removeItem('hcpv06DobMonth');
+      localStorage.removeItem('hcpv06DobYear');
+      localStorage.removeItem('hcpv06NiNo');
+      localStorage.removeItem('hcpv06DateofSpecialRulesDay');
+      localStorage.removeItem('hcpv06DateofSpecialRulesMonth');
+      localStorage.removeItem('hcpv06DateofSpecialRulesYear');
+      localStorage.removeItem('hcpv06WhatIsTheDiagnosis');
+      localStorage.removeItem('hcpv06DodDay');
+      localStorage.removeItem('hcpv06DodMonth');
+      localStorage.removeItem('hcpv06DodYear');
+      localStorage.removeItem('hcpv06OtherRelevantDiagnosis');
+      localStorage.removeItem('hcpv06AwareOfDiagnosis');
+      localStorage.removeItem('hcpv06AwareOfPrognosis');
+      localStorage.removeItem('hcpv06DetailsOfClinicalFeatures');
+      localStorage.removeItem('hcpv06Treatment');
+      localStorage.removeItem('hcpv06PatientAddressLine1');
+      localStorage.removeItem('hcpv06PatientAddressLine2');
+      localStorage.removeItem('hcpv06PatientAddressTown');
+      localStorage.removeItem('hcpv06PatientPostcode');
+    }
+
+    const setData = (name, dobd, dobm, doby, add1, city, postcode, nino, daysToSubmit) => {
+      localStorage.setItem('hcpv06PatientFullName', name);
+      localStorage.setItem('hcpv06DobDay', dobd);
+      localStorage.setItem('hcpv06DobMonth', dobm);
+      localStorage.setItem('hcpv06DobYear', doby);
+      localStorage.setItem('hcpv06PatientAddressLine1', add1);
+      localStorage.setItem('hcpv06PatientAddressTown', city);
+      localStorage.setItem('hcpv06PatientPostcode', postcode);
+      localStorage.setItem('hcpv06NiNo', nino);
+
+      localStorage.setItem('pff_daysToSubmit', daysToSubmit);
+    }
+
+    const navigate = () => {
+      const origin = window.location.origin;
+      const url = getUrlWithSR1DataAsQueryParamsv06(origin, "/hcp-e2e-journey-v06/task-list-sr1-form");
+
+      window
+        .location
+        .replace(url.toString());
+
+    }
+
+    const rachelSummers = () => {
+      clearData();
+      setData('Rachael Summers', '12', '01', '1993', '86 Claremont Cove', 'Glenrothes', 'SE1 ABC', 'QQ 12 34 56 C', '3 days');
+      navigate();
+    }
+
+    const ginaGones = () => {
+      clearData();
+      setData('Gina Gones', '10', '07', '1958', '88 Claremont Cove', 'Glenrothes', 'SE1 ABC', 'QQ 12 34 57 C', '3 days');
+      navigate();
+    }
+
+    const connorGold = () => {
+      clearData();
+      setData('Connor Gold', '11', '08', '2000', '88 Claremont Cove', 'Glenrothes', 'SE1 ABC', 'QQ 12 34 58 C', '10 days');
+      navigate();
+    }
+
+    const ireneAdler = () => {
+      clearData();
+      setData('Irene Adler', '12', '09', '1999', '88 Claremont Cove', 'Glenrothes', 'SE1 ABC', 'QQ 13 40 60 C', '12 days');
+      navigate();
+    }
+
+    const rachelScott = () => {
+      clearData();
+      setData('Rachel Scott', '15', '06', '1970', '88 Claremont Cove', 'Glenrothes', 'SE1 ABC', 'QQ 14 36 59 C', '12 days');
+      navigate();
+    }
+
+    const martinJason = () => {
+      clearData();
+      setData('Martin Jason', '01', '02', '1990', '88 Claremont Cove', 'Glenrothes', 'SE1 ABC', 'QQ 13 12 59 C', '14 days');
+      navigate();
+    }
+
+    const robertDrake = () => {
+      clearData();
+      setData('Robert Drake', '07', '03', '1977', '88 Claremont Cove', 'Glenrothes', 'SE1 ABC', 'QQ 15 35 55 C', '17 days');
+      navigate();
+    }
+
+    const dianaJones = () => {
+      clearData();
+      setData('Diana Jones', '02', '03', '2005', '88 Claremont Cove', 'Glenrothes', 'SE1 ABC', 'QQ 11 33 55 C', '19 days');
+      navigate();
+    }
+
+    const jamieeDee = () => {
+      clearData();
+      setData('Jaimee Dee', '13', '02', '2001', '88 Claremont Cove', 'Glenrothes', 'SE1 ABC', 'QQ 42 22 24 C', '19 days');
+      navigate();
+    }
+
+    const abigailBrand = () => {
+      clearData();
+      setData('Abigail Brand', '17', '11', '2010', '88 Claremont Cove', 'Glenrothes', 'SE1 ABC', 'QQ 02 03 05 C', '21 days');
+      navigate();
+    }
+  </script>
+
+{% endblock %}

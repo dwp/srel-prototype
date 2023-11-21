@@ -1,0 +1,166 @@
+{% extends "layout-gov-reduced.html" %}
+
+{% block pageTitle %}
+Error: What is the patient’s address? – Send an SR1 – GOV.UK
+{% endblock %}
+
+{% block content %}
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <form id="sendAnSR1Form" action="/hcp-e2e-journey-mvp02/sr1-form-05-radio" method="post">
+
+      <!-- ERROR STATE -->
+      <div class="govuk-error-summary" data-module="govuk-error-summary">
+        <div role="alert">
+          <h2 class="govuk-error-summary__title">
+            There is a problem
+          </h2>
+          <div class="govuk-error-summary__body">
+            <ul class="govuk-list govuk-error-summary__list">
+              <li>
+                <a href="#patientaddressline1" class="hidden">Enter address line 1</a>
+              </li>
+              <li>
+                <a href="#patientaddresstown">Enter a town or city</a>
+              </li>
+              <li>
+                <a href="#patientPostcode" class="hidden">Enter a postcode</a>
+              </li>
+              <li>
+                <a href="#patientPostcode" class="hidden">Enter a real postcode</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="govuk-form-group govuk-form-group--error">
+        <fieldset class="govuk-fieldset">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+            <span class="govuk-caption-l"> Question 3 of 17</span>
+            <h1 class="govuk-fieldset__heading">
+              What is the patient’s address?
+            </h1>
+          </legend>
+
+          <!-- Patient address -->
+          <div class="govuk-form-group">
+            <label class="govuk-label" for="patientaddressline1">
+              Address line 1
+            </label>
+            <!--ERROR LEGEND 
+            <p id="patientaddressline1-error" class="govuk-error-message">
+              <span class="govuk-visually-hidden">Error:</span> Enter address line 1
+            </p>-->
+            <!-- END ERROR -->
+            <input class="govuk-input" id="patientaddressline1" name="patientaddressline1" type="text"
+              autocomplete="patientaddressline1">
+          </div>
+
+          <div class="govuk-form-group">
+            <label class="govuk-label" for="patientaddressline2">
+              Address line 2 (optional)
+            </label>
+            <input class="govuk-input" id="patientaddressline2" name="patientaddressline2" type="text"
+              autocomplete="patientaddressline1">
+          </div>
+
+          <div class="govuk-form-group">
+            <label class="govuk-label" for="patientaddresstown">
+              Town or city
+            </label>
+            <!--ERROR LEGEND -->
+            <p id="patientaddresstown-error" class="govuk-error-message">
+              <span class="govuk-visually-hidden">Error:</span> Enter a town or city
+            </p>
+            <input class="govuk-input govuk-!-width-two-thirds govuk-input--error" id="patientaddresstown" name="patientaddresstown"
+              type="text" autocomplete="patientaddresstown">
+          </div>
+
+          <div class="govuk-form-group">
+            <label class="govuk-label" for="patientaddresscounty">
+              County (optional)
+            </label>
+            <input class="govuk-input govuk-!-width-two-thirds" id="patientaddresscounty" name="patientaddresscounty" type="text">
+          </div>
+
+          <div class="govuk-form-group">
+
+            <label class="govuk-label" for="patientPostcode">
+              Postcode
+            </label>
+            <!--ERROR LEGEND 
+            <p id="patientPostcode-error" class="govuk-error-message">
+              <span class="govuk-visually-hidden">Error:</span> Enter a postcode
+            </p>-->
+            <p id="patientPostcode-real-error" class="govuk-error-message govuk-visually-hidden">
+              <span class="govuk-visually-hidden">Error:</span> Enter a real postcode
+            </p>
+            <input class="govuk-input govuk-input--width-10" id="patientPostcode" name="patientPostcode" type="text"
+              autocomplete="patientPostcode">
+          </div>
+        </fieldset>
+      </div>
+
+      <!-- Submit button -->
+      <div class="govuk-button-group">
+        <button id="" class="govuk-button" data-module="govuk-button" onclick="savePatientAddressSR1Formmvp02()">
+          Save and continue
+        </button>
+        <a class="govuk-link" onclick="saveAndLeave()" style="color:#1d70b8;" aria-label="Return to SR1 form question list" href="#">Return to SR1 form question list</a>
+      </div>
+    </form>
+
+    <div class="govuk-!-padding-bottom-9"></div>
+
+    <!--Get help bottom-->
+    <hr class="govuk-section-break govuk-section-break--visible" aria-hidden="true">
+    <section class="govuk-width-container govuk-!-margin-top-7 govuk-!-margin-bottom-7 ">
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-full">
+          <h2 class="govuk-heading-m">Get help</h2>
+          <p class="govuk-body"><a class="govuk-link"
+              href="https://www.gov.uk/government/publications/special-rules-for-end-of-life-healthcare-professional-resources"
+              target="_blank">How to complete the SR1 form (opens in a new tab)</a></p>
+          <ul class="govuk-list">
+            <li>Email: <a href="mailto:ssd.nationalservicedesk@nhs.net">ssd.nationalservicedesk@nhs.net</a></li>
+            <li>Telephone: 0300 303 5035</li>
+            <li class="govuk-!-margin-top-5">All services are available Monday to Friday, 9am to 5pm (except public holidays)</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+  </div>
+
+  <!-- Side panel 
+    <div class="govuk-grid-column-one-third">
+      <div class="app-step-nav-related app-step-nav-related--singular">
+        <h2 class="app-step-nav-related__heading">Get help</h2>
+        <p class="govuk-body">
+          <a class="govuk-link"
+          href="https://www.gov.uk/government/publications/special-rules-for-end-of-life-healthcare-professional-resources"
+          target="_blank">How to complete the SR1 form (opens in a new tab)</a>
+        </p>
+        <ul class="govuk-list">
+          <li>Email: <a href="mailto:sr1.servicedesk@nhs.net">sr1.servicedesk@nhs.net</a>
+          </li>
+          <li>Telephone: 0300 303 5035</li>
+        </ul>
+      </div>
+    </div> -->
+</div>
+
+<script>
+  // get and set in this order - this ensures what is sent in query is the same as what is in the localStorage
+  const saveAndLeave = () => {
+    savePatientAddressSR1Formmvp02();
+
+    const origin = window.location.origin;
+    const url = getUrlWithSR1DataAsQueryParamsmvp02(origin, "/hcp-e2e-journey-mvp02/task-list-sr1-form");
+
+    window
+      .location
+      .replace(url.toString());
+  }
+</script>
+{% endblock %}

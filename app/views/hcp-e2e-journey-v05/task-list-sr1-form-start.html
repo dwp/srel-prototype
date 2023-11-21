@@ -1,0 +1,231 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Send an SR1 form
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <form id="profileSetupPage" action="/hcp-e2e-journey-v05/task-list-sr1-form-start-error" method="post">
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+            <h1 class="govuk-fieldset__heading govuk-!-margin-bottom-6">Send an SR1 form
+            </h1>
+            <p class="govuk-body govuk-!-margin-bottom-1">Your profile details will be automatically added to this SR1 form.</p>
+            <p class="govuk-body"><a href="/hcp-e2e-journey-v05/profile-details" target=”_blank”>Check your profile details are correct</a></p>
+          </legend>
+
+          <div class="govuk-grid-row">
+            <div class="govuk-grid-column-full">
+              <h2 class="govuk-heading-m govuk-!-margin-bottom-2">SR1 form incomplete</h2>
+
+              <div class="govuk-warning-text">
+                <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+                <strong class="govuk-warning-text__text">
+                  <span class="govuk-warning-text__assistive">Warning</span>
+                  Incomplete SR1 forms will be deleted after 30 days.
+                </strong>
+              </div>
+              <p class="govuk-body govuk-!-margin-bottom-7">You have completed 0 of 12 sections.</p>
+
+              <!--
+                            <p class="govuk-body govuk-!-margin-bottom-7">You have completed 0 of 12 sections.</p>
+                          -->
+
+              <ol class="app-task-list">
+                <li>
+                  <h2 class="app-task-list__section">
+                    <span class="app-task-list__section-number">1. </span> Patient details
+                  </h2>
+                  <ul class="app-task-list__items">
+                    <li class="app-task-list__item" id="patientFullName">
+                      <span class="app-task-list__task-name">
+                        <a href="/hcp-e2e-journey-v05/sr1-form-01">
+                          Full name<span class="govuk-visually-hidden"> the patient's full name</span>
+                        </a>
+                      </span>
+                      <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="fullname-status">Not started</strong>
+                      <strong class="govuk-tag app-task-list__tag hidden" id="pfullname-status-completed" aria-hidden>Completed</strong>
+                    </li>
+                    <li class="app-task-list__item" id="patientDateOfBirth">
+                      <span class="app-task-list__task-name">
+                        <p class="govuk-body govuk-!-margin-bottom-0">
+                          Date of birth<span class="govuk-visually-hidden"> the patient's date of birth</span>
+                        </p>
+                      </span>
+                      <strong class="govuk-tag govuk-tag--grey app-task-list__tag hidden" id="patientDateOfBirth-status">Not started</strong>
+                      <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="patientDateOfBirth-status-cannot">Cannot start yet</strong>
+                      <strong class="govuk-tag app-task-list__tag hidden" id="patientDateOfBirth-status-completed" aria-hidden>Completed</strong>
+                    </li>
+                    </li>
+                    </li>
+                    <li class="app-task-list__item" id="patientaddressline1">
+                      <span class="app-task-list__task-name">
+                        <p class="govuk-body govuk-!-margin-bottom-0">
+                          Address<span class="govuk-visually-hidden"> the patient's address</span>
+                        </p>
+                      </span>
+                      <strong class="govuk-tag govuk-tag--grey app-task-list__tag hidden" id="patientaddressline1-status">Not started</strong>
+                      <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="patientaddressline1-status-cannot">Cannot start yet</strong>
+                      <strong class="govuk-tag app-task-list__tag hidden" id="patientaddressline1-status-completed" aria-hidden>Completed</strong>
+                    </li>
+                    <li class="app-task-list__item" id="patientNINo">
+                      <span class="app-task-list__task-name">
+                        <p class="govuk-body govuk-!-margin-bottom-0">
+                          National Insurance number<span class="govuk-visually-hidden"> the patient's National Insurance
+                            number</span>
+                          </p>
+                      </span>
+                      <strong class="govuk-tag govuk-tag--grey app-task-list__tag hidden" id="patientNINo-status">Not started</strong>
+                      <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="patientNINo-status-cannot">Cannot start yet</strong>
+                      <strong class="govuk-tag app-task-list__tag hidden" id="patientNINo-status-completed" aria-hidden>Completed</strong>
+                    </li>
+                  </ul>
+                </li>
+
+                <li>
+                  <h2 class="app-task-list__section">
+                    <span class="app-task-list__section-number">2. </span> Diagnosis
+                  </h2>
+                  <ul class="app-task-list__items">
+                    <li class="app-task-list__item" id="patientDiagnosis">
+                      <span class="app-task-list__task-name">
+                        <p class="govuk-body govuk-!-margin-bottom-0">
+                          Diagnosis<span class="govuk-visually-hidden"> the patient's diagnosis</span>
+                        </p>
+                      </span>
+                      <strong class="govuk-tag govuk-tag--grey app-task-list__tag hidden" id="patientDiagnosis-status">Not started</strong>
+                      <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="patientDiagnosis-status-cannot">Cannot start yet</strong>
+                      <strong class="govuk-tag app-task-list__tag hidden" id="patientDiagnosis-status-completed" aria-hidden>Completed</strong>
+                    </li>
+                    <li class="app-task-list__item" id="patientDateOfDiagnosis">
+                      <span class="app-task-list__task-name" id="dateOfDiagnosis">
+                        <p class="govuk-body govuk-!-margin-bottom-0">
+                          Date of diagnosis<span class="govuk-visually-hidden"> the date of the patient's
+                            diagnosis</span>
+                          </p>
+                      </span>
+                      <strong class="govuk-tag govuk-tag--grey app-task-list__tag hidden" id="patientDateOfDiagnosis-status">Not started</strong>
+                      <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="patientDateOfDiagnosis-status-cannot">Cannot start yet</strong>
+                      <strong class="govuk-tag app-task-list__tag hidden" id="patientDateOfDiagnosis-status-completed" aria-hidden>Completed</strong>
+                    </li>
+                    <li class="app-task-list__item" id="dateSpecialRules">
+                      <span class="app-task-list__task-name">
+                        <p class="govuk-body govuk-!-margin-bottom-0">
+                          Date the patient met the Special Rules<span class="govuk-visually-hidden"> the date the
+                            patient met the Special Rules</span>
+                          </p>
+                      </span>
+                      <strong class="govuk-tag govuk-tag--grey app-task-list__tag hidden" id="dateSpecialRules-status">Not started</strong>
+                      <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="dateSpecialRules-status">Cannot start yet</strong>
+                      <strong class="govuk-tag app-task-list__tag hidden" id="dateSpecialRules-status-completed" aria-hidden>Completed</strong>
+                    </li>
+                    <li class="app-task-list__item" id="patientOtherDiagnosis">
+                      <span class="app-task-list__task-name">
+                        <p class="govuk-body govuk-!-margin-bottom-0">
+                          Other relevant diagnosis<span class="govuk-visually-hidden"> the patient's other
+                            relevant diagnosis</span>
+                          </p>
+                      </span>
+                      <strong class="govuk-tag govuk-tag--grey app-task-list__tag hidden" id="patientOtherDiagnosis-status">Not started</strong>
+                      <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="patientOtherDiagnosis-status-cannot">Cannot start yet</strong>
+                      <strong class="govuk-tag app-task-list__tag hidden" id="patientOtherDiagnosis-status-completed" aria-hidden>Completed</strong>
+                    </li>
+                    <li class="app-task-list__item" id="patientAwareOfDiagnosis">
+                      <span class="app-task-list__task-name">
+                        <p class="govuk-body govuk-!-margin-bottom-0">
+                          Patient aware of diagnosis<span class="govuk-visually-hidden"> if the patient is aware of their
+                            diagnosis</span>
+                          </p>
+                      </span>
+                      <strong class="govuk-tag govuk-tag--grey app-task-list__tag hidden" id="patientAwareOfDiagnosis-status">Not started</strong>
+                      <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="patientAwareOfDiagnosis-status-cannot">Cannot start yet</strong>
+                      <strong class="govuk-tag app-task-list__tag hidden" id="patientAwareOfDiagnosis-status-completed" aria-hidden>Completed</strong>
+                    </li>
+                    <li class="app-task-list__item" id="patientAwareOfPrognosis">
+                      <span class="app-task-list__task-name">
+                        <p class="govuk-body govuk-!-margin-bottom-0">
+                          Patient aware of prognosis<span class="govuk-visually-hidden"> if the patient is aware of their
+                            prognosis</span>
+                          </p>
+                      </span>
+                      <strong class="govuk-tag govuk-tag--grey app-task-list__tag hidden" id="patientAwareOfPrognosis-status">Not started</strong>
+                      <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="patientAwareOfPrognosis-status-cannot">Cannot start yet</strong>
+                      <strong class="govuk-tag app-task-list__tag hidden" id="patientAwareOfPrognosis-status-completed" aria-hidden>Completed</strong>
+                    </li>
+                  </ul>
+                </li>
+
+                <li>
+                  <h2 class="app-task-list__section">
+                    <span class="app-task-list__section-number">3. </span> Clinical features
+                  </h2>
+                  <ul class="app-task-list__items">
+                    <li class="app-task-list__item" id="patientClinicalFeatures">
+                      <span class="app-task-list__task-name">
+                        <p class="govuk-body govuk-!-margin-bottom-0">
+                          Details of the clinical features<span class="govuk-visually-hidden"> details of clinical
+                            features</span>
+                          </p>
+                      </span>
+                      <strong class="govuk-tag govuk-tag--grey app-task-list__tag hidden" id="patientClinicalFeatures-status">Not started</strong>
+                      <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="patientClinicalFeatures-status-cannot">Cannot start yet</strong>
+                      <strong class="govuk-tag app-task-list__tag hidden" id="patientClinicalFeatures-status-completed" aria-hidden>Completed</strong>
+                    </li>
+                  </ul>
+                </li>
+
+                <li>
+                  <h2 class="app-task-list__section">
+                    <span class="app-task-list__section-number">4. </span> Treatment
+                  </h2>
+                  <ul class="app-task-list__items">
+                    <li class="app-task-list__item" id="purposeOfTreatment">
+                      <span class="app-task-list__task-name">
+                        <p class="govuk-body govuk-!-margin-bottom-0">
+                          Purpose of treatment and response<span class="govuk-visually-hidden"> details of the purpose
+                            of any treatment and response</span>
+                          </p>
+                      </span>
+                      <strong class="govuk-tag govuk-tag--grey app-task-list__tag hidden" id="purposeOfTreatment-status">Not started</strong>
+                      <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="purposeOfTreatment-status-cannot">Cannot start yet</strong>
+                      <strong class="govuk-tag app-task-list__tag hidden" id="purposeOfTreatment-status-completed" aria-hidden>Completed</strong>
+                    </li>
+                  </ul>
+                </li>
+
+              <!--
+                <div class="govuk-button-group">
+                  <button class="govuk-button" data-module="govuk-button">
+                    Check your answers
+                  </button>
+                </div>
+                -->
+              </ol>
+            </div>
+          </div>
+        </fieldset>
+      </div>
+    </form>
+  </div>
+
+  <!-- Side panel -->
+  <div class="govuk-grid-column-one-third">
+    <div class="app-step-nav-related app-step-nav-related--singular">
+      <h2 class="app-step-nav-related__heading">Get help</h2>
+      <p class="govuk-body"><a class="govuk-link"
+          href="https://ds1500-prototype.herokuapp.com/sr1-1/sr1-guidance#patients-may-not-know-true-nature-of-illness"
+          target="_blank">How to complete the SR1 form (opens in a new tab)</a></p>
+      <ul class="govuk-list">
+        <li>Email: <a href="mailto:sr1.servicedesk@nhs.net">sr1.servicedesk@nhs.net</a></li>
+        <li>Telephone: 0300 303 5035</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+
+{% endblock %}

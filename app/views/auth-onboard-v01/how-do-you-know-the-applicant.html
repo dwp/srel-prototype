@@ -1,0 +1,64 @@
+{% extends "layout.html" %}
+{% block pageTitle %}
+    How do you know the applicant?
+{% endblock %}
+{% block content %}
+    <div class="govuk-grid-row">
+        <div class="govuk-grid-column-full">
+            <form id="howDoYouKnowTheClaimant" action="/auth-onboard-v01/sign-in" method="post">
+                <div class="govuk-form-group">
+                    <fieldset class="govuk-fieldset" aria-describedby="sign-in-hint">
+                        <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+                            <h1 class="govuk-fieldset__heading">
+                                How do you know the applicant?
+                            </h1>
+                        </legend>
+
+                        <div class="govuk-radios" data-module="govuk-radios">
+                            <div class="govuk-radios__item">
+                              <input class="govuk-radios__input" id="registered-appointee" name="howDoYouKnowTheApplicant" type="radio" value="registered-appointee" onclick="aoHowDoYouKnowTheApplicantFn(this)">
+                              <label class="govuk-label govuk-radios__label" for="registered-appointee">
+                                I'm a registered appointee
+                              </label>
+                            </div>
+                            <div class="govuk-radios__item">
+                              <input class="govuk-radios__input" id="power-of-appointee" name="howDoYouKnowTheApplicant" type="radio" value="power-of-appointee" onclick="aoHowDoYouKnowTheApplicantFn(this)">
+                              <label class="govuk-label govuk-radios__label" for="power-of-appointee">
+                                I have power of attorney
+                              </label>
+                            </div>
+                            <div class="govuk-radios__item">
+                              <input class="govuk-radios__input" id="corporate-acting-body" name="howDoYouKnowTheApplicant" type="radio" value="corporate-acting-body" onclick="aoHowDoYouKnowTheApplicantFn(this)">
+                              <label class="govuk-label govuk-radios__label" for="corporate-acting-body">
+                                I belong to a corporate acting body
+                              </label>
+                            </div>
+                            <div class="govuk-radios__item">
+                              <input class="govuk-radios__input" id="charity-and-helping" name="howDoYouKnowTheApplicant" type="radio" value="charity-and-helping" onclick="aoHowDoYouKnowTheApplicantFn(this)">
+                              <label class="govuk-label govuk-radios__label" for="charity-and-helping">
+                                I work for a charity and I am helping them apply
+                              </label>
+                            </div>
+                            <div class="govuk-radios__divider">or</div>
+                            <div class="govuk-radios__item">
+                              <input class="govuk-radios__input" id="family-member-or-friend" name="howDoYouKnowTheApplicant" type="radio" value="family-member-or-friend" onclick="aoHowDoYouKnowTheApplicantFn(this)">
+                              <label class="govuk-label govuk-radios__label" for="family-member-or-friend">
+                                I'm a family member or a friend helping them apply
+                              </label>
+                            </div>
+                          </div>
+                
+                    </fieldset>
+                    
+                </div>
+
+                <!-- Continue -->
+                <div class="govuk-button-group">
+                    <button id="aoV01HowDoYouKnowTheApplicantSubmitBtn" class="govuk-button" data-module="govuk-button">
+                        Continue
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+{% endblock %}

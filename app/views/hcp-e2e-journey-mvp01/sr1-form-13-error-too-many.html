@@ -1,0 +1,117 @@
+{% extends "layout-gov-reduced.html" %}
+
+{% block pageTitle %}
+Send an SR1 form
+{% endblock %}
+
+{% block content %}
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+        <form id="sendAnSR1Form" action="/hcp-e2e-journey-mvp01/check-sr1-form" method="post">
+
+            <!-- ERROR STATE -->
+            <div class="govuk-error-summary" data-module="govuk-error-summary">
+                <div role="alert">
+                    <h2 class="govuk-error-summary__title">
+                        There is a problem
+                    </h2>
+                    <div class="govuk-error-summary__body">
+                        <ul class="govuk-list govuk-error-summary__list">
+                            <li>
+                                <a href="#treatment" >The treatment must be 250 chraracters
+                                    or less</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="govuk-form-group govuk-form-group--error">
+                <fieldset class="govuk-fieldset">
+                    <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+                        <span class="govuk-caption-l"> Question 12 of 17</span>
+                        <h1 class="govuk-fieldset__heading">
+                            Tell us about the purpose of any treatment and the response
+                        </h1>
+                    </legend>
+
+                    <!-- Give the details of the clinical features that indicate a severe progressive condition -->
+                    <div class="govuk-character-count" data-module="govuk-character-count" data-maxlength="250">
+                        <div class="govuk-form-group">
+                            <div id="treatment-hint" class="govuk-hint">For example: treatment may be ongoing,
+                                palliative or symptom control/ psychosocial only.</div>
+                            <!--ERROR LEGEND -->
+                            <p id="treatment-character-max-error" class="govuk-error-message">
+                                <span class="govuk-visually-hidden">Error:</span> The treatment must be 250 chraracters
+                                or less
+                            </p>
+                            <!-- END ERROR -->
+
+                            <textarea class="govuk-textarea govuk-input--width-20 govuk-js-character-count"
+                                id="treatment" name="treatment" rows="5" aria-describedby="treatment-info">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</textarea>
+                        </div>
+                        <div id="treatment-info" class="govuk-hint govuk-character-count__message">You
+                            can enter up to 250 characters</div>
+                    </div>
+                </fieldset>
+            </div>
+
+            <!-- Submit button -->
+            <div class="govuk-button-group">
+                <button id="" class="govuk-button" data-module="govuk-button" onclick="saveTreatmentSR1Formmvp01()">
+                    Save and continue
+                </button>
+                <a class="govuk-link" onclick="saveAndLeave()" style="color:#1d70b8;" aria-label="Save and return to SR1 form">Save and return to SR1 form</a>
+            </div>
+        </form>
+        <div class="govuk-!-padding-bottom-9"></div>
+
+        <!--Get help bottom-->
+        <hr class="govuk-section-break govuk-section-break--visible" aria-hidden="true">
+        <section class="govuk-width-container govuk-!-margin-top-7 govuk-!-margin-bottom-7 ">
+            <div class="govuk-grid-row">
+                <div class="govuk-grid-column-full">
+                    <h2 class="govuk-heading-m">Get help</h2>
+                    <p class="govuk-body"><a class="govuk-link"
+                            href="https://ds1500-prototype.herokuapp.com/sr1-1/sr1-guidance#patients-may-not-know-true-nature-of-illness"
+                            target="_blank">How to complete the SR1 form (opens in a new tab)</a></p>
+                    <ul class="govuk-list">
+                        <li>Email: <a href="mailto:sr1.servicedesk@nhs.net">sr1.servicedesk@nhs.net</a></li>
+                        <li>Telephone: 0300 303 5035</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+    <!-- Side panel 
+            <div class="govuk-grid-column-one-third">
+                <div class="app-step-nav-related app-step-nav-related--singular">
+                    <h2 class="app-step-nav-related__heading">Get help</h2>
+                    <p class="govuk-body">
+                        <a  class="govuk-link" href="https://ds1500-prototype.herokuapp.com/sr1-1/sr1-guidance#patients-may-not-know-true-nature-of-illness" target="_blank">How to complete the SR1 form (opens in a new tab)</a>
+                    </p>
+                    <ul class="govuk-list">
+                        <li>Email: <a href="mailto:sr1.servicedesk@nhs.net">sr1.servicedesk@nhs.net</a>
+                        </li>
+                        <li>Telephone: 0300 303 5035</li>
+                    </ul>
+                </div>
+            </div> -->
+</div>
+
+<script>
+    // get and set in this order - this ensures what is sent in query is the same as what is in the localStorage
+    const saveAndLeave = () => {
+        saveTreatmentSR1Formmvp01();
+
+        const origin = window.location.origin;
+        const url = getUrlWithSR1DataAsQueryParamsmvp01(origin, "/hcp-e2e-journey-mvp01/task-list-sr1-form");
+
+        window
+            .location
+            .replace(url.toString());
+    }
+</script>
+{% endblock %}

@@ -1,0 +1,92 @@
+{% extends "layout-gov.html" %}
+
+{% block pageTitle %}
+Create your profile
+{% endblock %}
+
+{% block content %}
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+        <form id="profileSetupPage" name="profileDetails" action="/hcp-e2e-journey-v06/profile-07" method="post">
+            
+            <!-- ERROR STATE -->
+            <div class="govuk-error-summary" data-module="govuk-error-summary">
+                <div role="alert">
+                  <h2 class="govuk-error-summary__title">
+                    There is a problem
+                  </h2>
+                  <div class="govuk-error-summary__body">
+                    <ul class="govuk-list govuk-error-summary__list">
+                      <li>
+                        <a href="#postcode">Enter a postcode</a>
+                      </li>
+                      <li>
+                        <a href="#postcode" class="govuk-visually-hidden">Enter a real postcode</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+            <div class="govuk-form-group govuk-form-group--error">
+                <fieldset class="govuk-fieldset">
+                    <legend class="govuk-fieldset__legend govuk-fieldset__legend--l" for="postcode">
+                        <span class="govuk-caption-l">Section 6 of 6</span>
+                        <h1 class="govuk-fieldset__heading">
+                            What is your organisation’s address? 
+                        </h1>
+                    </legend>
+
+                    <!-- Patient postcode -->
+                    <div class="govuk-form-group">
+                        <label class="govuk-label" for="postcode">Enter your organisation’s postcode.</label>
+                        <div id="hint-76b66975" class="gem-c-hint govuk-hint govuk-!-margin-bottom-3">
+                            For example, SW6 2AA.
+                        </div>
+                        <!--ERROR LEGEND -->
+                        <p id="postcode-error" class="govuk-error-message">
+                            <span class="govuk-visually-hidden">Error:</span> Enter a postcode
+                        </p>
+                        <p id="postcode-real-error" class="govuk-error-message govuk-visually-hidden">
+                            <span class="govuk-visually-hidden">Error:</span> Enter a real postcode
+                        </p>
+                        <!-- END ERROR -->
+                        <input class="govuk-input govuk-input--width-10" id="postcode" name="postcode" type="text"
+                            autocomplete="off">
+                    </div>
+                </fieldset>
+            </div>
+
+
+            <!-- Submit button -->
+            <div class="govuk-button-group">
+                <button id="" class="govuk-button" data-module="govuk-button" onclick="saveOrgPostcodev06(); resetChangeFn();">
+                    Find address
+                </button>
+            </div>
+            <!-- <p class="govuk-body"><a id="postcode-finder-link" class="govuk-link" rel="external" href="https://www.royalmail.com/find-a-postcode" target="_blank">Find a postcode on Royal Mail's postcode finder (open in a new tab)</a></p> -->
+            <div class="govuk-form-group">
+                <label class="govuk-label" for="cannot-find-address"><a id="postcode-finder-link" class="govuk-link"
+                        rel="external" href="/hcp-e2e-journey-v06/profile-07-a">Enter your organisation's address
+                        manually</a></label>
+            </div>
+        </form>
+
+    </div>
+
+    <!-- Side panel 
+    <div class="govuk-grid-column-one-third">
+        <div class="app-step-nav-related app-step-nav-related--singular">
+            <h2 class="app-step-nav-related__heading">Get help</h2>
+            <p class="govuk-body"><a class="govuk-link"
+                    href="https://ds1500-prototype.herokuapp.com/sr1-1/sr1-guidance#patients-may-not-know-true-nature-of-illness"
+                    target="_blank">How to complete the SR1 form (opens in a new tab)</a></p>
+            <ul class="govuk-list">
+                <li>Email: <a href="mailto:sr1.servicedesk@nhs.net">sr1.servicedesk@nhs.net</a></li>
+                <li>Telephone: 0300 303 5035</li>
+            </ul>
+        </div>
+    </div>
+-->
+</div>
+{% endblock %}

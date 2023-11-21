@@ -1,0 +1,95 @@
+{% extends "layout-gov.html" %}
+
+{% block pageTitle %}
+    What date did your patient meet the Special Rules?
+{% endblock %}
+
+{% block content %}
+    <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds">
+            <form id="sendAnSR1Form" action="/hcp-e2e-journey-v06/sr1-form-09" method="post">
+                <div class="govuk-form-group">
+                    <fieldset class="govuk-fieldset">
+                        <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+                            <span class="govuk-caption-l">Section 7 of 12</span>
+                            <h1 class="govuk-fieldset__heading">
+                                What date did your patient meet the Special Rules?
+                            </h1>
+                        </legend>
+
+                        <!-- Date from which the patient is thought to meet the Special Rules -->
+                        <p class="govuk-body">
+                            This might be the date of diagnosis, the date this form is being completed or any date in between. Providing this will ensure your patient is paid from the correct date.
+                          </p>
+                        <div id="dateofSpecialRules-hint" class="govuk-hint">
+                            For example, 27 3 2007
+                        </div>
+                        <div class="govuk-date-input" id="dateofSpecialRules">
+                            <div class="govuk-date-input__item">
+                                <div class="govuk-form-group">
+                                    <label class="govuk-label govuk-date-input__label" for="dateofSpecialRules-day">
+                                        Day
+                                    </label>
+                                    <input  autocomplete="off" class="govuk-input govuk-date-input__input govuk-input--width-2" id="dateofSpecialRules-day" name="dateofSpecialRules-day" type="text" inputmode="numeric" maxlength="2">
+                                </div>
+                            </div>
+                            <div class="govuk-date-input__item">
+                                <div class="govuk-form-group">
+                                    <label class="govuk-label govuk-date-input__label" for="dateofSpecialRules-month">
+                                        Month
+                                    </label>
+                                    <input  autocomplete="off" class="govuk-input govuk-date-input__input govuk-input--width-2" id="dateofSpecialRules-month" name="dateofSpecialRules-month" type="text" inputmode="numeric" maxlength="2">
+                                </div>
+                            </div>
+                            <div class="govuk-date-input__item">
+                                <div class="govuk-form-group">
+                                    <label class="govuk-label govuk-date-input__label" for="dateofSpecialRules-year">
+                                        Year
+                                    </label>
+                                    <input  autocomplete="off" class="govuk-input govuk-date-input__input govuk-input--width-4" id="dateofSpecialRules-year" name="dateofSpecialRules-year" type="text" inputmode="numeric" maxlength="4">
+                                </div>
+                            </div>
+                        </div>
+
+                    </fieldset>
+                </div>
+
+                <!-- Submit button -->
+                <div class="govuk-button-group">
+                    <button id="" class="govuk-button" data-module="govuk-button" onclick="saveDateofSpecialRulesSR1Formv06()">
+                        Save and continue
+                    </button>
+                    <a class="govuk-link" onclick="saveAndLeave()" style="color:#1d70b8;" aria-label="Save and come back later">Save and come back later</a>
+                </div>
+            </form>
+
+        </div>
+
+        <!-- Side panel -->
+        <div class="govuk-grid-column-one-third">
+            <div class="app-step-nav-related app-step-nav-related--singular">
+                <h2 class="app-step-nav-related__heading">Get help</h2>
+                <p class="govuk-body"><a  class="govuk-link" href="https://ds1500-prototype.herokuapp.com/sr1-1/sr1-guidance#patients-may-not-know-true-nature-of-illness" target="_blank">How to complete the SR1 form (opens in a new tab)</a></p>
+                <ul class="govuk-list">
+                    <li>Email: <a href="mailto:sr1.servicedesk@nhs.net">sr1.servicedesk@nhs.net</a></li>
+                    <li>Telephone: 0300 303 5035</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // get and set in this order - this ensures what is sent in query is the same as what is in the localStorage
+        const saveAndLeave = () => {
+            saveDateofSpecialRulesSR1Formv06();
+
+            const origin = window.location.origin;
+            const url = getUrlWithSR1DataAsQueryParamsv06(origin, "/hcp-e2e-journey-v06/task-list-sr1-form");
+            setDataSavedUrlParam(url);
+
+            window
+                .location
+                .replace(url.toString());
+        }
+    </script>
+{% endblock %}

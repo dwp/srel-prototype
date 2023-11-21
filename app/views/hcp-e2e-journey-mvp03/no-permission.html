@@ -1,0 +1,53 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+The online SR1 form is only available to NHS England – Send an SR1 medical evidence form – GOV.UK
+{% endblock %}
+
+{% block content %}
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+        <!--
+        <div class="govuk-panel govuk-panel--confirmation">
+            <h1 class="govuk-panel__title">You have signed out</h1>
+        </div>
+    -->
+        <h1 class="govuk-heading-l">
+            The online SR1 form is only available to NHS England
+        </h1>
+
+        <p class="govuk-body">You can still <a target="_blank"
+                href="https://www.gov.uk/government/publications/special-rules-for-end-of-life-healthcare-professional-resources#what-to-do-with-a-completed-sr1-form">send
+                a SR1 form by email or post (opens in new tab)</a>.</p>
+
+        <p class="govuk-body">We are working to make this service available to:</p>
+        <ul class="govuk-list govuk-list--bullet">
+            <li>NHS Scotland</li>
+            <li>NHS Wales</li>
+            <li>Health and Social Care in Northern Ireland</li>
+        </ul>
+
+        <div class="govuk-!-padding-bottom-6"></div>
+
+        <!--Get help new-->
+    <hr class="govuk-section-break govuk-section-break--visible" aria-hidden="true">
+    <section class="govuk-width-container govuk-!-margin-top-7 govuk-!-margin-bottom-7 ">
+        <div class="govuk-grid-row">
+            <div class="govuk-grid-column-full">
+              <h2 class="govuk-heading-m">Get help</h2>
+              <!--<p class="govuk-body">You can email for technical support, such as accessing the service.</p>
+              <p class="govuk-body">We cannot discuss specific patients or how to complete the SR1 form, so please do not give personal details.</p>-->
+              <p class="govuk-body"><a class="govuk-link" href="mailto:sr1.technical.support@dwp.gov.uk">sr1.technical.support@dwp.gov.uk</a></p>
+              <p class="govuk-body">We aim to respond within 5 working days.</p>
+              <!--<h2 class="govuk-heading-m">How to contact the benefit services</h2>
+              <p class="govuk-body">For information about Personal Independence Payment, Disability Living Allowance or Attendance Allowance, <a class="govuk-link" href="https://www.gov.uk/disability-benefits-helpline" target="_blank">contact the Disability Service Centre (opens in a new tab)</a>.</p>
+              <p class="govuk-body">For information about Universal Credit or Employment and Support Allowance, <a class="govuk-link" href="https://www.gov.uk/contact-jobcentre-plus/existing-benefit-claims" target="_blank">contact Jobcentre Plus (opens in a new tab)</a>.</p>
+            </div>
+        </div>
+    </section>
+
+    </div>
+
+</div>
+{% endblock %}

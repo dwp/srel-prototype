@@ -1,0 +1,142 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Check your details are correct
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+        <form id="profileSetupPage" action="/hcp-e2e-journey-v02/reminders-1" method="post" autocomplete="off">
+            <div class="govuk-form-group">
+                <fieldset class="govuk-fieldset">
+                    <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+                        <h1 class="govuk-fieldset__heading">
+                            Check your profile details are correct
+                        </h1>
+                    </legend>
+
+                    <!-- Inset text -->
+                    <div class="govuk-inset-text">
+                        <!-- <p>To save you time, we will automatically use your profile details on every SR1 form you complete.</p> 
+                        <p>We will automatically add your profile details on every SR1 form you send.</p> -->
+                        <p>You can change your profile details at any time in your account.</p>
+                    </div>
+
+                    <!-- ############## -->
+                    <!-- PERSON DETAILS -->
+                    <!-- ############## -->
+                    <h2 class="govuk-heading-l">Your profile details</h2>
+
+                    <dl class="govuk-summary-list" id="profileData">
+                        <div class="govuk-summary-list__row">
+                            <dt class="govuk-summary-list__key">
+                                Name
+                            </dt>
+                            <dd class="govuk-summary-list__value">
+                                <div class="text-right" id="name"></div>
+                            </dd>
+                            <dd class="govuk-summary-list__actions">
+                                <a class="govuk-link" href="/hcp-e2e-journey-v02/profile-setup">
+                                    Change<span class="govuk-visually-hidden"> practitioner's full name</span>
+                                </a>
+                            </dd>
+                        </div>
+                        <div class="govuk-summary-list__row">
+                            <dt class="govuk-summary-list__key">
+                                Role
+                            </dt>
+                            <dd class="govuk-summary-list__value">
+                                <div class="text-right" id="role"></div>
+                            </dd>
+                            <dd class="govuk-summary-list__actions">
+                                <a class="govuk-link" href="/hcp-e2e-journey-v02/profile-setup">
+                                    Change<span class="govuk-visually-hidden"> practitioner's role</span>
+                                </a>
+                            </dd>
+                        </div>
+                        <div class="govuk-summary-list__row">
+                            <dt class="govuk-summary-list__key">
+                                Professional registration number
+                            </dt>
+                            <dd class="govuk-summary-list__value">
+                                <div class="text-right" id="professionalRegNum"></div>
+                            </dd>
+                            <dd class="govuk-summary-list__actions">
+                                <a class="govuk-link" href="/hcp-e2e-journey-v02/profile-setup">
+                                    Change<span class="govuk-visually-hidden"> practitioner's professional registration
+                                        number</span>
+                                </a>
+                            </dd>
+                        </div>
+                        <!--
+                        <div class="govuk-summary-list__row">
+                            <dt class="govuk-summary-list__key">
+                                Email address
+                            </dt>
+                            <dd class="govuk-summary-list__value">
+                                <div class="text-right" id="emailAddress"></div>
+                            </dd>
+                        </div>
+                    -->
+                        <div class="govuk-summary-list__row">
+                            <dt class="govuk-summary-list__key">
+                                Mobile number
+                            </dt>
+                            <dd class="govuk-summary-list__value">
+                                <div class="text-right" id="mobile"></div>
+                            </dd>
+                            <dd class="govuk-summary-list__actions">
+                                <a class="govuk-link" href="/hcp-e2e-journey-v02/profile-setup">
+                                    Change<span class="govuk-visually-hidden"> practitioner's phone number</span>
+                                </a>
+                            </dd>
+                        </div>
+                        <div class="govuk-summary-list__row">
+                            <dt class="govuk-summary-list__key">
+                                Organisation address
+                            </dt>
+                            <dd class="govuk-summary-list__value">
+                                <div class="text-right" id="organisationName"></div>
+                                <div class="text-right" id="organisationAddressLine1"></div>
+                                <div class="text-right" id="organisationAddressLine2"></div>
+                                <div class="text-right" id="organisationTownCity"></div>
+                                <div class="text-right" id="organisationPostcode"></div>
+                            </dd>
+                            <dd class="govuk-summary-list__actions">
+                                <a class="govuk-link" href="/hcp-e2e-journey-v02/profile-setup">
+                                    Change<span class="govuk-visually-hidden"> organisation address</span>
+                                </a>
+                            </dd>
+                        </div>
+                    </dl>
+
+                </fieldset>
+            </div>
+
+            <!-- Submit button -->
+            <div class="govuk-button-group">
+                <!-- <button id="" class="govuk-button" data-module="govuk-button" onclick="hcpv02ProfileDetailsCompleteFn(event)"> -->
+                <button id="" class="govuk-button" data-module="govuk-button" onclick="profileTriggeredV02()">
+                    Save and continue
+                </button>
+            </div>
+        </form>
+    </div>
+
+    <!-- Side panel
+        <div class="govuk-grid-column-one-third">
+            <div class="app-step-nav-related app-step-nav-related--singular">
+                <h2 class="app-step-nav-related__heading">Get help</h2>
+                <p class="govuk-body"><a  class="govuk-link" href="https://ds1500-prototype.herokuapp.com/sr1-1/sr1-guidance#patients-may-not-know-true-nature-of-illness" target="_blank">How to complete the SR1 form (opens in a new tab)</a></p>
+                <ul class="govuk-list">
+                    <li>Email: <a href="mailto:sr1.servicedesk@nhs.net">sr1.servicedesk@nhs.net</a></li>
+                    <li>Telephone: 0300 303 5035</li>
+                </ul>
+            </div>
+        </div>
+-->
+</div>
+
+{% endblock %}

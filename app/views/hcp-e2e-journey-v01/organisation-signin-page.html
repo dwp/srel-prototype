@@ -1,0 +1,65 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Your organisation sign in page
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+        <h1 class="govuk-heading-xl">You will be redirected to your organisation's sign in page</h1>
+        <p class="govuk-body">If you are not redirected in <span id="timeCounted">5</span> seconds, <a
+                id="organisationSignInRouting" href="profile-setup" class="govuk-link">go straight to the service</a>.
+        </p>
+        <!--
+            <form id="hcpv01SigninPage" action="/hcp-e2e-journey-v01/profile-setup" method="post" autocomplete="off">
+                <div class="govuk-form-group">
+                    <fieldset class="govuk-fieldset">
+                        <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+                            <h1 class="govuk-fieldset__heading">
+                                Sign in to your <span id="orgnisationName"></span> account
+                            </h1>
+                        </legend>
+
+                        <div class="govuk-form-group">
+                            <label class="govuk-label" for="email">
+                                <strong>Email address</strong>
+                            </label>
+                            <input class="govuk-input govuk-!-width-full" id="hcpv01Signin_email" name="hcpv01Signin_email" type="text" autocomplete="off" onkeyup="hcpv01SignIn()">
+                        </div>
+                        <div class="govuk-form-group">
+                            <label class="govuk-label" for="password">
+                                <strong>Password</strong>
+                            </label>
+                            <input class="govuk-input govuk-!-width-full" id="hcpv01Signin_password" name="hcpv01Signin_password" type="password" autocomplete="off" onkeyup="hcpv01SignIn()">
+                        </div>
+
+                    </fieldset>
+                </div>
+
+                <div class="govuk-button-group">
+                    <button id="" class="govuk-button" data-module="govuk-button" onclick="getEmailAddress()">
+                        Sign in
+                    </button>
+                </div>
+            </form>
+            -->
+    </div>
+
+    <!--
+        <div class="govuk-grid-column-one-third">
+            <div class="side-panel">
+                <h4 class="govuk-heading-s">Get help sending an SR1 form</h4>
+                <p><a href="https://ds1500-prototype.herokuapp.com/sr1-1/sr1-guidance#patients-may-not-know-true-nature-of-illness" target="_blank">Guidance for completing the SR1 (opens in a new tab)</a></p>
+                <p class="govuk-body"><strong>Telephone</strong></p>
+                <p class="govuk-body">0300 303 5035</p>
+                <p class="govuk-body"><strong>Email</strong></p>
+                <p class="govuk-body"><a href="mailto:sr1.servicedesk@nhs.net">sr1.servicedesk@nhs.net</a></p>
+            </div>
+        </div>
+        -->
+</div>
+
+{% endblock %}

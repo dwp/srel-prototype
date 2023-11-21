@@ -1,0 +1,54 @@
+{% extends "layout-gov-reduced.html" %}
+
+{% block pageTitle %}
+Create your profile
+{% endblock %}
+
+{% block content %}
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+        <form id="profileSetupPage" name="profileDetails" action="/hcp-e2e-journey-mvp02/profile-05" method="post">
+            <div class="govuk-form-group">
+                <fieldset class="govuk-fieldset">
+                    <legend class="govuk-fieldset__legend govuk-fieldset__legend--l"
+                        for="mobileNumber">
+                        <span class="govuk-caption-l">Question 4 of 6</span>
+                        <h1 class="govuk-fieldset__heading">
+                            What phone number can we contact you?
+                        </h1>
+                    </legend>
+                    <div id="mobileNumber-hint" class="govuk-hint">We will use this number to contact you if we need more information about a patient after you have sent an SR1 form.</div>
+                    <input class="govuk-input govuk-input--width-20" id="mobileNumber" name="mobileNumber"
+                        type="text" autocomplete="off">
+
+
+                </fieldset>
+            </div>
+
+            <!-- Submit button -->
+            <div class="govuk-button-group">
+                <button id="" class="govuk-button" data-module="govuk-button" onclick="saveHCPMobilelNumbermvp02(); resetChangeFn();">
+                    Save and continue
+                </button>
+            </div>
+        </form>
+
+    </div>
+
+    <!-- Side panel 
+    <div class="govuk-grid-column-one-third">
+        <div class="app-step-nav-related app-step-nav-related--singular">
+            <h2 class="app-step-nav-related__heading">Get help</h2>
+            <p class="govuk-body"><a class="govuk-link"
+                    href="https://www.gov.uk/government/publications/special-rules-for-end-of-life-healthcare-professional-resources"
+                    target="_blank">How to complete the SR1 form (opens in a new tab)</a></p>
+            <ul class="govuk-list">
+                <li>Email: <a href="mailto:ssd.nationalservicedesk@nhs.net">ssd.nationalservicedesk@nhs.net</a></li>
+                <li>Telephone: 0300 303 5035</li>
+            </ul>
+        </div>
+    </div>
+    -->
+</div>
+{% endblock %}

@@ -1,0 +1,113 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Complete your profile
+{% endblock %}
+
+{% block content %}
+    <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds">
+            <form id="profileSetupPage" name="profileDetails" action="/hcp-e2e-journey-v09/profile-03-new" method="post">
+                <div class="govuk-form-group">
+                    <fieldset class="govuk-fieldset">
+                        <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+                            <span class="govuk-caption-l">Section 2 of 6</span>
+                            <h1 class="govuk-fieldset__heading">
+                                What is your role?
+                            </h1>
+                        </legend>
+
+                        <!-- Your role -->
+                        <div class="govuk-form-group">
+                            <label class="govuk-label hidden" for="role">Your role
+                            </label>
+                            <div id="roleOptions" class="govuk-radios" data-module="govuk-radios">
+                                <div class="govuk-radios__item">
+                                    <input class="govuk-radios__input" id="gp" name="yourRole" type="radio" value="General Practitioner"
+                                        onclick="hcpv09RoleFn(this)">
+                                    <label class="govuk-label govuk-radios__label" for="gp">
+                                        General Practitioner
+                                    </label>
+                                </div>
+                                <div class="govuk-radios__item">
+                                    <input class="govuk-radios__input" id="hospitalConsultant" name="yourRole"
+                                        type="radio" value="Hospital consultant" onclick="hcpv09RoleFn(this)">
+                                    <label class="govuk-label govuk-radios__label" for="hospitalConsultant">
+                                        Hospital consultant
+                                    </label>
+                                </div>
+                                <div class="govuk-radios__item">
+                                    <input class="govuk-radios__input" id="specialistDoctor" name="yourRole"
+                                        type="radio" value="Specialist doctor" onclick="hcpv09RoleFn(this)">
+                                    <label class="govuk-label govuk-radios__label" for="specialistDoctor">
+                                        Specialist doctor
+                                    </label>
+                                </div>
+                                <div class="govuk-radios__item">
+                                    <input class="govuk-radios__input" id="hospiceDoctor" name="yourRole" type="radio"
+                                        value="Hospice doctor" onclick="hcpv09RoleFn(this)">
+                                    <label class="govuk-label govuk-radios__label" for="hospiceDoctor">
+                                        Hospice doctor
+                                    </label>
+                                </div>
+                                <div class="govuk-radios__item">
+                                    <input class="govuk-radios__input" id="seniorSpecialistNurse" name="yourRole"
+                                        type="radio" value="Senior specialist nurse" onclick="hcpv09RoleFn(this)">
+                                    <label class="govuk-label govuk-radios__label" for="seniorSpecialistNurse"
+                                        aria-describedby="seniorSpecialistNurse-hint">
+                                        Senior specialist nurse
+                                    </label>
+                                    <div id="seniorSpecialistNurse-hint" class="govuk-hint govuk-radios__hint">
+                                        Such as a clinical nurse specialist or advanced nurse practitioner.
+                                    </div>
+                                </div>
+                                <!--
+                                <div class="govuk-radios__divider">or</div> -->
+                                <div class="govuk-radios__item">
+                                    <input class="govuk-radios__input" id="other" name="yourRole" type="radio"
+                                        value="other" data-aria-controls="conditional-role"
+                                        onclick="hcpv09RoleFn(this)">
+                                    <label class="govuk-label govuk-radios__label" for="other">
+                                        Other
+                                    </label>
+                                </div>
+                                <div class="govuk-radios__conditional govuk-radios__conditional--hidden"
+                                    id="conditional-role">
+                                    <div class="govuk-form-group">
+                                        <label class="govuk-label" for="otherRole">
+                                            What is your role?
+                                        </label>
+                                        <input class="govuk-input govuk-input--width-15" id="otherRole" name="otherRole"
+                                            type="text" onfocus="this.value=''" autocomplete="off">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </fieldset>
+                </div>
+
+                <!-- Submit button -->
+                <div class="govuk-button-group">
+                    <button id="" class="govuk-button" data-module="govuk-button" onclick="saveRolev09(); resetChangeFn();">
+                        Save and continue
+                    </button>
+                </div>
+            </form>
+
+        </div>
+
+        <!-- Side panel 
+        <div class="govuk-grid-column-one-third">
+            <div class="app-step-nav-related app-step-nav-related--singular">
+                <h2 class="app-step-nav-related__heading">Get help</h2>
+                <p class="govuk-body"><a  class="govuk-link" href="https://ds1500-prototype.herokuapp.com/sr1-1/sr1-guidance#patients-may-not-know-true-nature-of-illness" target="_blank">How to complete the SR1 form (opens in a new tab)</a></p>
+                <ul class="govuk-list">
+                    <li>Email: <a href="mailto:sr1.servicedesk@nhs.net">sr1.servicedesk@nhs.net</a></li>
+                    <li>Telephone: 0300 303 5035</li>
+                </ul>
+            </div>
+        </div>
+        -->
+    </div>
+{% endblock %}

@@ -1,0 +1,122 @@
+{% extends "layout-gov-reduced.html" %}
+
+{% block pageTitle %}
+What is the patient’s address? Select an address
+{% endblock %}
+
+{% block content %}
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+        <form id="sendAnSR1Form" action="/hcp-e2e-journey-mvp02/sr1-form-05" method="post">
+            <div class="govuk-form-group">
+                <fieldset class="govuk-fieldset">
+                    <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+                        <span class="govuk-caption-l"> Question 3 of 17</span>
+                        <h1 class="govuk-fieldset__heading">
+                            What is the patient’s address?
+                        </h1>
+                    </legend>
+
+                    <!-- Patient postcode -->
+                    <div class="govuk-form-group">
+                        <label class="govuk-label" for="patientPostcode">Postcode</label>
+                        <span id="patientPostcode" class="govuk-heading-s govuk-!-margin-top-0"></span>
+                        <div class="govuk-button-group govuk-!-margin-top-0" id="patientPostcode">
+                            <a id="postcode-finder-link" class="govuk-link" rel="external"
+                                href="/hcp-e2e-journey-mvp02/sr1-form-03">Change postcode</a>
+                        </div>
+                        <!--
+                        <div class="govuk-heading-s govuk-!-margin-top-0" id="patientPostcode">SE1 ABC&nbsp;&nbsp;&nbsp;<a id="postcode-finder-link" style="text-indent:4em" class="govuk-link" rel="external" href="/hcp-e2e-journey-mvp02/sr1-form-02">Change</a></div>-->
+                    </div>
+                    <div class="govuk-form-group">
+                        <label class="govuk-label" for="patientaddressline1">
+                            Select an address
+                        </label>
+                        <select class="govuk-select" id="patientaddressline1"
+                            aria-describedby="patientaddressline1-hint">
+                            <option value="choose" selected>2 Addresses found</option>
+                            <option class="govuk-select" id="patientaddressline1" type="text" value="86 Claremont Cove">
+                                86 Claremont Cove, Glenrothes</option>
+                            <option class="govuk-select" id="patientaddressline1" type="text" value="88 Claremont Cove">
+                                88 Claremont Cove, Glenrothes</option>
+                        </select>
+                    </div>
+                    <div class="govuk-form-group">
+                        <label class="govuk-label" for="cannot-find-address">
+                            <a id="postcode-finder-link" class="govuk-link" rel="external"
+                                href="/hcp-e2e-journey-mvp02/sr1-form-04-a">I cannot find the address on the list</a>
+                        </label>
+                    </div>
+                </fieldset>
+            </div>
+
+            <!-- Submit button -->
+            <div class="govuk-button-group">
+                <button id="" class="govuk-button" data-module="govuk-button" onclick="save()">Save and
+                    continue</button>
+            </div>
+        </form>
+        <div class="govuk-!-padding-bottom-9"></div>
+
+        <!--Get help bottom-->
+        <hr class="govuk-section-break govuk-section-break--visible" aria-hidden="true">
+        <section class="govuk-width-container govuk-!-margin-top-7 govuk-!-margin-bottom-7 ">
+            <div class="govuk-grid-row">
+                <div class="govuk-grid-column-full">
+                    <h2 class="govuk-heading-m">Get help</h2>
+                    <p class="govuk-body"><a class="govuk-link"
+                            href="https://www.gov.uk/government/publications/special-rules-for-end-of-life-healthcare-professional-resources"
+                            target="_blank">How to complete the SR1 form (opens in a new tab)</a></p>
+                    <ul class="govuk-list">
+                        <li>Email: <a href="mailto:ssd.nationalservicedesk@nhs.net">ssd.nationalservicedesk@nhs.net</a></li>
+                        <li>Telephone: 0300 303 5035</li>
+                        <li class="govuk-!-margin-top-5">All services are available Monday to Friday, 9am to 5pm (except public holidays)</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+    <!-- Side panel 
+        <div class="govuk-grid-column-one-third">
+            <div class="app-step-nav-related app-step-nav-related--singular">
+                <h2 class="app-step-nav-related__heading">Get help</h2>
+                <p class="govuk-body">
+                    <a class="govuk-link"
+                    href="https://www.gov.uk/government/publications/special-rules-for-end-of-life-healthcare-professional-resources"
+                    target="_blank">How to complete the SR1 form (opens in a new tab)</a>
+                </p>
+                <ul class="govuk-list">
+                    <li>Email: <a href="mailto:sr1.servicedesk@nhs.net">sr1.servicedesk@nhs.net</a>
+                    </li>
+                    <li>Telephone: 0300 303 5035</li>
+                </ul>
+            </div>
+        </div> -->
+</div>
+
+<script>
+    const save = () => {
+        var e = document.getElementById('patientaddressline1');
+        var value = e.value;
+
+        if (value.includes('86')) {
+            savePatientAddressWithParametersSR1Formmvp02('86 Claremont Cove', '', 'Glenrothes', 'SE1 ABC');
+        } else {
+            savePatientAddressWithParametersSR1Formmvp02('88 Claremont Cove', '', 'Glenrothes', 'SE1 ABC');
+        }
+    }
+    // get and set in this order - this ensures what is sent in query is the same as what is in the localStorage
+    const saveAndLeave = () => {
+        save();
+
+        const origin = window.location.origin;
+        const url = getUrlWithSR1DataAsQueryParamsmvp02(origin, "/hcp-e2e-journey-mvp02/task-list-sr1-form");
+
+        window
+            .location
+            .replace(url.toString());
+    }
+</script>
+{% endblock %}

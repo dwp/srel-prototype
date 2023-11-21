@@ -1,0 +1,154 @@
+{% extends "layout.html" %}
+{% block pageTitle %}
+    What is your address?
+{% endblock %}
+{% block content %}
+    <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds">
+            <form id="srelWhatIsTheAddress" action="/srel-branching-options/mobile-number" method="post">
+                <fieldset class="govuk-fieldset">
+                    <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+                        <h1 class="govuk-fieldset__heading">
+                            What is <span id="yourTheirTxt1"></span> address?
+                        </h1>
+                    </legend>
+                
+                    <div class="govuk-form-group">
+                        <label class="govuk-label" for="address-line-1">
+                            Address line 1
+                        </label>
+                        <input class="govuk-input" id="address-line-1" name="address-line-1" type="text" autocomplete="address-line1">
+                    </div>
+                
+                    <div class="govuk-form-group">
+                        <label class="govuk-label" for="address-line-2">
+                            Address line 2 (optional)
+                        </label>
+                        <input class="govuk-input" id="address-line-2" name="address-line-2" type="text" autocomplete="address-line2">
+                    </div>
+                
+                    <div class="govuk-form-group">
+                        <label class="govuk-label" for="address-town">
+                            Town or city
+                        </label>
+                        <input class="govuk-input govuk-!-width-two-thirds" id="address-town" name="address-town" type="text" autocomplete="address-level2">
+                    </div>
+                
+                    <div class="govuk-form-group">
+                        <label class="govuk-label" for="address-county">
+                            County (optional)
+                        </label>
+                        <input class="govuk-input govuk-!-width-two-thirds" id="address-county" name="address-county" type="text">
+                    </div>
+                
+                    <div class="govuk-form-group">
+                        <label class="govuk-label" for="address-postcode">
+                            Postcode
+                        </label>
+                        <input class="govuk-input govuk-input--width-10" id="address-postcode" name="address-postcode" type="text" autocomplete="postal-code">
+                    </div>
+
+                    <!-- Can we send letters about your claim to this address? -->
+                    <div class="govuk-form-group" >
+                        <label class="govuk-label govuk-label--s" for="sendLettersToAddress">
+                            Can we send letters about <span id="yourTheirTxt2"></span> claim to this address?
+                        </label>
+                        <div class="govuk-radios govuk-radios--inline" data-module="govuk-radios">
+                            
+                            <div class="govuk-radios__item">
+                                <input class="govuk-radios__input" id="sendLettersYes" name="sendLetters" type="radio" value="yes">
+                                <label class="govuk-label govuk-radios__label" for="sendLettersYes">
+                                    Yes
+                                </label>
+                            </div>
+
+                            <div class="govuk-radios__item">
+                                <input class="govuk-radios__input" id="sendLettersNo" name="sendLetters" type="radio" value="no">
+                                <label class="govuk-label govuk-radios__label" for="sendLettersNo">
+                                    No
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Do you live at the same address? -->
+                    <div id="liveAtSameAddressDiv" class="govuk-form-group" hidden="hidden">
+                        <label class="govuk-label govuk-label--s" for="liveAtSameAddress">
+                            Do you live at the same address?
+                        </label>
+                        <div class="govuk-radios" data-module="govuk-radios">
+                            <div class="govuk-radios__item">
+                                <input class="govuk-radios__input" id="sameAddressYes" name="sameAddress" type="radio" value="yes">
+                                <label class="govuk-label govuk-radios__label" for="sameAddressYes">
+                                    Yes
+                                </label>
+                            </div>
+
+                            <div class="govuk-radios__item">
+                                <input class="govuk-radios__input" id="sameAddressNo" name="sameAddress" type="radio" value="no" data-aria-controls="conditional-whatOtherAddress">
+                                <label class="govuk-label govuk-radios__label" for="sameAddressNo">
+                                    No
+                                </label>
+                            </div>
+                            <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-whatOtherAddress">
+                                <label class="govuk-label govuk-label--s" for="otherAddress">
+                                    What is your address?
+                                </label>
+                                
+                                <!-- Other address -->
+                                <div class="govuk-form-group">
+                                    <label class="govuk-label" for="otherAddress-line-1">
+                                        Address line 1
+                                    </label>
+                                    <input class="govuk-input" id="otherAddress-line-1" name="otherAddress-line-1" type="text" autocomplete="otherAddress-line1">
+                                </div>
+                            
+                                <div class="govuk-form-group">
+                                    <label class="govuk-label" for="otherAddress-line-2">
+                                        Address line 2 (optional)
+                                    </label>
+                                    <input class="govuk-input" id="otherAddress-line-2" name="otherAddress-line-2" type="text" autocomplete="otherAddress-line2">
+                                </div>
+                            
+                                <div class="govuk-form-group">
+                                    <label class="govuk-label" for="otherAddress-town">
+                                        Town or city
+                                    </label>
+                                    <input class="govuk-input govuk-!-width-two-thirds" id="otherAddress-town" name="otherAddress-town" type="text" autocomplete="otherAddress-level2">
+                                </div>
+                            
+                                <div class="govuk-form-group">
+                                    <label class="govuk-label" for="otherAddress-county">
+                                        County (optional)
+                                    </label>
+                                    <input class="govuk-input govuk-!-width-two-thirds" id="otherAddress-county" name="otherAddress-county" type="text">
+                                </div>
+                            
+                                <div class="govuk-form-group">
+                                    <label class="govuk-label" for="otherAddress-postcode">
+                                        Postcode
+                                    </label>
+                                    <input class="govuk-input govuk-input--width-10" id="otherAddress-postcode" name="otherAddress-postcode" type="text" autocomplete="postal-code">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </fieldset>
+
+                <!-- Continue -->
+                <div class="govuk-button-group">
+                    <button id="srelwhatIsTheAddressSubmitBtn" class="govuk-button" data-module="govuk-button" onclick="srelwhatIsTheAddressSubmitFn()">
+                        Continue
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+{% endblock %}
+
+
+
+
+
+

@@ -1,0 +1,57 @@
+{% extends "layout-default.html" %}
+
+{% block pageTitle %}
+You have signed out
+{% endblock %}
+
+{% block content %}
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+       
+        <!--
+        <div class="govuk-panel govuk-panel--confirmation">
+            <h1 class="govuk-panel__title">You have signed out</h1>
+        </div>
+    -->
+    <h1 class="govuk-heading-xl">
+        You have signed out
+    </h1>
+        <p class="govuk-body"><a href="/hcp-e2e-journey-v09/signin-page">Sign in</a> again to send another SR1 form.</p>
+        <p class="govuk-body">You can now close this window.</p>
+
+        <!--
+            <ul class="govuk-list govuk-list--bullet">
+                <li><a href="/hcp-e2e-journey-v09/signin-page">try to confirm your identity again</a></li>
+                <li><a href="/hcp-e2e-journey-v09/">go back to the SR1 service page</a></li>
+                <li>leave the page</li>
+            </ul>
+            -->
+            <div class="govuk-!-padding-bottom-9"></div>
+
+            <h3 class="govuk-heading-l">Give feedback</h3>
+
+            <p><a href="#" target="_blank">What did you think of this service? (opens in a new tab)</a></p>
+            <p><a href="#" target="_blank">Volunteer to take part in research about this service (opens in a new tab)</a></p>
+
+    </div>
+
+    
+
+    
+    <!-- Side panel 
+    <div class="govuk-grid-column-one-third">
+        <div class="govuk-!-padding-bottom-6"></div>
+        <div class="app-step-nav-related app-step-nav-related--singular">
+            <h2 class="app-step-nav-related__heading">Related content</h2>
+            <p><a
+                    href="https://www.gov.uk/government/publications/dwp-factual-medical-reports-guidance-for-healthcare-professionals/the-special-rules-how-the-benefit-system-supports-people-nearing-the-end-of-life#what-to-do-with-a-completed-sr1-form">The
+                    Special Rules: how the benefit system supports people nearing the end of life</a></p>
+            <p><a
+                    href="https://www.gov.uk/government/publications/dwp-factual-medical-reports-guidance-for-healthcare-professionals/dwp-medical-factual-reports-a-guide-to-completion">DWP
+                    Medical (factual) reports: a guide to completion</a></p>
+        </div>
+    </div>
+    -->
+</div>
+{% endblock %}

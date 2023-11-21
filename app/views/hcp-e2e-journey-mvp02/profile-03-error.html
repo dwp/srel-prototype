@@ -1,0 +1,111 @@
+{% extends "layout-gov-reduced.html" %}
+
+{% block pageTitle %}
+What is your professional registration number? – Send an SR1 – GOV.UK
+{% endblock %}
+
+{% block content %}
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+        <form id="profileSetupPage" name="profileDetails" action="/hcp-e2e-journey-mvp02/profile-04" method="post">
+
+            <!-- ERROR STATE -->
+            <div class="govuk-error-summary" data-module="govuk-error-summary">
+                <div role="alert">
+                  <h2 class="govuk-error-summary__title">
+                    There is a problem
+                  </h2>
+                  <div class="govuk-error-summary__body">
+                    <ul class="govuk-list govuk-error-summary__list">
+                      <li>
+                        <a href="#professionalRegistrationNumber">Enter your professional registration number</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+            <div class="govuk-form-group govuk-form-group--error">
+                <fieldset class="govuk-fieldset">
+                    <legend class="govuk-fieldset__legend govuk-fieldset__legend--l"
+                        for="professionalRegistrationNumber">
+                        <span class="govuk-caption-l">Question 15 of 17</span>
+                        <h1 class="govuk-fieldset__heading">
+                            What is your professional registration number?
+                        </h1>
+                    </legend>
+                    
+
+                    <div id="event-name-hint" class="govuk-hint">This is your GMC or NMC number.</div>                   
+                    <!--ERROR LEGEND -->
+                    <p id="professional-registration-number-error" class="govuk-error-message">
+                        <span class="govuk-visually-hidden">Error:</span> Enter your professional registration number
+                    </p>
+                    <!-- END ERROR -->
+                    <input class="govuk-input govuk-input--width-10 govuk-input--error" id="professionalRegistrationNumber"
+                        name="professionalRegistrationNumber" type="text" autocomplete="off">
+
+
+                </fieldset>
+            </div>
+
+            <!-- Submit button -->
+            <div class="govuk-button-group">
+                <button id="" class="govuk-button" data-module="govuk-button" onclick="saveHCPProfessionalNumbermvp02(); resetChangeFn();">
+                    Save and continue
+                </button>
+                <a class="govuk-link" onclick="saveAndLeave()" style="color:#1d70b8;" aria-label="Return to SR1 form question list" href="#">Return to SR1 form question list</a>
+            </div>
+        </form>
+
+        <div class="govuk-!-padding-bottom-9"></div>
+
+        <!--Get help bottom-->
+        <hr class="govuk-section-break govuk-section-break--visible" aria-hidden="true">
+        <section class="govuk-width-container govuk-!-margin-top-7 govuk-!-margin-bottom-7 ">
+            <div class="govuk-grid-row">
+                <div class="govuk-grid-column-full">
+                    <h2 class="govuk-heading-m">Get help</h2>
+                    <p class="govuk-body"><a class="govuk-link"
+                            href="https://www.gov.uk/government/publications/special-rules-for-end-of-life-healthcare-professional-resources"
+                            target="_blank">How to complete the SR1 form (opens in a new tab)</a></p>
+                    <ul class="govuk-list">
+                        <li>Email: <a href="mailto:ssd.nationalservicedesk@nhs.net">ssd.nationalservicedesk@nhs.net</a></li>
+                        <li>Telephone: 0300 303 5035</li>
+                        <li class="govuk-!-margin-top-5">All services are available Monday to Friday, 9am to 5pm (except public holidays)</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+    <!-- Side panel 
+    <div class="govuk-grid-column-one-third">
+        <div class="app-step-nav-related app-step-nav-related--singular">
+            <h2 class="app-step-nav-related__heading">Get help</h2>
+            <p class="govuk-body"><a class="govuk-link"
+                    href="https://www.gov.uk/government/publications/special-rules-for-end-of-life-healthcare-professional-resources"
+                    target="_blank">How to complete the SR1 form (opens in a new tab)</a></p>
+            <ul class="govuk-list">
+                <li>Email: <a href="mailto:ssd.nationalservicedesk@nhs.net">ssd.nationalservicedesk@nhs.net</a></li>
+                <li>Telephone: 0300 303 5035</li>
+            </ul>
+        </div>
+    </div>
+    -->
+</div>
+
+<script>
+    // get and set in this order - this ensures what is sent in query is the same as what is in the localStorage
+    const saveAndLeave = () => {
+        saveHCPProfessionalNumbermvp02();
+
+        const origin = window.location.origin;
+        const url = getUrlWithSR1DataAsQueryParamsmvp02(origin, "/hcp-e2e-journey-mvp02/task-list-sr1-form");
+
+        window.location.replace(url.toString());
+    }
+</script>
+{% endblock %}

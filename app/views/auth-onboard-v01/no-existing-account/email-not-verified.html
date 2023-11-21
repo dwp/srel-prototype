@@ -1,0 +1,47 @@
+{% extends "layout.html" %}
+{% block pageTitle %}
+    Your email address has not been verified
+{% endblock %}
+{% block content %}
+    <div class="govuk-grid-row">
+        <div class="govuk-grid-column-three-quarters">
+            <div class="govuk-error-summary" aria-labelledby="error-summary-title" role="alert" data-module="govuk-error-summary">
+                <h2 class="govuk-error-summary__title" id="error-summary-title">
+                  There is a problem
+                </h2>
+                <div class="govuk-error-summary__body">
+                    <ul class="govuk-list govuk-error-summary__list">
+                        <li>
+                            Your confirmation code expired or incorrect
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <form id="forgotYourPassword" action="/auth-onboard-v01/no-existing-account/enter-confirmation-code" method="post">
+                <div class="govuk-form-group">
+                    
+                    <fieldset class="govuk-fieldset" aria-describedby="sign-in-hint">
+                        <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+                            <h1 class="govuk-fieldset__heading">
+                                Your email address has not been verified
+                            </h1>
+                        </legend>
+
+                        <p>We can email you a new code.</p>
+                        <p>The code will expire in 30 minutes.</p>
+                
+                    </fieldset>
+                    
+                </div>
+
+                <!-- Send new code -->
+                <div class="govuk-button-group">
+                    <button id="aoV01SignInSubmitBtn" class="govuk-button" data-module="govuk-button">
+                        Send new code
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+{% endblock %}

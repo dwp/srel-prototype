@@ -1,0 +1,46 @@
+{% extends "layout.html" %}
+{% block pageTitle %}
+  Special rules
+{% endblock %}
+{% block content %}
+    <div class="govuk-grid-row">
+        <div class="govuk-grid-column-three-quarters">
+            <div class="govuk-form-group">
+                <fieldset class="govuk-fieldset" aria-describedby="less-than-12-months-hint">
+                  <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+                    <h1 class="govuk-fieldset__heading">
+                        Has your doctor said you might have less than 12 months to live?
+                    </h1>
+                  </legend>
+                  <div id="less-than-12-months-hint" class="govuk-hint">
+                    You can receive this prognosis from other healthcare professionals, such as hospital consultants and registered nurses. 
+                  </div>
+                  <div class="govuk-radios govuk-radios--inline" data-module="govuk-radios">
+                    <div class="govuk-radios__item">
+                      <input class="govuk-radios__input" id="less-than-12-months-yes" name="less-than-12-months" type="radio" value="yes">
+                      <label class="govuk-label govuk-radios__label" for="less-than-12-months-yes">
+                        Yes
+                      </label>
+                    </div>
+                    <div class="govuk-radios__item">
+                      <input class="govuk-radios__input" id="less-than-12-months-no" name="less-than-12-months" type="radio" value="no">
+                      <label class="govuk-label govuk-radios__label" for="less-than-12-months-no">
+                        No
+                      </label>
+                    </div>
+                  </div>
+              
+                </fieldset>
+            </div>
+
+            <!-- Continue -->
+            <div class="govuk-button-group">
+                <a href="full-name" class="govuk-button" data-module="govuk-button">
+                    Continue
+                </a>
+            </div>
+
+
+        </div>
+    </div>
+{% endblock %}

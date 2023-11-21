@@ -1,0 +1,75 @@
+{% extends "layout-gov-reduced.html" %}
+
+{% block pageTitle %}
+SR1 form sent – Send an SR1 – GOV.UK
+{% endblock %}
+
+{% block content %}
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+
+        <div class="govuk-grid-column-two-thirds">
+
+            <div class="govuk-panel govuk-panel--confirmation">
+                <h1 class="govuk-panel__title">SR1 form <span id="resubmittedH1" class="hidden">re</span>sent</h1>
+                <div class="govuk-panel__body">Reference number<br><strong>HDJ2123F</strong></div>
+            </div>
+
+            <div class="govuk-!-padding-bottom-6">
+                <!--<p class="govuk-body">You have <span id="resubmittedParagraph" class="hidden">re</span>sent the form to
+                    the Department for Work and Pensions (DWP).</p>-->
+            </div>
+
+            <h2 class="govuk-heading-m">Download your documents</h2>
+
+            <p class="govuk-body">This is the only time you can download a copy of the completed SR1 form and fee form. </p>
+            <p class="govuk-body">If you use assistive software, you can download an HTML copy of the SR1 form. </p>
+
+            <h3 class="govuk-heading-s">Copy of the completed SR1 form</h3>
+            <p class="govuk-body"><a class="govuk-link gem-c-attachment__link" target="_self" onclick=printForm() style="color:#1d70b8;">Download <span id="PatientFullName"></span> SR1 form (PDF, 1MB)</a></p>
+            <p class="govuk-body"><a class="govuk-link" href="/hcp-e2e-journey-mvp02/download-html" target="_blank" download>Download <span id="PatientFullName2"></span> SR1 form (HTML, 1MB)</a></p>
+
+            <div class="govuk-!-padding-bottom-6"></div>
+
+            <h2 class="govuk-heading-m">What happens next</h2>
+
+            <p class="govuk-body">You should tell the patient you have sent the form and encourage them to submit their
+                benefit claim.</p>
+            <p class="govuk-body">We will contact the patient when we have made a decision on their claim.</p>
+            <p class="govuk-body">If we need more information about the patient, we will contact you.</p>
+            <!-- Submit button -->
+
+            <div class="govuk-button-group">
+                <a class="govuk-link" data-module="govuk-button" a
+                    href="/hcp-e2e-journey-mvp02/task-list-sr1-form-start-timer" id="backtoaccounthome"
+                    onclick="completedSR1Form()">Start a new SR1 form</a>
+                <!--<a class="govuk-link" href="#" id="signout" onclick="logOutHcpE2e()">Sign out</a>-->
+            </div>
+
+            <div class="govuk-!-padding-bottom-6"></div>
+
+            <h2 class="govuk-heading-m">Get help</h2>
+
+            <p class="govuk-body">You can contact us by email or telephone if you need help.</p>
+            <ul class="govuk-list">
+                <li>Telephone: 0300 303 5035</li>
+                <li>Email: <a href="mailto:ssd.nationalservicedesk@nhs.net">ssd.nationalservicedesk@nhs.net</a></li>
+                <li class="govuk-!-margin-top-5">All services are available Monday to Friday, 9am to 5pm (except public holidays)</li>
+            </ul>
+            <p class="govuk-body">Tell us the SR1 reference number if you need help with a form you have already sent.
+            </p>
+            <div class="govuk-!-padding-bottom-6"></div>
+            <p class=govuk-body><a href="#">What did you think of this service?</a></p>
+
+        </div>
+
+        <!-- Sign out - Side panel 
+        <div class="govuk-grid-column-one-third">
+                <p class="govuk-!-text-align-right"><a class="govuk-link" href="#" id="signout" onclick="logOutHcpE2e()">Sign out</a></p>
+        </div> -->
+
+    </div>
+</div>
+
+
+{% endblock %}

@@ -1,0 +1,64 @@
+{% extends "layout.html" %}
+{% block pageTitle %}
+    Who are you applying for?
+{% endblock %}
+{% block content %}
+    <div class="govuk-grid-row">
+        <div class="govuk-grid-column-full">
+            <form id="whoIsApplying" action="/auth-onboard-v01/who-is-applying/answer" method="post">
+                <div class="govuk-form-group">
+                    <fieldset class="govuk-fieldset" aria-describedby="sign-in-hint">
+                        <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+                            <h1 class="govuk-fieldset__heading">
+                                Who are you applying for?
+                            </h1>
+                        </legend>
+
+                        <div class="govuk-radios" data-module="govuk-radios">
+                            
+                            <!-- Myself -->
+                            <div class="govuk-radios__item">
+                                <input class="govuk-radios__input" id="myself" name="who-is-applying" type="radio" value="Myself" aria-describedby="myself-hint" onclick="aoWhoIsApplyingFn(this)">
+                                <label class="govuk-label govuk-radios__label" for="myself">
+                                    <strong>Myself</strong>
+                                </label>
+                            </div>
+
+                            <!-- Someone else -->
+                            <div class="govuk-radios__item">
+                                <input class="govuk-radios__input" id="someoneElse" name="who-is-applying" type="radio" value="Someone else" aria-describedby="someoneElse-hint" onclick="aoWhoIsApplyingFn(this)">
+                                <label class="govuk-label govuk-radios__label" for="someoneElse">
+                                    <strong>Someone else</strong>
+                                </label>
+                                <div id="someoneElse-hint" class="govuk-hint govuk-radios__hint govuk-!-width-three-quarters">
+                                    I am helping them complete the application, or I am completing it for them
+                                </div>
+                            </div>
+
+                            <!-- A child under 16 years old -->
+                            <div class="govuk-radios__item">
+                                <input class="govuk-radios__input" id="childUnder16" name="who-is-applying" type="radio" value="A child under 16 years old" aria-describedby="childUnder16-hint" onclick="aoWhoIsApplyingFn(this)">
+                                <label class="govuk-label govuk-radios__label" for="childUnder16">
+                                    <strong>A child under 16 years old</strong>
+                                </label>
+                                <div id="childUnder16-hint" class="govuk-hint govuk-radios__hint govuk-!-width-three-quarters">
+                                    I am their parent or guardian and they are under 16 years old
+                                </div>
+                            </div>
+
+                        </div>
+                
+                    </fieldset>
+                    
+                </div>
+
+                <!-- Continue -->
+                <div class="govuk-button-group">
+                    <button id="aoV01whoIsApplyingSubmitBtn" class="govuk-button" data-module="govuk-button">
+                        Continue
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+{% endblock %}

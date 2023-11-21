@@ -1,0 +1,61 @@
+{% extends "layout.html" %}
+{% block pageTitle %}
+    What is your date of birth?
+{% endblock %}
+{% block content %}
+    <div class="govuk-grid-row">
+
+        <div class="govuk-grid-column-full">
+            <h1 class="govuk-heading-xl">What is your date of birth?</h1>
+        </div>
+        
+        <div class="govuk-grid-column-one-half">
+
+            <!-- Date of birth -->
+            <div class="govuk-form-group">
+                <!-- <label class="govuk-label govuk-label--s" for="dob">
+                Date of birth
+                </label> -->
+                <div id="dob-hint" class="govuk-hint">
+                For example, 29 9 1989
+                </div>
+                <div class="govuk-date-input" id="dob">
+                <div class="govuk-date-input__item">
+                    <div class="govuk-form-group">
+                    <label class="govuk-label govuk-date-input__label" for="dob-day">
+                        Day
+                    </label>
+                    <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="dob-day" name="dob-day" type="text" autocomplete="bday-day" inputmode="numeric">
+                    </div>
+                </div>
+                <div class="govuk-date-input__item">
+                    <div class="govuk-form-group">
+                    <label class="govuk-label govuk-date-input__label" for="dob-month">
+                        Month
+                    </label>
+                    <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="dob-month" name="dob-month" type="text" autocomplete="bday-month" inputmode="numeric">
+                    </div>
+                </div>
+                <div class="govuk-date-input__item">
+                    <div class="govuk-form-group">
+                    <label class="govuk-label govuk-date-input__label" for="dob-year">
+                        Year
+                    </label>
+                    <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="dob-year" name="dob-year" type="text" autocomplete="bday-year" inputmode="numeric">
+                    </div>
+                </div>
+                </div>
+            </div>
+            
+
+            <!-- Continue -->
+            <div class="govuk-button-group">
+                <a href="mobile-number" class="govuk-button" data-module="govuk-button">
+                    Continue
+                </a>
+            </div>
+
+
+        </div>
+    </div>
+{% endblock %}

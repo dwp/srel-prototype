@@ -1,0 +1,45 @@
+{% extends "layout-gov-name.html" %}
+
+{% block pageTitle %}
+Sorry, there is a problem with the service – Send an SR1 – GOV.UK
+{% endblock %}
+
+{% block content %}
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+        <h1 class="govuk-heading-xl">
+            Sorry, there is a problem with the service
+        </h1>
+        <p class="govuk-body">Try again later.</p>
+        <p class="govuk-body"> We have not saved your answers. When the service is available, you will have to start again. </p>
+        <!--<p class="govuk-body"><a href="#">Contact DWP if you need any help</a>.</p>
+
+        <ul class="govuk-list">
+            <li>Email: <a href="mailto:ssd.nationalservicedesk@nhs.net">ssd.nationalservicedesk@nhs.net</a></li>
+            <li>Telephone: 0300 303 5035</li>
+        </ul>-->
+        <div class="govuk-!-padding-bottom-6"></div>
+
+        <!--Get help bottom-->
+        <hr class="govuk-section-break govuk-section-break--visible" aria-hidden="true">
+        <section class="govuk-width-container govuk-!-margin-top-7 govuk-!-margin-bottom-7 ">
+            <div class="govuk-grid-row">
+                <div class="govuk-grid-column-full">
+                    <h2 class="govuk-heading-m">Get help</h2>
+                    <p class="govuk-body"><a class="govuk-link"
+                            href="https://www.gov.uk/government/publications/special-rules-for-end-of-life-healthcare-professional-resources"
+                            target="_blank">How to complete the SR1 form (opens in a new tab)</a></p>
+                    <ul class="govuk-list">
+                        <li>Email: <a href="mailto:ssd.nationalservicedesk@nhs.net">ssd.nationalservicedesk@nhs.net</a></li>
+                        <li>Telephone: 0300 303 5035</li>
+                        <li class="govuk-!-margin-top-5">All services are available Monday to Friday, 9am to 5pm (except public holidays)</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+</div>
+{% endblock %}

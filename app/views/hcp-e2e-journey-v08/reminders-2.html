@@ -1,0 +1,110 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+How can we send you reminders?
+{% endblock %}
+
+{% block content %}
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+        <form id="remindersPage2" action="/hcp-e2e-journey-v08/reminders-3" method="post" autocomplete="off">
+            <div class="govuk-form-group">
+                <fieldset class="govuk-fieldset">
+                    <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+                        <!-- <span class="govuk-caption-l">Reminder settings: 2 of 3</span> -->
+
+                        <!-- <p id="">
+                                <a href="#" class="" onclick="versionAReminder2()">Option A</a> | <a href="#" class="" onclick="versionBReminder2()">Option B</a> | <a href="#" class="" onclick="versionCReminder2()">Option C</a>
+                            </p> -->
+
+                        <h1 class="govuk-fieldset__heading">
+                            How can we send you reminders?
+                        </h1>
+                    </legend>
+
+                    <!-- <div id="textTop">
+                            <p class="govuk-body">Email reminders will be sent to <strong><span id="emailAddress1"></span></strong>.</p>
+                            <p class="govuk-body">Text message reminders will be sent to <strong><span id="mobileNumber1"></span></strong>.</p>
+                        </div> -->
+
+                    <!-- Receive reminder options -->
+                    <div id="reminder-hint" class="govuk-inset-text govuk-!-margin-bottom-6">
+                        <p class="govuk-body">Email reminders will be sent to <span id="emailAddress2"></span></p>
+                        <p class="govuk-body ">Text message reminders will be sent to <span id="mobileNumber2"></span>
+                    </div>
+
+                    <div class="govuk-radios" data-module="govuk-radios">
+                        <div class="govuk-radios__item">
+                            <input class="govuk-radios__input" id="email" name="reminderType" type="radio" value="Email"
+                                onclick="hcpv08ReminderTypeFn(this)">
+                            <label class="govuk-label govuk-radios__label" for="email">
+                                Email
+                            </label>
+                            <!--
+                            <div id="account-number-hint" class="govuk-hint govuk-radios__hint">
+                                Reminders will be sent to <strong><span id="emailAddress2"></span>
+                            </div>
+                            -->
+                        </div>
+                        <div class="govuk-radios__item">
+                            <input class="govuk-radios__input" id="textMessage" name="reminderType" type="radio"
+                                value="Text message" onclick="hcpv08ReminderTypeFn(this)">
+                            <label class="govuk-label govuk-radios__label" for="textMessage">
+                                Text message
+                            </label>
+                            <!--
+                            <div id="account-number-hint" class="govuk-hint govuk-radios__hint">
+                                Reminders will be sent to <strong><span id="mobileNumber2"></span></strong>.
+                            </div>
+                            -->
+                        </div>
+                        <div class="govuk-radios__item">
+                            <input class="govuk-radios__input" id="EmailAndTextMessage" name="reminderType" type="radio"
+                                value="Email and text message" onclick="hcpv08ReminderTypeFn(this)">
+                            <!--  onclick="hcpv08ReminderTypeFn(this)" -->
+                            <label class="govuk-label govuk-radios__label" for="EmailAndTextMessage">
+                                Email and text message
+                            </label>
+                            <!--
+                            <div id="account-number-hint" class="govuk-hint govuk-radios__hint">
+                                Reminders will be sent to <strong><span id="emailAddress3"></span></strong> and
+                                <strong><span id="mobileNumber3"></span></strong>
+                            </div>
+                            -->
+                        </div>
+                    </div>
+
+                </fieldset>
+            </div>
+
+            <!-- <p id="emailReminderTxt" class="govuk-body hidden">Email reminders will be sent to <strong><span id="emailAddress2"></span></strong>.</p>
+                <p id="TextMessageReminderTxt" class="govuk-body hidden">Text message reminders will be sent to <strong><span id="mobileNumber2"></span></strong>.</p> -->
+
+            <!-- <div id="toggleInsetText" class="govuk-inset-text ">
+                    You can change your reminder settings at any time in your account.
+                </div> -->
+
+            <!-- Submit button -->
+            <div class="govuk-button-group">
+                <button id="" class="govuk-button" data-module="govuk-button" onclick="resetChangeFn()">
+                    Save and continue
+                </button>
+            </div>
+        </form>
+
+    </div>
+
+    <!-- Side panel
+        <div class="govuk-grid-column-one-third">
+            <div class="app-step-nav-related app-step-nav-related--singular">
+                <h2 class="app-step-nav-related__heading">Get help</h2>
+                <p class="govuk-body"><a  class="govuk-link" href="https://ds1500-prototype.herokuapp.com/sr1-1/sr1-guidance#patients-may-not-know-true-nature-of-illness" target="_blank">How to complete the SR1 form (opens in a new tab)</a></p>
+                <ul class="govuk-list">
+                    <li>Email: <a href="mailto:sr1.servicedesk@nhs.net">sr1.servicedesk@nhs.net</a></li>
+                    <li>Telephone: 0300 303 5035</li>
+                </ul>
+            </div>
+        </div>
+-->
+</div>
+{% endblock %}

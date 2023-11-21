@@ -1,0 +1,122 @@
+{% extends "layout-gov-reduced.html" %}
+
+{% block pageTitle %}
+What was the date of the patient’s diagnosis? – Send an SR1 – GOV.UK
+{% endblock %}
+
+{% block content %}
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+        <form id="sendAnSR1Form" action="/hcp-e2e-journey-mvp02/sr1-form-06" method="post">
+            <div class="govuk-form-group">
+                <fieldset class="govuk-fieldset">
+                    <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+                        <span class="govuk-caption-l"> Question 6 of 17</span>
+                        <h1 class="govuk-fieldset__heading">
+                            What was the date of the patient’s diagnosis?
+                        </h1>
+                    </legend>
+
+                    <!-- Date of diagnosis -->
+                    <p class="govuk-body">
+                        If you do not know the exact date, you can use the first day of the month.
+                    </p>
+                    <div id="dod-hint" class="govuk-hint">
+                        For example, 27 3 2020
+                    </div>
+                    <div class="govuk-date-input" id="dod">
+                        <div class="govuk-date-input__item">
+                            <div class="govuk-form-group">
+                                <label class="govuk-label govuk-date-input__label" for="dod-day">
+                                    Day
+                                </label>
+                                <input autocomplete="off"
+                                    class="govuk-input govuk-date-input__input govuk-input--width-2" id="dod-day"
+                                    name="dod-day" type="text" inputmode="numeric"
+                                    onkeypress="return isNumberKey(event)" maxlength="2">
+                            </div>
+                        </div>
+                        <div class="govuk-date-input__item">
+                            <div class="govuk-form-group">
+                                <label class="govuk-label govuk-date-input__label" for="dod-month">
+                                    Month
+                                </label>
+                                <input autocomplete="off"
+                                    class="govuk-input govuk-date-input__input govuk-input--width-2" id="dod-month"
+                                    name="dod-month" type="text" inputmode="numeric"
+                                    onkeypress="return isNumberKey(event)" maxlength="2">
+                            </div>
+                        </div>
+                        <div class="govuk-date-input__item">
+                            <div class="govuk-form-group">
+                                <label class="govuk-label govuk-date-input__label" for="dod-year">
+                                    Year
+                                </label>
+                                <input autocomplete="off"
+                                    class="govuk-input govuk-date-input__input govuk-input--width-4" id="dod-year"
+                                    name="dod-year" type="text" inputmode="numeric"
+                                    onkeypress="return isNumberKey(event)" maxlength="4">
+                            </div>
+                        </div>
+                    </div>
+
+                </fieldset>
+            </div>
+
+            <!-- Submit button -->
+            <div class="govuk-button-group">
+                <button id="" class="govuk-button" data-module="govuk-button" onclick="saveDateDiagnosisSR1Formmvp02()">
+                    Save and continue
+                </button>
+                <a class="govuk-link" onclick="saveAndLeave()" style="color:#1d70b8;" aria-label="Return to SR1 form question list" href="#">Return to SR1 form question list</a>
+            </div>
+        </form>
+        <div class="govuk-!-padding-bottom-9"></div>
+
+        <!--Get help bottom-->
+        <hr class="govuk-section-break govuk-section-break--visible" aria-hidden="true">
+        <section class="govuk-width-container govuk-!-margin-top-7 govuk-!-margin-bottom-7 ">
+            <div class="govuk-grid-row">
+                <div class="govuk-grid-column-full">
+                    <h2 class="govuk-heading-m">Get help</h2>
+                    <p class="govuk-body"><a class="govuk-link"
+                            href="https://www.gov.uk/government/publications/special-rules-for-end-of-life-healthcare-professional-resources"
+                            target="_blank">How to complete the SR1 form (opens in a new tab)</a></p>
+                    <ul class="govuk-list">
+                        <li>Email: <a href="mailto:ssd.nationalservicedesk@nhs.net">ssd.nationalservicedesk@nhs.net</a></li>
+                        <li>Telephone: 0300 303 5035</li>
+                        <li class="govuk-!-margin-top-5">All services are available Monday to Friday, 9am to 5pm (except public holidays)</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+    <!-- Side panel 
+    <div class="govuk-grid-column-one-third">
+        <div class="app-step-nav-related app-step-nav-related--singular">
+            <h2 class="app-step-nav-related__heading">Get help</h2>
+            <p class="govuk-body"><a class="govuk-link"
+                    href="https://www.gov.uk/government/publications/special-rules-for-end-of-life-healthcare-professional-resources"
+                    target="_blank">How to complete the SR1 form (opens in a new tab)</a></p>
+            <ul class="govuk-list">
+                <li>Email: <a href="mailto:ssd.nationalservicedesk@nhs.net">ssd.nationalservicedesk@nhs.net</a></li>
+                <li>Telephone: 0300 303 5035</li>
+            </ul>
+        </div>
+    </div> -->
+</div>
+
+<script>
+    // get and set in this order - this ensures what is sent in query is the same as what is in the localStorage
+    const saveAndLeave = () => {
+        //saveDateDiagnosisSR1Formmvp02();
+
+        const origin = window.location.origin;
+        const url = getUrlWithSR1DataAsQueryParamsmvp02(origin, "/hcp-e2e-journey-mvp02/task-list-sr1-form");
+
+        window.location.replace(url.toString());
+    }
+</script>
+{% endblock %}

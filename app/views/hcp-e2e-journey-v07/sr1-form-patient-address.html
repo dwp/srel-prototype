@@ -1,0 +1,74 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Send an SR1 form
+{% endblock %}
+
+{% block content %}
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+        <form id="sendAnSR1Form" action="/hcp-e2e-journey-v07/sr1-form-patient-address-select" method="post" novalidate>
+            <div class="govuk-form-group">
+                <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+                    <span class="govuk-caption-l">Send an SR1 form</span>
+                    <h1 class="govuk-fieldset__heading">
+                        Patient's address
+                    </h1>
+                </legend>
+
+                <!--
+                <p class="govuk-body">You can save your progress after each section. Your profile details have
+                    automatically been used to complete parts of this form.</p>
+                <p class="govuk-body">Incomplete SR1 forms will be deleted after 30 days.</p>
+                -->
+            </div>
+
+            <div class="govuk-form-group">
+                <fieldset class="govuk-fieldset">
+
+                    <!-- Patient postcode -->
+                    <div class="govuk-form-group">
+                        <label class="govuk-label govuk-label--m" for="patientPostcode">Enter a postcode</label>
+                        <div id="hint-76b66975" class="gem-c-hint govuk-hint govuk-!-margin-bottom-3">
+                            For example SW1A 2AA
+                        </div>
+                        <input aria-describedby="hint-76b66975" autocomplete="patientPostcode"
+                            class="govuk-input govuk-input--width-10" id="patientPostcode" name="patientPostcode"
+                            type="text" spellcheck="false">
+                    </div>
+                </fieldset>
+            </div>
+
+
+            <!-- Submit button -->
+            <div class="govuk-button-group">
+                <button id="" class="govuk-button" data-module="govuk-button" onclick="savePostcodeSR1Formv07()">
+                    Find address
+                </button>
+            </div>
+            <!-- <p class="govuk-body"><a id="postcode-finder-link" class="govuk-link" rel="external" href="https://www.royalmail.com/find-a-postcode" target="_blank">Find a postcode on Royal Mail's postcode finder (open in a new tab)</a></p> -->
+            <div class="govuk-form-group">
+                <label class="govuk-label" for="cannot-find-address"><a id="postcode-finder-link" class="govuk-link" rel="external" href="/hcp-e2e-journey-v07/sr1-form-patient-address-manual">Enter your patient’s address manually</a></label>
+            </div>
+
+        </form>
+    </div>
+
+    <!-- Side panel -->
+    <div class="govuk-grid-column-one-third">
+        <div class="app-step-nav-related app-step-nav-related--singular">
+            <h2 class="app-step-nav-related__heading">Get help</h2>
+            <p class="govuk-body"><a class="govuk-link"
+                    href="https://ds1500-prototype.herokuapp.com/sr1-1/sr1-guidance#patients-may-not-know-true-nature-of-illness"
+                    target="_blank">How to complete the SR1 form (opens in a new tab)</a></p>
+            <ul class="govuk-list">
+                <li>Email: <a href="mailto:sr1.servicedesk@nhs.net">sr1.servicedesk@nhs.net</a></li>
+                <li>Telephone: 0300 303 5035</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+
+
+{% endblock %}

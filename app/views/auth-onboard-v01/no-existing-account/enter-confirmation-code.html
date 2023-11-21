@@ -1,0 +1,79 @@
+{% extends "layout.html" %}
+{% block pageTitle %}
+    Enter code to confirm your email address
+{% endblock %}
+{% block content %}
+    <div class="govuk-grid-row">
+        <div class="govuk-grid-column-three-quarters">
+            <div id="confirmationCodeErrorSummary" class="govuk-error-summary hidden" aria-labelledby="error-summary-title" role="alert" data-module="govuk-error-summary">
+                <h2 class="govuk-error-summary__title" id="error-summary-title">
+                  There is a problem
+                </h2>
+                <div class="govuk-error-summary__body">
+                    <ul class="govuk-list govuk-error-summary__list">
+                        <li>
+                        <a href="#confirmationCodeField">Enter correct confirmation code</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <form id="confirmationCodeRoute" action="" method="post">
+                <div class="govuk-form-group">
+                    
+                    <fieldset class="govuk-fieldset" aria-describedby="sign-in-hint">
+                        <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+                            <h1 class="govuk-fieldset__heading">
+                                Enter code to confirm your email address
+                            </h1>
+                        </legend>
+
+                        <p>We have sent a code to <strong>jean.grey@email.com</strong></p>
+                        <p>The code will expire in 30 minutes.</p>
+
+                        <div class="govuk-warning-text">
+                            <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+                            <strong class="govuk-warning-text__text">
+                              <span class="govuk-warning-text__assistive">Warning</span>
+                              If you use a browser to access your email, you may need to open a new window or tab to see the code.
+                            </strong>
+                          </div>
+
+                        <div id="confirmationCodeField" class="govuk-form-group">
+                            <label class="govuk-label" for="confirmation-code">
+                                <strong>Confirmation code</strong>
+                            </label>
+                            <div id="confirmation-code-hint" class="govuk-hint govuk-!-width-three-quarters">
+                                For example, JKRTGR
+                            </div>
+                            <p id="confirmationCodeValError" class="govuk-error-message hidden">
+                                <span class="govuk-visually-hidden">Error:</span> Enter correct confirmation code
+                            </p>
+                            <input class="govuk-input govuk-!-width-one-half" id="confirmationCodeVal" name="confirmationCode" aria-describedby="confirmation-code-hint" type="text" onkeyup="aoConfirmationCode()">
+                        </div>
+                
+                    </fieldset>
+                    
+                </div>
+
+                <details class="govuk-details" data-module="govuk-details">
+                    <summary class="govuk-details__summary">
+                      <span class="govuk-details__summary-text">
+                        I have not received the email
+                      </span>
+                    </summary>
+                    <div class="govuk-details__text">
+                        I have not received the email - explanation goes here
+                    </div>
+                  </details>
+
+                <!-- Continue -->
+                <div class="govuk-button-group">
+                    <button id="aoConfirmatioCodeSubmitBtn" class="govuk-button" data-module="govuk-button" onclick="aoConfirmationCodeFn(event)">
+                        Continue
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+{% endblock %}

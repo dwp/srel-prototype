@@ -1,0 +1,162 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Confirm your reminder settings
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+        <form id="reminderSettingsPage" action="/hcp-e2e-journey-v08/account-d-dashboard" method="post">
+            <div class="govuk-form-group">
+                <fieldset class="govuk-fieldset">
+                    <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+                        <h1 class="govuk-fieldset__heading">
+                            Confirm your reminder settings
+                        </h1>
+                    </legend>
+
+                    <!-- <p>Confirm that the reminder details below are correct.</p> -->
+
+                    <div class="govuk-inset-text">
+                        You can change your reminder settings at any time in your account.
+                    </div>
+
+                    <!-- ############## -->
+                    <!-- REMINDER DETAILS -->
+                    <!-- ############## -->
+                    <h2 class="govuk-heading-l">Reminder settings</h2>
+
+                    <dl class="govuk-summary-list" id="profileData">
+                        <div id="receiveRemindersDiv" class="govuk-summary-list__row">
+                            <dt class="govuk-summary-list__key">
+                                Do you want reminders?
+                            </dt>
+                            <dd class="govuk-summary-list__value">
+                                <span id="receiveReminders"></span>
+                            </dd>
+                            <dd class="govuk-summary-list__actions">
+                                <a class="govuk-link" href="/hcp-e2e-journey-v08/reminders-1-new"
+                                    id="changingReceiveReminders" onclick="changingReceiveRemindersFn()">
+                                    Change<span class="govuk-visually-hidden"> if you want reminders</span>
+                                </a>
+                            </dd>
+                        </div>
+                        <div id="reminderTypeDiv" class="govuk-summary-list__row govuk-visually-hidden">
+                            <dt class="govuk-summary-list__key">
+                                Reminders sent by
+                            </dt>
+                            <dd class="govuk-summary-list__value">
+                                <span id="reminderType"></span> reminders
+                            </dd>
+                            <dd class="govuk-summary-list__actions">
+                                <a class="govuk-link" href="/hcp-e2e-journey-v08/reminders-2-new" id="changingReminderType"
+                                    onclick="changingReminderTypeFn()">
+                                    Change<span class="govuk-visually-hidden"> how reminders are sent</span>
+                                </a>
+                            </dd>
+                        </div>
+
+                        <div id="emailReminderDiv" class="govuk-summary-list__row hidden">
+                            <dt class="govuk-summary-list__key">
+                                Reminders sent by
+                            </dt>
+                            <dd class="govuk-summary-list__value">
+                                Email
+                            </dd>
+                            <!--
+                            <dd class="govuk-summary-list__value">
+                                Email to <span id="emailAddress"></span>
+                            </dd>
+                            -->
+                            <dd class="govuk-summary-list__actions">
+                                <a class="govuk-link" href="/hcp-e2e-journey-v08/reminders-2-new" id="changingReminderType"
+                                    onclick="changingReminderTypeFn()">
+                                    Change<span class="govuk-visually-hidden"> how reminders are sent</span>
+                                </a>
+                            </dd>
+                        </div>
+
+                        <div id="mobileReminderDiv" class="govuk-summary-list__row hidden">
+                            <dt class="govuk-summary-list__key">
+                                Reminders sent by
+                            </dt>
+                            <dd class="govuk-summary-list__value">
+                                Text message
+                            </dd>
+                            <!--<dd class="govuk-summary-list__value">
+                                Text message to <span id="mobileNumber"></span>
+                            </dd>
+                        -->
+                            <dd class="govuk-summary-list__actions">
+                                <a class="govuk-link" href="/hcp-e2e-journey-v08/reminders-2" id="changingReminderType"
+                                    onclick="changingReminderTypeFn()">
+                                    Change<span class="govuk-visually-hidden"> how reminders are sent</span>
+                                </a>
+                            </dd>
+                        </div>
+
+                        <div id="bothReminderDiv" class="govuk-summary-list__row hidden">
+                            <dt class="govuk-summary-list__key">
+                                Reminders sent by
+                            </dt>
+                            <dd class="govuk-summary-list__value">
+                                Email and text message
+                            </dd>
+                            <!--
+                            <dd class="govuk-summary-list__value">
+                                Email to <span id="emailAddress2"></span><br>Text messages to <span id="mobileNumber2"></span>
+                            </dd>-->
+                            <dd class="govuk-summary-list__actions">
+                                <a class="govuk-link" href="/hcp-e2e-journey-v08/reminders-2" id="changingReminderType"
+                                    onclick="changingReminderTypeFn()">
+                                    Change<span class="govuk-visually-hidden"> how reminders are sent</span>
+                                </a>
+                            </dd>
+                        </div>
+
+                        <div id="reminderFrequencyDiv" class="govuk-summary-list__row">
+                            <dt class="govuk-summary-list__key">
+                                How often you will get reminders
+                            </dt>
+                            <dd class="govuk-summary-list__value">
+                                <span id="reminderFrequency"></span>
+                            </dd>
+                            <dd class="govuk-summary-list__actions">
+                                <a class="govuk-link" href="/hcp-e2e-journey-v08/reminders-3"
+                                    id="changingReminderFrequency" onclick="changingReminderFrequencyFn()">
+                                    Change<span class="govuk-visually-hidden"> how often you will receive reminders</span>
+                                </a>
+                            </dd>
+                        </div>
+                    </dl>
+
+                </fieldset>
+            </div>
+
+            <!-- Submit button -->
+            <div class="govuk-button-group">
+                <button id="" class="govuk-button" data-module="govuk-button">
+                    Continue
+                </button>
+            </div>
+        </form>
+    </div>
+
+    <!-- Side panel -->
+    <div class="govuk-grid-column-one-third">
+        <div class="app-step-nav-related app-step-nav-related--singular">
+            <h2 class="app-step-nav-related__heading">Get help</h2>
+            <p class="govuk-body"><a class="govuk-link"
+                    href="https://ds1500-prototype.herokuapp.com/sr1-1/sr1-guidance#patients-may-not-know-true-nature-of-illness"
+                    target="_blank">How to complete the SR1 form (opens in a new tab)</a></p>
+            <ul class="govuk-list">
+                <li>Email: <a href="mailto:sr1.servicedesk@nhs.net">sr1.servicedesk@nhs.net</a></li>
+                <li>Telephone: 0300 303 5035</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

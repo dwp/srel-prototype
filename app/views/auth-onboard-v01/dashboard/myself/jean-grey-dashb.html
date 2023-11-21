@@ -1,0 +1,78 @@
+{% extends "layout.html" %}
+{% block pageTitle %}
+    Special rules dashboard
+{% endblock %}
+{% block content %}
+    <div class="govuk-grid-row">
+        <div class="govuk-grid-column-three-quarters">
+
+            <h1 class="govuk-heading-xl">
+                Jean Grey
+            </h1>
+
+            <div class="govuk-grid-row">
+                <div class="govuk-grid-column-full">
+                    <!-- Your applications -->
+                    <h2 class="govuk-heading-m">Your applications</h2>
+                    <hr class="govuk-section-break govuk-section-break--visible">
+
+                    <div class="govuk-grid-row">
+                        <div class="govuk-grid-column-one-third">
+                            <div class="grey-grid-box button">
+                                <h3 class="grid-heading">Personal Independence Payment</h3>
+                                <p><strong>Last updated: </strong>07/08/2022</p>
+                                <p><strong class="govuk-tag">Submitted</strong></p>
+                            </div>
+                            <div class="grid-button"><a href="#"><strong>View</strong></a></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <!-- Special rules you can apply for -->
+            <div class="govuk-grid-row">
+                <div class="govuk-grid-column-full">
+                    <h2 class="govuk-heading-m">Special rules you can apply for</h2>
+                    <hr class="govuk-section-break govuk-section-break--visible">
+
+                    <div class="govuk-grid-row">
+                        <div class="govuk-grid-column-one-third">
+                            <div class="grey-grid-box button">
+                                <h3 class="grid-heading">Universal Credit</h3>
+                                <p>You already receive Universal Credit. You can apply for a higher rate under special rules.</p>
+                            </div>
+                            <div class="grid-button"><a href="#"><strong>Apply</strong></a></div>
+                        </div>
+                        <div class="govuk-grid-column-one-third">
+                            <div class="grey-grid-box button">
+                                <h3 class="grid-heading">Employment and Support Allowance</h3>
+                                <p>You can apply for 'new style' Employment and Support Allowance (ESA) if you're under State Pension age.</p>
+                            </div>
+                            <div class="grid-button"><a href="#"><strong>Apply</strong></a></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Your benefits -->
+            <!-- <div class="govuk-grid-row">
+                <div class="govuk-grid-column-one-third"> -->
+                    <h2 class="govuk-heading-m">Your benefits</h2>
+                    <hr class="govuk-section-break govuk-section-break--visible">
+                    <dl class="govuk-summary-list govuk-summary-list--no-border">
+                        <div class="govuk-summary-list__row">
+                            <dt class="govuk-summary-list__key">
+                                Universal Credit
+                            </dt>
+                            <dd class="govuk-summary-list__value">
+                                <strong>Last updated:</strong> 12/02/2019
+                            </dd>
+                        </div>
+                    </dl>
+                <!-- </div>
+            </div> -->
+        </div>
+    </div>
+{% endblock %}

@@ -1,0 +1,112 @@
+{% extends "layout-gov-reduced.html" %}
+
+{% block pageTitle %}
+Before you start – Send an SR1 – GOV.UK
+{% endblock %}
+
+{% block content %}
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+        <div class="govuk-notification-banner govuk-notification-banner--success" role="alert"
+            aria-labelledby="govuk-notification-banner-title" data-module="govuk-notification-banner">
+            <div class="govuk-notification-banner__header">
+                <h2 class="govuk-notification-banner__title" id="govuk-notification-banner-title">
+                    Success
+                </h2>
+            </div>
+            <div class="govuk-notification-banner__content">
+                <h3 class="govuk-notification-banner__heading">
+                    You signed in with jean.grey@nhs.trust.uk
+                </h3>
+                <p class="govuk-body"><a id="signOutNavLink" class="govuk-notification-banner__link" href="#"
+                        aria-label="Sign out" onclick="logOutHcpE2e()">Sign out if this is not your email
+                        account</a>.</p>
+            </div>
+        </div>
+
+        <h1 class="govuk-heading-xl">
+            Before you start
+        </h1>
+
+        <p class="govuk-body">It usually takes between 6 to 12 minutes to complete a SR1 form. You cannot save your
+            information and come back later. </p>
+        <p class="govuk-body">If you do not enter anything into the form for more than 15 minutes, you will be
+            automatically signed out. This means your answer will be deletedand you will need to start again. This is to
+            protect your and the patient’s information. </p>
+
+        <div class="govuk-!-padding-bottom-6"></div>
+
+        <div id="guide-contents" class="govuk-!-margin-bottom-9">
+
+            <h2 class="govuk-heading-l" id="Whatyouwillneed">What you will need</h2>
+
+            <p class="govuk-body">The SR1 form asks for medical evidence of:</p>
+            <ul class="govuk-list govuk-list--bullet">
+                <li>diagnosis and other relevant conditions</li>
+                <li>date of diagnosis</li>
+                <li>date that they have met the criteria under Special Rules</li>
+                <li>clinical features that inicare a severe progressive condition</li>
+                <li>treatment plan</li>
+            </ul>
+            <p class="govuk-body">You do not need to give a specific prognosis. Please use language that you would
+                normally use when communicating with other clinicians.</p>
+            <p class="govuk-body">You will also need to tell us the patient’s:</p>
+            <ul class="govuk-list govuk-list--bullet">
+                <li>name</li>
+                <li>date of birth</li>
+                <li>address</li>
+                <li>National Insurance number</li>
+            </ul>
+            <div class="govuk-inset-text">
+                <p class="govuk-body">The online service is currently only available to NHS England.</p>
+                <p class="govuk-body">If you are regitered with NHS Scotland, NHS Wales or Health and Social Care in
+                    Northern Ireland you can still <a target="_blank"
+                        href="https://www.gov.uk/government/publications/special-rules-for-end-of-life-healthcare-professional-resources#what-to-do-with-a-completed-sr1-form">send
+                        a SR1 form by email or post (opens in new tab)</a>.</p>
+            </div>
+        </div>
+
+
+
+        <a href="/hcp-e2e-journey-mvp02/sr1-form-01" role="button" draggable="false" class="govuk-button"
+            data-module="govuk-button">
+            Continue
+        </a>
+
+        <!--Get help bottom
+        <hr class="govuk-section-break govuk-section-break--visible" aria-hidden="true">
+        <section class="govuk-width-container govuk-!-margin-top-7 govuk-!-margin-bottom-7 ">
+            <div class="govuk-grid-row">
+                <div class="govuk-grid-column-full">
+                    <h2 class="govuk-heading-m">Get help</h2>
+                    <p class="govuk-body"><a class="govuk-link"
+                            href="https://www.gov.uk/government/publications/special-rules-for-end-of-life-healthcare-professional-resources"
+                            target="_blank">How to complete the SR1 form (opens in a new tab)</a></p>
+                    <ul class="govuk-list">
+                        <li>Email: <a href="mailto:ssd.nationalservicedesk@nhs.net">ssd.nationalservicedesk@nhs.net</a></li>
+                        <li>Telephone: 0300 303 5035</li>
+                    </ul>
+                </div>
+            </div>
+        </section>-->
+
+    </div>
+
+
+    <!-- Side panel 
+    <div class="govuk-grid-column-one-third">
+        <div class="govuk-!-padding-bottom-6"></div>
+        <div class="app-step-nav-related app-step-nav-related--singular">
+            <h2 class="app-step-nav-related__heading">Related content</h2>
+            <p><a
+                    href="https://www.gov.uk/government/publications/special-rules-for-end-of-life-healthcare-professional-resources#what-to-do-with-a-completed-sr1-form">The
+                    Special Rules: how the benefit system supports people nearing the end of life</a></p>
+            <p><a
+                    href="https://www.gov.uk/government/publications/dwp-factual-medical-reports-guidance-for-healthcare-professionals/dwp-medical-factual-reports-a-guide-to-completion">DWP
+                    Medical (factual) reports: a guide to completion</a></p>
+        </div>
+    </div>
+    -->
+</div>
+{% endblock %}

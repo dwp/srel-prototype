@@ -1,0 +1,47 @@
+{% extends "layout.html" %}
+{% block pageTitle %}
+    Special rules dashboard
+{% endblock %}
+{% block content %}
+    <div class="govuk-grid-row">
+        <div class="govuk-grid-column-three-quarters">
+
+            <h1 class="govuk-heading-xl">
+                Special rules dashboard
+            </h1>
+
+            <table class="govuk-table">
+                <thead class="govuk-table__head">
+                  <tr class="govuk-table__row">
+                    <th scope="col" class="govuk-table__header">Name</th>
+                    <th scope="col" class="govuk-table__header">Date of birth</th>
+                  </tr>
+                </thead>
+
+                <tbody class="govuk-table__body">
+                  <tr class="govuk-table__row">
+                    <th scope="row" class="govuk-table__header"><a href="/auth-onboard-v01/dashboard/everything-else/applicants/bruce-lee-dashb" class="">Bruce Lee</a></th>
+                    <td class="govuk-table__cell">12/09/1960</td>
+                  </tr>
+                  <tr class="govuk-table__row">
+                    <th scope="row" class="govuk-table__header"><a href="/auth-onboard-v01/dashboard/everything-else/applicants/jean-grey-dashb" class="">Jean Grey</a></th>
+                    <td class="govuk-table__cell">01/09/1963</td>
+                  </tr>
+                  <tr class="govuk-table__row">
+                    <th scope="row" class="govuk-table__header"><a href="/auth-onboard-v01/dashboard/everything-else/applicants/clark-kent-dashb" class="">Clark Kent</a></th>
+                    <td class="govuk-table__cell">29/02/1938</td>
+                  </tr>
+                </tbody>
+            </table>
+            
+            <form action="/auth-onboard-v01/dashboard/everything-else/new-application/identifying-the-applicant" method="post" novalidate>
+              <!-- Add new applicant -->
+              <div class="govuk-button-group">
+                  <button id="" class="govuk-button" data-module="govuk-button">
+                      Add new applicant
+                  </button>
+              </div>
+            </form>
+        </div>
+    </div>
+{% endblock %}

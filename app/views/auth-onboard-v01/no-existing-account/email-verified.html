@@ -1,0 +1,34 @@
+{% extends "layout.html" %}
+{% block pageTitle %}
+    Your email address been verified
+{% endblock %}
+{% block content %}
+    <div class="govuk-grid-row">
+        <div class="govuk-grid-column-three-quarters">
+
+            <form id="emailVerified" action="/auth-onboard-v01/no-existing-account/create-password" method="post">
+                <div class="govuk-form-group">
+                    
+                    <fieldset class="govuk-fieldset" aria-describedby="sign-in-hint">
+                        <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+                            <h1 class="govuk-fieldset__heading">
+                                Your email address has been verified
+                            </h1>
+                        </legend>
+
+                        <p>You can now create a password for your account..</p>
+                
+                    </fieldset>
+                    
+                </div>
+
+                <!-- Create password -->
+                <div class="govuk-button-group">
+                    <button id="" class="govuk-button" data-module="govuk-button">
+                        Create password
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+{% endblock %}

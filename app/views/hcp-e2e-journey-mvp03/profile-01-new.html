@@ -1,0 +1,84 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Create your profile
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+        <form id="profileSetupPage" name="profileDetails" action="/hcp-e2e-journey-mvp03/profile-02-new" method="post">
+            <div class="govuk-form-group">
+                <fieldset class="govuk-fieldset">
+                    <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+                        <!--<span class="govuk-caption-l">Question 1 of 5</span>-->
+                        <h1 class="govuk-fieldset__heading">
+                            What is your name?
+                        </h1>
+                    </legend>
+
+                    <!-- Full name -->
+                    <div class="govuk-form-group">
+                        <label class="govuk-label" for="firstName">Full name</label>
+                        <input class="govuk-input" id="firstName" name="firstName" type="text" autocomplete="off">
+                    </div>
+                    <!--
+                    <div class="govuk-form-group">
+                        <label class="govuk-label" for="middleName">Middle name (optional)</label>
+                        <input  autocomplete="off" class="govuk-input" id="middleName" name="middleName" type="text" spellcheck="false">
+                    </div>-->
+                    <div class="govuk-form-group">
+                        <label class="govuk-label" for="lastName">Last name</label>
+                        <input autocomplete="off" class="govuk-input" id="lastName" name="lastName" type="text"
+                            spellcheck="false">
+                    </div>
+
+                </fieldset>
+            </div>
+
+            <!-- Submit button -->
+            <div class="govuk-button-group">
+                <button id="" class="govuk-button" data-module="govuk-button"
+                    onclick="saveHCPNamemvp03(); resetChangeFn();">
+                    Continue
+                </button>
+            </div>
+        </form>
+
+        <div class="govuk-!-padding-bottom-6"></div>
+
+        <!--Get help new-->
+        <hr class="govuk-section-break govuk-section-break--visible" aria-hidden="true">
+        <section class="govuk-width-container govuk-!-margin-top-7 govuk-!-margin-bottom-7 ">
+            <div class="govuk-grid-row">
+                <div class="govuk-grid-column-full">
+                    <h2 class="govuk-heading-m">Get help</h2>
+                    <p class="govuk-body">Email: <a class="govuk-link"
+                            href="mailto:sr1.forms@dwp.gov.uk">sr1.forms@dwp.gov.uk</a></p>
+                    <p class="govuk-body">We aim to respond within 5 working days.</p>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+</div>
+
+
+<!-- Side panel 
+    <div class="govuk-grid-column-one-third">
+        <div class="app-step-nav-related app-step-nav-related--singular">
+            <h2 class="app-step-nav-related__heading">Get help</h2>
+            <p class="govuk-body"><a class="govuk-link"
+                    href="https://www.gov.uk/government/publications/special-rules-for-end-of-life-healthcare-professional-resources"
+                    target="_blank">How to complete the SR1 form (opens in a new tab)</a></p>
+            <ul class="govuk-list">
+                <li>Email: <a href="mailto:ssd.nationalservicedesk@nhs.net">ssd.nationalservicedesk@nhs.net</a></li>
+                <li>Telephone: 0300 303 5035</li>
+            </ul>
+        </div>
+    </div>
+    -->
+</div>
+{% endblock %}

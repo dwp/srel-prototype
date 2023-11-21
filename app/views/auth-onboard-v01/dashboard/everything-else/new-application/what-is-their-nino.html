@@ -1,0 +1,40 @@
+{% extends "layout.html" %}
+{% block pageTitle %}
+  What is the applicant's National Insurance number?
+{% endblock %}
+{% block content %}
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <form id="aoWhatIsYourNino" action="/auth-onboard-v01/dashboard/everything-else/new-application/what-is-their-nationality" method="post">
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset" role="group" aria-describedby="dob-hint">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+              <h1 class="govuk-fieldset__heading">
+                What is the applicant's National Insurance number?
+              </h1>
+            </legend>
+            
+            <div class="govuk-form-group">
+                <div id="national-insurance-number-hint" class="govuk-hint">
+                    It's on their National Insurance card, benefit letter, payslip or P60. 
+                    <br />
+                    <br />
+                    For example, 'QQ 12 34 56 C'.
+                </div>
+                <input class="govuk-input govuk-input--width-10" id="national-insurance-number" name="national-insurance-number" type="text" spellcheck="false" aria-describedby="national-insurance-number-hint" inputmode="numeric">
+            </div>
+        
+          </fieldset>
+        </div>
+
+          <!-- Continue -->
+          <div class="govuk-button-group">
+              <button id="srelDobSubmitSubmitBtn" class="govuk-button" data-module="govuk-button" onclick="srelDobSubmitFn()">
+                  Continue
+              </button>
+          </div>
+        </form>
+    </div>
+</div>
+{% endblock %}

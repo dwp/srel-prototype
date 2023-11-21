@@ -1,0 +1,145 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+    Send an SR1 form
+{% endblock %}
+
+{% block content %}
+    <div class="govuk-grid-row">
+        <div class="govuk-grid-column-full">
+
+            <h1 class="govuk-heading-xl">
+                Send an SR1 form
+                <p class="govuk-body">
+                    <span id="fullName"></span>
+                    <span class="govuk-caption-m">GMC number: <span id="professionalRegistrationNumber"></span></span>
+                </p>
+            </h1>
+
+            <a href="/hcp-e2e-journey-v03/send-an-sr1-form" class="govuk-button" data-module="govuk-button" onclick="completedSR1Form()">
+                Start a new SR1 form
+            </a>
+            
+            <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+            <p id="">
+                <!-- <a href="#" class="" onclick="versionAAccount()">Option A</a> 
+                | <a href="#" class="" onclick="versionBAccount()">Option B</a>  -->
+
+                <a href="/hcp-e2e-journey-v03/account-d-dashboard" class="">Option A</a> 
+                | <a href="/hcp-e2e-journey-v03/account-d-dashboard-3" class="">Option B</a> 
+            </p>
+
+            <div id="versionB" class="">
+                <div class="govuk-form-group">
+                    <label class="govuk-label" for="event-name">
+                        <strong>Search by name or reference number</strong>
+                    </label>
+                    <input class="govuk-input govuk-input--width-10" id="searchField" name="searchField" type="text">
+                    &nbsp;&nbsp;
+                    <button class="govuk-button govuk-button--secondary" data-module="govuk-button">
+                        Search
+                    </button>
+                    &nbsp;&nbsp;
+                    <a class="govuk-link" href="#" onclick="clearSearchTerms()">Clear search</a>
+                </div>
+
+                <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+                
+                <table class="govuk-table">
+                    <thead class="govuk-table__head">
+                        <tr class="govuk-table__row">
+                            <th scope="col" class="govuk-table__header">Patient name</th>
+                            <th scope="col" class="govuk-table__header govuk-table__header--numeric">Reference number</th>
+                            <th scope="col" class="govuk-table__header govuk-table__header--numeric">Date started</th>
+                            <th scope="col" class="govuk-table__header govuk-table__header--numeric">Date submitted</th>
+                            <th scope="col" class="govuk-table__header govuk-table__header--numeric">Days left to submit</th>
+                            <th scope="col" class="govuk-table__header govuk-table__header--numeric">Action</th>
+                        </tr>
+                    </thead>
+
+                    <tbody id="page3OfAccount" class="govuk-table__body">
+                        <tr class="govuk-table__row">
+                            <th scope="row" class="govuk-table__header">Lois London</th>
+                            <td class="govuk-table__cell govuk-table__cell--numeric">9876QWERTY13</td>
+                            <td class="govuk-table__cell govuk-table__cell--numeric">10/11/2022</td>
+                            <td class="govuk-table__cell govuk-table__cell--numeric">16/10/2022</td>
+                            <td class="govuk-table__cell govuk-table__cell--numeric"><strong class="govuk-tag govuk-tag--green">COMPLETE</strong></td>
+                            <td class="govuk-table__cell govuk-table__cell--numeric"><a href="/hcp-e2e-journey-v03/sent-sr1-form" onclick="completePrefilledFormName('Lois', 'London', '9876QWERTY13', '10/11/2022')">View</a></td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                            <th scope="row" class="govuk-table__header">Robert Drake</th>
+                            <td class="govuk-table__cell govuk-table__cell--numeric">9876QWERTY12</td>
+                            <td class="govuk-table__cell govuk-table__cell--numeric">05/11/2022</td>
+                            <td class="govuk-table__cell govuk-table__cell--numeric">16/10/2022</td>
+                            <td class="govuk-table__cell govuk-table__cell--numeric"><strong class="govuk-tag govuk-tag--green">COMPLETE</strong></td>
+                            <td class="govuk-table__cell govuk-table__cell--numeric"><a href="/hcp-e2e-journey-v03/sent-sr1-form" onclick="completePrefilledFormName('Robert', 'Drake', '9876QWERTY12', '05/11/2022')">View</a></td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <!-- Pagination -->
+                <nav class="govuk-pagination" role="navigation" aria-label="results">
+                    <div class="govuk-pagination__prev">
+                      <a class="govuk-link govuk-pagination__link" href="/hcp-e2e-journey-v03/account-d-dashboard-2" rel="prev">
+                        <svg class="govuk-pagination__icon govuk-pagination__icon--prev" xmlns="http://www.w3.org/2000/svg" height="13" width="15" aria-hidden="true" focusable="false" viewBox="0 0 15 13">
+                          <path d="m6.5938-0.0078125-6.7266 6.7266 6.7441 6.4062 1.377-1.449-4.1856-3.9768h12.896v-2h-12.984l4.2931-4.293-1.414-1.414z"></path>
+                        </svg>
+                        <span class="govuk-pagination__link-title">Previous</span></a>
+                    </div>
+                    <ul class="govuk-pagination__list">
+                      <li class="govuk-pagination__item">
+                        <a id="page1Link" class="govuk-link govuk-pagination__link" href="/hcp-e2e-journey-v03/account-d-dashboard-1" aria-label="Page 1" >
+                          1
+                        </a>
+                      </li>
+                      <li class="govuk-pagination__item">
+                        <a id="page2Link" class="govuk-link govuk-pagination__link" href="/hcp-e2e-journey-v03/account-d-dashboard-2" aria-label="Page 2">
+                          2
+                        </a>
+                      </li>
+                      <li class="govuk-pagination__item govuk-pagination__item--current">
+                        <a id="page3Link"class="govuk-link govuk-pagination__link" href="/hcp-e2e-journey-v03/account-d-dashboard-3" aria-label="Page 3" aria-current="page">
+                          3
+                        </a>
+                      </li>
+                    </ul>
+                    <!-- <div class="govuk-pagination__next">
+                      <a class="govuk-link govuk-pagination__link" href="#" rel="next"> <span class="govuk-pagination__link-title">Next</span> <svg class="govuk-pagination__icon govuk-pagination__icon--next" xmlns="http://www.w3.org/2000/svg" height="13" width="15" aria-hidden="true" focusable="false" viewBox="0 0 15 13">
+                            <path d="m8.107-0.0078125-1.4136 1.414 4.2926 4.293h-12.986v2h12.896l-4.1855 3.9766 1.377 1.4492 6.7441-6.4062-6.7246-6.7266z"></path>
+                        </svg></a>
+                    </div> -->
+                </nav>
+
+                
+                <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+
+                <p><a href="#">Claim your fee for completed SR1 forms.</a></p>
+
+                <h2 class="govuk-heading-l">Supporting information</h2>
+
+                <!-- Supporting informatio -->
+                <div class="govuk-grid-row">
+                    <div class="govuk-grid-column-one-third">
+                        <div class="grey-grid-box">
+                            <h3 class="govuk-heading-m">Completing the SR1 form</h3>
+                            <p class="govuk-body"><a href="#" class="govuk-link" target="_blank">Guidance for completing the SR1 (opens in a new tab)</a></p>
+                        </div>
+                    </div>
+                    <div class="govuk-grid-column-one-third">
+                        <div class="grey-grid-box">
+                            <h3 class="govuk-heading-m">Guidance for your patients</h3>
+                            <p class="govuk-body"><a href="#" class="govuk-link" target="_blank">Get benefits if you're nearing end of life (opens in a new tab)</a></p>
+                        </div>
+                    </div>
+                    <div class="govuk-grid-column-one-third">
+                        <div class="grey-grid-box">
+                            <h3 class="govuk-heading-m">IT support</h3>
+                            <p class="govuk-body"><a href="#" class="govuk-link" target="_blank">Contact IT support helpdesk (opens in a new tab)</a></p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+{% endblock %}

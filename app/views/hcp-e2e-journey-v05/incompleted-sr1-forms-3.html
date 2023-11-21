@@ -1,0 +1,163 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Incomplete SR1 forms
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <h1 class="govuk-heading-xl">Incomplete SR1 forms</h1>
+
+    <div class="govuk-warning-text">
+      <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+      <strong class="govuk-warning-text__text">
+        <span class="govuk-warning-text__assistive">Warning</span>
+        Incomplete SR1 forms will be deleted after 30 days. If the form is deleted, you will have to start it again.
+        <!-- An incomplete SR1 form can delay your patient's Special Rules claim. Complete them now. -->
+      </strong>
+    </div>
+
+    <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+    <div>
+      <div class="govuk-form-group">
+        <label class="govuk-label" for="searchfield">
+          <strong>Search by patient name
+            <!-- or reference number -->
+          </strong>
+        </label>
+        <input class="govuk-input govuk-input--width-10" id="searchField" name="searchField" type="text">
+        &nbsp;&nbsp;
+        <button class="govuk-button govuk-button--secondary" data-module="govuk-button">
+          Search
+        </button>
+        &nbsp;&nbsp;
+        <a class="govuk-link" href="#" onclick="clearSearchTerms()">Clear search</a>
+      </div>
+
+    </div>
+
+    <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+
+    <table id="column5" class="govuk-table">
+      <thead class="govuk-table__head">
+        <tr class="govuk-table__row">
+          <th scope="col" class="govuk-table__header">Patient name</th>
+          <!-- <th scope="col" class="govuk-table__header govuk-table__header--numeric">Reference number</th>
+              <th scope="col" class="govuk-table__header govuk-table__header--numeric">Date started</th> -->
+          <th scope="col" class="govuk-table__header govuk-table__header--numeric">Days left to submit</th>
+          <th scope="col" class="govuk-table__header">Action</th>
+        </tr>
+      </thead>
+      <tbody class="govuk-table__body">
+
+        <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header">Rachel Scott</th><span class="govuk-visually-hidden">Rachel Scott's SR1 form</span>
+          <!-- <td class="govuk-table__cell govuk-table__cell--numeric">12345ABCD06</td>
+              <td class="govuk-table__cell govuk-table__cell--numeric">31/10/2022</td> -->
+          <td class="govuk-table__cell govuk-table__cell--numeric"><strong class="govuk-tag govuk-tag--blue">29
+              Days</strong></td>
+          <td class="govuk-table__cell"><a href="/hcp-e2e-journey-v05/send-an-sr1-form-prefilled"
+              onclick="incompletePrefilledFormName('Rachel', 'Scott', '29 days')">Complete</a><span class="govuk-visually-hidden"> Complete</span></td>
+        </tr>
+        <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header">Martin Jason</th><span class="govuk-visually-hidden">Martin Jason's SR1 form</span>
+          <!-- <td class="govuk-table__cell govuk-table__cell--numeric">12345ABCD05</td>
+              <td class="govuk-table__cell govuk-table__cell--numeric">31/10/2022</td> -->
+          <td class="govuk-table__cell govuk-table__cell--numeric"><strong class="govuk-tag govuk-tag--blue">29
+              Days</strong></td>
+          <td class="govuk-table__cell"><a href="/hcp-e2e-journey-v05/send-an-sr1-form-prefilled"
+              onclick="incompletePrefilledFormName('Martin', 'Jason', '29 days')">Complete</a><span class="govuk-visually-hidden"> Complete</span></td>
+        </tr>
+        <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header">Robert Drake</th><span class="govuk-visually-hidden">Robert Drake's SR1 form</span>
+          <!-- <td class="govuk-table__cell govuk-table__cell--numeric">12345ABCD07</td>
+              <td class="govuk-table__cell govuk-table__cell--numeric">02/11/2022</td> -->
+          <td class="govuk-table__cell govuk-table__cell--numeric"><strong class="govuk-tag govuk-tag--blue">29
+              Days</strong></td>
+          <td class="govuk-table__cell"><a href="/hcp-e2e-journey-v05/send-an-sr1-form-prefilled"
+              onclick="incompletePrefilledFormName('Robert', 'Drake', '29 days')">Complete</a><span class="govuk-visually-hidden"> Complete</span></td>
+        </tr>
+        <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header">Diana Jones</th><span class="govuk-visually-hidden">Diana Jones's SR1 form</span>
+          <!-- <td class="govuk-table__cell govuk-table__cell--numeric">12345ABCD08</td>
+              <td class="govuk-table__cell govuk-table__cell--numeric">06/11/2022</td> -->
+          <td class="govuk-table__cell govuk-table__cell--numeric"><strong class="govuk-tag govuk-tag--blue">29
+              Days</strong></td>
+          <td class="govuk-table__cell"><a href="/hcp-e2e-journey-v05/send-an-sr1-form-prefilled"
+              onclick="incompletePrefilledFormName('Diana', 'Jones', '29 days')">Complete</a><span class="govuk-visually-hidden"> Complete</span></td>
+        </tr>
+        <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header">Jamiee Dee</th><span class="govuk-visually-hidden">Jamiee Dee's SR1 form</span>
+          <!-- <td class="govuk-table__cell govuk-table__cell--numeric">12345ABCD09</td>
+              <td class="govuk-table__cell govuk-table__cell--numeric">09/11/2022</td> -->
+          <td class="govuk-table__cell govuk-table__cell--numeric"><strong class="govuk-tag govuk-tag--blue">29
+              Days</strong></td>
+          <td class="govuk-table__cell"><a href="/hcp-e2e-journey-v05/send-an-sr1-form-prefilled"
+              onclick="incompletePrefilledFormName('Jamiee', 'Dee', '29 days')">Complete</a><span class="govuk-visually-hidden"> Complete</span></td>
+        </tr>
+        <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header">Abigail Brand</th><span class="govuk-visually-hidden">Abigail Brand's SR1 form</span>
+          <!-- <td class="govuk-table__cell govuk-table__cell--numeric">12345ABCD10</td>
+              <td class="govuk-table__cell govuk-table__cell--numeric">10/11/2022</td> -->
+          <td class="govuk-table__cell govuk-table__cell--numeric"><strong class="govuk-tag govuk-tag--blue">29
+              Days</strong></td>
+          <td class="govuk-table__cell"><a href="/hcp-e2e-journey-v05/send-an-sr1-form-prefilled"
+              onclick="incompletePrefilledFormName('Abigail', 'Brand', '29 days')">Complete</a><span class="govuk-visually-hidden"> Complete</span></td>
+        </tr>
+
+      </tbody>
+    </table>
+
+    <!-- Pagination -->
+    <nav class="govuk-pagination" role="navigation" aria-label="results">
+      <div class="govuk-pagination__prev">
+        <a class="govuk-link govuk-pagination__link" href="/hcp-e2e-journey-v05/incompleted-sr1-forms-2" rel="prev">
+          <svg class="govuk-pagination__icon govuk-pagination__icon--prev" xmlns="http://www.w3.org/2000/svg"
+            height="13" width="15" aria-hidden="true" focusable="false" viewBox="0 0 15 13">
+            <path
+              d="m6.5938-0.0078125-6.7266 6.7266 6.7441 6.4062 1.377-1.449-4.1856-3.9768h12.896v-2h-12.984l4.2931-4.293-1.414-1.414z">
+            </path>
+          </svg>
+          <span class="govuk-pagination__link-title">Previous</span><span class="govuk-visually-hidden"> Previous page</span></a>
+      </div>
+      <ul class="govuk-pagination__list">
+        <li class="govuk-pagination__item"><span class="govuk-visually-hidden"> Page 1</span>
+          <a id="page1Link" class="govuk-link govuk-pagination__link" href="/hcp-e2e-journey-v05/incompleted-sr1-forms"
+            aria-label="Page 1">
+            1
+          </a>
+        </li>
+        <li class="govuk-pagination__item"><span class="govuk-visually-hidden"> Page 2</span>
+          <a id="page2Link" class="govuk-link govuk-pagination__link"
+            href="/hcp-e2e-journey-v05/incompleted-sr1-forms-2" aria-label="Page 2">
+            2
+          </a>
+        </li>
+        <li class="govuk-pagination__item govuk-pagination__item--current"><span class="govuk-visually-hidden"> Page 3</span>
+          <a id="page3Link" class="govuk-link govuk-pagination__link"
+            href="/hcp-e2e-journey-v05/incompleted-sr1-forms-3" aria-label="Page 3" aria-current="page">
+            3
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+
+  <!-- Side panel -->
+  <div class="govuk-grid-column-one-third">
+    <div class="app-step-nav-related app-step-nav-related--singular">
+      <h2 class="app-step-nav-related__heading">Get help</h2>
+      <p class="govuk-body"><a class="govuk-link"
+          href="https://ds1500-prototype.herokuapp.com/sr1-1/sr1-guidance#patients-may-not-know-true-nature-of-illness"
+          target="_blank">How to complete the SR1 form (opens in a new tab)</a></p>
+      <ul class="govuk-list">
+        <li>Email: <a href="mailto:sr1.servicedesk@nhs.net">sr1.servicedesk@nhs.net</a></li>
+        <li>Telephone: 0300 303 5035</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+{% endblock %}

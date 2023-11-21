@@ -1,0 +1,35 @@
+{% extends "layout.html" %}
+{% block pageTitle %}
+    You need to fill out the applicant's details
+{% endblock %}
+{% block content %}
+    <div class="govuk-grid-row">
+        <div class="govuk-grid-column-three-quarters">
+            <form id="detailsRequired" action="/auth-onboard-v01/dashboard/everything-else/new-application/what-is-their-nino" method="post">
+                <div class="govuk-form-group">
+                    <fieldset class="govuk-fieldset" aria-describedby="identifying-you-hint">
+                        <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+                            <h1 class="govuk-fieldset__heading">
+                                You need to fill out the applicant's details
+                            </h1>
+                        </legend>
+
+                        <div class="govuk-inset-text">
+                            <p>We could not find the applicant's details in our database.</p>
+                            <p>This can happen if they have not received financial support from us before.</p>
+                        </div>
+                
+                    </fieldset>
+                    
+                </div>
+
+                <!-- Continue to your details -->
+                <div class="govuk-button-group">
+                    <button id="aoV01SignInSubmitBtn" class="govuk-button" data-module="govuk-button">
+                        Enter applicant details
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+{% endblock %}

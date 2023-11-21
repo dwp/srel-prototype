@@ -1,0 +1,45 @@
+{% extends "layout.html" %}
+{% block pageTitle %}
+    What is your nationality?
+{% endblock %}
+{% block content %}
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <form id="aoWhatIsYourNationality" action="/auth-onboard-v01/dashboard/myself/no-existing-record/what-is-your-address" method="post">
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset" role="group" aria-describedby="nationality-hint">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+              <h1 class="govuk-fieldset__heading">
+                What is your nationality?
+              </h1>
+            </legend>
+            
+            <div class="govuk-form-group">
+                <label class="govuk-label" for="nationality">
+                    Nationality
+                  </label>
+                <!-- <input class="govuk-input govuk-input--width-10" id="nationality" name="nationality" type="text" spellcheck="false" aria-describedby="nationality-hint" inputmode="text"> -->
+                <select class="govuk-select" id="country" name="country" value="{{ data['country'] }}">
+                  <option value="">-- Select --</option>
+                </select>
+                <span id="errorLoadingCountriesDiv" class="nhsuk-error-message hidden">
+                  <span class="nhsuk-u-visually-hidden">Error:</span> <span id="errorLoadingCountriesText"></span>
+                </span>
+            </div>
+
+            
+        
+          </fieldset>
+        </div>
+
+          <!-- Continue -->
+          <div class="govuk-button-group">
+              <button id="srelDobSubmitSubmitBtn" class="govuk-button" data-module="govuk-button">
+                  Continue
+              </button>
+          </div>
+        </form>
+    </div>
+</div>
+{% endblock %}

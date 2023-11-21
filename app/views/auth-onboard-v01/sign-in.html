@@ -1,0 +1,50 @@
+{% extends "layout.html" %}
+{% block pageTitle %}
+    Special Rules for end of life: sign in or create an account
+{% endblock %}
+{% block content %}
+    <div class="govuk-grid-row">
+        <div class="govuk-grid-column-three-quarters">
+            <form id="aoSignInRoute" action="" method="post">
+                <div class="govuk-form-group">
+                    <fieldset class="govuk-fieldset" aria-describedby="sign-in-hint">
+                        <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+                            <h1 class="govuk-fieldset__heading">
+                                Special Rules for end of life: sign in or create an account
+                            </h1>
+                        </legend>
+
+                        <p>Once you've registered you can sign in and submit your claim.</p>
+
+                        <div class="govuk-form-group">
+                            <label class="govuk-label" for="email">
+                                <strong>Email address</strong>
+                            </label>
+                            <input class="govuk-input govuk-!-width-one-half" id="signin_email" name="signin_email" type="text" autocomplete="off" onkeyup="signIn()">
+                        </div>
+                        <div class="govuk-form-group">
+                            <label class="govuk-label" for="password">
+                                <strong>Password</strong>
+                            </label>
+                            <input class="govuk-input govuk-!-width-one-half" id="signin_password" name="signin_password" type="password" autocomplete="off" onkeyup="signIn()">
+                        </div>
+                
+                    </fieldset>
+                    
+                </div>
+
+                <!-- Continue -->
+                <div class="govuk-button-group">
+                    <!-- <button id="aoSignInBtn" class="govuk-button govuk-button--disabled" data-module="govuk-button" disabled="disabled" aria-disabled="true"> -->
+                    <button id="aoSignInBtn" class="govuk-button" data-module="govuk-button">
+                        Sign in
+                    </button>
+                </div>
+
+                <!-- Links -->
+                <p><a href="/auth-onboard-v01/no-existing-account/enter-email-address" class="govuk-link">Create an account</a></p>
+                <p><a href="forgot-your-password" class="govuk-link">Forgot your password?</a></p>
+            </form>
+        </div>
+    </div>
+{% endblock %}

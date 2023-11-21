@@ -1,0 +1,110 @@
+{% extends "layout-gov-reduced.html" %}
+
+{% block pageTitle %}
+What is your professional registration number?
+{% endblock %}
+
+{% block content %}
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+        <form id="profileSetupPage" name="profileDetails" action="/hcp-e2e-journey-mvp01/profile-04" method="post">
+
+            <!-- ERROR STATE -->
+            <div class="govuk-error-summary" data-module="govuk-error-summary">
+                <div role="alert">
+                  <h2 class="govuk-error-summary__title">
+                    There is a problem
+                  </h2>
+                  <div class="govuk-error-summary__body">
+                    <ul class="govuk-list govuk-error-summary__list">
+                      <li>
+                        <a href="#professionalRegistrationNumber">Enter your professional registration number</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+            <div class="govuk-form-group govuk-form-group--error">
+                <fieldset class="govuk-fieldset">
+                    <legend class="govuk-fieldset__legend govuk-fieldset__legend--l"
+                        for="professionalRegistrationNumber">
+                        <span class="govuk-caption-l">Question 15 of 17</span>
+                        <h1 class="govuk-fieldset__heading">
+                            What is your professional registration number?
+                        </h1>
+                    </legend>
+                    
+
+                    <div id="event-name-hint" class="govuk-hint">This is your GMC or NMC number.</div>                   
+                    <!--ERROR LEGEND -->
+                    <p id="professional-registration-number-error" class="govuk-error-message">
+                        <span class="govuk-visually-hidden">Error:</span> Enter your professional registration number
+                    </p>
+                    <!-- END ERROR -->
+                    <input class="govuk-input govuk-input--width-10" id="professionalRegistrationNumber"
+                        name="professionalRegistrationNumber" type="text" autocomplete="off">
+
+
+                </fieldset>
+            </div>
+
+            <!-- Submit button -->
+            <div class="govuk-button-group">
+                <button id="" class="govuk-button" data-module="govuk-button" onclick="saveHCPProfessionalNumbermvp01(); resetChangeFn();">
+                    Save and continue
+                </button>
+                <a class="govuk-link" onclick="saveAndLeave()" style="color:#1d70b8;" aria-label="Save and return to SR1 form">Save and return to SR1 form</a>
+            </div>
+        </form>
+
+        <div class="govuk-!-padding-bottom-9"></div>
+
+        <!--Get help bottom-->
+        <hr class="govuk-section-break govuk-section-break--visible" aria-hidden="true">
+        <section class="govuk-width-container govuk-!-margin-top-7 govuk-!-margin-bottom-7 ">
+            <div class="govuk-grid-row">
+                <div class="govuk-grid-column-full">
+                    <h2 class="govuk-heading-m">Get help</h2>
+                    <p class="govuk-body"><a class="govuk-link"
+                            href="https://ds1500-prototype.herokuapp.com/sr1-1/sr1-guidance#patients-may-not-know-true-nature-of-illness"
+                            target="_blank">How to complete the SR1 form (opens in a new tab)</a></p>
+                    <ul class="govuk-list">
+                        <li>Email: <a href="mailto:sr1.servicedesk@nhs.net">sr1.servicedesk@nhs.net</a></li>
+                        <li>Telephone: 0300 303 5035</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+    <!-- Side panel 
+    <div class="govuk-grid-column-one-third">
+        <div class="app-step-nav-related app-step-nav-related--singular">
+            <h2 class="app-step-nav-related__heading">Get help</h2>
+            <p class="govuk-body"><a class="govuk-link"
+                    href="https://ds1500-prototype.herokuapp.com/sr1-1/sr1-guidance#patients-may-not-know-true-nature-of-illness"
+                    target="_blank">How to complete the SR1 form (opens in a new tab)</a></p>
+            <ul class="govuk-list">
+                <li>Email: <a href="mailto:sr1.servicedesk@nhs.net">sr1.servicedesk@nhs.net</a></li>
+                <li>Telephone: 0300 303 5035</li>
+            </ul>
+        </div>
+    </div>
+    -->
+</div>
+
+<script>
+    // get and set in this order - this ensures what is sent in query is the same as what is in the localStorage
+    const saveAndLeave = () => {
+        saveHCPProfessionalNumbermvp01();
+
+        const origin = window.location.origin;
+        const url = getUrlWithSR1DataAsQueryParamsmvp01(origin, "/hcp-e2e-journey-mvp01/task-list-sr1-form");
+
+        window.location.replace(url.toString());
+    }
+</script>
+{% endblock %}

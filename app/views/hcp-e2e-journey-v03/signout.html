@@ -1,0 +1,43 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+You have been signed out of the service
+{% endblock %}
+
+{% block content %}
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+        <h1 class="govuk-heading-xl">
+            <!-- Supporting your patient's Special Rules benefit claim  -->
+            You have been signed out of the service
+        </h1>
+        <p class="govuk-body">Text here</p>
+        <p class="govuk-body">You can:</p>
+
+            <ul class="govuk-list govuk-list--bullet">
+                <li><a href="/hcp-e2e-journey-v03/signin-page">try to confirm your identity again</a></li>
+                <li><a href="/hcp-e2e-journey-v03/">go back to the SR1 service page</a></li>
+                <li>leave the page</li>
+            </ul>
+
+
+    </div>
+
+    
+    <!-- Side panel 
+    <div class="govuk-grid-column-one-third">
+        <div class="govuk-!-padding-bottom-6"></div>
+        <div class="app-step-nav-related app-step-nav-related--singular">
+            <h2 class="app-step-nav-related__heading">Related content</h2>
+            <p><a
+                    href="https://www.gov.uk/government/publications/dwp-factual-medical-reports-guidance-for-healthcare-professionals/the-special-rules-how-the-benefit-system-supports-people-nearing-the-end-of-life#what-to-do-with-a-completed-sr1-form">The
+                    Special Rules: how the benefit system supports people nearing the end of life</a></p>
+            <p><a
+                    href="https://www.gov.uk/government/publications/dwp-factual-medical-reports-guidance-for-healthcare-professionals/dwp-medical-factual-reports-a-guide-to-completion">DWP
+                    Medical (factual) reports: a guide to completion</a></p>
+        </div>
+    </div>
+    -->
+</div>
+{% endblock %}

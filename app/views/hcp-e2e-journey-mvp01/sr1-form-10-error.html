@@ -1,0 +1,150 @@
+{% extends "layout-gov-reduced.html" %}
+
+{% block pageTitle %}
+Is the patient aware of their diagnosis?
+{% endblock %}
+
+{% block content %}
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+        <form id="sendAnSR1Form" action="/hcp-e2e-journey-mvp01/sr1-form-11" method="post">
+
+            <!-- ERROR STATE -->
+            <div class="govuk-error-summary" data-module="govuk-error-summary">
+                <div role="alert">
+                    <h2 class="govuk-error-summary__title">
+                        There is a problem
+                    </h2>
+                    <div class="govuk-error-summary__body">
+                        <ul class="govuk-list govuk-error-summary__list">
+                            <li>
+                                <a href="#awareOfDiagnosisYes">Select if the patient is aware of their diagnosis</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="govuk-form-group govuk-form-group--error">
+                <fieldset class="govuk-fieldset">
+                    <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+                        <span class="govuk-caption-l"> Question 9 of 17</span>
+                        <h1 class="govuk-fieldset__heading">
+                            Is the patient aware of their diagnosis?
+                        </h1>
+                    </legend>
+
+                    <!-- Is the patient aware of their diagnosis? -->
+                    <div class="govuk-radios govuk-radios--inline" data-module="govuk-radios">
+                        <!--ERROR LEGEND -->
+                        <p id="awareOfDiagnosis-error" class="govuk-error-message">
+                            <span class="govuk-visually-hidden">Error:</span> Select if the patient is aware of their
+                            diagnosis
+                        </p>
+                        <div class="govuk-radios__item">
+                            <input autocomplete="off" class="govuk-radios__input" id="awareOfDiagnosisYes"
+                                name="awareOfDiagnosis" type="radio" value="yes" aria-label="Yes">
+                            <label class="govuk-label govuk-radios__label" for="awareOfDiagnosis">
+                                Yes
+                            </label>
+                        </div>
+                        <div class="govuk-radios__item">
+                            <input autocomplete="off" class="govuk-radios__input" id="awareOfDiagnosisNo"
+                                name="awareOfDiagnosis" type="radio" value="no" aria-label="No">
+                            <label class="govuk-label govuk-radios__label" for="awareOfDiagnosis">
+                                No
+                            </label>
+                        </div>
+                    </div>
+
+                </fieldset>
+            </div>
+
+            <!-- Submit button -->
+            <div class="govuk-button-group">
+                <button id="" class="govuk-button" data-module="govuk-button" onclick="save()">
+                    Save and continue
+                </button>
+                <a class="govuk-link" onclick="saveAndLeave()" style="color:#1d70b8;" aria-label="Save and return to SR1 form">Save and return to SR1 form</a>
+            </div>
+        </form>
+        <div class="govuk-!-padding-bottom-9"></div>
+
+        <!--Get help bottom-->
+        <hr class="govuk-section-break govuk-section-break--visible" aria-hidden="true">
+        <section class="govuk-width-container govuk-!-margin-top-7 govuk-!-margin-bottom-7 ">
+            <div class="govuk-grid-row">
+                <div class="govuk-grid-column-full">
+                    <h2 class="govuk-heading-m">Get help</h2>
+                    <p class="govuk-body"><a class="govuk-link"
+                            href="https://ds1500-prototype.herokuapp.com/sr1-1/sr1-guidance#patients-may-not-know-true-nature-of-illness"
+                            target="_blank">How to complete the SR1 form (opens in a new tab)</a></p>
+                    <ul class="govuk-list">
+                        <li>Email: <a href="mailto:sr1.servicedesk@nhs.net">sr1.servicedesk@nhs.net</a></li>
+                        <li>Telephone: 0300 303 5035</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+    <!-- Side panel 
+        <div class="govuk-grid-column-one-third">
+            <div class="app-step-nav-related app-step-nav-related--singular">
+                <h2 class="app-step-nav-related__heading">Get help</h2>
+                <p class="govuk-body">
+                    <a  class="govuk-link" href="https://ds1500-prototype.herokuapp.com/sr1-1/sr1-guidance#patients-may-not-know-true-nature-of-illness" target="_blank">How to complete the SR1 form (opens in a new tab)</a>
+                </p>
+                <ul class="govuk-list">
+                    <li>Email: <a href="mailto:sr1.servicedesk@nhs.net">sr1.servicedesk@nhs.net</a>
+                    </li>
+                    <li>Telephone: 0300 303 5035</li>
+                </ul>
+            </div>
+        </div> -->
+</div>
+
+<script>
+    const save = () => {
+        if (document.getElementById('awareOfDiagnosisYes').checked) {
+            hcpmvp01AwareOfDiagnosis(true);
+        } else if (document.getElementById('awareOfDiagnosisNo').checked) {
+            hcpmvp01AwareOfDiagnosis(false);
+        }
+    }
+
+    // get and set in this order - this ensures what is sent in query is the same as what is in the localStorage
+    const saveAndLeave = () => {
+        save();
+
+        const origin = window.location.origin;
+        const url = getUrlWithSR1DataAsQueryParamsmvp01(origin, "/hcp-e2e-journey-mvp01/task-list-sr1-form");
+        console.log(url);
+
+        window
+            .location
+            .replace(url.toString());
+    }
+
+    const checkValue = () => {
+        const isPatientAwareOfDiagnosis = localStorage.getItem('hcpmvp01AwareOfDiagnosis');
+        console.log({ aware: isPatientAwareOfDiagnosis });
+        if (isPatientAwareOfDiagnosis === undefined) {
+            //dont set anything
+            return;
+        }
+
+        if (isPatientAwareOfDiagnosis === 'true') {
+            document.getElementById('awareOfDiagnosisYes').checked = true;
+        }
+
+        if (isPatientAwareOfDiagnosis === 'false') {
+            document.getElementById('awareOfDiagnosisNo').checked = true;
+        }
+
+    }
+
+    checkValue();
+</script>
+{% endblock %}

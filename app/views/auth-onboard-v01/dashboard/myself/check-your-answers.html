@@ -1,0 +1,143 @@
+{% extends "layout.html" %}
+{% block pageTitle %}
+    Check your details are correct
+{% endblock %}
+{% block content %}
+
+    <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds-from-desktop">
+
+        <h1 class="govuk-heading-l">Check your details are correct</h1>
+
+        <h2 class="govuk-heading-m">About the applicant</h2>
+
+        <form action="/auth-onboard-v01/dashboard/myself/jean-grey-dashb" method="post" novalidate>
+            <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+
+                <!-- Name -->
+                <div class="govuk-summary-list__row">
+                    <dt class="govuk-summary-list__key">
+                    Name
+                    </dt>
+                    <dd class="govuk-summary-list__value">
+                        <!-- <div id="checkAnswersPatientName"></div> -->
+                        Jean Grey
+                    </dd>
+                    <dd class="govuk-summary-list__actions">
+                    <a class="govuk-link" href="#">
+                        Change<span class="govuk-visually-hidden"> name</span>
+                    </a>
+                    </dd>
+                </div>
+
+                <!-- Date of Birth -->
+                <div class="govuk-summary-list__row">
+                    <dt class="govuk-summary-list__key">
+                        Date of birth
+                    </dt>
+                    <dd class="govuk-summary-list__value">
+                        <!-- <div id="checkAnswersDob"></div> -->
+                        1 September 1963
+                    </dd>
+                    <dd class="govuk-summary-list__actions">
+                        <a class="govuk-link" href="#">
+                            Change<span class="govuk-visually-hidden"> date of birth</span>
+                        </a>
+                    </dd>
+                </div>
+
+                <!-- National Insurance -->
+                <div class="govuk-summary-list__row">
+                    <dt class="govuk-summary-list__key">
+                        National Insurance
+                    </dt>
+                    <dd class="govuk-summary-list__value">
+                        <!-- <div id="checkAnswersNiNo"></div> -->
+                        12 34 56 78 XX
+                    </dd>
+                    <dd class="govuk-summary-list__actions">
+                        <a class="govuk-link" href="#">
+                            Change<span class="govuk-visually-hidden"> who is applying</span>
+                        </a>
+                    </dd>
+                </div>
+
+                <!-- Nationality -->
+                <div id="nationalityDiv" class="govuk-summary-list__row" hidden="hidden">
+                    <dt class="govuk-summary-list__key">
+                        Nationality
+                    </dt>
+                    <dd class="govuk-summary-list__value">
+                        <!-- <div id="checkAnswersPatientOtherName"></div> -->
+                        British
+                    </dd>
+                    <dd class="govuk-summary-list__actions">
+                        <a class="govuk-link" href="#">
+                            Change<span class="govuk-visually-hidden"> nationality</span>
+                        </a>
+                    </dd>
+                </div>
+
+            </dl>
+
+
+            <h2 class="govuk-heading-m">Contact information</h2>
+
+            <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+
+                <!-- Address -->
+                <div class="govuk-summary-list__row">
+                    <dt class="govuk-summary-list__key">
+                        Address
+                    </dt>
+                    <dd class="govuk-summary-list__value">
+                        <!-- <div id="checkAnswersAddress"></div> -->
+                        8 Studfield Drive<br />
+                        Hillsedge<br />
+                        South Yorkshire<br />
+                        S9 123
+                    </dd>
+                    <dd class="govuk-summary-list__actions">
+                        <a class="govuk-link" href="#">
+                            Change<span class="govuk-visually-hidden"> address</span>
+                        </a>
+                    </dd>
+                </div>
+
+                <!-- Telephone number -->
+                <div class="govuk-summary-list__row">
+                    <dt class="govuk-summary-list__key">
+                        Telephone number
+                    </dt>
+                    <dd class="govuk-summary-list__value">
+                        <!-- <div id="checkAnswersTelephoneNumber"></div> -->
+                        07798436552
+                    </dd>
+                    <dd class="govuk-summary-list__actions">
+                        <a class="govuk-link" href="#">
+                            Change<span class="govuk-visually-hidden"> telephone</span>
+                        </a>
+                    </dd>
+                </div>
+
+            </dl>
+
+            <!-- Send application -->
+            <h2 class="govuk-heading-m">Now send your application</h2>
+
+            <p class="govuk-body">By submitting this application you are confirming that, to the best of your knowledge, the details you are providing are correct.</p>
+
+                
+
+            <input type="hidden" name="answers-checked" value="true">
+
+            <button class="govuk-button" data-module="govuk-button">
+            Accept and send
+            </button>
+
+        </form>
+
+        </div>
+    </div>
+
+{% endblock %}

@@ -1,0 +1,121 @@
+{% extends "layout.html" %}
+{% block pageTitle %}
+    Identifying you
+{% endblock %}
+{% block content %}
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-three-quarters">
+        
+        <!-- Error summary -->
+        <div id="confirmationCodeErrorSummary" class="govuk-error-summary hidden" aria-labelledby="error-summary-title" role="alert" data-module="govuk-error-summary">
+          <h2 class="govuk-error-summary__title" id="error-summary-title">
+            There is a problem
+          </h2>
+          <div class="govuk-error-summary__body">
+            <ul class="govuk-list govuk-error-summary__list">
+              <li><a href="#firstnameField">Enter your first name</a></li>
+              <li><a href="#middlenameField">Enter your middle name</a></li>
+              <li><a href="#surnameField">Enter your surname</a></li>
+              <li><a href="#dobFields">Enter your date of birth</a></li>
+              <li><a href="#ninoField">Enter your National Insurance number</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- form -->
+        <form id="identifyingYouRoute" action="" method="post">
+            <div class="govuk-form-group">
+                <fieldset class="govuk-fieldset" aria-describedby="identifying-you-hint">
+                    <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+                        <h1 class="govuk-fieldset__heading">
+                            Identifying you
+                        </h1>
+                    </legend>
+
+                    <div class="govuk-inset-text">
+                        We may be able to identify you by using your National Insurance number, date of birth, and postcode.
+                    </div>
+
+                    <div id="firstnameField" class="govuk-form-group">
+                        <label class="govuk-label" for="firstname">
+                            <strong>First name</strong>
+                        </label>
+                        <input class="govuk-input govuk-!-width-three-quarters" id="firstname" name="firstname" type="text">
+                    </div>
+                    
+                    <div id="middlenameField" class="govuk-form-group">
+                        <label class="govuk-label" for="middlename">
+                            <strong>Middle name</strong>
+                        </label>
+                        <input class="govuk-input govuk-!-width-three-quarters" id="middlename" name="middlename" type="text">
+                    </div>
+                    
+                    <div id="surnameField" class="govuk-form-group">
+                        <label class="govuk-label" for="surname">
+                            <strong>Surname</strong>
+                        </label>
+                        <input class="govuk-input govuk-!-width-three-quarters" id="surname" name="surname" type="text">
+                    </div>
+
+                    <div id="dobFields" class="govuk-form-group">
+                        <fieldset class="govuk-fieldset" role="group" aria-describedby="dob-hint">
+                          <legend class="govuk-fieldset__legend">
+                            <strong>Date of birth</strong>
+                          </legend>
+                          <div id="dob-hint" class="govuk-hint">
+                            For example, 29 9 1989
+                          </div>
+                          <div class="govuk-date-input" id="dob">
+                            <div class="govuk-date-input__item">
+                              <div class="govuk-form-group">
+                                <label class="govuk-label govuk-date-input__label" for="dob-day">
+                                  Day
+                                </label>
+                                <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="dob-day" name="dob-day" type="text" inputmode="numeric">
+                              </div>
+                            </div>
+                            <div class="govuk-date-input__item">
+                              <div class="govuk-form-group">
+                                <label class="govuk-label govuk-date-input__label" for="dob-month">
+                                  Month
+                                </label>
+                                <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="dob-month" name="dob-month" type="text" inputmode="numeric">
+                              </div>
+                            </div>
+                            <div class="govuk-date-input__item">
+                              <div class="govuk-form-group">
+                                <label class="govuk-label govuk-date-input__label" for="dob-year">
+                                  Year
+                                </label>
+                                <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="dob-year" name="dob-year" type="text" inputmode="numeric">
+                              </div>
+                            </div>
+                          </div>
+                      
+                        </fieldset>
+                      </div>
+
+                      <div id="ninoField" class="govuk-form-group">
+                        <label class="govuk-label" for="national-insurance-number">
+                          <strong>National Insurance number</strong>
+                        </label>
+                        <div id="national-insurance-number-hint" class="govuk-hint">
+                            It's on your National Insurance card, benefit letter, payslip or P60. For example, 'QQ 12 34 56 C'
+                        </div>
+                        <input class="govuk-input govuk-!-width-three-quarters" id="national-insurance-number" name="national-insurance-number" type="text" spellcheck="false" aria-describedby="national-insurance-number-hint">
+                      </div>
+            
+                </fieldset>
+                
+            </div>
+
+            <!-- Continue -->
+            <div class="govuk-button-group">
+                <button id="aoIdentifyingYouSubmitBtn" class="govuk-button" data-module="govuk-button" onclick="aoIdentifyingYouFn(event)">
+                    Continue
+                </button>
+            </div>
+        </form>
+      </div>
+    </div>
+{% endblock %}

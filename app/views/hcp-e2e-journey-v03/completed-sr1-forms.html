@@ -1,0 +1,135 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Your organisation sign in page
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <h1 class="govuk-heading-xl">Completed SR1 forms</h1>
+    <!-- <p class="govuk-body">You can access completed SR1 forms for 30 days after you submitted them. You can resend, view, and download them. They will be archived after 30 days.</p> -->
+    <p class="govuk-body">You can access completed SR1 forms for 30 days after you submit them. You can re-send, view,
+      and download them.</p>
+
+    <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+    <div>
+      <div class="govuk-form-group">
+        <label class="govuk-label" for="event-name">
+          <strong>Search by patient name</strong>
+        </label>
+        <input class="govuk-input govuk-input--width-10" id="searchField" name="searchField" type="text">
+        &nbsp;&nbsp;
+        <button class="govuk-button govuk-button--secondary" data-module="govuk-button">
+          Search
+        </button>
+        &nbsp;&nbsp;
+        <a class="govuk-link" href="#" onclick="clearSearchTerms()">Clear search</a>
+      </div>
+
+    </div>
+
+    <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+
+    <table id="column4" class="govuk-table">
+      <thead class="govuk-table__head">
+        <tr class="govuk-table__row">
+          <th scope="col" class="govuk-table__header">Patient name</th>
+          <!-- <th scope="col" class="govuk-table__header govuk-table__header--numeric">Reference number</th> -->
+          <th scope="col" class="govuk-table__header govuk-table__header--numeric">Date submitted</th>
+          <th scope="col" class="govuk-table__header">Action</th>
+        </tr>
+      </thead>
+      <tbody class="govuk-table__body">
+        <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header">Lois London</th>
+          <!-- <td class="govuk-table__cell govuk-table__cell--numeric">9876QWERTY13</td> -->
+          <td class="govuk-table__cell govuk-table__cell--numeric">10/11/2022</td>
+          <td class="govuk-table__cell"><a href="/hcp-e2e-journey-v03/sent-sr1-form"
+              onclick="completePrefilledFormName('Lois', 'London', '9876QWERTY13', '10/11/2022')">View</a></td>
+        </tr>
+        <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header">Robert Drake</th>
+          <!-- <td class="govuk-table__cell govuk-table__cell--numeric">9876QWERTY12</td> -->
+          <td class="govuk-table__cell govuk-table__cell--numeric">05/11/2022</td>
+          <td class="govuk-table__cell"><a href="/hcp-e2e-journey-v03/sent-sr1-form"
+              onclick="completePrefilledFormName('Robert', 'Drake', '9876QWERTY12', '05/11/2022')">View</a></td>
+        </tr>
+        <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header">Nathan Essex</th>
+          <!-- <td class="govuk-table__cell govuk-table__cell--numeric">9876QWERTY11</td> -->
+          <td class="govuk-table__cell govuk-table__cell--numeric">29/10/2022</td>
+          <td class="govuk-table__cell"><a href="/hcp-e2e-journey-v03/sent-sr1-form"
+              onclick="completePrefilledFormName('Nathan', 'Essex', '9876QWERTY11', '29/10/2022')">View</a></td>
+        </tr>
+        <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header">Anna Marie</th>
+          <!-- <td class="govuk-table__cell govuk-table__cell--numeric">9876QWERTY10</td> -->
+          <td class="govuk-table__cell govuk-table__cell--numeric">16/09/2022</td>
+          <td class="govuk-table__cell"><a href="/hcp-e2e-journey-v03/sent-sr1-form"
+              onclick="completePrefilledFormName('Anna', 'Marie', '9876QWERTY10', '16/09/2022')">View</a></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <!-- <table id="column5" class="govuk-table hidden">
+                <thead class="govuk-table__head">
+                  <tr class="govuk-table__row">
+                    <th scope="col" class="govuk-table__header">Applicant name</th>
+                    <th scope="col" class="govuk-table__header govuk-table__header--numeric">Reference</th>
+                    <th scope="col" class="govuk-table__header govuk-table__header--numeric">Date started</th>
+                    <th scope="col" class="govuk-table__header govuk-table__header--numeric">Date submitted</th>
+                    <th scope="col" class="govuk-table__header">Action</th>
+                  </tr>
+                </thead>
+                <tbody class="govuk-table__body">
+                  <tr class="govuk-table__row">
+                    <th scope="row" class="govuk-table__header">Lois London</th>
+                    <td class="govuk-table__cell govuk-table__cell--numeric">9876QWERTY13</td>
+                    <td class="govuk-table__cell govuk-table__cell--numeric">10/11/2022</td>
+                    <td class="govuk-table__cell govuk-table__cell--numeric">10/11/2022</td>
+                    <td class="govuk-table__cell"><a href="/hcp-e2e-journey-v03/sent-sr1-form" onclick="completePrefilledFormName('Lois', 'London', '10/11/2022')">View</a></td>
+                  </tr>
+                  <tr class="govuk-table__row">
+                    <th scope="row" class="govuk-table__header">Robert Drake</th>
+                    <td class="govuk-table__cell govuk-table__cell--numeric">9876QWERTY12</td>
+                    <td class="govuk-table__cell govuk-table__cell--numeric">05/11/2022</td>
+                    <td class="govuk-table__cell govuk-table__cell--numeric">03/11/2022</td>
+                    <td class="govuk-table__cell"><a href="/hcp-e2e-journey-v03/sent-sr1-form" onclick="completePrefilledFormName('Robert', 'Drake')">View</a></td>
+                  </tr>
+                  <tr class="govuk-table__row">
+                    <th scope="row" class="govuk-table__header">Nathan Essex</th>
+                    <td class="govuk-table__cell govuk-table__cell--numeric">9876QWERTY11</td>
+                    <td class="govuk-table__cell govuk-table__cell--numeric">29/10/2022</td>
+                    <td class="govuk-table__cell govuk-table__cell--numeric">13/10/2022</td>
+                    <td class="govuk-table__cell"><a href="/hcp-e2e-journey-v03/sent-sr1-form" onclick="completePrefilledFormName('Nathan', 'Essex')">View</a></td>
+                  </tr>
+                  <tr class="govuk-table__row">
+                    <th scope="row" class="govuk-table__header">Anna Marie</th>
+                    <td class="govuk-table__cell govuk-table__cell--numeric">9876QWERTY10</td>
+                    <td class="govuk-table__cell govuk-table__cell--numeric">10/09/2022</td>
+                    <td class="govuk-table__cell govuk-table__cell--numeric">08/08/2022</td>
+                    <td class="govuk-table__cell"><a href="/hcp-e2e-journey-v03/sent-sr1-form" onclick="completePrefilledFormName('Anna', 'Marie')">View</a></td>
+                  </tr>
+                </tbody>
+              </table> -->
+  </div>
+
+  <!-- Side panel -->
+  <div class="govuk-grid-column-one-third">
+    <div class="app-step-nav-related app-step-nav-related--singular">
+      <h2 class="app-step-nav-related__heading">Get help</h2>
+      <p class="govuk-body"><a class="govuk-link"
+          href="https://ds1500-prototype.herokuapp.com/sr1-1/sr1-guidance#patients-may-not-know-true-nature-of-illness"
+          target="_blank">How to complete the SR1 form (opens in a new tab)</a></p>
+      <ul class="govuk-list">
+        <li>Email: <a href="mailto:sr1.servicedesk@nhs.net">sr1.servicedesk@nhs.net</a></li>
+        <li>Telephone: 0300 303 5035</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+{% endblock %}

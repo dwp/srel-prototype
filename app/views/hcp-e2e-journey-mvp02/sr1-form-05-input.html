@@ -1,0 +1,91 @@
+{% extends "layout-gov-reduced.html" %}
+
+{% block pageTitle %}
+What is the patient’s National Insurance number? – Send an SR1 – GOV.UK
+{% endblock %}
+
+{% block content %}
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+        <form id="sendAnSR1Form" action="/hcp-e2e-journey-mvp02/sr1-form-07" method="post">
+            <div class="govuk-form-group">
+                <fieldset class="govuk-fieldset">
+                    <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+                        <span class="govuk-caption-l"> Question 4 of 17</span>
+                        <h1 class="govuk-fieldset__heading">
+                            What is the patient’s National Insurance number?
+                        </h1>
+                    </legend>
+
+                    <!-- National Insurance number -->
+                    <div class="govuk-form-group">
+                        <div id="national-insurance-number-hint" class="govuk-hint">
+                            It is on their National Insurance card, benefit letter, payslip or P60. For example, 'QQ 12
+                            34 56 C'.
+                        </div>
+                        <label for="niNo" class="sr-only govuk-visually-hidden">What is the patient’s National Insurance
+                            number?</label>
+                        <input autocomplete="off" class="govuk-input govuk-input--width-10" id="niNo" name="niNo"
+                            type="text" spellcheck="false" autocomplete="off" value=" ">
+                    </div>
+
+                </fieldset>
+
+            </div>
+
+
+            <!-- Submit button -->
+            <div class="govuk-button-group">
+                <button id="" class="govuk-button" data-module="govuk-button" onclick="savenniNoSR1Formmvp02()">
+                    Save and continue
+                </button>
+                <a class="govuk-link" onclick="saveAndLeave()" style="color:#1d70b8;" aria-label="Return to SR1 form question list" href="#">Return to SR1 form question list</a>
+            </div>
+        </form>
+        <div class="govuk-!-padding-bottom-9"></div>
+
+        <!--Get help bottom-->
+        <hr class="govuk-section-break govuk-section-break--visible" aria-hidden="true">
+        <section class="govuk-width-container govuk-!-margin-top-7 govuk-!-margin-bottom-7 ">
+            <div class="govuk-grid-row">
+                <div class="govuk-grid-column-full">
+                    <h2 class="govuk-heading-m">Get help</h2>
+                    <p class="govuk-body"><a class="govuk-link"
+                            href="https://www.gov.uk/government/publications/special-rules-for-end-of-life-healthcare-professional-resources"
+                            target="_blank">How to complete the SR1 form (opens in a new tab)</a></p>
+                    <ul class="govuk-list">
+                        <li>Email: <a href="mailto:ssd.nationalservicedesk@nhs.net">ssd.nationalservicedesk@nhs.net</a></li>
+                        <li>Telephone: 0300 303 5035</li>
+                        <li class="govuk-!-margin-top-5">All services are available Monday to Friday, 9am to 5pm (except public holidays)</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+    <!-- Side panel
+        <div class="govuk-grid-column-one-third">
+            <div class="app-step-nav-related app-step-nav-related--singular">
+                <h2 class="app-step-nav-related__heading">Get help</h2>
+                <p class="govuk-body"><a  class="govuk-link" href="https://www.gov.uk/government/publications/special-rules-for-end-of-life-healthcare-professional-resources" target="_blank">How to complete the SR1 form (opens in a new tab)</a></p>
+                <ul class="govuk-list">
+                    <li>Email: <a href="mailto:sr1.servicedesk@nhs.net">sr1.servicedesk@nhs.net</a></li>
+                    <li>Telephone: 0300 303 5035</li>
+                </ul>
+            </div>
+        </div> -->
+</div>
+
+<script>
+    // get and set in this order - this ensures what is sent in query is the same as what is in the localStorage
+    const saveAndLeave = () => {
+        //savenniNoSR1Formmvp02();
+
+        const origin = window.location.origin;
+        const url = getUrlWithSR1DataAsQueryParamsmvp02(origin, "/hcp-e2e-journey-mvp02/task-list-sr1-form");
+
+        window.location.replace(url.toString());
+    }
+</script>
+{% endblock %}

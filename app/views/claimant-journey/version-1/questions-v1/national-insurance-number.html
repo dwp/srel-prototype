@@ -1,0 +1,37 @@
+{% extends "layout.html" %}
+{% block pageTitle %}
+    What is your National Insurance number?
+{% endblock %}
+{% block content %}
+    <div class="govuk-grid-row">
+
+        <div class="govuk-grid-column-two-thirds">
+            <h1 class="govuk-heading-xl">What is your National Insurance number?</h1>
+        <!-- </div>
+        
+        <div class="govuk-grid-column-one-half"> -->
+            <!-- National Insurance number  -->
+            <div class="govuk-form-group">
+                <!-- <label class="govuk-label govuk-label--s" for="national-insurance-number">
+                National Insurance number
+                </label> -->
+                <div id="national-insurance-number-hint" class="govuk-hint">
+                It's on your National Insurance card, benefit letter, payslip or P60. 
+                <br />
+                <br />
+                For example, 'QQ 12 34 56 C'.
+                </div>
+                <input class="govuk-input govuk-input--width-10" id="national-insurance-number" name="national-insurance-number" type="text" spellcheck="false" aria-describedby="national-insurance-number-hint" inputmode="numeric">
+            </div>
+
+            <!-- Continue -->
+            <div class="govuk-button-group">
+                <a href="address" class="govuk-button" data-module="govuk-button">
+                    Continue
+                </a>
+            </div>
+
+
+        </div>
+    </div>
+{% endblock %}

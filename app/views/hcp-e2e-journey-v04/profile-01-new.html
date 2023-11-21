@@ -1,0 +1,204 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Create your profile
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+        <form id="profileSetupPage" name="profileDetails" action="/hcp-e2e-journey-v04/profile-02-new" method="post">
+            <div class="govuk-form-group">
+                <fieldset class="govuk-fieldset">
+                    <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+                        <span class="govuk-caption-l">Section 1 of 6</span>
+                        <h1 class="govuk-fieldset__heading">
+                            What is your full name?
+                        </h1>
+                    </legend>
+
+                    <!-- Full name -->
+                    <div class="govuk-form-group">
+                        <!--
+                        <label class="govuk-label" for="fullName">Full name</label>
+                        -->
+                        <input class="govuk-input" id="fullName" name="fullName" type="text" autocomplete="off">
+                    </div>
+
+                    <!-- Surname 
+                        <div class="govuk-form-group">
+                            <label class="govuk-label" for="surname">Last name</label>
+                            <input  autocomplete="off" class="govuk-input govuk-input--width-20" id="surname" name="surname" type="text" spellcheck="false">
+                        </div> -->
+
+                </fieldset>
+            </div>
+
+            <!-- Submit button -->
+            <div class="govuk-button-group">
+                <button id="" class="govuk-button" data-module="govuk-button"
+                    onclick="saveHCPNamev04(); resetChangeFn();">
+                    Save and continue
+                </button>
+            </div>
+        </form>
+
+    </div>
+
+    <!-- SIDE NAVIGATION -->
+
+    <!--
+    <div class="govuk-grid-column-one-third">
+        <div class="govuk-!-padding-bottom-6"></div>
+        <div class="app-step-nav-related app-step-nav-related--singular">
+            <h2 class="app-step-nav-related__heading">
+                <span class="app-step-nav-related__pretitle">Part of 'Create your profile'</span>
+            </h2>
+        </div>
+        <li class="app-step-nav__step js-step app-step-nav__step--active" aria-current="step"
+            id="check-you-re-allowed-to-drive">
+            <div class="app-step-nav__header js-toggle-panel" data-position="1">
+                <h3 class="app-step-nav__title">
+                    <span class="app-step-nav__circle app-step-nav__circle--number">
+                        <span class="app-step-nav__circle-inner">
+                            <span class="app-step-nav__circle-background">
+                                <span class="govuk-visually-hidden govuk-!-display-none-print">Step</span> 1<span
+                                    class="govuk-visually-hidden govuk-!-display-none-print" aria-hidden="true">:</span>
+                            </span>
+                        </span>
+                    </span>
+
+                    <p class="js-step-title govuk-!-margin-bottom-0"><button
+                            class="app-step-nav__button app-step-nav__button--title js-step-title-button"
+                            aria-expanded="false"><span class="app-step-nav____title-text-focus">
+                                Name
+                    </p>
+                </h3>
+            </div>
+        </li>
+        <li class="app-step-nav__step js-step" id="get-a-provisional-licence">
+            <div class="app-step-nav__header js-toggle-panel" data-position="2">
+                <h3 class="app-step-nav__title">
+                    <span class="app-step-nav__circle app-step-nav__circle--number">
+                        <span class="app-step-nav__circle-inner">
+                            <span class="app-step-nav__circle-background">
+                                <span class="govuk-visually-hidden govuk-!-display-none-print">Step</span> 2<span
+                                    class="govuk-visually-hidden govuk-!-display-none-print" aria-hidden="true">:</span>
+                            </span>
+                        </span>
+                    </span>
+
+                    <a class="js-step-title" href="/hcp-e2e-journey-v04/profile-02-new"><button
+                            class="app-step-nav__button app-step-nav__button--title js-step-title-button"
+                            aria-expanded="false"><span class="app-step-nav____title-text-focus"><span
+                                    class="app-step-nav__title-text js-step-title-text">
+                                    Role
+                    </a>
+                </h3>
+            </div>
+        </li>
+        <li class="app-step-nav__step js-step" id="driving-lessons-and-practice">
+            <div class="app-step-nav__header js-toggle-panel" data-position="3">
+                <h3 class="app-step-nav__title">
+                    <span class="app-step-nav__circle app-step-nav__circle--number">
+                        <span class="app-step-nav__circle-inner">
+                            <span class="app-step-nav__circle-background">
+                                <span class="govuk-visually-hidden govuk-!-display-none-print">Step</span> 3<span
+                                    class="govuk-visually-hidden govuk-!-display-none-print" aria-hidden="true">:</span>
+                            </span>
+                        </span>
+                    </span>
+
+                    <a class="js-step-title" href="/hcp-e2e-journey-v04/profile-03-now"><button
+                            class="app-step-nav__button app-step-nav__button--title js-step-title-button"
+                            aria-expanded="false"><span class="app-step-nav____title-text-focus"><span
+                                    class="app-step-nav__title-text js-step-title-text">
+                                    Professional registration number
+                    </a>
+                </h3>
+            </div>
+        </li>
+        <li class="app-step-nav__step js-step" id="driving-lessons-and-practice">
+            <div class="app-step-nav__header js-toggle-panel" data-position="4">
+                <h3 class="app-step-nav__title">
+                    <span class="app-step-nav__circle app-step-nav__circle--number">
+                        <span class="app-step-nav__circle-inner">
+                            <span class="app-step-nav__circle-background">
+                                <span class="govuk-visually-hidden govuk-!-display-none-print">Step</span> 4<span
+                                    class="govuk-visually-hidden govuk-!-display-none-print" aria-hidden="true">:</span>
+                            </span>
+                        </span>
+                    </span>
+
+                    <a class="js-step-title" href="/hcp-e2e-journey-v04/profile-04-new"><button
+                            class="app-step-nav__button app-step-nav__button--title js-step-title-button"
+                            aria-expanded="false"><span class="app-step-nav____title-text-focus"><span
+                                    class="app-step-nav__title-text js-step-title-text">
+                                    Mobile number
+                    </a>
+                </h3>
+            </div>
+        </li>
+        <li class="app-step-nav__step js-step" id="driving-lessons-and-practice">
+            <div class="app-step-nav__header js-toggle-panel" data-position="5">
+                <h3 class="app-step-nav__title">
+                    <span class="app-step-nav__circle app-step-nav__circle--number">
+                        <span class="app-step-nav__circle-inner">
+                            <span class="app-step-nav__circle-background">
+                                <span class="govuk-visually-hidden govuk-!-display-none-print">Step</span> 5<span
+                                    class="govuk-visually-hidden govuk-!-display-none-print" aria-hidden="true">:</span>
+                            </span>
+                        </span>
+                    </span>
+                    <a class="js-step-title" href="/hcp-e2e-journey-v04/profile-05-new"><button
+                            class="app-step-nav__button app-step-nav__button--title js-step-title-button"
+                            aria-expanded="false"><span class="app-step-nav____title-text-focus"><span
+                                    class="app-step-nav__title-text js-step-title-text">
+                                    Your organisation
+                    </a>
+                </h3>
+            </div>
+        </li>
+        <li class="app-step-nav__step js-step" id="driving-lessons-and-practice">
+            <div class="app-step-nav__header js-toggle-panel" data-position="6">
+                <h3 class="app-step-nav__title">
+                    <span class="app-step-nav__circle app-step-nav__circle--number">
+                        <span class="app-step-nav__circle-inner">
+                            <span class="app-step-nav__circle-background">
+                                <span class="govuk-visually-hidden govuk-!-display-none-print">Step</span> 6<span
+                                    class="govuk-visually-hidden govuk-!-display-none-print" aria-hidden="true">:</span>
+                            </span>
+                        </span>
+                    </span>
+                    <a class="js-step-title" href="/hcp-e2e-journey-v04/profile-06-new"><button
+                            class="app-step-nav__button app-step-nav__button--title js-step-title-button"
+                            aria-expanded="false"><span class="app-step-nav____title-text-focus"><span
+                                    class="app-step-nav__title-text js-step-title-text">
+                                    Organisation address
+                    </a>
+                </h3>
+            </div>
+        </li>
+    </div>
+
+    -->
+</div>
+
+
+<!-- Side panel 
+    <div class="govuk-grid-column-one-third">
+        <div class="app-step-nav-related app-step-nav-related--singular">
+            <h2 class="app-step-nav-related__heading">Get help</h2>
+            <p class="govuk-body"><a class="govuk-link"
+                    href="https://ds1500-prototype.herokuapp.com/sr1-1/sr1-guidance#patients-may-not-know-true-nature-of-illness"
+                    target="_blank">How to complete the SR1 form (opens in a new tab)</a></p>
+            <ul class="govuk-list">
+                <li>Email: <a href="mailto:sr1.servicedesk@nhs.net">sr1.servicedesk@nhs.net</a></li>
+                <li>Telephone: 0300 303 5035</li>
+            </ul>
+        </div>
+    </div>
+    -->
+</div>
+{% endblock %}

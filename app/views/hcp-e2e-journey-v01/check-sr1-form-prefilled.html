@@ -1,0 +1,364 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Check your answers before sending the SR1 form
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+        <form id="profileSetupPage" action="/hcp-e2e-journey-v01/confirmation-page" method="post" autocomplete="off">
+            <div class="govuk-form-group">
+                <fieldset class="govuk-fieldset">
+                    <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+                        <h1 class="govuk-fieldset__heading">
+                            Check your answers before sending the SR1 form
+                        </h1>
+                    </legend>
+
+                    <!-- Inset text -->
+                    <div class="govuk-inset-text">
+                        <p>Accurate information about your patient's condition and treatment will reduce delays to their
+                            Special Rules claim.</p>
+                    </div>
+
+                    <!-- ################# -->
+                    <!-- PATIENT'S DETAILS -->
+                    <!-- ################# -->
+                    <h2 class="govuk-heading-l">Patient details</h2>
+
+                    <dl class="govuk-summary-list" id="patientDetailsContainer">
+                        <div class="govuk-summary-list__row">
+                            <dt class="govuk-summary-list__key">
+                                Full name
+                            </dt>
+                            <dd class="govuk-summary-list__value">
+                                <div class="text-right" id="PatientFullName"></div>
+                            </dd>
+                            <dd class="govuk-summary-list__actions">
+                                <a class="govuk-link" href="/hcp-e2e-journey-v01/send-an-sr1-form#PatientFullName">
+                                    Change<span class="govuk-visually-hidden"> the patient's full name</span>
+                                </a>
+                            </dd>
+                        </div>
+                        <div class="govuk-summary-list__row">
+                            <dt class="govuk-summary-list__key">
+                                Date of birth
+                            </dt>
+                            <dd class="govuk-summary-list__value">
+                                <div class="text-right" id="dob">12/01/1970</div>
+                            </dd>
+                            <dd class="govuk-summary-list__actions">
+                                <a class="govuk-link" href="/hcp-e2e-journey-v01/send-an-sr1-form#dob">
+                                    Change<span class="govuk-visually-hidden"> the patient's date of birth</span>
+                                </a>
+                            </dd>
+                        </div>
+                        <div class="govuk-summary-list__row">
+                            <dt class="govuk-summary-list__key">
+                                Address
+                            </dt>
+                            <dd class="govuk-summary-list__value">
+                                <div class="text-right" id="address">86 Claremont Cove</br />London</br />SE1 ABC</div>
+                            </dd>
+                            <dd class="govuk-summary-list__actions">
+                                <a class="govuk-link" href="/hcp-e2e-journey-v01/send-an-sr1-form#patientaddressline1">
+                                    Change<span class="govuk-visually-hidden"> the patient's address</span>
+                                </a>
+                            </dd>
+                        </div>
+                        <div class="govuk-summary-list__row">
+                            <dt class="govuk-summary-list__key">
+                                National Insurance number
+                            </dt>
+                            <dd class="govuk-summary-list__value">
+                                <div class="text-right" id="niNo">QQ 12 34 56 C</div>
+                            </dd>
+                            <dd class="govuk-summary-list__actions">
+                                <a class="govuk-link" href="/hcp-e2e-journey-v01/send-an-sr1-form#niNo">
+                                    Change<span class="govuk-visually-hidden"> the patient's National Insurance
+                                        number</span>
+                                </a>
+                            </dd>
+                        </div>
+                        <div class="govuk-summary-list__row">
+                            <dt class="govuk-summary-list__key">
+                                Date the patient met the Special Rules
+                            </dt>
+                            <dd class="govuk-summary-list__value">
+                                <div class="text-right" id="dateofSpecialRules">23/09/2022</div>
+                            </dd>
+                            <dd class="govuk-summary-list__actions">
+                                <a class="govuk-link" href="/hcp-e2e-journey-v01/send-an-sr1-form#dateofSpecialRules">
+                                    Change<span class="govuk-visually-hidden"> the date the patient met the Special Rules</span>
+                                </a>
+                            </dd>
+                        </div>
+                    </dl>
+
+
+                    <!-- ############## -->
+                    <!-- DIAGNOSIS -->
+                    <!-- ############## -->
+                    <h2 class="govuk-heading-l">Diagnosis</h2>
+
+                    <dl class="govuk-summary-list" id="diagnosisDataContainer">
+                        <div class="govuk-summary-list__row">
+                            <dt class="govuk-summary-list__key">
+                                Diagnosis
+                            </dt>
+                            <dd class="govuk-summary-list__value">
+                                <div class="text-right" id="whatIsTheDiagnosis">End stage COPD</div>
+                            </dd>
+                            <dd class="govuk-summary-list__actions">
+                                <a class="govuk-link" href="/hcp-e2e-journey-v01/send-an-sr1-form#whatIsTheDiagnosis">
+                                    Change<span class="govuk-visually-hidden"> the patient's diagnosis</span>
+                                </a>
+                            </dd>
+                        </div>
+                        <div class="govuk-summary-list__row">
+                            <dt class="govuk-summary-list__key">
+                                Date of diagnosis
+                            </dt>
+                            <dd class="govuk-summary-list__value">
+                                <div class="text-right" id="dateofDiagnosis">01/2022</div>
+                            </dd>
+                            <dd class="govuk-summary-list__actions">
+                                <a class="govuk-link" href="/hcp-e2e-journey-v01/send-an-sr1-form#dod-month">
+                                    Change<span class="govuk-visually-hidden"> the date of the patient's
+                                        diagnosis</span>
+                                </a>
+                            </dd>
+                        </div>
+                        <div class="govuk-summary-list__row">
+                            <dt class="govuk-summary-list__key">
+                                Other relevant diagnosis
+                            </dt>
+                            <dd class="govuk-summary-list__value">
+                                <div class="text-right" id="otherRelevantDiagnosis">Frailty</div>
+                            </dd>
+                            <dd class="govuk-summary-list__actions">
+                                <a class="govuk-link" href="/hcp-e2e-journey-v01/send-an-sr1-form#dod-month">
+                                    Change<span class="govuk-visually-hidden"> the date of the patient's
+                                        diagnosis</span>
+                                </a>
+                            </dd>
+                        </div>
+                        <div class="govuk-summary-list__row">
+                            <dt class="govuk-summary-list__key">
+                                Is the patient aware of their diagnosis?
+                            </dt>
+                            <dd class="govuk-summary-list__value">
+                                <div class="text-right" id="awareOfDiagnosis">Yes</div>
+                            </dd>
+                            <dd class="govuk-summary-list__actions">
+                                <a class="govuk-link" href="/hcp-e2e-journey-v01/send-an-sr1-form#awareOfDiagnosisYes">
+                                    Change<span class="govuk-visually-hidden"> if the patient is aware of their
+                                        diagnosis</span>
+                                </a>
+                            </dd>
+                        </div>
+                        <div class="govuk-summary-list__row">
+                            <dt class="govuk-summary-list__key">
+                                Is the patient aware of their prognosis?
+                            </dt>
+                            <dd class="govuk-summary-list__value">
+                                <div class="text-right" id="awareOfPrognosis">Yes</div>
+                            </dd>
+                            <dd class="govuk-summary-list__actions">
+                                <a class="govuk-link" href="/hcp-e2e-journey-v01/send-an-sr1-form#awareOfPrognosisYes">
+                                    Change<span class="govuk-visually-hidden"> if the patient is aware of their
+                                        prognosis</span>
+                                </a>
+                            </dd>
+                        </div>
+                    </dl>
+
+
+                    <!-- ################# -->
+                    <!-- CLINICAL FEATURES -->
+                    <!-- ################# -->
+                    <h2 class="govuk-heading-l">Clinical features</h2>
+
+                    <dl class="govuk-summary-list" id="clicnicalFeaturesContainer">
+                        <div class="govuk-summary-list__row">
+                            <dt class="govuk-summary-list__key">
+                                Details of the clinical features
+                            </dt>
+                            <dd class="govuk-summary-list__value">
+                                <div class="text-right" id="clinicalFeatures">Worsening symptons, rapid decline, despit
+                                    optimal maangement, severe frailty.</div>
+                            </dd>
+                            <dd class="govuk-summary-list__actions">
+                                <a class="govuk-link"
+                                    href="/hcp-e2e-journey-v01/send-an-sr1-form#detailsOfClinicalFeatures">
+                                    Change<span class="govuk-visually-hidden"> details of clinical features</span>
+                                </a>
+                            </dd>
+                        </div>
+                    </dl>
+
+
+                    <!-- ################# -->
+                    <!-- TREATMENT -->
+                    <!-- ################# -->
+                    <h2 class="govuk-heading-l">Treatment</h2>
+
+                    <dl class="govuk-summary-list" id="treatmentContainer">
+                        <div class="govuk-summary-list__row">
+                            <dt class="govuk-summary-list__key">
+                                Purpose of treatment and response
+                            </dt>
+                            <dd class="govuk-summary-list__value">
+                                <div class="text-right" id="treatment">Treatment declined, no further treatment
+                                    available under palliative care.</div>
+                            </dd>
+                            <dd class="govuk-summary-list__actions">
+                                <a class="govuk-link" href="/hcp-e2e-journey-v01/send-an-sr1-form#treatment">
+                                    Change<span class="govuk-visually-hidden"> details of the purpose of any treatment
+                                        and the response</span>
+                                </a>
+                            </dd>
+                        </div>
+                    </dl>
+
+                    <!-- ############## -->
+                    <!-- YOUR DETAILS -->
+                    <!-- ############## -->
+                    <h2 class="govuk-heading-l">Your profile details</h2>
+
+                    <dl class="govuk-summary-list govuk-!-margin-bottom-9" id="yourDetailsData">
+                        <div class="govuk-summary-list__row">
+                            <dt class="govuk-summary-list__key">
+                                Your name
+                            </dt>
+                            <dd class="govuk-summary-list__value">
+                                <div class="text-right" id="yourName"></div>
+                            </dd>
+                            <dd class="govuk-summary-list__actions">
+                                <a class="govuk-link" href="hcp-e2e-journey-v02/profile-setup">
+                                    Change<span class="govuk-visually-hidden"> practitioner name</span>
+                                </a>
+                            </dd>
+                        </div>
+                        <div class="govuk-summary-list__row">
+                            <dt class="govuk-summary-list__key">
+                                Your role
+                            </dt>
+                            <dd class="govuk-summary-list__value">
+                                <div class="text-right" id="role"></div>
+                            </dd>
+                            <dd class="govuk-summary-list__actions">
+                                <a class="govuk-link" href="hcp-e2e-journey-v02/profile-setup">
+                                    Change<span class="govuk-visually-hidden"> practitioner's role</span>
+                                </a>
+                            </dd>
+                        </div>
+                        <div class="govuk-summary-list__row">
+                            <dt class="govuk-summary-list__key">
+                                Your professional registration number
+                            </dt>
+                            <dd class="govuk-summary-list__value">
+                                <div class="text-right" id="professionalRegNum"></div>
+                            </dd>
+                            <dd class="govuk-summary-list__actions">
+                                <a class="govuk-link" href="/hcp-e2e-journey-v02/profile-setup">
+                                    Change<span class="govuk-visually-hidden"> professional registration number</span>
+                                </a>
+                            </dd>
+                        </div>
+                        <div class="govuk-summary-list__row">
+                            <dt class="govuk-summary-list__key">
+                                Your mobile number
+                            </dt>
+                            <dd class="govuk-summary-list__value">
+                                <div class="text-right" id="mobile"></div>
+                            </dd>
+                            <dd class="govuk-summary-list__actions">
+                                <a class="govuk-link" href="hcp-e2e-journey-v02/profile-details">
+                                    Change<span class="govuk-visually-hidden"> practitioner's phone number</span>
+                                </a>
+                            </dd>
+                        </div>
+                        <div class="govuk-summary-list__row">
+                            <dt class="govuk-summary-list__key">
+                                Your organisation
+                            </dt>
+                            <dd class="govuk-summary-list__value">
+                                <div class="text-right" id="organisationName"></div>
+                            </dd>
+                            <dd class="govuk-summary-list__actions">
+                                <a class="govuk-link" href="hcp-e2e-journey-v02/profile-setup">
+                                    Change<span class="govuk-visually-hidden"> organisation name</span>
+                                </a>
+                            </dd>
+                        </div>
+                        <div class="govuk-summary-list__row">
+                            <dt class="govuk-summary-list__key">
+                                Your organisation’s address
+                            </dt>
+                            <dd class="govuk-summary-list__value">
+                                <div class="text-right" id="organisationAddressLine1"></div>
+                                <div class="text-right" id="organisationAddressLine2"></div>
+                                <div class="text-right" id="organisationTownCity"></div>
+                                <div class="text-right" id="organisationPostcode"></div>
+                            </dd>
+                            <dd class="govuk-summary-list__actions">
+                                <a class="govuk-link" href="hcp-e2e-journey-v02/profile-setup">
+                                    Change<span class="govuk-visually-hidden"> organisation address</span>
+                                </a>
+                            </dd>
+                        </div>
+
+                    </dl>
+
+                    <!-- ############## -->
+                    <!-- DECLARATION -->
+                    <!-- ############## -->
+                    <h2 class="govuk-heading-l">Declaration</h2>
+
+                    <p class="govuk-body">You confirm that:</p>
+
+                    <ul class="govuk-list govuk-list--bullet">
+                        <li>the person named in this report is your patient</li>
+                        <li>this is a full report of their condition and treament</li>
+                    </ul>
+
+                </fieldset>
+            </div>
+
+            <!-- Submit button -->
+            <!--
+            <div class="govuk-button-group">
+                <a href="/hcp-e2e-journey-v01/send-an-sr1-form-prefilled" id=""
+                    class="govuk-button govuk-button--secondary">
+                    Change your answers
+                </a>
+            </div>
+        -->
+            <div class="govuk-button-group">
+                <!-- <button id="" class="govuk-button" data-module="govuk-button" onclick="hcpv01ProfileDetailsCompleteFn(event)"> -->
+                <button id="" class="govuk-button" data-module="govuk-button">
+                    I agree &mdash; send the form
+                </button>
+            </div>
+        </form>
+    </div>
+
+    <!-- Side panel -->
+    <div class="govuk-grid-column-one-third">
+        <div class="app-step-nav-related app-step-nav-related--singular">
+            <h2 class="app-step-nav-related__heading">Get help</h2>
+            <p class="govuk-body"><a class="govuk-link"
+                    href="https://ds1500-prototype.herokuapp.com/sr1-1/sr1-guidance#patients-may-not-know-true-nature-of-illness"
+                    target="_blank">How to complete the SR1 form (opens in a new tab)</a></p>
+            <ul class="govuk-list">
+                <li>Email: <a href="mailto:sr1.servicedesk@nhs.net">sr1.servicedesk@nhs.net</a></li>
+                <li>Telephone: 0300 303 5035</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

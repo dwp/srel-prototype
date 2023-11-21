@@ -1,0 +1,127 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Send an SR1 form
+{% endblock %}
+
+{% block content %}
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+        <form id="sendAnSR1Form" action="/hcp-e2e-journey-v09/sr1-form-patient-address" method="post" novalidate>
+            <div class="govuk-form-group">
+                <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+                    <!--<span class="govuk-caption-l">Send an SR1 form</span>-->
+                    <span class="govuk-caption-l">Section 1 of 4</span>
+                    <h1 class="govuk-fieldset__heading">
+                        Patient details
+                    </h1>
+                </legend>
+
+                <!--
+                <p class="govuk-body">You can save your progress after each section. Your profile details have
+                    automatically been used to complete parts of this form.</p>
+                <p class="govuk-body">Incomplete SR1 forms will be deleted after 30 days.</p>
+                -->
+            </div>
+
+            <!-- PATIENT DETAILS -->
+            <!-- First name -->
+            <div class="govuk-form-group govuk-!-margin-bottom-6">
+                <label class="govuk-label govuk-label--m" for="PatientFullName">Full name</label>
+                <input autocomplete="off" class="govuk-input" id="PatientFullName" name="PatientFullName" type="text" spellcheck="false">
+            </div>
+
+            <div class="govuk-form-group govuk-!-margin-bottom-6">
+                <fieldset class="govuk-fieldset">
+                    <legend class="govuk-fieldset__legend govuk-label--m">
+                        <h1 class="govuk-fieldset__heading">
+                            Date of birth
+                        </h1>
+                    </legend>
+
+                    <!-- Date of birth -->
+                    <div id="dob-hint" class="govuk-hint">
+                        For example, 27 3 2007
+                    </div>
+                    <div class="govuk-date-input" id="dob">
+                        <div class="govuk-date-input__item">
+                            <div class="govuk-form-group">
+                                <label class="govuk-label govuk-date-input__label" for="dob-day">
+                                    Day
+                                </label>
+                                <input autocomplete="off" class="govuk-input govuk-date-input__input govuk-input--width-2" id="dob-day" name="dob-day" type="text" inputmode="numeric" onkeypress="return isNumberKey(event)" maxlength="2">
+                            </div>
+                        </div>
+                        <div class="govuk-date-input__item">
+                            <div class="govuk-form-group">
+                                <label class="govuk-label govuk-date-input__label" for="dob-month">
+                                    Month
+                                </label>
+                                <input autocomplete="off" class="govuk-input govuk-date-input__input govuk-input--width-2" id="dob-month" name="dob-month" type="text" inputmode="numeric" onkeypress="return isNumberKey(event)" maxlength="2">
+                            </div>
+                        </div>
+                        <div class="govuk-date-input__item">
+                            <div class="govuk-form-group">
+                                <label class="govuk-label govuk-date-input__label" for="dob-year">
+                                    Year
+                                </label>
+                                <input autocomplete="off" class="govuk-input govuk-date-input__input govuk-input--width-5" id="dob-year" name="dob-year" type="text" inputmode="numeric" onkeypress="return isNumberKey(event)" maxlength="4">
+                            </div>
+                        </div>
+                    </div>
+
+                </fieldset>
+            </div>
+
+            <div class="govuk-form-group govuk-!-margin-bottom-6">
+                <fieldset class="govuk-fieldset">
+                    <legend class="govuk-fieldset__legend govuk-label--m">
+                        <h1 class="govuk-fieldset__heading">
+                            National Insurance number
+                        </h1>
+                    </legend>
+
+                    <!-- National Insurance number -->
+                    <div class="govuk-form-group">
+                        <div id="national-insurance-number-hint" class="govuk-hint">
+                            It is on their National Insurance card, benefit letter, payslip or P60. For example, 'QQ 12
+                            34 56 C'.
+                        </div>
+                        <input autocomplete="off" class="govuk-input govuk-input--width-10" id="niNo" name="niNo"
+                            type="text" spellcheck="false" autocomplete="off">
+                    </div>
+
+                </fieldset>
+            </div>
+
+
+            <!-- Submit button -->
+            <div class="govuk-button-group">
+                <button id="" class="govuk-button" data-module="govuk-button" onclick="savePatientIDSR1Formv09()">
+                    Save and continue
+                </button>
+                <a class="govuk-link" href="/hcp-e2e-journey-v09/task-list-sr1-form-saved">Save and come back
+                    later</a>
+            </div>
+
+        </form>
+    </div>
+
+    <!-- Side panel -->
+    <div class="govuk-grid-column-one-third">
+        <div class="app-step-nav-related app-step-nav-related--singular">
+            <h2 class="app-step-nav-related__heading">Get help</h2>
+            <p class="govuk-body"><a class="govuk-link"
+                    href="https://ds1500-prototype.herokuapp.com/sr1-1/sr1-guidance#patients-may-not-know-true-nature-of-illness"
+                    target="_blank">How to complete the SR1 form (opens in a new tab)</a></p>
+            <ul class="govuk-list">
+                <li>Email: <a href="mailto:sr1.servicedesk@nhs.net">sr1.servicedesk@nhs.net</a></li>
+                <li>Telephone: 0300 303 5035</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+
+
+{% endblock %}

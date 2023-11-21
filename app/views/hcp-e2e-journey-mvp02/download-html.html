@@ -1,0 +1,269 @@
+{% extends "layout-gov-name-live.html" %}
+
+{% block pageTitle %}
+Download SR1 form – Send an SR1 – GOV.UK
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+        <!--<div class="govuk-!-display-none-print">
+            <p class="gem-c-lead-paragraph govuk-!-margin-bottom-6">Printable version</p>
+        </div>
+        <button class="govuk-link govuk-body-s gem-c-print-link__button govuk-!-margin-bottom-6" onclick="window.print();">Print this form</button>-->
+        <form id="profileSetupPage" action="/hcp-e2e-journey-mvp02/confirmation-page" method="post">
+            <div class="govuk-form-group">
+                <fieldset class="govuk-fieldset">
+                    <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+                        <h1 class="govuk-fieldset__heading">
+                            SR1 form
+                        </h1>
+                        <div class="govuk-inset-text">
+                            <p>This is not a claim form.
+                            </p>
+                        </div>
+                        <span class="govuk-caption-m">Reference number: HDJ2123F<span
+                                id="referenceNumber"></span></span>
+                        <p class="govuk-body">You've submitted this form on
+                            <script>
+                                date = new Date().toLocaleDateString();
+                                document.write(date);
+                            </script>.
+                        </p>
+                        <!--<h1 class="govuk-fieldset__heading">
+                            <span id="PatientFullName"></span>: SR1 form
+                        </h1>-->
+                    </legend>
+                    <div class="govuk-!-margin-bottom-6"></div>
+
+                    <!-- Inset text 
+                    <div class="govuk-inset-text">
+                        <p>You submitted this form on 27/02/2023<span id="dateSubmission"></span>. You cannot edit your answers.
+                        </p>
+                    </div> -->
+
+                    <!-- ################# -->
+                    <!-- PATIENT'S DETAILS -->
+                    <!-- ################# -->
+                    <div class="govuk-!-margin-bottom-6">
+                        <h2 class="govuk-heading-l">Patient details</h2>
+                        <dl class="govuk-summary-list" id="patientDetailsContainer">
+                            <div class="govuk-summary-list__row ">
+                                <dt class="govuk-summary-list__key govuk-!-width-one-half">
+                                    Name
+                                </dt>
+                                <dd class="govuk-summary-list__value">
+                                    <div id="PatientFullName"></div>
+                                </dd>
+                            </div>
+                            <div class="govuk-summary-list__row">
+                                <dt class="govuk-summary-list__key govuk-!-width-one-half">
+                                    Date of birth
+                                </dt>
+                                <dd class="govuk-summary-list__value">
+                                    <div id="dob"></div>
+                                </dd>
+                            </div>
+                            <div class="govuk-summary-list__row">
+                                <dt class="govuk-summary-list__key govuk-!-width-one-half">
+                                    Address
+                                </dt>
+                                <dd class="govuk-summary-list__value">
+                                    <div id="patientaddressline1"></div>
+                                    <div id="patientaddressline2"></div>
+                                    <div id="patientaddresstown"></div>
+                                    <div id="patientaddresscounty"></div>
+                                    <div id="patientPostcode"></div>
+                                </dd>
+                            </div>
+                            <div class="govuk-summary-list__row">
+                                <dt class="govuk-summary-list__key govuk-!-width-one-half">
+                                    National Insurance number
+                                </dt>
+                                <dd class="govuk-summary-list__value">
+                                    <div id="niNo"></div>
+                                </dd>
+                            </div>
+                        </dl>
+                    </div>
+
+
+                    <!-- ############## -->
+                    <!-- DIAGNOSIS -->
+                    <!-- ############## -->
+                    <div class="govuk-!-margin-bottom-6">
+                        <h2 class="govuk-heading-l">Diagnosis</h2>
+
+                        <dl class="govuk-summary-list" id="diagnosisDataContainer">
+                            <div class="govuk-summary-list__row">
+                                <dt class="govuk-summary-list__key govuk-!-width-one-half">
+                                    Diagnosis
+                                </dt>
+                                <dd class="govuk-summary-list__value">
+                                    <div id="whatIsTheDiagnosis"></div>
+                                </dd>
+                            </div>
+                            <div class="govuk-summary-list__row">
+                                <dt class="govuk-summary-list__key govuk-!-width-one-half">
+                                    Date of diagnosis
+                                </dt>
+                                <dd class="govuk-summary-list__value">
+                                    <div id="dateofDiagnosis"></div>
+                                </dd>
+                            </div>
+                            <div class="govuk-summary-list__row">
+                                <dt class="govuk-summary-list__key govuk-!-width-one-half">
+                                    Date the patient met the Special Rules
+                                </dt>
+                                <dd class="govuk-summary-list__value">
+                                    <div id="dateofSpecialRules"></div>
+                                </dd>
+                            </div>
+                            <div class="govuk-summary-list__row">
+                                <dt class="govuk-summary-list__key govuk-!-width-one-half">
+                                    Other relevant diagnosis
+                                </dt>
+                                <dd class="govuk-summary-list__value">
+                                    <div id="otherRelevantDiagnosis"></div>
+                                </dd>
+                            </div>
+                            <div class="govuk-summary-list__row">
+                                <dt class="govuk-summary-list__key govuk-!-width-one-half">
+                                    Patient aware of diagnosis
+                                </dt>
+                                <dd class="govuk-summary-list__value">
+                                    <div id="awareOfDiagnosis"></div>
+                                </dd>
+                            </div>
+                            <div class="govuk-summary-list__row">
+                                <dt class="govuk-summary-list__key govuk-!-width-one-half">
+                                    Patient aware of prognosis
+                                </dt>
+                                <dd class="govuk-summary-list__value">
+                                    <div id="awareOfPrognosis"></div>
+                                </dd>
+                            </div>
+                        </dl>
+                    </div>
+
+
+                    <!-- ################# -->
+                    <!-- CLINICAL FEATURES -->
+                    <!-- ################# -->
+                    <div class="govuk-!-margin-bottom-6">
+                        <h2 class="govuk-heading-l">Clinical features</h2>
+
+                        <dl class="govuk-summary-list" id="clicnicalFeaturesContainer">
+                            <div class="govuk-summary-list__row">
+                                <dt class="govuk-summary-list__key govuk-!-width-one-half">
+                                    Details of the clinical features
+                                </dt>
+                                <dd class="govuk-summary-list__value">
+                                    <div id="clinicalFeatures"></div>
+                                </dd>
+                            </div>
+                        </dl>
+                    </div>
+
+
+                    <!-- ################# -->
+                    <!-- TREATMENT -->
+                    <!-- ################# -->
+                    <div class="govuk-!-margin-bottom-6">
+                        <h2 class="govuk-heading-l">Treatment</h2>
+                        <dl class="govuk-summary-list" id="treatmentContainer">
+                            <div class="govuk-summary-list__row">
+                                <dt class="govuk-summary-list__key govuk-!-width-one-half">
+                                    Purpose of treatment and response
+                                </dt>
+                                <dd class="govuk-summary-list__value">
+                                    <div id="treatment"></div>
+                                </dd>
+                            </div>
+                        </dl>
+                    </div>
+
+                    <!-- ############## -->
+                    <!-- YOUR DETAILS -->
+                    <!-- ############## -->
+                    <div class="govuk-!-margin-bottom-6">
+                        <h2 class="govuk-heading-l">Your profile details</h2>
+                        <dl class="govuk-summary-list govuk-body" id="yourDetailsData">
+                            <div class="govuk-summary-list__row">
+                                <dt class="govuk-summary-list__key govuk-!-width-one-half">
+                                    Name
+                                </dt>
+                                <dd class="govuk-summary-list__value">
+                                    <div id="yourName"></div>
+                                </dd>
+                            </div>
+                            <div class="govuk-summary-list__row">
+                                <dt class="govuk-summary-list__key govuk-!-width-one-half">
+                                    Role
+                                </dt>
+                                <dd class="govuk-summary-list__value">
+                                    <div id="role"></div>
+                                </dd>
+                            </div>
+                            <div class="govuk-summary-list__row">
+                                <dt class="govuk-summary-list__key govuk-!-width-one-half">
+                                    Professional registration number
+                                </dt>
+                                <dd class="govuk-summary-list__value">
+                                    <div id="professionalRegNum"></div>
+                                </dd>
+                            </div>
+                            <div class="govuk-summary-list__row">
+                                <dt class="govuk-summary-list__key govuk-!-width-one-half">
+                                    Phone number
+                                </dt>
+                                <dd class="govuk-summary-list__value">
+                                    <div id="mobile"></div>
+                                </dd>
+                            </div>
+                            <div class="govuk-summary-list__row">
+                                <dt class="govuk-summary-list__key govuk-!-width-one-half">
+                                    Organisation’s address
+                                </dt>
+                                <dd class="govuk-summary-list__value">
+                                    <div id="organisationName"></div>
+                                    <div id="organisationAddressLine1"></div>
+                                    <div id="organisationAddressLine2"></div>
+                                    <div id="organisationTownCity"></div>
+                                    <div id="organisationAddressCounty"></div>
+                                    <div id="organisationPostcode"></div>
+                                </dd>
+                            </div>
+                        </dl>
+
+                        <!-- ############## -->
+                        <!-- DECLARATION -->
+                        <!-- ############## -->
+                        <h2 class="govuk-heading-l">Declaration</h2>
+
+                        <p class="govuk-body">By sending this SR1 form, you confirm that:</p>
+
+                        <ul class="govuk-list govuk-list--bullet">
+                            <li>the person named in this report is your patient</li>
+                            <li>this is a full report of their condition and treatment</li>
+                            <li>you have read the guidance, and you are satisfied that the SR1 form is appropriate</li>
+                        </ul>
+                    </div>
+
+                </fieldset>
+            </div>
+        </form>
+        <!--<button class="govuk-link govuk-body-s gem-c-print-link__button govuk-!-margin-bottom-6" onclick="window.print();">Print this form</button>-->
+    </div>
+</div>
+
+{% endblock %}
+
+<script>
+    date = new Date();
+    year = date.getFullYear();
+    month = date.getMonth() + 1;
+    day = date.getDate();
+    document.getElementById("current_date").innerHTML = month + "/" + day + "/" + year;
+</script>

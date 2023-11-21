@@ -1,0 +1,150 @@
+{% extends "layout-gov-reduced.html" %}
+
+{% block pageTitle %}
+Does the patient have other relevant diagnoses?
+{% endblock %}
+
+{% block content %}
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+        <form id="sendAnSR1Form" action="/hcp-e2e-journey-mvp01/sr1-form-09-radio/answer" method="post">
+
+            <!-- ERROR STATE -->
+            <div class="govuk-error-summary" data-module="govuk-error-summary">
+                <div role="alert">
+                    <h2 class="govuk-error-summary__title">
+                        There is a problem
+                    </h2>
+                    <div class="govuk-error-summary__body">
+                        <ul class="govuk-list govuk-error-summary__list">
+                            <li>
+                                <a href="#haveOtherDiagnoses-yes">Select if the patient has other relevant diagnoses</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="govuk-form-group govuk-form-group--error">
+                <fieldset class="govuk-fieldset">
+                    <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+                        <span class="govuk-caption-l"> Question 8 of 17</span>
+                        <h1 class="govuk-fieldset__heading">
+                            Does the patient have other relevant diagnoses?
+                        </h1>
+                    </legend>
+
+                    <!--ERROR LEGEND -->
+                    <p id="haveOtherDiagnoses-error" class="govuk-error-message">
+                        <span class="govuk-visually-hidden">Error:</span> Select if the patient has other relevant diagnoses
+                    </p>
+                    <!-- END ERROR -->
+
+                    <!-- Receive reminder options -->
+                    <div class="govuk-radios" data-module="govuk-radios">
+                        <div class="govuk-radios__item">
+                            <input class="govuk-radios__input" id="yes" name="haveOtherDiagnoses" type="radio" value="Yes">
+                            <label class="govuk-label govuk-radios__label" for="yes">
+                                Yes
+                            </label>
+                        </div>
+                        <div class="govuk-radios__item">
+                            <input class="govuk-radios__input" id="no" name="haveOtherDiagnoses" type="radio" value="No"
+                                onclick="hcpmvp01ReceiveReminderFn(this)">
+                            <label class="govuk-label govuk-radios__label" for="no">
+                                No
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- Other relevant diagnosis? (optional) 
+                    <div class="govuk-character-count" data-module="govuk-character-count" data-maxlength="250">
+                        <div class="govuk-form-group">
+                            <label class="govuk-label" for="otherRelevantDiagnosis">Include other relevant diagnosis
+                                (optional)
+                            </label>
+                            <textarea class="govuk-textarea govuk-input--width-20 govuk-js-character-count"
+                                id="otherRelevantDiagnosis" name="otherRelevantDiagnosis" rows="5"
+                                aria-describedby="otherRelevantDiagnosis-info" autocomplete="off"></textarea>
+                        </div>
+                        <div id="otherRelevantDiagnosis-info" class="govuk-hint govuk-character-count__message">You can
+                            enter up to 200 characters</div>
+                    </div>-->
+
+                </fieldset>
+                <!--
+                <div class="govuk-form-group">
+                    <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+                        <div class="govuk-checkboxes__item">
+                            <input class="govuk-checkboxes__input" id="completed-otherrelevantdiagnosis" name="completed-otherrelevantdiagnosis"
+                                type="checkbox" value="Completed Other Relevant Diagnosis">
+                            <label class="govuk-label govuk-checkboxes__label" for="completed-otherrelevantdiagnosis">
+                                I've completed this section
+                            </label>
+                        </div>
+                    </div>
+                </div>-->
+
+            </div>
+
+            <!-- Submit button -->
+            <div class="govuk-button-group">
+                <button id="" class="govuk-button" data-module="govuk-button"
+                    onclick="saveOtherDiagnosisSR1Formmvp01()">Save and continue</button>
+                <a class="govuk-link" onclick="saveAndLeave()" style="color:#1d70b8;"
+                    aria-label="Save and return to SR1 form">Save and return to SR1 form</a>
+            </div>
+        </form>
+        <div class="govuk-!-padding-bottom-9"></div>
+
+        <!--Get help bottom-->
+        <hr class="govuk-section-break govuk-section-break--visible" aria-hidden="true">
+        <section class="govuk-width-container govuk-!-margin-top-7 govuk-!-margin-bottom-7 ">
+            <div class="govuk-grid-row">
+                <div class="govuk-grid-column-full">
+                    <h2 class="govuk-heading-m">Get help</h2>
+                    <p class="govuk-body"><a class="govuk-link"
+                            href="https://ds1500-prototype.herokuapp.com/sr1-1/sr1-guidance#patients-may-not-know-true-nature-of-illness"
+                            target="_blank">How to complete the SR1 form (opens in a new tab)</a></p>
+                    <ul class="govuk-list">
+                        <li>Email: <a href="mailto:sr1.servicedesk@nhs.net">sr1.servicedesk@nhs.net</a></li>
+                        <li>Telephone: 0300 303 5035</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+    <!-- Side panel 
+        <div class="govuk-grid-column-one-third">
+            <div class="app-step-nav-related app-step-nav-related--singular">
+                <h2 class="app-step-nav-related__heading">Get help</h2>
+                <p class="govuk-body">
+                    <a class="govuk-link"
+                    href="https://ds1500-prototype.herokuapp.com/sr1-1/sr1-guidance#patients-may-not-know-true-nature-of-illness"
+                    target="_blank">How to complete the SR1 form (opens in a new tab)</a>
+                </p>
+                <ul class="govuk-list">
+                    <li>Email: <a href="mailto:sr1.servicedesk@nhs.net">sr1.servicedesk@nhs.net</a>
+                    </li>
+                    <li>Telephone: 0300 303 5035</li>
+                </ul>
+            </div>
+        </div> -->
+</div>
+
+<script>
+    // get and set in this order - this ensures what is sent in query is the same as what is in the localStorage
+    const saveAndLeave = () => {
+        saveOtherDiagnosisSR1Formmvp01();
+
+        const origin = window.location.origin;
+        const url = getUrlWithSR1DataAsQueryParamsmvp01(origin, "/hcp-e2e-journey-mvp01/task-list-sr1-form");
+
+        window
+            .location
+            .replace(url.toString());
+    }
+</script>
+{% endblock %}

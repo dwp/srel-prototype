@@ -1,0 +1,237 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Complete your profile
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+        <form id="profileSetupPage" name="profileDetails" action="/hcp-e2e-journey-v09/check-profile-details" method="post" autocomplete="off">
+            <div class="govuk-form-group">
+                <div class="govuk-notification-banner govuk-notification-banner--success" role="alert"
+                    aria-labelledby="govuk-notification-banner-title" data-module="govuk-notification-banner">
+                    <div class="govuk-notification-banner__header">
+                        <h2 class="govuk-notification-banner__title" id="govuk-notification-banner-title">
+                            Success
+                        </h2>
+                    </div>
+                    <div class="govuk-notification-banner__content">
+                        <h3 class="govuk-notification-banner__heading">
+                            You signed in with jean.grey@nhs.trust.uk
+                        </h3>
+                        <p class="govuk-body"><a id="signOutNavLink" class="govuk-notification-banner__link" href="#"
+                                aria-label="Sign out" onclick="logOutHcpE2e()">Sign out if this is not your email
+                                account</a>.</p>
+                    </div>
+                </div>
+
+                <fieldset class="govuk-fieldset">
+                    <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+                        <h1 class="govuk-fieldset__heading">
+                            Create your profile
+                        </h1>
+                    </legend>
+
+                    <!-- Inset text -->
+                    <div class="govuk-inset-text">
+                        <!-- <p>To save you time, we will automatically use your profile details on every SR1 form you complete.</p> -->
+                        <!-- <p>To save you time, we will automatically use your profile details on every SR1 form you complete.</p>
+                            <p>You only need to complete your profile the first time you sign in.</p> -->
+                        <p>To save you time completing SR1 forms, we automatically add your profile details to them for you.</p>
+                    </div>
+
+                    <!-- ############## -->
+                    <!-- PERSON DETAILS -->
+                    <!-- ############## -->
+                    <div class="govuk-form-group govuk-!-margin-bottom-6">
+                        <!-- <h1 class="govuk-heading-l">Personal details</h1> -->
+
+                        <!-- Your full name -->
+                        <div class="govuk-form-group">
+                            <label class="govuk-label govuk-label--m" for="fullName">Your full name
+                            </label>
+                            <input class="govuk-input" id="fullName" name="fullName" type="text" autocomplete="off">
+                        </div>
+
+                        <!-- Your role -->
+                        <div class="govuk-form-group">
+                            <label class="govuk-label govuk-label--m" for="role">Your role
+                            </label>
+                            <div id="roleOptions" class="govuk-radios" data-module="govuk-radios">
+                                <div class="govuk-radios__item">
+                                    <input class="govuk-radios__input" id="gp" name="yourRole" type="radio" value="GP"
+                                        onclick="hcpv09RoleFn(this)">
+                                    <label class="govuk-label govuk-radios__label" for="gp">
+                                        GP
+                                    </label>
+                                </div>
+                                <div class="govuk-radios__item">
+                                    <input class="govuk-radios__input" id="hospitalConsultant" name="yourRole"
+                                        type="radio" value="Hospital consultant" onclick="hcpv09RoleFn(this)">
+                                    <label class="govuk-label govuk-radios__label" for="hospitalConsultant">
+                                        Hospital consultant
+                                    </label>
+                                </div>
+                                <div class="govuk-radios__item">
+                                    <input class="govuk-radios__input" id="specialistDoctor" name="yourRole"
+                                        type="radio" value="Specialist doctor" onclick="hcpv09RoleFn(this)">
+                                    <label class="govuk-label govuk-radios__label" for="specialistDoctor">
+                                        Specialist doctor
+                                    </label>
+                                </div>
+                                <div class="govuk-radios__item">
+                                    <input class="govuk-radios__input" id="hospiceDoctor" name="yourRole" type="radio"
+                                        value="Hospice doctor" onclick="hcpv09RoleFn(this)">
+                                    <label class="govuk-label govuk-radios__label" for="hospiceDoctor">
+                                        Hospice doctor
+                                    </label>
+                                </div>
+                                <div class="govuk-radios__item">
+                                    <input class="govuk-radios__input" id="seniorSpecialistNurse" name="yourRole"
+                                        type="radio" value="Senior specialist nurse" onclick="hcpv09RoleFn(this)">
+
+                                    <label class="govuk-label govuk-radios__label" for="seniorSpecialistNurse"
+                                        aria-describedby="seniorSpecialistNurse-hint">
+                                        Senior specialist nurse
+                                    </label>
+                                    <div id="seniorSpecialistNurse-hint" class="govuk-hint govuk-radios__hint">
+                                        Such as a clinical nurse specialist or advanced nurse practitioner.
+                                    </div>
+                                </div>
+                                <div class="govuk-radios__divider">or</div>
+                                <div class="govuk-radios__item">
+                                    <input class="govuk-radios__input" id="other" name="yourRole" type="radio"
+                                        value="other" data-aria-controls="conditional-role"
+                                        onclick="hcpv09RoleFn(this)">
+                                    <label class="govuk-label govuk-radios__label" for="other">
+                                        Other
+                                    </label>
+                                </div>
+                                <div class="govuk-radios__conditional govuk-radios__conditional--hidden"
+                                    id="conditional-role">
+                                    <div class="govuk-form-group">
+                                        <label class="govuk-label" for="otherRole">
+                                            What is your role?
+                                        </label>
+                                        <input class="govuk-input govuk-input--width-15" id="otherRole" name="otherRole"
+                                            type="text" onfocus="this.value=''" autocomplete="off">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Your professional registration number -->
+                    <div class="govuk-form-group govuk-!-margin-bottom-6">
+                        <legend class="govuk-fieldset__legend govuk-label--m"
+                            for="professionalRegistrationNumber">
+                            Your professional registration number
+                        </legend>
+                        <div id="event-name-hint" class="govuk-hint">This is your GMC or NMC number</div>
+                        <input class="govuk-input govuk-input--width-10" id="professionalRegistrationNumber"
+                            name="professionalRegistrationNumber" type="text" autocomplete="off">
+                    </div>
+
+
+                    <!-- Your email address
+                        <div class="govuk-form-group">
+                            <label class="govuk-label" for="emailAddress">
+                                <strong>Your email address</strong>
+                            </label>
+                            <div id="emailAddress-hint" class="govuk-hint">You can set up email reminders</div>
+                            <input class="govuk-input govuk-input--width-10" id="emailAddress" name="emailAddress" type="text" autocomplete="off" disabled>
+                        </div>-->
+
+                    <!-- Your mobile number -->
+                    <div class="govuk-form-group govuk-!-margin-bottom-6">
+                        <legend class="govuk-fieldset__legend govuk-label--m">
+                            Your mobile number
+                        </legend>
+                        <div id="mobileNumber-hint" class="govuk-hint">You can set up text message reminders</div>
+                        <input class="govuk-input govuk-input--width-10" id="mobileNumber" name="mobileNumber"
+                            type="text" autocomplete="off">
+                    </div>
+
+                    <!-- Your Organisation address -->
+                    <div class="govuk-form-group govuk-!-margin-bottom-6">
+                        <legend class="govuk-fieldset__legend govuk-label--m">
+                            Your organisation address
+                        </legend>
+
+                        <!-- Organisation name -->
+                        <div class="govuk-form-group">
+                            <label class="govuk-label" for="organisationName">Organisation name</label>
+                            <input class="govuk-input govuk-input--width-20" id="organisationName"
+                                name="organisationName" type="text" autocomplete="off">
+                        </div>
+
+                        <!-- Building and street -->
+                        <div class="govuk-form-group">
+                            <label class="govuk-label" for="address-line-1">
+                                Address line 1
+                            </label>
+                            <input class="govuk-input" id="organisationAddressLine1" name="organisationAddressLine1"
+                                type="text" autocomplete="off">
+                        </div>
+                        <div class="govuk-form-group">
+                            <label class="govuk-label" for="address-line-2">
+                                Address line 2 (optional)
+                            </label>
+                            <input class="govuk-input" id="organisationAddressLine2" name="organisationAddressLine2"
+                                type="text" autocomplete="off">
+                        </div>
+
+                        <!-- Town or city -->
+                        <div class="govuk-form-group">
+                            <label class="govuk-label" for="townOrCity">Town or city</label>
+                            <input class="govuk-input govuk-!-width-two-thirds" id="townOrCity" name="townOrCity"
+                                type="text" autocomplete="off">
+                        </div>
+                        <div class="govuk-form-group">
+                            <label class="govuk-label" for="address-county">
+                                County (optional)
+                            </label>
+                            <input class="govuk-input govuk-!-width-two-thirds" id="address-county"
+                                name="address-county" type="text">
+                        </div>
+
+                        <!-- Postcode -->
+                        <div class="govuk-form-group">
+                            <label class="govuk-label" for="postcode">Postcode</label>
+                            <input class="govuk-input govuk-input--width-10" id="postcode" name="postcode" type="text"
+                                autocomplete="off">
+                        </div>
+                    </div>
+
+
+
+                </fieldset>
+            </div>
+
+            <!-- Submit button -->
+            <div class="govuk-button-group">
+                <button id="" class="govuk-button" data-module="govuk-button" onclick="hcpv09GrabAllProfileDataFn(); resetChangeFn();">
+                    Save and continue
+                </button>
+            </div>
+        </form>
+    </div>
+
+    <!-- Side panel
+        <div class="govuk-grid-column-one-third">
+            <div class="app-step-nav-related app-step-nav-related--singular">
+                <h2 class="app-step-nav-related__heading">Get help</h2>
+                <p class="govuk-body"><a  class="govuk-link" href="https://ds1500-prototype.herokuapp.com/sr1-1/sr1-guidance#patients-may-not-know-true-nature-of-illness" target="_blank">How to complete the SR1 form (opens in a new tab)</a></p>
+                <ul class="govuk-list">
+                    <li>Email: <a href="mailto:sr1.servicedesk@nhs.net">sr1.servicedesk@nhs.net</a></li>
+                    <li>Telephone: 0300 303 5035</li>
+                </ul>
+            </div>
+        </div>
+    -->
+
+</div>
+
+{% endblock %}

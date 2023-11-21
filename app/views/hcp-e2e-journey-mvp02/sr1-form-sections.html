@@ -1,0 +1,392 @@
+{% extends "layout-gov-reduced.html" %}
+
+{% block pageTitle %}
+SR1 form – Send an SR1 – GOV.UK
+{% endblock %}
+
+{% block content %}
+
+{% macro subsectionStatus(idSuffix, dataVar, fullNameSet) %}
+{% if dataVar | isStringVarDefined %}
+<strong class="govuk-tag app-task-list__tag" id="{{idSuffix}}-completed" aria-hidden>Completed</strong>
+{% else %}
+<strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="{{idSuffix}}-status">Not started</strong>
+{% endif %}
+{% endmacro %}
+
+{% macro dateSubsectionStatus(idSuffix, day, month, year, fullNameSet) %}
+{% if day | isStringVarDefined and month | isStringVarDefined and year | isStringVarDefined %}
+<strong class="govuk-tag app-task-list__tag" id="{{idSuffix}}-completed" aria-hidden>Completed</strong>
+{% else %}
+<strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="{{idSuffix}}-status">Not started</strong>
+{% endif %}
+{% endmacro %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <form id="profileSetupPage" action="/hcp-e2e-journey-mvp02/check-sr1-form" method="post">
+      <div class="govuk-form-group">
+
+        <fieldset class="govuk-fieldset">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+            <h1 class="govuk-fieldset__heading">SR1 form question list
+            </h1>
+          </legend>
+
+          <div class="govuk-grid-row">
+            <div class="govuk-grid-column-full">
+              <div class="govuk-inset-text">
+                Your answers will not be saved if you sign out. We will sign you out if you do nothing for 30 minutes.
+              </div>
+              <p id="completed-tasks" class="govuk-body govuk-!-margin-bottom-7">You have completed 0 of 5 sections.
+              </p>
+              <ol class="app-task-list">
+                <li>
+                  <h2 class="app-task-list__section">
+                    <span class="app-task-list__section-number">1. </span> About your patient
+                  </h2>
+                  <ul class="app-task-list__items">
+                    <li class="app-task-list__item" id="patientFullName">
+                      <span class="app-task-list__task-name">
+                        <a href="/hcp-e2e-journey-mvp02/sr1-form-01">
+                          Patient details<span class="govuk-visually-hidden"> the patient's name</span>
+                        </a>
+                      </span>
+                      <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="patientDateOfBirth-status">Not
+                        started</strong>
+                      <strong class="govuk-tag app-task-list__tag govuk-tag--blue hidden"
+                        id="patientDateOfBirth-status-inprogress" aria-hidden>In progress</strong>
+                      <strong class="govuk-tag app-task-list__tag hidden" id="patientDateOfBirth-status-completed"
+                        aria-hidden>Completed</strong>
+
+                    </li>
+                    <!--<li class="app-task-list__item" id="patientDateOfBirth">
+                      <span class="app-task-list__task-name">
+                        <a href="/hcp-e2e-journey-mvp02/sr1-form-02">
+                          Date of birth<span class="govuk-visually-hidden"> the patient's date of birth</span>
+                        </a>
+                      </span>
+                      {{ dateSubsectionStatus('patientDateOfBirth', hcpmvp02DobDay, hcpmvp02DobMonth, hcpmvp02DobYear,
+                      patientNameSet) }}
+                    </li>
+                </li>
+                </li>
+                <li class="app-task-list__item" id="patientaddressline1">
+                  <span class="app-task-list__task-name">
+                    <a href="/hcp-e2e-journey-mvp02/sr1-form-04-a">
+                      Address<span class="govuk-visually-hidden"> the patient's address</span>
+                    </a>
+                  </span>
+                  {# TODO: check all of address is filled out #}
+                  {{ subsectionStatus('patientaddressline1', hcpmvp02PatientAddressLine1, patientNameSet) }}
+                </li>
+                <li class="app-task-list__item" id="patientNINo">
+                  <span class="app-task-list__task-name">
+                    <a href="/hcp-e2e-journey-mvp02/sr1-form-05-radio">
+                      National Insurance number <span class="govuk-visually-hidden"> the patient's National
+                        Insurance
+                        number</span>
+                    </a>
+                  </span>
+                  {{ subsectionStatus('patientNINo', hcpmvp02NiNo, patientNameSet) }}
+                </li>-->
+                </ul>
+                </li>
+                <li>
+                  <h2 class="app-task-list__section">
+                    <span class="app-task-list__section-number">2. </span> Diagnosis and medical features
+                  </h2>
+                  <ul class="app-task-list__items">
+                    <li class="app-task-list__item" id="patientDiagnosis">
+                      <span class="app-task-list__task-name">
+                        <a href="/hcp-e2e-journey-mvp02/sr1-form-07">
+                          Diagnosis<span class="govuk-visually-hidden"> the patient's diagnosis</span>
+                        </a>
+                      </span>
+                      <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="patientDiagnosis-status">Not
+                        started</strong>
+                      <strong class="govuk-tag app-task-list__tag govuk-tag--blue hidden"
+                        id="patientDiagnosis-status-inprogress" aria-hidden>In progress</strong>
+                      <strong class="govuk-tag app-task-list__tag hidden" id="patientDiagnosis-status-completed"
+                        aria-hidden>Completed</strong>
+                    </li>
+                    <!--<li class="app-task-list__item" id="patientDateOfDiagnosis">
+                      <span class="app-task-list__task-name" id="dateOfDiagnosis">
+                        <a href="/hcp-e2e-journey-mvp02/sr1-form-08">
+                          Date of diagnosis<span class="govuk-visually-hidden"> the date of the patient's
+                            diagnosis</span>
+                        </a>
+                      </span>
+                      {{ dateSubsectionStatus('patientDateOfDiagnosis', hcpmvp02DodDay, hcpmvp02DodMonth,
+                      hcpmvp02DodYear,
+                      patientNameSet) }}
+                    </li>
+                    <li class="app-task-list__item" id="dateSpecialRules">
+                      <span class="app-task-list__task-name">
+                        <a href="/hcp-e2e-journey-mvp02/sr1-form-06">
+                          Date the patient met the Special Rules<span class="govuk-visually-hidden"> the date the
+                            patient met the Special Rules</span>
+                        </a>
+                      </span>
+                      {{ dateSubsectionStatus('dateSpecialRules', hcpmvp02DateofSpecialRulesDay,
+                      hcpmvp02DateofSpecialRulesMonth, hcpmvp02DateofSpecialRulesYear, patientNameSet) }}
+                    </li>
+                    <li class="app-task-list__item" id="patientOtherDiagnosis">
+                      <span class="app-task-list__task-name">
+                        <a href="/hcp-e2e-journey-mvp02/sr1-form-09-radio">
+                          Other relevant diagnoses <span class="govuk-visually-hidden"> the patient's other
+                            relevant diagnoses</span>
+                        </a>
+                      </span>
+                      {{ subsectionStatus('patientOtherDiagnosis', hcpmvp02OtherRelevantDiagnosis, patientNameSet) }}
+                    </li>
+                    <li class="app-task-list__item" id="patientAwareOfDiagnosis">
+                      <span class="app-task-list__task-name">
+                        <a href="/hcp-e2e-journey-mvp02/sr1-form-10">
+                          Patient aware of diagnosis<span class="govuk-visually-hidden"> if the patient is aware of
+                            their
+                            diagnosis</span>
+                        </a>
+                      </span>
+                      {{ subsectionStatus('patientAwareOfDiagnosis', hcpmvp02AwareOfDiagnosis, patientNameSet) }}
+                    </li>
+                    <li class="app-task-list__item" id="patientAwareOfPrognosis">
+                      <span class="app-task-list__task-name">
+                        <a href="/hcp-e2e-journey-mvp02/sr1-form-11">
+                          Patient aware of prognosis<span class="govuk-visually-hidden"> if the patient is aware of
+                            their
+                            prognosis</span>
+                        </a>
+                      </span>
+                      {{ subsectionStatus('patientAwareOfPrognosis', hcpmvp02AwareOfPrognosis, patientNameSet) }}
+                    </li>
+                  </ul>
+                </li>
+
+                <li>
+                  <h2 class="app-task-list__section">
+                    <span class="app-task-list__section-number">3. </span> Clinical features and treatment
+                  </h2>
+                  <ul class="app-task-list__items">-->
+                    <li class="app-task-list__item" id="patientClinicalFeatures">
+                      <span class="app-task-list__task-name">
+                        <a href="/hcp-e2e-journey-mvp02/sr1-form-12">
+                          Details of the clinical features and treatment<span class="govuk-visually-hidden"> details of clinical
+                            features and treatment</span>
+                        </a>
+                      </span>
+                      {{ subsectionStatus('patientClinicalFeatures', hcpmvp02DetailsOfClinicalFeatures, patientNameSet)
+                      }}
+                    </li>
+                  </ul>
+                </li>
+
+                <!--<li>
+                  <h2 class="app-task-list__section">
+                    <span class="app-task-list__section-number">4. </span> Treatment
+                  </h2>
+                  <ul class="app-task-list__items">
+                    <li class="app-task-list__item" id="purposeOfTreatment">
+                      <span class="app-task-list__task-name">
+                        <a href="/hcp-e2e-journey-mvp02/sr1-form-13">
+                          Purpose of treatment and response<span class="govuk-visually-hidden"> details of the purpose
+                            of any treatment and response</span>
+                        </a>
+                      </span>
+                      {{ subsectionStatus('purposeOfTreatment', hcpmvp02Treatment, patientNameSet) }}
+                    </li>
+                  </ul>
+                </li>-->
+
+                <li>
+                  <h2 class="app-task-list__section">
+                    <span class="app-task-list__section-number">3. </span> About you
+                  </h2>
+                  <ul class="app-task-list__items">
+                    <li class="app-task-list__item" id="name">
+                      <span class="app-task-list__task-name">
+                        <a href="/hcp-e2e-journey-mvp02/profile-01">
+                          Your details<span class="govuk-visually-hidden"> your details</span>
+                        </a>
+                      </span>
+                      {{ subsectionStatus('yourName', hcpmvp02Firstname, patientNameSet)
+                      }}
+                    </li>
+                    <!--<li class="app-task-list__item" id="role">
+                      <span class="app-task-list__task-name">
+                        <a href="/hcp-e2e-journey-mvp02/profile-02">
+                          Role<span class="govuk-visually-hidden"> your role</span>
+                        </a>
+                      </span>
+                      {{ subsectionStatus('role', hcpmvp02Role, patientNameSet) }}
+                    </li>
+                    <li class="app-task-list__item" id="professionalRegNum">
+                      <span class="app-task-list__task-name">
+                        <a href="/hcp-e2e-journey-mvp02/profile-03">
+                          Professional registration number<span class="govuk-visually-hidden"> your professional
+                            registration number</span>
+                        </a>
+                      </span>
+                      {{ subsectionStatus('professionalRegistrationNumber', hcpmvp02ProfessionalRegistrationNumber,
+                      patientNameSet) }}
+                    </li>
+                    <li class="app-task-list__item" id="mobile">
+                      <span class="app-task-list__task-name">
+                        <a href="/hcp-e2e-journey-mvp02/profile-04">
+                          Phone number<span class="govuk-visually-hidden"> your phone number</span>
+                        </a>
+                      </span>
+                      {{ subsectionStatus('mobileNumber', hcpmvp02MobileNumber, patientNameSet) }}
+                    </li>
+                    <li class="app-task-list__item" id="organisationName">
+                      <span class="app-task-list__task-name">
+                        <a href="/hcp-e2e-journey-mvp02/profile-07-a">
+                          Organisation's address<span class="govuk-visually-hidden"> organisation address</span>
+                        </a>
+                      </span>
+                      {{ subsectionStatus('organisationAddressLine1', hcpmvp02OrganisationAddressLine1, patientNameSet)
+                      }}
+                    </li>-->
+                  </ul>
+                </li>
+
+                <li>
+                  <h2 class="app-task-list__section">
+                    <span class="app-task-list__section-number">4. </span> Check your details
+                  </h2>
+                  <ul class="app-task-list__items">
+                    <li class="app-task-list__item" id="name">
+                      <span class="app-task-list__task-name">
+                        <p class="govuk-body govuk-!-padding-bottom-0">
+                          Check your answers and send the SR1 form<span class="govuk-visually-hidden"> Check your answers and send the SR1 form</span>
+                        </p>
+                        <a id="check-answer-link" class="govuk-link hidden" href="/hcp-e2e-journey-mvp02/check-sr1-form">
+                          Check your answers and send the SR1 form<span class="govuk-visually-hidden"> Check your answers and send the SR1 form</span>
+                        </a>
+                      </span>
+                      <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="check-your-sr1-status">Cannot start yet</strong>
+                  </ul>
+                </li>
+
+              </ol>
+            </div>
+          </div>
+        </fieldset>
+      </div>
+
+
+      <!--Bottom CTA-->
+
+      <div id="submit-task-list" class="hidden">
+        <div class="govuk-inset-text">
+          You will be able to check your answers before you send the form.
+        </div>
+        <div class="govuk-button-group govuk-!-padding-bottom-6">
+          <button id="save-and-continue-task-list" class="govuk-button" data-module="govuk-button">Save and continue
+          </button>
+        </div>
+      </div>
+
+    </form>
+
+    <!--Get help bottom-->
+    <hr class="govuk-section-break govuk-section-break--visible" aria-hidden="true">
+    <section class="govuk-width-container govuk-!-margin-top-7 govuk-!-margin-bottom-7 ">
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-full">
+          <h2 class="govuk-heading-m">Get help</h2>
+          <p class="govuk-body"><a class="govuk-link"
+              href="https://www.gov.uk/government/publications/special-rules-for-end-of-life-healthcare-professional-resources"
+              target="_blank">How to complete the SR1 form (opens in a new tab)</a></p>
+          <ul class="govuk-list">
+            <li>Email: <a href="mailto:ssd.nationalservicedesk@nhs.net">ssd.nationalservicedesk@nhs.net</a></li>
+            <li>Telephone: 0300 303 5035</li>
+            <li class="govuk-!-margin-top-5">All services are available Monday to Friday, 9am to 5pm (except public
+              holidays)</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+  </div>
+
+  <!-- Side panel
+<div class="govuk-grid-column-one-third">
+  <div class="app-step-nav-related app-step-nav-related--singular">
+    <h2 class="app-step-nav-related__heading">Get help</h2>
+    <p class="govuk-body">
+      <a class="govuk-link"
+          href="https://ds1500-prototype.herokuapp.com/sr1-1/sr1-guidance#patients-may-not-know-true-nature-of-illness"
+          target="_blank">How to complete the SR1 form (opens in a new tab)</a>
+    </p>
+    <ul class="govuk-list">
+      <li>Email: <a href="mailto:ssd.nationalservicedesk@nhs.net">ssd.nationalservicedesk@nhs.net</a>
+      </li>
+      <li>Telephone: 0300 303 5035</li>
+    </ul>
+  </div>
+</div> -->
+</div>
+
+<script>
+
+  //'hcpmvp02PatientAddressLine1',
+  //'hcpmvp02PatientAddressLine2',
+  //'hcpmvp02PatientAddressTown',
+  //'hcpmvp02PatientPostcode',
+
+  //TODO: check all of address is filled out
+  const fields = [
+    'hcpmvp02PatientLastName',
+    'hcpmvp02NiNo',
+    'hcpmvp02WhatIsTheDiagnosis',
+    //'hcpmvp02OtherRelevantDiagnosis',
+    //'hcpmvp02AwareOfDiagnosis',
+    'hcpmvp02AwareOfPrognosis',
+    'hcpmvp02DetailsOfClinicalFeatures',
+    'hcpmvp02Treatment',
+    //'hcpmvp02PatientAddressTown',
+    'hcpmvp02Firstname',
+    //'hcpmvp02Role',
+    //'hcpmvp02ProfessionalRegistrationNumber',
+    //'hcpmvp02MobileNumber',
+    'hcpmvp02OrganisationAddressLine1'
+  ];
+
+  const dates = [
+    [
+      //'hcpmvp02DobDay', 'hcpmvp02DobMonth', 'hcpmvp02DobYear'
+    ],
+    [
+      //'hcpmvp02DodDay', 'hcpmvp02DodMonth', 'hcpmvp02DodYear'
+    ],
+    [
+      //'hcpmvp02DateofSpecialRulesDay', 'hcpmvp02DateofSpecialRulesMonth', 'hcpmvp02DateofSpecialRulesYear'
+    ]
+  ];
+
+
+  const isDefined = (field) => {
+    const item = localStorage.getItem(field);
+    return !!item && item.length > 0;
+  }
+
+  var counter = 0;
+
+  counter += fields
+    .filter(isDefined)
+    .length;
+
+  counter += dates
+    .filter(date => {
+      return isDefined(date[0]) && isDefined(date[1]) && isDefined(date[2]);
+    })
+    .length;
+
+  console.log({ counter });
+
+  document
+    .getElementById('completed-tasks')
+    .innerText = "You have completed " + counter + " of 5 sections."
+</script>
+{% endblock %}

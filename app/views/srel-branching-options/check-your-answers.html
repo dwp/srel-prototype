@@ -1,0 +1,163 @@
+{% extends "layout.html" %}
+{% block pageTitle %}
+    Check your answers before sending your application
+{% endblock %}
+{% block content %}
+
+    <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds-from-desktop">
+
+        <h1 class="govuk-heading-l">Check your answers before sending your application</h1>
+
+        <h2 class="govuk-heading-m">Personal details</h2>
+
+        <form action="/form-handler" method="post" novalidate>
+            <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+                <!-- Has your doctor said you  might have less than 12 months to live? -->
+                <div class="govuk-summary-list__row">
+                    <dt class="govuk-summary-list__key">
+                        Has your doctor said you  might have less than 12 months to live?
+                    </dt>
+                    <dd class="govuk-summary-list__value">
+                        Yes
+                    </dd>
+                    <dd class="govuk-summary-list__actions">
+                        <a class="govuk-link" href="#">
+                        Change<span class="govuk-visually-hidden"> previous application number</span>
+                        </a>
+                    </dd>
+                </div>
+
+                <!-- Patient name -->
+                <div class="govuk-summary-list__row">
+                    <dt class="govuk-summary-list__key">
+                    Patient name
+                    </dt>
+                    <dd class="govuk-summary-list__value">
+                        <div id="checkAnswersPatientName"></div>
+                    </dd>
+                    <dd class="govuk-summary-list__actions">
+                    <a class="govuk-link" href="#">
+                        Change<span class="govuk-visually-hidden"> name</span>
+                    </a>
+                    </dd>
+                </div>
+
+                <!-- Patient other name -->
+                <div id="otherNameDiv" class="govuk-summary-list__row" hidden="hidden">
+                    <dt class="govuk-summary-list__key">
+                    Patient's previous name
+                    </dt>
+                    <dd class="govuk-summary-list__value">
+                        <div id="checkAnswersPatientOtherName"></div>
+                    </dd>
+                    <dd class="govuk-summary-list__actions">
+                    <a class="govuk-link" href="#">
+                        Change<span class="govuk-visually-hidden"> other name</span>
+                    </a>
+                    </dd>
+                </div>
+
+                <!-- Date of Birth -->
+                <div class="govuk-summary-list__row">
+                    <dt class="govuk-summary-list__key">
+                    Date of birth
+                    </dt>
+                    <dd class="govuk-summary-list__value">
+                    <div id="checkAnswersDob"></div>
+                    </dd>
+                    <dd class="govuk-summary-list__actions">
+                    <a class="govuk-link" href="#">
+                        Change<span class="govuk-visually-hidden"> date of birth</span>
+                    </a>
+                    </dd>
+                </div>
+
+                <!-- Patient age -->
+                <div class="govuk-summary-list__row">
+                    <dt class="govuk-summary-list__key">
+                        Patient age
+                    </dt>
+                    <dd class="govuk-summary-list__value">
+                    <div id="checkAnswersPatientAge"></div>
+                    </dd>
+                    <dd class="govuk-summary-list__actions">
+                    <!-- <a class="govuk-link" href="#">
+                        Change<span class="govuk-visually-hidden"> date of birth</span>
+                    </a> -->
+                    </dd>
+                </div>
+
+                <!-- National Insurance -->
+                <div class="govuk-summary-list__row">
+                    <dt class="govuk-summary-list__key">
+                        National Insurance
+                    </dt>
+                    <dd class="govuk-summary-list__value">
+                    <div id="checkAnswersNiNo"></div>
+                    </dd>
+                    <dd class="govuk-summary-list__actions">
+                    <a class="govuk-link" href="#">
+                        Change<span class="govuk-visually-hidden"> who is applying</span>
+                    </a>
+                    </dd>
+                </div>
+
+            </dl>
+
+
+            <h2 class="govuk-heading-m">Application details</h2>
+
+            <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+
+                <!-- Who is applying? -->
+                <div class="govuk-summary-list__row">
+                    <dt class="govuk-summary-list__key">
+                        Who is applying?
+                    </dt>
+                    <dd class="govuk-summary-list__value">
+                    <div id="checkAnswersWhoApplying"></div>
+                    </dd>
+                    <dd class="govuk-summary-list__actions">
+                    <a class="govuk-link" href="#">
+                        Change<span class="govuk-visually-hidden"> who is applying</span>
+                    </a>
+                    </dd>
+                </div>
+
+                <!-- Application type -->
+                <div class="govuk-summary-list__row">
+                    <dt class="govuk-summary-list__key">
+                        Application type
+                    </dt>
+                    <dd class="govuk-summary-list__value">
+                    <div id="checkAnswersApplicationType"></div>
+                    </dd>
+                    <dd class="govuk-summary-list__actions">
+                    <!-- <a class="govuk-link" href="#">
+                        Change<span class="govuk-visually-hidden"> application type</span>
+                    </a> -->
+                    </dd>
+                </div>
+
+            </dl>
+
+            <!-- Send application -->
+            <h2 class="govuk-heading-m">Now send your application</h2>
+
+            <p class="govuk-body">By submitting this application you are confirming that, to the best of your knowledge, the details you are providing are correct.</p>
+
+                
+
+            <input type="hidden" name="answers-checked" value="true">
+
+            <button class="govuk-button" data-module="govuk-button">
+            Accept and send
+            </button>
+
+        </form>
+
+        </div>
+    </div>
+
+{% endblock %}

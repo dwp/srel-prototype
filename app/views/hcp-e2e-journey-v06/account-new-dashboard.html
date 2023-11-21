@@ -1,0 +1,131 @@
+{% extends "layout-gov.html" %}
+
+{% block pageTitle %}
+Account home
+{% endblock %}
+
+{% block content %}
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+
+        <h1 class="govuk-heading-xl">
+            <span id="fullName" class="govuk-caption-l"></span>
+            <span class="govuk-caption-l">GMC number: <span id="professionalRegistrationNumber"></span></span>
+            <span>Account home</span>
+        </h1>
+
+        <div class="govuk-form-group">
+
+            <!-- Select action -->
+            <a href="/hcp-e2e-journey-v06/task-list-sr1-form-start" class="govuk-button" data-module="govuk-button" aria-label="Start a new SR1 form" onclick="completedSR1Form()">
+                Start a new SR1 form
+            </a>
+
+            <div class="govuk-!-padding-bottom-6"></div>
+
+            <!-- Warning text
+            <div class="govuk-warning-text">
+                <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+                <strong class="govuk-warning-text__text">
+                    <span class="govuk-warning-text__assistive">Warning</span>
+                    Incomplete SR1 forms will be deleted after 30 days. If the form is deleted, you will have to start
+                    it again.
+                </strong>
+            </div>
+        -->
+
+            <!-- Select action -->
+            <h2 class="govuk-heading-l">Your SR1 forms</h2>
+            <div class="govuk-grid-row govuk-!-margin-bottom-6">
+                <div class="govuk-grid-column-one-third govuk-!-margin-bottom-5">
+                    <div class="card govuk-!-padding-5"
+                        style="height: 180px; color:white; border: 1px solid #b1b4b6; border-bottom-width: 4px">
+                        <h3 class="govuk-heading-m"><a href="/hcp-e2e-journey-v06/incompleted-sr1-forms-empty"
+                                class="govuk-link">Continue with incomplete forms</a></h3>
+                        <p class="govuk-body">Complete and send SR1 forms you have already started.</p>
+                        <p class="govuk-body"></p>
+                    </div>
+                </div>
+                <div class="govuk-grid-column-one-third govuk-!-margin-bottom-5">
+                    <div class="card govuk-!-padding-5"
+                        style="height: 180px; color:white; border: 1px solid #b1b4b6; border-bottom-width: 4px">
+                        <h3 class="govuk-heading-m"><a href="/hcp-e2e-journey-v06/completed-sr1-forms-empty"
+                                class="govuk-link">View completed forms</a></h3>
+                        <p class="govuk-body">View, download, and print SR1 forms you have sent.</p>
+                    </div>
+                </div>
+            </div>
+            <h2 class="govuk-heading-l">Your settings</h2>
+            <div class="govuk-grid-row govuk-!-margin-bottom-6">
+                <div class="govuk-grid-column-one-third govuk-!-margin-bottom-5">
+                    <div class="card govuk-!-padding-5"
+                        style="height: 180px; color:white; border: 1px solid #b1b4b6; border-bottom-width: 4px;">
+                        <h3 class="govuk-heading-m"><a href="/hcp-e2e-journey-v06/profile-details"
+                                class="govuk-link">Update your profile details</a></h3>
+                        <p class="govuk-body">Your profile details are added to every SR1 form you send.</p>
+                    </div>
+                </div>
+                <div class="govuk-grid-column-one-third govuk-!-margin-bottom-5" id="feeForm">
+                    <div class="card govuk-!-padding-5"
+                        style="height: 180px; color:white; border: 1px solid #b1b4b6; border-bottom-width: 4px">
+                        <h3 class="govuk-heading-m"><a href="/hcp-e2e-journey-v06/reminder-dashboard"
+                                class="govuk-link">Set your reminders</a></h3>
+                        <p class="govuk-body">You can set email or text message reminders for incomplete SR1 forms.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Select action
+            <h2 class="govuk-heading-l govuk-visually-hidden">Your SR1 forms and settings</h2>
+            <div class="govuk-grid-row">
+                <div class="govuk-grid-column-one-third govuk-!-margin-bottom-5">
+                    <div class="card govuk-!-padding-5"
+                        style="height: 180px; color:white; border: 1px solid #b1b4b6; border-bottom-width: 4px">
+                        <h3 class="govuk-heading-m"><a href="/hcp-e2e-journey-v06/incompleted-sr1-forms-empty"
+                                class="govuk-link">Continue with incomplete forms</a></h3>
+                        <p class="govuk-body">Complete and send SR1 forms you have already started.</p>
+                        <p class="govuk-body"></p>
+                    </div>
+                </div>
+                <div class="govuk-grid-column-one-third govuk-!-margin-bottom-5">
+                    <div class="card govuk-!-padding-5"
+                        style="height: 180px; color:white; border: 1px solid #b1b4b6; border-bottom-width: 4px">
+                        <h3 class="govuk-heading-m"><a href="/hcp-e2e-journey-v06/completed-sr1-forms-empty"
+                                class="govuk-link">View completed forms</a></h3>
+                        <p class="govuk-body">View, download, and print SR1 forms you have sent.</p>
+                    </div>
+                </div>
+                <div class="govuk-grid-column-one-third govuk-!-margin-bottom-5">
+                    <div class="card govuk-!-padding-5"
+                        style="height: 180px; color:white; border: 1px solid #b1b4b6; border-bottom-width: 4px;">
+                        <h3 class="govuk-heading-m"><a href="/hcp-e2e-journey-v06/profile-details"
+                                class="govuk-link">Update your profile details</a></h3>
+                        <p class="govuk-body">Your profile details are added to every SR1 form you send.</p>
+                    </div>
+                </div>
+                <div class="govuk-grid-column-one-third govuk-!-margin-bottom-5" id="feeForm">
+                    <div class="card govuk-!-padding-5"
+                        style="height: 180px; color:white; border: 1px solid #b1b4b6; border-bottom-width: 4px">
+                        <h3 class="govuk-heading-m"><a href="/hcp-e2e-journey-v06/reminder-dashboard"
+                                class="govuk-link">Set your reminders</a></h3>
+                        <p class="govuk-body">You can set email or text message reminders for incomplete SR1 forms.</p>
+                    </div>
+                </div>
+            </div> -->
+
+            <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+
+            <h2 class="govuk-heading-l">Get help</h2>
+
+            <p><a href="https://ds1500-prototype.herokuapp.com/sr1-1/sr1-guidance" target="_blank">How to complete the SR1 form (opens in a new tab)</a></p>
+            <p><a href="https://www.gov.uk/benefits-end-of-life" target="_blank">Get benefits if you're nearing end of life (opens in a new tab)</a></p>
+            <p><a href="#" target="_blank">Contact IT support helpdesk (opens in a new tab)</a></p>
+
+            <!-- Supporting informatio -->
+
+        </div>
+
+    </div>
+</div>
+</div>
+{% endblock %}
