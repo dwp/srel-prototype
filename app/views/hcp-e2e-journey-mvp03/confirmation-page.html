@@ -5,14 +5,6 @@ SR1 form sent – Send an SR1 medical evidence form – GOV.UK
 {% endblock %}
 
 {% block content %}
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Generate PDF</title>
-    <script src=https://rawgit.com/eKoopmans/html2pdf/master/dist/html2pdf.bundle.js></script>
-</head>
-
 <div class="govuk-grid-row">
 
     <div class="govuk-grid-column-two-thirds">
@@ -27,10 +19,8 @@ SR1 form sent – Send an SR1 medical evidence form – GOV.UK
         <p class="govuk-body">This is the only time you can download the patient's completed SR1 form and your fee claim
             form.</p>
 
-        <!--<p class="govuk-body"><a class="govuk-link gem-c-attachment__link" target="_self" onclick=printForm()
-                style="color:#1d70b8;">Download <span id="PatientFullName"></span> SR1 form (PDF, 1MB)</a>.</p>-->
-        <p class="govuk-body"><a class="govuk-link gem-c-attachment__link" style="color:#1d70b8;" href="#"
-                id="pdfButton">Download <span id="PatientFullName"></span> SR1 form (PDF, 1MB)</a>.</p>
+        <p class="govuk-body"><a class="govuk-link gem-c-attachment__link" target="_self" onclick=printForm()
+                style="color:#1d70b8;">Download <span id="PatientFullName"></span> SR1 form (PDF, 1MB)</a>.</p>
         <p class="govuk-body">If you use assistive software, you can <a class="govuk-link"
                 href="/hcp-e2e-journey-mvp03/download-html" target="_blank" download>download an accessible version of
                 <span id="PatientFullName2"></span> SR1 form (HTML, 1MB)</a>.</p>
@@ -38,42 +28,12 @@ SR1 form sent – Send an SR1 medical evidence form – GOV.UK
                 href="/hcp-e2e-journey-mvp03/pdfs/SR1-fee-form22_02.pdf">Download your fee claim form (PDF, 1MB)</a>.
         </p>
 
-        <script>
-            // Attach click event to the PDF button
-            document.getElementById('pdfButton').addEventListener('click', generatePDF);
-
-            async function generatePDF() {
-                const url = '/hcp-e2e-journey-mvp03/download-html';
-
-                try {
-                    const response = await fetch(url);
-                    const htmlContent = await response.text();
-
-                    const dynamicContent = await generateDynamicContentmvp03(); // Replace with the actual function to generate dynamic content
-
-                    // Merge the static HTML content with the dynamic content
-                    const mergedHtml = mergeHtmlmvp03(htmlContent, dynamicContent);
-
-                    // Use html2pdf library to generate PDF
-                    html2pdf(mergedHtml, {
-                        margin: 10,
-                        filename: 'Download SR1 form (PDF, 1MB)',
-                        jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' },
-                        html2canvas: { scale: 2 },
-                        pagebreak: { mode: 'avoid-all' }
-                    });
-                } catch (error) {
-                    console.error('Error fetching or generating PDF:', error);
-                }
-            }
-        </script>
 
         <div class="govuk-!-padding-bottom-6"></div>
 
         <h2 class="govuk-heading-m">What happens next</h2>
 
-        <p class="govuk-body">Tell the patient you have sent the SR1 form. You should encourage them to submit their
-            benefit claim if they have not already.</p>
+        <p class="govuk-body">Tell the patient you have sent the SR1 form. You should encourage them to submit their benefit claim if they have not already.</p>
         <p class="govuk-body">We will contact the patient when we have made a decision on their claim.</p>
         <p class="govuk-body">If we need more information about the patient, we will contact you.</p>
         <!-- Submit button -->
@@ -92,9 +52,19 @@ SR1 form sent – Send an SR1 medical evidence form – GOV.UK
             <div class="govuk-grid-row">
                 <div class="govuk-grid-column-full">
                     <h2 class="govuk-heading-m">Get help</h2>
+                    <!--<p class="govuk-body">You can email for technical support, such as accessing the service.</p>
+                    <p class="govuk-body">We cannot discuss specific patients or how to complete the SR1 form, so please
+                        do not give personal details.</p>-->
                     <p class="govuk-body">Email: <a class="govuk-link"
-                            href="mailto:online.sr1@dwp.gov.uk">online.sr1@dwp.gov.uk</a></p>
-                    <p class="govuk-body">We aim to respond within 3 working days.</p>
+                            href="mailto:sr1.forms@dwp.gov.uk">sr1.forms@dwp.gov.uk</a></p>
+                    <p class="govuk-body">We aim to respond within 5 working days.</p>
+                    <!--<h2 class="govuk-heading-m">How to contact the benefit services</h2>
+                    <p class="govuk-body">For information about Personal Independence Payment, Disability Living
+                        Allowance or Attendance Allowance, <a class="govuk-link"
+                            href="https://www.gov.uk/disability-benefits-helpline"
+                            target="_blank">contact the Disability Service Centre (opens in a new tab)</a>.</p>
+                    <p class="govuk-body">For information about Universal Credit or Employment and Support Allowance, <a
+                            class="govuk-link" href="https://www.gov.uk/contact-jobcentre-plus/existing-benefit-claims" target="_blank">contact Jobcentre Plus (opens in a new tab)</a>.</p>-->
                 </div>
             </div>
         </section>

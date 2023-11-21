@@ -97,8 +97,8 @@ Error: What is the patient’s diagnosis? – Send an SR1 medical evidence form 
                 <div class="govuk-grid-column-full">
                     <h2 class="govuk-heading-m">Get help</h2>
                     <p class="govuk-body">Email: <a class="govuk-link"
-                            href="mailto:online.sr1@dwp.gov.uk">online.sr1@dwp.gov.uk</a></p>
-                    <p class="govuk-body">We aim to respond within 3 working days.</p>
+                            href="mailto:sr1.forms@dwp.gov.uk">sr1.forms@dwp.gov.uk</a></p>
+                    <p class="govuk-body">We aim to respond within 5 working days.</p>
                 </div>
             </div>
         </section>
@@ -110,10 +110,10 @@ Error: What is the patient’s diagnosis? – Send an SR1 medical evidence form 
 <script>
     // get and set in this order - this ensures what is sent in query is the same as what is in the localStorage
     const saveAndLeave = () => {
-        //saveDiagnosisSR1Formmvp03();
+        saveDiagnosisSR1Formmvp03();
 
         const origin = window.location.origin;
-        const url = getUrlWithSR1DataAsQueryParamsmvp03(origin, "/hcp-e2e-journey-mvp03/sr1-form-sections");
+        const url = getUrlWithSR1DataAsQueryParamsmvp03(origin, "/hcp-e2e-journey-mvp03/sr1-form-sections-1-completed");
 
         window.location.replace(url.toString());
     }

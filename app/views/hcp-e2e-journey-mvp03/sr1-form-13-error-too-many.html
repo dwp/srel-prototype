@@ -46,7 +46,7 @@ Tell us about the purpose of any treatment and the response – Send an SR1 medi
                             </p>
                             <!-- END ERROR -->
 
-                            <textarea class="govuk-textarea  govuk-js-character-count govuk-input--error"
+                            <textarea class="govuk-textarea govuk-input--width-20 govuk-js-character-count govuk-input--error"
                                 id="treatment" name="treatment" rows="5" aria-describedby="treatment-info">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</textarea>
                         </div>
                         <div id="treatment-info" class="govuk-hint govuk-character-count__message">You
@@ -72,8 +72,8 @@ Tell us about the purpose of any treatment and the response – Send an SR1 medi
                 <div class="govuk-grid-column-full">
                     <h2 class="govuk-heading-m">Get help</h2>
                     <p class="govuk-body">Email: <a class="govuk-link"
-                            href="mailto:online.sr1@dwp.gov.uk">online.sr1@dwp.gov.uk</a></p>
-                    <p class="govuk-body">We aim to respond within 3 working days.</p>
+                            href="mailto:sr1.forms@dwp.gov.uk">sr1.forms@dwp.gov.uk</a></p>
+                    <p class="govuk-body">We aim to respond within 5 working days.</p>
                 </div>
             </div>
         </section>
@@ -85,10 +85,10 @@ Tell us about the purpose of any treatment and the response – Send an SR1 medi
 <script>
     // get and set in this order - this ensures what is sent in query is the same as what is in the localStorage
     const saveAndLeave = () => {
-        //saveTreatmentSR1Formmvp03();
+        saveTreatmentSR1Formmvp03();
 
         const origin = window.location.origin;
-        const url = getUrlWithSR1DataAsQueryParamsmvp03(origin, "/hcp-e2e-journey-mvp03/sr1-form-sections");
+        const url = getUrlWithSR1DataAsQueryParamsmvp03(origin, "/hcp-e2e-journey-mvp03/sr1-form-sections-3-in-progress");
 
         window
             .location

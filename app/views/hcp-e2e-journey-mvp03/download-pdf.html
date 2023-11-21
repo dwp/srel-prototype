@@ -24,23 +24,15 @@ Download SR1 form – Send an SR1 medical evidence form – GOV.UK
                             </p>
                         </div>
                         <!--<p class="govuk-body">Reference number: HDJ2123F<span id="referenceNumber"></span>.</p>-->
-                        <p class="govuk-body">You sent this SR1 form on <span id="date">.</span></p>
-
-                        <script>
-                            const months = [
-                                'January', 'February', 'March', 'April', 'May', 'June',
-                                'July', 'August', 'September', 'October', 'November', 'December'
-                            ];
-
-                            const currentDate = new Date();
-                            const day = currentDate.getDate();
-                            const monthIndex = currentDate.getMonth();
-                            const year = currentDate.getFullYear();
-
-                            const formattedDate = `${day} ${months[monthIndex]} ${year}`;
-
-                            document.getElementById("date").innerHTML = formattedDate;
-                        </script>
+                        <p class="govuk-body">You sent this SR1 form on 9 May 2023.
+                            <!--<script>
+                                date = new Date().toLocaleDateString();
+                                document.write(date);
+                            </script>.-->
+                        </p>
+                        <!--<h1 class="govuk-fieldset__heading">
+                            <span id="PatientFullName"></span>: SR1 form
+                        </h1>-->
                     </legend>
                     <div class="govuk-!-margin-bottom-6"></div>
 
@@ -250,14 +242,14 @@ Download SR1 form – Send an SR1 medical evidence form – GOV.UK
                         <!-- ############## -->
                         <h2 class="govuk-heading-m">Declaration</h2>
 
-                        <p class="govuk-body">By sending this SR1 form, you confirm that:</p>
+                    <p class="govuk-body">By sending this SR1 form, you confirm that:</p>
 
-                        <ul class="govuk-list govuk-list--bullet">
-                            <li>you have read the guidance on completing the form</li>
-                            <li>the person named in the form is your patient</li>
-                            <li>this is a full report of their condition and treatment</li>
-                            <li>you are satisfied that completing an SR1 form is correct for them</li>
-                        </ul>
+                    <ul class="govuk-list govuk-list--bullet">
+                        <li>you have read the guidance on completing the form</li>
+                        <li>the person named in the form is your patient</li>
+                        <li>this is a full report of their condition and treatment</li>
+                        <li>you are satisfied that completing an SR1 form is correct for them</li>
+                    </ul>
 
                     </div>
 

@@ -1,0 +1,219 @@
+{#- We can't mount GOV.UK Frontend's assets at root as it's done automatically by the extensions framework. -#}
+{%- set assetPath = '/govuk/assets' -%}
+
+{% extends "govuk/template.njk" %}
+
+{% from "govuk/components/accordion/macro.njk" import govukAccordion %}
+{% from "govuk/components/back-link/macro.njk" import govukBackLink %}
+{% from "govuk/components/breadcrumbs/macro.njk" import govukBreadcrumbs %}
+{% from "govuk/components/button/macro.njk" import govukButton %}
+{% from "govuk/components/character-count/macro.njk" import govukCharacterCount %}
+{% from "govuk/components/checkboxes/macro.njk" import govukCheckboxes %}
+{% from "govuk/components/cookie-banner/macro.njk" import govukCookieBanner %}
+{% from "govuk/components/date-input/macro.njk" import govukDateInput %}
+{% from "govuk/components/details/macro.njk" import govukDetails %}
+{% from "govuk/components/error-message/macro.njk" import govukErrorMessage %}
+{% from "govuk/components/error-summary/macro.njk" import govukErrorSummary %}
+{% from "govuk/components/fieldset/macro.njk" import govukFieldset %}
+{% from "govuk/components/file-upload/macro.njk" import govukFileUpload %}
+{% from "govuk/components/input/macro.njk" import govukInput %}
+{% from "govuk/components/inset-text/macro.njk" import govukInsetText %}
+{% from "govuk/components/notification-banner/macro.njk" import govukNotificationBanner %}
+{% from "govuk/components/pagination/macro.njk" import govukPagination %}
+{% from "govuk/components/panel/macro.njk" import govukPanel %}
+{% from "govuk/components/phase-banner/macro.njk" import govukPhaseBanner %}
+{% from "govuk/components/radios/macro.njk" import govukRadios %}
+{% from "govuk/components/select/macro.njk" import govukSelect %}
+{% from "govuk/components/skip-link/macro.njk" import govukSkipLink %}
+{% from "govuk/components/summary-list/macro.njk" import govukSummaryList %}
+{% from "govuk/components/table/macro.njk" import govukTable %}
+{% from "govuk/components/tabs/macro.njk" import govukTabs %}
+{% from "govuk/components/tag/macro.njk" import govukTag %}
+{% from "govuk/components/textarea/macro.njk" import govukTextarea %}
+{% from "govuk/components/warning-text/macro.njk" import govukWarningText %}
+
+{% block head %}
+{% include "includes/head.html" %}
+{% endblock %}
+
+{% block pageTitle %}
+GOV.UK Prototype Kit
+{% endblock %}
+
+{% block header %}
+{# Set serviceName in config.js. #}
+{#
+{{ govukHeader({
+homepageUrl: "/",
+serviceName: serviceName,
+serviceUrl: "/",
+
+containerClasses: "govuk-width-container"
+}) }}
+#}
+
+<div id="cookiesselection" class="govuk-cookie-banner hidden" data-nosnippet role="region"
+  aria-label="Cookies on Send an SR1 medical evidence form">
+  <div class="govuk-cookie-banner__message govuk-width-container">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+        <h2 class="govuk-cookie-banner__heading govuk-heading-m">Cookies on Send an SR1 medical evidence form</h2>
+        <div class="govuk-cookie-banner__content">
+          <p class="govuk-body">We use some essential cookies to make this service work.</p>
+          <p class="govuk-body">We’d also like to use analytics cookies so we can understand how you use the service and
+            make improvements.</p>
+        </div>
+      </div>
+    </div>
+    <div class="govuk-button-group">
+      <button value="accept" type="button" name="cookies" class="govuk-button" data-module="govuk-button"
+        onclick="selectCookies()">
+        Accept analytics cookies
+      </button>
+      <button value="reject" type="button" name="cookies" class="govuk-button" data-module="govuk-button"
+        onclick="selectCookies()">
+        Reject analytics cookies
+      </button>
+      <a class="govuk-link" href="/hcp-e2e-journey-v11/cookies" onclick="hideSelectCookies()">View cookies</a>
+    </div>
+  </div>
+</div>
+
+<!--CONFIRMATION MESSAGE-->
+<div id="cookiesconfirm" class="govuk-cookie-banner hidden" data-nosnippet role="region"
+  aria-label="Cookies on Send an SR1 medical evidence form">
+  <div class="govuk-cookie-banner__message govuk-width-container">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+        <div class="govuk-cookie-banner__content">
+          <p class="govuk-body">You’ve accepted additional cookies. You can <a class="govuk-link" href="#">change your
+              cookie settings</a> at any time.</p>
+        </div>
+      </div>
+    </div>
+    <div class="govuk-button-group">
+      <a href="#" role="button" draggable="false" class="govuk-button" data-module="govuk-button"
+        onclick="hideCookies()">
+        Hide cookie message
+      </a>
+    </div>
+  </div>
+</div>
+
+<main>
+  <header class="govuk-header dwp-header" data-module="govuk-header">
+    <div class=" govuk-width-container ">
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds">
+          <a href="/hcp-e2e-journey-mvp02/" class="govuk-header__link govuk-header__link--service-name">
+            {{serviceName}}
+          </a>
+        </div>
+        <div class="govuk-grid-column-one-third dwp-header__container--action">
+          <ul id="navigation" class="govuk-header__navigation-list">
+            <li class="govuk-header__navigation-item signout-right" id="signOutNavLiItem" onclick="navLink(event); logOutHcpE2e();"
+              tabindex="0">
+              <a id="signOutNavLink" class="navigation-link govuk-header__link" href="#">
+                Sign out
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </header>
+</main>
+<div class="govuk-width-container">
+
+  <nav id="secondary-nav" class="hmrc-account-menu" aria-label="Account" data-module="hmrc-account-menu">
+    <a href="#" class="hmrc-account-menu__link hmrc-account-menu__link--menu js-hidden js-visible" tabindex="-1"
+      aria-hidden="true" aria-expanded="false">
+      Account menu </a>
+    <button type="button" class="govuk-header__menu-button govuk-js-header-toggle" aria-controls="navigation"
+      aria-label="Show or hide menu" hidden>Menu</button>
+    <ul class="hmrc-account-menu__main app-navigation__list-item">
+      <li>
+        <a class="hmrc-account-menu__link app-navigation__link" id="startSR1Item" onclick="navLink(event)" tabindex="0" id="startSR1Link" href="#" aria-label="Start a new SR1 form">
+          Start a new SR1 form
+        </a>
+      </li>
+      <!--
+          <li class="govuk-header__navigation-item" id="getHelpNavLiItem" onclick="navLink(event)" tabindex="0">
+            <a id="getHelpNavLink" class="navigation-link govuk-header__link" href="#">
+              Get help
+            </a>
+          </li>-->
+    </ul>
+  </nav>
+
+  <main class="govuk-main-wrapper " id="main-content" role="main">
+  </main>
+
+</div>
+
+{% endblock %}
+
+{% block beforeContent %}
+
+{{ govukPhaseBanner({
+tag: {
+text: "beta"
+},
+html: 'This is a new service - your <a class="govuk-link govuk-!-padding-top-0" href="#">feedback</a> will help us to
+improve it.'
+}) }}
+
+<nav class="dwp-language-toggle" aria-label="Language toggle">
+  <div class="back-lnk-lagnauge">
+    <a href="#" id="backLink" class="govuk-back-link" onclick="history.go(-1)">Back</a>
+    <a id="backLinkSpace"> </a>
+    <!--<ul class="dwp-language-toggle__list">
+      <li class="dwp-language-toggle__list-item">
+        English
+      </li>
+      <li lang="cy" class="dwp-language-toggle__list-item">
+        <span class="govuk-visually-hidden">Newid yr iaith ir Gymraeg</span>
+        <a href="?lang=cy" class="govuk-link">Cymraeg</a>
+      </li>
+    </ul> -->
+  </div>
+</nav>
+
+
+<!--
+    <p id="languageSelector">
+      English | <a href="#" class="">Cymraeg</a>
+  </p> -->
+
+
+{% endblock %}
+
+{% set mainClasses = mainClasses | default("govuk-main-wrapper--auto-spacing") %}
+
+{% if useAutoStoreData %}
+{% block footer %}
+{{ govukFooter({
+meta: {
+items: [
+{
+href: "https://govuk-prototype-kit.herokuapp.com/",
+text: "GOV.UK Prototype Kit " + releaseVersion
+},
+{
+href: "/prototype-admin/clear-data",
+text: "Clear data"
+}
+],
+visuallyHiddenTitle: "Footer links"
+}
+}) }}
+{% endblock %}
+{% endif %}
+
+{% block bodyEnd %}
+{% block scripts %}
+{% include "includes/scripts.html" %}
+{% block pageScripts %}{% endblock %}
+{% endblock %}
+<!-- GOV.UK Prototype Kit {{releaseVersion}} -->
+{% endblock %}

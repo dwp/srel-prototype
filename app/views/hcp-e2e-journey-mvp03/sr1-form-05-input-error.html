@@ -7,7 +7,7 @@ What is the patient’s National Insurance number? – Send an SR1 medical evide
 {% block content %}
 <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
-        <form id="sendAnSR1Form" action="/hcp-e2e-journey-mvp03/sr1-form-sections" method="post">
+        <form id="sendAnSR1Form" action="/hcp-e2e-journey-mvp03/sr1-form-sections-1-completed" method="post">
 
             <!-- ERROR STATE -->
             <div class="govuk-error-summary" data-module="govuk-error-summary">
@@ -79,8 +79,8 @@ What is the patient’s National Insurance number? – Send an SR1 medical evide
                 <div class="govuk-grid-column-full">
                     <h2 class="govuk-heading-m">Get help</h2>
                     <p class="govuk-body">Email: <a class="govuk-link"
-                            href="mailto:online.sr1@dwp.gov.uk">online.sr1@dwp.gov.uk</a></p>
-                    <p class="govuk-body">We aim to respond within 3 working days.</p>
+                            href="mailto:sr1.forms@dwp.gov.uk">sr1.forms@dwp.gov.uk</a></p>
+                    <p class="govuk-body">We aim to respond within 5 working days.</p>
                 </div>
             </div>
         </section>
@@ -95,7 +95,7 @@ What is the patient’s National Insurance number? – Send an SR1 medical evide
         //savenniNoSR1Formmvp03();
 
         const origin = window.location.origin;
-        const url = getUrlWithSR1DataAsQueryParamsmvp03(origin, "/hcp-e2e-journey-mvp03/sr1-form-sections");
+        const url = getUrlWithSR1DataAsQueryParamsmvp03(origin, "/hcp-e2e-journey-mvp03/sr1-form-sections-1-in-progress");
 
         window.location.replace(url.toString());
     }
