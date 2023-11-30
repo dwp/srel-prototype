@@ -7,7 +7,7 @@ Is the patient aware of their prognosis? â€“ Send an SR1 medical evidence form â
 {% block content %}
 <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
-        <form id="sendAnSR1Form" action="/hcp-e2e-journey-mvp03/sr1-form-sections" method="post">
+        <form id="sendAnSR1Form" action="/private-beta01/sr1-form-sections" method="post">
 
             <!-- ERROR STATE -->
             <div class="govuk-error-summary" data-module="govuk-error-summary">
@@ -100,7 +100,7 @@ Is the patient aware of their prognosis? â€“ Send an SR1 medical evidence form â
         save();
 
         const origin = window.location.origin;
-        const url = getUrlWithSR1DataAsQueryParamsmvp03(origin, "/hcp-e2e-journey-mvp03/sr1-form-sections-2-in-progress");
+        const url = getUrlWithSR1DataAsQueryParamsmvp03(origin, "/private-beta01/sr1-form-sections-2-in-progress");
         console.log(url);
 
         window
