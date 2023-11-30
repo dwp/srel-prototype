@@ -7,7 +7,7 @@ Error: What is the patient’s date of birth? – Send an SR1 medical evidence f
 {% block content %}
 <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
-        <form id="sendAnSR1Form" action="/hcp-e2e-journey-mvp03/sr1-form-04-a" method="post">
+        <form id="sendAnSR1Form" action="/private-beta01/sr1-form-04-a" method="post">
 
             <!-- ERROR STATE -->
             <div class="govuk-error-summary" data-module="govuk-error-summary">
@@ -18,7 +18,7 @@ Error: What is the patient’s date of birth? – Send an SR1 medical evidence f
                     <div class="govuk-error-summary__body">
                         <ul class="govuk-list govuk-error-summary__list">
                             <li>
-                                <a href="#dob-day" class="govuk-visually-hidden">Enter the patient's date of birth</a>
+                                <a href="#dob-day">Enter the patient's date of birth</a>
                             </li>
                             <li>
                                 <a href="#dob-day" class="govuk-visually-hidden">The patient's date of birth must be in the past</a>
@@ -36,7 +36,7 @@ Error: What is the patient’s date of birth? – Send an SR1 medical evidence f
                                     include a year</a>
                             </li>
                             <li>
-                                <a href="#dob-day" >The patient's date of birth must be a real date</a>
+                                <a href="#dob-day" class="govuk-visually-hidden">The patient's date of birth must be a real date</a>
                             </li>
                         </ul>
                     </div>
@@ -57,7 +57,7 @@ Error: What is the patient’s date of birth? – Send an SR1 medical evidence f
                         For example, 27 3 2007.
                     </div>
                     <!--ERROR LEGEND -->
-                    <p id="dob-error" class="govuk-error-message govuk-visually-hidden">
+                    <p id="dob-error" class="govuk-error-message">
                         <span class="govuk-visually-hidden">Error:</span> Enter the patient's date of birth
                     </p>
                     <p id="dob-past-error" class="govuk-error-message govuk-visually-hidden">
@@ -75,7 +75,7 @@ Error: What is the patient’s date of birth? – Send an SR1 medical evidence f
                         <span class="govuk-visually-hidden">Error:</span> The patient's date of birth must include a
                         year
                     </p>
-                    <p id="real-dob-error" class="govuk-error-message">
+                    <p id="real-dob-error" class="govuk-error-message govuk-visually-hidden">
                         <span class="govuk-visually-hidden">Error:</span> The patient's date of birth must be a real date
                     </p>
                     <!-- END ERROR -->
@@ -88,7 +88,7 @@ Error: What is the patient’s date of birth? – Send an SR1 medical evidence f
                                 <input autocomplete="off"
                                     class="govuk-input govuk-date-input__input govuk-input--width-2 govuk-input--error" id="dob-day"
                                     name="dob-day" type="text" inputmode="numeric"
-                                    onkeypress="return isNumberKey(event)" maxlength="2" value="9">
+                                    onkeypress="return isNumberKey(event)" maxlength="2">
                             </div>
                         </div>
                         <div class="govuk-date-input__item">
@@ -99,7 +99,7 @@ Error: What is the patient’s date of birth? – Send an SR1 medical evidence f
                                 <input autocomplete="off"
                                     class="govuk-input govuk-date-input__input govuk-input--width-2 govuk-input--error" id="dob-month"
                                     name="dob-month" type="text" inputmode="numeric"
-                                    onkeypress="return isNumberKey(event)" maxlength="2" value="14">
+                                    onkeypress="return isNumberKey(event)" maxlength="2">
                             </div>
                         </div>
                         <div class="govuk-date-input__item">
@@ -110,7 +110,7 @@ Error: What is the patient’s date of birth? – Send an SR1 medical evidence f
                                 <input autocomplete="off"
                                     class="govuk-input govuk-date-input__input govuk-input--width-4 govuk-input--error" id="dob-year"
                                     name="dob-year" type="text" inputmode="numeric"
-                                    onkeypress="return isNumberKey(event)" maxlength="4" value="1970">
+                                    onkeypress="return isNumberKey(event)" maxlength="4">
                             </div>
                         </div>
                     </div>
@@ -142,7 +142,6 @@ Error: What is the patient’s date of birth? – Send an SR1 medical evidence f
     </section>
 
     </div>
-
 </div>
 
 <script>
@@ -151,11 +150,11 @@ Error: What is the patient’s date of birth? – Send an SR1 medical evidence f
         saveDOBSR1Formmvp03();
 
         const origin = window.location.origin;
-        const url = getUrlWithSR1DataAsQueryParamsmvp03(origin, "/hcp-e2e-journey-mvp03/sr1-form-sections-1-in-progress");
+        const url = getUrlWithSR1DataAsQueryParamsmvp03(origin, "/private-beta01/sr1-form-sections-1-in-progress");
 
         window.location.replace(url.toString());
     }
 
-        // old href="/hcp-e2e-journey-mvp03/task-list-sr1-form-saved" <- not sure why its different on different pages 
+        // old href="/private-beta01/task-list-sr1-form-saved" <- not sure why its different on different pages 
 </script>
 {% endblock %}

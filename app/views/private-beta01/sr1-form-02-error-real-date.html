@@ -7,7 +7,7 @@ Error: What is the patient’s date of birth? – Send an SR1 medical evidence f
 {% block content %}
 <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
-        <form id="sendAnSR1Form" action="/hcp-e2e-journey-mvp03/sr1-form-04-a" method="post">
+        <form id="sendAnSR1Form" action="/private-beta01/sr1-form-03" method="post">
 
             <!-- ERROR STATE -->
             <div class="govuk-error-summary" data-module="govuk-error-summary">
@@ -151,11 +151,11 @@ Error: What is the patient’s date of birth? – Send an SR1 medical evidence f
         saveDOBSR1Formmvp03();
 
         const origin = window.location.origin;
-        const url = getUrlWithSR1DataAsQueryParamsmvp03(origin, "/hcp-e2e-journey-mvp03/sr1-form-sections-1-in-progress");
+        const url = getUrlWithSR1DataAsQueryParamsmvp03(origin, "/private-beta01/sr1-form-sections-1-in-progress");
 
         window.location.replace(url.toString());
     }
 
-        // old href="/hcp-e2e-journey-mvp03/task-list-sr1-form-saved" <- not sure why its different on different pages 
+        // old href="/private-beta01/task-list-sr1-form-saved" <- not sure why its different on different pages 
 </script>
 {% endblock %}

@@ -1,13 +1,14 @@
 {% extends "layout-gov-reduced.html" %}
 
 {% block pageTitle %}
-What is the patient’s National Insurance number? – Send an SR1 medical evidence form – GOV.UK
+Error: What is your name? – Send an SR1 medical evidence form – GOV.UK
 {% endblock %}
 
 {% block content %}
+
 <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
-        <form id="sendAnSR1Form" action="/hcp-e2e-journey-mvp03/sr1-form-sections" method="post">
+        <form id="profileSetupPage" name="profileDetails" action="/private-beta01/profile-02" method="post">
 
             <!-- ERROR STATE -->
             <div class="govuk-error-summary" data-module="govuk-error-summary">
@@ -18,58 +19,63 @@ What is the patient’s National Insurance number? – Send an SR1 medical evide
                     <div class="govuk-error-summary__body">
                         <ul class="govuk-list govuk-error-summary__list">
                             <li>
-                                <a href="#niNo">Enter the patient's National Insurance number in the correct format</a>
+                                <a href="#fullName">Enter your first name</a>
+                            </li>
+                        </ul>
+                        <ul class="govuk-list govuk-error-summary__list">
+                            <li>
+                                <a href="#lastName">Enter your last name</a>
                             </li>
                         </ul>
                     </div>
                 </div>
             </div>
 
-            <div class="govuk-form-group govuk-form-group--error">
+            <div class="govuk-form-group">
                 <fieldset class="govuk-fieldset">
                     <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
-                        <h1 class="govuk-label-wrapper">
-                            <!--<span class="govuk-caption-l">Question 4 of 4</span>-->
-                            <label class="govuk-label govuk-label--l" for="niNoinput">
-                                What is the patient’s National Insurance number?
-                            </label>
+                        <!--<span class="govuk-caption-l">Question 1 of 5</span>-->
+                        <h1 class="govuk-fieldset__heading">
+                            What is your name?
                         </h1>
                     </legend>
-                    <!--<legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
-                        <span class="govuk-caption-l"> Question 4 of 4</span>
-                        <h1 class="govuk-fieldset__heading">
-                            What is the patient’s National Insurance number?
-                        </h1>
-                    </legend>-->
 
-                    <!-- National Insurance number -->
-                    <div class="govuk-form-group">
-                        <div id="national-insurance-number-hint" class="govuk-hint">
-                            It is on their National Insurance card, benefit letter, payslip or P60. For example, 'QQ 12
-                            34 56 C'.
-                        </div>
-                        <label for="niNo" class="sr-only govuk-visually-hidden">What is the patient’s National Insurance
-                            number?</label>
+                    <!-- Full name -->
+                    <div class="govuk-form-group govuk-form-group--error">
+                        <label class="govuk-label" for="firstName">First name</label>
                         <!--ERROR LEGEND -->
-                        <p id="niNo-correct-error" class="govuk-error-message">
-                            <span class="govuk-visually-hidden">Error:</span> Enter a National Insurance
-                            number in the correct format
+                        <p id="fullName-error" class="govuk-error-message">
+                            <span class="govuk-visually-hidden">Error:</span> Enter your first name
                         </p>
-                        <input autocomplete="off" class="govuk-input govuk-input--width-10" id="niNoinput"
-                            name="niNoinput" type="text" spellcheck="false" autocomplete="off" value=" ">
+                        <!-- END ERROR -->
+                        <input class="govuk-input govuk-input--error" id="firstName" name="firstName" type="text"
+                            autocomplete="off">
                     </div>
+                    <div class="govuk-form-group govuk-form-group--error">
+                        <label class="govuk-label" for="lastName">Last name</label>
+                        <!--ERROR LEGEND -->
+                        <p id="lastName-error" class="govuk-error-message">
+                            <span class="govuk-visually-hidden">Error:</span> Enter your last name
+                        </p>
+                        <!-- END ERROR -->
+                        <input autocomplete="off" class="govuk-input govuk-input--error" id="lastName" name="lastName"
+                            type="text" spellcheck="false">
+                    </div>
+
                 </fieldset>
             </div>
 
             <!-- Submit button -->
             <div class="govuk-button-group">
-                <button id="" class="govuk-button" data-module="govuk-button" onclick="savenniNoSR1Formmvp03()">
+                <button id="" class="govuk-button" data-module="govuk-button"
+                    onclick="saveHCPNamemvp03(); resetChangeFn();">
                     Continue
                 </button>
                 <a class="govuk-link" onclick="saveAndLeave()" style="color:#1d70b8;"
                     aria-label="Return to SR1 form sections" href="#">Return to SR1 form sections</a>
             </div>
         </form>
+
         <div class="govuk-!-padding-bottom-6"></div>
 
         <!--Get help new-->
@@ -92,10 +98,10 @@ What is the patient’s National Insurance number? – Send an SR1 medical evide
 <script>
     // get and set in this order - this ensures what is sent in query is the same as what is in the localStorage
     const saveAndLeave = () => {
-        //savenniNoSR1Formmvp03();
+        saveHCPNamemvp03();
 
         const origin = window.location.origin;
-        const url = getUrlWithSR1DataAsQueryParamsmvp03(origin, "/hcp-e2e-journey-mvp03/sr1-form-sections-1-in-progress");
+        const url = getUrlWithSR1DataAsQueryParamsmvp03(origin, "/private-beta01/sr1-form-sections-3-completed");
 
         window.location.replace(url.toString());
     }
