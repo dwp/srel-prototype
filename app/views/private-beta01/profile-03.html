@@ -39,7 +39,7 @@ What is your professional registration number? – Send an SR1 medical evidence 
             <!-- Submit button -->
             <div class="govuk-button-group">
                 <button id="" class="govuk-button" data-module="govuk-button"
-                    onclick="saveHCPProfessionalNumbermvp03(); resetChangeFn();">
+                    onclick="saveHCPProfessionalNumberprivatebeta01(); resetChangeFn();">
                     Continue
                 </button>
                 <a class="govuk-link" onclick="saveAndLeave()" style="color:#1d70b8;"
@@ -69,10 +69,10 @@ What is your professional registration number? – Send an SR1 medical evidence 
 <script>
     // get and set in this order - this ensures what is sent in query is the same as what is in the localStorage
     const saveAndLeave = () => {
-        //saveHCPProfessionalNumbermvp03();
+        //saveHCPProfessionalNumberprivatebeta01();
 
         const origin = window.location.origin;
-        const url = getUrlWithSR1DataAsQueryParamsmvp03(origin, "/private-beta01/sr1-form-sections");
+        const url = getUrlWithSR1DataAsQueryParamsprivatebeta01(origin, "/private-beta01/sr1-form-sections");
 
         window.location.replace(url.toString());
     }

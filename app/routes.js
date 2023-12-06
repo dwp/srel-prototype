@@ -426,19 +426,6 @@ router.post('/hcp-e2e-journey-mvp03/signin-page/answer', function (req, res) {
   }
 })
 
-router.post('/beta01/signin-page/answer', function (req, res) {
-  var receiveReminder = req.session.data['organisationSignin']
-
-  // Check whether the variable matches a condition
-  if (receiveReminder == "NHS England"){
-    // Send user to next reminder page
-    res.redirect('/beta01/organisation-signin-page')
-  } else {
-    // Send user to the account dashboard page
-    res.redirect('/beta01/no-permission')
-  }
-})
-
 router.post('/hcp-e2e-journey-mvp03/cookies/answer', function (req, res) {
   var cookiesselection = req.session.data['google_analytics']
 
@@ -475,5 +462,102 @@ router.post('/hcp-e2e-journey-mvp03/cookies-accept/answer', function (req, res) 
   }  else {
     // Send user to cookies rejected page
     res.redirect('/hcp-e2e-journey-mvp03/cookies-reject')
+  }
+})
+
+router.post('/private-beta01/sr1-form-09-radio/answer', function (req, res) {
+  var otherRelevantDiagnosis = req.session.data['otherRelevantDiagnosis']
+
+  // Check whether the variable matches a condition
+  if (otherRelevantDiagnosis == "Yes"){
+    // Send user to next reminder page
+    res.redirect('/private-beta01/sr1-form-09-input')
+  } else {
+    // Send user to the account dashboard page
+    res.redirect('/private-beta01/sr1-form-10')
+  }
+})
+
+router.post('/private-beta01/sr1-form-05-radio/answer', function (req, res) {
+  var niNo = req.session.data['niNo']
+
+  // Check whether the variable matches a condition
+  if (niNo == "Yes"){
+    // Send user to next reminder page
+    res.redirect('/private-beta01/sr1-form-05-input')
+  } else {
+    // Send user to the account dashboard page
+    res.redirect('/private-beta01/sr1-form-sections');
+  }
+})
+
+router.post('/private-beta01/profile-02/answer', function (req, res) {
+  var yourRole = req.session.data['yourRole']
+
+  // Check whether the variable matches a condition
+  if (yourRole == "Other"){
+    // Send user to next reminder page
+    res.redirect('/private-beta01/profile-02-other')
+  } else {
+    // Send user to the account dashboard page
+    res.redirect('/private-beta01/profile-03');
+  }
+})
+
+router.post('/private-beta01/signin-page/answer', function (req, res) {
+  var receiveReminder = req.session.data['organisationSignin']
+
+  // Check whether the variable matches a condition
+  if (receiveReminder == "NHS England"){
+    // Send user to next reminder page
+    res.redirect('/private-beta01/organisation-signin-page')
+  } else if (receiveReminder == "NHS Scotland"){
+    // Send user to next reminder page
+    res.redirect('/private-beta01/no-permission-scotland')
+  } else if (receiveReminder == "NHS Wales"){
+    // Send user to next reminder page
+    res.redirect('/private-beta01/no-permission-wales')
+  } else {
+    // Send user to the account dashboard page
+    res.redirect('/private-beta01/no-permission-northern-ireland')
+  }
+})
+
+router.post('/private-beta01/cookies/answer', function (req, res) {
+  var cookiesselection = req.session.data['google_analytics']
+
+  // Check whether the variable matches a condition
+  if (cookiesselection == "yes"){
+    // Send user to cookie accepted page
+    res.redirect('/private-beta01/cookies-accept')
+  }  else {
+    // Send user to cookies rejected page
+    res.redirect('/private-beta01/cookies-reject')
+  }
+})
+
+router.post('/private-beta01/cookies-reject/answer', function (req, res) {
+  var cookiesselection = req.session.data['google_analytics']
+
+  // Check whether the variable matches a condition
+  if (cookiesselection == "yes"){
+    // Send user to cookie accepted page
+    res.redirect('/private-beta01/cookies-accept')
+  }  else {
+    // Send user to cookies rejected page
+    res.redirect('/private-beta01/cookies-reject')
+  }
+})
+
+router.post('/private-beta01/cookies-accept/answer', function (req, res) {
+  var cookiesselection = req.session.data['google_analytics']
+
+  // Check whether the variable matches a condition
+  if (cookiesselection == "yes"){
+    // Send user to cookie accepted page
+    res.redirect('/private-beta01/cookies-accept')
+  }  else {
+    // Send user to cookies rejected page
+    res.redirect('/private-beta01/cookies-reject')
   }
 })

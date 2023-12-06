@@ -63,7 +63,7 @@ What is the patient’s National Insurance number? – Send an SR1 medical evide
 
             <!-- Submit button -->
             <div class="govuk-button-group">
-                <button id="" class="govuk-button" data-module="govuk-button" onclick="savenniNoSR1Formmvp03()">
+                <button id="" class="govuk-button" data-module="govuk-button" onclick="savenniNoSR1Formprivatebeta01()">
                     Continue
                 </button>
                 <a class="govuk-link" onclick="saveAndLeave()" style="color:#1d70b8;"
@@ -92,10 +92,10 @@ What is the patient’s National Insurance number? – Send an SR1 medical evide
 <script>
     // get and set in this order - this ensures what is sent in query is the same as what is in the localStorage
     const saveAndLeave = () => {
-        //savenniNoSR1Formmvp03();
+        //savenniNoSR1Formprivatebeta01();
 
         const origin = window.location.origin;
-        const url = getUrlWithSR1DataAsQueryParamsmvp03(origin, "/private-beta01/sr1-form-sections-1-in-progress");
+        const url = getUrlWithSR1DataAsQueryParamsprivatebeta01(origin, "/private-beta01/sr1-form-sections");
 
         window.location.replace(url.toString());
     }

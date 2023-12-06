@@ -28,13 +28,13 @@ Do you have the patient’s National Insurance number? – Send an SR1 medical e
                         </div>
                         <div class="govuk-radios govuk-radios--inline" data-module="govuk-radios">
                             <div class="govuk-radios__item">
-                                <input class="govuk-radios__input" id="niNo-yes" name="niNo" type="radio" value="Yes" onclick="hcpmvp03HaveNiNo(this)">
+                                <input class="govuk-radios__input" id="niNo-yes" name="niNo" type="radio" value="Yes" onclick="privatebeta01HaveNiNo(this)">
                                 <label class="govuk-label govuk-radios__label" for="niNo-yes">
                                     Yes
                                 </label>
                             </div>
                             <div class="govuk-radios__item">
-                                <input class="govuk-radios__input" id="niNo-no" name="niNo" type="radio" value="Not provided" onclick="hcpmvp03HaveNiNo(this)">
+                                <input class="govuk-radios__input" id="niNo-no" name="niNo" type="radio" value="Not provided" onclick="privatebeta01HaveNiNo(this)">
                                 <label class="govuk-label govuk-radios__label" for="niNo-no">
                                     No
                                 </label>
@@ -47,7 +47,7 @@ Do you have the patient’s National Insurance number? – Send an SR1 medical e
 
             <!-- Submit button -->
             <div class="govuk-button-group">
-                <button id="" class="govuk-button" data-module="govuk-button" onclick="savenniNoradioSR1Formmvp03(); resetChangeFn();">
+                <button id="" class="govuk-button" data-module="govuk-button" onclick="savenniNoradioSR1Formprivatebeta01(); resetChangeFn();">
                     Continue
                 </button>
                 <a class="govuk-link" onclick="saveAndLeave()" style="color:#1d70b8;"
@@ -76,10 +76,10 @@ Do you have the patient’s National Insurance number? – Send an SR1 medical e
 
     // get and set in this order - this ensures what is sent in query is the same as what is in the localStorage
     const saveAndLeave = () => {
-        //savenniNoSR1Formmvp03();
+        //savenniNoSR1Formprivatebeta01();
 
         const origin = window.location.origin;
-        const url = getUrlWithSR1DataAsQueryParamsmvp03(origin, "/private-beta01/sr1-form-sections");
+        const url = getUrlWithSR1DataAsQueryParamsprivatebeta01(origin, "/private-beta01/sr1-form-sections");
 
         window.location.replace(url.toString());
     }

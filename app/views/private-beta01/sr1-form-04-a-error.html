@@ -106,10 +106,15 @@ Error: What is the patient’s address? – Send an SR1 medical evidence form �
 
       <!-- Submit button -->
       <div class="govuk-button-group">
-        <button id="" class="govuk-button" data-module="govuk-button" onclick="savePatientAddressSR1Formmvp03()">
+        <button id="" class="govuk-button" data-module="govuk-button" onclick="savePatientAddressSR1Formprivatebeta01()">
           Continue
         </button>
         <a class="govuk-link" onclick="saveAndLeave()" style="color:#1d70b8;" aria-label="Return to SR1 form sections" href="#">Return to SR1 form sections</a>
+      </div>
+      <div class="govuk-form-group">
+        <label class="govuk-label" for="find-patient-address"><a id="postcode-finder-link" class="govuk-link"
+            rel="external" href="/private-beta01/sr1-form-03">Find the patient’s address
+            manually</a></label>
       </div>
     </form>
 
@@ -135,10 +140,10 @@ Error: What is the patient’s address? – Send an SR1 medical evidence form �
 <script>
   // get and set in this order - this ensures what is sent in query is the same as what is in the localStorage
   const saveAndLeave = () => {
-    savePatientAddressSR1Formmvp03();
+    savePatientAddressSR1Formprivatebeta01();
 
     const origin = window.location.origin;
-    const url = getUrlWithSR1DataAsQueryParamsmvp03(origin, "/private-beta01/sr1-form-sections-1-in-progress");
+    const url = getUrlWithSR1DataAsQueryParamsprivatebeta01(origin, "/private-beta01/sr1-form-sections-1-in-progress");
 
     window
       .location

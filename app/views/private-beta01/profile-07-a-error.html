@@ -123,7 +123,7 @@ Error: What is your organisation’s address? Manual input – Send an SR1 medic
       <!-- Submit button -->
       <div class="govuk-button-group">
         <button id="" class="govuk-button" data-module="govuk-button"
-          onclick="saveHCPOrgAddressmvp03(); resetChangeFn();">
+          onclick="saveHCPOrgAddressprivatebeta01(); resetChangeFn();">
           Continue
         </button>
         <a class="govuk-link" onclick="saveAndLeave()" style="color:#1d70b8;" aria-label="Return to SR1 form sections"
@@ -154,10 +154,10 @@ Error: What is your organisation’s address? Manual input – Send an SR1 medic
 <script>
   // get and set in this order - this ensures what is sent in query is the same as what is in the localStorage
   const saveAndLeave = () => {
-    saveHCPOrgAddressmvp03();
+    saveHCPOrgAddressprivatebeta01();
 
     const origin = window.location.origin;
-    const url = getUrlWithSR1DataAsQueryParamsmvp03(origin, "/private-beta01/sr1-form-sections-4-in-progress");
+    const url = getUrlWithSR1DataAsQueryParamsprivatebeta01(origin, "/private-beta01/sr1-form-sections-4-in-progress");
 
     window
       .location
