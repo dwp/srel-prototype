@@ -72,7 +72,7 @@ Error: Does the patient have other relevant diagnoses? – Send an SR1 medical e
             <!-- Submit button -->
             <div class="govuk-button-group">
                 <button id="" class="govuk-button" data-module="govuk-button"
-                    onclick="saveOtherDiagnosisSR1Formmvp03()">Continue</button>
+                    onclick="saveOtherDiagnosisSR1Formprivatebeta01()">Continue</button>
                 <a class="govuk-link" onclick="saveAndLeave()" style="color:#1d70b8;"
                     aria-label="Return to SR1 form sections" href="#">Return to SR1 form sections</a>
             </div>
@@ -99,10 +99,10 @@ Error: Does the patient have other relevant diagnoses? – Send an SR1 medical e
 <script>
     // get and set in this order - this ensures what is sent in query is the same as what is in the localStorage
     const saveAndLeave = () => {
-        saveOtherDiagnosisSR1Formmvp03();
+        saveOtherDiagnosisSR1Formprivatebeta01();
 
         const origin = window.location.origin;
-        const url = getUrlWithSR1DataAsQueryParamsmvp03(origin, "/private-beta01/sr1-form-sections-2-in-progress");
+        const url = getUrlWithSR1DataAsQueryParamsprivatebeta01(origin, "/private-beta01/sr1-form-sections-2-in-progress");
 
         window
             .location

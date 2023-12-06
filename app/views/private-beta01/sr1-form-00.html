@@ -38,7 +38,7 @@
 
                 <!-- Submit button -->
                 <div class="govuk-button-group">
-                    <button id="" class="govuk-button" data-module="govuk-button" onclick="savePatientNameSR1Formmvp03()">
+                    <button id="" class="govuk-button" data-module="govuk-button" onclick="savePatientNameSR1Formprivatebeta01()">
                         Continue
                     </button>
                 </div>
@@ -63,7 +63,7 @@
     <script>
         // get and set in this order - this ensures what is sent in query is the same as what is in the localStorage
         const saveAndLeave = () => {
-            savePatientNameSR1Formmvp03();
+            savePatientNameSR1Formprivatebeta01();
 
             const origin = window.location.origin;
             const url = getUrlWithSR1DataAsQueryParams(origin, "/private-beta01/task-list-sr1-form");

@@ -1,7 +1,7 @@
 {% extends "layout-gov-reduced.html" %}
 
 {% block pageTitle %}
-What is the patient’s address? – Send an SR1 medical evidence form – GOV.UK
+Find the patient’s address – Send an SR1 medical evidence form – GOV.UK
 {% endblock %}
 
 {% block content %}
@@ -13,18 +13,28 @@ What is the patient’s address? – Send an SR1 medical evidence form – GOV.U
                     <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
                         <!--<span class="govuk-caption-l"> Question 3 of 4</span>-->
                         <h1 class="govuk-fieldset__heading">
-                            What is the patient’s address?
+                            Find the patient’s address
                         </h1>
                     </legend>
 
                     <!-- Patient postcode -->
                     <div class="govuk-form-group">
-                        <label class="govuk-label" for="patientPostcode">Enter a postcode.</label>
+                        <label class="govuk-label" for="patientPostcode">Postcode</label>
                         <div id="enter-a-postcode" class="gem-c-hint govuk-hint govuk-!-margin-bottom-3">
                             For example, SW1A 2AA.
                         </div>
                         <input aria-describedby="Enter a postcode" autocomplete="patientPostcode"
                             class="govuk-input govuk-input--width-10" id="patientPostcode" name="patientPostcode"
+                            type="text" spellcheck="false">
+                    </div>
+                    <!-- Building number -->
+                    <div class="govuk-form-group">
+                        <label class="govuk-label" for="buildingNumber">Building number or name</label>
+                        <div id="enter-building-number" class="gem-c-hint govuk-hint govuk-!-margin-bottom-3">
+                            For example, 15 or Prospect Cottage.
+                        </div>
+                        <input aria-describedby="Enter a postcode" autocomplete="patientBuilding"
+                            class="govuk-input govuk-input--width-10" id="patientBuilding" name="patientBuilding"
                             type="text" spellcheck="false">
                     </div>
                 </fieldset>
@@ -33,9 +43,12 @@ What is the patient’s address? – Send an SR1 medical evidence form – GOV.U
 
             <!-- Submit button -->
             <div class="govuk-button-group">
-                <button id="" class="govuk-button" data-module="govuk-button" onclick="savePostcodeSR1Formmvp03()">
+                <button id="" class="govuk-button" data-module="govuk-button"
+                    onclick="savePostcodeSR1Formprivatebeta01()">
                     Find address
                 </button>
+                <a class="govuk-link" onclick="saveAndLeave()" style="color:#1d70b8;"
+                    aria-label="Return to SR1 form sections" href="#">Return to SR1 form sections</a>
             </div>
             <!-- <p class="govuk-body"><a id="postcode-finder-link" class="govuk-link" rel="external" href="https://www.royalmail.com/find-a-postcode" target="_blank">Find a postcode on Royal Mail's postcode finder (open in a new tab)</a></p> -->
             <div class="govuk-form-group">
@@ -49,4 +62,18 @@ What is the patient’s address? – Send an SR1 medical evidence form – GOV.U
     </div>
 
 </div>
+
+<script>
+    // get and set in this order - this ensures what is sent in query is the same as what is in the localStorage
+    const saveAndLeave = () => {
+      //savePatientAddressSR1Formprivatebeta01();
+  
+      const origin = window.location.origin;
+      const url = getUrlWithSR1DataAsQueryParamsprivatebeta01(origin, "/private-beta01/sr1-form-sections");
+  
+      window
+        .location
+        .replace(url.toString());
+    }
+  </script>
 {% endblock %}

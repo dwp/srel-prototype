@@ -1,34 +1,73 @@
 {% extends "layout-gov-reduced.html" %}
 
 {% block pageTitle %}
-What is the patient’s address? Select an address
+Select the patient's address – Send an SR1 medical evidence form – GOV.UK
 {% endblock %}
 
 {% block content %}
 <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
-        <form id="sendAnSR1Form" action="/private-beta01/sr1-form-05" method="post">
-            <div class="govuk-form-group">
-                <fieldset class="govuk-fieldset">
-                    <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
-                        <!--<span class="govuk-caption-l"> Question 3 of 4</span>-->
-                        <h1 class="govuk-fieldset__heading">
-                            What is the patient’s address?
-                        </h1>
-                    </legend>
+        <form id="sendAnSR1Form" action="/private-beta01/sr1-form-04-b" method="post">
+            <div class="govuk-width-container">
+                <p>6 addresses found for <b>SU1 5AS</b> and <b>17</b>. <a href="/private-beta01/sr1-form-03">Search again</a></p>
+                <div class="govuk-form-group">
+                    <fieldset class="govuk-fieldset">
+                        <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+                            <h1 class="govuk-fieldset__heading">
+                                Select an address
+                            </h1>
+                        </legend>
+                        <div class="govuk-radios" data-module="govuk-radios">
+                            <div class="govuk-radios__item">
+                                <input class="govuk-radios__input" id="select-an-address" name="select-an-address"
+                                    type="radio" value="1 Richmond Road, Staines-upon-Thames, SU1 5AS">
+                                <label class="govuk-label govuk-radios__label" for="select-an-address">
+                                    17 Richmond Road, Staines-upon-Thames, SU1 5AS
+                                </label>
+                            </div>
+                            <div class="govuk-radios__item">
+                                <input class="govuk-radios__input" id="select-an-address-2" name="select-an-address"
+                                    type="radio" value="10 Richmond Road, Staines-upon-Thames, SU1 5AS">
+                                <label class="govuk-label govuk-radios__label" for="select-an-address-2">
+                                    170 Richmond Road, Staines-upon-Thames, SU1 5AS
+                                </label>
+                            </div>
+                            <div class="govuk-radios__item">
+                                <input class="govuk-radios__input" id="select-an-address-3" name="select-an-address"
+                                    type="radio" value="11 Richmond Road, Staines-upon-Thames, SU1 5AS">
+                                <label class="govuk-label govuk-radios__label" for="select-an-address-3">
+                                    171 Richmond Road, Staines-upon-Thames, SU1 5AS
+                                </label>
+                            </div>
+                            <div class="govuk-radios__item">
+                                <input class="govuk-radios__input" id="select-an-address-4" name="select-an-address"
+                                    type="radio" value="101 Richmond Road, Staines-upon-Thames, SU1 5AS">
+                                <label class="govuk-label govuk-radios__label" for="select-an-address-4">
+                                    172 Richmond Road, Staines-upon-Thames, SU1 5AS
+                                </label>
+                            </div>
+                            <div class="govuk-radios__item">
+                                <input class="govuk-radios__input" id="select-an-address-5" name="select-an-address"
+                                    type="radio" value="101 Richmond Road, Staines-upon-Thames, SU1 5AS">
+                                <label class="govuk-label govuk-radios__label" for="select-an-address-5">
+                                    173 Richmond Road, Staines-upon-Thames, SU1 5AS
+                                </label>
+                            </div>
+                            <div class="govuk-radios__item">
+                                <input class="govuk-radios__input" id="select-an-address-6" name="select-an-address"
+                                    type="radio" value="101 Richmond Road, Staines-upon-Thames, SU1 5AS">
+                                <label class="govuk-label govuk-radios__label" for="select-an-address-6">
+                                    174 Richmond Road, Staines-upon-Thames, SU1 5AS
+                                </label>
+                            </div>
+                        </div>
+                        <!--<label class="govuk-label" for="patientPostcode">Postcode</label>-->
 
-                    <!-- Patient postcode -->
-                    <div class="govuk-form-group">
-                        <label class="govuk-label" for="patientPostcode">Postcode</label>
-                        <span id="patientPostcode" class="govuk-heading-s govuk-!-margin-top-0"></span>
-                        <div class="govuk-button-group govuk-!-margin-top-0" id="patientPostcode">
+                        <!--<div class="govuk-button-group govuk-!-margin-top-0" id="patientPostcode">
                             <a id="postcode-finder-link" class="govuk-link" rel="external"
                                 href="/private-beta01/sr1-form-03">Change postcode</a>
-                        </div>
-                        <!--
-                        <div class="govuk-heading-s govuk-!-margin-top-0" id="patientPostcode">SE1 ABC&nbsp;&nbsp;&nbsp;<a id="postcode-finder-link" style="text-indent:4em" class="govuk-link" rel="external" href="/private-beta01/sr1-form-02">Change</a></div>-->
-                    </div>
-                    <div class="govuk-form-group">
+                        </div>-->
+                        <!--<div class="govuk-form-group">
                         <label class="govuk-label" for="patientaddressline1">
                             Select an address
                         </label>
@@ -39,32 +78,30 @@ What is the patient’s address? Select an address
                                 86 Claremont Cove, Glenrothes</option>
                             <option class="govuk-select" id="patientaddressline1" type="text" value="88 Claremont Cove">
                                 88 Claremont Cove, Glenrothes</option>
-                        </select>
-                    </div>
-                    <div class="govuk-form-group">
-                        <label class="govuk-label" for="cannot-find-address">
-                            <a id="postcode-finder-link" class="govuk-link" rel="external"
-                                href="/private-beta01/sr1-form-04-a">I cannot find the address on the list</a>
-                        </label>
-                    </div>
-                </fieldset>
-            </div>
+                        </select>-->
+                    </fieldset>
+                </div>
 
-            <!-- Submit button -->
-            <div class="govuk-button-group">
-                <button id="" class="govuk-button" data-module="govuk-button" onclick="save()">Continue</button>
+                <!-- Submit button -->
+                <div class="govuk-button-group">
+                    <button id="" class="govuk-button" data-module="govuk-button" onclick="save()">Use this address</button>
+                    <a class="govuk-link" onclick="saveAndLeave()" style="color:#1d70b8;" aria-label="Return to SR1 form sections">Return to SR1 form sections</a>
+                </div>
+                <div class="govuk-form-group">
+                    <label class="govuk-label" for="enter-address-manually"><a id="postcode-finder-link" class="govuk-link"
+                            rel="external" href="/private-beta01/sr1-form-04-a">Enter the patient’s address
+                            manually</a></label>
+                </div>
             </div>
         </form>
         <div class="govuk-!-padding-bottom-6"></div>
-        
+
         <!--Get help new-->
         <hr class="govuk-section-break govuk-section-break--visible" aria-hidden="true">
         <section class="govuk-width-container govuk-!-margin-top-7 govuk-!-margin-bottom-7 ">
             <div class="govuk-grid-row">
                 <div class="govuk-grid-column-full">
                     <h2 class="govuk-heading-m">Get help</h2>
-                    <!--<p class="govuk-body">You can email for technical support, such as accessing the service.</p>
-              <p class="govuk-body">We cannot discuss specific patients or how to complete the SR1 form, so please do not give personal details.</p>-->
                     <p class="govuk-body">Email: <a class="govuk-link"
                             href="mailto:sr1.forms@dwp.gov.uk">sr1.forms@dwp.gov.uk</a></p>
                     <p class="govuk-body">We aim to respond within 5 working days.</p>
@@ -76,26 +113,16 @@ What is the patient’s address? Select an address
 </div>
 
 <script>
-    const save = () => {
-        var e = document.getElementById('patientaddressline1');
-        var value = e.value;
-
-        if (value.includes('86')) {
-            savePatientAddressWithParametersSR1Formmvp03('86 Claremont Cove', '', 'Glenrothes', 'SE1 ABC');
-        } else {
-            savePatientAddressWithParametersSR1Formmvp03('88 Claremont Cove', '', 'Glenrothes', 'SE1 ABC');
-        }
-    }
     // get and set in this order - this ensures what is sent in query is the same as what is in the localStorage
     const saveAndLeave = () => {
-        save();
-
-        const origin = window.location.origin;
-        const url = getUrlWithSR1DataAsQueryParamsmvp03(origin, "/private-beta01/task-list-sr1-form");
-
-        window
-            .location
-            .replace(url.toString());
+      //savePatientAddressSR1Formprivatebeta01();
+  
+      const origin = window.location.origin;
+      const url = getUrlWithSR1DataAsQueryParamsprivatebeta01(origin, "/private-beta01/sr1-form-sections");
+  
+      window
+        .location
+        .replace(url.toString());
     }
-</script>
+  </script>
 {% endblock %}

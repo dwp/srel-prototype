@@ -48,35 +48,35 @@ Error: What is your role? – Send an SR1 medical evidence form – GOV.UK
                         <div id="roleOptions" class="govuk-radios" data-module="govuk-radios">
                             <div class="govuk-radios__item">
                                 <input class="govuk-radios__input" id="gp" name="yourRole" type="radio"
-                                    value="General Practitioner" onclick="hcpmvp03RoleFn(this)">
+                                    value="General Practitioner" onclick="privatebeta01RoleFn(this)">
                                 <label class="govuk-label govuk-radios__label" for="gp">
                                     General practitioner
                                 </label>
                             </div>
                             <div class="govuk-radios__item">
                                 <input class="govuk-radios__input" id="hospitalConsultant" name="yourRole" type="radio"
-                                    value="Hospital consultant" onclick="hcpmvp03RoleFn(this)">
+                                    value="Hospital consultant" onclick="privatebeta01RoleFn(this)">
                                 <label class="govuk-label govuk-radios__label" for="hospitalConsultant">
                                     Consultant
                                 </label>
                             </div>
                             <div class="govuk-radios__item">
                                 <input class="govuk-radios__input" id="specialistDoctor" name="yourRole" type="radio"
-                                    value="Specialist doctor" onclick="hcpmvp03RoleFn(this)">
+                                    value="Specialist doctor" onclick="privatebeta01RoleFn(this)">
                                 <label class="govuk-label govuk-radios__label" for="specialistDoctor">
                                     Specialty doctor
                                 </label>
                             </div>
                             <div class="govuk-radios__item">
                                 <input class="govuk-radios__input" id="hospiceDoctor" name="yourRole" type="radio"
-                                    value="Hospice doctor" onclick="hcpmvp03RoleFn(this)">
+                                    value="Hospice doctor" onclick="privatebeta01RoleFn(this)">
                                 <label class="govuk-label govuk-radios__label" for="hospiceDoctor">
                                     Hospice doctor
                                 </label>
                             </div>
                             <div class="govuk-radios__item">
                                 <input class="govuk-radios__input" id="seniorSpecialistNurse" name="yourRole"
-                                    type="radio" value="Senior specialist nurse" onclick="hcpmvp03RoleFn(this)">
+                                    type="radio" value="Senior specialist nurse" onclick="privatebeta01RoleFn(this)">
                                 <label class="govuk-label govuk-radios__label" for="seniorSpecialistNurse"
                                     aria-describedby="seniorSpecialistNurse-hint">
                                     Senior specialist nurse
@@ -89,7 +89,7 @@ Error: What is your role? – Send an SR1 medical evidence form – GOV.UK
                                 <div class="govuk-radios__divider">or</div> -->
                             <div class="govuk-radios__item">
                                 <input class="govuk-radios__input" id="other" name="yourRole" type="radio" value="other"
-                                    data-aria-controls="conditional-role" onclick="hcpmvp03RoleFn(this)">
+                                    data-aria-controls="conditional-role" onclick="privatebeta01RoleFn(this)">
                                 <label class="govuk-label govuk-radios__label" for="other">
                                     Other
                                 </label>
@@ -113,7 +113,7 @@ Error: What is your role? – Send an SR1 medical evidence form – GOV.UK
             <!-- Submit button -->
             <div class="govuk-button-group">
                 <button id="" class="govuk-button" data-module="govuk-button"
-                    onclick="saveRolemvp03(); resetChangeFn();">
+                    onclick="saveRoleprivatebeta01(); resetChangeFn();">
                     Continue
                 </button>
                 <a class="govuk-link" onclick="saveAndLeave()" style="color:#1d70b8;"
@@ -144,10 +144,10 @@ Error: What is your role? – Send an SR1 medical evidence form – GOV.UK
 <script>
     // get and set in this order - this ensures what is sent in query is the same as what is in the localStorage
     const saveAndLeave = () => {
-        saveRolemvp03();
+        saveRoleprivatebeta01();
 
         const origin = window.location.origin;
-        const url = getUrlWithSR1DataAsQueryParamsmvp03(origin, "/private-beta01/sr1-form-sections-4-in-progress");
+        const url = getUrlWithSR1DataAsQueryParamsprivatebeta01(origin, "/private-beta01/sr1-form-sections-4-in-progress");
 
         window.location.replace(url.toString());
     }

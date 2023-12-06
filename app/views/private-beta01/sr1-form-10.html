@@ -66,9 +66,9 @@ Is the patient aware of their diagnosis? â€“ Send an SR1 medical evidence form â
 <script>
     const save = () => {
         if (document.getElementById('awareOfDiagnosisYes').checked) {
-            hcpmvp03AwareOfDiagnosis(true);
+            privatebeta01AwareOfDiagnosis(true);
         } else if (document.getElementById('awareOfDiagnosisNo').checked) {
-            hcpmvp03AwareOfDiagnosis(false);
+            privatebeta01AwareOfDiagnosis(false);
         }
     }
 
@@ -77,7 +77,7 @@ Is the patient aware of their diagnosis? â€“ Send an SR1 medical evidence form â
         save();
 
         const origin = window.location.origin;
-        const url = getUrlWithSR1DataAsQueryParamsmvp03(origin, "/private-beta01/sr1-form-sections");
+        const url = getUrlWithSR1DataAsQueryParamsprivatebeta01(origin, "/private-beta01/sr1-form-sections");
         console.log(url);
 
         window
@@ -86,7 +86,7 @@ Is the patient aware of their diagnosis? â€“ Send an SR1 medical evidence form â
     }
 
     const checkValue = () => {
-        const isPatientAwareOfDiagnosis = localStorage.getItem('hcpmvp03AwareOfDiagnosis');
+        const isPatientAwareOfDiagnosis = localStorage.getItem('privatebeta01AwareOfDiagnosis');
         console.log({ aware: isPatientAwareOfDiagnosis });
         if (isPatientAwareOfDiagnosis === undefined) {
             //dont set anything
