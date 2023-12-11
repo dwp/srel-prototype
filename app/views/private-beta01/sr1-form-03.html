@@ -1,4 +1,4 @@
-{% extends "layout-gov-reduced.html" %}
+{% extends "layout-gov-signed-in-private-beta01.html" %}
 
 {% block pageTitle %}
 Find the patient’s address – Send an SR1 medical evidence form – GOV.UK
@@ -53,11 +53,25 @@ Find the patient’s address – Send an SR1 medical evidence form – GOV.UK
             <!-- <p class="govuk-body"><a id="postcode-finder-link" class="govuk-link" rel="external" href="https://www.royalmail.com/find-a-postcode" target="_blank">Find a postcode on Royal Mail's postcode finder (open in a new tab)</a></p> -->
             <div class="govuk-form-group">
                 <label class="govuk-label" for="cannot-find-address"><a id="postcode-finder-link" class="govuk-link"
-                        rel="external" href="/private-beta01/sr1-form-04-a">Enter your patient’s address
+                        rel="external" href="/private-beta01/sr1-form-04-a">Enter the patient’s address
                         manually</a></label>
             </div>
         </form>
         <div class="govuk-!-padding-bottom-6"></div>
+
+        <!--Get help new-->
+        <hr class="govuk-section-break govuk-section-break--visible" aria-hidden="true">
+        <section class="govuk-width-container govuk-!-margin-top-7 govuk-!-margin-bottom-7 ">
+            <div class="govuk-grid-row">
+                <div class="govuk-grid-column-full">
+                    <h2 class="govuk-heading-m">Get help</h2>
+                    <p class="govuk-body">Email: <a class="govuk-link"
+                            href="mailto:sr1.forms@dwp.gov.uk">sr1.forms@dwp.gov.uk</a>
+                    </p>
+                    <p class="govuk-body">We aim to respond within 5 working days.</p>
+                </div>
+            </div>
+        </section>
 
     </div>
 
@@ -66,14 +80,14 @@ Find the patient’s address – Send an SR1 medical evidence form – GOV.UK
 <script>
     // get and set in this order - this ensures what is sent in query is the same as what is in the localStorage
     const saveAndLeave = () => {
-      //savePatientAddressSR1Formprivatebeta01();
-  
-      const origin = window.location.origin;
-      const url = getUrlWithSR1DataAsQueryParamsprivatebeta01(origin, "/private-beta01/sr1-form-sections");
-  
-      window
-        .location
-        .replace(url.toString());
+        //savePatientAddressSR1Formprivatebeta01();
+
+        const origin = window.location.origin;
+        const url = getUrlWithSR1DataAsQueryParamsprivatebeta01(origin, "/private-beta01/sr1-form-sections");
+
+        window
+            .location
+            .replace(url.toString());
     }
-  </script>
+</script>
 {% endblock %}

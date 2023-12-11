@@ -1,7 +1,7 @@
 {% extends "layout-gov-signed-in-private-beta01.html" %}
 
 {% block pageTitle %}
-Confirm the patient's address – Send an SR1 medical evidence form – GOV.UK
+Patient address not found – Send an SR1 medical evidence form – GOV.UK
 {% endblock %}
 
 {% block content %}
@@ -11,21 +11,15 @@ Confirm the patient's address – Send an SR1 medical evidence form – GOV.UK
             <div class="govuk-width-container">
                 <div class="govuk-form-group">
                     <h1 class="govuk-heading-l">
-                        Confirm the patient's address
+                        Patient address not found
                     </h1>
-                    <p>6 addresses found for <b>SU1 5AS</b> and <b>17</b>. <a href="/private-beta01/sr1-form-03">Search again</a></p>
-                    <div class="govuk-inset-text">
-                        17 Richmond Road<br>Staines-upon-Thames<br>SU1 5AS
-                    </div>
+                    <p>We could not find an address that matches <b>SU1 5AS</b> and <b>17</b>. You can search again or enter the address manually.</p>
                 </div>
 
-                <!-- Submit button -->
-                <div class="govuk-button-group">
-                    <button id="" class="govuk-button" data-module="govuk-button" onclick="save()">Use this address</button>
-                </div>
+                <!-- Action button -->
                 <div class="govuk-form-group">
                     <label class="govuk-label" for="use-different-address"><a id="different-address-link" class="govuk-link"
-                            rel="external" href="/private-beta01/sr1-form-04">Use a different address</a></label>
+                            rel="external" href="/private-beta01/sr1-form-03">Search again</a></label>
                 </div>
                 <div class="govuk-form-group">
                     <label class="govuk-label" for="cannot-find-address"><a id="postcode-finder-link" class="govuk-link"
