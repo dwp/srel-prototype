@@ -1,28 +1,42 @@
-{% extends "layout-gov-reduced.html" %}
+{% extends "layout-gov-signed-in-private-beta01.html" %}
 
 {% block pageTitle %}
-Create your profile
+Find your organisation’s address – Send an SR1 medical evidence form – GOV.UK
 {% endblock %}
 
 {% block content %}
 <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
-
-        <form id="profileSetupPage" name="profileDetails" action="/private-beta01/profile-07-a" method="post">
+        <form id="profileSetupPage" name="profileDetails" action="/private-beta01/profile-06" method="post">
             <div class="govuk-form-group">
                 <fieldset class="govuk-fieldset">
-                    <legend class="govuk-fieldset__legend govuk-fieldset__legend--l" for="organisationName">
-                        <!--<span class="govuk-caption-l">Section 5 of 6</span>-->
+                    <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+                        <!--<span class="govuk-caption-l"> Question 3 of 4</span>-->
                         <h1 class="govuk-fieldset__heading">
-                            What is the name of the organisation where you work?
+                            Find your organisation’s address
                         </h1>
                     </legend>
-                    <div id="organisationName-hint" class="govuk-hint">This could be your Trust, Clinical Commissioning
-                        Group (CCG), or surgery. </div>
-                    <input class="govuk-input govuk-input--width-20" id="organisationName" name="organisationName"
-                        type="text" autocomplete="off">
 
-
+                    <!-- Organisation postcode -->
+                    <div class="govuk-form-group">
+                        <label class="govuk-label" for="organisationPostcode">Postcode</label>
+                        <div id="enter-a-postcode" class="gem-c-hint govuk-hint govuk-!-margin-bottom-3">
+                            For example, SW1A 2AA.
+                        </div>
+                        <input aria-describedby="Enter a postcode" autocomplete="organisationPostcode"
+                            class="govuk-input govuk-input--width-10" id="organisationPostcode" name="organisationPostcode"
+                            type="text" spellcheck="false">
+                    </div>
+                    <!-- Building number -->
+                    <div class="govuk-form-group">
+                        <label class="govuk-label" for="OrgbuildingNumber">Building number or name</label>
+                        <div id="enter-building-number" class="gem-c-hint govuk-hint govuk-!-margin-bottom-3">
+                            For example, 15 or Prospect Cottage.
+                        </div>
+                        <input aria-describedby="Enter a postcode" autocomplete="organisationBuilding"
+                            class="govuk-input govuk-input--width-10" id="organisationBuilding" name="organisationBuilding"
+                            type="text" spellcheck="false">
+                    </div>
                 </fieldset>
             </div>
 
@@ -32,6 +46,13 @@ Create your profile
                     onclick="saveOrgNameprivatebeta01(); resetChangeFn();">
                     Continue
                 </button>
+                <a class="govuk-link" onclick="saveAndLeave()" style="color:#1d70b8;"
+                    aria-label="Return to SR1 form sections" href="#">Return to SR1 form sections</a>
+            </div>
+            <div class="govuk-form-group">
+                <label class="govuk-label" for="cannot-find-address"><a id="postcode-finder-link" class="govuk-link"
+                        rel="external" href="/private-beta01/profile-07-a">Enter the organisation's address
+                        manually</a></label>
             </div>
         </form>
 
@@ -53,4 +74,15 @@ Create your profile
     </div>
 
 </div>
+
+<script>
+    // get and set in this order - this ensures what is sent in query is the same as what is in the localStorage
+    const saveAndLeave = () => {
+
+        const origin = window.location.origin;
+        const url = getUrlWithSR1DataAsQueryParamsprivatebeta01(origin, "/private-beta01/sr1-form-sections");
+
+        window.location.replace(url.toString());
+    }
+</script>
 {% endblock %}

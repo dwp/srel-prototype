@@ -1,4 +1,4 @@
-{% extends "layout-gov-reduced.html" %}
+{% extends "layout-gov-signed-in-private-beta01.html" %}
 
 {% block pageTitle %}
 Select the patient's address – Send an SR1 medical evidence form – GOV.UK
@@ -14,49 +14,49 @@ Select the patient's address – Send an SR1 medical evidence form – GOV.UK
                     <fieldset class="govuk-fieldset">
                         <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
                             <h1 class="govuk-fieldset__heading">
-                                Select an address
+                                Select the patient's address
                             </h1>
                         </legend>
                         <div class="govuk-radios" data-module="govuk-radios">
                             <div class="govuk-radios__item">
-                                <input class="govuk-radios__input" id="select-an-address" name="select-an-address"
-                                    type="radio" value="1 Richmond Road, Staines-upon-Thames, SU1 5AS">
-                                <label class="govuk-label govuk-radios__label" for="select-an-address">
+                                <input class="govuk-radios__input" id="17" name="selectpatientaddress"
+                                    type="radio" value="17 Richmond Road, Staines-upon-Thames, SU1 5AS" onclick="privatebeta01PatientAddressFn(this)">
+                                <label class="govuk-label govuk-radios__label" for="17">
                                     17 Richmond Road, Staines-upon-Thames, SU1 5AS
                                 </label>
                             </div>
                             <div class="govuk-radios__item">
-                                <input class="govuk-radios__input" id="select-an-address-2" name="select-an-address"
-                                    type="radio" value="10 Richmond Road, Staines-upon-Thames, SU1 5AS">
-                                <label class="govuk-label govuk-radios__label" for="select-an-address-2">
+                                <input class="govuk-radios__input" id="170" name="selectpatientaddress"
+                                    type="radio" value="170 Richmond Road, Staines-upon-Thames, SU1 5AS" onclick="privatebeta01PatientAddressFn(this)">
+                                <label class="govuk-label govuk-radios__label" for="170">
                                     170 Richmond Road, Staines-upon-Thames, SU1 5AS
                                 </label>
                             </div>
                             <div class="govuk-radios__item">
-                                <input class="govuk-radios__input" id="select-an-address-3" name="select-an-address"
-                                    type="radio" value="11 Richmond Road, Staines-upon-Thames, SU1 5AS">
-                                <label class="govuk-label govuk-radios__label" for="select-an-address-3">
+                                <input class="govuk-radios__input" id="171" name="selectpatientaddress"
+                                    type="radio" value="171 Richmond Road, Staines-upon-Thames, SU1 5AS" onclick="privatebeta01PatientAddressFn(this)">
+                                <label class="govuk-label govuk-radios__label" for="171">
                                     171 Richmond Road, Staines-upon-Thames, SU1 5AS
                                 </label>
                             </div>
                             <div class="govuk-radios__item">
-                                <input class="govuk-radios__input" id="select-an-address-4" name="select-an-address"
-                                    type="radio" value="101 Richmond Road, Staines-upon-Thames, SU1 5AS">
-                                <label class="govuk-label govuk-radios__label" for="select-an-address-4">
+                                <input class="govuk-radios__input" id="172" name="selectpatientaddress"
+                                    type="radio" value="172 Richmond Road, Staines-upon-Thames, SU1 5AS" onclick="privatebeta01PatientAddressFn(this)">
+                                <label class="govuk-label govuk-radios__label" for="172">
                                     172 Richmond Road, Staines-upon-Thames, SU1 5AS
                                 </label>
                             </div>
                             <div class="govuk-radios__item">
-                                <input class="govuk-radios__input" id="select-an-address-5" name="select-an-address"
-                                    type="radio" value="101 Richmond Road, Staines-upon-Thames, SU1 5AS">
-                                <label class="govuk-label govuk-radios__label" for="select-an-address-5">
+                                <input class="govuk-radios__input" id="173" name="selectpatientaddress"
+                                    type="radio" value="173 Richmond Road, Staines-upon-Thames, SU1 5AS" onclick="privatebeta01PatientAddressFn(this)">
+                                <label class="govuk-label govuk-radios__label" for="173">
                                     173 Richmond Road, Staines-upon-Thames, SU1 5AS
                                 </label>
                             </div>
                             <div class="govuk-radios__item">
-                                <input class="govuk-radios__input" id="select-an-address-6" name="select-an-address"
-                                    type="radio" value="101 Richmond Road, Staines-upon-Thames, SU1 5AS">
-                                <label class="govuk-label govuk-radios__label" for="select-an-address-6">
+                                <input class="govuk-radios__input" id="174" name="selectpatientaddress"
+                                    type="radio" value="174 Richmond Road, Staines-upon-Thames, SU1 5AS" onclick="privatebeta01PatientAddressFn(this)">
+                                <label class="govuk-label govuk-radios__label" for="174">
                                     174 Richmond Road, Staines-upon-Thames, SU1 5AS
                                 </label>
                             </div>
@@ -84,12 +84,12 @@ Select the patient's address – Send an SR1 medical evidence form – GOV.UK
 
                 <!-- Submit button -->
                 <div class="govuk-button-group">
-                    <button id="" class="govuk-button" data-module="govuk-button" onclick="save()">Use this address</button>
+                    <button id="" class="govuk-button" data-module="govuk-button" onclick="saveAddressprivatebeta01(); resetChangeFn();">Use this address</button>
                     <a class="govuk-link" onclick="saveAndLeave()" style="color:#1d70b8;" aria-label="Return to SR1 form sections">Return to SR1 form sections</a>
                 </div>
                 <div class="govuk-form-group">
-                    <label class="govuk-label" for="enter-address-manually"><a id="postcode-finder-link" class="govuk-link"
-                            rel="external" href="/private-beta01/sr1-form-04-a">Enter the patient’s address
+                    <label class="govuk-label" for="cannot-find-address"><a id="postcode-finder-link" class="govuk-link"
+                            rel="external" onclick="enterAddressManually()" href="/private-beta01/sr1-form-04-a">Enter the patient’s address
                             manually</a></label>
                 </div>
             </div>

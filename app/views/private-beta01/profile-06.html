@@ -1,13 +1,14 @@
-{% extends "layout-gov-reduced.html" %}
+{% extends "layout-gov-signed-in-private-beta01.html" %}
 
 {% block pageTitle %}
-Create your profile
+What is your organisation’s address? – Send an SR1 medical evidence form – GOV.UK
 {% endblock %}
 
 {% block content %}
 <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
         <form id="profileSetupPage" name="profileDetails" action="/private-beta01/profile-07" method="post">
+            <p>2 addresses found for <b>TW1 3AA</b>. <a href="/private-beta01/profile-05">Search again</a></p>
             <div class="govuk-form-group">
                 <fieldset class="govuk-fieldset">
                     <legend class="govuk-fieldset__legend govuk-fieldset__legend--l" for="postcode">
@@ -16,26 +17,35 @@ Create your profile
                             What is your organisation’s address?
                         </h1>
                     </legend>
-
-                    <!-- Patient postcode -->
-                    <div class="govuk-form-group">
-                        <label class="govuk-label" for="postcode">Enter your organisation’s postcode.</label>
-                        <div id="hint-76b66975" class="gem-c-hint govuk-hint govuk-!-margin-bottom-3">
-                            For example, SW6 2AA.
+                    <div class="govuk-radios" data-module="govuk-radios">
+                        <div class="govuk-radios__item">
+                            <input class="govuk-radios__input" id="AshfordHealthClinic" name="selectorganisationaddress"
+                                type="radio" value="Ashford Health Clinic, London Road, Ashford TW1 3AA"
+                                onclick="privatebeta01OrganisationAddressFn(this)">
+                            <label class="govuk-label govuk-radios__label" for="AshfordHealthClinic">
+                                Ashford Health Clinic, London Road, Ashford TW1 3AA
+                            </label>
                         </div>
-                        <input class="govuk-input govuk-input--width-10" id="postcode" name="postcode" type="text"
-                            autocomplete="off">
+                        <div class="govuk-radios__item">
+                            <input class="govuk-radios__input" id="TheAshfordRam" name="selectorganisationaddress"
+                                type="radio" value="The Ashford Ram, London Road, Ashford TW1 3AA"
+                                onclick="privatebeta01OrganisationAddressFn(this)">
+                            <label class="govuk-label govuk-radios__label" for="TheAshfordRam">
+                                The Ashford Ram, London Road, Ashford TW1 3AA
+                            </label>
+                        </div>
                     </div>
                 </fieldset>
             </div>
 
-
             <!-- Submit button -->
             <div class="govuk-button-group">
                 <button id="" class="govuk-button" data-module="govuk-button"
-                    onclick="saveOrgPostcodeprivatebeta01(); resetChangeFn();">
-                    Find address
+                    onclick="saveOrgAddressprivatebeta01(); resetChangeFn();">
+                    Use this address
                 </button>
+                <a class="govuk-link" onclick="saveAndLeave()" style="color:#1d70b8;"
+                    aria-label="Return to SR1 form sections">Return to SR1 form sections</a>
             </div>
             <!-- <p class="govuk-body"><a id="postcode-finder-link" class="govuk-link" rel="external" href="https://www.royalmail.com/find-a-postcode" target="_blank">Find a postcode on Royal Mail's postcode finder (open in a new tab)</a></p> -->
             <div class="govuk-form-group">
@@ -60,7 +70,19 @@ Create your profile
         </section>
 
     </div>
-
-
 </div>
+
+<script>
+    // get and set in this order - this ensures what is sent in query is the same as what is in the localStorage
+    const saveAndLeave = () => {
+        //savePatientAddressSR1Formprivatebeta01();
+
+        const origin = window.location.origin;
+        const url = getUrlWithSR1DataAsQueryParamsprivatebeta01(origin, "/private-beta01/sr1-form-sections");
+
+        window
+            .location
+            .replace(url.toString());
+    }
+</script>
 {% endblock %}
