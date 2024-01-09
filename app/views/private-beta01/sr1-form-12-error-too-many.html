@@ -94,10 +94,10 @@ Error: Give details of the clinical features that indicate a severe progressive 
 <script>
     // get and set in this order - this ensures what is sent in query is the same as what is in the localStorage
     const saveAndLeave = () => {
-        saveClinicalFeaturesSR1Formprivatebeta01();
+        //saveClinicalFeaturesSR1Formprivatebeta01();
 
         const origin = window.location.origin;
-        const url = getUrlWithSR1DataAsQueryParamsprivatebeta01(origin, "/private-beta01/sr1-form-sections-2-completed");
+        const url = getUrlWithSR1DataAsQueryParamsprivatebeta01(origin, "/private-beta01/sr1-form-sections");
 
         window.location.replace(url.toString());
     }

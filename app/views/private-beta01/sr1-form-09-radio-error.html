@@ -114,20 +114,20 @@ Error: Does the patient have other relevant diagnoses? – Send an SR1 medical e
 </div>
 
 <script>
+    //const saveOtherDiagnosisradioSR1Formprivatebeta01 = () => {
+    //    if (document.getElementById('otherRelevantDiagnosis-yes').checked) {
+    //        localStorage.setItem('privatebeta01OtherRelevantDiagnosis', ' ');
+    //    } else if (document.getElementById('otherRelevantDiagnosis-no').checked) {
+    //        localStorage.setItem('privatebeta01OtherRelevantDiagnosis', 'Not provided');
+    //    }
+    //}
+
     // get and set in this order - this ensures what is sent in query is the same as what is in the localStorage
-    const saveOtherDiagnosisradioSR1Formprivatebeta01 = () => {
-        if (document.getElementById('otherRelevantDiagnosis-yes').checked) {
-            localStorage.setItem('privatebeta01OtherRelevantDiagnosis', ' ');
-        } else if (document.getElementById('otherRelevantDiagnosis-no').checked) {
-            localStorage.setItem('privatebeta01OtherRelevantDiagnosis', 'Not provided');
-        }
-    }
-    
     const saveAndLeave = () => {
         //saveOtherDiagnosisSR1Formprivatebeta01();
 
         const origin = window.location.origin;
-        const url = getUrlWithSR1DataAsQueryParamsprivatebeta01(origin, "/private-beta01/sr1-form-sections-2-in-progress");
+        const url = getUrlWithSR1DataAsQueryParamsprivatebeta01(origin, "/private-beta01/sr1-form-sections");
 
         window
             .location
