@@ -147,10 +147,10 @@ Error: What is the patient’s date of birth? – Send an SR1 medical evidence f
 <script>
     // get and set in this order - this ensures what is sent in query is the same as what is in the localStorage
     const saveAndLeave = () => {
-        saveDOBSR1Formmvp03();
+        //saveDOBSR1Formmvp03();
 
         const origin = window.location.origin;
-        const url = getUrlWithSR1DataAsQueryParamsmvp03(origin, "/hcp-e2e-journey-mvp03/sr1-form-sections-1-in-progress");
+        const url = getUrlWithSR1DataAsQueryParamsmvp03(origin, "/hcp-e2e-journey-mvp03/sr1-form-sections");
 
         window.location.replace(url.toString());
     }

@@ -97,10 +97,10 @@ Error: What is the patient's name? – Send an SR1 medical evidence form – GOV
 <script>
     // get and set in this order - this ensures what is sent in query is the same as what is in the localStorage
     const saveAndLeave = () => {
-        savePatientNameSR1Formprivatebeta01();
+        //savePatientNameSR1Formprivatebeta01();
 
         const origin = window.location.origin;
-        const url = getUrlWithSR1DataAsQueryParams(origin, "/private-beta01/sr1-form-start");
+        const url = getUrlWithSR1DataAsQueryParamsprivatebeta01(origin, "/private-beta01/sr1-form-sections");
 
         window.location.replace(url.toString());
     }

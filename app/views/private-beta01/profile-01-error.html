@@ -98,10 +98,10 @@ Error: What is your name? – Send an SR1 medical evidence form – GOV.UK
 <script>
     // get and set in this order - this ensures what is sent in query is the same as what is in the localStorage
     const saveAndLeave = () => {
-        saveHCPNameprivatebeta01();
+        //saveHCPNameprivatebeta01();
 
         const origin = window.location.origin;
-        const url = getUrlWithSR1DataAsQueryParamsprivatebeta01(origin, "/private-beta01/sr1-form-sections-3-completed");
+        const url = getUrlWithSR1DataAsQueryParamsprivatebeta01(origin, "/private-beta01/sr1-form-sections");
 
         window.location.replace(url.toString());
     }
