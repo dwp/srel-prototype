@@ -1,12 +1,7 @@
-/* global $ */
-
-// Warn about using the kit in production
-if (window.console && window.console.info) {
-  window.console.info('GOV.UK Prototype Kit - do not use for production')
-}
-
-
-
+//
+// For guidance on how to add JavaScript see:
+// https://prototype-kit.service.gov.uk/docs/adding-css-javascript-and-images
+//
 
 // =========
 // VARIABLES
@@ -31,7 +26,7 @@ let patientAge = null;
 // SELF INVOKED (RUN ON LOAD)
 // ==========================
 
-$(document).ready(function () {
+window.GOVUKPrototypeKit.documentReady(function () {
   window.GOVUKFrontend.initAll();
 
   if (consoleLogs) { console.log('domainPathUrl "' + domainPathUrl + '"'); }
