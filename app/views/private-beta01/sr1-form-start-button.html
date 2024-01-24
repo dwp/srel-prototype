@@ -13,21 +13,6 @@ SR1 form – Send an SR1 medical evidence form – GOV.UK
   data-message-suffix="Your answers will be deleted. This is to protect your and the patient's information."
   data-keep-alive-button-text="Stay signed in" data-sign-out-button-text="Sign out" data-synchronise-tabs="" />
 
-{% macro subsectionStatus(idSuffix, dataVar, fullNameSet) %}
-{% if dataVar | isStringVarDefined %}
-<strong class="govuk-tag app-task-list__tag" id="{{idSuffix}}-completed" aria-hidden>Completed</strong>
-{% else %}
-<strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="{{idSuffix}}-status">Not started</strong>
-{% endif %}
-{% endmacro %}
-
-{% macro dateSubsectionStatus(idSuffix, day, month, year, fullNameSet) %}
-{% if day | isStringVarDefined and month | isStringVarDefined and year | isStringVarDefined %}
-<strong class="govuk-tag app-task-list__tag" id="{{idSuffix}}-completed" aria-hidden>Completed</strong>
-{% else %}
-<strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="{{idSuffix}}-status">Not started</strong>
-{% endif %}
-{% endmacro %}
 
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
@@ -60,14 +45,14 @@ SR1 form – Send an SR1 medical evidence form – GOV.UK
                 Complete patient details
               </a>
             </div>
-            <div class="govuk-task-list__name-and-hint hidden" id="patientDetails-link-inprogress">
-              <a class="govuk-link govuk-task-list__link" href="/private-beta01/sr1-form-01"
+            <div class="govuk-task-list__name-and-hint" id="patientDetails-link-inprogress">
+              <a class="govuk-link govuk-task-list__link hidden" href="/private-beta01/sr1-form-01"
                 aria-describedby="patientDetails-status-inprogress">
                 Complete patient details
               </a>
             </div>
-            <div class="govuk-task-list__name-and-hint hidden" id="patientDetails-link-completed">
-              <a class="govuk-link govuk-task-list__link" href="/private-beta01/sr1-form-01"
+            <div class="govuk-task-list__name-and-hint" id="patientDetails-link-completed">
+              <a class="govuk-link govuk-task-list__link hidden" href="/private-beta01/sr1-form-01"
                 aria-describedby="patientDetails-status-completed">
                 Complete patient details
               </a>
@@ -87,12 +72,12 @@ SR1 form – Send an SR1 medical evidence form – GOV.UK
               <a class="govuk-link govuk-task-list__link" href="/private-beta01/sr1-form-07"
                 aria-describedby="patientDiagnosis-status-notstarted">Complete diagnosis</a>
             </div>
-            <div class="govuk-task-list__name-and-hint hidden" id="patientDiagnosis-link-inprogress">
-              <a class="govuk-link govuk-task-list__link" href="/private-beta01/sr1-form-07"
+            <div class="govuk-task-list__name-and-hint" id="patientDiagnosis-link-inprogress">
+              <a class="govuk-link govuk-task-list__link hidden" href="/private-beta01/sr1-form-07"
                 aria-describedby="patientDiagnosis-status-inprogress">Complete diagnosis</a>
             </div>
-            <div class="govuk-task-list__name-and-hint hidden" id="patientDiagnosis-link-completed">
-              <a class="govuk-link govuk-task-list__link" href="/private-beta01/sr1-form-07"
+            <div class="govuk-task-list__name-and-hint" id="patientDiagnosis-link-completed">
+              <a class="govuk-link govuk-task-list__link hidden" href="/private-beta01/sr1-form-07"
                 aria-describedby="patientDiagnosis-status-completed">
                 Complete diagnosis
               </a>
@@ -115,14 +100,14 @@ SR1 form – Send an SR1 medical evidence form – GOV.UK
                 Complete clinical features and treatment
               </a>
             </div>
-            <div id="ClinicalFeatTreatment-link-inprogress" class="govuk-task-list__name-and-hint hidden">
-              <a class="govuk-link govuk-task-list__link" href="/private-beta01/sr1-form-12"
+            <div id="ClinicalFeatTreatment-link-inprogress" class="govuk-task-list__name-and-hint">
+              <a class="govuk-link govuk-task-list__link hidden" href="/private-beta01/sr1-form-12"
                 aria-describedby="ClinicalFeatTreatment-status-inprogress">
                 Complete clinical features and treatment
               </a>
             </div>
-            <div id="ClinicalFeatTreatment-link-completed" class="govuk-task-list__name-and-hint hidden">
-              <a class="govuk-link govuk-task-list__link" href="/private-beta01/sr1-form-12"
+            <div id="ClinicalFeatTreatment-link-completed" class="govuk-task-list__name-and-hint">
+              <a class="govuk-link govuk-task-list__link hidden" href="/private-beta01/sr1-form-12"
                 aria-describedby="ClinicalFeatTreatment-status-completed">
                 Complete clinical features and treatment
               </a>
@@ -145,14 +130,14 @@ SR1 form – Send an SR1 medical evidence form – GOV.UK
                 Add your details
               </a>
             </div>
-            <div id="yourDetails-link-inprogress" class="govuk-task-list__name-and-hint hidden">
-              <a class="govuk-link govuk-task-list__link" href="/private-beta01/profile-01"
+            <div id="yourDetails-link-inprogress" class="govuk-task-list__name-and-hint">
+              <a class="govuk-link govuk-task-list__link hidden" href="/private-beta01/profile-01"
                 aria-describedby="yourDetails-status-inprogress">
                 Add your details
               </a>
             </div>
-            <div id="yourDetails-link-completed" class="govuk-task-list__name-and-hint hidden">
-              <a class="govuk-link govuk-task-list__link" href="/private-beta01/profile-01"
+            <div id="yourDetails-link-completed" class="govuk-task-list__name-and-hint">
+              <a class="govuk-link govuk-task-list__link hidden" href="/private-beta01/profile-01"
                 aria-describedby="yourDetails-status-completed">
                 Add your details
               </a>
@@ -166,16 +151,13 @@ SR1 form – Send an SR1 medical evidence form – GOV.UK
             <div class="govuk-task-list__status hidden" id="yourDetails-status-completed" aria-hidden>Completed</div>
           </li>
         </ul>
-        <h2 class="govuk-heading-m govuk-!-margin-top-5">Send the SR1 form</h2>
+        <!--<h2 class="govuk-heading-m govuk-!-margin-top-5">Send the SR1 form</h2>
         </h2>
         <ul class="govuk-task-list">
           <li class="govuk-task-list__item" id="name">
             <div id="check-answer-link-disabled" class="govuk-task-list__name-and-hint"
               aria-describedby="check-your-sr1-status-cannot-start">
               <div>Check your answers</div>
-              <div id="application-details-3-hint" class="govuk-task-list__hint">
-                Once you have completed the other sections you can send the form
-              </div>
             </div>
             <div id="check-answer-link-enabled" class="govuk-task-list__name-and-hint hidden"><a
                 class="govuk-link govuk-task-list__link" href="/private-beta01/check-sr1-form"
@@ -189,12 +171,12 @@ SR1 form – Send an SR1 medical evidence form – GOV.UK
                 class="govuk-tag govuk-tag--blue">Not
                 yet started</strong></div>
           </li>
-        </ul>
-        <!--<div class="govuk-button-group">
-          <button type="submit" class="govuk-button" data-module="govuk-button" id="send-sr1-form-button">
+        </ul>-->
+        <div class="govuk-button-group">
+          <a href="/private-beta01/check-sr1-form-empty" type="submit" class="govuk-button" data-module="govuk-button" id="send-sr1-form-button">
             Send the SR1 form
-          </button>
-        </div>-->
+          </a>
+        </div>
       </div>
     </div>
 
@@ -215,65 +197,5 @@ SR1 form – Send an SR1 medical evidence form – GOV.UK
 
 </div>
 
-<script>
 
-  //'privatebeta01PatientAddressLine1',
-  //'privatebeta01PatientAddressLine2',
-  //'privatebeta01PatientAddressTown',
-  //'privatebeta01PatientPostcode',
-
-  //TODO: check all of address is filled out
-  const fields = [
-    //'privatebeta01PatientLastName',
-    'privatebeta01NiNo',
-    //'privatebeta01WhatIsTheDiagnosis',
-    //'privatebeta01OtherRelevantDiagnosis',
-    //'privatebeta01AwareOfDiagnosis',
-    'privatebeta01AwareOfPrognosis',
-    //'privatebeta01DetailsOfClinicalFeatures',
-    'privatebeta01Treatment',
-    //'privatebeta01PatientAddressTown',
-    //'privatebeta01Firstname',
-    //'privatebeta01Role',
-    //'privatebeta01ProfessionalRegistrationNumber',
-    //'privatebeta01MobileNumber',
-    'privatebeta01OrganisationAddressLine1'
-  ];
-
-  const dates = [
-    [
-      //'privatebeta01DobDay', 'privatebeta01DobMonth', 'privatebeta01DobYear'
-    ],
-    [
-      //'privatebeta01DodDay', 'privatebeta01DodMonth', 'privatebeta01DodYear'
-    ],
-    [
-      //'privatebeta01DateofSpecialRulesDay', 'privatebeta01DateofSpecialRulesMonth', 'privatebeta01DateofSpecialRulesYear'
-    ]
-  ];
-
-
-  const isDefined = (field) => {
-    const item = localStorage.getItem(field);
-    return !!item && item.length > 0;
-  }
-
-  var counter = 0;
-
-  counter += fields
-    .filter(isDefined)
-    .length;
-
-  counter += dates
-    .filter(date => {
-      return isDefined(date[0]) && isDefined(date[1]) && isDefined(date[2]);
-    })
-    .length;
-
-  console.log({ counter });
-
-  document
-    .getElementById('completed-tasks')
-    .innerText = "You have completed " + counter + " of 5 sections."
-</script>
 {% endblock %}
