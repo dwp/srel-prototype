@@ -46,16 +46,19 @@ SR1 form sent – Send an SR1 medical evidence form – GOV.UK
             document.getElementById('pdfButton').addEventListener('click', generatePDF);
 
             async function generatePDF() {
-                // Replace 'https://example.com' with the URL of the page you want to convert to PDF
                 const url = '/private-beta01/download-html';
 
                 try {
-                    // Fetch the content of the desired page
                     const response = await fetch(url);
                     const htmlContent = await response.text();
 
+                    const dynamicContent = await generateDynamicContentprivatebeta01(); // Replace with the actual function to generate dynamic content
+
+                    // Merge the static HTML content with the dynamic content
+                    const mergedHtml = mergeHtmlprivatebeta01(htmlContent, dynamicContent);
+
                     // Use html2pdf library to generate PDF
-                    html2pdf(htmlContent, {
+                    html2pdf(mergedHtml, {
                         margin: 10,
                         filename: 'Download SR1 form (PDF, 1MB)',
                         jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' },
