@@ -566,3 +566,29 @@ router.post('/private-beta01/cookies-accept/answer', function (req, res) {
     res.redirect('/private-beta01/cookies-reject')
   }
 })
+
+router.post('/private-beta01/sr1-form-use-same-profile-details/answer', function (req, res) {
+  var useSameProfileDetails = req.session.data['useSameProfileDetails']
+
+  // Check whether the variable matches a condition
+  if (useSameProfileDetails == "Yes"){
+    // Send user to next reminder page
+    res.redirect('/private-beta01/add-details-to-new-form')
+  } else {
+    // Send user to the account dashboard page
+    res.redirect('/private-beta01/profile-01');
+  }
+})
+
+router.post('/private-beta01/add-details-to-new-form/answer', function (req, res) {
+  var addDetails = req.session.data['addDetails']
+
+  // Check whether the variable matches a condition
+  if (addDetails == "Yes"){
+    // Send user to next reminder page
+    res.redirect('/private-beta01/sr1-form-sections')
+  } else {
+    // Send user to the account dashboard page
+    res.redirect('/private-beta01/profile-01');
+  }
+})

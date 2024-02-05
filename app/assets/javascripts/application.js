@@ -6316,6 +6316,25 @@ window.GOVUKPrototypeKit.documentReady(function () {
     let treatment = document.getElementById('treatment');
     if (localStorage.getItem("privatebeta01Treatment")) treatment.value = localStorage.getItem("privatebeta01Treatment");
   }
+  // Add details private-beta01
+  //if (pageUrlPath === '/private-beta01/add-details-to-new-form') {
+  //const formElements = document.getElementById('sendAnSR1Form').elements;
+  //let privatebeta01AddDetails = localStorage.getItem('privatebeta01AddDetails');
+  //if (privatebeta01AddDetails === Yes) {}
+  //else {
+  //localStorage.removeItem("privatebeta01Firstname");
+  //localStorage.removeItem("privatebeta01Lastname");
+  //localStorage.removeItem("privatebeta01Role");
+  //localStorage.removeItem("privatebeta01MobileNumber");
+  //localStorage.removeItem("privatebeta01OrganisationName");
+  //localStorage.removeItem("privatebeta01OrganisationAddressLine1");
+  //localStorage.removeItem("privatebeta01OrganisationAddressLine2");
+  //localStorage.removeItem("privatebeta01OrganisationAddressCounty");
+  //localStorage.removeItem("privatebeta01TownOrCity");
+  //localStorage.removeItem("privatebeta01Postcode");
+  //localStorage.removeItem("privatebeta01OrganisationAddress");
+  //}
+  //}
 
   // ===============
   // Postcode lookup
@@ -7493,8 +7512,19 @@ window.GOVUKPrototypeKit.documentReady(function () {
   if (pageUrlPath === '/private-beta01/sr1-form-sections') {
     let organisationNameInput = localStorage.getItem('privatebeta01Postcode');
     let firstNameInput = localStorage.getItem('privatebeta01Firstname');
-    if (organisationNameInput != null) {
+    let privatebeta01NewForm = localStorage.getItem('privatebeta01NewForm');
+    if (privatebeta01NewForm != null) {
+      document.getElementById("yourDetails-status-notstarted").classList.remove('hidden');
+      document.getElementById("yourDetails-status-inprogress").classList.add('hidden');
+      document.getElementById("yourDetails-status-completed").classList.add('hidden');
+      document.getElementById("yourDetails-link-notstarted").classList.add('hidden');
+      document.getElementById("yourDetails-link-notstarted-first-click").classList.remove('hidden');
+      document.getElementById("yourDetails-link-inprogress").classList.add('hidden');
+      document.getElementById("yourDetails-link-completed").classList.add('hidden');
+    }
+      else if (organisationNameInput != null) {
       document.getElementById("yourDetails-status-notstarted").classList.add('hidden');
+      document.getElementById("yourDetails-link-notstarted-first-click").classList.add('hidden');
       document.getElementById("yourDetails-status-inprogress").classList.add('hidden');
       document.getElementById("yourDetails-status-completed").classList.remove('hidden');
       document.getElementById("yourDetails-link-notstarted").classList.add('hidden');
@@ -7502,6 +7532,7 @@ window.GOVUKPrototypeKit.documentReady(function () {
       document.getElementById("yourDetails-link-completed").classList.remove('hidden');
     } else if (firstNameInput != null) {
       document.getElementById("yourDetails-status-notstarted").classList.add('hidden');
+      document.getElementById("yourDetails-link-notstarted-first-click").classList.add('hidden');
       document.getElementById("yourDetails-status-inprogress").classList.remove('hidden');
       document.getElementById("yourDetails-status-completed").classList.add('hidden');
       document.getElementById("yourDetails-link-notstarted").classList.add('hidden');
@@ -7509,6 +7540,7 @@ window.GOVUKPrototypeKit.documentReady(function () {
       document.getElementById("yourDetails-link-completed").classList.add('hidden');
     } else {
       document.getElementById("yourDetails-status-notstarted").classList.remove('hidden');
+      document.getElementById("yourDetails-link-notstarted-first-click").classList.add('hidden');
       document.getElementById("yourDetails-status-inprogress").classList.add('hidden');
       document.getElementById("yourDetails-status-completed").classList.add('hidden');
       document.getElementById("yourDetails-link-notstarted").classList.remove('hidden');
@@ -7516,6 +7548,29 @@ window.GOVUKPrototypeKit.documentReady(function () {
       document.getElementById("yourDetails-link-completed").classList.add('hidden');
     }
   }
+  // Hide/Show submit section
+  if (pageUrlPath === '/private-beta01/sr1-form-start') {
+    let privatebeta01NewForm = localStorage.getItem('privatebeta01NewForm');
+    if (privatebeta01NewForm != null) {
+      document.getElementById("yourDetails-link-notstarted").classList.add('hidden');
+      document.getElementById("yourDetails-link-notstarted-first-click").classList.remove('hidden');
+    } else {
+      document.getElementById("yourDetails-link-notstarted").classList.remove('hidden');
+      document.getElementById("yourDetails-link-notstarted-first-click").classList.add('hidden');
+    }
+  }
+
+  // Hide/Show submit section
+  //if (pageUrlPath === '/private-beta01/sr1-form-sections') {
+    //let privatebeta01NewForm = localStorage.getItem('privatebeta01NewForm');
+    //if (privatebeta01NewForm != null) {
+      //document.getElementById("yourDetails-link-notstarted").classList.add('hidden');
+      //document.getElementById("yourDetails-link-notstarted-first-click").classList.remove('hidden');
+    //} else {
+      //document.getElementById("yourDetails-link-notstarted").classList.remove('hidden');
+      //document.getElementById("yourDetails-link-notstarted-first-click").classList.add('hidden');
+    //}
+  //}
 
   // =================
   // Check your answer
@@ -8540,6 +8595,41 @@ window.GOVUKPrototypeKit.documentReady(function () {
     let treatment = document.getElementById('treatment');
     if (localStorage.getItem("privatebeta01Treatment")) treatment.innerHTML = localStorage.getItem("privatebeta01Treatment");
 
+    let organisationName = document.getElementById('organisationName');
+    let organisationAddressLine1 = document.getElementById('organisationAddressLine1');
+    let organisationAddressLine2 = document.getElementById('organisationAddressLine2');
+    let organisationTownCity = document.getElementById('organisationTownCity');
+    let organisationAddressCounty = document.getElementById('organisationAddressCounty');
+    let organisationPostcode = document.getElementById('organisationPostcode');
+    let mobile = document.getElementById('mobileNumber');
+
+    let role = document.getElementById('role');
+    let otherRole = document.getElementById('otherRole');
+
+    console.log('Role', localStorage.getItem("privatebeta01Role"));
+    if (localStorage.getItem("privatebeta01Role") === "Other") {
+      role.innerHTML = localStorage.getItem("privatebeta01otherRole");
+    } else {
+      role.innerHTML = localStorage.getItem("privatebeta01Role");
+    }
+
+    let yourName = document.getElementById('yourName');
+    if (localStorage.getItem("privatebeta01Firstname") || localStorage.getItem("privatebeta01Lastname")) yourName.innerHTML = localStorage.getItem("privatebeta01Firstname") + ' ' + localStorage.getItem("privatebeta01Lastname");
+
+    let professionalRegNum = document.getElementById('professionalRegNum');
+    if (localStorage.getItem("privatebeta01ProfessionalRegistrationNumber")) professionalRegNum.innerHTML = localStorage.getItem("privatebeta01ProfessionalRegistrationNumber");
+
+    if (localStorage.getItem("privatebeta01OrganisationName")) organisationName.innerHTML = localStorage.getItem("privatebeta01OrganisationName");
+    if (localStorage.getItem("privatebeta01OrganisationAddressLine1")) organisationAddressLine1.innerHTML = localStorage.getItem("privatebeta01OrganisationAddressLine1");
+    if (localStorage.getItem("privatebeta01OrganisationAddressLine2")) organisationAddressLine2.innerHTML = localStorage.getItem("privatebeta01OrganisationAddressLine2");
+    if (localStorage.getItem("privatebeta01OrganisationAddressCounty")) organisationAddressCounty.innerHTML = localStorage.getItem("privatebeta01OrganisationAddressCounty");
+    if (localStorage.getItem("privatebeta01TownOrCity")) organisationTownCity.innerHTML = localStorage.getItem("privatebeta01TownOrCity");
+    if (localStorage.getItem("privatebeta01Postcode")) organisationPostcode.innerHTML = localStorage.getItem("privatebeta01Postcode");
+    if (localStorage.getItem("privatebeta01MobileNumber")) mobile.innerHTML = localStorage.getItem("privatebeta01MobileNumber");
+  }
+
+  // private-beta01
+  if (pageUrlPath === '/private-beta01/add-details-to-new-form') {
     let organisationName = document.getElementById('organisationName');
     let organisationAddressLine1 = document.getElementById('organisationAddressLine1');
     let organisationAddressLine2 = document.getElementById('organisationAddressLine2');
@@ -9631,6 +9721,7 @@ function logOutHcpE2e() {
   localStorage.removeItem("privatebeta01DobYear");
   localStorage.removeItem("privatebeta01NiNo");
   localStorage.removeItem("privatebeta01NiNoinput");
+  localStorage.removeItem("privatebeta0AddDetails");
   localStorage.removeItem("privatebeta01DateofSpecialRulesDay");
   localStorage.removeItem("privatebeta01DateofSpecialRulesMonth");
   localStorage.removeItem("privatebeta01DateofSpecialRulesYear");
@@ -9653,6 +9744,7 @@ function logOutHcpE2e() {
   localStorage.removeItem("privatebeta01PatientBuilding");
   localStorage.removeItem("privatebeta01PatientAddress");
   localStorage.removeItem("privatebeta01UpdateProfileDetailsFromSendSR1FormPage");
+  localStorage.removeItem("privatebeta01NewForm");
   localStorage.removeItem("privatebeta01IsLoggedIn");
 }
 let currentValueOfOrg = 0;
@@ -11232,6 +11324,11 @@ function saveHCPOrgAddressprivatebeta01() {
 
   const postcodeInput = document.getElementById('postcode').value;
   localStorage.setItem('privatebeta01Postcode', postcodeInput);
+}
+function privatebeta01AddDetails(addDetails) {
+  wantAddDetails = addDetails.value;
+  localStorage.setItem('privatebeta0AddDetails', wantAddDetails);
+  if (consoleLogs) console.log('Want to add details to new SR1 form: ' + wantAddDetails);
 }
 
 
@@ -16021,6 +16118,7 @@ function completedSR1Form() {
   localStorage.removeItem("privatebeta01Firstname");
   localStorage.removeItem("privatebeta01Lastname");
   localStorage.removeItem("privatebeta01Role");
+  localStorage.removeItem('privatebeta01ProfessionalRegistrationNumber');
   localStorage.removeItem("privatebeta01MobileNumber");
   localStorage.removeItem("privatebeta01OrganisationName");
   localStorage.removeItem("privatebeta01OrganisationAddressLine1");
@@ -16029,7 +16127,71 @@ function completedSR1Form() {
   localStorage.removeItem("privatebeta01TownOrCity");
   localStorage.removeItem("privatebeta01Postcode");
   localStorage.removeItem("privatebeta01OrganisationAddress");
+  localStorage.removeItem("privatebeta01AddDetails");
+  localStorage.removeItem("privatebeta01NewForm");
   localStorage.removeItem("privatebeta01ResendingSR1Form");
+}
+
+function privatebeta01completedSR1Form() {
+  let PatientFullName = document.getElementById('PatientFullName');
+  localStorage.setItem("privatebeta01NewForm", 'New');
+  localStorage.removeItem("privatebeta01PatientFirstName");
+  localStorage.removeItem("privatebeta01PatientLastName");
+  localStorage.removeItem("privatebeta01PatientNameDefined");
+  localStorage.removeItem("privatebeta01DobDay");
+  localStorage.removeItem("privatebeta01DobMonth");
+  localStorage.removeItem("privatebeta01DobYear");
+  localStorage.removeItem("privatebeta01PatientAddressLine1");
+  localStorage.removeItem("privatebeta01PatientAddressLine2");
+  localStorage.removeItem("privatebeta01PatientAddressTown")
+  localStorage.removeItem("privatebeta01PatientAddressCounty")
+  localStorage.removeItem("privatebeta01PatientPostcode");
+  localStorage.removeItem("privatebeta01PatientBuilding");
+  localStorage.removeItem("privatebeta01PatientAddress");
+  localStorage.removeItem("privatebeta01NiNo");
+  localStorage.removeItem("privatebeta01DateofSpecialRulesDay");
+  localStorage.removeItem("privatebeta01DateofSpecialRulesMonth");
+  localStorage.removeItem("privatebeta01DateofSpecialRulesYear");
+  localStorage.removeItem("privatebeta01WhatIsTheDiagnosis");
+  localStorage.removeItem("privatebeta01OtherRelevantDiagnosis");
+  localStorage.removeItem("privatebeta01OtherRelevantDiagnosisinput");
+  localStorage.removeItem("privatebeta01AwareOfDiagnosis");
+  localStorage.removeItem("privatebeta01AwareOfPrognosis");
+  localStorage.removeItem("privatebeta01DodDay");
+  localStorage.removeItem("privatebeta01DodMonth");
+  localStorage.removeItem("privatebeta01DodYear");
+  localStorage.removeItem("privatebeta01DetailsOfClinicalFeatures");
+  localStorage.removeItem("privatebeta01Treatment");
+  //localStorage.removeItem("privatebeta01Firstname");
+  //localStorage.removeItem("privatebeta01Lastname");
+  //localStorage.removeItem("privatebeta01Role");
+  //localStorage.removeItem("privatebeta01MobileNumber");
+  //localStorage.removeItem("privatebeta01OrganisationName");
+  //localStorage.removeItem("privatebeta01OrganisationAddressLine1");
+  //localStorage.removeItem("privatebeta01OrganisationAddressLine2");
+  //localStorage.removeItem("privatebeta01OrganisationAddressCounty");
+  //localStorage.removeItem("privatebeta01TownOrCity");
+  //localStorage.removeItem("privatebeta01Postcode");
+  //localStorage.removeItem("privatebeta01OrganisationAddress");
+  localStorage.removeItem("privatebeta01ResendingSR1Form");
+}
+function privatebeta01NewProfileDetails() {
+  localStorage.removeItem("privatebeta01Firstname");
+  localStorage.removeItem("privatebeta01Lastname");
+  localStorage.removeItem("privatebeta01Role");
+  localStorage.removeItem('privatebeta01ProfessionalRegistrationNumber');
+  localStorage.removeItem("privatebeta01MobileNumber");
+  localStorage.removeItem("privatebeta01OrganisationName");
+  localStorage.removeItem("privatebeta01OrganisationAddressLine1");
+  localStorage.removeItem("privatebeta01OrganisationAddressLine2");
+  localStorage.removeItem("privatebeta01OrganisationAddressCounty");
+  localStorage.removeItem("privatebeta01TownOrCity");
+  localStorage.removeItem("privatebeta01Postcode");
+  localStorage.removeItem("privatebeta01OrganisationAddress");
+  localStorage.removeItem("privatebeta01NewForm");
+}
+function privatebeta01TriggeredProfileDetails() {
+  localStorage.removeItem("privatebeta01NewForm");
 }
 
 // ========
@@ -16111,6 +16273,284 @@ function printForm() {
   myWindow.focus(); // necessary for IE >= 10*/
   myWindow.print();
   myWindow.close();
+}
+
+
+//dynamic content download
+//MVP03
+async function generateDynamicContentmvp03() {
+  try {
+    // Assuming there are functions to fetch dynamic data asynchronously
+    const todayDate = await fetchDate();
+    const patientDetails = await fetchPatientDetailsmvp03();
+    const diagnosisData = await fetchDiagnosisDatamvp03();
+    const clinicalFeatures = await fetchClinicalFeaturesmvp03();
+    const yourDetails = await fetchYourDetailsmvp03();
+
+    // Create a dynamic content object
+    const dynamicContent = {
+      todayDate,
+      patientDetails,
+      diagnosisData,
+      clinicalFeatures,
+      yourDetails
+      // Add more properties as needed
+    };
+
+    return dynamicContent;
+  } catch (error) {
+    console.error('Error fetching dynamic content:', error);
+    return {}; // Return an empty object in case of an error
+  }
+}
+
+// Data-fetching functions for pdf download
+async function fetchDate() {
+  try {
+    const currentDate = new Date();
+    const day = currentDate.getDate();
+    const monthIndex = currentDate.getMonth();
+    const year = currentDate.getFullYear();
+    const formattedDate = `${day} ${getMonthName(monthIndex)} ${year}`;
+    return {
+      date: formattedDate,
+    };
+  } catch (error) {
+    console.error('Error fetching date:', error);
+    return null;
+  }
+}
+
+function getMonthName(monthIndex) {
+  const months = [
+    'January', 'February', 'March', 'April', 'May', 'June',
+    'July', 'August', 'September', 'October', 'November', 'December'
+  ];
+  return months[monthIndex];
+}
+
+async function fetchPatientDetailsmvp03() {
+  // Simulated asynchronous data fetching
+  return {
+    PatientFullName: localStorage.getItem("hcpmvp03PatientFirstName") + ' ' + localStorage.getItem("hcpmvp03PatientLastName"),
+    dob: localStorage.getItem("hcpmvp03DobDay") + "/" + localStorage.getItem("hcpmvp03DobMonth") + "/" + localStorage.getItem("hcpmvp03DobYear"),
+    patientaddressline1: localStorage.getItem("hcpmvp03PatientAddressLine1"),
+    patientaddresstown: localStorage.getItem("hcpmvp03PatientAddressTown"),
+    patientPostcode: localStorage.getItem("hcpmvp03PatientPostcode"),
+    niNo: localStorage.getItem("hcpmvp03NiNoinput"),
+    // Other patient details
+  };
+}
+
+async function fetchDiagnosisDatamvp03() {
+  // Simulated asynchronous data fetching
+  return {
+    whatIsTheDiagnosis: localStorage.getItem("hcpmvp03WhatIsTheDiagnosis"),
+    dateofDiagnosis: localStorage.getItem("hcpmvp03DodDay") + "/" + localStorage.getItem("hcpmvp03DodMonth") + "/" + localStorage.getItem("hcpmvp03DodYear"),
+    dateofSpecialRules: localStorage.getItem("hcpmvp03DateofSpecialRulesDay") + "/" + localStorage.getItem("hcpmvp03DateofSpecialRulesMonth") + "/" + localStorage.getItem("hcpmvp03DateofSpecialRulesYear"),
+    otherRelevantDiagnosis: 'Not provided',
+    awareOfDiagnosis: 'Yes',
+    awareOfPrognosis: 'Yes',
+    // Other diagnosis details
+  };
+}
+
+async function fetchClinicalFeaturesmvp03() {
+  // Simulated asynchronous data fetching
+  return {
+    clinicalFeatures: localStorage.getItem("hcpmvp03DetailsOfClinicalFeatures"),
+    treatment: localStorage.getItem("hcpmvp03Treatment"),
+    // Other clinical features details
+  };
+}
+
+async function fetchYourDetailsmvp03() {
+  // Simulated asynchronous data fetching
+  return {
+    yourName: localStorage.getItem("hcpmvp03Firstname") + ' ' + localStorage.getItem("hcpmvp03Lastname"),
+    role: localStorage.getItem("hcpmvp03Role"),
+    professionalRegNum: localStorage.getItem("hcpmvp03ProfessionalRegistrationNumber"),
+    mobileNumber: localStorage.getItem("hcpmvp03MobileNumber"),
+    organisationName: localStorage.getItem("hcpmvp03OrganisationName"),
+    organisationAddressLine1: localStorage.getItem("hcpmvp03OrganisationAddressLine1"),
+    organisationTownCity: localStorage.getItem("hcpmvp03TownOrCity"),
+    organisationPostcode: localStorage.getItem("hcpmvp03Postcode"),
+    // Other details
+  };
+}
+
+function mergeHtmlmvp03(staticHtml, dynamicContent) {
+  // Use a DOMParser to convert the static HTML string into a DOM document
+  const parser = new DOMParser();
+  const staticDoc = parser.parseFromString(staticHtml, 'text/html');
+
+  // Update or replace specific elements in the static document with dynamic content
+  updateElementContent(staticDoc, 'date', dynamicContent.todayDate.date);
+  updateElementContent(staticDoc, 'PatientFullName', dynamicContent.patientDetails.PatientFullName);
+  updateElementContent(staticDoc, 'dob', dynamicContent.patientDetails.dob);
+  updateElementContent(staticDoc, 'patientaddressline1', dynamicContent.patientDetails.patientaddressline1);
+  updateElementContent(staticDoc, 'patientaddresstown', dynamicContent.patientDetails.patientaddresstown);
+  updateElementContent(staticDoc, 'patientPostcode', dynamicContent.patientDetails.patientPostcode);
+  updateElementContent(staticDoc, 'niNo', dynamicContent.patientDetails.niNo);
+  updateElementContent(staticDoc, 'whatIsTheDiagnosis', dynamicContent.diagnosisData.whatIsTheDiagnosis);
+  updateElementContent(staticDoc, 'dateofDiagnosis', dynamicContent.diagnosisData.dateofDiagnosis);
+  updateElementContent(staticDoc, 'dateofSpecialRules', dynamicContent.diagnosisData.dateofSpecialRules);
+  updateElementContent(staticDoc, 'otherRelevantDiagnosis', dynamicContent.diagnosisData.otherRelevantDiagnosis);
+  updateElementContent(staticDoc, 'awareOfDiagnosis', dynamicContent.diagnosisData.awareOfDiagnosis);
+  updateElementContent(staticDoc, 'awareOfPrognosis', dynamicContent.diagnosisData.awareOfPrognosis);
+  updateElementContent(staticDoc, 'clinicalFeatures', dynamicContent.clinicalFeatures.clinicalFeatures);
+  updateElementContent(staticDoc, 'treatment', dynamicContent.clinicalFeatures.treatment);
+  updateElementContent(staticDoc, 'yourName', dynamicContent.yourDetails.yourName);
+  updateElementContent(staticDoc, 'role', dynamicContent.yourDetails.role);
+  updateElementContent(staticDoc, 'yourName', dynamicContent.yourDetails.yourName);
+  updateElementContent(staticDoc, 'professionalRegNum', dynamicContent.yourDetails.professionalRegNum);
+  updateElementContent(staticDoc, 'mobileNumber', dynamicContent.yourDetails.mobileNumber);
+  updateElementContent(staticDoc, 'organisationName', dynamicContent.yourDetails.organisationName);
+  updateElementContent(staticDoc, 'organisationAddressLine1', dynamicContent.yourDetails.organisationAddressLine1);
+  updateElementContent(staticDoc, 'organisationTownCity', dynamicContent.yourDetails.organisationTownCity);
+  updateElementContent(staticDoc, 'organisationPostcode', dynamicContent.yourDetails.organisationPostcode);
+  // Add more updates as needed
+
+  // Serialize the modified DOM document back to an HTML string
+  const mergedHtml = new XMLSerializer().serializeToString(staticDoc);
+
+  return mergedHtml;
+}
+
+function updateElementContent(document, elementId, newContent) {
+  const element = document.getElementById(elementId);
+  if (element) {
+    // Update the content of the element with new content
+    element.innerHTML = newContent;
+  } else {
+    console.warn(`Element with id '${elementId}' not found in the document.`);
+  }
+}
+
+//dynamic content download
+//PRIVATE BETA 01
+async function generateDynamicContentprivatebeta01() {
+  try {
+    // Assuming there are functions to fetch dynamic data asynchronously
+    const todayDate = await fetchDate();
+    const patientDetails = await fetchPatientDetailsprivatebeta01();
+    const diagnosisData = await fetchDiagnosisDataprivatebeta01();
+    const clinicalFeatures = await fetchClinicalFeaturesprivatebeta01();
+    const yourDetails = await fetchYourDetailsprivatebeta01();
+
+    // Create a dynamic content object
+    const dynamicContent = {
+      todayDate,
+      patientDetails,
+      diagnosisData,
+      clinicalFeatures,
+      yourDetails
+      // Add more properties as needed
+    };
+
+    return dynamicContent;
+  } catch (error) {
+    console.error('Error fetching dynamic content:', error);
+    return {}; // Return an empty object in case of an error
+  }
+}
+
+async function fetchPatientDetailsprivatebeta01() {
+  // Simulated asynchronous data fetching
+  return {
+    PatientFullName: localStorage.getItem("privatebeta01PatientFirstName") + ' ' + localStorage.getItem("privatebeta01PatientLastName"),
+    dob: localStorage.getItem("privatebeta01DobDay") + "/" + localStorage.getItem("privatebeta01DobMonth") + "/" + localStorage.getItem("privatebeta01DobYear"),
+    patientaddressline1: localStorage.getItem("privatebeta01PatientAddressLine1"),
+    patientaddresstown: localStorage.getItem("privatebeta01PatientAddressTown"),
+    patientPostcode: localStorage.getItem("privatebeta01PatientPostcode"),
+    niNo: localStorage.getItem("privatebeta01NiNoinput"),
+    // Other patient details
+  };
+}
+
+async function fetchDiagnosisDataprivatebeta01() {
+  // Simulated asynchronous data fetching
+  return {
+    whatIsTheDiagnosis: localStorage.getItem("privatebeta01WhatIsTheDiagnosis"),
+    dateofDiagnosis: localStorage.getItem("privatebeta01DodDay") + "/" + localStorage.getItem("privatebeta01DodMonth") + "/" + localStorage.getItem("privatebeta01DodYear"),
+    dateofSpecialRules: localStorage.getItem("privatebeta01DateofSpecialRulesDay") + "/" + localStorage.getItem("privatebeta01DateofSpecialRulesMonth") + "/" + localStorage.getItem("privatebeta01DateofSpecialRulesYear"),
+    otherRelevantDiagnosis: 'Not provided',
+    awareOfDiagnosis: 'Yes',
+    awareOfPrognosis: 'Yes',
+    // Other diagnosis details
+  };
+}
+
+async function fetchClinicalFeaturesprivatebeta01() {
+  // Simulated asynchronous data fetching
+  return {
+    clinicalFeatures: localStorage.getItem("privatebeta01DetailsOfClinicalFeatures"),
+    treatment: localStorage.getItem("privatebeta01Treatment"),
+    // Other clinical features details
+  };
+}
+
+async function fetchYourDetailsprivatebeta01() {
+  // Simulated asynchronous data fetching
+  return {
+    yourName: localStorage.getItem("privatebeta01Firstname") + ' ' + localStorage.getItem("privatebeta01Lastname"),
+    role: localStorage.getItem("privatebeta01Role"),
+    professionalRegNum: localStorage.getItem("privatebeta01ProfessionalRegistrationNumber"),
+    mobileNumber: localStorage.getItem("privatebeta01MobileNumber"),
+    organisationName: localStorage.getItem("privatebeta01OrganisationName"),
+    organisationAddressLine1: localStorage.getItem("privatebeta01OrganisationAddressLine1"),
+    organisationTownCity: localStorage.getItem("privatebeta01TownOrCity"),
+    organisationPostcode: localStorage.getItem("privatebeta01Postcode"),
+    // Other details
+  };
+}
+
+function mergeHtmlprivatebeta01(staticHtml, dynamicContent) {
+  // Use a DOMParser to convert the static HTML string into a DOM document
+  const parser = new DOMParser();
+  const staticDoc = parser.parseFromString(staticHtml, 'text/html');
+
+  // Update or replace specific elements in the static document with dynamic content
+  updateElementContent(staticDoc, 'date', dynamicContent.todayDate.date);
+  updateElementContent(staticDoc, 'PatientFullName', dynamicContent.patientDetails.PatientFullName);
+  updateElementContent(staticDoc, 'dob', dynamicContent.patientDetails.dob);
+  updateElementContent(staticDoc, 'patientaddressline1', dynamicContent.patientDetails.patientaddressline1);
+  updateElementContent(staticDoc, 'patientaddresstown', dynamicContent.patientDetails.patientaddresstown);
+  updateElementContent(staticDoc, 'patientPostcode', dynamicContent.patientDetails.patientPostcode);
+  updateElementContent(staticDoc, 'niNo', dynamicContent.patientDetails.niNo);
+  updateElementContent(staticDoc, 'whatIsTheDiagnosis', dynamicContent.diagnosisData.whatIsTheDiagnosis);
+  updateElementContent(staticDoc, 'dateofDiagnosis', dynamicContent.diagnosisData.dateofDiagnosis);
+  updateElementContent(staticDoc, 'dateofSpecialRules', dynamicContent.diagnosisData.dateofSpecialRules);
+  updateElementContent(staticDoc, 'otherRelevantDiagnosis', dynamicContent.diagnosisData.otherRelevantDiagnosis);
+  updateElementContent(staticDoc, 'awareOfDiagnosis', dynamicContent.diagnosisData.awareOfDiagnosis);
+  updateElementContent(staticDoc, 'awareOfPrognosis', dynamicContent.diagnosisData.awareOfPrognosis);
+  updateElementContent(staticDoc, 'clinicalFeatures', dynamicContent.clinicalFeatures.clinicalFeatures);
+  updateElementContent(staticDoc, 'treatment', dynamicContent.clinicalFeatures.treatment);
+  updateElementContent(staticDoc, 'yourName', dynamicContent.yourDetails.yourName);
+  updateElementContent(staticDoc, 'role', dynamicContent.yourDetails.role);
+  updateElementContent(staticDoc, 'yourName', dynamicContent.yourDetails.yourName);
+  updateElementContent(staticDoc, 'professionalRegNum', dynamicContent.yourDetails.professionalRegNum);
+  updateElementContent(staticDoc, 'mobileNumber', dynamicContent.yourDetails.mobileNumber);
+  updateElementContent(staticDoc, 'organisationName', dynamicContent.yourDetails.organisationName);
+  updateElementContent(staticDoc, 'organisationAddressLine1', dynamicContent.yourDetails.organisationAddressLine1);
+  updateElementContent(staticDoc, 'organisationTownCity', dynamicContent.yourDetails.organisationTownCity);
+  updateElementContent(staticDoc, 'organisationPostcode', dynamicContent.yourDetails.organisationPostcode);
+  // Add more updates as needed
+
+  // Serialize the modified DOM document back to an HTML string
+  const mergedHtml = new XMLSerializer().serializeToString(staticDoc);
+
+  return mergedHtml;
+}
+
+function updateElementContent(document, elementId, newContent) {
+  const element = document.getElementById(elementId);
+  if (element) {
+    // Update the content of the element with new content
+    element.innerHTML = newContent;
+  } else {
+    console.warn(`Element with id '${elementId}' not found in the document.`);
+  }
 }
 
 // ===================
@@ -16418,283 +16858,5 @@ function aoIdentifyingTheApplicantFn(event) {
   } else {
     console.log('This is NOT Jean Grey');
     identifyingTheApplicantRoute.setAttribute("action", "/auth-onboard-v01/dashboard/everything-else/new-application/need-to-complete-applicant-details");
-  }
-}
-
-
-//dynamic content download
-//MVP03
-async function generateDynamicContentmvp03() {
-  try {
-    // Assuming there are functions to fetch dynamic data asynchronously
-    const todayDate = await fetchDate();
-    const patientDetails = await fetchPatientDetailsmvp03();
-    const diagnosisData = await fetchDiagnosisDatamvp03();
-    const clinicalFeatures = await fetchClinicalFeaturesmvp03();
-    const yourDetails = await fetchYourDetailsmvp03();
-
-    // Create a dynamic content object
-    const dynamicContent = {
-      todayDate,
-      patientDetails,
-      diagnosisData,
-      clinicalFeatures,
-      yourDetails
-      // Add more properties as needed
-    };
-
-    return dynamicContent;
-  } catch (error) {
-    console.error('Error fetching dynamic content:', error);
-    return {}; // Return an empty object in case of an error
-  }
-}
-
-// Data-fetching functions for pdf download
-async function fetchDate() {
-  try {
-      const currentDate = new Date();
-      const day = currentDate.getDate();
-      const monthIndex = currentDate.getMonth();
-      const year = currentDate.getFullYear();
-      const formattedDate = `${day} ${getMonthName(monthIndex)} ${year}`;
-      return {
-          date: formattedDate,
-      };
-  } catch (error) {
-      console.error('Error fetching date:', error);
-      return null;
-  }
-}
-
-function getMonthName(monthIndex) {
-  const months = [
-      'January', 'February', 'March', 'April', 'May', 'June',
-      'July', 'August', 'September', 'October', 'November', 'December'
-  ];
-  return months[monthIndex];
-}
-
-async function fetchPatientDetailsmvp03() {
-  // Simulated asynchronous data fetching
-  return {
-    PatientFullName: localStorage.getItem("hcpmvp03PatientFirstName") + ' ' + localStorage.getItem("hcpmvp03PatientLastName"),
-    dob: localStorage.getItem("hcpmvp03DobDay") + "/" + localStorage.getItem("hcpmvp03DobMonth") + "/" + localStorage.getItem("hcpmvp03DobYear"),
-    patientaddressline1: localStorage.getItem("hcpmvp03PatientAddressLine1"),
-    patientaddresstown: localStorage.getItem("hcpmvp03PatientAddressTown"),
-    patientPostcode: localStorage.getItem("hcpmvp03PatientPostcode"),
-    niNo: localStorage.getItem("hcpmvp03NiNoinput"),
-    // Other patient details
-  };
-}
-
-async function fetchDiagnosisDatamvp03() {
-  // Simulated asynchronous data fetching
-  return {
-    whatIsTheDiagnosis: localStorage.getItem("hcpmvp03WhatIsTheDiagnosis"),
-    dateofDiagnosis: localStorage.getItem("hcpmvp03DodDay") + "/" + localStorage.getItem("hcpmvp03DodMonth") + "/" + localStorage.getItem("hcpmvp03DodYear"),
-    dateofSpecialRules: localStorage.getItem("hcpmvp03DateofSpecialRulesDay") + "/" + localStorage.getItem("hcpmvp03DateofSpecialRulesMonth") + "/" + localStorage.getItem("hcpmvp03DateofSpecialRulesYear"),
-    otherRelevantDiagnosis: 'Not provided',
-    awareOfDiagnosis: 'Yes',
-    awareOfPrognosis: 'Yes',
-    // Other diagnosis details
-  };
-}
-
-async function fetchClinicalFeaturesmvp03() {
-  // Simulated asynchronous data fetching
-  return {
-    clinicalFeatures: localStorage.getItem("hcpmvp03DetailsOfClinicalFeatures"),
-    treatment: localStorage.getItem("hcpmvp03Treatment"),
-    // Other clinical features details
-  };
-}
-
-async function fetchYourDetailsmvp03() {
-  // Simulated asynchronous data fetching
-  return {
-    yourName: localStorage.getItem("hcpmvp03Firstname") + ' ' + localStorage.getItem("hcpmvp03Lastname"),
-    role: localStorage.getItem("hcpmvp03Role"),
-    professionalRegNum: localStorage.getItem("hcpmvp03ProfessionalRegistrationNumber"),
-    mobileNumber: localStorage.getItem("hcpmvp03MobileNumber"),
-    organisationName: localStorage.getItem("hcpmvp03OrganisationName"),
-    organisationAddressLine1: localStorage.getItem("hcpmvp03OrganisationAddressLine1"),
-    organisationTownCity: localStorage.getItem("hcpmvp03TownOrCity"),
-    organisationPostcode: localStorage.getItem("hcpmvp03Postcode"),
-    // Other details
-  };
-}
-
-function mergeHtmlmvp03(staticHtml, dynamicContent) {
-  // Use a DOMParser to convert the static HTML string into a DOM document
-  const parser = new DOMParser();
-  const staticDoc = parser.parseFromString(staticHtml, 'text/html');
-
-  // Update or replace specific elements in the static document with dynamic content
-  updateElementContent(staticDoc, 'date', dynamicContent.todayDate.date);
-  updateElementContent(staticDoc, 'PatientFullName', dynamicContent.patientDetails.PatientFullName);
-  updateElementContent(staticDoc, 'dob', dynamicContent.patientDetails.dob);
-  updateElementContent(staticDoc, 'patientaddressline1', dynamicContent.patientDetails.patientaddressline1);
-  updateElementContent(staticDoc, 'patientaddresstown', dynamicContent.patientDetails.patientaddresstown);
-  updateElementContent(staticDoc, 'patientPostcode', dynamicContent.patientDetails.patientPostcode);
-  updateElementContent(staticDoc, 'niNo', dynamicContent.patientDetails.niNo);
-  updateElementContent(staticDoc, 'whatIsTheDiagnosis', dynamicContent.diagnosisData.whatIsTheDiagnosis);
-  updateElementContent(staticDoc, 'dateofDiagnosis', dynamicContent.diagnosisData.dateofDiagnosis);
-  updateElementContent(staticDoc, 'dateofSpecialRules', dynamicContent.diagnosisData.dateofSpecialRules);
-  updateElementContent(staticDoc, 'otherRelevantDiagnosis', dynamicContent.diagnosisData.otherRelevantDiagnosis);
-  updateElementContent(staticDoc, 'awareOfDiagnosis', dynamicContent.diagnosisData.awareOfDiagnosis);
-  updateElementContent(staticDoc, 'awareOfPrognosis', dynamicContent.diagnosisData.awareOfPrognosis);
-  updateElementContent(staticDoc, 'clinicalFeatures', dynamicContent.clinicalFeatures.clinicalFeatures);
-  updateElementContent(staticDoc, 'treatment', dynamicContent.clinicalFeatures.treatment);
-  updateElementContent(staticDoc, 'yourName', dynamicContent.yourDetails.yourName);
-  updateElementContent(staticDoc, 'role', dynamicContent.yourDetails.role);
-  updateElementContent(staticDoc, 'yourName', dynamicContent.yourDetails.yourName);
-  updateElementContent(staticDoc, 'professionalRegNum', dynamicContent.yourDetails.professionalRegNum);
-  updateElementContent(staticDoc, 'mobileNumber', dynamicContent.yourDetails.mobileNumber);
-  updateElementContent(staticDoc, 'organisationName', dynamicContent.yourDetails.organisationName);
-  updateElementContent(staticDoc, 'organisationAddressLine1', dynamicContent.yourDetails.organisationAddressLine1);
-  updateElementContent(staticDoc, 'organisationTownCity', dynamicContent.yourDetails.organisationTownCity);
-  updateElementContent(staticDoc, 'organisationPostcode', dynamicContent.yourDetails.organisationPostcode);
-  // Add more updates as needed
-
-  // Serialize the modified DOM document back to an HTML string
-  const mergedHtml = new XMLSerializer().serializeToString(staticDoc);
-
-  return mergedHtml;
-}
-
-function updateElementContent(document, elementId, newContent) {
-  const element = document.getElementById(elementId);
-  if (element) {
-    // Update the content of the element with new content
-    element.innerHTML = newContent;
-  } else {
-    console.warn(`Element with id '${elementId}' not found in the document.`);
-  }
-}
-
-//dynamic content download
-//PRIVATE BETA 01
-async function generateDynamicContentprivatebeta01() {
-  try {
-    // Assuming there are functions to fetch dynamic data asynchronously
-    const todayDate = await fetchDate();
-    const patientDetails = await fetchPatientDetailsprivatebeta01();
-    const diagnosisData = await fetchDiagnosisDataprivatebeta01();
-    const clinicalFeatures = await fetchClinicalFeaturesprivatebeta01();
-    const yourDetails = await fetchYourDetailsprivatebeta01();
-
-    // Create a dynamic content object
-    const dynamicContent = {
-      todayDate,
-      patientDetails,
-      diagnosisData,
-      clinicalFeatures,
-      yourDetails
-      // Add more properties as needed
-    };
-
-    return dynamicContent;
-  } catch (error) {
-    console.error('Error fetching dynamic content:', error);
-    return {}; // Return an empty object in case of an error
-  }
-}
-
-async function fetchPatientDetailsprivatebeta01() {
-  // Simulated asynchronous data fetching
-  return {
-    PatientFullName: localStorage.getItem("privatebeta01PatientFirstName") + ' ' + localStorage.getItem("privatebeta01PatientLastName"),
-    dob: localStorage.getItem("privatebeta01DobDay") + "/" + localStorage.getItem("privatebeta01DobMonth") + "/" + localStorage.getItem("privatebeta01DobYear"),
-    patientaddressline1: localStorage.getItem("privatebeta01PatientAddressLine1"),
-    patientaddresstown: localStorage.getItem("privatebeta01PatientAddressTown"),
-    patientPostcode: localStorage.getItem("privatebeta01PatientPostcode"),
-    niNo: localStorage.getItem("privatebeta01NiNoinput"),
-    // Other patient details
-  };
-}
-
-async function fetchDiagnosisDataprivatebeta01() {
-  // Simulated asynchronous data fetching
-  return {
-    whatIsTheDiagnosis: localStorage.getItem("privatebeta01WhatIsTheDiagnosis"),
-    dateofDiagnosis: localStorage.getItem("privatebeta01DodDay") + "/" + localStorage.getItem("privatebeta01DodMonth") + "/" + localStorage.getItem("privatebeta01DodYear"),
-    dateofSpecialRules: localStorage.getItem("privatebeta01DateofSpecialRulesDay") + "/" + localStorage.getItem("privatebeta01DateofSpecialRulesMonth") + "/" + localStorage.getItem("privatebeta01DateofSpecialRulesYear"),
-    otherRelevantDiagnosis: 'Not provided',
-    awareOfDiagnosis: 'Yes',
-    awareOfPrognosis: 'Yes',
-    // Other diagnosis details
-  };
-}
-
-async function fetchClinicalFeaturesprivatebeta01() {
-  // Simulated asynchronous data fetching
-  return {
-    clinicalFeatures: localStorage.getItem("privatebeta01DetailsOfClinicalFeatures"),
-    treatment: localStorage.getItem("privatebeta01Treatment"),
-    // Other clinical features details
-  };
-}
-
-async function fetchYourDetailsprivatebeta01() {
-  // Simulated asynchronous data fetching
-  return {
-    yourName: localStorage.getItem("privatebeta01Firstname") + ' ' + localStorage.getItem("privatebeta01Lastname"),
-    role: localStorage.getItem("privatebeta01Role"),
-    professionalRegNum: localStorage.getItem("privatebeta01ProfessionalRegistrationNumber"),
-    mobileNumber: localStorage.getItem("privatebeta01MobileNumber"),
-    organisationName: localStorage.getItem("privatebeta01OrganisationName"),
-    organisationAddressLine1: localStorage.getItem("privatebeta01OrganisationAddressLine1"),
-    organisationTownCity: localStorage.getItem("privatebeta01TownOrCity"),
-    organisationPostcode: localStorage.getItem("privatebeta01Postcode"),
-    // Other details
-  };
-}
-
-function mergeHtmlprivatebeta01(staticHtml, dynamicContent) {
-  // Use a DOMParser to convert the static HTML string into a DOM document
-  const parser = new DOMParser();
-  const staticDoc = parser.parseFromString(staticHtml, 'text/html');
-
-  // Update or replace specific elements in the static document with dynamic content
-  updateElementContent(staticDoc, 'date', dynamicContent.todayDate.date);
-  updateElementContent(staticDoc, 'PatientFullName', dynamicContent.patientDetails.PatientFullName);
-  updateElementContent(staticDoc, 'dob', dynamicContent.patientDetails.dob);
-  updateElementContent(staticDoc, 'patientaddressline1', dynamicContent.patientDetails.patientaddressline1);
-  updateElementContent(staticDoc, 'patientaddresstown', dynamicContent.patientDetails.patientaddresstown);
-  updateElementContent(staticDoc, 'patientPostcode', dynamicContent.patientDetails.patientPostcode);
-  updateElementContent(staticDoc, 'niNo', dynamicContent.patientDetails.niNo);
-  updateElementContent(staticDoc, 'whatIsTheDiagnosis', dynamicContent.diagnosisData.whatIsTheDiagnosis);
-  updateElementContent(staticDoc, 'dateofDiagnosis', dynamicContent.diagnosisData.dateofDiagnosis);
-  updateElementContent(staticDoc, 'dateofSpecialRules', dynamicContent.diagnosisData.dateofSpecialRules);
-  updateElementContent(staticDoc, 'otherRelevantDiagnosis', dynamicContent.diagnosisData.otherRelevantDiagnosis);
-  updateElementContent(staticDoc, 'awareOfDiagnosis', dynamicContent.diagnosisData.awareOfDiagnosis);
-  updateElementContent(staticDoc, 'awareOfPrognosis', dynamicContent.diagnosisData.awareOfPrognosis);
-  updateElementContent(staticDoc, 'clinicalFeatures', dynamicContent.clinicalFeatures.clinicalFeatures);
-  updateElementContent(staticDoc, 'treatment', dynamicContent.clinicalFeatures.treatment);
-  updateElementContent(staticDoc, 'yourName', dynamicContent.yourDetails.yourName);
-  updateElementContent(staticDoc, 'role', dynamicContent.yourDetails.role);
-  updateElementContent(staticDoc, 'yourName', dynamicContent.yourDetails.yourName);
-  updateElementContent(staticDoc, 'professionalRegNum', dynamicContent.yourDetails.professionalRegNum);
-  updateElementContent(staticDoc, 'mobileNumber', dynamicContent.yourDetails.mobileNumber);
-  updateElementContent(staticDoc, 'organisationName', dynamicContent.yourDetails.organisationName);
-  updateElementContent(staticDoc, 'organisationAddressLine1', dynamicContent.yourDetails.organisationAddressLine1);
-  updateElementContent(staticDoc, 'organisationTownCity', dynamicContent.yourDetails.organisationTownCity);
-  updateElementContent(staticDoc, 'organisationPostcode', dynamicContent.yourDetails.organisationPostcode);
-  // Add more updates as needed
-
-  // Serialize the modified DOM document back to an HTML string
-  const mergedHtml = new XMLSerializer().serializeToString(staticDoc);
-
-  return mergedHtml;
-}
-
-function updateElementContent(document, elementId, newContent) {
-  const element = document.getElementById(elementId);
-  if (element) {
-    // Update the content of the element with new content
-    element.innerHTML = newContent;
-  } else {
-    console.warn(`Element with id '${elementId}' not found in the document.`);
   }
 }
