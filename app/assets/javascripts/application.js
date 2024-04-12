@@ -7559,18 +7559,17 @@ window.GOVUKPrototypeKit.documentReady(function () {
       document.getElementById("yourDetails-link-notstarted-first-click").classList.add('hidden');
     }
   }
+// Progress Tag HCP Profile
+// if (pageUrlPath === '/private-beta01/sr1-form-02') {
+//  let patientPostcode = localStorage.getItem('privatebeta01Postcode');
+//  if (patientPostcode != null) {
+//    document.getElementById("sendAnSR1Form").form.action = "/private-beta01/sr1-form-04-a";
+//  }
+//  else {
+//    document.getElementById("sendAnSR1Form").form.action = "/private-beta01/sr1-form-03"; 
+//  }
+// }
 
-  // Hide/Show submit section
-  //if (pageUrlPath === '/private-beta01/sr1-form-sections') {
-    //let privatebeta01NewForm = localStorage.getItem('privatebeta01NewForm');
-    //if (privatebeta01NewForm != null) {
-      //document.getElementById("yourDetails-link-notstarted").classList.add('hidden');
-      //document.getElementById("yourDetails-link-notstarted-first-click").classList.remove('hidden');
-    //} else {
-      //document.getElementById("yourDetails-link-notstarted").classList.remove('hidden');
-      //document.getElementById("yourDetails-link-notstarted-first-click").classList.add('hidden');
-    //}
-  //}
 
   // =================
   // Check your answer
