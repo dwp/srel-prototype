@@ -13,16 +13,16 @@ const router = govukPrototypeKit.requests.setupRouter()
 
 // VERSION-1 (ARCHIVED)
 router.post('/claimant-journey/who-is-applying/answer', function (req, res) {
-    var whoIsApplying = req.session.data['who-is-applying']
+  var whoIsApplying = req.session.data['who-is-applying']
 
-    // Check whether the variable matches a condition
-    if ((whoIsApplying == "I am applying for myself") || (whoIsApplying == "I am applying for someone else")){
-      // Send user to next page
-      res.redirect('/claimant-journey/version-1/questions-v1/special-rules')
-    } else {
-      // Send user to ineligible page
-      res.redirect('/claimant-journey/version-1/questions-v2/')
-    }
+  // Check whether the variable matches a condition
+  if ((whoIsApplying == "I am applying for myself") || (whoIsApplying == "I am applying for someone else")) {
+    // Send user to next page
+    res.redirect('/claimant-journey/version-1/questions-v1/special-rules')
+  } else {
+    // Send user to ineligible page
+    res.redirect('/claimant-journey/version-1/questions-v2/')
+  }
 })
 
 
@@ -31,7 +31,7 @@ router.post('/srel-branching-options/doctor-said-12-months/answer', function (re
   var doctorSaid12Months = req.session.data['doctor-said-12-months']
 
   // Check whether the variable matches a condition
-  if (doctorSaid12Months == "yes"){
+  if (doctorSaid12Months == "yes") {
     // Send user to next page
     res.redirect('/srel-branching-options/what-is-your-dob')
   } else {
@@ -44,7 +44,7 @@ router.post('/srel-branching-options/are-you-a-parent-guardian/answer', function
   var srelAreYouAParentOrGuardian = req.session.data['srelAreYouAParentOrGuardian']
 
   // Check whether the variable matches a condition
-  if (srelAreYouAParentOrGuardian == "yes"){
+  if (srelAreYouAParentOrGuardian == "yes") {
     // Send user to next page
     res.redirect('/srel-branching-options/national-insurance-number')
   } else {
@@ -57,7 +57,7 @@ router.post('/auth-onboard-v01/who-is-applying/answer', function (req, res) {
   var whoIsApplying = req.session.data['who-is-applying']
 
   // Check whether the variable matches a condition
-  if (whoIsApplying == "Myself"){
+  if (whoIsApplying == "Myself") {
     // Send user to next page
     res.redirect('/auth-onboard-v01/sign-in')
   } else {
@@ -73,7 +73,7 @@ router.post('/hcp-e2e-journey-v01/reminders-1/answer', function (req, res) {
   var receiveReminder = req.session.data['receiveReminder']
 
   // Check whether the variable matches a condition
-  if (receiveReminder == "Yes"){
+  if (receiveReminder == "Yes") {
     // Send user to next reminder page
     res.redirect('/hcp-e2e-journey-v01/reminders-2')
   } else {
@@ -85,7 +85,7 @@ router.post('/hcp-e2e-journey-v01/reminders-1-new/answer', function (req, res) {
   var receiveReminder = req.session.data['receiveReminder']
 
   // Check whether the variable matches a condition
-  if (receiveReminder == "Yes"){
+  if (receiveReminder == "Yes") {
     // Send user to next reminder page
     res.redirect('/hcp-e2e-journey-v01/reminders-2-new')
   } else {
@@ -97,7 +97,7 @@ router.post('/hcp-e2e-journey-v02/reminders-1/answer', function (req, res) {
   var receiveReminder = req.session.data['receiveReminder']
 
   // Check whether the variable matches a condition
-  if (receiveReminder == "Yes"){
+  if (receiveReminder == "Yes") {
     // Send user to next reminder page
     res.redirect('/hcp-e2e-journey-v02/reminders-2')
   } else {
@@ -109,7 +109,7 @@ router.post('/hcp-e2e-journey-v03/reminders-1/answer', function (req, res) {
   var receiveReminder = req.session.data['receiveReminder']
 
   // Check whether the variable matches a condition
-  if (receiveReminder == "Yes"){
+  if (receiveReminder == "Yes") {
     // Send user to next reminder page
     res.redirect('/hcp-e2e-journey-v03/reminders-2')
   } else {
@@ -121,7 +121,7 @@ router.post('/hcp-e2e-journey-v04/reminders-1/answer', function (req, res) {
   var receiveReminder = req.session.data['receiveReminder']
 
   // Check whether the variable matches a condition
-  if (receiveReminder == "Yes"){
+  if (receiveReminder == "Yes") {
     // Send user to next reminder page
     res.redirect('/hcp-e2e-journey-v04/reminders-2')
   } else {
@@ -133,7 +133,7 @@ router.post('/hcp-e2e-journey-v04/reminders-1-new/answer', function (req, res) {
   var receiveReminder = req.session.data['receiveReminder']
 
   // Check whether the variable matches a condition
-  if (receiveReminder == "Yes"){
+  if (receiveReminder == "Yes") {
     // Send user to next reminder page
     res.redirect('/hcp-e2e-journey-v04/reminders-2-new')
   } else {
@@ -145,7 +145,7 @@ router.post('/hcp-e2e-journey-v05/reminders-1/answer', function (req, res) {
   var receiveReminder = req.session.data['receiveReminder']
 
   // Check whether the variable matches a condition
-  if (receiveReminder == "Yes"){
+  if (receiveReminder == "Yes") {
     // Send user to next reminder page
     res.redirect('/hcp-e2e-journey-v05/reminders-2')
   } else {
@@ -157,7 +157,7 @@ router.post('/hcp-e2e-journey-v06/reminders-1/answer', function (req, res) {
   var receiveReminder = req.session.data['receiveReminder']
 
   // Check whether the variable matches a condition
-  if (receiveReminder == "Yes"){
+  if (receiveReminder == "Yes") {
     // Send user to next reminder page
     res.redirect('/hcp-e2e-journey-v06/reminders-2')
   } else {
@@ -169,7 +169,7 @@ router.post('/hcp-e2e-journey-v07/reminders-1/answer', function (req, res) {
   var receiveReminder = req.session.data['receiveReminder']
 
   // Check whether the variable matches a condition
-  if (receiveReminder == "Yes"){
+  if (receiveReminder == "Yes") {
     // Send user to next reminder page
     res.redirect('/hcp-e2e-journey-v07/reminders-2')
   } else {
@@ -181,7 +181,7 @@ router.post('/hcp-e2e-journey-v07/reminders-1-new/answer', function (req, res) {
   var receiveReminder = req.session.data['receiveReminder']
 
   // Check whether the variable matches a condition
-  if (receiveReminder == "Yes"){
+  if (receiveReminder == "Yes") {
     // Send user to next reminder page
     res.redirect('/hcp-e2e-journey-v07/reminders-2-new')
   } else {
@@ -193,7 +193,7 @@ router.post('/hcp-e2e-journey-v08/reminders-1/answer', function (req, res) {
   var receiveReminder = req.session.data['receiveReminder']
 
   // Check whether the variable matches a condition
-  if (receiveReminder == "Yes"){
+  if (receiveReminder == "Yes") {
     // Send user to next reminder page
     res.redirect('/hcp-e2e-journey-v08/reminders-2')
   } else {
@@ -205,7 +205,7 @@ router.post('/hcp-e2e-journey-v09/reminders-1/answer', function (req, res) {
   var receiveReminder = req.session.data['receiveReminder']
 
   // Check whether the variable matches a condition
-  if (receiveReminder == "Yes"){
+  if (receiveReminder == "Yes") {
     // Send user to next reminder page
     res.redirect('/hcp-e2e-journey-v09/reminders-2')
   } else {
@@ -222,7 +222,7 @@ router.post('/hcp-e2e-journey-v04/delete-form-answer', function (req, res) {
   var deleteForms = req.session.data['want-to-delete']
 
   // Check whether the variable matches a condition
-  if (deleteForms == "Yes"){
+  if (deleteForms == "Yes") {
     // Send user to next page
     res.redirect('/hcp-e2e-journey-v04/incompleted-sr1-forms-deleted')
   } else {
@@ -237,7 +237,7 @@ router.post('/hcp-e2e-journey-v05/delete-form-answer', function (req, res) {
   var deleteForms = req.session.data['want-to-delete']
 
   // Check whether the variable matches a condition
-  if (deleteForms == "Yes"){
+  if (deleteForms == "Yes") {
     // Send user to next page
     res.redirect('/hcp-e2e-journey-v05/incompleted-sr1-forms-deleted')
   } else {
@@ -252,7 +252,7 @@ router.post('/hcp-e2e-journey-v06/delete-form-answer', function (req, res) {
   var deleteForms = req.session.data['want-to-delete']
 
   // Check whether the variable matches a condition
-  if (deleteForms == "Yes"){
+  if (deleteForms == "Yes") {
     // Send user to next page
     res.redirect('/hcp-e2e-journey-v06/incompleted-sr1-forms-deleted')
   } else {
@@ -267,7 +267,7 @@ router.post('/hcp-e2e-journey-v07/delete-form-answer', function (req, res) {
   var deleteForms = req.session.data['want-to-delete']
 
   // Check whether the variable matches a condition
-  if (deleteForms == "Yes"){
+  if (deleteForms == "Yes") {
     // Send user to next page
     res.redirect('/hcp-e2e-journey-v07/incompleted-sr1-forms-deleted')
   } else {
@@ -282,7 +282,7 @@ router.post('/hcp-e2e-journey-v08/delete-form-answer', function (req, res) {
   var deleteForms = req.session.data['want-to-delete']
 
   // Check whether the variable matches a condition
-  if (deleteForms == "Yes"){
+  if (deleteForms == "Yes") {
     // Send user to next page
     res.redirect('/hcp-e2e-journey-v08/incompleted-sr1-forms-deleted')
   } else {
@@ -298,7 +298,7 @@ router.post('/hcp-e2e-journey-v09/delete-form-answer', function (req, res) {
   var deleteForms = req.session.data['want-to-delete']
 
   // Check whether the variable matches a condition
-  if (deleteForms == "Yes"){
+  if (deleteForms == "Yes") {
     // Send user to next page
     res.redirect('/hcp-e2e-journey-v09/incompleted-sr1-forms-deleted')
   } else {
@@ -312,7 +312,7 @@ router.post('/hcp-e2e-journey-mvp01/organisation-registered/answer', function (r
   var receiveReminder = req.session.data['receiveReminder']
 
   // Check whether the variable matches a condition
-  if (receiveReminder == "Yes"){
+  if (receiveReminder == "Yes") {
     // Send user to next reminder page
     res.redirect('/hcp-e2e-journey-mvp01/organisation-signin-page')
   } else {
@@ -325,7 +325,7 @@ router.post('/hcp-e2e-journey-mvp01/signin-page/answer', function (req, res) {
   var receiveReminder = req.session.data['organisationSignin']
 
   // Check whether the variable matches a condition
-  if (receiveReminder == "NHS England"){
+  if (receiveReminder == "NHS England") {
     // Send user to next reminder page
     res.redirect('/hcp-e2e-journey-mvp01/organisation-signin-page')
   } else {
@@ -338,7 +338,7 @@ router.post('/hcp-e2e-journey-mvp02/sr1-form-09-radio/answer', function (req, re
   var haveOtherDiagnoses = req.session.data['haveOtherDiagnoses']
 
   // Check whether the variable matches a condition
-  if (haveOtherDiagnoses == "Yes"){
+  if (haveOtherDiagnoses == "Yes") {
     // Send user to next reminder page
     res.redirect('/hcp-e2e-journey-mvp02/sr1-form-09-input')
   } else {
@@ -351,7 +351,7 @@ router.post('/hcp-e2e-journey-mvp02/sr1-form-05-radio/answer', function (req, re
   var niNo = req.session.data['niNo']
 
   // Check whether the variable matches a condition
-  if (niNo == "Yes"){
+  if (niNo == "Yes") {
     // Send user to next reminder page
     res.redirect('/hcp-e2e-journey-mvp02/sr1-form-05-input')
   } else {
@@ -364,7 +364,7 @@ router.post('/hcp-e2e-journey-mvp02/signin-page/answer', function (req, res) {
   var receiveReminder = req.session.data['organisationSignin']
 
   // Check whether the variable matches a condition
-  if (receiveReminder == "NHS England"){
+  if (receiveReminder == "NHS England") {
     // Send user to next reminder page
     res.redirect('/hcp-e2e-journey-mvp02/organisation-signin-page')
   } else {
@@ -377,7 +377,7 @@ router.post('/hcp-e2e-journey-mvp03/sr1-form-09-radio/answer', function (req, re
   var otherRelevantDiagnosis = req.session.data['otherRelevantDiagnosis']
 
   // Check whether the variable matches a condition
-  if (otherRelevantDiagnosis == "Yes"){
+  if (otherRelevantDiagnosis == "Yes") {
     // Send user to next reminder page
     res.redirect('/hcp-e2e-journey-mvp03/sr1-form-09-input')
   } else {
@@ -390,7 +390,7 @@ router.post('/hcp-e2e-journey-mvp03/sr1-form-05-radio/answer', function (req, re
   var niNo = req.session.data['niNo']
 
   // Check whether the variable matches a condition
-  if (niNo == "Yes"){
+  if (niNo == "Yes") {
     // Send user to next reminder page
     res.redirect('/hcp-e2e-journey-mvp03/sr1-form-05-input')
   } else {
@@ -403,7 +403,7 @@ router.post('/hcp-e2e-journey-mvp03/profile-02/answer', function (req, res) {
   var yourRole = req.session.data['yourRole']
 
   // Check whether the variable matches a condition
-  if (yourRole == "Other"){
+  if (yourRole == "Other") {
     // Send user to next reminder page
     res.redirect('/hcp-e2e-journey-mvp03/profile-02-other')
   } else {
@@ -416,13 +416,13 @@ router.post('/hcp-e2e-journey-mvp03/signin-page/answer', function (req, res) {
   var receiveReminder = req.session.data['organisationSignin']
 
   // Check whether the variable matches a condition
-  if (receiveReminder == "NHS England"){
+  if (receiveReminder == "NHS England") {
     // Send user to next reminder page
     res.redirect('/hcp-e2e-journey-mvp03/organisation-signin-page')
-  } else if (receiveReminder == "NHS Scotland"){
+  } else if (receiveReminder == "NHS Scotland") {
     // Send user to next reminder page
     res.redirect('/hcp-e2e-journey-mvp03/no-permission-scotland')
-  } else if (receiveReminder == "NHS Wales"){
+  } else if (receiveReminder == "NHS Wales") {
     // Send user to next reminder page
     res.redirect('/hcp-e2e-journey-mvp03/no-permission-wales')
   } else {
@@ -435,10 +435,10 @@ router.post('/hcp-e2e-journey-mvp03/cookies/answer', function (req, res) {
   var cookiesselection = req.session.data['google_analytics']
 
   // Check whether the variable matches a condition
-  if (cookiesselection == "yes"){
+  if (cookiesselection == "yes") {
     // Send user to cookie accepted page
     res.redirect('/hcp-e2e-journey-mvp03/cookies-accept')
-  }  else {
+  } else {
     // Send user to cookies rejected page
     res.redirect('/hcp-e2e-journey-mvp03/cookies-reject')
   }
@@ -448,10 +448,10 @@ router.post('/hcp-e2e-journey-mvp03/cookies-reject/answer', function (req, res) 
   var cookiesselection = req.session.data['google_analytics']
 
   // Check whether the variable matches a condition
-  if (cookiesselection == "yes"){
+  if (cookiesselection == "yes") {
     // Send user to cookie accepted page
     res.redirect('/hcp-e2e-journey-mvp03/cookies-accept')
-  }  else {
+  } else {
     // Send user to cookies rejected page
     res.redirect('/hcp-e2e-journey-mvp03/cookies-reject')
   }
@@ -461,10 +461,10 @@ router.post('/hcp-e2e-journey-mvp03/cookies-accept/answer', function (req, res) 
   var cookiesselection = req.session.data['google_analytics']
 
   // Check whether the variable matches a condition
-  if (cookiesselection == "yes"){
+  if (cookiesselection == "yes") {
     // Send user to cookie accepted page
     res.redirect('/hcp-e2e-journey-mvp03/cookies-accept')
-  }  else {
+  } else {
     // Send user to cookies rejected page
     res.redirect('/hcp-e2e-journey-mvp03/cookies-reject')
   }
@@ -474,7 +474,7 @@ router.post('/private-beta01/sr1-form-09-radio/answer', function (req, res) {
   var otherRelevantDiagnosis = req.session.data['otherRelevantDiagnosis']
 
   // Check whether the variable matches a condition
-  if (otherRelevantDiagnosis == "Yes"){
+  if (otherRelevantDiagnosis == "Yes") {
     // Send user to next reminder page
     res.redirect('/private-beta01/sr1-form-09-input')
   } else {
@@ -487,7 +487,7 @@ router.post('/private-beta01/sr1-form-05-radio/answer', function (req, res) {
   var niNo = req.session.data['niNo']
 
   // Check whether the variable matches a condition
-  if (niNo == "Yes"){
+  if (niNo == "Yes") {
     // Send user to next reminder page
     res.redirect('/private-beta01/sr1-form-05-input')
   } else {
@@ -500,7 +500,7 @@ router.post('/private-beta01/profile-02/answer', function (req, res) {
   var yourRole = req.session.data['yourRole']
 
   // Check whether the variable matches a condition
-  if (yourRole == "Other"){
+  if (yourRole == "Other") {
     // Send user to next reminder page
     res.redirect('/private-beta01/profile-02-other')
   } else {
@@ -513,13 +513,13 @@ router.post('/private-beta01/signin-page/answer', function (req, res) {
   var receiveReminder = req.session.data['organisationSignin']
 
   // Check whether the variable matches a condition
-  if (receiveReminder == "NHS England"){
+  if (receiveReminder == "NHS England") {
     // Send user to next reminder page
     res.redirect('/private-beta01/organisation-signin-page')
-  } else if (receiveReminder == "NHS Scotland"){
+  } else if (receiveReminder == "NHS Scotland") {
     // Send user to next reminder page
     res.redirect('/private-beta01/no-permission-scotland')
-  } else if (receiveReminder == "NHS Wales"){
+  } else if (receiveReminder == "NHS Wales") {
     // Send user to next reminder page
     res.redirect('/private-beta01/no-permission-wales')
   } else {
@@ -532,10 +532,10 @@ router.post('/private-beta01/cookies/answer', function (req, res) {
   var cookiesselection = req.session.data['google_analytics']
 
   // Check whether the variable matches a condition
-  if (cookiesselection == "yes"){
+  if (cookiesselection == "yes") {
     // Send user to cookie accepted page
     res.redirect('/private-beta01/cookies-accept')
-  }  else {
+  } else {
     // Send user to cookies rejected page
     res.redirect('/private-beta01/cookies-reject')
   }
@@ -545,10 +545,10 @@ router.post('/private-beta01/cookies-reject/answer', function (req, res) {
   var cookiesselection = req.session.data['google_analytics']
 
   // Check whether the variable matches a condition
-  if (cookiesselection == "yes"){
+  if (cookiesselection == "yes") {
     // Send user to cookie accepted page
     res.redirect('/private-beta01/cookies-accept')
-  }  else {
+  } else {
     // Send user to cookies rejected page
     res.redirect('/private-beta01/cookies-reject')
   }
@@ -558,10 +558,10 @@ router.post('/private-beta01/cookies-accept/answer', function (req, res) {
   var cookiesselection = req.session.data['google_analytics']
 
   // Check whether the variable matches a condition
-  if (cookiesselection == "yes"){
+  if (cookiesselection == "yes") {
     // Send user to cookie accepted page
     res.redirect('/private-beta01/cookies-accept')
-  }  else {
+  } else {
     // Send user to cookies rejected page
     res.redirect('/private-beta01/cookies-reject')
   }
@@ -571,7 +571,7 @@ router.post('/private-beta01/sr1-form-use-same-profile-details/answer', function
   var useSameProfileDetails = req.session.data['useSameProfileDetails']
 
   // Check whether the variable matches a condition
-  if (useSameProfileDetails == "Yes"){
+  if (useSameProfileDetails == "Yes") {
     // Send user to next reminder page
     res.redirect('/private-beta01/add-details-to-new-form')
   } else {
@@ -584,7 +584,7 @@ router.post('/private-beta01/add-details-to-new-form/answer', function (req, res
   var addDetails = req.session.data['addDetails']
 
   // Check whether the variable matches a condition
-  if (addDetails == "Yes"){
+  if (addDetails == "Yes") {
     // Send user to next reminder page
     res.redirect('/private-beta01/sr1-form-sections')
   } else {
@@ -592,3 +592,6 @@ router.post('/private-beta01/add-details-to-new-form/answer', function (req, res
     res.redirect('/private-beta01/profile-01');
   }
 })
+
+
+
