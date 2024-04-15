@@ -1,13 +1,13 @@
 {% extends "layout-gov-signed-in-private-beta01.html" %}
 
 {% block pageTitle %}
-Error: What is the patient’s address? – Send an SR1 medical evidence form – GOV.UK
+Error: Enter the patient’s address – Send an SR1 medical evidence form – GOV.UK
 {% endblock %}
 
 {% block content %}
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
-    <form id="sendAnSR1Form" action="/private-beta01/sr1-form-05-radio" method="post">
+    <form id="sendAnSR1Form" action="/private-beta01/sr1-form-sections" method="post">
 
       <!-- ERROR STATE -->
       <div class="govuk-error-summary" data-module="govuk-error-summary">
@@ -38,7 +38,7 @@ Error: What is the patient’s address? – Send an SR1 medical evidence form �
           <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
             <!--<span class="govuk-caption-l"> Question 3 of 4</span>-->
             <h1 class="govuk-fieldset__heading">
-              What is the patient’s address?
+              Enter the patient’s address
             </h1>
           </legend>
 

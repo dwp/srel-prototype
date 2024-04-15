@@ -7427,11 +7427,11 @@ window.GOVUKPrototypeKit.documentReady(function () {
   }
   // Progress Tag Profile
   if (pageUrlPath === '/private-beta01/sr1-form-sections') {
-    let niNo = localStorage.getItem('privatebeta01NiNo');
+    let patientPostcode = localStorage.getItem('privatebeta01PatientPostcode');
     let patientaddressline1 = localStorage.getItem('privatebeta01PatientAddressLine1');
     let patientaddresstown = localStorage.getItem('privatebeta01PatientAddressTown');
     let PatientFirstName = localStorage.getItem('privatebeta01PatientFirstName');
-    if ((niNo != null) && (patientaddressline1 != null) && (patientaddresstown != null)) {
+    if ((patientPostcode != null) && (patientaddressline1 != null) && (patientaddresstown != null)) {
       document.getElementById("patientDetails-status-notstarted").classList.add('hidden');
       document.getElementById("patientDetails-status-inprogress").classList.add('hidden');
       document.getElementById("patientDetails-status-completed").classList.remove('hidden');
@@ -8545,14 +8545,14 @@ window.GOVUKPrototypeKit.documentReady(function () {
     let patientPostcode = document.getElementById('patientPostcode');
     if (localStorage.getItem("privatebeta01PatientPostcode")) patientPostcode.innerHTML = localStorage.getItem("privatebeta01PatientPostcode");
 
-    let niNo = document.getElementById('niNo');
-    let niNoinput = document.getElementById('niNoinput');
-    console.log('nino', localStorage.getItem("privatebeta01NiNo"));
-    if (localStorage.getItem("privatebeta01NiNo") === "Yes") {
-      niNo.innerHTML = localStorage.getItem("privatebeta01NiNoinput");
-    } else {
-      niNo.innerHTML = localStorage.getItem("privatebeta01NiNo");
-    }
+    //let niNo = document.getElementById('niNo');
+    //let niNoinput = document.getElementById('niNoinput');
+    //console.log('nino', localStorage.getItem("privatebeta01NiNo"));
+    //if (localStorage.getItem("privatebeta01NiNo") === "Yes") {
+    //  niNo.innerHTML = localStorage.getItem("privatebeta01NiNoinput");
+    //} else {
+    //  niNo.innerHTML = localStorage.getItem("privatebeta01NiNo");
+    //}
 
     let whatIsTheDiagnosis = document.getElementById('whatIsTheDiagnosis');
     if (localStorage.getItem("privatebeta01WhatIsTheDiagnosis")) whatIsTheDiagnosis.innerHTML = localStorage.getItem("privatebeta01WhatIsTheDiagnosis");
@@ -8685,14 +8685,14 @@ window.GOVUKPrototypeKit.documentReady(function () {
     let patientPostcode = document.getElementById('patientPostcode');
     if (localStorage.getItem("privatebeta01PatientPostcode")) patientPostcode.innerHTML = localStorage.getItem("privatebeta01PatientPostcode");
 
-    let niNo = document.getElementById('niNo');
-    let niNoinput = document.getElementById('niNoinput');
-    console.log('nino', localStorage.getItem("privatebeta01NiNo"));
-    if (localStorage.getItem("privatebeta01NiNo") === "Yes") {
-      niNo.innerHTML = localStorage.getItem("privatebeta01NiNoinput");
-    } else {
-      niNo.innerHTML = localStorage.getItem("privatebeta01NiNo");
-    }
+    //let niNo = document.getElementById('niNo');
+    //let niNoinput = document.getElementById('niNoinput');
+    //console.log('nino', localStorage.getItem("privatebeta01NiNo"));
+    //if (localStorage.getItem("privatebeta01NiNo") === "Yes") {
+    //  niNo.innerHTML = localStorage.getItem("privatebeta01NiNoinput");
+    //} else {
+    //  niNo.innerHTML = localStorage.getItem("privatebeta01NiNo");
+    //}
 
     let whatIsTheDiagnosis = document.getElementById('whatIsTheDiagnosis');
     if (localStorage.getItem("privatebeta01WhatIsTheDiagnosis")) whatIsTheDiagnosis.innerHTML = localStorage.getItem("privatebeta01WhatIsTheDiagnosis");
