@@ -13,9 +13,13 @@ Confirm your organisation’s address – Send an SR1 medical evidence form – 
                     <h1 class="govuk-heading-l">
                         Confirm your organisation’s address
                     </h1>
-                    <p>2 addresses found for <b>TW1 3AA</b>. <a href="/private-beta01/profile-05">Search again</a></p>
                     <div class="govuk-inset-text">
-                        Ashford Health Clinic<br>London Road<br>Ashford<br>TW1 3AA
+                        <div id="organisationName"></div>
+                        <div id="organisationAddressLine1"></div>
+                        <div id="organisationAddressLine2"></div>
+                        <div id="organisationTownCity"></div>
+                        <div id="organisationAddressCounty"></div>
+                        <div id="organisationPostcode"></div>
                     </div>
                 </div>
 
@@ -27,12 +31,13 @@ Confirm your organisation’s address – Send an SR1 medical evidence form – 
                         aria-label="Return to SR1 form sections">Return to SR1 form sections</a>-->
                 </div>
                 <div class="govuk-form-group">
-                    <label class="govuk-label" for="use-different-address"><a id="different-address-link" class="govuk-link"
-                            rel="external" href="/private-beta01/profile-06">Use a different address</a></label>
+                    <label class="govuk-label" for="use-different-address"><a id="different-address-link"
+                            class="govuk-link" rel="external" href="/private-beta01/profile-06">Use a different
+                            address</a></label>
                 </div>
                 <div class="govuk-form-group">
                     <label class="govuk-label" for="cannot-find-address"><a id="postcode-finder-link" class="govuk-link"
-                            rel="external" onclick="enterOrgAddressManually()" href="/private-beta01/profile-07-a">Enter
+                            rel="external" onclick="enterAddressManually()" href="/private-beta01/profile-07-a">Enter
                             your organiation’s address
                             manually</a></label>
                 </div>
