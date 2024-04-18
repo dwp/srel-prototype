@@ -6214,6 +6214,24 @@ window.GOVUKPrototypeKit.documentReady(function () {
       }
     }
   }
+
+  if (pageUrlPath === '/private-beta01/sr1-form-04-b-manual') {
+    let patientaddressline1 = document.getElementById('patientaddressline1');
+    if (localStorage.getItem("privatebeta01PatientAddressLine1")) patientaddressline1.innerHTML = localStorage.getItem("privatebeta01PatientAddressLine1");
+
+    let patientaddressline2 = document.getElementById('patientaddressline2');
+    if (localStorage.getItem("privatebeta01PatientAddressLine2")) patientaddressline2.innerHTML = localStorage.getItem("privatebeta01PatientAddressLine2");
+
+    let patientaddresstown = document.getElementById('patientaddresstown');
+    if (localStorage.getItem("privatebeta01PatientAddressTown")) patientaddresstown.innerHTML = localStorage.getItem("privatebeta01PatientAddressTown");
+
+    let patientaddresscounty = document.getElementById('patientaddresscounty');
+    if (localStorage.getItem("privatebeta01PatientAddressCounty")) patientaddresscounty.innerHTML = localStorage.getItem("privatebeta01PatientAddressCounty");
+
+    let patientPostcode = document.getElementById('patientPostcode');
+    if (localStorage.getItem("privatebeta01PatientPostcode")) patientPostcode.innerHTML = localStorage.getItem("privatebeta01PatientPostcode");
+  }
+
   // Aware of nino private-beta01
   if (pageUrlPath === '/private-beta01/sr1-form-05-radio') {
 
@@ -6315,6 +6333,23 @@ window.GOVUKPrototypeKit.documentReady(function () {
     const formElements = document.getElementById('sendAnSR1Form').elements;
     let treatment = document.getElementById('treatment');
     if (localStorage.getItem("privatebeta01Treatment")) treatment.value = localStorage.getItem("privatebeta01Treatment");
+  }
+  // private-beta01
+  if (pageUrlPath === '/private-beta01/profile-07-manual') {
+    let organisationName = document.getElementById('organisationName');
+    let organisationAddressLine1 = document.getElementById('organisationAddressLine1');
+    let organisationAddressLine2 = document.getElementById('organisationAddressLine2');
+    let organisationTownCity = document.getElementById('organisationTownCity');
+    let organisationAddressCounty = document.getElementById('organisationAddressCounty');
+    let organisationPostcode = document.getElementById('organisationPostcode');
+
+    if (localStorage.getItem("privatebeta01OrganisationName")) organisationName.innerHTML = localStorage.getItem("privatebeta01OrganisationName");
+    if (localStorage.getItem("privatebeta01OrganisationAddressLine1")) organisationAddressLine1.innerHTML = localStorage.getItem("privatebeta01OrganisationAddressLine1");
+    if (localStorage.getItem("privatebeta01OrganisationAddressLine2")) organisationAddressLine2.innerHTML = localStorage.getItem("privatebeta01OrganisationAddressLine2");
+    if (localStorage.getItem("privatebeta01OrganisationAddressCounty")) organisationAddressCounty.innerHTML = localStorage.getItem("privatebeta01OrganisationAddressCounty");
+    if (localStorage.getItem("privatebeta01TownOrCity")) organisationTownCity.innerHTML = localStorage.getItem("privatebeta01TownOrCity");
+    if (localStorage.getItem("privatebeta01Postcode")) organisationPostcode.innerHTML = localStorage.getItem("privatebeta01Postcode");
+    if (localStorage.getItem("privatebeta01MobileNumber")) mobile.innerHTML = localStorage.getItem("privatebeta01MobileNumber");
   }
   // Add details private-beta01
   //if (pageUrlPath === '/private-beta01/add-details-to-new-form') {
@@ -7522,7 +7557,7 @@ window.GOVUKPrototypeKit.documentReady(function () {
       document.getElementById("yourDetails-link-inprogress").classList.add('hidden');
       document.getElementById("yourDetails-link-completed").classList.add('hidden');
     }
-      else if (organisationNameInput != null) {
+    else if (organisationNameInput != null) {
       document.getElementById("yourDetails-status-notstarted").classList.add('hidden');
       document.getElementById("yourDetails-link-notstarted-first-click").classList.add('hidden');
       document.getElementById("yourDetails-status-inprogress").classList.add('hidden');
@@ -7559,16 +7594,16 @@ window.GOVUKPrototypeKit.documentReady(function () {
       document.getElementById("yourDetails-link-notstarted-first-click").classList.add('hidden');
     }
   }
-// Progress Tag HCP Profile
-// if (pageUrlPath === '/private-beta01/sr1-form-02') {
-//  let patientPostcode = localStorage.getItem('privatebeta01Postcode');
-//  if (patientPostcode != null) {
-//    document.getElementById("sendAnSR1Form").form.action = "/private-beta01/sr1-form-04-a";
-//  }
-//  else {
-//    document.getElementById("sendAnSR1Form").form.action = "/private-beta01/sr1-form-03"; 
-//  }
-// }
+  // Progress Tag HCP Profile
+  // if (pageUrlPath === '/private-beta01/sr1-form-02') {
+  //  let patientPostcode = localStorage.getItem('privatebeta01Postcode');
+  //  if (patientPostcode != null) {
+  //    document.getElementById("sendAnSR1Form").form.action = "/private-beta01/sr1-form-04-a";
+  //  }
+  //  else {
+  //    document.getElementById("sendAnSR1Form").form.action = "/private-beta01/sr1-form-03"; 
+  //  }
+  // }
 
 
   // =================
@@ -15795,6 +15830,16 @@ function enterAddressManually() {
   localStorage.removeItem("privatebeta01PatientAddressTown");
   localStorage.removeItem("privatebeta01PatientPostcode");
   localStorage.removeItem("privatebeta01PatientBuilding");
+}
+function enterOrgAddressManually() {
+  console.log('Enter patient address manually selected');
+  localStorage.removeItem("privatebeta01OrganisationName");
+  localStorage.removeItem("privatebeta01OrganisationAddressLine1");
+  localStorage.removeItem("privatebeta01OrganisationAddressLine2");
+  localStorage.removeItem("privatebeta01OrganisationAddressCounty");
+  localStorage.removeItem("privatebeta01TownOrCity");
+  localStorage.removeItem("privatebeta01Postcode");
+  localStorage.removeItem("privatebeta01MobileNumber");
 }
 
 // ===================

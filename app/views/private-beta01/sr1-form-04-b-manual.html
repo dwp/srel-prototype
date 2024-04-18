@@ -1,7 +1,7 @@
 {% extends "layout-gov-signed-in-private-beta01.html" %}
 
 {% block pageTitle %}
-Confirm your organisation’s address – Send an SR1 medical evidence form – GOV.UK
+Confirm the patient's address – Send an SR1 medical evidence form – GOV.UK
 {% endblock %}
 
 {% block content %}
@@ -11,29 +11,31 @@ Confirm your organisation’s address – Send an SR1 medical evidence form – 
             <div class="govuk-width-container">
                 <div class="govuk-form-group">
                     <h1 class="govuk-heading-l">
-                        Confirm your organisation’s address
+                        Confirm the patient's address
                     </h1>
-                    <p>2 addresses found for <b>TW1 3AA</b>. <a href="/private-beta01/profile-05">Search again</a></p>
                     <div class="govuk-inset-text">
-                        Ashford Health Clinic<br>London Road<br>Ashford<br>TW1 3AA
+                        <div id="patientaddressline1"></div>
+                        <div id="patientaddressline2"></div>
+                        <div id="patientaddresstown"></div>
+                        <div id="patientaddresscounty"></div>
+                        <div id="patientPostcode"></div>
                     </div>
                 </div>
 
                 <!-- Submit button -->
                 <div class="govuk-button-group">
-                    <button id="" class="govuk-button" data-module="govuk-button"
-                        onclick="saveAddressprivatebeta01(); resetChangeFn();">Use this address</button>
-                    <!--<a class="govuk-link" onclick="saveAndLeave()" style="color:#1d70b8;"
-                        aria-label="Return to SR1 form sections">Return to SR1 form sections</a>-->
+                    <button id="" class="govuk-button" data-module="govuk-button" onclick="save()">Use this
+                        address</button>
                 </div>
                 <div class="govuk-form-group">
-                    <label class="govuk-label" for="use-different-address"><a id="different-address-link" class="govuk-link"
-                            rel="external" href="/private-beta01/profile-06">Use a different address</a></label>
+                    <label class="govuk-label" for="use-different-address"><a id="different-address-link"
+                            class="govuk-link" rel="external" href="/private-beta01/sr1-form-04">Use a different
+                            address</a></label>
                 </div>
                 <div class="govuk-form-group">
                     <label class="govuk-label" for="cannot-find-address"><a id="postcode-finder-link" class="govuk-link"
-                            rel="external" onclick="enterOrgAddressManually()" href="/private-beta01/profile-07-a">Enter
-                            your organiation’s address
+                            rel="external" onclick="enterAddressManually()" href="/private-beta01/sr1-form-04-a">Enter
+                            the patient’s address
                             manually</a></label>
                 </div>
             </div>
