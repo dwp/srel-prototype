@@ -8698,7 +8698,7 @@ window.GOVUKPrototypeKit.documentReady(function () {
   }
 
   // private-beta01
-  if (pageUrlPath === '/private-beta01/download-html' || pageUrlPath === '/private-beta01/download-pdf') {
+  if (pageUrlPath === '/private-beta01/download-html' || pageUrlPath === '/private-beta01/download-pdf' || pageUrlPath === '/private-beta01/download-dwp-agent') {
     let PatientFullName = document.getElementById('PatientFullName');
     if (localStorage.getItem("privatebeta01PatientFirstName") || localStorage.getItem("privatebeta01PatientLastName")) PatientFullName.innerHTML = localStorage.getItem("privatebeta01PatientFirstName") + ' ' + localStorage.getItem("privatebeta01PatientLastName");
 
@@ -11082,35 +11082,35 @@ function saveHCPOrgAddressmvp02() {
   const postcodeInput = document.getElementById('postcode').value;
   localStorage.setItem('hcpmvp02Postcode', postcodeInput);
 }
-function saveHCPNamemvp02() {
-  const firstNameInput = document.getElementById('firstName').value;
-  const lastNameInput = document.getElementById('lastName').value;
-  localStorage.setItem('hcpmvp02Firstname', firstNameInput);
-  localStorage.setItem('hcpmvp02Lastname', lastNameInput);
-  if (localStorage.getItem('hcpmvp02ChangingPractitionerName')) { profilePage1UrlAction.setAttribute("action", "/hcp-e2e-journey-mvp02/profile-details"); }
-  if (localStorage.getItem('hcpmvp02ChangingPractitionerNameNew')) { profilePage1UrlAction.setAttribute("action", "/hcp-e2e-journey-mvp02/check-profile-details"); }
-}
-function saveHCPOrgAddressmvp02() {
-  const organisationNameInput = document.getElementById('organisationName').value;
-  localStorage.setItem('hcpmvp02OrganisationName', organisationNameInput);
-  if (localStorage.getItem('hcpmvp02ChangingPractitionerOrgNameNew')) { profilePage1UrlAction.setAttribute("action", "/hcp-e2e-journey-mvp02/check-profile-details"); }
-  if (localStorage.getItem('hcpmvp02ChangingPractitionerOrgName')) { profilePage1UrlAction.setAttribute("action", "/hcp-e2e-journey-mvp02/profile-details"); }
+// function saveHCPNamemvp02() {
+//  const firstNameInput = document.getElementById('firstName').value;
+//   const lastNameInput = document.getElementById('lastName').value;
+//  localStorage.setItem('hcpmvp02Firstname', firstNameInput);
+//  localStorage.setItem('hcpmvp02Lastname', lastNameInput);
+//  if (localStorage.getItem('hcpmvp02ChangingPractitionerName')) { profilePage1UrlAction.setAttribute("action", "/hcp-e2e-journey-mvp02/profile-details"); }
+//  if (localStorage.getItem('hcpmvp02ChangingPractitionerNameNew')) { profilePage1UrlAction.setAttribute("action", "/hcp-e2e-journey-mvp02/check-profile-details"); }
+// }
+// function saveHCPOrgAddressmvp02() {
+//  const organisationNameInput = document.getElementById('organisationName').value;
+//  localStorage.setItem('hcpmvp02OrganisationName', organisationNameInput);
+//  if (localStorage.getItem('hcpmvp02ChangingPractitionerOrgNameNew')) { profilePage1UrlAction.setAttribute("action", "/hcp-e2e-journey-mvp02/check-profile-details"); }
+//  if (localStorage.getItem('hcpmvp02ChangingPractitionerOrgName')) { profilePage1UrlAction.setAttribute("action", "/hcp-e2e-journey-mvp02/profile-details"); }
 
-  const organisationAddressLine1Input = document.getElementById('organisationAddressLine1').value;
-  localStorage.setItem('hcpmvp02OrganisationAddressLine1', organisationAddressLine1Input);
+//  const organisationAddressLine1Input = document.getElementById('organisationAddressLine1').value;
+//  localStorage.setItem('hcpmvp02OrganisationAddressLine1', organisationAddressLine1Input);
 
-  const organisationAddressLine2Input = document.getElementById('organisationAddressLine2').value;
-  localStorage.setItem('hcpmvp02OrganisationAddressLine2', organisationAddressLine2Input);
+//  const organisationAddressLine2Input = document.getElementById('organisationAddressLine2').value;
+//  localStorage.setItem('hcpmvp02OrganisationAddressLine2', organisationAddressLine2Input);
 
-  const organisationAddressCountyInput = document.getElementById('organisationAddressCounty').value;
-  localStorage.setItem('hcpmvp02OrganisationAddressCounty', organisationAddressCountyInput);
+//  const organisationAddressCountyInput = document.getElementById('organisationAddressCounty').value;
+//  localStorage.setItem('hcpmvp02OrganisationAddressCounty', organisationAddressCountyInput);
 
-  const organisationtownOrCityInput = document.getElementById('organisationTownCity').value;
-  localStorage.setItem('hcpmvp02TownOrCity', organisationtownOrCityInput);
+//  const organisationtownOrCityInput = document.getElementById('organisationTownCity').value;
+//  localStorage.setItem('hcpmvp02TownOrCity', organisationtownOrCityInput);
 
-  const postcodeInput = document.getElementById('postcode').value;
-  localStorage.setItem('hcpmvp02Postcode', postcodeInput);
-}
+//  const postcodeInput = document.getElementById('postcode').value;
+//  localStorage.setItem('hcpmvp02Postcode', postcodeInput);
+//}
 
 // mvp03
 function saveHCPNamemvp03() {
@@ -11191,35 +11191,35 @@ function saveHCPOrgAddressmvp03() {
   const postcodeInput = document.getElementById('postcode').value;
   localStorage.setItem('hcpmvp03Postcode', postcodeInput);
 }
-function saveHCPNamemvp03() {
-  const firstNameInput = document.getElementById('firstName').value;
-  const lastNameInput = document.getElementById('lastName').value;
-  localStorage.setItem('hcpmvp03Firstname', firstNameInput);
-  localStorage.setItem('hcpmvp03Lastname', lastNameInput);
-  if (localStorage.getItem('hcpmvp03ChangingPractitionerName')) { profilePage1UrlAction.setAttribute("action", "/hcp-e2e-journey-mvp03/profile-details"); }
-  if (localStorage.getItem('hcpmvp03ChangingPractitionerNameNew')) { profilePage1UrlAction.setAttribute("action", "/hcp-e2e-journey-mvp03/check-profile-details"); }
-}
-function saveHCPOrgAddressmvp03() {
-  const organisationNameInput = document.getElementById('organisationName').value;
-  localStorage.setItem('hcpmvp03OrganisationName', organisationNameInput);
-  if (localStorage.getItem('hcpmvp03ChangingPractitionerOrgNameNew')) { profilePage1UrlAction.setAttribute("action", "/hcp-e2e-journey-mvp03/check-profile-details"); }
-  if (localStorage.getItem('hcpmvp03ChangingPractitionerOrgName')) { profilePage1UrlAction.setAttribute("action", "/hcp-e2e-journey-mvp03/profile-details"); }
+//function saveHCPNamemvp03() {
+//  const firstNameInput = document.getElementById('firstName').value;
+//  const lastNameInput = document.getElementById('lastName').value;
+//  localStorage.setItem('hcpmvp03Firstname', firstNameInput);
+//  localStorage.setItem('hcpmvp03Lastname', lastNameInput);
+//  if (localStorage.getItem('hcpmvp03ChangingPractitionerName')) { profilePage1UrlAction.setAttribute("action", "/hcp-e2e-journey-mvp03/profile-details"); }
+//  if (localStorage.getItem('hcpmvp03ChangingPractitionerNameNew')) { profilePage1UrlAction.setAttribute("action", "/hcp-e2e-journey-mvp03/check-profile-details"); }
+//}
+//function saveHCPOrgAddressmvp03() {
+//  const organisationNameInput = document.getElementById('organisationName').value;
+//  localStorage.setItem('hcpmvp03OrganisationName', organisationNameInput);
+//  if (localStorage.getItem('hcpmvp03ChangingPractitionerOrgNameNew')) { profilePage1UrlAction.setAttribute("action", "/hcp-e2e-journey-mvp03/check-profile-details"); }
+//  if (localStorage.getItem('hcpmvp03ChangingPractitionerOrgName')) { profilePage1UrlAction.setAttribute("action", "/hcp-e2e-journey-mvp03/profile-details"); }
 
-  const organisationAddressLine1Input = document.getElementById('organisationAddressLine1').value;
-  localStorage.setItem('hcpmvp03OrganisationAddressLine1', organisationAddressLine1Input);
+//  const organisationAddressLine1Input = document.getElementById('organisationAddressLine1').value;
+//  localStorage.setItem('hcpmvp03OrganisationAddressLine1', organisationAddressLine1Input);
 
-  const organisationAddressLine2Input = document.getElementById('organisationAddressLine2').value;
-  localStorage.setItem('hcpmvp03OrganisationAddressLine2', organisationAddressLine2Input);
+//  const organisationAddressLine2Input = document.getElementById('organisationAddressLine2').value;
+//  localStorage.setItem('hcpmvp03OrganisationAddressLine2', organisationAddressLine2Input);
 
-  const organisationAddressCountyInput = document.getElementById('organisationAddressCounty').value;
-  localStorage.setItem('hcpmvp03OrganisationAddressCounty', organisationAddressCountyInput);
+//  const organisationAddressCountyInput = document.getElementById('organisationAddressCounty').value;
+//  localStorage.setItem('hcpmvp03OrganisationAddressCounty', organisationAddressCountyInput);
 
-  const organisationtownOrCityInput = document.getElementById('organisationTownCity').value;
-  localStorage.setItem('hcpmvp03TownOrCity', organisationtownOrCityInput);
+//  const organisationtownOrCityInput = document.getElementById('organisationTownCity').value;
+//  localStorage.setItem('hcpmvp03TownOrCity', organisationtownOrCityInput);
 
-  const postcodeInput = document.getElementById('postcode').value;
-  localStorage.setItem('hcpmvp03Postcode', postcodeInput);
-}
+//  const postcodeInput = document.getElementById('postcode').value;
+//  localStorage.setItem('hcpmvp03Postcode', postcodeInput);
+//}
 
 // private-beta01
 function saveHCPNameprivatebeta01() {
@@ -11316,14 +11316,14 @@ function saveAddressprivatebeta01() {
   if (localStorage.getItem('privatebeta01ChangingPatientAddressNew')) { profilePage1UrlAction.setAttribute("action", "/private-beta01/check-profile-details"); }
   if (localStorage.getItem('privatebeta01ChangingPatientAddress')) { profilePage1UrlAction.setAttribute("action", "/private-beta01/profile-details"); }
 }
-function saveHCPNameprivatebeta01() {
-  const firstNameInput = document.getElementById('firstName').value;
-  const lastNameInput = document.getElementById('lastName').value;
-  localStorage.setItem('privatebeta01Firstname', firstNameInput);
-  localStorage.setItem('privatebeta01Lastname', lastNameInput);
-  if (localStorage.getItem('privatebeta01ChangingPractitionerName')) { profilePage1UrlAction.setAttribute("action", "/private-beta01/profile-details"); }
-  if (localStorage.getItem('privatebeta01ChangingPractitionerNameNew')) { profilePage1UrlAction.setAttribute("action", "/private-beta01/check-profile-details"); }
-}
+// function saveHCPNameprivatebeta01() {
+//  const firstNameInput = document.getElementById('firstName').value;
+//  const lastNameInput = document.getElementById('lastName').value;
+//  localStorage.setItem('privatebeta01Firstname', firstNameInput);
+//  localStorage.setItem('privatebeta01Lastname', lastNameInput);
+//  if (localStorage.getItem('privatebeta01ChangingPractitionerName')) { profilePage1UrlAction.setAttribute("action", "/private-beta01/profile-details"); }
+//  if (localStorage.getItem('privatebeta01ChangingPractitionerNameNew')) { profilePage1UrlAction.setAttribute("action", "/private-beta01/check-profile-details"); }
+//}
 function privatebeta01OrganisationAddressFn(selectorganisationaddress) {
   currentOrganisationAddress = selectorganisationaddress.value;
   localStorage.setItem('privatebeta01OrganisationAddress', currentOrganisationAddress);
@@ -11338,27 +11338,27 @@ function privatebeta01OrganisationAddressFn(selectorganisationaddress) {
   localStorage.setItem("privatebeta01TownOrCity", 'Ashford');
   localStorage.setItem("privatebeta01Postcode", 'TW1 3AA');
 }
-function saveHCPOrgAddressprivatebeta01() {
-  const organisationNameInput = document.getElementById('organisationName').value;
-  localStorage.setItem('privatebeta01OrganisationName', organisationNameInput);
-  if (localStorage.getItem('privatebeta01ChangingPractitionerOrgNameNew')) { profilePage1UrlAction.setAttribute("action", "/private-beta01/check-profile-details"); }
-  if (localStorage.getItem('privatebeta01ChangingPractitionerOrgName')) { profilePage1UrlAction.setAttribute("action", "/private-beta01/profile-details"); }
+// function saveHCPOrgAddressprivatebeta01() {
+// const organisationNameInput = document.getElementById('organisationName').value;
+//  localStorage.setItem('privatebeta01OrganisationName', organisationNameInput);
+//  if (localStorage.getItem('privatebeta01ChangingPractitionerOrgNameNew')) { profilePage1UrlAction.setAttribute("action", "/private-beta01/check-profile-details"); }
+//  if (localStorage.getItem('privatebeta01ChangingPractitionerOrgName')) { profilePage1UrlAction.setAttribute("action", "/private-beta01/profile-details"); }
 
-  const organisationAddressLine1Input = document.getElementById('organisationAddressLine1').value;
-  localStorage.setItem('privatebeta01OrganisationAddressLine1', organisationAddressLine1Input);
+//  const organisationAddressLine1Input = document.getElementById('organisationAddressLine1').value;
+//  localStorage.setItem('privatebeta01OrganisationAddressLine1', organisationAddressLine1Input);
 
-  const organisationAddressLine2Input = document.getElementById('organisationAddressLine2').value;
-  localStorage.setItem('privatebeta01OrganisationAddressLine2', organisationAddressLine2Input);
+//  const organisationAddressLine2Input = document.getElementById('organisationAddressLine2').value;
+//  localStorage.setItem('privatebeta01OrganisationAddressLine2', organisationAddressLine2Input);
 
-  const organisationAddressCountyInput = document.getElementById('organisationAddressCounty').value;
-  localStorage.setItem('privatebeta01OrganisationAddressCounty', organisationAddressCountyInput);
+//  const organisationAddressCountyInput = document.getElementById('organisationAddressCounty').value;
+//  localStorage.setItem('privatebeta01OrganisationAddressCounty', organisationAddressCountyInput);
 
-  const organisationtownOrCityInput = document.getElementById('organisationTownCity').value;
-  localStorage.setItem('privatebeta01TownOrCity', organisationtownOrCityInput);
+//  const organisationtownOrCityInput = document.getElementById('organisationTownCity').value;
+//  localStorage.setItem('privatebeta01TownOrCity', organisationtownOrCityInput);
 
-  const postcodeInput = document.getElementById('postcode').value;
-  localStorage.setItem('privatebeta01Postcode', postcodeInput);
-}
+//  const postcodeInput = document.getElementById('postcode').value;
+//  localStorage.setItem('privatebeta01Postcode', postcodeInput);
+//}
 function privatebeta01AddDetails(addDetails) {
   wantAddDetails = addDetails.value;
   localStorage.setItem('privatebeta0AddDetails', wantAddDetails);
@@ -16461,15 +16461,15 @@ function mergeHtmlmvp03(staticHtml, dynamicContent) {
   return mergedHtml;
 }
 
-function updateElementContent(document, elementId, newContent) {
-  const element = document.getElementById(elementId);
-  if (element) {
-    // Update the content of the element with new content
-    element.innerHTML = newContent;
-  } else {
-    console.warn(`Element with id '${elementId}' not found in the document.`);
-  }
-}
+// function updateElementContent(document, elementId, newContent) {
+//  const element = document.getElementById(elementId);
+//  if (element) {
+//    // Update the content of the element with new content
+//    element.innerHTML = newContent;
+//  } else {
+//    console.warn(`Element with id '${elementId}' not found in the document.`);
+//  }
+//}
 
 //dynamic content download
 //PRIVATE BETA 01
