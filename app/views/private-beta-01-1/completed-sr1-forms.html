@@ -1,0 +1,148 @@
+{% extends "layout-gov-signed-in-private-beta01.html" %}
+
+{% block pageTitle %}
+Completed SR1 forms – Send an SR1 medical evidence form – GOV.UK
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <h1 class="govuk-heading-xl">Completed SR1 forms</h1>
+    <p class="govuk-body">You can access completed SR1 forms for 30 days after you submit them. You can re-send, view,
+      and download them.</p>
+
+    <div>
+      <div class="govuk-form-group">
+        <label class="govuk-label" for="event-name">
+          <strong>Search by patient name
+            <!-- or reference number -->
+          </strong>
+        </label>
+        <input class="govuk-input govuk-input--width-10" id="searchField" name="searchField" type="text">
+        &nbsp;&nbsp;
+        <button class="govuk-button govuk-button--secondary" data-module="govuk-button">
+          Search
+        </button>
+        &nbsp;&nbsp;
+        <a class="govuk-link" href="#" onclick="clearSearchTerms()">Clear search</a>
+      </div>
+
+    </div>
+
+    <table class="govuk-table">
+      <thead class="govuk-table__head">
+        <tr class="govuk-table__row">
+          <th class="govuk-table__header" scope="col"> Patient </th>
+          <th class="govuk-table__header" scope="col"> Date submitted </th>
+        </tr>
+      </thead>
+      <tbody class="govuk-table__body">
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell">
+            <span class="govuk-visually-hidden">Check form for </span><a href="#" class="govuk-link govuk-link--no-visited-state">Joshua Wessel</a>
+          </td>
+          <td class="govuk-table__cell">25/03/2024
+          </td>
+        </tr>
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell">
+            <span class="govuk-visually-hidden">Check form for </span><a href="#" class="govuk-link govuk-link--no-visited-state">Rachael Pepper</a>
+          </td>
+          <td class="govuk-table__cell">
+            25/03/2024
+          </td>
+        </tr>
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell">
+            <span class="govuk-visually-hidden">Check form for </span><a href="#" class="govuk-link govuk-link--no-visited-state">Rachel Silver</a>
+          </td>
+          <td class="govuk-table__cell">
+            22/03/2024
+          </td>
+        </tr>
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell">
+            <span class="govuk-visually-hidden">Check form for </span><a href="#" class="govuk-link govuk-link--no-visited-state">Emma Tennant</a>
+          </td>
+          <td class="govuk-table__cell">
+            5/03/2024
+          </td>
+        </tr>
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell">
+            <span class="govuk-visually-hidden">Check form for </span><a href="#" class="govuk-link govuk-link--no-visited-state">Sammy Trujillo</a>
+          </td>
+          <td class="govuk-table__cell">
+            4/03/2024
+          </td>
+        </tr>
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell">
+            <span class="govuk-visually-hidden">Check form for </span><a href="#" class="govuk-link govuk-link--no-visited-state">Jarvis Hartman</a>
+          </td>
+          <td class="govuk-table__cell">
+            4/03/2024
+          </td>
+        </tr>
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell">
+            <span class="govuk-visually-hidden">Check form for </span><a href="#" class="govuk-link govuk-link--no-visited-state">Renaldo Williamson
+            </a>
+          </td>
+          <td class="govuk-table__cell">
+           13/02/2024
+          </td>
+        </tr>
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell">
+            <span class="govuk-visually-hidden">Check form for </span><a href="#" class="govuk-link govuk-link--no-visited-state">Fidel Duarte</a>
+          </td>
+          <td class="govuk-table__cell">
+            2/02/2024
+          </td>
+        </tr>
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell">
+            <span class="govuk-visually-hidden">Check form for </span><a href="#" class="govuk-link govuk-link--no-visited-state"> Laura Frith</a>
+          </td>
+          <td class="govuk-table__cell">
+            24/01/2024
+          </td>
+        </tr>
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell">
+            <span class="govuk-visually-hidden">Check form for </span><a href="#" class="govuk-link govuk-link--no-visited-state">Paul French</a>
+          </td>
+          <td class="govuk-table__cell">
+            4/01/2024
+          </td>
+        </tr>
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell">
+            <span class="govuk-visually-hidden">Check form for </span><a href="#" class="govuk-link govuk-link--no-visited-state">Jesse Smith</a>
+          </td>
+          <td class="govuk-table__cell">
+            4/01/2024
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="govuk-!-padding-bottom-6"></div>
+
+    <!--Get help new-->
+    <section class="govuk-width-container govuk-!-margin-top-7 govuk-!-margin-bottom-7 ">
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-full">
+          <h2 class="govuk-heading-m">Get help</h2>
+          <p class="govuk-body">Email: <a class="govuk-link"
+              href="mailto:online.sr1@dwp.gov.uk">online.sr1@dwp.gov.uk</a></p>
+          <p class="govuk-body">We aim to respond within 3 working days.</p>
+        </div>
+      </div>
+    </section>
+  </div>
+</div>
+
+{% endblock %}
