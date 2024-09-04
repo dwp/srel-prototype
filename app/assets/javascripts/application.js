@@ -308,7 +308,34 @@ window.GOVUKPrototypeKit.documentReady(function () {
     ((pageUrlPath === '/private-beta01/landing-pages/how-to-complete-an-sr1-form') && !localStorage.getItem("hcpprivatebeta01IsLoggedIn")) ||
     ((pageUrlPath === '/private-beta01/landing-pages/send-an-online-sr1-form') && !localStorage.getItem("hcpprivatebeta01IsLoggedIn")) ||
     ((pageUrlPath === '/private-beta01/landing-pages/other-ways-to-send-an-sr1-form') && !localStorage.getItem("hcpprivatebeta01IsLoggedIn")) ||
-    ((pageUrlPath === '/private-beta01/landing-pages/print') && !localStorage.getItem("hcpprivatebeta01IsLoggedIn"))
+    ((pageUrlPath === '/private-beta01/landing-pages/print') && !localStorage.getItem("hcpprivatebeta01IsLoggedIn")) ||
+
+
+ // private-beta-01-1
+ ((pageUrlPath === '/private-beta-01-1/') && !localStorage.getItem("hcpprivatebeta01IsLoggedIn")) ||
+ ((pageUrlPath === '/private-beta-01-1') && !localStorage.getItem("hcpprivatebeta01IsLoggedIn")) ||
+ (pageUrlPath === '/private-beta-01-1/start-page') ||
+ (pageUrlPath === '/private-beta-01-1/signin-page') ||
+ (pageUrlPath === '/private-beta-01-1/feedback') ||
+ (pageUrlPath === '/private-beta-01-1/organisation-signin-page') ||
+ (pageUrlPath === '/private-beta-01-1/profile-00') ||
+ (pageUrlPath === '/private-beta-01-1/profile-07-a-new') ||
+ (pageUrlPath === '/private-beta-01-1/reminder-settings') ||
+ (pageUrlPath === '/private-beta-01-1/signout') ||
+ (pageUrlPath === '/private-beta-01-1/form-handler') ||
+ (pageUrlPath === '/private-beta-01-1/signedout') ||
+ (pageUrlPath === '/private-beta-01-1/before-you-start') ||
+ (pageUrlPath === '/private-beta-01-1/no-permission') ||
+ (pageUrlPath === '/private-beta-01-1/no-permission-role') ||
+ ((pageUrlPath === '/private-beta-01-1/landing-pages/who-can-send-an-sr1-form') && !localStorage.getItem("hcpprivatebeta01IsLoggedIn")) ||
+ ((pageUrlPath === '/private-beta-01-1/landing-pages/how-to-complete-an-sr1-form') && !localStorage.getItem("hcpprivatebeta01IsLoggedIn")) ||
+ ((pageUrlPath === '/private-beta-01-1/landing-pages/send-an-online-sr1-form') && !localStorage.getItem("hcpprivatebeta01IsLoggedIn")) ||
+ ((pageUrlPath === '/private-beta-01-1/landing-pages/other-ways-to-send-an-sr1-form') && !localStorage.getItem("hcpprivatebeta01IsLoggedIn")) ||
+ ((pageUrlPath === '/private-beta-01-1/landing-pages/print') && !localStorage.getItem("hcpprivatebeta01IsLoggedIn"))
+
+
+
+
   ) {
     //const backLink = document.getElementById('backLink').style.display = 'none';
     //const navLink = document.getElementById('navLink').style.display = 'none';

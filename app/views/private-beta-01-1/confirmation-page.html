@@ -1,0 +1,114 @@
+{% extends "layout-gov-signed-in-private-beta01.html" %}
+
+{% block pageTitle %}
+SR1 form sent – Send an SR1 medical evidence form – GOV.UK
+{% endblock %}
+
+{% block content %}
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generate PDF</title>
+    <script src=https://rawgit.com/eKoopmans/html2pdf/master/dist/html2pdf.bundle.js></script>
+</head>
+
+<div class="govuk-grid-row">
+
+    <div class="govuk-grid-column-two-thirds">
+
+        <div class="govuk-panel govuk-panel--confirmation">
+            <h1 class="govuk-panel__title">SR1 form sent</h1>
+            <!--<h1 class="govuk-panel__title">SR1 form <span id="resubmittedH1" class="hidden">re</span>sent</h1>-->
+        </div>
+
+        <div class="govuk-!-padding-bottom-6"></div>
+
+        <p class="govuk-body">This is the only time you can download the patient's completed SR1 form and your fee claim
+            form.</p>
+
+        <!--<p class="govuk-body"><a class="govuk-link gem-c-attachment__link" target="_self" onclick=printForm()
+                style="color:#1d70b8;">Download <span id="PatientFullName"></span> SR1 form (PDF, 1MB)</a>.</p>-->
+        <p class="govuk-body"><a class="govuk-link gem-c-attachment__link" style="color:#1d70b8;" href="#"
+                id="pdfButton">Download <span id="PatientFullName"></span> SR1 form (PDF, 1MB)</a>.</p>
+        <p class="govuk-body">If you use assistive software, you can <a class="govuk-link"
+                href="/private-beta01/download-html" target="_blank" download>download an accessible version of
+                <span id="PatientFullName2"></span> SR1 form (HTML, 1MB)</a>.</p>
+
+        <p class="govuk-body">
+            <!--<a class="govuk-link gem-c-attachment__link" target="_self" href="./private-beta01/pdfs/SR1_fee_form_08_23.pdf" >Download your fee claim form (PDF, 1MB)</a>-->
+            <a href="#" target="_self">Download your fee claim form (PDF,
+                1MB)</a>.
+        </p>
+
+        <script>
+            // Attach click event to the PDF button
+            document.getElementById('pdfButton').addEventListener('click', generatePDF);
+
+            async function generatePDF() {
+                const url = '/private-beta01/download-html';
+
+                try {
+                    const response = await fetch(url);
+                    const htmlContent = await response.text();
+
+                    const dynamicContent = await generateDynamicContentprivatebeta01(); // Replace with the actual function to generate dynamic content
+
+                    // Merge the static HTML content with the dynamic content
+                    const mergedHtml = mergeHtmlprivatebeta01(htmlContent, dynamicContent);
+
+                    // Use html2pdf library to generate PDF
+                    html2pdf(mergedHtml, {
+                        margin: 10,
+                        filename: 'Download SR1 form (PDF, 1MB)',
+                        jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' },
+                        html2canvas: { scale: 2 },
+                        pagebreak: { mode: 'avoid-all' }
+                    });
+                } catch (error) {
+                    console.error('Error fetching or generating PDF:', error);
+                }
+            }
+        </script>
+
+
+        <div class="govuk-!-padding-bottom-6"></div>
+
+        <h2 class="govuk-heading-m">What happens next</h2>
+
+        <p class="govuk-body">Tell the patient you have sent the SR1 form. You should encourage them to submit their
+            benefit claim if they have not already.</p>
+        <p class="govuk-body">We will contact the patient when we have made a decision on their claim.</p>
+        <p class="govuk-body">If we need more information about the patient, we will contact you.</p>
+        <!-- Submit button -->
+
+        <div class="govuk-button-group">
+            <a class="govuk-link" data-module="govuk-button" a href="/private-beta01/sr1-form-start"
+                id="backtoaccounthome" onclick="privatebeta01completedSR1Form()">Start a new SR1 form</a>
+        </div>
+
+        <div class="govuk-!-padding-bottom-6"></div>
+
+        <!--Get help new-->
+        <hr class="govuk-section-break govuk-section-break--visible" aria-hidden="true">
+        <section class="govuk-width-container govuk-!-margin-top-7 govuk-!-margin-bottom-6">
+            <div class="govuk-grid-row">
+                <div class="govuk-grid-column-full">
+                    <h2 class="govuk-heading-m">Get help</h2>
+                    <p class="govuk-body">Email: <a class="govuk-link"
+                            href="mailto:online.sr1@dwp.gov.uk">online.sr1@dwp.gov.uk</a></p>
+                    <p class="govuk-body">We aim to respond within 3 working days.</p>
+                </div>
+            </div>
+        </section>
+
+        <p class=govuk-body><a
+                href="https://forms.office.com/Pages/ResponsePage.aspx?id=DpxP-knna0i8NIr6EGM3VupINvg8uK9KqwdHnbpPR49UNk5RTE1BQ0JXUEJFVTM5OUs4VFNQM1FINS4u">What
+                did you think of this service?</a></p>
+
+    </div>
+
+</div>
+
+
+{% endblock %}
