@@ -1,0 +1,167 @@
+{% extends "layout-gov-signed-in-private-beta02.html" %}
+
+{% block pageTitle %}
+Error: Enter your organisation’s address – Send an SR1 medical evidence form – GOV.UK
+{% endblock %}
+
+{% block content %}
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <form id="profileSetupPage" name="profileDetails" action="/private-beta02/sr1-form-sections"
+      method="post">
+
+      <!-- ERROR STATE -->
+      <div class="govuk-error-summary" data-module="govuk-error-summary">
+        <div role="alert">
+          <h2 class="govuk-error-summary__title">
+            There is a problem
+          </h2>
+          <div class="govuk-error-summary__body">
+            <ul class="govuk-list govuk-error-summary__list">
+              <li>
+                <a href="#organisationName">Enter organisation name</a>
+              </li>
+              <li>
+                <a href="#organisationAddressLine1">Enter address line 1</a>
+              </li>
+              <li>
+                <a href="#organisationTownCity">Enter a town or city</a>
+              </li>
+              <li>
+                <a href="#postcode">Enter a postcode</a>
+              </li>
+              <li>
+                <a href="#postcode" class="govuk-visually-hidden">Enter a real postcode</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+            <!--<span class="govuk-caption-l">Question 5 of 5</span>-->
+            <h1 class="govuk-fieldset__heading">
+              Enter your organisation’s address
+            </h1>
+          </legend>
+          <div id="organisationName-hint" class="govuk-hint">This could be your Trust, Clinical Commissioning Group
+            (CCG), or surgery. </div>
+          <!-- Building and street -->
+          <div class="govuk-form-group govuk-form-group--error">
+            <label class="govuk-label" for="organisationName">
+              Organisation name
+            </label>
+            <!--ERROR LEGEND -->
+            <p id="organisationName-error" class="govuk-error-message">
+              <span class="govuk-visually-hidden">Error:</span> Enter organisation name
+            </p>
+            <input class="govuk-input govuk-input--error" id="organisationName" name="organisationName" type="text"
+              autocomplete="off">
+          </div>
+          <div class="govuk-form-group govuk-form-group--error">
+            <label class="govuk-label" for="address-line-1">
+              Address line 1
+            </label>
+            <!--ERROR LEGEND -->
+            <p id="organisationAddressLine1-error" class="govuk-error-message">
+              <span class="govuk-visually-hidden">Error:</span> Enter address line 1
+            </p>
+            <!-- END ERROR -->
+            <input class="govuk-input govuk-input--error" id="organisationAddressLine1" name="organisationAddressLine1"
+              type="text" autocomplete="off">
+          </div>
+
+          <div class="govuk-form-group">
+            <label class="govuk-label" for="address-line-2">
+              Address line 2 (optional)
+            </label>
+            <input class="govuk-input" id="organisationAddressLine2" name="organisationAddressLine2" type="text"
+              autocomplete="off">
+          </div>
+          <!-- Town or city -->
+          <div class="govuk-form-group govuk-form-group--error">
+            <label class="govuk-label" for="organisationTownCity">Town or city</label>
+            <!--ERROR LEGEND -->
+            <p id="organisationAddressLine1-error" class="govuk-error-message">
+              <span class="govuk-visually-hidden">Error:</span> Enter a town or city
+            </p>
+            <!-- END ERROR -->
+            <input class="govuk-input govuk-!-width-two-thirds govuk-input--error" id="organisationTownCity"
+              name="organisationTownCity" type="text" autocomplete="address-level2">
+          </div>
+
+          <div class="govuk-form-group">
+            <label class="govuk-label" for="organisationAddressCounty">
+              County (optional)
+            </label>
+            <input class="govuk-input govuk-!-width-two-thirds" id="organisationAddressCounty"
+              name="organisationAddressCounty" type="text">
+          </div>
+
+          <!-- Postcode -->
+          <div class="govuk-form-group govuk-form-group--error">
+            <label class="govuk-label" for="postcode">Postcode</label>
+            <div id="postcode-hint" class="govuk-hint">
+              For example, AA3 1AB.
+            </div>
+            <!--ERROR LEGEND -->
+            <p id="manual-postcode-error" class="govuk-error-message">
+              <span class="govuk-visually-hidden">Error:</span> Enter a postcode
+            </p>
+            <p id="manual-postcode-real-error" class="govuk-error-message govuk-visually-hidden">
+              <span class="govuk-visually-hidden">Error:</span> Enter a real postcode
+            </p>
+            <!-- END ERROR -->
+            <input class="govuk-input govuk-input--width-10 govuk-input--error" id="postcode" name="postcode"
+              type="text" autocomplete="off">
+          </div>
+        </fieldset>
+      </div>
+
+
+      <!-- Submit button -->
+      <div class="govuk-button-group">
+        <button id="" class="govuk-button" data-module="govuk-button"
+          onclick="saveHCPOrgAddressprivatebeta02(); resetChangeFn();">
+          Continue
+        </button>
+        <a class="govuk-link" onclick="saveAndLeave()" style="color:#1d70b8;" aria-label="Return to SR1 form sections"
+          href="#">Return to SR1 form sections</a>
+      </div>
+    </form>
+
+    <div class="govuk-!-padding-bottom-6"></div>
+
+    <!--Get help new-->
+    <hr class="govuk-section-break govuk-section-break--visible" aria-hidden="true">
+    <section class="govuk-width-container govuk-!-margin-top-7 govuk-!-margin-bottom-7 ">
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-full">
+          <h2 class="govuk-heading-m">Get help</h2>
+          <p class="govuk-body">Email: <a class="govuk-link" href="mailto:online.sr1@dwp.gov.uk">online.sr1@dwp.gov.uk</a>
+          </p>
+          <p class="govuk-body">We aim to respond within 3 working days.</p>
+        </div>
+      </div>
+    </section>
+
+
+  </div>
+
+</div>
+
+<script>
+  // get and set in this order - this ensures what is sent in query is the same as what is in the localStorage
+  const saveAndLeave = () => {
+    //saveHCPOrgAddressprivatebeta01();
+
+    const origin = window.location.origin;
+    const url = getUrlWithSR1DataAsQueryParamsprivatebeta02(origin, "/private-beta02/sr1-form-sections");
+
+    window
+      .location
+      .replace(url.toString());
+  }
+</script>
+{% endblock %}
