@@ -1,0 +1,113 @@
+{% extends "layout-gov-signed-in-private-beta02.html" %}
+
+{% block pageTitle %}
+Is the patient aware of their prognosis? – Send an SR1 medical evidence form – GOV.UK
+{% endblock %}
+
+{% block content %}
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+        <form id="sendAnSR1Form" action="/private-beta02/sr1-form-sections" method="post">
+            <div class="govuk-form-group">
+                <fieldset class="govuk-fieldset">
+                    <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+                        <!--<span class="govuk-caption-l"> Question 6 of 6</span>-->
+                        <h1 class="govuk-fieldset__heading">
+                            Is the patient aware of their prognosis?
+                        </h1>
+                    </legend>
+
+                    <!-- Is the patient aware of their prognosis? -->
+                    <div class="govuk-radios govuk-radios--inline" data-module="govuk-radios">
+                        <div class="govuk-radios__item">
+                            <input autocomplete="off" class="govuk-radios__input" id="awareOfPrognosisYes"
+                                name="awareOfPrognosis" type="radio" value="Yes" aria-label="Yes">
+                            <label class="govuk-label govuk-radios__label" for="awareOfPrognosisYes">
+                                Yes
+                            </label>
+                        </div>
+                        <div class="govuk-radios__item">
+                            <input autocomplete="off" class="govuk-radios__input" id="awareOfPrognosisNo"
+                                name="awareOfPrognosis" type="radio" value="No" aria-label="No">
+                            <label class="govuk-label govuk-radios__label" for="awareOfPrognosisNo">
+                                No
+                            </label>
+                        </div>
+                    </div>
+
+                </fieldset>
+            </div>
+
+            <!-- Submit button -->
+            <div class="govuk-button-group">
+                <button id="" class="govuk-button" data-module="govuk-button" onclick="save()">
+                    Continue
+                </button>
+                <a class="govuk-link" onclick="saveAndLeave()" style="color:#1d70b8;" aria-label="Return to SR1 form sections" href="#">Return to SR1 form sections</a>
+            </div>
+        </form>
+        <div class="govuk-!-padding-bottom-6"></div>
+
+        <!--Get help new-->
+        <hr class="govuk-section-break govuk-section-break--visible" aria-hidden="true">
+        <section class="govuk-width-container govuk-!-margin-top-7 govuk-!-margin-bottom-7 ">
+            <div class="govuk-grid-row">
+                <div class="govuk-grid-column-full">
+                    <h2 class="govuk-heading-m">Get help</h2>
+                    <p class="govuk-body">Email: <a class="govuk-link"
+                            href="mailto:online.sr1@dwp.gov.uk">online.sr1@dwp.gov.uk</a></p>
+                    <p class="govuk-body">We aim to respond within 3 working days.</p>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+</div>
+
+<script>
+    const save = () => {
+        if (document.getElementById('awareOfPrognosisYes').checked) {
+            privatebeta02AwareOfPrognosis(true);
+        } else if (document.getElementById('awareOfPrognosisNo').checked) {
+            privatebeta02AwareOfPrognosis(false);
+        }
+    }
+
+    // get and set in this order - this ensures what is sent in query is the same as what is in the localStorage
+    const saveAndLeave = () => {
+        //save();
+
+        const origin = window.location.origin;
+        const url = getUrlWithSR1DataAsQueryParamsprivatebeta02(origin, "/private-beta02/sr1-form-sections");
+        console.log(url);
+
+        window
+            .location
+            .replace(url.toString());
+    }
+
+    const checkValue = () => {
+        const isPatientAwareOfPrognosis = localStorage.getItem('privatebeta02AwareOfPrognosis');
+        console.log({ aware: isPatientAwareOfPrognosis });
+        if (isPatientAwareOfPrognosis === undefined) {
+            //dont set anything
+            return;
+        }
+
+        if (isPatientAwareOfPrognosis === 'true') {
+            document
+                .getElementById('awareOfPrognosisYes')
+                .checked = true;
+        }
+
+        if (isPatientAwareOfPrognosis === 'false') {
+            document
+                .getElementById('awareOfPrognosisNo')
+                .checked = true;
+        }
+    }
+
+    checkValue();
+</script>
+{% endblock %}

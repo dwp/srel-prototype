@@ -1,0 +1,86 @@
+{% extends "layout-gov-signed-in-private-beta02.html" %}
+
+{% block pageTitle %}
+Do you have the patient’s National Insurance number? – Send an SR1 medical evidence form – GOV.UK
+{% endblock %}
+
+{% block content %}
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+        <form id="sendAnSR1Form" action="/private-beta02/sr1-form-05-radio/answer" method="post">
+            <div class="govuk-form-group">
+                <fieldset class="govuk-fieldset">
+                    <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+                        <!--<span class="govuk-caption-l"> Question 4 of 4</span>-->
+                        <h1 class="govuk-fieldset__heading">
+                            Do you have the patient’s National Insurance number?
+                        </h1>
+                    </legend>
+
+                    <!-- National Insurance number -->
+                    <div class="govuk-form-group">
+                        <!--<p class="govuk-body">We can process the patient's benefit claim faster with their National
+                            Insurance number.
+                        </p>-->
+                        <div id="national-insurance-number-hint" class="govuk-hint">
+                            We can process the patient's benefit claim faster with their National
+                            Insurance number.
+                        </div>
+                        <div class="govuk-radios govuk-radios--inline" data-module="govuk-radios">
+                            <div class="govuk-radios__item">
+                                <input class="govuk-radios__input" id="niNo-yes" name="niNo" type="radio" value="Yes" onclick="privatebeta02HaveNiNo(this)">
+                                <label class="govuk-label govuk-radios__label" for="niNo-yes">
+                                    Yes
+                                </label>
+                            </div>
+                            <div class="govuk-radios__item">
+                                <input class="govuk-radios__input" id="niNo-no" name="niNo" type="radio" value="Not provided" onclick="privatebeta02HaveNiNo(this)">
+                                <label class="govuk-label govuk-radios__label" for="niNo-no">
+                                    No
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </fieldset>
+            </div>
+
+
+            <!-- Submit button -->
+            <div class="govuk-button-group">
+                <button id="" class="govuk-button" data-module="govuk-button" onclick="savenniNoradioSR1Formprivatebeta02(); resetChangeFn();">
+                    Continue
+                </button>
+                <a class="govuk-link" onclick="saveAndLeave()" style="color:#1d70b8;" aria-label="Return to SR1 form sections">Return to SR1 form sections</a>
+            </div>
+        </form>
+        <div class="govuk-!-padding-bottom-6"></div>
+
+        <!--Get help new-->
+        <hr class="govuk-section-break govuk-section-break--visible" aria-hidden="true">
+        <section class="govuk-width-container govuk-!-margin-top-7 govuk-!-margin-bottom-7 ">
+            <div class="govuk-grid-row">
+                <div class="govuk-grid-column-full">
+                    <h2 class="govuk-heading-m">Get help</h2>
+                    <p class="govuk-body">Email: <a class="govuk-link"
+                            href="mailto:online.sr1@dwp.gov.uk">online.sr1@dwp.gov.uk</a></p>
+                    <p class="govuk-body">We aim to respond within 3 working days.</p>
+                </div>
+            </div>
+        </section>
+
+    </div>
+</div>
+
+<script>
+    // get and set in this order - this ensures what is sent in query is the same as what is in the localStorage
+    const saveAndLeave = () => {
+
+        const origin = window.location.origin;
+        const url = getUrlWithSR1DataAsQueryParamsprivatebeta02(origin, "/private-beta02/sr1-form-sections");
+
+        window
+            .location
+            .replace(url.toString());
+    }
+</script>
+{% endblock %}

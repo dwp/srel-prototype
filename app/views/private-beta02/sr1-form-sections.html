@@ -1,0 +1,288 @@
+{% extends "layout-gov-signed-in-private-beta02.html" %}
+
+{% block pageTitle %}
+SR1 form – Send an SR1 medical evidence form – GOV.UK
+{% endblock %}
+
+{% block content %}
+
+<meta name="hmrc-timeout-dialog" content="hmrc-timeout-dialog" data-language="en" data-timeout="300" data-countdown="68"
+  data-keep-alive-url="?continue=true" data-sign-out-url="/private-beta02/signedout" data-timeout-url=""
+  data-title="Your answers will be deleted soon"
+  data-message="We will sign you out if you do not do anything in the next "
+  data-message-suffix="Your answers will be deleted. This is to protect your and the patient's information."
+  data-keep-alive-button-text="Stay signed in" data-sign-out-button-text="Sign out" data-synchronise-tabs="" />
+
+{% macro subsectionStatus(idSuffix, dataVar, fullNameSet) %}
+{% if dataVar | isStringVarDefined %}
+<strong class="govuk-tag app-task-list__tag" id="{{idSuffix}}-completed" aria-hidden>Completed</strong>
+{% else %}
+<strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="{{idSuffix}}-status">Not started</strong>
+{% endif %}
+{% endmacro %}
+
+{% macro dateSubsectionStatus(idSuffix, day, month, year, fullNameSet) %}
+{% if day | isStringVarDefined and month | isStringVarDefined and year | isStringVarDefined %}
+<strong class="govuk-tag app-task-list__tag" id="{{idSuffix}}-completed" aria-hidden>Completed</strong>
+{% else %}
+<strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="{{idSuffix}}-status">Not started</strong>
+{% endif %}
+{% endmacro %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <div class="govuk-notification-banner" role="region" aria-labelledby="govuk-notification-banner-title"
+      data-module="govuk-notification-banner">
+      <div class="govuk-notification-banner__header">
+        <h2 class="govuk-notification-banner__title" id="govuk-notification-banner-title">
+          Important
+        </h2>
+      </div>
+      <div class="govuk-notification-banner__content">
+        <p class="govuk-notification-banner__heading">
+          If you sign out your answers will be deleted.
+        </p>
+        <p class="govuk-body">
+          You will be signed out if you do not do anything for 30 minutes.
+        </p>
+      </div>
+    </div>
+
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-full">
+        <h1 class="govuk-heading-l">SR1 form sections</h1>
+        <h2 class="govuk-heading-m govuk-!-margin-top-5">Patient details</h2>
+        <ul class="govuk-task-list">
+          <li class="govuk-task-list__item govuk-task-list__item--with-link" id="patientFullName">
+            <div class="govuk-task-list__name-and-hint" id="patientDetails-link-notstarted">
+              <a class="govuk-link govuk-task-list__link" href="/private-beta02/sr1-form-01"
+                aria-describedby="patientDetails-status-notstarted">
+                Complete patient details
+              </a>
+            </div>
+            <div class="govuk-task-list__name-and-hint hidden" id="patientDetails-link-inprogress">
+              <a class="govuk-link govuk-task-list__link" href="/private-beta02/sr1-form-01"
+                aria-describedby="patientDetails-status-inprogress">
+                Complete patient details
+              </a>
+            </div>
+            <div class="govuk-task-list__name-and-hint hidden" id="patientDetails-link-completed">
+              <a class="govuk-link govuk-task-list__link" href="/private-beta02/sr1-form-01"
+                aria-describedby="patientDetails-status-completed">
+                Complete patient details
+              </a>
+            </div>
+            <div class="govuk-task-list__status" id="patientDetails-status-notstarted"><strong
+                class="govuk-tag govuk-tag--blue">Not
+                yet started</strong></div>
+            <div class="govuk-task-list__status hidden" id="patientDetails-status-inprogress" aria-hidden><strong
+                class="govuk-tag govuk-tag--light-blue">In progress</strong></div>
+            <div class="govuk-task-list__status hidden" id="patientDetails-status-completed" aria-hidden>Completed</div>
+          </li>
+        </ul>
+        <h2 class="govuk-heading-m govuk-!-margin-top-5">Diagnosis</h2>
+        <ul class="govuk-task-list">
+          <li class="govuk-task-list__item govuk-task-list__item--with-link" id="patientDiagnosis">
+            <div class="govuk-task-list__name-and-hint" id="patientDiagnosis-link-notstarted">
+              <a class="govuk-link govuk-task-list__link" href="/private-beta02/sr1-form-07"
+                aria-describedby="patientDiagnosis-status-notstarted">Complete diagnosis</a>
+            </div>
+            <div class="govuk-task-list__name-and-hint hidden" id="patientDiagnosis-link-inprogress">
+              <a class="govuk-link govuk-task-list__link" href="/private-beta02/sr1-form-07"
+                aria-describedby="patientDiagnosis-status-inprogress">Complete diagnosis</a>
+            </div>
+            <div class="govuk-task-list__name-and-hint hidden" id="patientDiagnosis-link-completed">
+              <a class="govuk-link govuk-task-list__link" href="/private-beta02/sr1-form-07"
+                aria-describedby="patientDiagnosis-status-completed">
+                Complete diagnosis
+              </a>
+            </div>
+            <div class="govuk-task-list__status" id="patientDiagnosis-status-notstarted">
+              <strong class="govuk-tag govuk-tag--blue">Not
+                yet started</strong>
+            </div>
+            <div class="govuk-task-list__status hidden" id="patientDiagnosis-status-inprogress"><strong
+                class="govuk-tag govuk-tag--light-blue" aria-hidden>In progress</strong></div>
+            <div class="govuk-task-list__status hidden" id="patientDiagnosis-status-completed">Completed</div>
+          </li>
+        </ul>
+        <h2 class="govuk-heading-m govuk-!-margin-top-5">Clinical features and treatment</h2>
+        <ul class="govuk-task-list">
+          <li class="govuk-task-list__item govuk-task-list__item--with-link" id="patientClinicalFeatures">
+            <div id="ClinicalFeatTreatment-link-notstarted" class="govuk-task-list__name-and-hint">
+              <a class="govuk-link govuk-task-list__link" href="/private-beta02/sr1-form-12"
+                aria-describedby="ClinicalFeatTreatment-status-notstarted">
+                Complete clinical features and treatment
+              </a>
+            </div>
+            <div id="ClinicalFeatTreatment-link-inprogress" class="govuk-task-list__name-and-hint hidden">
+              <a class="govuk-link govuk-task-list__link" href="/private-beta02/sr1-form-12"
+                aria-describedby="ClinicalFeatTreatment-status-inprogress">
+                Complete clinical features and treatment
+              </a>
+            </div>
+            <div id="ClinicalFeatTreatment-link-completed" class="govuk-task-list__name-and-hint hidden">
+              <a class="govuk-link govuk-task-list__link" href="/private-beta02/sr1-form-12"
+                aria-describedby="ClinicalFeatTreatment-status-completed">
+                Complete clinical features and treatment
+              </a>
+            </div>
+            <div class="govuk-task-list__status" id="ClinicalFeatTreatment-status-notstarted"><strong
+                class="govuk-tag govuk-tag--blue">Not
+                yet started</strong></div>
+            <div class="govuk-task-list__status hidden" id="ClinicalFeatTreatment-status-inprogress"><strong
+                class="govuk-tag govuk-tag--light-blue" aria-hidden>In progress</strong></div>
+            <div class="govuk-task-list__status hidden" id="ClinicalFeatTreatment-status-completed" aria-hidden>
+              Completed</div>
+          </li>
+        </ul>
+        <h2 class="govuk-heading-m govuk-!-margin-top-5">Your details</h2>
+        <ul class="govuk-task-list">
+          <li class="govuk-task-list__item govuk-task-list__item--with-link" id="name">
+            <div id="yourDetails-link-notstarted" class="govuk-task-list__name-and-hint">
+              <a class="govuk-link govuk-task-list__link" href="/private-beta02/profile-01"
+                aria-describedby="yourDetails-status-notstarted">
+                Add your details
+              </a>
+            </div>
+            <div id="yourDetails-link-notstarted-first-click" class="govuk-task-list__name-and-hint hidden">
+              <a class="govuk-link govuk-task-list__link" href="/private-beta02/add-details-to-new-form"
+                aria-describedby="yourDetails-status-notstarted-first-click">
+                Add your details
+              </a>
+            </div>
+            <div id="yourDetails-link-inprogress" class="govuk-task-list__name-and-hint hidden">
+              <a class="govuk-link govuk-task-list__link" href="/private-beta02/profile-01"
+                aria-describedby="yourDetails-status-inprogress">
+                Add your details
+              </a>
+            </div>
+            <div id="yourDetails-link-completed" class="govuk-task-list__name-and-hint hidden">
+              <a class="govuk-link govuk-task-list__link" href="/private-beta02/profile-01"
+                aria-describedby="yourDetails-status-completed">
+                Add your details
+              </a>
+            </div>
+            <div class="govuk-task-list__status" id="yourDetails-status-notstarted"><strong
+                class="govuk-tag govuk-tag--blue" class="govuk-tag govuk-tag--blue">Not
+                yet started</strong></div>
+            <div class="govuk-task-list__status hidden" id="yourDetails-status-inprogress"><strong
+                class="govuk-tag govuk-tag--light-blue" aria-hidden>In progress</strong>
+            </div>
+            <div class="govuk-task-list__status hidden" id="yourDetails-status-completed" aria-hidden>Completed</div>
+          </li>
+        </ul>
+        <h2 class="govuk-heading-m govuk-!-margin-top-5">Send the SR1 form</h2>
+        </h2>
+        <ul class="govuk-task-list">
+          <li class="govuk-task-list__item" id="name">
+            <div id="check-answer-link-disabled" class="govuk-task-list__name-and-hint"
+              aria-describedby="check-your-sr1-status-cannot-start">
+              <div>Check your answers</div>
+              <!--<div id="application-details-3-hint" class="govuk-task-list__hint">
+                Once you have completed the other sections you can send the form
+              </div>-->
+            </div>
+            <div id="check-answer-link-enabled" class="govuk-task-list__name-and-hint hidden"><a
+                class="govuk-link govuk-task-list__link" href="/private-beta02/check-sr1-form"
+                aria-describedby="check-your-sr1-status-notstarted">Check your
+                answers</a>
+            </div>
+            <div class="govuk-task-list__status govuk-task-list__status--cannot-start-yet"
+              id="check-your-sr1-status-cannot-start">Cannot
+              start yet</div>
+            <div class="govuk-task-list__status hidden" id="check-your-sr1-status-notstarted"><strong
+                class="govuk-tag govuk-tag--blue">Not
+                yet started</strong></div>
+          </li>
+        </ul>
+        <!--<div class="govuk-button-group">
+          <button type="submit" class="govuk-button" data-module="govuk-button" id="send-sr1-form-button">
+            Send the SR1 form
+          </button>
+        </div>-->
+      </div>
+    </div>
+
+    <div class="govuk-!-padding-bottom-6"></div>
+
+    <!--Get help new-->
+    <!--<hr class="govuk-section-break govuk-section-break--visible" aria-hidden="true">-->
+    <section class="govuk-width-container govuk-!-margin-top-7 govuk-!-margin-bottom-7 ">
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-full">
+          <h2 class="govuk-heading-m">Get help</h2>
+          <p class="govuk-body">Email: <a class="govuk-link"
+              href="mailto:online.sr1@dwp.gov.uk">online.sr1@dwp.gov.uk</a>
+          </p>
+          <p class="govuk-body">We aim to respond within 3 working days.</p>
+        </div>
+      </div>
+    </section>
+
+  </div>
+
+</div>
+
+<script>
+
+  //'privatebeta01PatientAddressLine1',
+  //'privatebeta01PatientAddressLine2',
+  //'privatebeta01PatientAddressTown',
+  //'privatebeta01PatientPostcode',
+
+  //TODO: check all of address is filled out
+  const fields = [
+    //'privatebeta01PatientLastName',
+    'privatebeta02PatientPostcode',
+    //'privatebeta01WhatIsTheDiagnosis',
+    //'privatebeta01OtherRelevantDiagnosis',
+    //'privatebeta01AwareOfDiagnosis',
+    'privatebeta02AwareOfPrognosis',
+    //'privatebeta01DetailsOfClinicalFeatures',
+    'privatebeta02Treatment',
+    //'privatebeta01PatientAddressTown',
+    //'privatebeta01Firstname',
+    //'privatebeta01Role',
+    //'privatebeta01ProfessionalRegistrationNumber',
+    //'privatebeta01MobileNumber',
+    'privatebeta02OrganisationAddressLine1'
+  ];
+
+  const dates = [
+    [
+      //'privatebeta01DobDay', 'privatebeta01DobMonth', 'privatebeta01DobYear'
+    ],
+    [
+      //'privatebeta01DodDay', 'privatebeta01DodMonth', 'privatebeta01DodYear'
+    ],
+    [
+      //'privatebeta01DateofSpecialRulesDay', 'privatebeta01DateofSpecialRulesMonth', 'privatebeta01DateofSpecialRulesYear'
+    ]
+  ];
+
+
+  const isDefined = (field) => {
+    const item = localStorage.getItem(field);
+    return !!item && item.length > 0;
+  }
+
+  var counter = 0;
+
+  counter += fields
+    .filter(isDefined)
+    .length;
+
+  counter += dates
+    .filter(date => {
+      return isDefined(date[0]) && isDefined(date[1]) && isDefined(date[2]);
+    })
+    .length;
+
+  console.log({ counter });
+
+  document
+    .getElementById('completed-tasks')
+    .innerText = "You have completed " + counter + " of 5 sections."
+</script>
+{% endblock %}

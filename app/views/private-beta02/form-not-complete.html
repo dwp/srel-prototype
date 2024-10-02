@@ -1,0 +1,42 @@
+{% extends "layout-gov-name.html" %}
+
+{% block pageTitle %}
+The form is not complete – Send an SR1 medical evidence form – GOV.UK
+{% endblock %}
+
+{% block content %}
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+
+        <h1 class="govuk-heading-l">
+            The form is not complete
+        </h1>
+        <p class="govuk-body">You will be able to send the form when all sections are complete.</p>
+        <div class="govuk-button-group">
+            <a href="/private-beta02/sr1-form-start-button" class="govuk-button" data-module="govuk-button"
+                id="send-sr1-form-button">
+                Complete the SR1 form
+            </a>
+        </div>
+
+
+        <div class="govuk-!-padding-bottom-6"></div>
+
+        <!--Get help new-->
+        <hr class="govuk-section-break govuk-section-break--visible" aria-hidden="true">
+        <section class="govuk-width-container govuk-!-margin-top-7 govuk-!-margin-bottom-7 ">
+            <div class="govuk-grid-row">
+                <div class="govuk-grid-column-full">
+                    <h2 class="govuk-heading-m">Get help</h2>
+                    <p class="govuk-body">Email: <a class="govuk-link"
+                            href="mailto:online.sr1@dwp.gov.uk">online.sr1@dwp.gov.uk</a></p>
+                    <p class="govuk-body">We aim to respond within 3 working days.</p>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+</div>
+{% endblock %}
