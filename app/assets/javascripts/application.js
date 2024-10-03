@@ -9512,6 +9512,8 @@ if (pageUrlPath === '/private-beta02/profile-02' || pageUrlPath === '/private-be
     let PatientFullName = document.getElementById('PatientFullName');
     if (localStorage.getItem("privatebeta02PatientFirstName") || localStorage.getItem("privatebeta02PatientLastName")) PatientFullName.innerHTML = localStorage.getItem("privatebeta02PatientFirstName") + ' ' + localStorage.getItem("privatebeta02PatientLastName");
 
+
+
     let dob = document.getElementById('dob');
     if (localStorage.getItem("privatebeta02DobDay") || localStorage.getItem("privatebeta02DobMonth") || localStorage.getItem("privatebeta02DobYear")) dob.innerHTML = localStorage.getItem("privatebeta02DobDay") + "/" + localStorage.getItem("privatebeta02DobMonth") + "/" + localStorage.getItem("privatebeta02DobYear");
 
@@ -9591,7 +9593,7 @@ if (pageUrlPath === '/private-beta02/profile-02' || pageUrlPath === '/private-be
     let otherRole = document.getElementById('otherRole');
 
     console.log('Role', localStorage.getItem("privatebeta02Role"));
-    if (localStorage.getItem("privatebeta01Role") === "Other") {
+    if (localStorage.getItem("privatebeta02Role") === "Other") {
       role.innerHTML = localStorage.getItem("privatebeta02otherRole");
     } else {
       role.innerHTML = localStorage.getItem("privatebeta02Role");
@@ -9611,6 +9613,51 @@ if (pageUrlPath === '/private-beta02/profile-02' || pageUrlPath === '/private-be
     if (localStorage.getItem("privatebeta02Postcode")) organisationPostcode.innerHTML = localStorage.getItem("privatebeta02Postcode");
     if (localStorage.getItem("privatebeta02MobileNumber")) mobile.innerHTML = localStorage.getItem("privatebeta02MobileNumber");
   }
+
+  if (pageUrlPath === '/private-beta02/check-sr1-form-your-details' || pageUrlPath === '/private-beta02/check-sr1-form-your-details-finalised' || pageUrlPath === '/private-beta02/edit-incomplete-form-saved') {
+    let yourName = document.getElementById('yourName');
+    if (localStorage.getItem("privatebeta02Firstname") || localStorage.getItem("privatebeta02Lastname")) yourName.innerHTML = localStorage.getItem("privatebeta02Firstname") + ' ' + localStorage.getItem("privatebeta02Lastname");
+    let professionalRegNum = document.getElementById('professionalRegNum');
+    if (localStorage.getItem("privatebeta02ProfessionalRegistrationNumber")) professionalRegNum.innerHTML = localStorage.getItem("privatebeta02ProfessionalRegistrationNumber");
+    if (localStorage.getItem("privatebeta01Role") === "Other") {
+      role.innerHTML = localStorage.getItem("privatebeta02otherRole");
+    } else {
+      role.innerHTML = localStorage.getItem("privatebeta02Role");
+    }
+
+
+    if (localStorage.getItem("privatebeta02OrganisationName")) organisationName.innerHTML = localStorage.getItem("privatebeta02OrganisationName");
+    if (localStorage.getItem("privatebeta02OrganisationAddressLine1")) organisationAddressLine1.innerHTML = localStorage.getItem("privatebeta02OrganisationAddressLine1");
+    if (localStorage.getItem("privatebeta02OrganisationAddressLine2")) organisationAddressLine2.innerHTML = localStorage.getItem("privatebeta02OrganisationAddressLine2");
+    if (localStorage.getItem("privatebeta02OrganisationAddressCounty")) organisationAddressCounty.innerHTML = localStorage.getItem("privatebeta02OrganisationAddressCounty");
+    if (localStorage.getItem("privatebeta02TownOrCity")) organisationTownCity.innerHTML = localStorage.getItem("privatebeta02TownOrCity");
+    if (localStorage.getItem("privatebeta02Postcode")) organisationPostcode.innerHTML = localStorage.getItem("privatebeta02Postcode");
+    let mobile = document.getElementById('mobileNumber');
+    if (localStorage.getItem("privatebeta02MobileNumber")) mobile.innerHTML = localStorage.getItem("privatebeta02MobileNumber");
+  }
+
+  if (pageUrlPath === '/private-beta02/check-sr1-form-your-details-reuse' || pageUrlPath === '/private-beta02/check-sr1-form-your-details-reuse-finalised' || pageUrlPath === '/private-beta02/edit-incomplete-form-saved') {
+    let yourName = document.getElementById('yourName');
+    if (localStorage.getItem("privatebeta02Firstname") || localStorage.getItem("privatebeta02Lastname")) yourName.innerHTML = localStorage.getItem("privatebeta02Firstname") + ' ' + localStorage.getItem("privatebeta02Lastname");
+    let professionalRegNum = document.getElementById('professionalRegNum');
+    if (localStorage.getItem("privatebeta02ProfessionalRegistrationNumber")) professionalRegNum.innerHTML = localStorage.getItem("privatebeta02ProfessionalRegistrationNumber");
+    if (localStorage.getItem("privatebeta01Role") === "Other") {
+      role.innerHTML = localStorage.getItem("privatebeta02otherRole");
+    } else {
+      role.innerHTML = localStorage.getItem("privatebeta02Role");
+    }
+
+
+    if (localStorage.getItem("privatebeta02OrganisationName")) organisationName.innerHTML = localStorage.getItem("privatebeta02OrganisationName");
+    if (localStorage.getItem("privatebeta02OrganisationAddressLine1")) organisationAddressLine1.innerHTML = localStorage.getItem("privatebeta02OrganisationAddressLine1");
+    if (localStorage.getItem("privatebeta02OrganisationAddressLine2")) organisationAddressLine2.innerHTML = localStorage.getItem("privatebeta02OrganisationAddressLine2");
+    if (localStorage.getItem("privatebeta02OrganisationAddressCounty")) organisationAddressCounty.innerHTML = localStorage.getItem("privatebeta02OrganisationAddressCounty");
+    if (localStorage.getItem("privatebeta02TownOrCity")) organisationTownCity.innerHTML = localStorage.getItem("privatebeta02TownOrCity");
+    if (localStorage.getItem("privatebeta02Postcode")) organisationPostcode.innerHTML = localStorage.getItem("privatebeta02Postcode");
+    let mobile = document.getElementById('mobileNumber');
+    if (localStorage.getItem("privatebeta02MobileNumber")) mobile.innerHTML = localStorage.getItem("privatebeta02MobileNumber");
+  }
+//check-sr1-form-your-details
 
   // private-beta02
   if (pageUrlPath === '/private-beta02/add-details-to-new-form') {
