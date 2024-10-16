@@ -13,7 +13,7 @@ Check your answers before sending the SR1 form – Send an SR1 medical evidence 
                 <fieldset class="govuk-fieldset">
                     <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
                         <h1 class="govuk-heading-l">
-                            Your saved details
+                           Confirm your saved details
                         </h1>
                     </legend>
 
@@ -100,36 +100,14 @@ Check your answers before sending the SR1 form – Send an SR1 medical evidence 
                         </div>
                     </dl>
 
-                    {% from "govuk/components/button/macro.njk" import govukButton %}
-                    {% from "govuk/components/radios/macro.njk" import govukRadios %}
-                    
-                    {{ govukRadios({
-                      name: "haveYouCompletedThisSection",
-                      fieldset: {
-                        legend: {
-                          text: "Do you want to use these details again?",
-                          isPageHeading: false,
-                          classes: "govuk-fieldset__legend--m"
-                        }
-                      },
-                      items: [
-                        {
-                          value: "yes",
-                          text: "Yes"
-                        },
-                        {
-                          value: "no",
-                          text: "No"
-                        }
-                      ]
-                    }) }}
+                  
                     
                    
 
             <!-- Submit button -->
             <div class="govuk-button-group">
                 <button id="" class="govuk-button" data-module="govuk-button" onclick=storePage()>
-                   Continue
+                   Confirm and continue
                 </button>
             </div>
 
