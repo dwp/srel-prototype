@@ -177,13 +177,12 @@
 
 {% block beforeContent %}
 
+
 {{ govukPhaseBanner({
-tag: {
-text: "Beta"
-},
-html: 'This is a new service - your <a class="govuk-link govuk-!-padding-top-0"
-  href="https://forms.office.com/Pages/ResponsePage.aspx?id=DpxP-knna0i8NIr6EGM3VupINvg8uK9KqwdHnbpPR49UNk5RTE1BQ0JXUEJFVTM5OUs4VFNQM1FINS4u">feedback</a>
-will help us to improve it.'
+  tag: {
+    text: "Beta"
+  },
+  html: 'This is a new service. Help us improve it and <a class="govuk-link" href="https://forms.office.com/Pages/ResponsePage.aspx?id=DpxP-knna0i8NIr6EGM3VupINvg8uK9KqwdHnbpPR49UNk5RTE1BQ0JXUEJFVTM5OUs4VFNQM1FINS4u">give your feedback (opens in new tab)</a>.'
 }) }}
 
 <nav class="dwp-language-toggle" aria-label="Language toggle">
