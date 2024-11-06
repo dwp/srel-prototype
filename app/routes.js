@@ -641,7 +641,7 @@ router.post('/private-beta02/signin-page/answer', function (req, res) {
   // Check whether the variable matches a condition
   if (receiveReminder == "NHS England") {
     // Send user to next reminder page
-    res.redirect('/private-beta02/sr1-form-start')
+    res.redirect('/private-beta02/account-home')
   } else if (receiveReminder == "NHS Scotland") {
     // Send user to next reminder page
     res.redirect('/private-beta02/no-permission-scotland')
