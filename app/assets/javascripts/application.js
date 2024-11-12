@@ -8164,7 +8164,7 @@ if (pageUrlPath === '/private-beta02/profile-02' || pageUrlPath === '/private-be
   }
   // Hide/Show submit section
   if (pageUrlPath === '/private-beta02/sr1-form-sections') {
-    if (counter === 4) {
+    if (counter >= 4) {
       document.getElementById("check-answer-link-enabled").classList.remove('hidden');
       document.getElementById("check-answer-link-disabled").classList.add('hidden');
       document.getElementById("check-your-sr1-status-notstarted").classList.remove('hidden');
