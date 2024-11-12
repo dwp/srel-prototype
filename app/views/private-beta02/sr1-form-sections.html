@@ -94,7 +94,7 @@ SR1 form – Send an SR1 medical evidence form – GOV.UK
             <div class="govuk-task-list__name-and-hint hidden" id="patientDiagnosis-link-completed">
               <a class="govuk-link govuk-task-list__link" href="/private-beta02/sr1-form-07"
                 aria-describedby="patientDiagnosis-status-completed">
-                Change diagnosis
+                Complete diagnosis
               </a>
             </div>
             <div class="govuk-task-list__status" id="patientDiagnosis-status-notstarted">
@@ -176,11 +176,12 @@ SR1 form – Send an SR1 medical evidence form – GOV.UK
         </h2>
         <ul class="govuk-task-list">
           <li class="govuk-task-list__item" id="name">
-            <div id="check-answer-link-disabled" class="govuk-task-list__name-and-hint hidden">
-              <a
-                class="govuk-link govuk-task-list__link" href="/private-beta02/check-sr1-form"
-                aria-describedby="check-your-sr1-status-notstarted">Check your
-                answers</a>
+            <div id="check-answer-link-disabled" class="govuk-task-list__name-and-hint"
+              aria-describedby="check-your-sr1-status-cannot-start">
+              <div>Check your answers</div>
+              <!--<div id="application-details-3-hint" class="govuk-task-list__hint">
+                Once you have completed the other sections you can send the form
+              </div>-->
             </div>
             <div id="check-answer-link-enabled" class="govuk-task-list__name-and-hint hidden"><a
                 class="govuk-link govuk-task-list__link" href="/private-beta02/check-sr1-form"
@@ -188,9 +189,8 @@ SR1 form – Send an SR1 medical evidence form – GOV.UK
                 answers</a>
             </div>
             <div class="govuk-task-list__status govuk-task-list__status--cannot-start-yet"
-              id="check-your-sr1-status-cannot-start"><strong
-              class="govuk-tag govuk-tag--blue">Not
-              yet started</strong></div>
+              id="check-your-sr1-status-cannot-start">Cannot
+              start yet</div>
             <div class="govuk-task-list__status hidden" id="check-your-sr1-status-notstarted"><strong
                 class="govuk-tag govuk-tag--blue">Not
                 yet started</strong></div>
@@ -234,19 +234,19 @@ SR1 form – Send an SR1 medical evidence form – GOV.UK
   //TODO: check all of address is filled out
   const fields = [
     //'privatebeta01PatientLastName',
-    'privatebeta02PatientPostcode',
+    'privatebeta01PatientPostcode',
     //'privatebeta01WhatIsTheDiagnosis',
     //'privatebeta01OtherRelevantDiagnosis',
     //'privatebeta01AwareOfDiagnosis',
-    'privatebeta02AwareOfPrognosis',
+    'privatebeta01AwareOfPrognosis',
     //'privatebeta01DetailsOfClinicalFeatures',
-    'privatebeta02Treatment',
+    'privatebeta01Treatment',
     //'privatebeta01PatientAddressTown',
     //'privatebeta01Firstname',
     //'privatebeta01Role',
     //'privatebeta01ProfessionalRegistrationNumber',
     //'privatebeta01MobileNumber',
-    'privatebeta02OrganisationAddressLine1'
+    'privatebeta01OrganisationAddressLine1'
   ];
 
   const dates = [
