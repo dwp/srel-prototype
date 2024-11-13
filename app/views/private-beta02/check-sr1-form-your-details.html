@@ -13,7 +13,7 @@ Check your answers before sending the SR1 form – Send an SR1 medical evidence 
                 <fieldset class="govuk-fieldset">
                     <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
                         <h1 class="govuk-heading-l">
-                            Your details
+                            You can save your details and use them again
                         </h1>
                     </legend>
 
@@ -104,6 +104,7 @@ Check your answers before sending the SR1 form – Send an SR1 medical evidence 
                     {% from "govuk/components/radios/macro.njk" import govukRadios %}
                     
                     {{ govukRadios({
+                        classes: "govuk-radios--inline",
                       name: "saveYourDetails",
                       fieldset: {
                         legend: {
@@ -114,7 +115,7 @@ Check your answers before sending the SR1 form – Send an SR1 medical evidence 
                         }
                       },
                       hint: {
-                        text: "You can use your saved details on all your SR1 forms. "
+                        text: "If you save your details, we will add them to all of your SR1 forms. "
                       },
                      
                       items: [
@@ -128,7 +129,7 @@ Check your answers before sending the SR1 form – Send an SR1 medical evidence 
                         }
                       ]
                     }) }}
-                    
+                   
                    
 
             <!-- Submit button -->
