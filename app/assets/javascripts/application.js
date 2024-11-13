@@ -8311,6 +8311,131 @@ if (pageUrlPath === '/private-beta02/profile-02' || pageUrlPath === '/private-be
     }
   }
 
+  if (pageUrlPath === '/private-beta02/task-list-sr1-form') {
+    if (counter === 17) {
+      document.getElementById("submit-task-list").classList.remove('hidden');
+    } else {
+      document.getElementById("submit-task-list").classList.add('hidden');
+    }
+  }
+  // Hide/Show submit section
+  if (pageUrlPath === '/private-beta02/sr1-form-sections') {
+    if (counter >= 4) {
+      document.getElementById("check-answer-link-enabled").classList.remove('hidden');
+      document.getElementById("check-answer-link-disabled").classList.add('hidden');
+      document.getElementById("check-your-sr1-status-notstarted").classList.remove('hidden');
+      document.getElementById("check-your-sr1-status-cannot-start").classList.add('hidden');
+    } else {
+      document.getElementById("check-answer-link-enabled").classList.add('hidden');
+      document.getElementById("check-answer-link-disabled").classList.remove('hidden');
+      document.getElementById("check-your-sr1-status-notstarted").classList.add('hidden');
+      document.getElementById("check-your-sr1-status-cannot-start").classList.remove('hidden');
+    }
+  }
+  // Progress Tag Profile
+  if (pageUrlPath === '/private-beta02/sr1-form-start-saved-your-details') {
+    let patientPostcode = localStorage.getItem('privatebeta02PatientPostcode');
+    let patientaddressline1 = localStorage.getItem('privatebeta02PatientAddressLine1');
+    let patientaddresstown = localStorage.getItem('privatebeta02PatientAddressTown');
+    let PatientFirstName = localStorage.getItem('privatebeta02PatientFirstName');
+    if ((patientPostcode != null) && (patientaddressline1 != null) && (patientaddresstown != null)) {
+      document.getElementById("patientDetails-status-notstarted").classList.add('hidden');
+      document.getElementById("patientDetails-status-inprogress").classList.add('hidden');
+      document.getElementById("patientDetails-status-completed").classList.remove('hidden');
+      document.getElementById("patientDetails-link-notstarted").classList.add('hidden');
+      document.getElementById("patientDetails-link-inprogress").classList.add('hidden');
+      document.getElementById("patientDetails-link-completed").classList.remove('hidden');
+    } else if (PatientFirstName != null) {
+      document.getElementById("patientDetails-status-notstarted").classList.add('hidden');
+      document.getElementById("patientDetails-status-inprogress").classList.remove('hidden');
+      document.getElementById("patientDetails-status-completed").classList.add('hidden');
+      document.getElementById("patientDetails-link-notstarted").classList.add('hidden');
+      document.getElementById("patientDetails-link-inprogress").classList.remove('hidden');
+      document.getElementById("patientDetails-link-completed").classList.add('hidden');
+    } else {
+      document.getElementById("patientDetails-status-notstarted").classList.remove('hidden');
+      document.getElementById("patientDetails-status-inprogress").classList.add('hidden');
+      document.getElementById("patientDetails-status-completed").classList.add('hidden');
+      document.getElementById("patientDetails-link-notstarted").classList.remove('hidden');
+      document.getElementById("patientDetails-link-inprogress").classList.add('hidden');
+      document.getElementById("patientDetails-link-completed").classList.add('hidden');
+    }
+  }
+
+  
+  // Progress Tag Diagnosis
+  if (pageUrlPath === '/private-beta02/sr1-form-start-saved-your-details') {
+    let currentValueOfPrognosis = localStorage.getItem('privatebeta02AwareOfPrognosis');
+    let whatIsTheDiagnosis = localStorage.getItem('privatebeta02WhatIsTheDiagnosis');
+    if (currentValueOfPrognosis != null) {
+      document.getElementById("patientDiagnosis-status-notstarted").classList.add('hidden');
+      document.getElementById("patientDiagnosis-status-inprogress").classList.add('hidden');
+      document.getElementById("patientDiagnosis-status-completed").classList.remove('hidden');
+      document.getElementById("patientDiagnosis-link-notstarted").classList.add('hidden');
+      document.getElementById("patientDiagnosis-link-inprogress").classList.add('hidden');
+      document.getElementById("patientDiagnosis-link-completed").classList.remove('hidden');
+    } else if (whatIsTheDiagnosis != null) {
+      document.getElementById("patientDiagnosis-status-notstarted").classList.add('hidden');
+      document.getElementById("patientDiagnosis-status-inprogress").classList.remove('hidden');
+      document.getElementById("patientDiagnosis-status-completed").classList.add('hidden');
+      document.getElementById("patientDiagnosis-link-notstarted").classList.add('hidden');
+      document.getElementById("patientDiagnosis-link-inprogress").classList.remove('hidden');
+      document.getElementById("patientDiagnosis-link-completed").classList.add('hidden');
+    } else {
+      document.getElementById("patientDiagnosis-status-notstarted").classList.remove('hidden');
+      document.getElementById("patientDiagnosis-status-inprogress").classList.add('hidden');
+      document.getElementById("patientDiagnosis-status-completed").classList.add('hidden');
+      document.getElementById("patientDiagnosis-link-notstarted").classList.remove('hidden');
+      document.getElementById("patientDiagnosis-link-inprogress").classList.add('hidden');
+      document.getElementById("patientDiagnosis-link-completed").classList.add('hidden');
+    }
+  }
+  // Progress Tag Clinical features and treatment
+  if (pageUrlPath === '/private-beta02/sr1-form-start-saved-your-details') {
+    let treatment = localStorage.getItem('privatebeta02Treatment');
+    let detailsOfClinicalFeatures = localStorage.getItem('privatebeta02DetailsOfClinicalFeatures');
+    if (treatment != null) {
+      document.getElementById("ClinicalFeatTreatment-status-notstarted").classList.add('hidden');
+      document.getElementById("ClinicalFeatTreatment-status-inprogress").classList.add('hidden');
+      document.getElementById("ClinicalFeatTreatment-status-completed").classList.remove('hidden');
+      document.getElementById("ClinicalFeatTreatment-link-notstarted").classList.add('hidden');
+      document.getElementById("ClinicalFeatTreatment-link-inprogress").classList.add('hidden');
+      document.getElementById("ClinicalFeatTreatment-link-completed").classList.remove('hidden');
+    } else if (detailsOfClinicalFeatures != null) {
+      document.getElementById("ClinicalFeatTreatment-status-notstarted").classList.add('hidden');
+      document.getElementById("ClinicalFeatTreatment-status-inprogress").classList.remove('hidden');
+      document.getElementById("ClinicalFeatTreatment-status-completed").classList.add('hidden');
+      document.getElementById("ClinicalFeatTreatment-link-notstarted").classList.add('hidden');
+      document.getElementById("ClinicalFeatTreatment-link-inprogress").classList.remove('hidden');
+      document.getElementById("ClinicalFeatTreatment-link-completed").classList.add('hidden');
+    } else {
+      document.getElementById("ClinicalFeatTreatment-status-notstarted").classList.remove('hidden');
+      document.getElementById("ClinicalFeatTreatment-status-inprogress").classList.add('hidden');
+      document.getElementById("ClinicalFeatTreatment-status-completed").classList.add('hidden');
+      document.getElementById("ClinicalFeatTreatment-link-notstarted").classList.remove('hidden');
+      document.getElementById("ClinicalFeatTreatment-link-inprogress").classList.add('hidden');
+      document.getElementById("ClinicalFeatTreatment-link-completed").classList.add('hidden');
+    }
+  }
+
+  // Hide/Show submit section
+  if (pageUrlPath === '/private-beta02/sr1-form-start-saved-your-details') {
+    if (counter >= 3) {
+      document.getElementById("check-answer-link-enabled").classList.remove('hidden');
+      document.getElementById("check-answer-link-disabled").classList.add('hidden');
+      document.getElementById("check-your-sr1-status-notstarted").classList.remove('hidden');
+      document.getElementById("check-your-sr1-status-cannot-start").classList.add('hidden');
+    } else {
+      document.getElementById("check-answer-link-enabled").classList.add('hidden');
+      document.getElementById("check-answer-link-disabled").classList.remove('hidden');
+      document.getElementById("check-your-sr1-status-notstarted").classList.add('hidden');
+      document.getElementById("check-your-sr1-status-cannot-start").classList.remove('hidden');
+    }
+  }
+
+
+
+
   // =================
   // Check your answer
   // =================

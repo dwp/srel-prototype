@@ -719,4 +719,15 @@ router.post('/private-beta02/add-details-to-new-form/answer', function (req, res
   }
 })
 
+router.post('/private-beta02/sr1-form-09-radio-saved/answer', function (req, res) {
+  var otherRelevantDiagnosis = req.session.data['otherRelevantDiagnosis']
 
+  // Check whether the variable matches a condition
+  if (otherRelevantDiagnosis == "Yes") {
+    // Send user to next reminder page
+    res.redirect('/private-beta02/sr1-form-09-input-saved')
+  } else {
+    // Send user to the account dashboard page
+    res.redirect('/private-beta02/sr1-form-10-saved')
+  }
+})
