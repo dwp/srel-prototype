@@ -1,57 +1,60 @@
 {% extends "layout-gov-signed-in-private-beta02.html" %}
 
 {% block pageTitle %}
-What is the patient’s date of birth? – Send an SR1 medical evidence form – GOV.UK
+What was the date of the patient’s diagnosis? – Send an SR1 medical evidence form – GOV.UK
 {% endblock %}
 
 {% block content %}
 <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
-        <form id="sendAnSR1Form" action="/private-beta02-sr-form-03-saved" method="post">
+        <form id="sendAnSR1Form" action="/private-beta02/sr1-form-06-saved" method="post">
             <div class="govuk-form-group">
                 <fieldset class="govuk-fieldset">
                     <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
-                        <!--<span class="govuk-caption-l"> Question 2 of 4</span>-->
+                        <!--<span class="govuk-caption-l"> Question 2 of 6</span>-->
                         <h1 class="govuk-fieldset__heading">
-                            What is the patient’s date of birth?
+                            What was the date of the patient’s diagnosis?
                         </h1>
                     </legend>
 
-                    <!-- Date of birth -->
-                    <div id="dob-hint" class="govuk-hint">
-                        For example, 27 3 2007.
+                    <!-- Date of diagnosis -->
+                    <!--<p class="govuk-body">
+                        If you do not know the exact date, you can use the first day of the month.
+                    </p>-->
+                    <div id="dod-hint" class="govuk-hint">
+                        If you do not know the exact date, you can use the first day of the month. For example, 1 10 1960.
                     </div>
-                    <div class="govuk-date-input" id="dob">
+                    <div class="govuk-date-input" id="dod">
                         <div class="govuk-date-input__item">
                             <div class="govuk-form-group">
-                                <label class="govuk-label govuk-date-input__label" for="dob-day">
+                                <label class="govuk-label govuk-date-input__label" for="dod-day">
                                     Day
                                 </label>
                                 <input autocomplete="off"
-                                    class="govuk-input govuk-date-input__input govuk-input--width-2" id="dob-day"
-                                    name="dob-day" type="text" inputmode="numeric"
+                                    class="govuk-input govuk-date-input__input govuk-input--width-2" id="dod-day"
+                                    name="dod-day" type="text" inputmode="numeric"
                                     onkeypress="return isNumberKey(event)" maxlength="2">
                             </div>
                         </div>
                         <div class="govuk-date-input__item">
                             <div class="govuk-form-group">
-                                <label class="govuk-label govuk-date-input__label" for="dob-month">
+                                <label class="govuk-label govuk-date-input__label" for="dod-month">
                                     Month
                                 </label>
                                 <input autocomplete="off"
-                                    class="govuk-input govuk-date-input__input govuk-input--width-2" id="dob-month"
-                                    name="dob-month" type="text" inputmode="numeric"
+                                    class="govuk-input govuk-date-input__input govuk-input--width-2" id="dod-month"
+                                    name="dod-month" type="text" inputmode="numeric"
                                     onkeypress="return isNumberKey(event)" maxlength="2">
                             </div>
                         </div>
                         <div class="govuk-date-input__item">
                             <div class="govuk-form-group">
-                                <label class="govuk-label govuk-date-input__label" for="dob-year">
+                                <label class="govuk-label govuk-date-input__label" for="dod-year">
                                     Year
                                 </label>
                                 <input autocomplete="off"
-                                    class="govuk-input govuk-date-input__input govuk-input--width-4" id="dob-year"
-                                    name="dob-year" type="text" inputmode="numeric"
+                                    class="govuk-input govuk-date-input__input govuk-input--width-4" id="dod-year"
+                                    name="dod-year" type="text" inputmode="numeric"
                                     onkeypress="return isNumberKey(event)" maxlength="4">
                             </div>
                         </div>
@@ -62,23 +65,20 @@ What is the patient’s date of birth? – Send an SR1 medical evidence form –
 
             <!-- Submit button -->
             <div class="govuk-button-group">
-                <button id="continue-to-address-lookup" class="govuk-button" data-module="govuk-button"
-                    onclick="saveDOBSR1Formprivatebeta02()">
+                <button id="" class="govuk-button" data-module="govuk-button" onclick="saveDateDiagnosisSR1Formprivatebeta02()">
                     Continue
                 </button>
-                <a class="govuk-link" onclick="saveAndLeave()" style="color:#1d70b8;"
-                    aria-label="Return to SR1 form sections" href="#">Return to SR1 form sections</a>
+                <a class="govuk-link" onclick="saveAndLeave()" style="color:#1d70b8;" aria-label="Return to SR1 form sections" href="#">Return to SR1 form sections</a>
             </div>
         </form>
         <div class="govuk-!-padding-bottom-6"></div>
+
         <!--Get help new-->
         <hr class="govuk-section-break govuk-section-break--visible" aria-hidden="true">
         <section class="govuk-width-container govuk-!-margin-top-7 govuk-!-margin-bottom-7 ">
             <div class="govuk-grid-row">
                 <div class="govuk-grid-column-full">
                     <h2 class="govuk-heading-m">Get help</h2>
-                    <!--<p class="govuk-body">You can email for technical support, such as accessing the service.</p>
-              <p class="govuk-body">We cannot discuss specific patients or how to complete the SR1 form, so please do not give personal details.</p>-->
                     <p class="govuk-body">Email: <a class="govuk-link"
                             href="mailto:online.sr1@dwp.gov.uk">online.sr1@dwp.gov.uk</a></p>
                     <p class="govuk-body">We aim to respond within 3 working days.</p>
@@ -90,30 +90,15 @@ What is the patient’s date of birth? – Send an SR1 medical evidence form –
 
 </div>
 
-<script type="text/javascript">
-    document.addEventListener('DOMContentLoaded', function () {
-        let patientPostcode = localStorage.getItem("privatebeta02PatientPostcode");
-
-        if (patientPostcode != null) {
-            document.getElementById("sendAnSR1Form").action = "/private-beta02/sr1-form-03-saved";
-        } else {
-            document.getElementById("sendAnSR1Form").action = "/private-beta02/sr1-form-03-saved";
-        }
-    });
-</script>
-
 <script>
     // get and set in this order - this ensures what is sent in query is the same as what is in the localStorage
     const saveAndLeave = () => {
-        //saveDOBSR1Formprivatebeta01();
+        //saveDateDiagnosisSR1Formprivatebeta01();
 
         const origin = window.location.origin;
         const url = getUrlWithSR1DataAsQueryParamsprivatebeta02(origin, "/private-beta02/sr1-form-sections");
 
         window.location.replace(url.toString());
     }
-
-        // old href="/private-beta02/task-list-sr1-form-saved" <- not sure why its different on different pages 
 </script>
-
 {% endblock %}
