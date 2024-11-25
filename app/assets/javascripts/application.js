@@ -6846,8 +6846,32 @@ if (pageUrlPath === '/private-beta02/profile-02' || pageUrlPath === '/private-be
       }
     }
   }
+  if (pageUrlPath === '/private-beta02/sr1-form-09-radio-saved') {
+    if (localStorage.getItem("privatebeta02OtherRelevantDiagnosis")) {
+      let otherRelevantDiagnosis = localStorage.getItem('privatebeta02OtherRelevantDiagnosis');
+      const formElements = document.getElementById('sendAnSR1Form').elements;
+      for (var i = 0, j = 0; i < formElements.length; i++) {
+        formElement = formElements.item(i);
+        if (formElement.type === "radio" && formElement.name === "otherRelevantDiagnosis") {
+          if (formElement.value === otherRelevantDiagnosis) {
+            console.log('formElement:', formElement.value);
+            formElement.checked = true;
+
+            if (otherRelevantDiagnosis === 'Yes') {
+              document.getElementById('otherRelevantDiagnosisinput').value = localStorage.getItem("privatebeta02OtherRelevantDiagnosisinput");
+            }
+          }
+        }
+      }
+    }
+  }
   //Other relevant diagnosis input private-beta02
   if (pageUrlPath === '/private-beta02/sr1-form-09-input') {
+    const formElements = document.getElementById('sendAnSR1Form').elements;
+    let otherRelevantDiagnosisinput = document.getElementById('otherRelevantDiagnosisinput');
+    if (localStorage.getItem("privatebeta02OtherRelevantDiagnosisinput")) otherRelevantDiagnosisinput.value = localStorage.getItem("privatebeta02OtherRelevantDiagnosisinput");
+  }
+  if (pageUrlPath === '/private-beta02/sr1-form-09-input-saved') {
     const formElements = document.getElementById('sendAnSR1Form').elements;
     let otherRelevantDiagnosisinput = document.getElementById('otherRelevantDiagnosisinput');
     if (localStorage.getItem("privatebeta02OtherRelevantDiagnosisinput")) otherRelevantDiagnosisinput.value = localStorage.getItem("privatebeta02OtherRelevantDiagnosisinput");
