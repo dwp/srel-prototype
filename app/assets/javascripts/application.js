@@ -1786,12 +1786,7 @@ window.GOVUKPrototypeKit.documentReady(function () {
         timer = null;
         window.location.pathname = "/private-beta01/sr1-form-start";
 
-      } else if ((counter == 0) && (pageUrlPath === '/private-beta02/organisation-signin-page')) {
-        window.clearTimeout(timer);
-        timer = null;
-        window.location.pathname = "/private-beta02/sr1-form-start";
-
-      }
+      } 
        else {
         timer = window.setTimeout(countDown, 0);
       }
