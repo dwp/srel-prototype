@@ -9700,6 +9700,7 @@ if (pageUrlPath === '/private-beta02/profile-02' || pageUrlPath === '/private-be
     if (localStorage.getItem("privatebeta02DateofSpecialRulesDay") || localStorage.getItem("privatebeta02DateofSpecialRulesMonth") || localStorage.getItem("privatebeta02DateofSpecialRulesYear")) dateofSpecialRules.innerHTML = localStorage.getItem("privatebeta02DateofSpecialRulesDay") + "/" + localStorage.getItem("privatebeta02DateofSpecialRulesMonth") + "/" + localStorage.getItem("privatebeta02DateofSpecialRulesYear");
 
     let otherRelevantDiagnosis = document.getElementById('otherRelevantDiagnosis');
+    if (localStorage.getItem("privatebeta02OtherRelevantDiagnosisinput")) otherRelevantDiagnosis.innerHTML = localStorage.getItem("privatebeta02OtherRelevantDiagnosisinput");
     let otherRelevantDiagnosisinput = document.getElementById('otherRelevantDiagnosisinput');
     console.log('otherRelevantDiagnosis', localStorage.getItem("privatebeta02OtherRelevantDiagnosis"));
     if (localStorage.getItem("privatebeta02OtherRelevantDiagnosis") === "Yes") {
@@ -9932,8 +9933,8 @@ if (pageUrlPath === '/private-beta02/profile-02' || pageUrlPath === '/private-be
 
     let otherRelevantDiagnosis = document.getElementById('otherRelevantDiagnosis');
     let otherRelevantDiagnosisinput = document.getElementById('otherRelevantDiagnosisinput');
-    console.log('otherRelevantDiagnosis', localStorage.getItem("privatebeta01OtherRelevantDiagnosis"));
-    if (localStorage.getItem("privatebeta01OtherRelevantDiagnosis") === "Yes") {
+    console.log('otherRelevantDiagnosis', localStorage.getItem("privatebeta02OtherRelevantDiagnosis"));
+    if (localStorage.getItem("privatebeta02OtherRelevantDiagnosis") === "Yes") {
       otherRelevantDiagnosis.innerHTML = localStorage.getItem("privatebeta02OtherRelevantDiagnosisinput");
     } else {
       otherRelevantDiagnosis.innerHTML = localStorage.getItem("privatebeta02OtherRelevantDiagnosis");
