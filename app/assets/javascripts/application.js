@@ -6879,10 +6879,18 @@ if (pageUrlPath === '/private-beta02/profile-02' || pageUrlPath === '/private-be
   // Aware of diagnosis private-beta02
   if (pageUrlPath === '/private-beta02/sr1-form-10' || pageUrlPath === '/private-beta02/sr1-form-c-10') {
     const formElements = document.getElementById('sendAnSR1Form').elements;
-    let privatebeta01AwareOfDiagnosis = localStorage.getItem('privatebeta02AwareOfDiagnosis');
+    let privatebeta02AwareOfDiagnosis = localStorage.getItem('privatebeta02AwareOfDiagnosis');
+  }
+  if (pageUrlPath === '/private-beta02/sr1-form-10-saved' || pageUrlPath === '/private-beta02/sr1-form-c-10') {
+    const formElements = document.getElementById('sendAnSR1Form').elements;
+    let privatebeta02AwareOfDiagnosis = localStorage.getItem('privatebeta02AwareOfDiagnosis');
   }
   // Aware of prognosis private-beta02
   if (pageUrlPath === '/private-beta02/sr1-form-11' || pageUrlPath === '/private-beta02/sr1-form-c-11') {
+    const formElements = document.getElementById('sendAnSR1Form').elements;
+    let privatebeta01AwareOfPrognosis = localStorage.getItem('privatebeta02AwareOfPrognosis');
+  }
+  if (pageUrlPath === '/private-beta02/sr1-form-11-saved' || pageUrlPath === '/private-beta02/sr1-form-c-11') {
     const formElements = document.getElementById('sendAnSR1Form').elements;
     let privatebeta01AwareOfPrognosis = localStorage.getItem('privatebeta02AwareOfPrognosis');
   }
