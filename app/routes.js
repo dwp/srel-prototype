@@ -644,13 +644,13 @@ router.post('/private-beta02/signin-page/answer', function (req, res) {
     res.redirect('/private-beta02/account-home')
   } else if (receiveReminder == "NHS Scotland") {
     // Send user to next reminder page
-    res.redirect('/private-beta02/no-permission-scotland')
+    res.redirect('/private-beta02/account-home')
   } else if (receiveReminder == "NHS Wales") {
     // Send user to next reminder page
-    res.redirect('/private-beta02/no-permission-wales')
+    res.redirect('/private-beta02/account-home')
   } else {
     // Send user to the account dashboard page
-    res.redirect('/private-beta02/no-permission-northern-ireland')
+    res.redirect('/private-beta02/account-home')
   }
 })
 
