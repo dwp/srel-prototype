@@ -1,3 +1,4 @@
+
 {% extends "layout-gov-signed-in-private-beta02.html" %}
 
 {% block pageTitle %}
@@ -71,7 +72,6 @@ SR1 form sent – Send an SR1 medical evidence form – GOV.UK
             }
         </script>
 
-
         <div class="govuk-!-padding-bottom-6"></div>
 
         <h2 class="govuk-heading-m">What happens next</h2>
@@ -81,11 +81,20 @@ SR1 form sent – Send an SR1 medical evidence form – GOV.UK
         <p class="govuk-body">We will contact the patient when we have made a decision on their claim.</p>
         <p class="govuk-body">If we need more information about the patient, we will contact you.</p>
         <!-- Submit button -->
-
         <div class="govuk-button-group">
             <a class="govuk-link" data-module="govuk-button" a href="/private-beta02/sr1-form-start"
                 id="backtoaccounthome" onclick="privatebeta02completedSR1Form()">Start a new SR1 form</a>
         </div>
+
+        <h3 class="govuk-heading-s">Support for your patient</h3>
+        <p class="govuk-body">GOV.UK has advice for patients on <a class="govuk-link"
+            href="https://www.gov.uk/benefits-end-of-life" target="_blank" download> making a benefit claim if they are nearing the end of life (opens in new tab).</a></p>
+            <div class="govuk-inset-text">
+                You have not made a benefit claim for your patient.
+              </div> <p class="govuk-body"></p>
+
+        <p class="govuk-body">The Department for Work and Pensions (DWP) will not contact your patient about making a benefit claim.</p>
+        <!-- Submit button -->
 
         <div class="govuk-!-padding-bottom-6"></div>
 
@@ -99,9 +108,11 @@ SR1 form sent – Send an SR1 medical evidence form – GOV.UK
                             href="mailto:online.sr1@dwp.gov.uk">online.sr1@dwp.gov.uk</a></p>
                     <p class="govuk-body">We aim to respond within 3 working days.</p>
                 </div>
+
+        <!--Feedback-->
             </div>
         </section>
-
+        <h2 class="govuk-heading-m">Feedback</h2>
         <p class=govuk-body><a
                 href="https://forms.office.com/Pages/ResponsePage.aspx?id=DpxP-knna0i8NIr6EGM3VupINvg8uK9KqwdHnbpPR49UNk5RTE1BQ0JXUEJFVTM5OUs4VFNQM1FINS4u">What
                 did you think of this service?</a></p>
@@ -110,5 +121,5 @@ SR1 form sent – Send an SR1 medical evidence form – GOV.UK
 
 </div>
 
-
 {% endblock %}
+

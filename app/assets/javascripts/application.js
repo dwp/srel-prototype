@@ -46,7 +46,7 @@ window.GOVUKPrototypeKit.documentReady(function () {
     (pageUrlPath === '/auth-onboard-mvp02/') ||
     (pageUrlPath === '/auth-onboard-mvp03/') ||
     (pageUrlPath === '/auth-onboard-privatebeta01/') ||
-    (pageUrlPath === '/auth-onboard-privatebeta02/') ||
+    (pageUrlPath === '/auth-onboard-privatebeta03/') ||
     (pageUrlPath === '/error-states') ||
 
     // hcp-e2e-journey-v01
@@ -311,27 +311,27 @@ window.GOVUKPrototypeKit.documentReady(function () {
     ((pageUrlPath === '/private-beta01/landing-pages/other-ways-to-send-an-sr1-form') && !localStorage.getItem("hcpprivatebeta01IsLoggedIn")) ||
     ((pageUrlPath === '/private-beta01/landing-pages/print') && !localStorage.getItem("hcpprivatebeta01IsLoggedIn")) ||
 
-    // private-beta02
-    ((pageUrlPath === '/private-beta02/') && !localStorage.getItem("hcpprivatebeta02IsLoggedIn")) ||
-    ((pageUrlPath === '/private-beta02') && !localStorage.getItem("hcpprivatebeta02IsLoggedIn")) ||
-    (pageUrlPath === '/private-beta02/start-page') ||
-    (pageUrlPath === '/private-beta02/signin-page') ||
-    (pageUrlPath === '/private-beta02/feedback') ||
-    (pageUrlPath === '/private-beta02/organisation-signin-page') ||
-    (pageUrlPath === '/private-beta02/profile-00') ||
-    (pageUrlPath === '/private-beta02/profile-07-a-new') ||
-    (pageUrlPath === '/private-beta02/reminder-settings') ||
-    (pageUrlPath === '/private-beta02/signout') ||
-    (pageUrlPath === '/private-beta02/form-handler') ||
-    (pageUrlPath === '/private-beta02/signedout') ||
-    (pageUrlPath === '/private-beta02/before-you-start') ||
-    (pageUrlPath === '/private-beta02/no-permission') ||
-    (pageUrlPath === '/private-beta02/no-permission-role') ||
-    ((pageUrlPath === '/private-beta02/landing-pages/who-can-send-an-sr1-form') && !localStorage.getItem("hcpprivatebeta02IsLoggedIn")) ||
-    ((pageUrlPath === '/private-beta02/landing-pages/how-to-complete-an-sr1-form') && !localStorage.getItem("hcpprivatebeta02IsLoggedIn")) ||
-    ((pageUrlPath === '/private-beta02/landing-pages/send-an-online-sr1-form') && !localStorage.getItem("hcpprivatebeta02IsLoggedIn")) ||
-    ((pageUrlPath === '/private-beta02/landing-pages/other-ways-to-send-an-sr1-form') && !localStorage.getItem("hcpprivatebeta02IsLoggedIn")) ||
-    ((pageUrlPath === '/private-beta02/landing-pages/print') && !localStorage.getItem("hcpprivatebeta02IsLoggedIn")) 
+    // private-beta03
+    ((pageUrlPath === '/private-beta03/') && !localStorage.getItem("hcpprivatebeta03IsLoggedIn")) ||
+    ((pageUrlPath === '/private-beta03') && !localStorage.getItem("hcpprivatebeta03IsLoggedIn")) ||
+    (pageUrlPath === '/private-beta03/start-page') ||
+    (pageUrlPath === '/private-beta03/signin-page') ||
+    (pageUrlPath === '/private-beta03/feedback') ||
+    (pageUrlPath === '/private-beta03/organisation-signin-page') ||
+    (pageUrlPath === '/private-beta03/profile-00') ||
+    (pageUrlPath === '/private-beta03/profile-07-a-new') ||
+    (pageUrlPath === '/private-beta03/reminder-settings') ||
+    (pageUrlPath === '/private-beta03/signout') ||
+    (pageUrlPath === '/private-beta03/form-handler') ||
+    (pageUrlPath === '/private-beta03/signedout') ||
+    (pageUrlPath === '/private-beta03/before-you-start') ||
+    (pageUrlPath === '/private-beta03/no-permission') ||
+    (pageUrlPath === '/private-beta03/no-permission-role') ||
+    ((pageUrlPath === '/private-beta03/landing-pages/who-can-send-an-sr1-form') && !localStorage.getItem("hcpprivatebeta03IsLoggedIn")) ||
+    ((pageUrlPath === '/private-beta03/landing-pages/how-to-complete-an-sr1-form') && !localStorage.getItem("hcpprivatebeta03IsLoggedIn")) ||
+    ((pageUrlPath === '/private-beta03/landing-pages/send-an-online-sr1-form') && !localStorage.getItem("hcpprivatebeta03IsLoggedIn")) ||
+    ((pageUrlPath === '/private-beta03/landing-pages/other-ways-to-send-an-sr1-form') && !localStorage.getItem("hcpprivatebeta03IsLoggedIn")) ||
+    ((pageUrlPath === '/private-beta03/landing-pages/print') && !localStorage.getItem("hcpprivatebeta03IsLoggedIn")) 
 
   ) {
     //const backLink = document.getElementById('backLink').style.display = 'none';
@@ -356,7 +356,7 @@ window.GOVUKPrototypeKit.documentReady(function () {
     (pageUrlPath === '/hcp-e2e-journey-mvp02/confirmation-page-b') ||
     (pageUrlPath === '/hcp-e2e-journey-mvp03/confirmation-page') ||
     (pageUrlPath === '/private-beta01/confirmation-page') ||
-    (pageUrlPath === '/private-beta02/confirmation-page') ||
+    (pageUrlPath === '/private-beta03/confirmation-page') ||
     (pageUrlPath === '/hcp-e2e-journey-v01') ||
     (pageUrlPath === '/hcp-e2e-journey-v02') ||
     (pageUrlPath === '/hcp-e2e-journey-v03') ||
@@ -370,7 +370,7 @@ window.GOVUKPrototypeKit.documentReady(function () {
     (pageUrlPath === '/hcp-e2e-journey-mvp02') ||
     (pageUrlPath === '/hcp-e2e-journey-mvp03') ||
     (pageUrlPath === '/private-beta01') ||
-    (pageUrlPath === '/private-beta02') ||
+    (pageUrlPath === '/private-beta03') ||
     (pageUrlPath === '/hcp-e2e-journey-v01/') ||
     (pageUrlPath === '/hcp-e2e-journey-v02/') ||
     (pageUrlPath === '/hcp-e2e-journey-v03/') ||
@@ -384,7 +384,7 @@ window.GOVUKPrototypeKit.documentReady(function () {
     (pageUrlPath === '/hcp-e2e-journey-mvp02/') ||
     (pageUrlPath === '/hcp-e2e-journey-mvp03/') ||
     (pageUrlPath === '/private-beta01/') ||
-    (pageUrlPath === '/private-beta02/') ||
+    (pageUrlPath === '/private-beta03/') ||
     (pageUrlPath === '/hcp-e2e-journey-v01/landing-pages/who-can-send-an-sr1-form') ||
     (pageUrlPath === '/hcp-e2e-journey-v02/landing-pages/who-can-send-an-sr1-form') ||
     (pageUrlPath === '/hcp-e2e-journey-v03/landing-pages/who-can-send-an-sr1-form') ||
@@ -398,7 +398,7 @@ window.GOVUKPrototypeKit.documentReady(function () {
     (pageUrlPath === '/hcp-e2e-journey-mvp02/landing-pages/who-can-send-an-sr1-form') ||
     (pageUrlPath === '/hcp-e2e-journey-mvp03/landing-pages/who-can-send-an-sr1-form') ||
     (pageUrlPath === '/private-beta01/landing-pages/who-can-send-an-sr1-form') ||
-    (pageUrlPath === '/private-beta02/landing-pages/who-can-send-an-sr1-form') ||
+    (pageUrlPath === '/private-beta03/landing-pages/who-can-send-an-sr1-form') ||
     (pageUrlPath === '/hcp-e2e-journey-v01/landing-pages/how-to-complete-an-sr1-form') ||
     (pageUrlPath === '/hcp-e2e-journey-v02/landing-pages/how-to-complete-an-sr1-form') ||
     (pageUrlPath === '/hcp-e2e-journey-v03/landing-pages/how-to-complete-an-sr1-form') ||
@@ -412,7 +412,7 @@ window.GOVUKPrototypeKit.documentReady(function () {
     (pageUrlPath === '/hcp-e2e-journey-mvp02/landing-pages/how-to-complete-an-sr1-form') ||
     (pageUrlPath === '/hcp-e2e-journey-mvp03/landing-pages/how-to-complete-an-sr1-form') ||
     (pageUrlPath === '/private-beta01/landing-pages/how-to-complete-an-sr1-form') ||
-    (pageUrlPath === '/private-beta02/landing-pages/how-to-complete-an-sr1-form') ||
+    (pageUrlPath === '/private-beta03/landing-pages/how-to-complete-an-sr1-form') ||
     (pageUrlPath === '/hcp-e2e-journey-v01/landing-pages/send-an-online-sr1-form') ||
     (pageUrlPath === '/hcp-e2e-journey-v02/landing-pages/send-an-online-sr1-form') ||
     (pageUrlPath === '/hcp-e2e-journey-v03/landing-pages/send-an-online-sr1-form') ||
@@ -426,7 +426,7 @@ window.GOVUKPrototypeKit.documentReady(function () {
     (pageUrlPath === '/hcp-e2e-journey-mvp02/landing-pages/send-an-online-sr1-form') ||
     (pageUrlPath === '/hcp-e2e-journey-mvp03/landing-pages/send-an-online-sr1-form') ||
     (pageUrlPath === '/private-beta01/landing-pages/send-an-online-sr1-form') ||
-    (pageUrlPath === '/private-beta02/landing-pages/send-an-online-sr1-form') ||
+    (pageUrlPath === '/private-beta03/landing-pages/send-an-online-sr1-form') ||
     (pageUrlPath === '/hcp-e2e-journey-v01/landing-pages/other-ways-to-send-an-sr1-form') ||
     (pageUrlPath === '/hcp-e2e-journey-v02/landing-pages/other-ways-to-send-an-sr1-form') ||
     (pageUrlPath === '/hcp-e2e-journey-v03/landing-pages/other-ways-to-send-an-sr1-form') ||
@@ -440,7 +440,7 @@ window.GOVUKPrototypeKit.documentReady(function () {
     (pageUrlPath === '/hcp-e2e-journey-mvp02/landing-pages/other-ways-to-send-an-sr1-form') ||
     (pageUrlPath === '/hcp-e2e-journey-mvp03/landing-pages/other-ways-to-send-an-sr1-form') ||
     (pageUrlPath === '/private-beta01/landing-pages/other-ways-to-send-an-sr1-form') ||
-    (pageUrlPath === '/private-beta02/landing-pages/other-ways-to-send-an-sr1-form') ||
+    (pageUrlPath === '/private-beta03/landing-pages/other-ways-to-send-an-sr1-form') ||
     (pageUrlPath === '/hcp-e2e-journey-v01/landing-pages/print') ||
     (pageUrlPath === '/hcp-e2e-journey-v02/landing-pages/print') ||
     (pageUrlPath === '/hcp-e2e-journey-v03/landing-pages/print') ||
@@ -454,7 +454,7 @@ window.GOVUKPrototypeKit.documentReady(function () {
     (pageUrlPath === '/hcp-e2e-journey-mvp02/landing-pages/print') ||
     (pageUrlPath === '/hcp-e2e-journey-mvp03/landing-pages/print') ||
     (pageUrlPath === '/private-beta01/landing-pages/print') ||
-    (pageUrlPath === '/private-beta02/landing-pages/print') ||
+    (pageUrlPath === '/private-beta03/landing-pages/print') ||
     (pageUrlPath === '/hcp-e2e-journey-v01/start-page') ||
     (pageUrlPath === '/hcp-e2e-journey-v02/start-page') ||
     (pageUrlPath === '/hcp-e2e-journey-v03/start-page') ||
@@ -468,7 +468,7 @@ window.GOVUKPrototypeKit.documentReady(function () {
     (pageUrlPath === '/hcp-e2e-journey-mvp02/start-page') ||
     (pageUrlPath === '/hcp-e2e-journey-mvp03/start-page') ||
     (pageUrlPath === '/private-beta01/start-page') ||
-    (pageUrlPath === '/private-beta02/start-page') ||
+    (pageUrlPath === '/private-beta03/start-page') ||
     (pageUrlPath === '/hcp-e2e-journey-v01/organisation-signin-page') ||
     (pageUrlPath === '/hcp-e2e-journey-v02/organisation-signin-page') ||
     (pageUrlPath === '/hcp-e2e-journey-v03/organisation-signin-page') ||
@@ -482,7 +482,7 @@ window.GOVUKPrototypeKit.documentReady(function () {
     (pageUrlPath === '/hcp-e2e-journey-mvp02/organisation-signin-page') ||
     (pageUrlPath === '/hcp-e2e-journey-mvp03/organisation-signin-page') ||
     (pageUrlPath === '/private-beta01/organisation-signin-page') ||
-    (pageUrlPath === '/private-beta02/organisation-signin-page') ||
+    (pageUrlPath === '/private-beta03/organisation-signin-page') ||
     (pageUrlPath === '/hcp-e2e-journey-v04/profile-00') ||
     (pageUrlPath === '/hcp-e2e-journey-v05/profile-00') ||
     (pageUrlPath === '/hcp-e2e-journey-v06/profile-00') ||
@@ -493,7 +493,7 @@ window.GOVUKPrototypeKit.documentReady(function () {
     (pageUrlPath === '/hcp-e2e-journey-mvp02/profile-00') ||
     (pageUrlPath === '/hcp-e2e-journey-mvp03/profile-00') ||
     (pageUrlPath === '/private-beta01/profile-00') ||
-    (pageUrlPath === '/private-beta02/profile-00') ||
+    (pageUrlPath === '/private-beta03/profile-00') ||
     (pageUrlPath === '/hcp-e2e-journey-v01/signout') ||
     (pageUrlPath === '/hcp-e2e-journey-v02/signout') ||
     (pageUrlPath === '/hcp-e2e-journey-v03/signout') ||
@@ -515,9 +515,9 @@ window.GOVUKPrototypeKit.documentReady(function () {
     (pageUrlPath === '/private-beta01/signout') ||
     (pageUrlPath === '/private-beta01/signedout') ||
     (pageUrlPath === '/private-beta01/form-handler') ||
-    (pageUrlPath === '/private-beta02/signout') ||
-    (pageUrlPath === '/private-beta02/signedout') ||
-    (pageUrlPath === '/private-beta02/form-handler') ||
+    (pageUrlPath === '/private-beta03/signout') ||
+    (pageUrlPath === '/private-beta03/signedout') ||
+    (pageUrlPath === '/private-beta03/form-handler') ||
     (pageUrlPath === '/hcp-e2e-journey-v01/account-d-dashboard') ||
     (pageUrlPath === '/hcp-e2e-journey-v02/account-d-dashboard') ||
     (pageUrlPath === '/hcp-e2e-journey-v03/account-d-dashboard') ||
@@ -531,7 +531,7 @@ window.GOVUKPrototypeKit.documentReady(function () {
     (pageUrlPath === '/hcp-e2e-journey-mvp02/account-d-dashboard') ||
     (pageUrlPath === '/hcp-e2e-journey-mvp03/account-d-dashboard') ||
     (pageUrlPath === '/private-beta01/account-d-dashboard') ||
-    (pageUrlPath === '/private-beta02/account-d-dashboard') ||
+    (pageUrlPath === '/private-beta03/account-d-dashboard') ||
     (pageUrlPath === '/hcp-e2e-journey-v05/account-new-dashboard-success') ||
     (pageUrlPath === '/hcp-e2e-journey-v06/account-d-dashboard-success') ||
     (pageUrlPath === '/hcp-e2e-journey-v08/account-new-dashboard-success') ||
@@ -582,16 +582,16 @@ window.GOVUKPrototypeKit.documentReady(function () {
     (pageUrlPath === '/private-beta01/task-list-sr1-form-start') ||
     (pageUrlPath === '/private-beta01/submission-not-successful') ||
     (pageUrlPath === '/private-beta01/task-list-sr1-form')||
-    (pageUrlPath === '/private-beta02/before-you-start') ||
-    (pageUrlPath === '/private-beta02/account-new-dashboard') ||
-    (pageUrlPath === '/private-beta02/task-list-sr1-form-start') ||
-    (pageUrlPath === '/private-beta02/sr1-form-start') ||
-    (pageUrlPath === '/private-beta02/task-list-sr1-form-start-timer') ||
-    (pageUrlPath === '/private-beta02/task-list-sr1-form-optional') ||
-    (pageUrlPath === '/private-beta02/sr1-form-sections') ||
-    (pageUrlPath === '/private-beta02/task-list-sr1-form-start') ||
-    (pageUrlPath === '/private-beta02/submission-not-successful') ||
-    (pageUrlPath === '/private-beta02/task-list-sr1-form')
+    (pageUrlPath === '/private-beta03/before-you-start') ||
+    (pageUrlPath === '/private-beta03/account-new-dashboard') ||
+    (pageUrlPath === '/private-beta03/task-list-sr1-form-start') ||
+    (pageUrlPath === '/private-beta03/sr1-form-start') ||
+    (pageUrlPath === '/private-beta03/task-list-sr1-form-start-timer') ||
+    (pageUrlPath === '/private-beta03/task-list-sr1-form-optional') ||
+    (pageUrlPath === '/private-beta03/sr1-form-sections') ||
+    (pageUrlPath === '/private-beta03/task-list-sr1-form-start') ||
+    (pageUrlPath === '/private-beta03/submission-not-successful') ||
+    (pageUrlPath === '/private-beta03/task-list-sr1-form')
 
   ) {
     const backLink = document.getElementById('backLink').style.display = 'none';
@@ -987,9 +987,9 @@ window.GOVUKPrototypeKit.documentReady(function () {
     (pageUrlPath === '/private-beta01/account-d-dashboard') ||
     (pageUrlPath === '/private-beta01/account-new-dashboard') ||
     (pageUrlPath === '/private-beta01/account-d-dashboard-success') ||
-    (pageUrlPath === '/private-beta02/account-d-dashboard') ||
-    (pageUrlPath === '/private-beta02/account-new-dashboard') ||
-    (pageUrlPath === '/private-beta02/account-d-dashboard-success') 
+    (pageUrlPath === '/private-beta03/account-d-dashboard') ||
+    (pageUrlPath === '/private-beta03/account-new-dashboard') ||
+    (pageUrlPath === '/private-beta03/account-d-dashboard-success') 
   ) {
     localStorage.setItem('linkLiId', 'accountHomeNavLiItem');
     localStorage.setItem('linkAnchorId', 'yourRemindersNavLink');
@@ -1278,13 +1278,13 @@ window.GOVUKPrototypeKit.documentReady(function () {
     (pageUrlPath === '/private-beta01/reminders-3') ||
     (pageUrlPath === '/private-beta01/reminder-dashboard') ||
     (pageUrlPath === '/private-beta01/settings')||
-    (pageUrlPath === '/private-beta02/reminder-settings') ||
-    (pageUrlPath === '/private-beta02/reminders') ||
-    (pageUrlPath === '/private-beta02/reminders-1') ||
-    (pageUrlPath === '/private-beta02/reminders-2') ||
-    (pageUrlPath === '/private-beta02/reminders-3') ||
-    (pageUrlPath === '/private-beta02/reminder-dashboard') ||
-    (pageUrlPath === '/private-beta02/settings')
+    (pageUrlPath === '/private-beta03/reminder-settings') ||
+    (pageUrlPath === '/private-beta03/reminders') ||
+    (pageUrlPath === '/private-beta03/reminders-1') ||
+    (pageUrlPath === '/private-beta03/reminders-2') ||
+    (pageUrlPath === '/private-beta03/reminders-3') ||
+    (pageUrlPath === '/private-beta03/reminder-dashboard') ||
+    (pageUrlPath === '/private-beta03/settings')
   ) {
     localStorage.setItem('linkLiId', 'yourRemindersNavLiItem');
     localStorage.setItem('linkAnchorId', 'yourRemindersNavLink');
@@ -1523,13 +1523,13 @@ window.GOVUKPrototypeKit.documentReady(function () {
 
     if (startSR1NavLink) startSR1NavLink.setAttribute('href', '/private-beta01/sr1-form-start-timer');
   }
-  // Version private-beta02 - Links on header
-  if (domainPathUrl === 'private-beta02') {
+  // Version private-beta03 - Links on header
+  if (domainPathUrl === 'private-beta03') {
     let startSR1NavLink = document.getElementById('startSR1Link');
     let getHelpNavLink = document.getElementById('getHelpNavLink');
     let signOutNavLink = document.getElementById('signOutNavLink');
 
-    if (startSR1NavLink) startSR1NavLink.setAttribute('href', '/private-beta02/sr1-form-start-timer');
+    if (startSR1NavLink) startSR1NavLink.setAttribute('href', '/private-beta03/sr1-form-start-timer');
   }
 
 
@@ -1711,10 +1711,10 @@ window.GOVUKPrototypeKit.documentReady(function () {
       theHref.setAttribute('href', '/private-beta01/sr1-form-start');
       localStorage.setItem('privatebeta01HcpEmail', hcpEmailAddress);
     }
-     // Version private-beta02
-     if (pageUrlPath === '/private-beta02/organisation-signin-page') {
-      theHref.setAttribute('href', '/private-beta02/sr1-form-start');
-      localStorage.setItem('privatebeta02HcpEmail', hcpEmailAddress);
+     // Version private-beta03
+     if (pageUrlPath === '/private-beta03/organisation-signin-page') {
+      theHref.setAttribute('href', '/private-beta03/sr1-form-start');
+      localStorage.setItem('privatebeta03HcpEmail', hcpEmailAddress);
     }
 
 
@@ -1806,7 +1806,7 @@ window.GOVUKPrototypeKit.documentReady(function () {
     localStorage.setItem("hcpmvp02IsLoggedIn", true);
     localStorage.setItem("hcpmvp03IsLoggedIn", true);
     localStorage.setItem("privatebeta01IsLoggedIn", true);
-    localStorage.setItem("privatebeta02IsLoggedIn", true);
+    localStorage.setItem("privatebeta03IsLoggedIn", true);
   }
 
   // hcp-e2e-journey-v01
@@ -3148,8 +3148,8 @@ window.GOVUKPrototypeKit.documentReady(function () {
   }
 
 
- // private-beta02
- if (pageUrlPath === '/private-beta02/profile-edit') {
+ // private-beta03
+ if (pageUrlPath === '/private-beta03/profile-edit') {
   let fullName = document.getElementById('fullName');
   let professionalRegistrationNumber = document.getElementById('professionalRegistrationNumber');
   let emailAddress = document.getElementById('emailAddress');
@@ -3161,19 +3161,19 @@ window.GOVUKPrototypeKit.documentReady(function () {
   let organisationTownCity = document.getElementById('organisationTownCity');
   let postcode = document.getElementById('postcode');
 
-  if (localStorage.getItem("privatebeta02Fullname")) fullName.value = localStorage.getItem("privatebeta02Fullname");
-  if (localStorage.getItem("privatebeta02ProfessionalRegistrationNumber")) professionalRegistrationNumber.value = localStorage.getItem("privatebeta02ProfessionalRegistrationNumber");
-  //  if (localStorage.getItem("privatebeta02HcpEmail")) emailAddress.value = localStorage.getItem("privatebeta02HcpEmail");
-  if (localStorage.getItem("privatebeta02MobileNumber")) mobileNumber.value = localStorage.getItem("privatebeta02MobileNumber");
-  if (localStorage.getItem("privatebeta02OrganisationName")) organisationName.value = localStorage.getItem("privatebeta02OrganisationName");
-  if (localStorage.getItem("privatebeta02OrganisationAddressLine1")) organisationAddressLine1.value = localStorage.getItem("privatebeta02OrganisationAddressLine1");
-  if (localStorage.getItem("privatebeta02OrganisationAddressLine2")) organisationAddressLine2.value = localStorage.getItem("privatebeta02OrganisationAddressLine2");
-  if (localStorage.getItem("privatebeta02OrganisationAddressCounty")) organisationAddressCounty.value = localStorage.getItem("privatebeta02OrganisationAddressCounty");
-  if (localStorage.getItem("privatebeta02TownOrCity")) organisationTownCity.value = localStorage.getItem("privatebeta02TownOrCity");
-  if (localStorage.getItem("privatebeta02Postcode")) postcode.value = localStorage.getItem("privatebeta02Postcode");
+  if (localStorage.getItem("privatebeta03Fullname")) fullName.value = localStorage.getItem("privatebeta03Fullname");
+  if (localStorage.getItem("privatebeta03ProfessionalRegistrationNumber")) professionalRegistrationNumber.value = localStorage.getItem("privatebeta03ProfessionalRegistrationNumber");
+  //  if (localStorage.getItem("privatebeta03HcpEmail")) emailAddress.value = localStorage.getItem("privatebeta03HcpEmail");
+  if (localStorage.getItem("privatebeta03MobileNumber")) mobileNumber.value = localStorage.getItem("privatebeta03MobileNumber");
+  if (localStorage.getItem("privatebeta03OrganisationName")) organisationName.value = localStorage.getItem("privatebeta03OrganisationName");
+  if (localStorage.getItem("privatebeta03OrganisationAddressLine1")) organisationAddressLine1.value = localStorage.getItem("privatebeta03OrganisationAddressLine1");
+  if (localStorage.getItem("privatebeta03OrganisationAddressLine2")) organisationAddressLine2.value = localStorage.getItem("privatebeta03OrganisationAddressLine2");
+  if (localStorage.getItem("privatebeta03OrganisationAddressCounty")) organisationAddressCounty.value = localStorage.getItem("privatebeta03OrganisationAddressCounty");
+  if (localStorage.getItem("privatebeta03TownOrCity")) organisationTownCity.value = localStorage.getItem("privatebeta03TownOrCity");
+  if (localStorage.getItem("privatebeta03Postcode")) postcode.value = localStorage.getItem("privatebeta03Postcode");
 
-  if (localStorage.getItem("privatebeta02Role")) {
-    let role = localStorage.getItem("privatebeta02Role");
+  if (localStorage.getItem("privatebeta03Role")) {
+    let role = localStorage.getItem("privatebeta03Role");
     const formElements = document.getElementById('profileSetupPage').elements;
 
     for (var i = 0, j = 0; i < formElements.length; i++) {
@@ -3184,51 +3184,51 @@ window.GOVUKPrototypeKit.documentReady(function () {
           formElement.checked = true;
 
           if (role === 'other') {
-            document.getElementById('otherRole').value = localStorage.getItem("privatebeta02OtherRole");
+            document.getElementById('otherRole').value = localStorage.getItem("privatebeta03OtherRole");
           }
         }
       }
     }
   }
 
-  if (localStorage.getItem('privatebeta02UpdateProfileDetailsFromSendSR1FormPage')) {
-    document.getElementById('profileSetupPage').setAttribute("action", "/private-beta02/send-an-sr1-form");
+  if (localStorage.getItem('privatebeta03UpdateProfileDetailsFromSendSR1FormPage')) {
+    document.getElementById('profileSetupPage').setAttribute("action", "/private-beta03/send-an-sr1-form");
   }
 }
 
-// private-beta02-name
-if (pageUrlPath === '/private-beta02/profile-01' || pageUrlPath === '/private-beta02/profile-01-new') {
+// private-beta03-name
+if (pageUrlPath === '/private-beta03/profile-01' || pageUrlPath === '/private-beta03/profile-01-new') {
   let firstName = document.getElementById('firstName');
   //let middleName = document.getElementById('middleName');
   let lastName = document.getElementById('lastName');
-  if (localStorage.getItem("privatebeta02Firstname")) firstName.value = localStorage.getItem("privatebeta02Firstname");
+  if (localStorage.getItem("privatebeta03Firstname")) firstName.value = localStorage.getItem("privatebeta03Firstname");
   //if (localStorage.getItem("privatebeta01Middlename")) middleName.value = localStorage.getItem("privatebeta01Middlename");
-  if (localStorage.getItem("privatebeta02Lastname")) lastName.value = localStorage.getItem("privatebeta02Lastname");
+  if (localStorage.getItem("privatebeta03Lastname")) lastName.value = localStorage.getItem("privatebeta03Lastname");
 }
 
-// private-beta02-professional-registration-number
-if (pageUrlPath === '/private-beta02/profile-03' || pageUrlPath === '/private-beta02/profile-03-new') {
+// private-beta03-professional-registration-number
+if (pageUrlPath === '/private-beta03/profile-03' || pageUrlPath === '/private-beta03/profile-03-new') {
   let professionalRegistrationNumber = document.getElementById('professionalRegistrationNumber');
-  if (localStorage.getItem("privatebeta02ProfessionalRegistrationNumber")) professionalRegistrationNumber.value = localStorage.getItem("privatebeta02ProfessionalRegistrationNumber");
+  if (localStorage.getItem("privatebeta03ProfessionalRegistrationNumber")) professionalRegistrationNumber.value = localStorage.getItem("privatebeta03ProfessionalRegistrationNumber");
 }
 
-// private-beta02-phone-number
-if (pageUrlPath === '/private-beta02/profile-04' || pageUrlPath === '/private-beta02/profile-04-new') {
+// private-beta03-phone-number
+if (pageUrlPath === '/private-beta03/profile-04' || pageUrlPath === '/private-beta03/profile-04-new') {
   let mobileNumber = document.getElementById('mobileNumber');
-  if (localStorage.getItem("privatebeta02MobileNumber")) mobileNumber.value = localStorage.getItem("privatebeta02MobileNumber");
+  if (localStorage.getItem("privatebeta03MobileNumber")) mobileNumber.value = localStorage.getItem("privatebeta03MobileNumber");
 }
 
-// private-beta02-name-organisation
-if (pageUrlPath === '/private-beta02/profile-05' || pageUrlPath === '/private-beta02/profile-05-new') {
+// private-beta03-name-organisation
+if (pageUrlPath === '/private-beta03/profile-05' || pageUrlPath === '/private-beta03/profile-05-new') {
   let organisationName = document.getElementById('organisationName');
-  if (localStorage.getItem("privatebeta02OrganisationName")) organisationName.value = localStorage.getItem("privatebeta02OrganisationName");
+  if (localStorage.getItem("privatebeta03OrganisationName")) organisationName.value = localStorage.getItem("privatebeta03OrganisationName");
 }
 
-// Address selection private-beta02
-if (pageUrlPath === '/private-beta02/profile-06' || pageUrlPath === '/private-beta02/profile-06-error') {
+// Address selection private-beta03
+if (pageUrlPath === '/private-beta03/profile-06' || pageUrlPath === '/private-beta03/profile-06-error') {
 
-  if (localStorage.getItem("privatebeta02OrganisationAddress")) {
-    let organisationAddress = localStorage.getItem("privatebeta02OrganisationAddress");
+  if (localStorage.getItem("privatebeta03OrganisationAddress")) {
+    let organisationAddress = localStorage.getItem("privatebeta03OrganisationAddress");
     const formElements = document.getElementById('profileSetupPage').elements;
 
     for (var i = 0, j = 0; i < formElements.length; i++) {
@@ -3244,26 +3244,26 @@ if (pageUrlPath === '/private-beta02/profile-06' || pageUrlPath === '/private-be
 }
 
 // private-beta01-postcode
-if (pageUrlPath === '/private-beta02/profile-07-a' || pageUrlPath === '/private-beta02/profile-07-a-new' || pageUrlPath === '/private-beta02/profile-07' || pageUrlPath === '/private-beta02/profile-07-new') {
+if (pageUrlPath === '/private-beta03/profile-07-a' || pageUrlPath === '/private-beta03/profile-07-a-new' || pageUrlPath === '/private-beta03/profile-07' || pageUrlPath === '/private-beta03/profile-07-new') {
   let organisationName = document.getElementById('organisationName');
   let organisationAddressLine1 = document.getElementById('organisationAddressLine1');
   let organisationAddressLine2 = document.getElementById('organisationAddressLine2');
   let organisationTownCity = document.getElementById('organisationTownCity');
   let postcode = document.getElementById('postcode');
   let organisationAddressCounty = document.getElementById('organisationAddressCounty');
-  if (localStorage.getItem("privatebeta02OrganisationName")) organisationName.value = localStorage.getItem("privatebeta02OrganisationName");
-  if (localStorage.getItem("privatebeta02OrganisationAddressLine1")) organisationAddressLine1.value = localStorage.getItem("privatebeta02OrganisationAddressLine1");
-  if (localStorage.getItem("privatebeta02OrganisationAddressLine2")) organisationAddressLine2.value = localStorage.getItem("privatebeta02OrganisationAddressLine2");
-  if (localStorage.getItem("privatebeta02TownOrCity")) organisationTownCity.value = localStorage.getItem("privatebeta02TownOrCity");
-  if (localStorage.getItem("privatebeta02OrganisationAddressCounty")) organisationAddressCounty.value = localStorage.getItem("privatebeta02OrganisationAddressCounty");
-  if (localStorage.getItem("privatebeta02Postcode")) postcode.value = localStorage.getItem("privatebeta02Postcode");
+  if (localStorage.getItem("privatebeta03OrganisationName")) organisationName.value = localStorage.getItem("privatebeta03OrganisationName");
+  if (localStorage.getItem("privatebeta03OrganisationAddressLine1")) organisationAddressLine1.value = localStorage.getItem("privatebeta03OrganisationAddressLine1");
+  if (localStorage.getItem("privatebeta03OrganisationAddressLine2")) organisationAddressLine2.value = localStorage.getItem("privatebeta03OrganisationAddressLine2");
+  if (localStorage.getItem("privatebeta03TownOrCity")) organisationTownCity.value = localStorage.getItem("privatebeta03TownOrCity");
+  if (localStorage.getItem("privatebeta03OrganisationAddressCounty")) organisationAddressCounty.value = localStorage.getItem("privatebeta03OrganisationAddressCounty");
+  if (localStorage.getItem("privatebeta03Postcode")) postcode.value = localStorage.getItem("privatebeta03Postcode");
 }
 
-// private-beta02-role
-if (pageUrlPath === '/private-beta02/profile-02') {
+// private-beta03-role
+if (pageUrlPath === '/private-beta03/profile-02') {
 
-  if (localStorage.getItem("privatebeta02Role")) {
-    let role = localStorage.getItem("privatebeta02Role");
+  if (localStorage.getItem("privatebeta03Role")) {
+    let role = localStorage.getItem("privatebeta03Role");
     const formElements = document.getElementById('profileSetupPage').elements;
 
     for (var i = 0, j = 0; i < formElements.length; i++) {
@@ -3274,21 +3274,21 @@ if (pageUrlPath === '/private-beta02/profile-02') {
           formElement.checked = true;
 
           if (role === 'other') {
-            document.getElementById('otherRole').value = localStorage.getItem("privatebeta02OtherRole");
+            document.getElementById('otherRole').value = localStorage.getItem("privatebeta03OtherRole");
           }
         }
       }
     }
   }
 
-  if (localStorage.getItem('privatebeta02UpdateProfileDetailsFromSendSR1FormPage')) {
-    document.getElementById('profileSetupPage').setAttribute("action", "/private-beta02/send-an-sr1-form");
+  if (localStorage.getItem('privatebeta03UpdateProfileDetailsFromSendSR1FormPage')) {
+    document.getElementById('profileSetupPage').setAttribute("action", "/private-beta03/send-an-sr1-form");
   }
 }
 
-if (pageUrlPath === '/private-beta02/profile-02' || pageUrlPath === '/private-beta02/profile-02-error') {
+if (pageUrlPath === '/private-beta03/profile-02' || pageUrlPath === '/private-beta03/profile-02-error') {
   let otherRole = document.getElementById('otherRole');
-  if (localStorage.getItem("privatebeta02otherRole")) otherRole.value = localStorage.getItem("privatebeta02otherRole");
+  if (localStorage.getItem("privatebeta03otherRole")) otherRole.value = localStorage.getItem("privatebeta03otherRole");
 }
 
 
@@ -3754,8 +3754,8 @@ if (pageUrlPath === '/private-beta02/profile-02' || pageUrlPath === '/private-be
     }
   }
 
-   // private-beta02
-   if (pageUrlPath === '/private-beta02/check-profile-details') {
+   // private-beta03
+   if (pageUrlPath === '/private-beta03/check-profile-details') {
     let name = document.getElementById('name');
     let role = document.getElementById('role');
     let professionalRegNum = document.getElementById('professionalRegNum');
@@ -3767,26 +3767,26 @@ if (pageUrlPath === '/private-beta02/profile-02' || pageUrlPath === '/private-be
     let organisationPostcode = document.getElementById('organisationPostcode');
     let profileSetupPage = document.getElementById('profileSetupPage');
 
-    name.innerHTML = localStorage.getItem("privatebeta02Firstname") + ' ' + localStorage.getItem("privatebeta02Lastname");
+    name.innerHTML = localStorage.getItem("privatebeta03Firstname") + ' ' + localStorage.getItem("privatebeta03Lastname");
 
-    console.log('Role', localStorage.getItem("privatebeta02Role"));
-    if (localStorage.getItem("privatebeta02Role") === "other") {
-      role.innerHTML = localStorage.getItem("privatebeta02OtherRole");
+    console.log('Role', localStorage.getItem("privatebeta03Role"));
+    if (localStorage.getItem("privatebeta03Role") === "other") {
+      role.innerHTML = localStorage.getItem("privatebeta03OtherRole");
     } else {
-      role.innerHTML = localStorage.getItem("privatebeta02Role");
+      role.innerHTML = localStorage.getItem("privatebeta03Role");
     }
 
-    professionalRegNum.innerHTML = localStorage.getItem("privatebeta02ProfessionalRegistrationNumber");
-    mobile.innerHTML = localStorage.getItem("privatebeta02MobileNumber");
-    organisationName.innerHTML = localStorage.getItem("privatebeta02OrganisationName");
-    organisationAddressLine1.innerHTML = localStorage.getItem("privatebeta02OrganisationAddressLine1");
-    organisationAddressLine2.innerHTML = localStorage.getItem("privatebeta02OrganisationAddressLine2");
-    organisationAddressCounty.innerHTML = localStorage.getItem("privatebeta02OrganisationAddressCounty");
-    organisationTownCity.innerHTML = localStorage.getItem("privatebeta02TownOrCity");
-    organisationPostcode.innerHTML = localStorage.getItem("privatebeta02Postcode");
+    professionalRegNum.innerHTML = localStorage.getItem("privatebeta03ProfessionalRegistrationNumber");
+    mobile.innerHTML = localStorage.getItem("privatebeta03MobileNumber");
+    organisationName.innerHTML = localStorage.getItem("privatebeta03OrganisationName");
+    organisationAddressLine1.innerHTML = localStorage.getItem("privatebeta03OrganisationAddressLine1");
+    organisationAddressLine2.innerHTML = localStorage.getItem("privatebeta03OrganisationAddressLine2");
+    organisationAddressCounty.innerHTML = localStorage.getItem("privatebeta03OrganisationAddressCounty");
+    organisationTownCity.innerHTML = localStorage.getItem("privatebeta03TownOrCity");
+    organisationPostcode.innerHTML = localStorage.getItem("privatebeta03Postcode");
 
-    if (localStorage.getItem("privatebeta02ReminderTriggered")) {
-      profileSetupPage.setAttribute("action", "/private-beta02/account-new-dashboard");
+    if (localStorage.getItem("privatebeta03ReminderTriggered")) {
+      profileSetupPage.setAttribute("action", "/private-beta03/account-new-dashboard");
     }
   }
 
@@ -4764,13 +4764,13 @@ if (pageUrlPath === '/private-beta02/profile-02' || pageUrlPath === '/private-be
     fullName.innerHTML = localStorage.getItem("privatebeta01Firstname") + ' ' + localStorage.getItem("privatebeta01Lastname");
     if ((localStorage.getItem('privatebeta01Role') === "Senior specialist nurse") || (localStorage.getItem('hcpmvp03Role') === "other")) feeForm.classList.add('hidden');
   }
-  if ((pageUrlPath === '/private-beta02/account-d-dashboard') || (pageUrlPath === '/private-beta02/account-new-dashboard')) {
+  if ((pageUrlPath === '/private-beta03/account-d-dashboard') || (pageUrlPath === '/private-beta03/account-new-dashboard')) {
     let professionalRegistrationNumber = document.getElementById('professionalRegistrationNumber');
     let fullName = document.getElementById('fullName');
     let feeForm = document.getElementById('feeForm');
-    professionalRegistrationNumber.innerHTML = localStorage.getItem("privatebeta02ProfessionalRegistrationNumber");
-    fullName.innerHTML = localStorage.getItem("privatebeta02Firstname") + ' ' + localStorage.getItem("privatebeta02Lastname");
-    if ((localStorage.getItem('privatebeta02Role') === "Senior specialist nurse") || (localStorage.getItem('hcpmvp03Role') === "other")) feeForm.classList.add('hidden');
+    professionalRegistrationNumber.innerHTML = localStorage.getItem("privatebeta03ProfessionalRegistrationNumber");
+    fullName.innerHTML = localStorage.getItem("privatebeta03Firstname") + ' ' + localStorage.getItem("privatebeta03Lastname");
+    if ((localStorage.getItem('privatebeta03Role') === "Senior specialist nurse") || (localStorage.getItem('hcpmvp03Role') === "other")) feeForm.classList.add('hidden');
   }
 
 
@@ -6637,9 +6637,9 @@ if (pageUrlPath === '/private-beta02/profile-02' || pageUrlPath === '/private-be
   //}
 
 
-// Private-beta02
-  // Patient details private-beta02
-  if (pageUrlPath === '/private-beta02/sr1-form-01') {
+// Private-beta03
+  // Patient details private-beta03
+  if (pageUrlPath === '/private-beta03/sr1-form-01') {
     const formElements = document.getElementById('sendAnSR1Form').elements;
     let PatientFirstName = document.getElementById('PatientFirstName');
     let PatientLastName = document.getElementById('PatientLastName');
@@ -6653,9 +6653,9 @@ if (pageUrlPath === '/private-beta02/profile-02' || pageUrlPath === '/private-be
     let dobMonth = document.getElementById('dob-month');
     let dobYear = document.getElementById('dob-year');
     let niNo = document.getElementById('niNo');
-    if (localStorage.getItem("privatebeta02PatientFirstName")) PatientFirstName.value = localStorage.getItem("privatebeta02PatientFirstName");
-    if (localStorage.getItem("privatebeta02PatientLastName")) PatientLastName.value = localStorage.getItem("privatebeta02PatientLastName");
-    // Diagnosis private-beta02
+    if (localStorage.getItem("privatebeta03PatientFirstName")) PatientFirstName.value = localStorage.getItem("privatebeta03PatientFirstName");
+    if (localStorage.getItem("privatebeta03PatientLastName")) PatientLastName.value = localStorage.getItem("privatebeta03PatientLastName");
+    // Diagnosis private-beta03
     let whatIsTheDiagnosis = document.getElementById('whatIsTheDiagnosis');
     let dodDay = document.getElementById('dod-day');
     let dodMonth = document.getElementById('dod-month');
@@ -6665,23 +6665,23 @@ if (pageUrlPath === '/private-beta02/profile-02' || pageUrlPath === '/private-be
     let dateofSpecialRulesYear = document.getElementById('dateofSpecialRules-year');
     let otherRelevantDiagnosis = document.getElementById('otherRelevantDiagnosis');
     let otherRelevantDiagnosisinput = document.getElementById('otherRelevantDiagnosisinput');
-    let privatebeta01AwareOfDiagnosis = localStorage.getItem('privatebeta02AwareOfDiagnosis');
-    let privatebeta01AwareOfPrognosis = localStorage.getItem('privatebeta02AwareOfPrognosis');
-    if (localStorage.getItem("privatebeta02WhatIsTheDiagnosis")) whatIsTheDiagnosis.value = localStorage.getItem("privatebeta02WhatIsTheDiagnosis");
-    if (localStorage.getItem("privatebeta02DodDay")) dodDay.value = localStorage.getItem("privatebeta02DodDay");
-    if (localStorage.getItem("privatebeta02DodMonth")) dodMonth.value = localStorage.getItem("privatebeta02DodMonth");
-    if (localStorage.getItem("privatebeta02DodYear")) dodYear.value = localStorage.getItem("privatebeta02DodYear");
-    if (localStorage.getItem("privatebeta02DateofSpecialRulesDay")) dateofSpecialRulesDay.value = localStorage.getItem("privatebeta02DateofSpecialRulesDay");
-    if (localStorage.getItem("privatebeta02DateofSpecialRulesMonth")) dateofSpecialRulesMonth.value = localStorage.getItem("privatebeta02DateofSpecialRulesMonth");
-    if (localStorage.getItem("privatebeta02DateofSpecialRulesYear")) dateofSpecialRulesYear.value = localStorage.getItem("privatebeta02DateofSpecialRulesYear");
-    if (localStorage.getItem("privatebeta02OtherRelevantDiagnosis")) otherRelevantDiagnosis.value = localStorage.getItem("privatebeta02OtherRelevantDiagnosis");
-    if (localStorage.getItem("privatebeta02OtherRelevantDiagnosisinput")) otherRelevantDiagnosisinput.value = localStorage.getItem("privatebeta02OtherRelevantDiagnosisinput");
-    // Clinical features private-beta02
+    let privatebeta01AwareOfDiagnosis = localStorage.getItem('privatebeta03AwareOfDiagnosis');
+    let privatebeta01AwareOfPrognosis = localStorage.getItem('privatebeta03AwareOfPrognosis');
+    if (localStorage.getItem("privatebeta03WhatIsTheDiagnosis")) whatIsTheDiagnosis.value = localStorage.getItem("privatebeta03WhatIsTheDiagnosis");
+    if (localStorage.getItem("privatebeta03DodDay")) dodDay.value = localStorage.getItem("privatebeta03DodDay");
+    if (localStorage.getItem("privatebeta03DodMonth")) dodMonth.value = localStorage.getItem("privatebeta03DodMonth");
+    if (localStorage.getItem("privatebeta03DodYear")) dodYear.value = localStorage.getItem("privatebeta03DodYear");
+    if (localStorage.getItem("privatebeta03DateofSpecialRulesDay")) dateofSpecialRulesDay.value = localStorage.getItem("privatebeta03DateofSpecialRulesDay");
+    if (localStorage.getItem("privatebeta03DateofSpecialRulesMonth")) dateofSpecialRulesMonth.value = localStorage.getItem("privatebeta03DateofSpecialRulesMonth");
+    if (localStorage.getItem("privatebeta03DateofSpecialRulesYear")) dateofSpecialRulesYear.value = localStorage.getItem("privatebeta03DateofSpecialRulesYear");
+    if (localStorage.getItem("privatebeta03OtherRelevantDiagnosis")) otherRelevantDiagnosis.value = localStorage.getItem("privatebeta03OtherRelevantDiagnosis");
+    if (localStorage.getItem("privatebeta03OtherRelevantDiagnosisinput")) otherRelevantDiagnosisinput.value = localStorage.getItem("privatebeta03OtherRelevantDiagnosisinput");
+    // Clinical features private-beta03
     let detailsOfClinicalFeatures = document.getElementById('detailsOfClinicalFeatures');
-    if (localStorage.getItem("privatebeta02DetailsOfClinicalFeatures")) detailsOfClinicalFeatures.value = localStorage.getItem("privatebeta02DetailsOfClinicalFeatures");
-    // Treatment private-beta02
+    if (localStorage.getItem("privatebeta03DetailsOfClinicalFeatures")) detailsOfClinicalFeatures.value = localStorage.getItem("privatebeta03DetailsOfClinicalFeatures");
+    // Treatment private-beta03
     let treatment = document.getElementById('treatment');
-    if (localStorage.getItem("privatebeta02Treatment")) treatment.value = localStorage.getItem("privatebeta02Treatment");
+    if (localStorage.getItem("privatebeta03Treatment")) treatment.value = localStorage.getItem("privatebeta03Treatment");
     // Your details mvp03
     let yourRole = document.getElementById('yourRole');
     let yourFirstName = document.getElementById('yourFullName');
@@ -6695,52 +6695,52 @@ if (pageUrlPath === '/private-beta02/profile-02' || pageUrlPath === '/private-be
     let mobileNumber = document.getElementById('mobileNumber');
     for (var i = 0, j = 0; i < formElements.length; i++) {
       formElement = formElements.item(i);
-      // Diagnosis private-beta02
+      // Diagnosis private-beta03
       if (formElement.type === "radio" && formElement.name === "awareOfDiagnosis") {
-        if (formElement.value === privatebeta02AwareOfDiagnosis) {
+        if (formElement.value === privatebeta03AwareOfDiagnosis) {
           console.log('formElement:', formElement.value);
           formElement.checked = true;
         }
       }
-      // Prognosis private-beta02
+      // Prognosis private-beta03
       if (formElement.type === "radio" && formElement.name === "awareOfPrognosis") {
-        if (formElement.value === privatebeta02AwareOfPrognosis) {
+        if (formElement.value === privatebeta03AwareOfPrognosis) {
           console.log('formElement:', formElement.value);
           formElement.checked = true;
         }
       }
     }
   }
-  // DOB private-beta02
-  if (pageUrlPath === '/private-beta02/sr1-form-02' || pageUrlPath === '/private-beta02/sr1-form-c-02') {
+  // DOB private-beta03
+  if (pageUrlPath === '/private-beta03/sr1-form-02' || pageUrlPath === '/private-beta03/sr1-form-c-02') {
     const formElements = document.getElementById('sendAnSR1Form').elements;
     let dobDay = document.getElementById('dob-day');
     let dobMonth = document.getElementById('dob-month');
     let dobYear = document.getElementById('dob-year');
-    if (localStorage.getItem("privatebeta02DobDay")) dobDay.value = localStorage.getItem("privatebeta02DobDay");
-    if (localStorage.getItem("privatebeta02DobMonth")) dobMonth.value = localStorage.getItem("privatebeta02DobMonth");
-    if (localStorage.getItem("privatebeta02DobYear")) dobYear.value = localStorage.getItem("privatebeta02DobYear");
+    if (localStorage.getItem("privatebeta03DobDay")) dobDay.value = localStorage.getItem("privatebeta03DobDay");
+    if (localStorage.getItem("privatebeta03DobMonth")) dobMonth.value = localStorage.getItem("privatebeta03DobMonth");
+    if (localStorage.getItem("privatebeta03DobYear")) dobYear.value = localStorage.getItem("privatebeta03DobYear");
   }
   
-  // Address private-beta02
-  if (pageUrlPath === '/private-beta02/sr1-form-04-a' || pageUrlPath === '/private-beta02/sr1-form-04-a-error') {
+  // Address private-beta03
+  if (pageUrlPath === '/private-beta03/sr1-form-04-a' || pageUrlPath === '/private-beta03/sr1-form-04-a-error') {
     const formElements = document.getElementById('sendAnSR1Form').elements;
     let patientaddressline1 = document.getElementById('patientaddressline1');
     let patientaddressline2 = document.getElementById('patientaddressline2');
     let patientaddresstown = document.getElementById('patientaddresstown');
     let patientaddresscounty = document.getElementById('patientaddresscounty');
     let patientPostcode = document.getElementById('patientPostcode');
-    if (localStorage.getItem("privatebeta02PatientAddressLine1")) patientaddressline1.value = localStorage.getItem("privatebeta02PatientAddressLine1");
-    if (localStorage.getItem("privatebeta02PatientAddressLine2")) patientaddressline2.value = localStorage.getItem("privatebeta02PatientAddressLine2");
-    if (localStorage.getItem("privatebeta02PatientAddressTown")) patientaddresstown.value = localStorage.getItem("privatebeta02PatientAddressTown");
-    if (localStorage.getItem("privatebeta02PatientAddressCounty")) patientaddresscounty.value = localStorage.getItem("privatebeta02PatientAddressCounty");
-    if (localStorage.getItem("privatebeta02PatientPostcode")) patientPostcode.value = localStorage.getItem("privatebeta02PatientPostcode");
+    if (localStorage.getItem("privatebeta03PatientAddressLine1")) patientaddressline1.value = localStorage.getItem("privatebeta03PatientAddressLine1");
+    if (localStorage.getItem("privatebeta03PatientAddressLine2")) patientaddressline2.value = localStorage.getItem("privatebeta03PatientAddressLine2");
+    if (localStorage.getItem("privatebeta03PatientAddressTown")) patientaddresstown.value = localStorage.getItem("privatebeta03PatientAddressTown");
+    if (localStorage.getItem("privatebeta03PatientAddressCounty")) patientaddresscounty.value = localStorage.getItem("privatebeta03PatientAddressCounty");
+    if (localStorage.getItem("privatebeta03PatientPostcode")) patientPostcode.value = localStorage.getItem("privatebeta03PatientPostcode");
   }
-  // Address selection private-beta02
-  if (pageUrlPath === '/private-beta02/sr1-form-04' || pageUrlPath === '/private-beta02/sr1-form-04-error') {
+  // Address selection private-beta03
+  if (pageUrlPath === '/private-beta03/sr1-form-04' || pageUrlPath === '/private-beta03/sr1-form-04-error') {
 
-    if (localStorage.getItem("privatebeta02PatientAddress")) {
-      let patientAddress = localStorage.getItem("privatebeta02PatientAddress");
+    if (localStorage.getItem("privatebeta03PatientAddress")) {
+      let patientAddress = localStorage.getItem("privatebeta03PatientAddress");
       const formElements = document.getElementById('sendAnSR1Form').elements;
 
       for (var i = 0, j = 0; i < formElements.length; i++) {
@@ -6755,28 +6755,28 @@ if (pageUrlPath === '/private-beta02/profile-02' || pageUrlPath === '/private-be
     }
   }
 
-  if (pageUrlPath === '/private-beta02/sr1-form-04-b-manual') {
+  if (pageUrlPath === '/private-beta03/sr1-form-04-b-manual') {
     let patientaddressline1 = document.getElementById('patientaddressline1');
-    if (localStorage.getItem("privatebeta02PatientAddressLine1")) patientaddressline1.innerHTML = localStorage.getItem("privatebeta02PatientAddressLine1");
+    if (localStorage.getItem("privatebeta03PatientAddressLine1")) patientaddressline1.innerHTML = localStorage.getItem("privatebeta03PatientAddressLine1");
 
     let patientaddressline2 = document.getElementById('patientaddressline2');
-    if (localStorage.getItem("privatebeta02PatientAddressLine2")) patientaddressline2.innerHTML = localStorage.getItem("privatebeta02PatientAddressLine2");
+    if (localStorage.getItem("privatebeta03PatientAddressLine2")) patientaddressline2.innerHTML = localStorage.getItem("privatebeta03PatientAddressLine2");
 
     let patientaddresstown = document.getElementById('patientaddresstown');
-    if (localStorage.getItem("privatebeta02PatientAddressTown")) patientaddresstown.innerHTML = localStorage.getItem("privatebeta02PatientAddressTown");
+    if (localStorage.getItem("privatebeta03PatientAddressTown")) patientaddresstown.innerHTML = localStorage.getItem("privatebeta03PatientAddressTown");
 
     let patientaddresscounty = document.getElementById('patientaddresscounty');
-    if (localStorage.getItem("privatebeta02PatientAddressCounty")) patientaddresscounty.innerHTML = localStorage.getItem("privatebeta02PatientAddressCounty");
+    if (localStorage.getItem("privatebeta03PatientAddressCounty")) patientaddresscounty.innerHTML = localStorage.getItem("privatebeta03PatientAddressCounty");
 
     let patientPostcode = document.getElementById('patientPostcode');
-    if (localStorage.getItem("privatebeta02PatientPostcode")) patientPostcode.innerHTML = localStorage.getItem("privatebeta02PatientPostcode");
+    if (localStorage.getItem("privatebeta03PatientPostcode")) patientPostcode.innerHTML = localStorage.getItem("privatebeta03PatientPostcode");
   }
 
-  // Aware of nino private-beta02
-  if (pageUrlPath === '/private-beta02/sr1-form-05-radio') {
+  // Aware of nino private-beta03
+  if (pageUrlPath === '/private-beta03/sr1-form-05-radio') {
 
-    if (localStorage.getItem("privatebeta02NiNo")) {
-      let niNo = localStorage.getItem("privatebeta02NiNo");
+    if (localStorage.getItem("privatebeta03NiNo")) {
+      let niNo = localStorage.getItem("privatebeta03NiNo");
       const formElements = document.getElementById('sendAnSR1Form').elements;
 
       for (var i = 0, j = 0; i < formElements.length; i++) {
@@ -6787,49 +6787,49 @@ if (pageUrlPath === '/private-beta02/profile-02' || pageUrlPath === '/private-be
             formElement.checked = true;
 
             if (role === 'Yes') {
-              document.getElementById('niNoinput').value = localStorage.getItem("privatebeta02NiNoinput");
+              document.getElementById('niNoinput').value = localStorage.getItem("privatebeta03NiNoinput");
             }
           }
         }
       }
     }
   }
-  // niNo private-beta02
-  if (pageUrlPath === '/private-beta02/sr1-form-05-input') {
+  // niNo private-beta03
+  if (pageUrlPath === '/private-beta03/sr1-form-05-input') {
     const formElements = document.getElementById('sendAnSR1Form').elements;
     let niNoinput = document.getElementById('niNoinput');
-    if (localStorage.getItem("privatebeta02NiNoinput")) niNoinput.value = localStorage.getItem("privatebeta02NiNoinput");
+    if (localStorage.getItem("privatebeta03NiNoinput")) niNoinput.value = localStorage.getItem("privatebeta03NiNoinput");
   }
-  // Date meeting special rules private-beta02
-  if (pageUrlPath === '/private-beta02/sr1-form-06' || pageUrlPath === '/private-beta02/sr1-form-c-06') {
+  // Date meeting special rules private-beta03
+  if (pageUrlPath === '/private-beta03/sr1-form-06' || pageUrlPath === '/private-beta03/sr1-form-c-06') {
     const formElements = document.getElementById('sendAnSR1Form').elements;
     let dateofSpecialRulesDay = document.getElementById('dateofSpecialRules-day');
     let dateofSpecialRulesMonth = document.getElementById('dateofSpecialRules-month');
     let dateofSpecialRulesYear = document.getElementById('dateofSpecialRules-year');
-    if (localStorage.getItem("privatebeta02DateofSpecialRulesDay")) dateofSpecialRulesDay.value = localStorage.getItem("privatebeta02DateofSpecialRulesDay");
-    if (localStorage.getItem("privatebeta02DateofSpecialRulesMonth")) dateofSpecialRulesMonth.value = localStorage.getItem("privatebeta02DateofSpecialRulesMonth");
-    if (localStorage.getItem("privatebeta02DateofSpecialRulesYear")) dateofSpecialRulesYear.value = localStorage.getItem("privatebeta02DateofSpecialRulesYear");
+    if (localStorage.getItem("privatebeta03DateofSpecialRulesDay")) dateofSpecialRulesDay.value = localStorage.getItem("privatebeta03DateofSpecialRulesDay");
+    if (localStorage.getItem("privatebeta03DateofSpecialRulesMonth")) dateofSpecialRulesMonth.value = localStorage.getItem("privatebeta03DateofSpecialRulesMonth");
+    if (localStorage.getItem("privatebeta03DateofSpecialRulesYear")) dateofSpecialRulesYear.value = localStorage.getItem("privatebeta03DateofSpecialRulesYear");
   }
-  // Diagnosis private-beta02
-  if (pageUrlPath === '/private-beta02/sr1-form-07' || pageUrlPath === '/private-beta02/sr1-form-c-07') {
+  // Diagnosis private-beta03
+  if (pageUrlPath === '/private-beta03/sr1-form-07' || pageUrlPath === '/private-beta03/sr1-form-c-07') {
     const formElements = document.getElementById('sendAnSR1Form').elements;
     let whatIsTheDiagnosis = document.getElementById('whatIsTheDiagnosis');
-    if (localStorage.getItem("privatebeta02WhatIsTheDiagnosis")) whatIsTheDiagnosis.value = localStorage.getItem("privatebeta02WhatIsTheDiagnosis");
+    if (localStorage.getItem("privatebeta03WhatIsTheDiagnosis")) whatIsTheDiagnosis.value = localStorage.getItem("privatebeta03WhatIsTheDiagnosis");
   }
-  // Date diagnosis private-beta02
-  if (pageUrlPath === '/private-beta02/sr1-form-08' || pageUrlPath === '/private-beta02/sr1-form-c-08') {
+  // Date diagnosis private-beta03
+  if (pageUrlPath === '/private-beta03/sr1-form-08' || pageUrlPath === '/private-beta03/sr1-form-c-08') {
     const formElements = document.getElementById('sendAnSR1Form').elements;
     let dodDay = document.getElementById('dod-day');
     let dodMonth = document.getElementById('dod-month');
     let dodYear = document.getElementById('dod-year');
-    if (localStorage.getItem("privatebeta02DodDay")) dodDay.value = localStorage.getItem("privatebeta02DodDay");
-    if (localStorage.getItem("privatebeta02DodMonth")) dodMonth.value = localStorage.getItem("privatebeta02DodMonth");
-    if (localStorage.getItem("privatebeta02DodYear")) dodYear.value = localStorage.getItem("privatebeta02DodYear");
+    if (localStorage.getItem("privatebeta03DodDay")) dodDay.value = localStorage.getItem("privatebeta03DodDay");
+    if (localStorage.getItem("privatebeta03DodMonth")) dodMonth.value = localStorage.getItem("privatebeta03DodMonth");
+    if (localStorage.getItem("privatebeta03DodYear")) dodYear.value = localStorage.getItem("privatebeta03DodYear");
   }
-  // Other diagnosis private-beta02
-  if (pageUrlPath === '/private-beta02/sr1-form-09-radio') {
-    if (localStorage.getItem("privatebeta02OtherRelevantDiagnosis")) {
-      let otherRelevantDiagnosis = localStorage.getItem('privatebeta02OtherRelevantDiagnosis');
+  // Other diagnosis private-beta03
+  if (pageUrlPath === '/private-beta03/sr1-form-09-radio') {
+    if (localStorage.getItem("privatebeta03OtherRelevantDiagnosis")) {
+      let otherRelevantDiagnosis = localStorage.getItem('privatebeta03OtherRelevantDiagnosis');
       const formElements = document.getElementById('sendAnSR1Form').elements;
       for (var i = 0, j = 0; i < formElements.length; i++) {
         formElement = formElements.item(i);
@@ -6839,16 +6839,16 @@ if (pageUrlPath === '/private-beta02/profile-02' || pageUrlPath === '/private-be
             formElement.checked = true;
 
             if (otherRelevantDiagnosis === 'Yes') {
-              document.getElementById('otherRelevantDiagnosisinput').value = localStorage.getItem("privatebeta02OtherRelevantDiagnosisinput");
+              document.getElementById('otherRelevantDiagnosisinput').value = localStorage.getItem("privatebeta03OtherRelevantDiagnosisinput");
             }
           }
         }
       }
     }
   }
-  if (pageUrlPath === '/private-beta02/sr1-form-09-radio-saved') {
-    if (localStorage.getItem("privatebeta02OtherRelevantDiagnosis")) {
-      let otherRelevantDiagnosis = localStorage.getItem('privatebeta02OtherRelevantDiagnosis');
+  if (pageUrlPath === '/private-beta03/sr1-form-09-radio-saved') {
+    if (localStorage.getItem("privatebeta03OtherRelevantDiagnosis")) {
+      let otherRelevantDiagnosis = localStorage.getItem('privatebeta03OtherRelevantDiagnosis');
       const formElements = document.getElementById('sendAnSR1Form').elements;
       for (var i = 0, j = 0; i < formElements.length; i++) {
         formElement = formElements.item(i);
@@ -6858,56 +6858,56 @@ if (pageUrlPath === '/private-beta02/profile-02' || pageUrlPath === '/private-be
             formElement.checked = true;
 
             if (otherRelevantDiagnosis === 'Yes') {
-              document.getElementById('otherRelevantDiagnosisinput').value = localStorage.getItem("privatebeta02OtherRelevantDiagnosisinput");
+              document.getElementById('otherRelevantDiagnosisinput').value = localStorage.getItem("privatebeta03OtherRelevantDiagnosisinput");
             }
           }
         }
       }
     }
   }
-  //Other relevant diagnosis input private-beta02
-  if (pageUrlPath === '/private-beta02/sr1-form-09-input') {
+  //Other relevant diagnosis input private-beta03
+  if (pageUrlPath === '/private-beta03/sr1-form-09-input') {
     const formElements = document.getElementById('sendAnSR1Form').elements;
     let otherRelevantDiagnosisinput = document.getElementById('otherRelevantDiagnosisinput');
-    if (localStorage.getItem("privatebeta02OtherRelevantDiagnosisinput")) otherRelevantDiagnosisinput.value = localStorage.getItem("privatebeta02OtherRelevantDiagnosisinput");
+    if (localStorage.getItem("privatebeta03OtherRelevantDiagnosisinput")) otherRelevantDiagnosisinput.value = localStorage.getItem("privatebeta03OtherRelevantDiagnosisinput");
   }
-  if (pageUrlPath === '/private-beta02/sr1-form-09-input-saved') {
+  if (pageUrlPath === '/private-beta03/sr1-form-09-input-saved') {
     const formElements = document.getElementById('sendAnSR1Form').elements;
     let otherRelevantDiagnosisinput = document.getElementById('otherRelevantDiagnosisinput');
-    if (localStorage.getItem("privatebeta02OtherRelevantDiagnosisinput")) otherRelevantDiagnosisinput.value = localStorage.getItem("privatebeta02OtherRelevantDiagnosisinput");
+    if (localStorage.getItem("privatebeta03OtherRelevantDiagnosisinput")) otherRelevantDiagnosisinput.value = localStorage.getItem("privatebeta03OtherRelevantDiagnosisinput");
   }
-  // Aware of diagnosis private-beta02
-  if (pageUrlPath === '/private-beta02/sr1-form-10' || pageUrlPath === '/private-beta02/sr1-form-c-10') {
+  // Aware of diagnosis private-beta03
+  if (pageUrlPath === '/private-beta03/sr1-form-10' || pageUrlPath === '/private-beta03/sr1-form-c-10') {
     const formElements = document.getElementById('sendAnSR1Form').elements;
-    let privatebeta02AwareOfDiagnosis = localStorage.getItem('privatebeta02AwareOfDiagnosis');
+    let privatebeta03AwareOfDiagnosis = localStorage.getItem('privatebeta03AwareOfDiagnosis');
   }
-  if (pageUrlPath === '/private-beta02/sr1-form-10-saved' || pageUrlPath === '/private-beta02/sr1-form-c-10') {
+  if (pageUrlPath === '/private-beta03/sr1-form-10-saved' || pageUrlPath === '/private-beta03/sr1-form-c-10') {
     const formElements = document.getElementById('sendAnSR1Form').elements;
-    let privatebeta02AwareOfDiagnosis = localStorage.getItem('privatebeta02AwareOfDiagnosis');
+    let privatebeta03AwareOfDiagnosis = localStorage.getItem('privatebeta03AwareOfDiagnosis');
   }
-  // Aware of prognosis private-beta02
-  if (pageUrlPath === '/private-beta02/sr1-form-11' || pageUrlPath === '/private-beta02/sr1-form-c-11') {
+  // Aware of prognosis private-beta03
+  if (pageUrlPath === '/private-beta03/sr1-form-11' || pageUrlPath === '/private-beta03/sr1-form-c-11') {
     const formElements = document.getElementById('sendAnSR1Form').elements;
-    let privatebeta01AwareOfPrognosis = localStorage.getItem('privatebeta02AwareOfPrognosis');
+    let privatebeta01AwareOfPrognosis = localStorage.getItem('privatebeta03AwareOfPrognosis');
   }
-  if (pageUrlPath === '/private-beta02/sr1-form-11-saved' || pageUrlPath === '/private-beta02/sr1-form-c-11') {
+  if (pageUrlPath === '/private-beta03/sr1-form-11-saved' || pageUrlPath === '/private-beta03/sr1-form-c-11') {
     const formElements = document.getElementById('sendAnSR1Form').elements;
-    let privatebeta01AwareOfPrognosis = localStorage.getItem('privatebeta02AwareOfPrognosis');
+    let privatebeta01AwareOfPrognosis = localStorage.getItem('privatebeta03AwareOfPrognosis');
   }
-  // Clinical Features private-beta02
-  if (pageUrlPath === '/private-beta02/sr1-form-12' || pageUrlPath === '/private-beta02/sr1-form-c-12') {
+  // Clinical Features private-beta03
+  if (pageUrlPath === '/private-beta03/sr1-form-12' || pageUrlPath === '/private-beta03/sr1-form-c-12') {
     const formElements = document.getElementById('sendAnSR1Form').elements;
     let detailsOfClinicalFeatures = document.getElementById('detailsOfClinicalFeatures');
-    if (localStorage.getItem("privatebeta02DetailsOfClinicalFeatures")) detailsOfClinicalFeatures.value = localStorage.getItem("privatebeta02DetailsOfClinicalFeatures");
+    if (localStorage.getItem("privatebeta03DetailsOfClinicalFeatures")) detailsOfClinicalFeatures.value = localStorage.getItem("privatebeta03DetailsOfClinicalFeatures");
   }
-  // Treatment private-beta02
-  if (pageUrlPath === '/private-beta02/sr1-form-13' || pageUrlPath === '/private-beta02/sr1-form-c-13') {
+  // Treatment private-beta03
+  if (pageUrlPath === '/private-beta03/sr1-form-13' || pageUrlPath === '/private-beta03/sr1-form-c-13') {
     const formElements = document.getElementById('sendAnSR1Form').elements;
     let treatment = document.getElementById('treatment');
-    if (localStorage.getItem("privatebeta02Treatment")) treatment.value = localStorage.getItem("privatebeta02Treatment");
+    if (localStorage.getItem("privatebeta03Treatment")) treatment.value = localStorage.getItem("privatebeta03Treatment");
   }
-  // private-beta02
-  if (pageUrlPath === '/private-beta02/profile-07-manual') {
+  // private-beta03
+  if (pageUrlPath === '/private-beta03/profile-07-manual') {
     let organisationName = document.getElementById('organisationName');
     let organisationAddressLine1 = document.getElementById('organisationAddressLine1');
     let organisationAddressLine2 = document.getElementById('organisationAddressLine2');
@@ -6915,13 +6915,13 @@ if (pageUrlPath === '/private-beta02/profile-02' || pageUrlPath === '/private-be
     let organisationAddressCounty = document.getElementById('organisationAddressCounty');
     let organisationPostcode = document.getElementById('organisationPostcode');
 
-    if (localStorage.getItem("privatebeta02OrganisationName")) organisationName.innerHTML = localStorage.getItem("privatebeta02OrganisationName");
-    if (localStorage.getItem("privatebeta02OrganisationAddressLine1")) organisationAddressLine1.innerHTML = localStorage.getItem("privatebeta02OrganisationAddressLine1");
-    if (localStorage.getItem("privatebeta02OrganisationAddressLine2")) organisationAddressLine2.innerHTML = localStorage.getItem("privatebeta02OrganisationAddressLine2");
-    if (localStorage.getItem("privatebeta02OrganisationAddressCounty")) organisationAddressCounty.innerHTML = localStorage.getItem("privatebeta02OrganisationAddressCounty");
-    if (localStorage.getItem("privatebeta02TownOrCity")) organisationTownCity.innerHTML = localStorage.getItem("privatebeta02TownOrCity");
-    if (localStorage.getItem("privatebeta02Postcode")) organisationPostcode.innerHTML = localStorage.getItem("privatebeta02Postcode");
-    if (localStorage.getItem("privatebeta02MobileNumber")) mobile.innerHTML = localStorage.getItem("privatebeta0MobileNumber");
+    if (localStorage.getItem("privatebeta03OrganisationName")) organisationName.innerHTML = localStorage.getItem("privatebeta03OrganisationName");
+    if (localStorage.getItem("privatebeta03OrganisationAddressLine1")) organisationAddressLine1.innerHTML = localStorage.getItem("privatebeta03OrganisationAddressLine1");
+    if (localStorage.getItem("privatebeta03OrganisationAddressLine2")) organisationAddressLine2.innerHTML = localStorage.getItem("privatebeta03OrganisationAddressLine2");
+    if (localStorage.getItem("privatebeta03OrganisationAddressCounty")) organisationAddressCounty.innerHTML = localStorage.getItem("privatebeta03OrganisationAddressCounty");
+    if (localStorage.getItem("privatebeta03TownOrCity")) organisationTownCity.innerHTML = localStorage.getItem("privatebeta03TownOrCity");
+    if (localStorage.getItem("privatebeta03Postcode")) organisationPostcode.innerHTML = localStorage.getItem("privatebeta03Postcode");
+    if (localStorage.getItem("privatebeta03MobileNumber")) mobile.innerHTML = localStorage.getItem("privatebeta0MobileNumber");
   }
   // Add details private-beta01
   //if (pageUrlPath === '/private-beta01/add-details-to-new-form') {
@@ -8180,9 +8180,9 @@ if (pageUrlPath === '/private-beta02/profile-02' || pageUrlPath === '/private-be
   //  }
   // }
 
-   // private-beta02
+   // private-beta03
   // Hide/Show submit button
-  if (pageUrlPath === '/private-beta02/task-list-sr1-form') {
+  if (pageUrlPath === '/private-beta03/task-list-sr1-form') {
     if (counter === 17) {
       document.getElementById("submit-task-list").classList.remove('hidden');
     } else {
@@ -8190,7 +8190,7 @@ if (pageUrlPath === '/private-beta02/profile-02' || pageUrlPath === '/private-be
     }
   }
   // Hide/Show submit section
-  if (pageUrlPath === '/private-beta02/sr1-form-sections') {
+  if (pageUrlPath === '/private-beta03/sr1-form-sections') {
     if (counter >= 4) {
       document.getElementById("check-answer-link-enabled").classList.remove('hidden');
       document.getElementById("check-answer-link-disabled").classList.add('hidden');
@@ -8204,11 +8204,11 @@ if (pageUrlPath === '/private-beta02/profile-02' || pageUrlPath === '/private-be
     }
   }
   // Progress Tag Profile
-  if (pageUrlPath === '/private-beta02/sr1-form-sections') {
-    let patientPostcode = localStorage.getItem('privatebeta02PatientPostcode');
-    let patientaddressline1 = localStorage.getItem('privatebeta02PatientAddressLine1');
-    let patientaddresstown = localStorage.getItem('privatebeta02PatientAddressTown');
-    let PatientFirstName = localStorage.getItem('privatebeta02PatientFirstName');
+  if (pageUrlPath === '/private-beta03/sr1-form-sections') {
+    let patientPostcode = localStorage.getItem('privatebeta03PatientPostcode');
+    let patientaddressline1 = localStorage.getItem('privatebeta03PatientAddressLine1');
+    let patientaddresstown = localStorage.getItem('privatebeta03PatientAddressTown');
+    let PatientFirstName = localStorage.getItem('privatebeta03PatientFirstName');
     if ((patientPostcode != null) && (patientaddressline1 != null) && (patientaddresstown != null)) {
       document.getElementById("patientDetails-status-notstarted").classList.add('hidden');
       document.getElementById("patientDetails-status-inprogress").classList.add('hidden');
@@ -8233,9 +8233,9 @@ if (pageUrlPath === '/private-beta02/profile-02' || pageUrlPath === '/private-be
     }
   }
   // Progress Tag Diagnosis
-  if (pageUrlPath === '/private-beta02/sr1-form-sections') {
-    let currentValueOfPrognosis = localStorage.getItem('privatebeta02AwareOfPrognosis');
-    let whatIsTheDiagnosis = localStorage.getItem('privatebeta02WhatIsTheDiagnosis');
+  if (pageUrlPath === '/private-beta03/sr1-form-sections') {
+    let currentValueOfPrognosis = localStorage.getItem('privatebeta03AwareOfPrognosis');
+    let whatIsTheDiagnosis = localStorage.getItem('privatebeta03WhatIsTheDiagnosis');
     if (currentValueOfPrognosis != null) {
       document.getElementById("patientDiagnosis-status-notstarted").classList.add('hidden');
       document.getElementById("patientDiagnosis-status-inprogress").classList.add('hidden');
@@ -8260,9 +8260,9 @@ if (pageUrlPath === '/private-beta02/profile-02' || pageUrlPath === '/private-be
     }
   }
   // Progress Tag Clinical features and treatment
-  if (pageUrlPath === '/private-beta02/sr1-form-sections') {
-    let treatment = localStorage.getItem('privatebeta02Treatment');
-    let detailsOfClinicalFeatures = localStorage.getItem('privatebeta02DetailsOfClinicalFeatures');
+  if (pageUrlPath === '/private-beta03/sr1-form-sections') {
+    let treatment = localStorage.getItem('privatebeta03Treatment');
+    let detailsOfClinicalFeatures = localStorage.getItem('privatebeta03DetailsOfClinicalFeatures');
     if (treatment != null) {
       document.getElementById("ClinicalFeatTreatment-status-notstarted").classList.add('hidden');
       document.getElementById("ClinicalFeatTreatment-status-inprogress").classList.add('hidden');
@@ -8287,10 +8287,10 @@ if (pageUrlPath === '/private-beta02/profile-02' || pageUrlPath === '/private-be
     }
   }
   // Progress Tag HCP Profile
-  if (pageUrlPath === '/private-beta02/sr1-form-sections') {
-    let organisationNameInput = localStorage.getItem('privatebeta02Postcode');
-    let firstNameInput = localStorage.getItem('privatebeta02Firstname');
-    let privatebeta01NewForm = localStorage.getItem('privatebeta02NewForm');
+  if (pageUrlPath === '/private-beta03/sr1-form-sections') {
+    let organisationNameInput = localStorage.getItem('privatebeta03Postcode');
+    let firstNameInput = localStorage.getItem('privatebeta03Firstname');
+    let privatebeta01NewForm = localStorage.getItem('privatebeta03NewForm');
     if (privatebeta01NewForm != null) {
       document.getElementById("yourDetails-status-notstarted").classList.remove('hidden');
       document.getElementById("yourDetails-status-inprogress").classList.add('hidden');
@@ -8327,8 +8327,8 @@ if (pageUrlPath === '/private-beta02/profile-02' || pageUrlPath === '/private-be
     }
   }
   // Hide/Show submit section
-  if (pageUrlPath === '/private-beta02/sr1-form-start') {
-    let privatebeta01NewForm = localStorage.getItem('privatebeta02NewForm');
+  if (pageUrlPath === '/private-beta03/sr1-form-start') {
+    let privatebeta01NewForm = localStorage.getItem('privatebeta03NewForm');
     if (privatebeta01NewForm != null) {
       document.getElementById("yourDetails-link-notstarted").classList.add('hidden');
       document.getElementById("yourDetails-link-notstarted-first-click").classList.remove('hidden');
@@ -8338,7 +8338,7 @@ if (pageUrlPath === '/private-beta02/profile-02' || pageUrlPath === '/private-be
     }
   }
 
-  if (pageUrlPath === '/private-beta02/task-list-sr1-form') {
+  if (pageUrlPath === '/private-beta03/task-list-sr1-form') {
     if (counter === 17) {
       document.getElementById("submit-task-list").classList.remove('hidden');
     } else {
@@ -8346,7 +8346,7 @@ if (pageUrlPath === '/private-beta02/profile-02' || pageUrlPath === '/private-be
     }
   }
   // Hide/Show submit section
-  if (pageUrlPath === '/private-beta02/sr1-form-sections') {
+  if (pageUrlPath === '/private-beta03/sr1-form-sections') {
     if (counter >= 4) {
       document.getElementById("check-answer-link-enabled").classList.remove('hidden');
       document.getElementById("check-answer-link-disabled").classList.add('hidden');
@@ -8360,11 +8360,11 @@ if (pageUrlPath === '/private-beta02/profile-02' || pageUrlPath === '/private-be
     }
   }
   // Progress Tag Profile
-  if (pageUrlPath === '/private-beta02/sr1-form-start-saved-your-details') {
-    let patientPostcode = localStorage.getItem('privatebeta02PatientPostcode');
-    let patientaddressline1 = localStorage.getItem('privatebeta02PatientAddressLine1');
-    let patientaddresstown = localStorage.getItem('privatebeta02PatientAddressTown');
-    let PatientFirstName = localStorage.getItem('privatebeta02PatientFirstName');
+  if (pageUrlPath === '/private-beta03/sr1-form-start-saved-your-details') {
+    let patientPostcode = localStorage.getItem('privatebeta03PatientPostcode');
+    let patientaddressline1 = localStorage.getItem('privatebeta03PatientAddressLine1');
+    let patientaddresstown = localStorage.getItem('privatebeta03PatientAddressTown');
+    let PatientFirstName = localStorage.getItem('privatebeta03PatientFirstName');
     if ((patientPostcode != null) && (patientaddressline1 != null) && (patientaddresstown != null)) {
       document.getElementById("patientDetails-status-notstarted").classList.add('hidden');
       document.getElementById("patientDetails-status-inprogress").classList.add('hidden');
@@ -8391,9 +8391,9 @@ if (pageUrlPath === '/private-beta02/profile-02' || pageUrlPath === '/private-be
 
   
   // Progress Tag Diagnosis
-  if (pageUrlPath === '/private-beta02/sr1-form-start-saved-your-details') {
-    let currentValueOfPrognosis = localStorage.getItem('privatebeta02AwareOfPrognosis');
-    let whatIsTheDiagnosis = localStorage.getItem('privatebeta02WhatIsTheDiagnosis');
+  if (pageUrlPath === '/private-beta03/sr1-form-start-saved-your-details') {
+    let currentValueOfPrognosis = localStorage.getItem('privatebeta03AwareOfPrognosis');
+    let whatIsTheDiagnosis = localStorage.getItem('privatebeta03WhatIsTheDiagnosis');
     if (currentValueOfPrognosis != null) {
       document.getElementById("patientDiagnosis-status-notstarted").classList.add('hidden');
       document.getElementById("patientDiagnosis-status-inprogress").classList.add('hidden');
@@ -8418,9 +8418,9 @@ if (pageUrlPath === '/private-beta02/profile-02' || pageUrlPath === '/private-be
     }
   }
   // Progress Tag Clinical features and treatment
-  if (pageUrlPath === '/private-beta02/sr1-form-start-saved-your-details') {
-    let treatment = localStorage.getItem('privatebeta02Treatment');
-    let detailsOfClinicalFeatures = localStorage.getItem('privatebeta02DetailsOfClinicalFeatures');
+  if (pageUrlPath === '/private-beta03/sr1-form-start-saved-your-details') {
+    let treatment = localStorage.getItem('privatebeta03Treatment');
+    let detailsOfClinicalFeatures = localStorage.getItem('privatebeta03DetailsOfClinicalFeatures');
     if (treatment != null) {
       document.getElementById("ClinicalFeatTreatment-status-notstarted").classList.add('hidden');
       document.getElementById("ClinicalFeatTreatment-status-inprogress").classList.add('hidden');
@@ -8446,7 +8446,7 @@ if (pageUrlPath === '/private-beta02/profile-02' || pageUrlPath === '/private-be
   }
 
   // Hide/Show submit section
-  if (pageUrlPath === '/private-beta02/sr1-form-start-saved-your-details') {
+  if (pageUrlPath === '/private-beta03/sr1-form-start-saved-your-details') {
     if (counter >= 3) {
       document.getElementById("check-answer-link-enabled").classList.remove('hidden');
       document.getElementById("check-answer-link-disabled").classList.add('hidden');
@@ -9659,30 +9659,30 @@ if (pageUrlPath === '/private-beta02/profile-02' || pageUrlPath === '/private-be
     if (localStorage.getItem("privatebeta01MobileNumber")) mobile.innerHTML = localStorage.getItem("privatebeta01MobileNumber");
   }
 
-  // private-beta02
-  if (pageUrlPath === '/private-beta02/check-sr1-form' || pageUrlPath === '/private-beta02/check-sr1-form-finalised' || pageUrlPath === '/private-beta02/edit-incomplete-form-saved') {
+  // private-beta03
+  if (pageUrlPath === '/private-beta03/check-sr1-form' || pageUrlPath === '/private-beta03/check-sr1-form-finalised' || pageUrlPath === '/private-beta03/edit-incomplete-form-saved') {
     let PatientFullName = document.getElementById('PatientFullName');
-    if (localStorage.getItem("privatebeta02PatientFirstName") || localStorage.getItem("privatebeta02PatientLastName")) PatientFullName.innerHTML = localStorage.getItem("privatebeta02PatientFirstName") + ' ' + localStorage.getItem("privatebeta02PatientLastName");
+    if (localStorage.getItem("privatebeta03PatientFirstName") || localStorage.getItem("privatebeta03PatientLastName")) PatientFullName.innerHTML = localStorage.getItem("privatebeta03PatientFirstName") + ' ' + localStorage.getItem("privatebeta03PatientLastName");
 
 
 
     let dob = document.getElementById('dob');
-    if (localStorage.getItem("privatebeta02DobDay") || localStorage.getItem("privatebeta02DobMonth") || localStorage.getItem("privatebeta02DobYear")) dob.innerHTML = localStorage.getItem("privatebeta02DobDay") + "/" + localStorage.getItem("privatebeta02DobMonth") + "/" + localStorage.getItem("privatebeta02DobYear");
+    if (localStorage.getItem("privatebeta03DobDay") || localStorage.getItem("privatebeta03DobMonth") || localStorage.getItem("privatebeta03DobYear")) dob.innerHTML = localStorage.getItem("privatebeta03DobDay") + "/" + localStorage.getItem("privatebeta03DobMonth") + "/" + localStorage.getItem("privatebeta03DobYear");
 
     let patientaddressline1 = document.getElementById('patientaddressline1');
-    if (localStorage.getItem("privatebeta02PatientAddressLine1")) patientaddressline1.innerHTML = localStorage.getItem("privatebeta02PatientAddressLine1");
+    if (localStorage.getItem("privatebeta03PatientAddressLine1")) patientaddressline1.innerHTML = localStorage.getItem("privatebeta03PatientAddressLine1");
 
     let patientaddressline2 = document.getElementById('patientaddressline2');
-    if (localStorage.getItem("privatebeta02PatientAddressLine2")) patientaddressline2.innerHTML = localStorage.getItem("privatebeta02PatientAddressLine2");
+    if (localStorage.getItem("privatebeta03PatientAddressLine2")) patientaddressline2.innerHTML = localStorage.getItem("privatebeta03PatientAddressLine2");
 
     let patientaddresstown = document.getElementById('patientaddresstown');
-    if (localStorage.getItem("privatebeta02PatientAddressTown")) patientaddresstown.innerHTML = localStorage.getItem("privatebeta02PatientAddressTown");
+    if (localStorage.getItem("privatebeta03PatientAddressTown")) patientaddresstown.innerHTML = localStorage.getItem("privatebeta03PatientAddressTown");
 
     let patientaddresscounty = document.getElementById('patientaddresscounty');
-    if (localStorage.getItem("privatebeta02PatientAddressCounty")) patientaddresscounty.innerHTML = localStorage.getItem("privatebeta02PatientAddressCounty");
+    if (localStorage.getItem("privatebeta03PatientAddressCounty")) patientaddresscounty.innerHTML = localStorage.getItem("privatebeta03PatientAddressCounty");
 
     let patientPostcode = document.getElementById('patientPostcode');
-    if (localStorage.getItem("privatebeta02PatientPostcode")) patientPostcode.innerHTML = localStorage.getItem("privatebeta02PatientPostcode");
+    if (localStorage.getItem("privatebeta03PatientPostcode")) patientPostcode.innerHTML = localStorage.getItem("privatebeta03PatientPostcode");
 
     //let niNo = document.getElementById('niNo');
     //let niNoinput = document.getElementById('niNoinput');
@@ -9694,22 +9694,22 @@ if (pageUrlPath === '/private-beta02/profile-02' || pageUrlPath === '/private-be
     //}
 
     let whatIsTheDiagnosis = document.getElementById('whatIsTheDiagnosis');
-    if (localStorage.getItem("privatebeta02WhatIsTheDiagnosis")) whatIsTheDiagnosis.innerHTML = localStorage.getItem("privatebeta02WhatIsTheDiagnosis");
+    if (localStorage.getItem("privatebeta03WhatIsTheDiagnosis")) whatIsTheDiagnosis.innerHTML = localStorage.getItem("privatebeta03WhatIsTheDiagnosis");
 
     let dateofSpecialRules = document.getElementById('dateofSpecialRules');
-    if (localStorage.getItem("privatebeta02DateofSpecialRulesDay") || localStorage.getItem("privatebeta02DateofSpecialRulesMonth") || localStorage.getItem("privatebeta02DateofSpecialRulesYear")) dateofSpecialRules.innerHTML = localStorage.getItem("privatebeta02DateofSpecialRulesDay") + "/" + localStorage.getItem("privatebeta02DateofSpecialRulesMonth") + "/" + localStorage.getItem("privatebeta02DateofSpecialRulesYear");
+    if (localStorage.getItem("privatebeta03DateofSpecialRulesDay") || localStorage.getItem("privatebeta03DateofSpecialRulesMonth") || localStorage.getItem("privatebeta03DateofSpecialRulesYear")) dateofSpecialRules.innerHTML = localStorage.getItem("privatebeta03DateofSpecialRulesDay") + "/" + localStorage.getItem("privatebeta03DateofSpecialRulesMonth") + "/" + localStorage.getItem("privatebeta03DateofSpecialRulesYear");
 
     let otherRelevantDiagnosis = document.getElementById('otherRelevantDiagnosis');
-    if (localStorage.getItem("privatebeta02OtherRelevantDiagnosisinput")) otherRelevantDiagnosis.innerHTML = localStorage.getItem("privatebeta02OtherRelevantDiagnosisinput");
+    if (localStorage.getItem("privatebeta03OtherRelevantDiagnosisinput")) otherRelevantDiagnosis.innerHTML = localStorage.getItem("privatebeta03OtherRelevantDiagnosisinput");
     let otherRelevantDiagnosisinput = document.getElementById('otherRelevantDiagnosisinput');
-    console.log('otherRelevantDiagnosis', localStorage.getItem("privatebeta02OtherRelevantDiagnosis"));
-    if (localStorage.getItem("privatebeta02OtherRelevantDiagnosis") === "Yes") {
-      otherRelevantDiagnosis.innerHTML = localStorage.getItem("privatebeta02OtherRelevantDiagnosisinput");
+    console.log('otherRelevantDiagnosis', localStorage.getItem("privatebeta03OtherRelevantDiagnosis"));
+    if (localStorage.getItem("privatebeta03OtherRelevantDiagnosis") === "Yes") {
+      otherRelevantDiagnosis.innerHTML = localStorage.getItem("privatebeta03OtherRelevantDiagnosisinput");
     } else {
-      otherRelevantDiagnosis.innerHTML = localStorage.getItem("privatebeta02OtherRelevantDiagnosis");
+      otherRelevantDiagnosis.innerHTML = localStorage.getItem("privatebeta03OtherRelevantDiagnosis");
     }
 
-    let patientAwareOfDiagnosis = localStorage.getItem('privatebeta02AwareOfDiagnosis');
+    let patientAwareOfDiagnosis = localStorage.getItem('privatebeta03AwareOfDiagnosis');
     if (patientAwareOfDiagnosis === 'true') {
       awareOfDiagnosis.innerHTML = 'Yes';
     }
@@ -9717,7 +9717,7 @@ if (pageUrlPath === '/private-beta02/profile-02' || pageUrlPath === '/private-be
       awareOfDiagnosis.innerHTML = 'No';
     }
 
-    let patientAwareOfPrognosis = localStorage.getItem('privatebeta02AwareOfPrognosis');
+    let patientAwareOfPrognosis = localStorage.getItem('privatebeta03AwareOfPrognosis');
     if (patientAwareOfPrognosis === 'true') {
       awareOfPrognosis.innerHTML = 'Yes';
     }
@@ -9726,13 +9726,13 @@ if (pageUrlPath === '/private-beta02/profile-02' || pageUrlPath === '/private-be
     }
 
     let dateofDiagnosis = document.getElementById('dateofDiagnosis');
-    if (localStorage.getItem("privatebeta02DodDay") || localStorage.getItem("privatebeta02DodMonth") || localStorage.getItem("privatebeta02DodYear")) dateofDiagnosis.innerHTML = localStorage.getItem("privatebeta02DodDay") + "/" + localStorage.getItem("privatebeta02DodMonth") + "/" + localStorage.getItem("privatebeta02DodYear");
+    if (localStorage.getItem("privatebeta03DodDay") || localStorage.getItem("privatebeta03DodMonth") || localStorage.getItem("privatebeta03DodYear")) dateofDiagnosis.innerHTML = localStorage.getItem("privatebeta03DodDay") + "/" + localStorage.getItem("privatebeta03DodMonth") + "/" + localStorage.getItem("privatebeta03DodYear");
 
     let clinicalFeatures = document.getElementById('clinicalFeatures');
-    if (localStorage.getItem("privatebeta02DetailsOfClinicalFeatures")) clinicalFeatures.innerHTML = localStorage.getItem("privatebeta02DetailsOfClinicalFeatures");
+    if (localStorage.getItem("privatebeta03DetailsOfClinicalFeatures")) clinicalFeatures.innerHTML = localStorage.getItem("privatebeta03DetailsOfClinicalFeatures");
 
     let treatment = document.getElementById('treatment');
-    if (localStorage.getItem("privatebeta02Treatment")) treatment.innerHTML = localStorage.getItem("privatebeta02Treatment");
+    if (localStorage.getItem("privatebeta03Treatment")) treatment.innerHTML = localStorage.getItem("privatebeta03Treatment");
 
     let organisationName = document.getElementById('organisationName');
     let organisationAddressLine1 = document.getElementById('organisationAddressLine1');
@@ -9745,121 +9745,121 @@ if (pageUrlPath === '/private-beta02/profile-02' || pageUrlPath === '/private-be
     let role = document.getElementById('role');
     let otherRole = document.getElementById('otherRole');
 
-    console.log('Role', localStorage.getItem("privatebeta02Role"));
-    if (localStorage.getItem("privatebeta02Role") === "Other") {
-      role.innerHTML = localStorage.getItem("privatebeta02otherRole");
+    console.log('Role', localStorage.getItem("privatebeta03Role"));
+    if (localStorage.getItem("privatebeta03Role") === "Other") {
+      role.innerHTML = localStorage.getItem("privatebeta03otherRole");
     } else {
-      role.innerHTML = localStorage.getItem("privatebeta02Role");
+      role.innerHTML = localStorage.getItem("privatebeta03Role");
     }
 
     let yourName = document.getElementById('yourName');
-    if (localStorage.getItem("privatebeta02Firstname") || localStorage.getItem("privatebeta02Lastname")) yourName.innerHTML = localStorage.getItem("privatebeta02Firstname") + ' ' + localStorage.getItem("privatebeta02Lastname");
+    if (localStorage.getItem("privatebeta03Firstname") || localStorage.getItem("privatebeta03Lastname")) yourName.innerHTML = localStorage.getItem("privatebeta03Firstname") + ' ' + localStorage.getItem("privatebeta03Lastname");
 
     let professionalRegNum = document.getElementById('professionalRegNum');
-    if (localStorage.getItem("privatebeta02ProfessionalRegistrationNumber")) professionalRegNum.innerHTML = localStorage.getItem("privatebeta02ProfessionalRegistrationNumber");
+    if (localStorage.getItem("privatebeta03ProfessionalRegistrationNumber")) professionalRegNum.innerHTML = localStorage.getItem("privatebeta03ProfessionalRegistrationNumber");
 
-    if (localStorage.getItem("privatebeta02OrganisationName")) organisationName.innerHTML = localStorage.getItem("privatebeta02OrganisationName");
-    if (localStorage.getItem("privatebeta02OrganisationAddressLine1")) organisationAddressLine1.innerHTML = localStorage.getItem("privatebeta02OrganisationAddressLine1");
-    if (localStorage.getItem("privatebeta02OrganisationAddressLine2")) organisationAddressLine2.innerHTML = localStorage.getItem("privatebeta02OrganisationAddressLine2");
-    if (localStorage.getItem("privatebeta02OrganisationAddressCounty")) organisationAddressCounty.innerHTML = localStorage.getItem("privatebeta02OrganisationAddressCounty");
-    if (localStorage.getItem("privatebeta02TownOrCity")) organisationTownCity.innerHTML = localStorage.getItem("privatebeta02TownOrCity");
-    if (localStorage.getItem("privatebeta02Postcode")) organisationPostcode.innerHTML = localStorage.getItem("privatebeta02Postcode");
-    if (localStorage.getItem("privatebeta02MobileNumber")) mobile.innerHTML = localStorage.getItem("privatebeta02MobileNumber");
+    if (localStorage.getItem("privatebeta03OrganisationName")) organisationName.innerHTML = localStorage.getItem("privatebeta03OrganisationName");
+    if (localStorage.getItem("privatebeta03OrganisationAddressLine1")) organisationAddressLine1.innerHTML = localStorage.getItem("privatebeta03OrganisationAddressLine1");
+    if (localStorage.getItem("privatebeta03OrganisationAddressLine2")) organisationAddressLine2.innerHTML = localStorage.getItem("privatebeta03OrganisationAddressLine2");
+    if (localStorage.getItem("privatebeta03OrganisationAddressCounty")) organisationAddressCounty.innerHTML = localStorage.getItem("privatebeta03OrganisationAddressCounty");
+    if (localStorage.getItem("privatebeta03TownOrCity")) organisationTownCity.innerHTML = localStorage.getItem("privatebeta03TownOrCity");
+    if (localStorage.getItem("privatebeta03Postcode")) organisationPostcode.innerHTML = localStorage.getItem("privatebeta03Postcode");
+    if (localStorage.getItem("privatebeta03MobileNumber")) mobile.innerHTML = localStorage.getItem("privatebeta03MobileNumber");
   }
 
-  if (pageUrlPath === '/private-beta02/check-sr1-form-your-details' || pageUrlPath === '/private-beta02/check-sr1-form-your-details-finalised' || pageUrlPath === '/private-beta02/edit-incomplete-form-saved') {
+  if (pageUrlPath === '/private-beta03/check-sr1-form-your-details' || pageUrlPath === '/private-beta03/check-sr1-form-your-details-finalised' || pageUrlPath === '/private-beta03/edit-incomplete-form-saved') {
     let yourName = document.getElementById('yourName');
-    if (localStorage.getItem("privatebeta02Firstname") || localStorage.getItem("privatebeta02Lastname")) yourName.innerHTML = localStorage.getItem("privatebeta02Firstname") + ' ' + localStorage.getItem("privatebeta02Lastname");
+    if (localStorage.getItem("privatebeta03Firstname") || localStorage.getItem("privatebeta03Lastname")) yourName.innerHTML = localStorage.getItem("privatebeta03Firstname") + ' ' + localStorage.getItem("privatebeta03Lastname");
     let professionalRegNum = document.getElementById('professionalRegNum');
-    if (localStorage.getItem("privatebeta02ProfessionalRegistrationNumber")) professionalRegNum.innerHTML = localStorage.getItem("privatebeta02ProfessionalRegistrationNumber");
+    if (localStorage.getItem("privatebeta03ProfessionalRegistrationNumber")) professionalRegNum.innerHTML = localStorage.getItem("privatebeta03ProfessionalRegistrationNumber");
     if (localStorage.getItem("privatebeta01Role") === "Other") {
-      role.innerHTML = localStorage.getItem("privatebeta02otherRole");
+      role.innerHTML = localStorage.getItem("privatebeta03otherRole");
     } else {
-      role.innerHTML = localStorage.getItem("privatebeta02Role");
+      role.innerHTML = localStorage.getItem("privatebeta03Role");
     }
 
 
-    if (localStorage.getItem("privatebeta02OrganisationName")) organisationName.innerHTML = localStorage.getItem("privatebeta02OrganisationName");
-    if (localStorage.getItem("privatebeta02OrganisationAddressLine1")) organisationAddressLine1.innerHTML = localStorage.getItem("privatebeta02OrganisationAddressLine1");
-    if (localStorage.getItem("privatebeta02OrganisationAddressLine2")) organisationAddressLine2.innerHTML = localStorage.getItem("privatebeta02OrganisationAddressLine2");
-    if (localStorage.getItem("privatebeta02OrganisationAddressCounty")) organisationAddressCounty.innerHTML = localStorage.getItem("privatebeta02OrganisationAddressCounty");
-    if (localStorage.getItem("privatebeta02TownOrCity")) organisationTownCity.innerHTML = localStorage.getItem("privatebeta02TownOrCity");
-    if (localStorage.getItem("privatebeta02Postcode")) organisationPostcode.innerHTML = localStorage.getItem("privatebeta02Postcode");
+    if (localStorage.getItem("privatebeta03OrganisationName")) organisationName.innerHTML = localStorage.getItem("privatebeta03OrganisationName");
+    if (localStorage.getItem("privatebeta03OrganisationAddressLine1")) organisationAddressLine1.innerHTML = localStorage.getItem("privatebeta03OrganisationAddressLine1");
+    if (localStorage.getItem("privatebeta03OrganisationAddressLine2")) organisationAddressLine2.innerHTML = localStorage.getItem("privatebeta03OrganisationAddressLine2");
+    if (localStorage.getItem("privatebeta03OrganisationAddressCounty")) organisationAddressCounty.innerHTML = localStorage.getItem("privatebeta03OrganisationAddressCounty");
+    if (localStorage.getItem("privatebeta03TownOrCity")) organisationTownCity.innerHTML = localStorage.getItem("privatebeta03TownOrCity");
+    if (localStorage.getItem("privatebeta03Postcode")) organisationPostcode.innerHTML = localStorage.getItem("privatebeta03Postcode");
     let mobile = document.getElementById('mobileNumber');
-    if (localStorage.getItem("privatebeta02MobileNumber")) mobile.innerHTML = localStorage.getItem("privatebeta02MobileNumber");
+    if (localStorage.getItem("privatebeta03MobileNumber")) mobile.innerHTML = localStorage.getItem("privatebeta03MobileNumber");
   }
 
-  if (pageUrlPath === '/private-beta02/check-sr1-form-your-details-reuse' || pageUrlPath === '/private-beta02/check-sr1-form-your-details-reuse-finalised' || pageUrlPath === '/private-beta02/edit-incomplete-form-saved') {
+  if (pageUrlPath === '/private-beta03/check-sr1-form-your-details-reuse' || pageUrlPath === '/private-beta03/check-sr1-form-your-details-reuse-finalised' || pageUrlPath === '/private-beta03/edit-incomplete-form-saved') {
     let yourName = document.getElementById('yourName');
-    if (localStorage.getItem("privatebeta02Firstname") || localStorage.getItem("privatebeta02Lastname")) yourName.innerHTML = localStorage.getItem("privatebeta02Firstname") + ' ' + localStorage.getItem("privatebeta02Lastname");
+    if (localStorage.getItem("privatebeta03Firstname") || localStorage.getItem("privatebeta03Lastname")) yourName.innerHTML = localStorage.getItem("privatebeta03Firstname") + ' ' + localStorage.getItem("privatebeta03Lastname");
     let professionalRegNum = document.getElementById('professionalRegNum');
-    if (localStorage.getItem("privatebeta02ProfessionalRegistrationNumber")) professionalRegNum.innerHTML = localStorage.getItem("privatebeta02ProfessionalRegistrationNumber");
+    if (localStorage.getItem("privatebeta03ProfessionalRegistrationNumber")) professionalRegNum.innerHTML = localStorage.getItem("privatebeta03ProfessionalRegistrationNumber");
     if (localStorage.getItem("privatebeta01Role") === "Other") {
-      role.innerHTML = localStorage.getItem("privatebeta02otherRole");
+      role.innerHTML = localStorage.getItem("privatebeta03otherRole");
     } else {
-      role.innerHTML = localStorage.getItem("privatebeta02Role");
+      role.innerHTML = localStorage.getItem("privatebeta03Role");
     }
 
 
-    if (localStorage.getItem("privatebeta02OrganisationName")) organisationName.innerHTML = localStorage.getItem("privatebeta02OrganisationName");
-    if (localStorage.getItem("privatebeta02OrganisationAddressLine1")) organisationAddressLine1.innerHTML = localStorage.getItem("privatebeta02OrganisationAddressLine1");
-    if (localStorage.getItem("privatebeta02OrganisationAddressLine2")) organisationAddressLine2.innerHTML = localStorage.getItem("privatebeta02OrganisationAddressLine2");
-    if (localStorage.getItem("privatebeta02OrganisationAddressCounty")) organisationAddressCounty.innerHTML = localStorage.getItem("privatebeta02OrganisationAddressCounty");
-    if (localStorage.getItem("privatebeta02TownOrCity")) organisationTownCity.innerHTML = localStorage.getItem("privatebeta02TownOrCity");
-    if (localStorage.getItem("privatebeta02Postcode")) organisationPostcode.innerHTML = localStorage.getItem("privatebeta02Postcode");
+    if (localStorage.getItem("privatebeta03OrganisationName")) organisationName.innerHTML = localStorage.getItem("privatebeta03OrganisationName");
+    if (localStorage.getItem("privatebeta03OrganisationAddressLine1")) organisationAddressLine1.innerHTML = localStorage.getItem("privatebeta03OrganisationAddressLine1");
+    if (localStorage.getItem("privatebeta03OrganisationAddressLine2")) organisationAddressLine2.innerHTML = localStorage.getItem("privatebeta03OrganisationAddressLine2");
+    if (localStorage.getItem("privatebeta03OrganisationAddressCounty")) organisationAddressCounty.innerHTML = localStorage.getItem("privatebeta03OrganisationAddressCounty");
+    if (localStorage.getItem("privatebeta03TownOrCity")) organisationTownCity.innerHTML = localStorage.getItem("privatebeta03TownOrCity");
+    if (localStorage.getItem("privatebeta03Postcode")) organisationPostcode.innerHTML = localStorage.getItem("privatebeta03Postcode");
     let mobile = document.getElementById('mobileNumber');
-    if (localStorage.getItem("privatebeta02MobileNumber")) mobile.innerHTML = localStorage.getItem("privatebeta02MobileNumber");
+    if (localStorage.getItem("privatebeta03MobileNumber")) mobile.innerHTML = localStorage.getItem("privatebeta03MobileNumber");
   }
-  if (pageUrlPath === '/private-beta02/personal-details' || pageUrlPath === '/private-beta02/personaldetails-finalised' || pageUrlPath === '/private-beta02/edit-incomplete-form-saved') {
+  if (pageUrlPath === '/private-beta03/personal-details' || pageUrlPath === '/private-beta03/personaldetails-finalised' || pageUrlPath === '/private-beta03/edit-incomplete-form-saved') {
     let yourName = document.getElementById('yourName');
-    if (localStorage.getItem("privatebeta02Firstname") || localStorage.getItem("privatebeta02Lastname")) yourName.innerHTML = localStorage.getItem("privatebeta02Firstname") + ' ' + localStorage.getItem("privatebeta02Lastname");
+    if (localStorage.getItem("privatebeta03Firstname") || localStorage.getItem("privatebeta03Lastname")) yourName.innerHTML = localStorage.getItem("privatebeta03Firstname") + ' ' + localStorage.getItem("privatebeta03Lastname");
     let professionalRegNum = document.getElementById('professionalRegNum');
-    if (localStorage.getItem("privatebeta02ProfessionalRegistrationNumber")) professionalRegNum.innerHTML = localStorage.getItem("privatebeta02ProfessionalRegistrationNumber");
+    if (localStorage.getItem("privatebeta03ProfessionalRegistrationNumber")) professionalRegNum.innerHTML = localStorage.getItem("privatebeta03ProfessionalRegistrationNumber");
     if (localStorage.getItem("privatebeta01Role") === "Other") {
-      role.innerHTML = localStorage.getItem("privatebeta02otherRole");
+      role.innerHTML = localStorage.getItem("privatebeta03otherRole");
     } else {
-      role.innerHTML = localStorage.getItem("privatebeta02Role");
+      role.innerHTML = localStorage.getItem("privatebeta03Role");
     }
 
 
-    if (localStorage.getItem("privatebeta02OrganisationName")) organisationName.innerHTML = localStorage.getItem("privatebeta02OrganisationName");
-    if (localStorage.getItem("privatebeta02OrganisationAddressLine1")) organisationAddressLine1.innerHTML = localStorage.getItem("privatebeta02OrganisationAddressLine1");
-    if (localStorage.getItem("privatebeta02OrganisationAddressLine2")) organisationAddressLine2.innerHTML = localStorage.getItem("privatebeta02OrganisationAddressLine2");
-    if (localStorage.getItem("privatebeta02OrganisationAddressCounty")) organisationAddressCounty.innerHTML = localStorage.getItem("privatebeta02OrganisationAddressCounty");
-    if (localStorage.getItem("privatebeta02TownOrCity")) organisationTownCity.innerHTML = localStorage.getItem("privatebeta02TownOrCity");
-    if (localStorage.getItem("privatebeta02Postcode")) organisationPostcode.innerHTML = localStorage.getItem("privatebeta02Postcode");
+    if (localStorage.getItem("privatebeta03OrganisationName")) organisationName.innerHTML = localStorage.getItem("privatebeta03OrganisationName");
+    if (localStorage.getItem("privatebeta03OrganisationAddressLine1")) organisationAddressLine1.innerHTML = localStorage.getItem("privatebeta03OrganisationAddressLine1");
+    if (localStorage.getItem("privatebeta03OrganisationAddressLine2")) organisationAddressLine2.innerHTML = localStorage.getItem("privatebeta03OrganisationAddressLine2");
+    if (localStorage.getItem("privatebeta03OrganisationAddressCounty")) organisationAddressCounty.innerHTML = localStorage.getItem("privatebeta03OrganisationAddressCounty");
+    if (localStorage.getItem("privatebeta03TownOrCity")) organisationTownCity.innerHTML = localStorage.getItem("privatebeta03TownOrCity");
+    if (localStorage.getItem("privatebeta03Postcode")) organisationPostcode.innerHTML = localStorage.getItem("privatebeta03Postcode");
     let mobile = document.getElementById('mobileNumber');
-    if (localStorage.getItem("privatebeta02MobileNumber")) mobile.innerHTML = localStorage.getItem("privatebeta02MobileNumber");
+    if (localStorage.getItem("privatebeta03MobileNumber")) mobile.innerHTML = localStorage.getItem("privatebeta03MobileNumber");
   }
 
-  if (pageUrlPath === '/private-beta02/personal-details-save' || pageUrlPath === '/private-beta02/personal-details-save-finalised' || pageUrlPath === '/private-beta02/edit-incomplete-form-saved') {
+  if (pageUrlPath === '/private-beta03/personal-details-save' || pageUrlPath === '/private-beta03/personal-details-save-finalised' || pageUrlPath === '/private-beta03/edit-incomplete-form-saved') {
     let yourName = document.getElementById('yourName');
-    if (localStorage.getItem("privatebeta02Firstname") || localStorage.getItem("privatebeta02Lastname")) yourName.innerHTML = localStorage.getItem("privatebeta02Firstname") + ' ' + localStorage.getItem("privatebeta02Lastname");
+    if (localStorage.getItem("privatebeta03Firstname") || localStorage.getItem("privatebeta03Lastname")) yourName.innerHTML = localStorage.getItem("privatebeta03Firstname") + ' ' + localStorage.getItem("privatebeta03Lastname");
     let professionalRegNum = document.getElementById('professionalRegNum');
-    if (localStorage.getItem("privatebeta02ProfessionalRegistrationNumber")) professionalRegNum.innerHTML = localStorage.getItem("privatebeta02ProfessionalRegistrationNumber");
+    if (localStorage.getItem("privatebeta03ProfessionalRegistrationNumber")) professionalRegNum.innerHTML = localStorage.getItem("privatebeta03ProfessionalRegistrationNumber");
     if (localStorage.getItem("privatebeta01Role") === "Other") {
-      role.innerHTML = localStorage.getItem("privatebeta02otherRole");
+      role.innerHTML = localStorage.getItem("privatebeta03otherRole");
     } else {
-      role.innerHTML = localStorage.getItem("privatebeta02Role");
+      role.innerHTML = localStorage.getItem("privatebeta03Role");
     }
 
 
-    if (localStorage.getItem("privatebeta02OrganisationName")) organisationName.innerHTML = localStorage.getItem("privatebeta02OrganisationName");
-    if (localStorage.getItem("privatebeta02OrganisationAddressLine1")) organisationAddressLine1.innerHTML = localStorage.getItem("privatebeta02OrganisationAddressLine1");
-    if (localStorage.getItem("privatebeta02OrganisationAddressLine2")) organisationAddressLine2.innerHTML = localStorage.getItem("privatebeta02OrganisationAddressLine2");
-    if (localStorage.getItem("privatebeta02OrganisationAddressCounty")) organisationAddressCounty.innerHTML = localStorage.getItem("privatebeta02OrganisationAddressCounty");
-    if (localStorage.getItem("privatebeta02TownOrCity")) organisationTownCity.innerHTML = localStorage.getItem("privatebeta02TownOrCity");
-    if (localStorage.getItem("privatebeta02Postcode")) organisationPostcode.innerHTML = localStorage.getItem("privatebeta02Postcode");
+    if (localStorage.getItem("privatebeta03OrganisationName")) organisationName.innerHTML = localStorage.getItem("privatebeta03OrganisationName");
+    if (localStorage.getItem("privatebeta03OrganisationAddressLine1")) organisationAddressLine1.innerHTML = localStorage.getItem("privatebeta03OrganisationAddressLine1");
+    if (localStorage.getItem("privatebeta03OrganisationAddressLine2")) organisationAddressLine2.innerHTML = localStorage.getItem("privatebeta03OrganisationAddressLine2");
+    if (localStorage.getItem("privatebeta03OrganisationAddressCounty")) organisationAddressCounty.innerHTML = localStorage.getItem("privatebeta03OrganisationAddressCounty");
+    if (localStorage.getItem("privatebeta03TownOrCity")) organisationTownCity.innerHTML = localStorage.getItem("privatebeta03TownOrCity");
+    if (localStorage.getItem("privatebeta03Postcode")) organisationPostcode.innerHTML = localStorage.getItem("privatebeta03Postcode");
     let mobile = document.getElementById('mobileNumber');
-    if (localStorage.getItem("privatebeta02MobileNumber")) mobile.innerHTML = localStorage.getItem("privatebeta02MobileNumber");
+    if (localStorage.getItem("privatebeta03MobileNumber")) mobile.innerHTML = localStorage.getItem("privatebeta03MobileNumber");
   }
 
 
 
 //check-sr1-form-your-details
 
-  // private-beta02
-  if (pageUrlPath === '/private-beta02/add-details-to-new-form') {
+  // private-beta03
+  if (pageUrlPath === '/private-beta03/add-details-to-new-form') {
     let organisationName = document.getElementById('organisationName');
     let organisationAddressLine1 = document.getElementById('organisationAddressLine1');
     let organisationAddressLine2 = document.getElementById('organisationAddressLine2');
@@ -9871,50 +9871,50 @@ if (pageUrlPath === '/private-beta02/profile-02' || pageUrlPath === '/private-be
     let role = document.getElementById('role');
     let otherRole = document.getElementById('otherRole');
 
-    console.log('Role', localStorage.getItem("privatebeta02Role"));
-    if (localStorage.getItem("privatebeta02Role") === "Other") {
-      role.innerHTML = localStorage.getItem("privatebeta02otherRole");
+    console.log('Role', localStorage.getItem("privatebeta03Role"));
+    if (localStorage.getItem("privatebeta03Role") === "Other") {
+      role.innerHTML = localStorage.getItem("privatebeta03otherRole");
     } else {
-      role.innerHTML = localStorage.getItem("privatebeta02Role");
+      role.innerHTML = localStorage.getItem("privatebeta03Role");
     }
 
     let yourName = document.getElementById('yourName');
-    if (localStorage.getItem("privatebeta02Firstname") || localStorage.getItem("privatebeta02Lastname")) yourName.innerHTML = localStorage.getItem("privatebeta02Firstname") + ' ' + localStorage.getItem("privatebeta02Lastname");
+    if (localStorage.getItem("privatebeta03Firstname") || localStorage.getItem("privatebeta03Lastname")) yourName.innerHTML = localStorage.getItem("privatebeta03Firstname") + ' ' + localStorage.getItem("privatebeta03Lastname");
 
     let professionalRegNum = document.getElementById('professionalRegNum');
-    if (localStorage.getItem("privatebeta02ProfessionalRegistrationNumber")) professionalRegNum.innerHTML = localStorage.getItem("privatebeta02ProfessionalRegistrationNumber");
+    if (localStorage.getItem("privatebeta03ProfessionalRegistrationNumber")) professionalRegNum.innerHTML = localStorage.getItem("privatebeta03ProfessionalRegistrationNumber");
 
-    if (localStorage.getItem("privatebeta02OrganisationName")) organisationName.innerHTML = localStorage.getItem("privatebeta02OrganisationName");
-    if (localStorage.getItem("privatebeta02OrganisationAddressLine1")) organisationAddressLine1.innerHTML = localStorage.getItem("privatebeta02OrganisationAddressLine1");
-    if (localStorage.getItem("privatebeta02OrganisationAddressLine2")) organisationAddressLine2.innerHTML = localStorage.getItem("privatebeta02OrganisationAddressLine2");
-    if (localStorage.getItem("privatebeta02OrganisationAddressCounty")) organisationAddressCounty.innerHTML = localStorage.getItem("privatebeta02OrganisationAddressCounty");
-    if (localStorage.getItem("privatebeta02TownOrCity")) organisationTownCity.innerHTML = localStorage.getItem("privatebeta02TownOrCity");
-    if (localStorage.getItem("privatebeta02Postcode")) organisationPostcode.innerHTML = localStorage.getItem("privatebeta02Postcode");
-    if (localStorage.getItem("privatebeta02MobileNumber")) mobile.innerHTML = localStorage.getItem("privatebeta02MobileNumber");
+    if (localStorage.getItem("privatebeta03OrganisationName")) organisationName.innerHTML = localStorage.getItem("privatebeta03OrganisationName");
+    if (localStorage.getItem("privatebeta03OrganisationAddressLine1")) organisationAddressLine1.innerHTML = localStorage.getItem("privatebeta03OrganisationAddressLine1");
+    if (localStorage.getItem("privatebeta03OrganisationAddressLine2")) organisationAddressLine2.innerHTML = localStorage.getItem("privatebeta03OrganisationAddressLine2");
+    if (localStorage.getItem("privatebeta03OrganisationAddressCounty")) organisationAddressCounty.innerHTML = localStorage.getItem("privatebeta03OrganisationAddressCounty");
+    if (localStorage.getItem("privatebeta03TownOrCity")) organisationTownCity.innerHTML = localStorage.getItem("privatebeta03TownOrCity");
+    if (localStorage.getItem("privatebeta03Postcode")) organisationPostcode.innerHTML = localStorage.getItem("privatebeta03Postcode");
+    if (localStorage.getItem("privatebeta03MobileNumber")) mobile.innerHTML = localStorage.getItem("privatebeta03MobileNumber");
   }
 
-  // private-beta02
-  if (pageUrlPath === '/private-beta02/download-html' || pageUrlPath === '/private-beta02/download-pdf' || pageUrlPath === '/private-beta02/download-dwp-agent') {
+  // private-beta03
+  if (pageUrlPath === '/private-beta03/download-html' || pageUrlPath === '/private-beta03/download-pdf' || pageUrlPath === '/private-beta03/download-dwp-agent') {
     let PatientFullName = document.getElementById('PatientFullName');
-    if (localStorage.getItem("privatebeta02PatientFirstName") || localStorage.getItem("privatebeta02PatientLastName")) PatientFullName.innerHTML = localStorage.getItem("privatebeta02PatientFirstName") + ' ' + localStorage.getItem("privatebeta02PatientLastName");
+    if (localStorage.getItem("privatebeta03PatientFirstName") || localStorage.getItem("privatebeta03PatientLastName")) PatientFullName.innerHTML = localStorage.getItem("privatebeta03PatientFirstName") + ' ' + localStorage.getItem("privatebeta03PatientLastName");
 
     let dob = document.getElementById('dob');
-    if (localStorage.getItem("privatebeta02DobDay") || localStorage.getItem("privatebeta02DobMonth") || localStorage.getItem("privatebeta02DobYear")) dob.innerHTML = localStorage.getItem("privatebeta02DobDay") + "/" + localStorage.getItem("privatebeta02DobMonth") + "/" + localStorage.getItem("privatebeta02DobYear");
+    if (localStorage.getItem("privatebeta03DobDay") || localStorage.getItem("privatebeta03DobMonth") || localStorage.getItem("privatebeta03DobYear")) dob.innerHTML = localStorage.getItem("privatebeta03DobDay") + "/" + localStorage.getItem("privatebeta03DobMonth") + "/" + localStorage.getItem("privatebeta03DobYear");
 
     let patientaddressline1 = document.getElementById('patientaddressline1');
-    if (localStorage.getItem("privatebeta02PatientAddressLine1")) patientaddressline1.innerHTML = localStorage.getItem("privatebeta02PatientAddressLine1");
+    if (localStorage.getItem("privatebeta03PatientAddressLine1")) patientaddressline1.innerHTML = localStorage.getItem("privatebeta03PatientAddressLine1");
 
     let patientaddressline2 = document.getElementById('patientaddressline2');
-    if (localStorage.getItem("privatebeta02PatientAddressLine2")) patientaddressline2.innerHTML = localStorage.getItem("privatebeta02PatientAddressLine2");
+    if (localStorage.getItem("privatebeta03PatientAddressLine2")) patientaddressline2.innerHTML = localStorage.getItem("privatebeta03PatientAddressLine2");
 
     let patientaddresstown = document.getElementById('patientaddresstown');
-    if (localStorage.getItem("privatebeta02PatientAddressTown")) patientaddresstown.innerHTML = localStorage.getItem("privatebeta02PatientAddressTown");
+    if (localStorage.getItem("privatebeta03PatientAddressTown")) patientaddresstown.innerHTML = localStorage.getItem("privatebeta03PatientAddressTown");
 
     let patientaddresscounty = document.getElementById('patientaddresscounty');
-    if (localStorage.getItem("privatebeta02PatientAddressCounty")) patientaddresscounty.innerHTML = localStorage.getItem("privatebeta02PatientAddressCounty");
+    if (localStorage.getItem("privatebeta03PatientAddressCounty")) patientaddresscounty.innerHTML = localStorage.getItem("privatebeta03PatientAddressCounty");
 
     let patientPostcode = document.getElementById('patientPostcode');
-    if (localStorage.getItem("privatebeta02PatientPostcode")) patientPostcode.innerHTML = localStorage.getItem("privatebeta02PatientPostcode");
+    if (localStorage.getItem("privatebeta03PatientPostcode")) patientPostcode.innerHTML = localStorage.getItem("privatebeta03PatientPostcode");
 
     //let niNo = document.getElementById('niNo');
     //let niNoinput = document.getElementById('niNoinput');
@@ -9926,21 +9926,21 @@ if (pageUrlPath === '/private-beta02/profile-02' || pageUrlPath === '/private-be
     //}
 
     let whatIsTheDiagnosis = document.getElementById('whatIsTheDiagnosis');
-    if (localStorage.getItem("privatebeta02WhatIsTheDiagnosis")) whatIsTheDiagnosis.innerHTML = localStorage.getItem("privatebeta02WhatIsTheDiagnosis");
+    if (localStorage.getItem("privatebeta03WhatIsTheDiagnosis")) whatIsTheDiagnosis.innerHTML = localStorage.getItem("privatebeta03WhatIsTheDiagnosis");
 
     let dateofSpecialRules = document.getElementById('dateofSpecialRules');
-    if (localStorage.getItem("privatebeta02DateofSpecialRulesDay") || localStorage.getItem("privatebeta02DateofSpecialRulesMonth") || localStorage.getItem("privatebeta02DateofSpecialRulesYear")) dateofSpecialRules.innerHTML = localStorage.getItem("privatebeta02DateofSpecialRulesDay") + "/" + localStorage.getItem("privatebeta02DateofSpecialRulesMonth") + "/" + localStorage.getItem("privatebeta02DateofSpecialRulesYear");
+    if (localStorage.getItem("privatebeta03DateofSpecialRulesDay") || localStorage.getItem("privatebeta03DateofSpecialRulesMonth") || localStorage.getItem("privatebeta03DateofSpecialRulesYear")) dateofSpecialRules.innerHTML = localStorage.getItem("privatebeta03DateofSpecialRulesDay") + "/" + localStorage.getItem("privatebeta03DateofSpecialRulesMonth") + "/" + localStorage.getItem("privatebeta03DateofSpecialRulesYear");
 
     let otherRelevantDiagnosis = document.getElementById('otherRelevantDiagnosis');
     let otherRelevantDiagnosisinput = document.getElementById('otherRelevantDiagnosisinput');
-    console.log('otherRelevantDiagnosis', localStorage.getItem("privatebeta02OtherRelevantDiagnosis"));
-    if (localStorage.getItem("privatebeta02OtherRelevantDiagnosis") === "Yes") {
-      otherRelevantDiagnosis.innerHTML = localStorage.getItem("privatebeta02OtherRelevantDiagnosisinput");
+    console.log('otherRelevantDiagnosis', localStorage.getItem("privatebeta03OtherRelevantDiagnosis"));
+    if (localStorage.getItem("privatebeta03OtherRelevantDiagnosis") === "Yes") {
+      otherRelevantDiagnosis.innerHTML = localStorage.getItem("privatebeta03OtherRelevantDiagnosisinput");
     } else {
-      otherRelevantDiagnosis.innerHTML = localStorage.getItem("privatebeta02OtherRelevantDiagnosis");
+      otherRelevantDiagnosis.innerHTML = localStorage.getItem("privatebeta03OtherRelevantDiagnosis");
     }
 
-    let patientAwareOfDiagnosis = localStorage.getItem('privatebeta02AwareOfDiagnosis');
+    let patientAwareOfDiagnosis = localStorage.getItem('privatebeta03AwareOfDiagnosis');
     if (patientAwareOfDiagnosis === 'true') {
       awareOfDiagnosis.innerHTML = 'Yes';
     }
@@ -9948,7 +9948,7 @@ if (pageUrlPath === '/private-beta02/profile-02' || pageUrlPath === '/private-be
       awareOfDiagnosis.innerHTML = 'No';
     }
 
-    let patientAwareOfPrognosis = localStorage.getItem('privatebeta02AwareOfPrognosis');
+    let patientAwareOfPrognosis = localStorage.getItem('privatebeta03AwareOfPrognosis');
     if (patientAwareOfPrognosis === 'true') {
       awareOfPrognosis.innerHTML = 'Yes';
     }
@@ -9957,13 +9957,13 @@ if (pageUrlPath === '/private-beta02/profile-02' || pageUrlPath === '/private-be
     }
 
     let dateofDiagnosis = document.getElementById('dateofDiagnosis');
-    if (localStorage.getItem("privatebeta02DodDay") || localStorage.getItem("privatebeta02DodMonth") || localStorage.getItem("privatebeta02odYear")) dateofDiagnosis.innerHTML = localStorage.getItem("privatebeta02DodDay") + "/" + localStorage.getItem("privatebeta02DodMonth") + "/" + localStorage.getItem("privatebeta02DodYear");
+    if (localStorage.getItem("privatebeta03DodDay") || localStorage.getItem("privatebeta03DodMonth") || localStorage.getItem("privatebeta03odYear")) dateofDiagnosis.innerHTML = localStorage.getItem("privatebeta03DodDay") + "/" + localStorage.getItem("privatebeta03DodMonth") + "/" + localStorage.getItem("privatebeta03DodYear");
 
     let clinicalFeatures = document.getElementById('clinicalFeatures');
-    if (localStorage.getItem("privatebeta02DetailsOfClinicalFeatures")) clinicalFeatures.innerHTML = localStorage.getItem("privatebeta02DetailsOfClinicalFeatures");
+    if (localStorage.getItem("privatebeta03DetailsOfClinicalFeatures")) clinicalFeatures.innerHTML = localStorage.getItem("privatebeta03DetailsOfClinicalFeatures");
 
     let treatment = document.getElementById('treatment');
-    if (localStorage.getItem("privatebeta02Treatment")) treatment.innerHTML = localStorage.getItem("privatebeta02Treatment");
+    if (localStorage.getItem("privatebeta03Treatment")) treatment.innerHTML = localStorage.getItem("privatebeta03Treatment");
 
     let organisationName = document.getElementById('organisationName');
     let organisationAddressLine1 = document.getElementById('organisationAddressLine1');
@@ -9976,26 +9976,26 @@ if (pageUrlPath === '/private-beta02/profile-02' || pageUrlPath === '/private-be
     let role = document.getElementById('role');
     let otherRole = document.getElementById('otherRole');
 
-    console.log('Role', localStorage.getItem("privatebeta02Role"));
-    if (localStorage.getItem("privatebeta02Role") === "Other") {
-      role.innerHTML = localStorage.getItem("privatebeta02otherRole");
+    console.log('Role', localStorage.getItem("privatebeta03Role"));
+    if (localStorage.getItem("privatebeta03Role") === "Other") {
+      role.innerHTML = localStorage.getItem("privatebeta03otherRole");
     } else {
-      role.innerHTML = localStorage.getItem("privatebeta02Role");
+      role.innerHTML = localStorage.getItem("privatebeta03Role");
     }
 
     let yourName = document.getElementById('yourName');
-    if (localStorage.getItem("privatebeta02Firstname") || localStorage.getItem("privatebeta02Lastname")) yourName.innerHTML = localStorage.getItem("privatebeta02Firstname") + ' ' + localStorage.getItem("privatebeta02Lastname");
+    if (localStorage.getItem("privatebeta03Firstname") || localStorage.getItem("privatebeta03Lastname")) yourName.innerHTML = localStorage.getItem("privatebeta03Firstname") + ' ' + localStorage.getItem("privatebeta03Lastname");
 
     let professionalRegNum = document.getElementById('professionalRegNum');
-    if (localStorage.getItem("privatebeta02ProfessionalRegistrationNumber")) professionalRegNum.innerHTML = localStorage.getItem("privatebeta02ProfessionalRegistrationNumber");
+    if (localStorage.getItem("privatebeta03ProfessionalRegistrationNumber")) professionalRegNum.innerHTML = localStorage.getItem("privatebeta03ProfessionalRegistrationNumber");
 
-    if (localStorage.getItem("privatebeta02OrganisationName")) organisationName.innerHTML = localStorage.getItem("privatebeta02OrganisationName");
-    if (localStorage.getItem("privatebeta02OrganisationAddressLine1")) organisationAddressLine1.innerHTML = localStorage.getItem("privatebeta02OrganisationAddressLine1");
-    if (localStorage.getItem("privatebeta02OrganisationAddressLine2")) organisationAddressLine2.innerHTML = localStorage.getItem("privatebeta02OrganisationAddressLine2");
-    if (localStorage.getItem("privatebeta02OrganisationAddressCounty")) organisationAddressCounty.innerHTML = localStorage.getItem("privatebeta02OrganisationAddressCounty");
-    if (localStorage.getItem("privatebeta02TownOrCity")) organisationTownCity.innerHTML = localStorage.getItem("privatebeta02TownOrCity");
-    if (localStorage.getItem("privatebeta02Postcode")) organisationPostcode.innerHTML = localStorage.getItem("privatebeta02Postcode");
-    if (localStorage.getItem("privatebeta02MobileNumber")) mobile.innerHTML = localStorage.getItem("privatebeta02MobileNumber");
+    if (localStorage.getItem("privatebeta03OrganisationName")) organisationName.innerHTML = localStorage.getItem("privatebeta03OrganisationName");
+    if (localStorage.getItem("privatebeta03OrganisationAddressLine1")) organisationAddressLine1.innerHTML = localStorage.getItem("privatebeta03OrganisationAddressLine1");
+    if (localStorage.getItem("privatebeta03OrganisationAddressLine2")) organisationAddressLine2.innerHTML = localStorage.getItem("privatebeta03OrganisationAddressLine2");
+    if (localStorage.getItem("privatebeta03OrganisationAddressCounty")) organisationAddressCounty.innerHTML = localStorage.getItem("privatebeta03OrganisationAddressCounty");
+    if (localStorage.getItem("privatebeta03TownOrCity")) organisationTownCity.innerHTML = localStorage.getItem("privatebeta03TownOrCity");
+    if (localStorage.getItem("privatebeta03Postcode")) organisationPostcode.innerHTML = localStorage.getItem("privatebeta03Postcode");
+    if (localStorage.getItem("privatebeta03MobileNumber")) mobile.innerHTML = localStorage.getItem("privatebeta03MobileNumber");
   }
 
   // =================
@@ -10180,19 +10180,19 @@ if (pageUrlPath === '/private-beta02/profile-02' || pageUrlPath === '/private-be
       document.getElementById('resubmittedParagraph').classList.remove('hidden');
     }
   }
-// private-beta02
-if (pageUrlPath === '/private-beta02/confirmation-page' || pageUrlPath === '/private-beta02/confirmation-page-new') {
-  document.getElementById('PatientFullName').innerHTML = localStorage.getItem("privatebeta02PatientFirstname") + ' ' + localStorage.getItem("privatebeta02PatientLastname");
-  document.getElementById('PatientFullName2').innerHTML = localStorage.getItem("privatebeta02PatientFirstname") + ' ' + localStorage.getItem("privatebeta02PatientLastname");
+// private-beta03
+if (pageUrlPath === '/private-beta03/confirmation-page' || pageUrlPath === '/private-beta03/confirmation-page-new') {
+  document.getElementById('PatientFullName').innerHTML = localStorage.getItem("privatebeta03PatientFirstname") + ' ' + localStorage.getItem("privatebeta03PatientLastname");
+  document.getElementById('PatientFullName2').innerHTML = localStorage.getItem("privatebeta03PatientFirstname") + ' ' + localStorage.getItem("privatebeta03PatientLastname");
 }
-if (pageUrlPath === '/private-beta02/confirmation-page' || pageUrlPath === '/private-beta02/confirmation-page-new') {
+if (pageUrlPath === '/private-beta03/confirmation-page' || pageUrlPath === '/private-beta03/confirmation-page-new') {
   let PatientFullName = document.getElementById('PatientFullName');
-  if (localStorage.getItem("privatebeta02PatientFirstName") || localStorage.getItem("privatebeta02PatientLastName")) PatientFullName.innerHTML = localStorage.getItem("privatebeta02PatientFirstName") + ' ' + localStorage.getItem("privatebeta02PatientLastName");
+  if (localStorage.getItem("privatebeta03PatientFirstName") || localStorage.getItem("privatebeta03PatientLastName")) PatientFullName.innerHTML = localStorage.getItem("privatebeta03PatientFirstName") + ' ' + localStorage.getItem("privatebeta03PatientLastName");
   let PatientFullName2 = document.getElementById('PatientFullName2');
-  if (localStorage.getItem("privatebeta02PatientFirstName") || localStorage.getItem("privatebeta02PatientLastName")) PatientFullName2.innerHTML = localStorage.getItem("privatebeta02PatientFirstName") + ' ' + localStorage.getItem("privatebeta02PatientLastName");
+  if (localStorage.getItem("privatebeta03PatientFirstName") || localStorage.getItem("privatebeta03PatientLastName")) PatientFullName2.innerHTML = localStorage.getItem("privatebeta03PatientFirstName") + ' ' + localStorage.getItem("privatebeta03PatientLastName");
 }
-if (pageUrlPath === '/private-beta02/confirmation-page' || pageUrlPath === '/private-beta02/confirmation-page-new') {
-  if (localStorage.getItem("privatebeta02ResendingSR1Form")) {
+if (pageUrlPath === '/private-beta03/confirmation-page' || pageUrlPath === '/private-beta03/confirmation-page-new') {
+  if (localStorage.getItem("privatebeta03ResendingSR1Form")) {
     document.getElementById('resubmittedH1').classList.remove('hidden');
     document.getElementById('resubmittedParagraph').classList.remove('hidden');
   }
@@ -10236,7 +10236,7 @@ function logOutHcpE2e() {
   if (domainPathUrl === 'hcp-e2e-journey-mvp02') window.location.pathname = "/hcp-e2e-journey-mvp02/signout";
   if (domainPathUrl === 'hcp-e2e-journey-mvp03') window.location.pathname = "/hcp-e2e-journey-mvp03/signout";
   if (domainPathUrl === 'private-beta01') window.location.pathname = "/private-beta01/signout";
-  if (domainPathUrl === 'private-beta02') window.location.pathname = "/private-beta02/signout";
+  if (domainPathUrl === 'private-beta03') window.location.pathname = "/private-beta03/signout";
   localStorage.removeItem('sentSR1_firstName');
   localStorage.removeItem('sentSR1_surname');
   localStorage.removeItem('pff_firstName');
@@ -10995,76 +10995,76 @@ function logOutHcpE2e() {
   localStorage.removeItem("privatebeta01UpdateProfileDetailsFromSendSR1FormPage");
   localStorage.removeItem("privatebeta01NewForm");
   localStorage.removeItem("privatebeta01IsLoggedIn");
-   // Log out of version private-beta02
-   localStorage.removeItem('privatebeta02SigninOrg');
-   localStorage.removeItem('privatebeta02HcpEmail');
-   //localStorage.removeItem('privatebeta02Firstname');
-   //localStorage.removeItem('privatebeta02Lastname');
-   //localStorage.removeItem('privatebeta02Role');
-   //localStorage.removeItem('privatebeta02otherRole');
-   //localStorage.removeItem('privatebeta02ProfessionalRegistrationNumber');
-   //localStorage.removeItem('privatebeta02MobileNumber');
-   //localStorage.removeItem('privatebeta02OrganisationName');
-   //localStorage.removeItem('privatebeta02OrganisationAddressLine1');
-   //localStorage.removeItem('privatebeta02OrganisationAddressLine2');
-   //localStorage.removeItem('privatebeta02OrganisationAddressCounty');
-   //localStorage.removeItem('privatebeta02OrganisationAddress');
-   //localStorage.removeItem('privatebeta02TownOrCity');
-   //localStorage.removeItem('privatebeta02Postcode');
-   localStorage.removeItem('privatebeta02ChangingReceiveReminders');
-   localStorage.removeItem('privatebeta02ReceiveReminder');
-   localStorage.removeItem('privatebeta02ReminderType');
-   localStorage.removeItem('privatebeta02ReminderFrequency');
-   localStorage.removeItem('privatebeta02ReminderTriggered');
-   localStorage.removeItem('privatebeta02ChangingPractitionerName');
-   localStorage.removeItem('privatebeta02ChangingPractitionerRole');
-   localStorage.removeItem('privatebeta02ChangingPractitionerRegNo');
-   localStorage.removeItem('privatebeta02ChangingPractitionerPhoneNo');
-   localStorage.removeItem('privatebeta02ChangingPractitionerOrgName');
-   localStorage.removeItem('privatebeta02ChangingPractitionerOrgAddress');
-   localStorage.removeItem('privatebeta02ChangingPractitionerNameNew');
-   localStorage.removeItem('privatebeta02ChangingPractitionerRoleNew');
-   localStorage.removeItem('privatebeta02ChangingPractitionerRegNoNew');
-   localStorage.removeItem('privatebeta02ChangingPractitionerPhoneNoNew');
-   localStorage.removeItem('privatebeta02ChangingPractitionerOrgNameNew');
-   localStorage.removeItem('privatebeta02ChangingPractitionerOrgAddressNew');
-   localStorage.removeItem('privatebeta02ProfileTriggered');
-   localStorage.removeItem('privatebeta02OtherRole');
-   localStorage.removeItem('privatebeta02ExistingHcpUser');
-   localStorage.removeItem('privatebeta02NewHcpUser');
-   localStorage.removeItem("privatebeta02PatientFirstName");
-   localStorage.removeItem("privatebeta02PatientLastName");
-   localStorage.removeItem("privatebeta02PatientNameDefined");
-   localStorage.removeItem("privatebeta02DobDay");
-   localStorage.removeItem("privatebeta02DobMonth");
-   localStorage.removeItem("privatebeta02DobYear");
-   localStorage.removeItem("privatebeta02NiNo");
-   localStorage.removeItem("privatebeta02NiNoinput");
-   localStorage.removeItem("privatebeta02ddDetails");
-   localStorage.removeItem("privatebeta02DateofSpecialRulesDay");
-   localStorage.removeItem("privatebeta02DateofSpecialRulesMonth");
-   localStorage.removeItem("privatebeta02DateofSpecialRulesYear");
-   localStorage.removeItem("privatebeta02WhatIsTheDiagnosis");
-   localStorage.removeItem("privatebeta02OtherRelevantDiagnosis");
-   localStorage.removeItem("privatebeta02OtherRelevantDiagnosisinput");
-   localStorage.removeItem("privatebeta02AwareOfDiagnosis");
-   localStorage.removeItem("privatebeta02AwareOfPrognosis");
-   localStorage.removeItem("privatebeta02DodDay");
-   localStorage.removeItem("privatebeta02DodMonth");
-   localStorage.removeItem("privatebeta02DodYear");
-   localStorage.removeItem("privatebeta02DetailsOfClinicalFeatures");
-   localStorage.removeItem("privatebeta02Treatment");
-   localStorage.removeItem("privatebeta02ResendingSR1Form");
-   localStorage.removeItem("privatebeta02PatientAddressLine1");
-   localStorage.removeItem("privatebeta02PatientAddressLine2");
-   localStorage.removeItem("privatebeta02PatientAddressTown")
-   localStorage.removeItem("privatebeta02PatientAddressCounty")
-   localStorage.removeItem("privatebeta02PatientPostcode");
-   localStorage.removeItem("privatebeta02PatientBuilding");
-   localStorage.removeItem("privatebeta02PatientAddress");
-   localStorage.removeItem("privatebeta02UpdateProfileDetailsFromSendSR1FormPage");
-   localStorage.removeItem("privatebeta02NewForm");
-   localStorage.removeItem("privatebeta02IsLoggedIn");
+   // Log out of version private-beta03
+   localStorage.removeItem('privatebeta03SigninOrg');
+   localStorage.removeItem('privatebeta03HcpEmail');
+   //localStorage.removeItem('privatebeta03Firstname');
+   //localStorage.removeItem('privatebeta03Lastname');
+   //localStorage.removeItem('privatebeta03Role');
+   //localStorage.removeItem('privatebeta03otherRole');
+   //localStorage.removeItem('privatebeta03ProfessionalRegistrationNumber');
+   //localStorage.removeItem('privatebeta03MobileNumber');
+   //localStorage.removeItem('privatebeta03OrganisationName');
+   //localStorage.removeItem('privatebeta03OrganisationAddressLine1');
+   //localStorage.removeItem('privatebeta03OrganisationAddressLine2');
+   //localStorage.removeItem('privatebeta03OrganisationAddressCounty');
+   //localStorage.removeItem('privatebeta03OrganisationAddress');
+   //localStorage.removeItem('privatebeta03TownOrCity');
+   //localStorage.removeItem('privatebeta03Postcode');
+   localStorage.removeItem('privatebeta03ChangingReceiveReminders');
+   localStorage.removeItem('privatebeta03ReceiveReminder');
+   localStorage.removeItem('privatebeta03ReminderType');
+   localStorage.removeItem('privatebeta03ReminderFrequency');
+   localStorage.removeItem('privatebeta03ReminderTriggered');
+   localStorage.removeItem('privatebeta03ChangingPractitionerName');
+   localStorage.removeItem('privatebeta03ChangingPractitionerRole');
+   localStorage.removeItem('privatebeta03ChangingPractitionerRegNo');
+   localStorage.removeItem('privatebeta03ChangingPractitionerPhoneNo');
+   localStorage.removeItem('privatebeta03ChangingPractitionerOrgName');
+   localStorage.removeItem('privatebeta03ChangingPractitionerOrgAddress');
+   localStorage.removeItem('privatebeta03ChangingPractitionerNameNew');
+   localStorage.removeItem('privatebeta03ChangingPractitionerRoleNew');
+   localStorage.removeItem('privatebeta03ChangingPractitionerRegNoNew');
+   localStorage.removeItem('privatebeta03ChangingPractitionerPhoneNoNew');
+   localStorage.removeItem('privatebeta03ChangingPractitionerOrgNameNew');
+   localStorage.removeItem('privatebeta03ChangingPractitionerOrgAddressNew');
+   localStorage.removeItem('privatebeta03ProfileTriggered');
+   localStorage.removeItem('privatebeta03OtherRole');
+   localStorage.removeItem('privatebeta03ExistingHcpUser');
+   localStorage.removeItem('privatebeta03NewHcpUser');
+   localStorage.removeItem("privatebeta03PatientFirstName");
+   localStorage.removeItem("privatebeta03PatientLastName");
+   localStorage.removeItem("privatebeta03PatientNameDefined");
+   localStorage.removeItem("privatebeta03DobDay");
+   localStorage.removeItem("privatebeta03DobMonth");
+   localStorage.removeItem("privatebeta03DobYear");
+   localStorage.removeItem("privatebeta03NiNo");
+   localStorage.removeItem("privatebeta03NiNoinput");
+   localStorage.removeItem("privatebeta03ddDetails");
+   localStorage.removeItem("privatebeta03DateofSpecialRulesDay");
+   localStorage.removeItem("privatebeta03DateofSpecialRulesMonth");
+   localStorage.removeItem("privatebeta03DateofSpecialRulesYear");
+   localStorage.removeItem("privatebeta03WhatIsTheDiagnosis");
+   localStorage.removeItem("privatebeta03OtherRelevantDiagnosis");
+   localStorage.removeItem("privatebeta03OtherRelevantDiagnosisinput");
+   localStorage.removeItem("privatebeta03AwareOfDiagnosis");
+   localStorage.removeItem("privatebeta03AwareOfPrognosis");
+   localStorage.removeItem("privatebeta03DodDay");
+   localStorage.removeItem("privatebeta03DodMonth");
+   localStorage.removeItem("privatebeta03DodYear");
+   localStorage.removeItem("privatebeta03DetailsOfClinicalFeatures");
+   localStorage.removeItem("privatebeta03Treatment");
+   localStorage.removeItem("privatebeta03ResendingSR1Form");
+   localStorage.removeItem("privatebeta03PatientAddressLine1");
+   localStorage.removeItem("privatebeta03PatientAddressLine2");
+   localStorage.removeItem("privatebeta03PatientAddressTown")
+   localStorage.removeItem("privatebeta03PatientAddressCounty")
+   localStorage.removeItem("privatebeta03PatientPostcode");
+   localStorage.removeItem("privatebeta03PatientBuilding");
+   localStorage.removeItem("privatebeta03PatientAddress");
+   localStorage.removeItem("privatebeta03UpdateProfileDetailsFromSendSR1FormPage");
+   localStorage.removeItem("privatebeta03NewForm");
+   localStorage.removeItem("privatebeta03IsLoggedIn");
 }
 let currentValueOfOrg = 0;
 
@@ -11696,61 +11696,61 @@ function privatebeta01SignIn() {
   }
 }
 
-// private-beta02
-function privatebeta02SigninOrgFn(organisationSignin) {
+// private-beta03
+function privatebeta03SigninOrgFn(organisationSignin) {
   currentValueOfOrg = organisationSignin.value;
-  localStorage.setItem('privatebeta02SigninOrg', currentValueOfOrg);
+  localStorage.setItem('privatebeta03SigninOrg', currentValueOfOrg);
   if (consoleLogs) console.log('organisationSignin: ' + currentValueOfOrg);
-  localStorage.setItem('privatebeta02NewHcpUser', true);
+  localStorage.setItem('privatebeta03NewHcpUser', true);
   localStorage.removeItem('privatebeta01ExistingHcpUser');
 }
-function privatebeta02SignIn() {
-  const privatebeta01SigninPageRoute = document.getElementById('privatebeta02SigninPage');
-  let hcpEmailAddress = document.getElementById('privatebeta02Signin_email').value;
-  let hcppassword = document.getElementById('privatebeta02Signin_password').value;
+function privatebeta03SignIn() {
+  const privatebeta01SigninPageRoute = document.getElementById('privatebeta03SigninPage');
+  let hcpEmailAddress = document.getElementById('privatebeta03Signin_email').value;
+  let hcppassword = document.getElementById('privatebeta03Signin_password').value;
   if (hcpEmailAddress === 'test1@trust.nhs.com' && hcppassword === 'test1') {
     console.log('redirect to NEW dashboard');
-    localStorage.setItem('privatebeta02NewHcpUser', true);
-    localStorage.removeItem('privatebeta02ExistingHcpUser');
-    privatebeta01SigninPageRoute.setAttribute("action", "/private-beta02/account-new-dashboard");
+    localStorage.setItem('privatebeta03NewHcpUser', true);
+    localStorage.removeItem('privatebeta03ExistingHcpUser');
+    privatebeta01SigninPageRoute.setAttribute("action", "/private-beta03/account-new-dashboard");
     // and set their PROFILE and their REMINDER SETTINGS up front
-    localStorage.setItem("privatebeta02Firstname", 'Jean');
-    localStorage.setItem("privatebeta02Lastname", 'Grey');
-    localStorage.setItem("privatebeta02ProfessionalRegistrationNumber", 'ABCDE12345');
-    localStorage.setItem("privatebeta02MobileNumber", '07900 000 010');
-    localStorage.setItem("privatebeta02OrganisationName", 'The Magpie Trust');
-    localStorage.setItem("privatebeta02OrganisationAddressLine1", '02 Royal Hospital Road');
-    localStorage.setItem("privatebeta02OrganisationAddressLine2", 'Anytown');
-    localStorage.setItem("privatebeta02OrganisationAddressCounty", 'Geeran');
-    localStorage.setItem("privatebeta02TownOrCity", "Glenrothes");
-    localStorage.setItem("privatebeta02Postcode", "SE1 AAA");
-    localStorage.setItem("privatebeta02Role", " General practitioner");
-    localStorage.setItem("privatebeta02ReceiveReminder", "Yes");
-    localStorage.setItem("privatebeta02ReminderType", "Email and text");
-    localStorage.setItem("privatebeta02ReminderFrequency", "Weekly");
+    localStorage.setItem("privatebeta03Firstname", 'Jean');
+    localStorage.setItem("privatebeta03Lastname", 'Grey');
+    localStorage.setItem("privatebeta03ProfessionalRegistrationNumber", 'ABCDE12345');
+    localStorage.setItem("privatebeta03MobileNumber", '07900 000 010');
+    localStorage.setItem("privatebeta03OrganisationName", 'The Magpie Trust');
+    localStorage.setItem("privatebeta03OrganisationAddressLine1", '02 Royal Hospital Road');
+    localStorage.setItem("privatebeta03OrganisationAddressLine2", 'Anytown');
+    localStorage.setItem("privatebeta03OrganisationAddressCounty", 'Geeran');
+    localStorage.setItem("privatebeta03TownOrCity", "Glenrothes");
+    localStorage.setItem("privatebeta03Postcode", "SE1 AAA");
+    localStorage.setItem("privatebeta03Role", " General practitioner");
+    localStorage.setItem("privatebeta03ReceiveReminder", "Yes");
+    localStorage.setItem("privatebeta03ReminderType", "Email and text");
+    localStorage.setItem("privatebeta03ReminderFrequency", "Weekly");
   } else if (hcpEmailAddress === 'test2@trust.nhs.com' && hcppassword === 'test2') {
     console.log('redirect to EXISTING dashboard');
-    localStorage.setItem('privatebeta02ExistingHcpUser', true);
-    localStorage.removeItem('privatebeta02NewHcpUser');
-    privatebeta02SigninPageRoute.setAttribute("action", "/private-beta02/account-d-dashboard");
+    localStorage.setItem('privatebeta03ExistingHcpUser', true);
+    localStorage.removeItem('privatebeta03NewHcpUser');
+    privatebeta03SigninPageRoute.setAttribute("action", "/private-beta03/account-d-dashboard");
     // and set their PROFILE and their REMINDER SETTINGS up front
-    localStorage.setItem("privatebeta02Firstname", 'Jean');
-    localStorage.setItem("privatebeta02Lastname", 'Grey');
-    localStorage.setItem("privatebeta02ProfessionalRegistrationNumber", 'ABCDE12345');
-    localStorage.setItem("privatebeta02MobileNumber", '07900 000 010');
-    localStorage.setItem("privatebeta02OrganisationName", 'The Magpie Trust');
-    localStorage.setItem("privatebeta02OrganisationAddressLine1", '02 Royal Hospital Road');
-    localStorage.setItem("privatebeta02OrganisationAddressLine2", 'Anytown');
-    localStorage.setItem("privatebeta02OrganisationAddressCounty", 'Geeran');
-    localStorage.setItem("privatebeta02TownOrCity", "Glenrothes");
-    localStorage.setItem("privatebeta02Postcode", "SE1 AAA");
-    localStorage.setItem("privatebeta02Role", " General practitioner");
-    localStorage.setItem("privatebeta02ReceiveReminder", "Yes");
-    localStorage.setItem("privatebeta02ReminderType", "Email");
-    localStorage.setItem("privatebeta02ReminderFrequency", "Daily");
+    localStorage.setItem("privatebeta03Firstname", 'Jean');
+    localStorage.setItem("privatebeta03Lastname", 'Grey');
+    localStorage.setItem("privatebeta03ProfessionalRegistrationNumber", 'ABCDE12345');
+    localStorage.setItem("privatebeta03MobileNumber", '07900 000 010');
+    localStorage.setItem("privatebeta03OrganisationName", 'The Magpie Trust');
+    localStorage.setItem("privatebeta03OrganisationAddressLine1", '02 Royal Hospital Road');
+    localStorage.setItem("privatebeta03OrganisationAddressLine2", 'Anytown');
+    localStorage.setItem("privatebeta03OrganisationAddressCounty", 'Geeran');
+    localStorage.setItem("privatebeta03TownOrCity", "Glenrothes");
+    localStorage.setItem("privatebeta03Postcode", "SE1 AAA");
+    localStorage.setItem("privatebeta03Role", " General practitioner");
+    localStorage.setItem("privatebeta03ReceiveReminder", "Yes");
+    localStorage.setItem("privatebeta03ReminderType", "Email");
+    localStorage.setItem("privatebeta03ReminderFrequency", "Daily");
   } else {
     console.log('redirect to profile page');
-    privatebeta01SigninPageRoute.setAttribute("action", "/private-beta02/profile-setup");
+    privatebeta01SigninPageRoute.setAttribute("action", "/private-beta03/profile-setup");
   }
 }
 
@@ -11864,9 +11864,9 @@ function privatebeta01RoleFn(yourRole) {
 }
 
 // private-beta03
-function privatebeta02RoleFn(yourRole) {
+function privatebeta03RoleFn(yourRole) {
   currentValueOfRole = yourRole.value;
-  localStorage.setItem('privatebeta02Role', currentValueOfRole);
+  localStorage.setItem('privatebeta03Role', currentValueOfRole);
   if (consoleLogs) console.log('Role: ' + currentValueOfRole);
 }
 
@@ -12719,101 +12719,101 @@ function privatebeta01AddDetails(addDetails) {
   if (consoleLogs) console.log('Want to add details to new SR1 form: ' + wantAddDetails);
 }
 
-// private-beta02
-function saveHCPNameprivatebeta02() {
+// private-beta03
+function saveHCPNameprivatebeta03() {
   const firstNameInput = document.getElementById('firstName').value;
   const lastNameInput = document.getElementById('lastName').value;
-  localStorage.setItem('privatebeta02Firstname', firstNameInput);
-  localStorage.setItem('privatebeta02Lastname', lastNameInput);
-  if (localStorage.getItem('privatebeta02ChangingPractitionerName')) { profilePage1UrlAction.setAttribute("action", "/private-beta02/profile-details"); }
-  if (localStorage.getItem('privatebeta02ChangingPractitionerNameNew')) { profilePage1UrlAction.setAttribute("action", "/private-beta02/check-profile-details"); }
+  localStorage.setItem('privatebeta03Firstname', firstNameInput);
+  localStorage.setItem('privatebeta03Lastname', lastNameInput);
+  if (localStorage.getItem('privatebeta03ChangingPractitionerName')) { profilePage1UrlAction.setAttribute("action", "/private-beta03/profile-details"); }
+  if (localStorage.getItem('privatebeta03ChangingPractitionerNameNew')) { profilePage1UrlAction.setAttribute("action", "/private-beta03/check-profile-details"); }
 }
-function privatebeta02HaveNiNo(niNo) {
+function privatebeta03HaveNiNo(niNo) {
   currentValueOfNiNo = niNo.value;
-  localStorage.setItem('privatebeta02NiNo', currentValueOfNiNo);
+  localStorage.setItem('privatebeta03NiNo', currentValueOfNiNo);
   if (consoleLogs) console.log('NINo: ' + currentValueOfNiNo);
 }
-function savenniNoradioSR1Formprivatebeta02() {
-  if (localStorage.getItem('privatebeta02ChangingNiNo')) { profilePage1UrlAction.setAttribute("action", "/private-beta02/check-profile-details"); }
-  if (localStorage.getItem('privatebeta02ChangingNiNo')) { profilePage1UrlAction.setAttribute("action", "/private-beta02/profile-details"); }
+function savenniNoradioSR1Formprivatebeta03() {
+  if (localStorage.getItem('privatebeta03ChangingNiNo')) { profilePage1UrlAction.setAttribute("action", "/private-beta03/check-profile-details"); }
+  if (localStorage.getItem('privatebeta03ChangingNiNo')) { profilePage1UrlAction.setAttribute("action", "/private-beta03/profile-details"); }
 }
-function privatebeta02OtherDiagnosis(otherRelevantDiagnosis) {
+function privatebeta03OtherDiagnosis(otherRelevantDiagnosis) {
   currentValueOfotherRelevantDiagnosis = otherRelevantDiagnosis.value;
-  localStorage.setItem('privatebeta02OtherRelevantDiagnosis', currentValueOfotherRelevantDiagnosis);
+  localStorage.setItem('privatebeta03OtherRelevantDiagnosis', currentValueOfotherRelevantDiagnosis);
   if (consoleLogs) console.log('Other relevant diagnosis: ' + currentValueOfotherRelevantDiagnosis);
 }
-function saveOtherDiagnosisradioSR1Formprivatebeta02() {
-  if (localStorage.getItem('privatebeta02ChangingOtherRelevantDiagnosis')) { profilePage1UrlAction.setAttribute("action", "/private-beta02/check-profile-details"); }
-  if (localStorage.getItem('privatebeta02ChangingOtherRelevantDiagnosis')) { profilePage1UrlAction.setAttribute("action", "/private-beta02/profile-details"); }
+function saveOtherDiagnosisradioSR1Formprivatebeta03() {
+  if (localStorage.getItem('privatebeta03ChangingOtherRelevantDiagnosis')) { profilePage1UrlAction.setAttribute("action", "/private-beta03/check-profile-details"); }
+  if (localStorage.getItem('privatebeta03ChangingOtherRelevantDiagnosis')) { profilePage1UrlAction.setAttribute("action", "/private-beta03/profile-details"); }
 }
-function saveRoleprivatebeta02() {
-  if (localStorage.getItem('privatebeta02ChangingPractitionerRoleNew')) { profilePage1UrlAction.setAttribute("action", "/private-beta02/check-profile-details"); }
-  if (localStorage.getItem('privatebeta02ChangingPractitionerRole')) { profilePage1UrlAction.setAttribute("action", "/private-beta02/profile-details"); }
+function saveRoleprivatebeta03() {
+  if (localStorage.getItem('privatebeta03ChangingPractitionerRoleNew')) { profilePage1UrlAction.setAttribute("action", "/private-beta03/check-profile-details"); }
+  if (localStorage.getItem('privatebeta03ChangingPractitionerRole')) { profilePage1UrlAction.setAttribute("action", "/private-beta03/profile-details"); }
 }
-function saveOtherRoleprivatebeta02() {
+function saveOtherRoleprivatebeta03() {
   const otherRoleInput = document.getElementById('otherRole').value;
-  localStorage.setItem('privatebeta02otherRole', otherRoleInput);
+  localStorage.setItem('privatebeta03otherRole', otherRoleInput);
 }
-function saveHCPProfessionalNumberprivatebeta02() {
+function saveHCPProfessionalNumberprivatebeta03() {
   const professionalRegistrationNumberInput = document.getElementById('professionalRegistrationNumber').value;
-  localStorage.setItem('privatebeta02ProfessionalRegistrationNumber', professionalRegistrationNumberInput);
-  if (localStorage.getItem('privatebeta02ChangingPractitionerRegNoNew')) { profilePage1UrlAction.setAttribute("action", "/private-beta02/check-profile-details"); }
-  if (localStorage.getItem('privatebeta02ChangingPractitionerRegNo')) { profilePage1UrlAction.setAttribute("action", "/private-beta02/profile-details"); }
+  localStorage.setItem('privatebeta03ProfessionalRegistrationNumber', professionalRegistrationNumberInput);
+  if (localStorage.getItem('privatebeta03ChangingPractitionerRegNoNew')) { profilePage1UrlAction.setAttribute("action", "/private-beta03/check-profile-details"); }
+  if (localStorage.getItem('privatebeta03ChangingPractitionerRegNo')) { profilePage1UrlAction.setAttribute("action", "/private-beta03/profile-details"); }
 }
-function saveHCPMobilelNumberprivatebeta02() {
+function saveHCPMobilelNumberprivatebeta03() {
   const mobileNumberInput = document.getElementById('mobileNumber').value;
-  localStorage.setItem('privatebeta02MobileNumber', mobileNumberInput);
-  if (localStorage.getItem('privatebeta02ChangingPractitionerPhoneNoNew')) { profilePage1UrlAction.setAttribute("action", "/private-beta02/check-profile-details"); }
-  if (localStorage.getItem('privatebeta02ChangingPractitionerPhoneNo')) { profilePage1UrlAction.setAttribute("action", "/private-beta02/profile-details"); }
+  localStorage.setItem('privatebeta03MobileNumber', mobileNumberInput);
+  if (localStorage.getItem('privatebeta03ChangingPractitionerPhoneNoNew')) { profilePage1UrlAction.setAttribute("action", "/private-beta03/check-profile-details"); }
+  if (localStorage.getItem('privatebeta03ChangingPractitionerPhoneNo')) { profilePage1UrlAction.setAttribute("action", "/private-beta03/profile-details"); }
 }
-function saveHCPOrgNameprivatebeta02() {
+function saveHCPOrgNameprivatebeta03() {
   const organisationNameInput = document.getElementById('organisationName').value;
-  localStorage.setItem('privatebeta02OrganisationName', organisationNameInput);
-  if (localStorage.getItem('privatebeta02ChangingPractitionerOrgNameNew')) { profilePage1UrlAction.setAttribute("action", "/private-beta02/check-profile-details"); }
-  if (localStorage.getItem('privatebeta02ChangingPractitionerOrgName')) { profilePage1UrlAction.setAttribute("action", "/private-beta02/profile-details"); }
+  localStorage.setItem('privatebeta03OrganisationName', organisationNameInput);
+  if (localStorage.getItem('privatebeta03ChangingPractitionerOrgNameNew')) { profilePage1UrlAction.setAttribute("action", "/private-beta03/check-profile-details"); }
+  if (localStorage.getItem('privatebeta03ChangingPractitionerOrgName')) { profilePage1UrlAction.setAttribute("action", "/private-beta03/profile-details"); }
 }
-function saveOrgPostcodeprivatebeta02() {
+function saveOrgPostcodeprivatebeta03() {
   const postcodeInput = document.getElementById('postcode').value;
-  localStorage.setItem('privatebeta02Postcode', postcodeInput);
+  localStorage.setItem('privatebeta03Postcode', postcodeInput);
 }
-function saveHCPOrgAddressprivatebeta02() {
+function saveHCPOrgAddressprivatebeta03() {
   const organisationNameInput = document.getElementById('organisationName').value;
-  localStorage.setItem('privatebeta02OrganisationName', organisationNameInput);
+  localStorage.setItem('privatebeta03OrganisationName', organisationNameInput);
 
-  if (localStorage.getItem('privatebeta02ChangingPractitionerOrgNameNew')) { profilePage1UrlAction.setAttribute("action", "/private-beta02/check-sr1-form"); }
-  if (localStorage.getItem('privatebeta02ChangingPractitionerOrgName')) { profilePage1UrlAction.setAttribute("action", "/private-beta02/check-sr1-form"); }
+  if (localStorage.getItem('privatebeta03ChangingPractitionerOrgNameNew')) { profilePage1UrlAction.setAttribute("action", "/private-beta03/check-sr1-form"); }
+  if (localStorage.getItem('privatebeta03ChangingPractitionerOrgName')) { profilePage1UrlAction.setAttribute("action", "/private-beta03/check-sr1-form"); }
 
   const organisationAddressLine1Input = document.getElementById('organisationAddressLine1').value;
-  localStorage.setItem('privatebeta02OrganisationAddressLine1', organisationAddressLine1Input);
+  localStorage.setItem('privatebeta03OrganisationAddressLine1', organisationAddressLine1Input);
 
   const organisationAddressLine2Input = document.getElementById('organisationAddressLine2').value;
-  localStorage.setItem('privatebeta02OrganisationAddressLine2', organisationAddressLine2Input);
+  localStorage.setItem('privatebeta03OrganisationAddressLine2', organisationAddressLine2Input);
 
   const organisationAddressCountyInput = document.getElementById('organisationAddressCounty').value;
-  localStorage.setItem('privatebeta02OrganisationAddressCounty', organisationAddressCountyInput);
+  localStorage.setItem('privatebeta03OrganisationAddressCounty', organisationAddressCountyInput);
 
   const organisationtownOrCityInput = document.getElementById('organisationTownCity').value;
-  localStorage.setItem('privatebeta02TownOrCity', organisationtownOrCityInput);
+  localStorage.setItem('privatebeta03TownOrCity', organisationtownOrCityInput);
 
   const postcodeInput = document.getElementById('postcode').value;
-  localStorage.setItem('privatebeta02Postcode', postcodeInput);
+  localStorage.setItem('privatebeta03Postcode', postcodeInput);
 }
 
-// Address selection private-beta02
-function privatebeta02PatientAddressFn(patientAddress) {
+// Address selection private-beta03
+function privatebeta03PatientAddressFn(patientAddress) {
   currentPatientAddress = patientAddress.value;
-  localStorage.setItem('privatebeta02PatientAddress', currentPatientAddress);
+  localStorage.setItem('privatebeta03PatientAddress', currentPatientAddress);
   if (consoleLogs) console.log('Address: ' + currentPatientAddress);
   let patientaddressline1 = document.getElementById('patientaddressline1');
   let patientaddresstown = document.getElementById('patientaddresstown');
   let patientPostcode = document.getElementById('patientPostcode');
-  localStorage.setItem("privatebeta02PatientAddressLine1", '17 Richmond Road');
-  localStorage.setItem("privatebeta02PatientAddressTown", 'Staines-upon-Thames');
-  localStorage.setItem("privatebeta02PatientPostcode", 'SU1 5AS');
+  localStorage.setItem("privatebeta03PatientAddressLine1", '17 Richmond Road');
+  localStorage.setItem("privatebeta03PatientAddressTown", 'Staines-upon-Thames');
+  localStorage.setItem("privatebeta03PatientPostcode", 'SU1 5AS');
 }
-function saveAddressprivatebeta02() {
-  if (localStorage.getItem('privatebeta02ChangingPatientAddressNew')) { profilePage1UrlAction.setAttribute("action", "/private-beta02/check-profile-details"); }
-  if (localStorage.getItem('privatebeta02ChangingPatientAddress')) { profilePage1UrlAction.setAttribute("action", "/private-beta02/profile-details"); }
+function saveAddressprivatebeta03() {
+  if (localStorage.getItem('privatebeta03ChangingPatientAddressNew')) { profilePage1UrlAction.setAttribute("action", "/private-beta03/check-profile-details"); }
+  if (localStorage.getItem('privatebeta03ChangingPatientAddress')) { profilePage1UrlAction.setAttribute("action", "/private-beta03/profile-details"); }
 }
 // function saveHCPNameprivatebeta01() {
 //  const firstNameInput = document.getElementById('firstName').value;
@@ -12823,19 +12823,19 @@ function saveAddressprivatebeta02() {
 //  if (localStorage.getItem('privatebeta01ChangingPractitionerName')) { profilePage1UrlAction.setAttribute("action", "/private-beta01/profile-details"); }
 //  if (localStorage.getItem('privatebeta01ChangingPractitionerNameNew')) { profilePage1UrlAction.setAttribute("action", "/private-beta01/check-profile-details"); }
 //}
-function privatebeta02OrganisationAddressFn(selectorganisationaddress) {
+function privatebeta03OrganisationAddressFn(selectorganisationaddress) {
   currentOrganisationAddress = selectorganisationaddress.value;
-  localStorage.setItem('privatebeta02OrganisationAddress', currentOrganisationAddress);
+  localStorage.setItem('privatebeta03OrganisationAddress', currentOrganisationAddress);
   if (consoleLogs) console.log('Address: ' + currentOrganisationAddress);
 
   let organisationaddressline1 = document.getElementById('organisationaddressline1');
   let organisationaddressline2 = document.getElementById('organisationaddressline2');
   let organisationTownCity = document.getElementById('organisationTownCity');
   let postcode = document.getElementById('postcode');
-  localStorage.setItem("privatebeta02OrganisationAddressLine1", 'Ashford Health Clinic');
-  localStorage.setItem("privatebeta02OrganisationAddressLine2", 'London Road');
-  localStorage.setItem("privatebeta02TownOrCity", 'Ashford');
-  localStorage.setItem("privatebeta02Postcode", 'TW1 3AA');
+  localStorage.setItem("privatebeta03OrganisationAddressLine1", 'Ashford Health Clinic');
+  localStorage.setItem("privatebeta03OrganisationAddressLine2", 'London Road');
+  localStorage.setItem("privatebeta03TownOrCity", 'Ashford');
+  localStorage.setItem("privatebeta03Postcode", 'TW1 3AA');
 }
 // function saveHCPOrgAddressprivatebeta01() {
 // const organisationNameInput = document.getElementById('organisationName').value;
@@ -12858,7 +12858,7 @@ function privatebeta02OrganisationAddressFn(selectorganisationaddress) {
 //  const postcodeInput = document.getElementById('postcode').value;
 //  localStorage.setItem('privatebeta01Postcode', postcodeInput);
 //}
-function privatebeta02AddDetails(addDetails) {
+function privatebeta03AddDetails(addDetails) {
   wantAddDetails = addDetails.value;
   localStorage.setItem('privatebeta0AddDetails', wantAddDetails);
   if (consoleLogs) console.log('Want to add details to new SR1 form: ' + wantAddDetails);
@@ -14341,8 +14341,8 @@ function privatebeta01SavePatientDetails(event) {
   localStorage.setItem('privatebeta01DateofSpecialRulesYear', dateofSpecialRulesYear.value);
 }
 
-// private-beta02
-function privatebeta02SavePatientDetails(event) {
+// private-beta03
+function privatebeta03SavePatientDetails(event) {
   event.preventDefault();
   console.log('Save patient details');
   let PatientFirstName = document.getElementById('PatientFirstName');
@@ -14361,24 +14361,24 @@ function privatebeta02SavePatientDetails(event) {
   let dateofSpecialRulesDay = document.getElementById('dateofSpecialRules-day');
   let dateofSpecialRulesMonth = document.getElementById('dateofSpecialRules-month');
   let dateofSpecialRulesYear = document.getElementById('dateofSpecialRules-year');
-  localStorage.setItem('privatebeta02PatientFirstName', PatientFirstName.value);
-  localStorage.setItem('privatebeta02PatientLastName', PatientLastName.value);
-  localStorage.setItem('privatebeta02PatientNameDefined', PatientNameDefined.value);
-  localStorage.setItem('privatebeta02PatientLastName', PatientLastName.value);
-  localStorage.setItem('privatebeta02PatientAddressLine1', patientaddressline1.value);
-  localStorage.setItem('privatebeta02PatientAddressLine2', patientaddressline2.value);
-  localStorage.setItem('privatebeta02PatientAddressTown', patientaddresstown.value);
-  localStorage.setItem('privatebeta02PatientAddressCounty', patientaddresscounty.value);
-  localStorage.setItem('privatebeta02PatientPostcode', patientPostcode.value);
-  localStorage.setItem('privatebeta02PatientBuilding', patientBuilding.value);
-  localStorage.setItem('privatebeta02PatientAddress', patientAddress.value);
-  localStorage.setItem('privatebeta02DobDay', dobDay.value);
-  localStorage.setItem('privatebeta02DobMonth', dobMonth.value);
-  localStorage.setItem('privatebeta02DobYear', dobYear.value);
-  localStorage.setItem('privatebeta02NiNo', niNo.value);
-  localStorage.setItem('privatebeta02DateofSpecialRulesDay', dateofSpecialRulesDay.value);
-  localStorage.setItem('privatebeta02DateofSpecialRulesMonth', dateofSpecialRulesMonth.value);
-  localStorage.setItem('privatebeta02DateofSpecialRulesYear', dateofSpecialRulesYear.value);
+  localStorage.setItem('privatebeta03PatientFirstName', PatientFirstName.value);
+  localStorage.setItem('privatebeta03PatientLastName', PatientLastName.value);
+  localStorage.setItem('privatebeta03PatientNameDefined', PatientNameDefined.value);
+  localStorage.setItem('privatebeta03PatientLastName', PatientLastName.value);
+  localStorage.setItem('privatebeta03PatientAddressLine1', patientaddressline1.value);
+  localStorage.setItem('privatebeta03PatientAddressLine2', patientaddressline2.value);
+  localStorage.setItem('privatebeta03PatientAddressTown', patientaddresstown.value);
+  localStorage.setItem('privatebeta03PatientAddressCounty', patientaddresscounty.value);
+  localStorage.setItem('privatebeta03PatientPostcode', patientPostcode.value);
+  localStorage.setItem('privatebeta03PatientBuilding', patientBuilding.value);
+  localStorage.setItem('privatebeta03PatientAddress', patientAddress.value);
+  localStorage.setItem('privatebeta03DobDay', dobDay.value);
+  localStorage.setItem('privatebeta03DobMonth', dobMonth.value);
+  localStorage.setItem('privatebeta03DobYear', dobYear.value);
+  localStorage.setItem('privatebeta03NiNo', niNo.value);
+  localStorage.setItem('privatebeta03DateofSpecialRulesDay', dateofSpecialRulesDay.value);
+  localStorage.setItem('privatebeta03DateofSpecialRulesMonth', dateofSpecialRulesMonth.value);
+  localStorage.setItem('privatebeta03DateofSpecialRulesYear', dateofSpecialRulesYear.value);
 }
 
 // ========================
@@ -14439,9 +14439,9 @@ function hcpmvp03AwareOfDiagnosis(awareOfDiagnosis) {
 function privatebeta01AwareOfDiagnosis(awareOfDiagnosis) {
   localStorage.setItem('privatebeta01AwareOfDiagnosis', awareOfDiagnosis);
 }
-// private-beta02
-function privatebeta02AwareOfDiagnosis(awareOfDiagnosis) {
-  localStorage.setItem('privatebeta02AwareOfDiagnosis', awareOfDiagnosis);
+// private-beta03
+function privatebeta03AwareOfDiagnosis(awareOfDiagnosis) {
+  localStorage.setItem('privatebeta03AwareOfDiagnosis', awareOfDiagnosis);
 }
 
 // Aware of prognosis
@@ -14486,9 +14486,9 @@ function hcpmvp03AwareOfPrognosis(awareOfPrognosis) {
 function privatebeta01AwareOfPrognosis(awareOfPrognosis) {
   localStorage.setItem('privatebeta01AwareOfPrognosis', awareOfPrognosis);
 }
-// private-beta02
-function privatebeta02AwareOfPrognosis(awareOfPrognosis) {
-  localStorage.setItem('privatebeta02AwareOfPrognosis', awareOfPrognosis);
+// private-beta03
+function privatebeta03AwareOfPrognosis(awareOfPrognosis) {
+  localStorage.setItem('privatebeta03AwareOfPrognosis', awareOfPrognosis);
 }
 
 //Diagnosis
@@ -14757,8 +14757,8 @@ function resetSaveDiagnosisDetailsBtn() {
   let saveDiagnosisDetailsBtn = document.getElementById('saveDiagnosisDetailsBtn');
   saveDiagnosisDetailsBtn.innerHTML = "Save as draft";
 }
-// private-beta02
-function privatebeta02SaveDiagnosisDetails(event) {
+// private-beta03
+function privatebeta03SaveDiagnosisDetails(event) {
   event.preventDefault();
   console.log('Save Diagnosis details');
   let whatIsTheDiagnosis = document.getElementById('whatIsTheDiagnosis');
@@ -14766,13 +14766,13 @@ function privatebeta02SaveDiagnosisDetails(event) {
   let dodMonth = document.getElementById('dod-month');
   let dodYear = document.getElementById('dod-year');
   let otherRelevantDiagnosis = document.getElementById('otherRelevantDiagnosis');
-  localStorage.setItem('privatebeta02WhatIsTheDiagnosis', whatIsTheDiagnosis.value);
-  localStorage.setItem('privatebeta02DodDay', dodDay.value);
-  localStorage.setItem('privatebeta02DodMonth', dodMonth.value);
-  localStorage.setItem('privatebeta02DodYear', dodYear.value);
-  localStorage.setItem('privatebeta02OtherRelevantDiagnosis', otherRelevantDiagnosis.value);
-  localStorage.setItem('privatebeta02AwareOfDiagnosis', currentValueOfDiagnosis);
-  localStorage.setItem('privatebeta02AwareOfPrognosis', currentValueOfPrognosis);
+  localStorage.setItem('privatebeta03WhatIsTheDiagnosis', whatIsTheDiagnosis.value);
+  localStorage.setItem('privatebeta03DodDay', dodDay.value);
+  localStorage.setItem('privatebeta03DodMonth', dodMonth.value);
+  localStorage.setItem('privatebeta03DodYear', dodYear.value);
+  localStorage.setItem('privatebeta03OtherRelevantDiagnosis', otherRelevantDiagnosis.value);
+  localStorage.setItem('privatebeta03AwareOfDiagnosis', currentValueOfDiagnosis);
+  localStorage.setItem('privatebeta03AwareOfPrognosis', currentValueOfPrognosis);
   // change button text
   let saveDiagnosisDetailsBtn = document.getElementById('saveDiagnosisDetailsBtn');
   saveDiagnosisDetailsBtn.innerHTML = "Draft saved";
@@ -14919,12 +14919,12 @@ function resetSaveClinicalFeaturesDetailsBtn() {
   let saveClinicalFeaturesDetailsBtn = document.getElementById('saveClinicalFeaturesDetailsBtn');
   saveClinicalFeaturesDetailsBtn.innerHTML = "Save as draft";
 }
-// private-beta02
-function privatebeta02SaveClinicalFeatures(event) {
+// private-beta03
+function privatebeta03SaveClinicalFeatures(event) {
   event.preventDefault();
   console.log('Save clinical features');
   let detailsOfClinicalFeatures = document.getElementById('detailsOfClinicalFeatures');
-  localStorage.setItem('privatebeta02DetailsOfClinicalFeatures', detailsOfClinicalFeatures.value);
+  localStorage.setItem('privatebeta03DetailsOfClinicalFeatures', detailsOfClinicalFeatures.value);
   // change button text
   let saveClinicalFeaturesDetailsBtn = document.getElementById('saveClinicalFeaturesDetailsBtn');
   saveClinicalFeaturesDetailsBtn.innerHTML = "Draft saved";
@@ -15072,12 +15072,12 @@ function resetTreatmentDetailsBtn() {
   let saveTreatmentDetailsBtn = document.getElementById('saveTreatmentDetailsBtn');
   saveTreatmentDetailsBtn.innerHTML = "Save as draft";
 }
-// private-beta02
-function privatebeta02SaveTreatment(event) {
+// private-beta03
+function privatebeta03SaveTreatment(event) {
   event.preventDefault();
   console.log('Save Treatmemt');
   let treatment = document.getElementById('treatment');
-  localStorage.setItem('privatebeta02Treatment', treatment.value);
+  localStorage.setItem('privatebeta03Treatment', treatment.value);
   // change button text
   let saveTreatmentDetailsBtn = document.getElementById('saveTreatmentDetailsBtn');
   saveTreatmentDetailsBtn.innerHTML = "Draft saved";
@@ -15106,7 +15106,7 @@ function updateProfileDetailsFromSendSR1FormPage() {
   localStorage.setItem('hcpmvp02UpdateProfileDetailsFromSendSR1FormPage', true);
   localStorage.setItem('hcpmvp03UpdateProfileDetailsFromSendSR1FormPage', true);
   localStorage.setItem('privatebeta01UpdateProfileDetailsFromSendSR1FormPage', true);
-  localStorage.setItem('privatebeta02UpdateProfileDetailsFromSendSR1FormPage', true);
+  localStorage.setItem('privatebeta03UpdateProfileDetailsFromSendSR1FormPage', true);
 }
 
 // ===============================
@@ -15553,39 +15553,39 @@ function getSR1Dataprivatebeta01() {
     orgaddressline1,
   };
 }
-// private-beta02
-function getSR1Dataprivatebeta02() {
-  const firstName = localStorage.getItem('privatebeta02PatientFirstName');
-  const lastName = localStorage.getItem('privatebeta02PatientLastName');
-  const dobDay = localStorage.getItem('privatebeta02DobDay');
-  const dobMonth = localStorage.getItem('privatebeta02DobMonth');
-  const dobYear = localStorage.getItem('privatebeta02DobYear');
-  const nino = localStorage.getItem('privatebeta02NiNo');
-  const dateofSpecialRulesDay = localStorage.getItem('privatebeta02DateofSpecialRulesDay');
-  const dateofSpecialRulesMonth = localStorage.getItem('privatebeta02DateofSpecialRulesMonth');
-  const dateofSpecialRulesYear = localStorage.getItem('privatebeta02DateofSpecialRulesYear');
-  const diagnosis = localStorage.getItem('privatebeta02WhatIsTheDiagnosis');
-  const dodDay = localStorage.getItem('privatebeta02DodDay');
-  const dodMonth = localStorage.getItem('privatebeta02DodMonth');
-  const dodYear = localStorage.getItem('privatebeta02DodYear');
-  const otherRelevantDiagnosis = localStorage.getItem('privatebeta02OtherRelevantDiagnosis');
-  const awareOfDiagnosis = localStorage.getItem('privatebeta02AwareOfDiagnosis');
-  const awareOfPrognosis = localStorage.getItem('privatebeta02AwareOfPrognosis');
-  const detailsOfClinicalFeatures = localStorage.getItem('privatebeta02DetailsOfClinicalFeatures');
-  const treatment = localStorage.getItem('privatebeta02Treatment');
-  const patientAddressLine1 = localStorage.getItem('privatebeta02PatientAddressLine1');
-  const patientAddressLine2 = localStorage.getItem('privatebeta02PatientAddressLine2');
-  const patientAddressTown = localStorage.getItem('privatebeta02PatientAddressTown');
-  const patientAddressCounty = localStorage.getItem('privatebeta02PatientAddressCounty');
-  const patientPostcode = localStorage.getItem('privatebeta02PatientPostcode');
-  const patientBuilding = localStorage.getItem('privatebeta02PatientBuilding');
-  const patientAddress = localStorage.getItem('privatebeta02PatientAddress');
-  const hcpfirstname = localStorage.getItem('privatebeta02Firstname');
-  const role = localStorage.getItem('privatebeta02Role');
-  const professionalregistrationnumber = localStorage.getItem('privatebeta02ProfessionalRegistrationNumber');
-  const phonenumber = localStorage.getItem('privatebeta02MobileNumber');
-  const organisationAddress = localStorage.getItem('privatebeta02OrganisationAddress');
-  const orgaddressline1 = localStorage.getItem('privatebeta02OrganisationAddressLine1');
+// private-beta03
+function getSR1Dataprivatebeta03() {
+  const firstName = localStorage.getItem('privatebeta03PatientFirstName');
+  const lastName = localStorage.getItem('privatebeta03PatientLastName');
+  const dobDay = localStorage.getItem('privatebeta03DobDay');
+  const dobMonth = localStorage.getItem('privatebeta03DobMonth');
+  const dobYear = localStorage.getItem('privatebeta03DobYear');
+  const nino = localStorage.getItem('privatebeta03NiNo');
+  const dateofSpecialRulesDay = localStorage.getItem('privatebeta03DateofSpecialRulesDay');
+  const dateofSpecialRulesMonth = localStorage.getItem('privatebeta03DateofSpecialRulesMonth');
+  const dateofSpecialRulesYear = localStorage.getItem('privatebeta03DateofSpecialRulesYear');
+  const diagnosis = localStorage.getItem('privatebeta03WhatIsTheDiagnosis');
+  const dodDay = localStorage.getItem('privatebeta03DodDay');
+  const dodMonth = localStorage.getItem('privatebeta03DodMonth');
+  const dodYear = localStorage.getItem('privatebeta03DodYear');
+  const otherRelevantDiagnosis = localStorage.getItem('privatebeta03OtherRelevantDiagnosis');
+  const awareOfDiagnosis = localStorage.getItem('privatebeta03AwareOfDiagnosis');
+  const awareOfPrognosis = localStorage.getItem('privatebeta03AwareOfPrognosis');
+  const detailsOfClinicalFeatures = localStorage.getItem('privatebeta03DetailsOfClinicalFeatures');
+  const treatment = localStorage.getItem('privatebeta03Treatment');
+  const patientAddressLine1 = localStorage.getItem('privatebeta03PatientAddressLine1');
+  const patientAddressLine2 = localStorage.getItem('privatebeta03PatientAddressLine2');
+  const patientAddressTown = localStorage.getItem('privatebeta03PatientAddressTown');
+  const patientAddressCounty = localStorage.getItem('privatebeta03PatientAddressCounty');
+  const patientPostcode = localStorage.getItem('privatebeta03PatientPostcode');
+  const patientBuilding = localStorage.getItem('privatebeta03PatientBuilding');
+  const patientAddress = localStorage.getItem('privatebeta03PatientAddress');
+  const hcpfirstname = localStorage.getItem('privatebeta03Firstname');
+  const role = localStorage.getItem('privatebeta03Role');
+  const professionalregistrationnumber = localStorage.getItem('privatebeta03ProfessionalRegistrationNumber');
+  const phonenumber = localStorage.getItem('privatebeta03MobileNumber');
+  const organisationAddress = localStorage.getItem('privatebeta03OrganisationAddress');
+  const orgaddressline1 = localStorage.getItem('privatebeta03OrganisationAddressLine1');
   return {
     firstName,
     lastName,
@@ -16088,8 +16088,8 @@ function getUrlWithSR1DataAsQueryParamsprivatebeta01(origin, pathname) {
   url.searchParams.set('privatebeta01OrganisationAddressLine1', orgaddressline1);
   return url;
 }
-// private-beta02
-function getUrlWithSR1DataAsQueryParamsprivatebeta02(origin, pathname) {
+// private-beta03
+function getUrlWithSR1DataAsQueryParamsprivatebeta03(origin, pathname) {
   const {
     firstName,
     lastName,
@@ -16122,40 +16122,40 @@ function getUrlWithSR1DataAsQueryParamsprivatebeta02(origin, pathname) {
     phonenumber,
     organisationAddress,
     orgaddressline1,
-  } = getSR1Dataprivatebeta02();
+  } = getSR1Dataprivatebeta03();
   const url = new URL(origin);
   url.pathname = pathname;
-  url.searchParams.set('privatebeta02PatientFirstName', firstName)
-  url.searchParams.set('privatebeta02PatientLastName', lastName)
-  url.searchParams.set('privatebeta02DobDay', dobDay)
-  url.searchParams.set('privatebeta02DobMonth', dobMonth)
-  url.searchParams.set('privatebeta02DobYear', dobYear)
-  url.searchParams.set('privatebeta02NiNo', nino)
-  url.searchParams.set('privatebeta02DateofSpecialRulesDay', dateofSpecialRulesDay)
-  url.searchParams.set('privatebeta02DateofSpecialRulesMonth', dateofSpecialRulesMonth)
-  url.searchParams.set('privatebeta02DateofSpecialRulesYear', dateofSpecialRulesYear)
-  url.searchParams.set('privatebeta02WhatIsTheDiagnosis', diagnosis)
-  url.searchParams.set('privatebeta02DodDay', dodDay)
-  url.searchParams.set('privatebeta02DodMonth', dodMonth)
-  url.searchParams.set('privatebeta02DodYear', dodYear)
-  url.searchParams.set('privatebeta02OtherRelevantDiagnosis', otherRelevantDiagnosis)
-  url.searchParams.set('privatebeta02AwareOfDiagnosis', awareOfDiagnosis)
-  url.searchParams.set('privatebeta02AwareOfPrognosis', awareOfPrognosis)
-  url.searchParams.set('privatebeta02DetailsOfClinicalFeatures', detailsOfClinicalFeatures)
-  url.searchParams.set('privatebeta02Treatment', treatment)
-  url.searchParams.set('privatebeta02PatientAddressLine1', patientAddressLine1)
-  url.searchParams.set('privatebeta02PatientAddressLine2', patientAddressLine2)
-  url.searchParams.set('privatebeta02PatientAddressTown', patientAddressTown)
-  url.searchParams.set('privatebeta02PatientAddressCounty', patientAddressCounty)
-  url.searchParams.set('privatebeta02PatientPostcode', patientPostcode)
-  url.searchParams.set('privatebeta02PatientBuilding', patientBuilding)
-  url.searchParams.set('privatebeta02PatientAddress', patientAddress)
-  url.searchParams.set('privatebeta02Firstname', hcpfirstname)
-  url.searchParams.set('privatebeta02Role', role)
-  url.searchParams.set('privatebeta02ProfessionalRegistrationNumber', professionalregistrationnumber)
-  url.searchParams.set('privatebeta02MobileNumber', phonenumber)
-  url.searchParams.set('privatebeta02OrganisationAddress', organisationAddress)
-  url.searchParams.set('privatebeta02OrganisationAddressLine1', orgaddressline1);
+  url.searchParams.set('privatebeta03PatientFirstName', firstName)
+  url.searchParams.set('privatebeta03PatientLastName', lastName)
+  url.searchParams.set('privatebeta03DobDay', dobDay)
+  url.searchParams.set('privatebeta03DobMonth', dobMonth)
+  url.searchParams.set('privatebeta03DobYear', dobYear)
+  url.searchParams.set('privatebeta03NiNo', nino)
+  url.searchParams.set('privatebeta03DateofSpecialRulesDay', dateofSpecialRulesDay)
+  url.searchParams.set('privatebeta03DateofSpecialRulesMonth', dateofSpecialRulesMonth)
+  url.searchParams.set('privatebeta03DateofSpecialRulesYear', dateofSpecialRulesYear)
+  url.searchParams.set('privatebeta03WhatIsTheDiagnosis', diagnosis)
+  url.searchParams.set('privatebeta03DodDay', dodDay)
+  url.searchParams.set('privatebeta03DodMonth', dodMonth)
+  url.searchParams.set('privatebeta03DodYear', dodYear)
+  url.searchParams.set('privatebeta03OtherRelevantDiagnosis', otherRelevantDiagnosis)
+  url.searchParams.set('privatebeta03AwareOfDiagnosis', awareOfDiagnosis)
+  url.searchParams.set('privatebeta03AwareOfPrognosis', awareOfPrognosis)
+  url.searchParams.set('privatebeta03DetailsOfClinicalFeatures', detailsOfClinicalFeatures)
+  url.searchParams.set('privatebeta03Treatment', treatment)
+  url.searchParams.set('privatebeta03PatientAddressLine1', patientAddressLine1)
+  url.searchParams.set('privatebeta03PatientAddressLine2', patientAddressLine2)
+  url.searchParams.set('privatebeta03PatientAddressTown', patientAddressTown)
+  url.searchParams.set('privatebeta03PatientAddressCounty', patientAddressCounty)
+  url.searchParams.set('privatebeta03PatientPostcode', patientPostcode)
+  url.searchParams.set('privatebeta03PatientBuilding', patientBuilding)
+  url.searchParams.set('privatebeta03PatientAddress', patientAddress)
+  url.searchParams.set('privatebeta03Firstname', hcpfirstname)
+  url.searchParams.set('privatebeta03Role', role)
+  url.searchParams.set('privatebeta03ProfessionalRegistrationNumber', professionalregistrationnumber)
+  url.searchParams.set('privatebeta03MobileNumber', phonenumber)
+  url.searchParams.set('privatebeta03OrganisationAddress', organisationAddress)
+  url.searchParams.set('privatebeta03OrganisationAddressLine1', orgaddressline1);
   return url;
 }
 
@@ -17020,111 +17020,111 @@ function saveTreatmentSR1Formprivatebeta01() {
   let treatment = document.getElementById('treatment');
   localStorage.setItem('privatebeta01Treatment', treatment.value);
 }
-// privte-beta02
-// Save patient's name private-beta02
-function savePatientNameSR1Formprivatebeta02() {
+// privte-beta03
+// Save patient's name private-beta03
+function savePatientNameSR1Formprivatebeta03() {
   let PatientFirstName = document.getElementById('PatientFirstName');
   let PatientLastName = document.getElementById('PatientLastName');
-  localStorage.setItem('privatebeta02PatientFirstName', PatientFirstName.value);
-  localStorage.setItem('privatebeta02PatientLastName', PatientLastName.value);
-  localStorage.setItem("privatebeta02PatientNameDefined", "Yes");
+  localStorage.setItem('privatebeta03PatientFirstName', PatientFirstName.value);
+  localStorage.setItem('privatebeta03PatientLastName', PatientLastName.value);
+  localStorage.setItem("privatebeta03PatientNameDefined", "Yes");
 }
-function saveLaterPatientNameSR1Formprivatebeta02() {
+function saveLaterPatientNameSR1Formprivatebeta03() {
   let PatientFirstName = document.getElementById('PatientFirstName');
   let PatientMiddleName = document.getElementById('PatientMiddleName');
   let PatientLastName = document.getElementById('PatientLastName');
   let patientDateOfBirthstatus = document.getElementById('patientDateOfBirth-status');
-  localStorage.setItem('privatebeta02PatientFirstName', PatientFirstName.value);
-  localStorage.setItem('privatebeta02PatientLastName', PatientLastName.value);
+  localStorage.setItem('privatebeta03PatientFirstName', PatientFirstName.value);
+  localStorage.setItem('privatebeta03PatientLastName', PatientLastName.value);
 }
-// Save patient's address private-beta02
-function savePatientAddressSR1Formprivatebeta02() {
+// Save patient's address private-beta03
+function savePatientAddressSR1Formprivatebeta03() {
   let patientaddressline1 = document.getElementById('patientaddressline1');
   let patientaddressline2 = document.getElementById('patientaddressline2');
   let patientaddresstown = document.getElementById('patientaddresstown');
   let patientaddresscounty = document.getElementById('patientaddresscounty');
   let patientPostcode = document.getElementById('patientPostcode');
-  localStorage.setItem('privatebeta02PatientAddressLine1', patientaddressline1.value);
-  localStorage.setItem('privatebeta02PatientAddressLine2', patientaddressline2.value);
-  localStorage.setItem('privatebeta02PatientAddressTown', patientaddresstown.value);
-  localStorage.setItem('privatebeta02PatientAddressCounty', patientaddresscounty.value);
-  localStorage.setItem('privatebeta02PatientPostcode', patientPostcode.value);
+  localStorage.setItem('privatebeta03PatientAddressLine1', patientaddressline1.value);
+  localStorage.setItem('privatebeta03PatientAddressLine2', patientaddressline2.value);
+  localStorage.setItem('privatebeta03PatientAddressTown', patientaddresstown.value);
+  localStorage.setItem('privatebeta03PatientAddressCounty', patientaddresscounty.value);
+  localStorage.setItem('privatebeta03PatientPostcode', patientPostcode.value);
 }
-function savePatientAddressWithParametersSR1Formprivatebeta02(addressline1, addressline2, town, county, postcode) {
-  localStorage.setItem('privatebeta02PatientAddressLine1', addressline1);
-  localStorage.setItem('privatebeta02PatientAddressLine2', addressline2);
-  localStorage.setItem('privatebeta02PatientAddressTown', town);
-  localStorage.setItem('privatebeta02PatientAddressCounty', county);
-  localStorage.setItem('privatebeta02PatientPostcode', postcode);
+function savePatientAddressWithParametersSR1Formprivatebeta03(addressline1, addressline2, town, county, postcode) {
+  localStorage.setItem('privatebeta03PatientAddressLine1', addressline1);
+  localStorage.setItem('privatebeta03PatientAddressLine2', addressline2);
+  localStorage.setItem('privatebeta03PatientAddressTown', town);
+  localStorage.setItem('privatebeta03PatientAddressCounty', county);
+  localStorage.setItem('privatebeta03PatientPostcode', postcode);
 }
-// Save patient's postcode private-beta02
-function savePostcodeSR1Formprivatebeta02() {
+// Save patient's postcode private-beta03
+function savePostcodeSR1Formprivatebeta03() {
   let patientPostcode = document.getElementById('patientPostcode');
   let patientBuilding = document.getElementById('patientBuilding');
-  localStorage.setItem('privatebeta02PatientPostcode', patientPostcode.value);
-  localStorage.setItem('privatebeta02PatientBuilding', patientBuilding.value);
+  localStorage.setItem('privatebeta03PatientPostcode', patientPostcode.value);
+  localStorage.setItem('privatebeta03PatientBuilding', patientBuilding.value);
 }
-// Save patient's dob private-beta02
-function saveDOBSR1Formprivatebeta02() {
+// Save patient's dob private-beta03
+function saveDOBSR1Formprivatebeta03() {
   let dobDay = document.getElementById('dob-day');
   let dobMonth = document.getElementById('dob-month');
   let dobYear = document.getElementById('dob-year');
-  localStorage.setItem('privatebeta02DobDay', dobDay.value);
-  localStorage.setItem('privatebeta02DobMonth', dobMonth.value);
-  localStorage.setItem('privatebeta02DobYear', dobYear.value);
+  localStorage.setItem('privatebeta03DobDay', dobDay.value);
+  localStorage.setItem('privatebeta03DobMonth', dobMonth.value);
+  localStorage.setItem('privatebeta03DobYear', dobYear.value);
 }
-// Save patient's NIno private-beta02
-function savenniNoSR1Formprivatebeta02() {
+// Save patient's NIno private-beta03
+function savenniNoSR1Formprivatebeta03() {
   let niNoinput = document.getElementById('niNoinput');
   localStorage.setItem('privatebeta01NiNoinput', niNoinput.value);
 }
 // Save patient's Date since meeting Special Rules private-beta01
-function saveDateofSpecialRulesSR1Formprivatebeta02() {
+function saveDateofSpecialRulesSR1Formprivatebeta03() {
   let dateofSpecialRulesDay = document.getElementById('dateofSpecialRules-day');
   let dateofSpecialRulesMonth = document.getElementById('dateofSpecialRules-month');
   let dateofSpecialRulesYear = document.getElementById('dateofSpecialRules-year');
-  localStorage.setItem('privatebeta02DateofSpecialRulesDay', dateofSpecialRulesDay.value);
-  localStorage.setItem('privatebeta02DateofSpecialRulesMonth', dateofSpecialRulesMonth.value);
-  localStorage.setItem('privatebeta02DateofSpecialRulesYear', dateofSpecialRulesYear.value);
+  localStorage.setItem('privatebeta03DateofSpecialRulesDay', dateofSpecialRulesDay.value);
+  localStorage.setItem('privatebeta03DateofSpecialRulesMonth', dateofSpecialRulesMonth.value);
+  localStorage.setItem('privatebeta03DateofSpecialRulesYear', dateofSpecialRulesYear.value);
 }
-// Save Diagnosis private-beta02
-function saveDiagnosisSR1Formprivatebeta02() {
+// Save Diagnosis private-beta03
+function saveDiagnosisSR1Formprivatebeta03() {
   let whatIsTheDiagnosis = document.getElementById('whatIsTheDiagnosis');
-  localStorage.setItem('privatebeta02WhatIsTheDiagnosis', whatIsTheDiagnosis.value);
+  localStorage.setItem('privatebeta03WhatIsTheDiagnosis', whatIsTheDiagnosis.value);
 }
-// Save Date diagnosis private-beta02
-function saveDateDiagnosisSR1Formprivatebeta02() {
+// Save Date diagnosis private-beta03
+function saveDateDiagnosisSR1Formprivatebeta03() {
   let dodDay = document.getElementById('dod-day');
   let dodMonth = document.getElementById('dod-month');
   let dodYear = document.getElementById('dod-year');
-  localStorage.setItem('privatebeta02DodDay', dodDay.value);
-  localStorage.setItem('privatebeta02DodMonth', dodMonth.value);
-  localStorage.setItem('privatebeta02DodYear', dodYear.value);
+  localStorage.setItem('privatebeta03DodDay', dodDay.value);
+  localStorage.setItem('privatebeta03DodMonth', dodMonth.value);
+  localStorage.setItem('privatebeta03DodYear', dodYear.value);
 }
-// Save Other Diagnosis private-beta02
-function saveOtherDiagnosisSR1Formprivatebeta02() {
+// Save Other Diagnosis private-beta03
+function saveOtherDiagnosisSR1Formprivatebeta03() {
   let otherRelevantDiagnosisinput = document.getElementById('otherRelevantDiagnosisinput');
-  localStorage.setItem('privatebeta02OtherRelevantDiagnosisinput', otherRelevantDiagnosisinput.value);
+  localStorage.setItem('privatebeta03OtherRelevantDiagnosisinput', otherRelevantDiagnosisinput.value);
 }
-// Save Aware of Diagnosis private-beta02
-function saveAwareOfDiagnosisSR1Formprivatebeta02() {
-  localStorage.setItem('privatebeta02AwareOfDiagnosis', currentValueOfDiagnosis);
-  localStorage.setItem('privatebeta02AwareOfDiagnosis', currentValueOfDiagnosis);
+// Save Aware of Diagnosis private-beta03
+function saveAwareOfDiagnosisSR1Formprivatebeta03() {
+  localStorage.setItem('privatebeta03AwareOfDiagnosis', currentValueOfDiagnosis);
+  localStorage.setItem('privatebeta03AwareOfDiagnosis', currentValueOfDiagnosis);
 }
-// Save Other Diagnosis private-beta02
-function saveAwareOfPrognosisSR1Formprivatebeta02() {
-  localStorage.setItem('privatebeta02AwareOfPrognosis', currentValueOfPrognosis);
-  localStorage.setItem('privatebeta02AwareOfPrognosis', currentValueOfPrognosis);
+// Save Other Diagnosis private-beta03
+function saveAwareOfPrognosisSR1Formprivatebeta03() {
+  localStorage.setItem('privatebeta03AwareOfPrognosis', currentValueOfPrognosis);
+  localStorage.setItem('privatebeta03AwareOfPrognosis', currentValueOfPrognosis);
 }
-// Save Clinical Features private-beta02
-function saveClinicalFeaturesSR1Formprivatebeta02() {
+// Save Clinical Features private-beta03
+function saveClinicalFeaturesSR1Formprivatebeta03() {
   let detailsOfClinicalFeatures = document.getElementById('detailsOfClinicalFeatures');
-  localStorage.setItem('privatebeta02DetailsOfClinicalFeatures', detailsOfClinicalFeatures.value);
+  localStorage.setItem('privatebeta03DetailsOfClinicalFeatures', detailsOfClinicalFeatures.value);
 }
-// Save Treatment private-beta02
-function saveTreatmentSR1Formprivatebeta02() {
+// Save Treatment private-beta03
+function saveTreatmentSR1Formprivatebeta03() {
   let treatment = document.getElementById('treatment');
-  localStorage.setItem('privatebeta02Treatment', treatment.value);
+  localStorage.setItem('privatebeta03Treatment', treatment.value);
 }
 
 // ========================
@@ -17373,35 +17373,35 @@ function saveAndContinueSR1Form() {
   localStorage.setItem("privatebeta01OrganisationAddressCounty", organisationAddressCounty.value);
   localStorage.setItem("privatebeta01TownOrCity", organisationTownCity.value);
   localStorage.setItem("privatebeta01Postcode", thePostcode.value);
-  // private-beta02
-  localStorage.setItem('privatebeta02PatientFirstName', PatientFirstName.value);
-  localStorage.setItem('privatebeta02PatientLastName', PatientLastName.value);
-  localStorage.setItem('privatebeta02PatientAddressLine1', patientaddressline1.value);
-  localStorage.setItem('privatebeta02PatientAddressLine2', patientaddressline2.value);
-  localStorage.setItem('privatebeta02PatientAddressTown', patientaddresstown.value);
-  localStorage.setItem('privatebeta02PatientAddressCounty', patientaddresscounty.value);
-  localStorage.setItem('privatebeta02PatientPostcode', patientPostcode.value);
-  localStorage.setItem('privatebeta02PatientBuilding', patientBuilding.value);
-  localStorage.setItem('privatebeta02PatientAddress', patientAddress.value);
-  localStorage.setItem('privatebeta02DobDay', dobDay.value);
-  localStorage.setItem('privatebeta02DobMonth', dobMonth.value);
-  localStorage.setItem('privatebeta02DobYear', dobYear.value);
-  localStorage.setItem('privatebeta02NiNo', niNo.value);
-  localStorage.setItem('privatebeta02DateofSpecialRulesDay', dateofSpecialRulesDay.value);
-  localStorage.setItem('privatebeta02DateofSpecialRulesMonth', dateofSpecialRulesMonth.value);
-  localStorage.setItem('privatebeta02DateofSpecialRulesYear', dateofSpecialRulesYear.value);
-  localStorage.setItem('privatebeta02Firstname', yourFirstName.value);
-  localStorage.setItem('privatebeta02Lastname', yourLastName.value);
-  localStorage.setItem('privatebeta02Role', yourRole.value);
-  localStorage.setItem('privatebeta02ProfessionalRegistrationNumber', professionalRegNum.value);
-  localStorage.setItem('privatebeta02MobileNumber', mobileNumber.value);
-  localStorage.setItem('privatebeta02OrganisationAddress', organisationAddress.value);
-  localStorage.setItem('privatebeta02OrganisationAddressLine1', organisationAddressLine1.value);
-  localStorage.setItem("privatebeta021OrganisationName", organisationName.value);
-  localStorage.setItem("privatebeta02OrganisationAddressLine2", organisationAddressLine2.value);
-  localStorage.setItem("privatebeta02OrganisationAddressCounty", organisationAddressCounty.value);
-  localStorage.setItem("privatebeta02TownOrCity", organisationTownCity.value);
-  localStorage.setItem("privatebeta02Postcode", thePostcode.value);
+  // private-beta03
+  localStorage.setItem('privatebeta03PatientFirstName', PatientFirstName.value);
+  localStorage.setItem('privatebeta03PatientLastName', PatientLastName.value);
+  localStorage.setItem('privatebeta03PatientAddressLine1', patientaddressline1.value);
+  localStorage.setItem('privatebeta03PatientAddressLine2', patientaddressline2.value);
+  localStorage.setItem('privatebeta03PatientAddressTown', patientaddresstown.value);
+  localStorage.setItem('privatebeta03PatientAddressCounty', patientaddresscounty.value);
+  localStorage.setItem('privatebeta03PatientPostcode', patientPostcode.value);
+  localStorage.setItem('privatebeta03PatientBuilding', patientBuilding.value);
+  localStorage.setItem('privatebeta03PatientAddress', patientAddress.value);
+  localStorage.setItem('privatebeta03DobDay', dobDay.value);
+  localStorage.setItem('privatebeta03DobMonth', dobMonth.value);
+  localStorage.setItem('privatebeta03DobYear', dobYear.value);
+  localStorage.setItem('privatebeta03NiNo', niNo.value);
+  localStorage.setItem('privatebeta03DateofSpecialRulesDay', dateofSpecialRulesDay.value);
+  localStorage.setItem('privatebeta03DateofSpecialRulesMonth', dateofSpecialRulesMonth.value);
+  localStorage.setItem('privatebeta03DateofSpecialRulesYear', dateofSpecialRulesYear.value);
+  localStorage.setItem('privatebeta03Firstname', yourFirstName.value);
+  localStorage.setItem('privatebeta03Lastname', yourLastName.value);
+  localStorage.setItem('privatebeta03Role', yourRole.value);
+  localStorage.setItem('privatebeta03ProfessionalRegistrationNumber', professionalRegNum.value);
+  localStorage.setItem('privatebeta03MobileNumber', mobileNumber.value);
+  localStorage.setItem('privatebeta03OrganisationAddress', organisationAddress.value);
+  localStorage.setItem('privatebeta03OrganisationAddressLine1', organisationAddressLine1.value);
+  localStorage.setItem("privatebeta031OrganisationName", organisationName.value);
+  localStorage.setItem("privatebeta03OrganisationAddressLine2", organisationAddressLine2.value);
+  localStorage.setItem("privatebeta03OrganisationAddressCounty", organisationAddressCounty.value);
+  localStorage.setItem("privatebeta03TownOrCity", organisationTownCity.value);
+  localStorage.setItem("privatebeta03Postcode", thePostcode.value);
 
   // Diagnosis
   let whatIsTheDiagnosis = document.getElementById('whatIsTheDiagnosis');
@@ -17539,16 +17539,16 @@ function saveAndContinueSR1Form() {
   localStorage.setItem('privatebeta01AwareOfPrognosis', currentValueOfPrognosis);
   localStorage.setItem('privatebeta01AwareOfDiagnosis', currentValueOfDiagnosis);
   localStorage.setItem('privatebeta01AwareOfPrognosis', currentValueOfPrognosis);
-  // private-beta02
-  localStorage.setItem('privatebeta02WhatIsTheDiagnosis', whatIsTheDiagnosis.value);
-  localStorage.setItem('privatebeta02DodDay', dodDay.value);
-  localStorage.setItem('privatebeta02DodMonth', dodMonth.value);
-  localStorage.setItem('privatebeta02DodYear', dodYear.value);
-  localStorage.setItem('privatebeta02OtherRelevantDiagnosis', otherRelevantDiagnosis.value);
-  localStorage.setItem('privatebeta02AwareOfDiagnosis', currentValueOfDiagnosis);
-  localStorage.setItem('privatebeta02AwareOfPrognosis', currentValueOfPrognosis);
-  localStorage.setItem('privatebeta02AwareOfDiagnosis', currentValueOfDiagnosis);
-  localStorage.setItem('privatebeta02AwareOfPrognosis', currentValueOfPrognosis);
+  // private-beta03
+  localStorage.setItem('privatebeta03WhatIsTheDiagnosis', whatIsTheDiagnosis.value);
+  localStorage.setItem('privatebeta03DodDay', dodDay.value);
+  localStorage.setItem('privatebeta03DodMonth', dodMonth.value);
+  localStorage.setItem('privatebeta03DodYear', dodYear.value);
+  localStorage.setItem('privatebeta03OtherRelevantDiagnosis', otherRelevantDiagnosis.value);
+  localStorage.setItem('privatebeta03AwareOfDiagnosis', currentValueOfDiagnosis);
+  localStorage.setItem('privatebeta03AwareOfPrognosis', currentValueOfPrognosis);
+  localStorage.setItem('privatebeta03AwareOfDiagnosis', currentValueOfDiagnosis);
+  localStorage.setItem('privatebeta03AwareOfPrognosis', currentValueOfPrognosis);
 
   // Clinical features
   let detailsOfClinicalFeatures = document.getElementById('detailsOfClinicalFeatures');
@@ -17565,7 +17565,7 @@ function saveAndContinueSR1Form() {
   localStorage.setItem('hcpmvp02DetailsOfClinicalFeatures', detailsOfClinicalFeatures.value);
   localStorage.setItem('hcpmvp03DetailsOfClinicalFeatures', detailsOfClinicalFeatures.value);
   localStorage.setItem('privatebeta01DetailsOfClinicalFeatures', detailsOfClinicalFeatures.value);
-  localStorage.setItem('privatebeta02DetailsOfClinicalFeatures', detailsOfClinicalFeatures.value);
+  localStorage.setItem('privatebeta03DetailsOfClinicalFeatures', detailsOfClinicalFeatures.value);
 
   // Treatment
   let treatment = document.getElementById('treatment');
@@ -17582,7 +17582,7 @@ function saveAndContinueSR1Form() {
   localStorage.setItem('hcpmvp02Treatment', treatment.value);
   localStorage.setItem('hcpmvp03Treatment', treatment.value);
   localStorage.setItem('privatebeta01Treatment', treatment.value);
-  localStorage.setItem('privatebeta02Treatment', treatment.value);
+  localStorage.setItem('privatebeta03Treatment', treatment.value);
 
   // Do we want to resave or just show the profile details from this form page on the check your answers page?
   // Just take what's on the form and show it on the check your answers - User's details should not save complete
@@ -17709,17 +17709,17 @@ function saveAndContinueSR1Form() {
   localStorage.setItem("privatebeta01TownOrCity", organisationTownCity.value);
   localStorage.setItem("privatebeta01Postcode", thePostcode.value);
   localStorage.setItem("privatebeta01Role", yourRole.value);
-  // private-beta02
-  localStorage.setItem("privatebeta02Firstname", yourFirstName.value);
-  localStorage.setItem("privatebeta02Lastname", yourLastName.value);
-  localStorage.setItem("privatebeta02MobileNumber", mobileNumber.value);
-  localStorage.setItem("privatebeta02OrganisationName", organisationName.value);
-  localStorage.setItem("privatebeta02OrganisationAddressLine1", organisationAddressLine1.value);
-  localStorage.setItem("privatebeta02OrganisationAddressLine2", organisationAddressLine2.value);
-  localStorage.setItem("privatebeta02OrganisationAddressCounty", organisationAddressCounty.value);
-  localStorage.setItem("privatebeta02TownOrCity", organisationTownCity.value);
-  localStorage.setItem("privatebeta02Postcode", thePostcode.value);
-  localStorage.setItem("privatebeta02Role", yourRole.value);
+  // private-beta03
+  localStorage.setItem("privatebeta03Firstname", yourFirstName.value);
+  localStorage.setItem("privatebeta03Lastname", yourLastName.value);
+  localStorage.setItem("privatebeta03MobileNumber", mobileNumber.value);
+  localStorage.setItem("privatebeta03OrganisationName", organisationName.value);
+  localStorage.setItem("privatebeta03OrganisationAddressLine1", organisationAddressLine1.value);
+  localStorage.setItem("privatebeta03OrganisationAddressLine2", organisationAddressLine2.value);
+  localStorage.setItem("privatebeta03OrganisationAddressCounty", organisationAddressCounty.value);
+  localStorage.setItem("privatebeta03TownOrCity", organisationTownCity.value);
+  localStorage.setItem("privatebeta03Postcode", thePostcode.value);
+  localStorage.setItem("privatebeta03Role", yourRole.value);
 }
   // private-beta01
 function enterAddressManually() {
@@ -17739,24 +17739,24 @@ function enterOrgAddressManually() {
   localStorage.removeItem("privatebeta01Postcode");
   localStorage.removeItem("privatebeta01MobileNumber");
 }
-  // private-beta02
+  // private-beta03
 
 function enterAddressManually() {
   console.log('Enter patient address manually selected');
-  localStorage.removeItem("privatebeta02PatientAddressLine1");
-  localStorage.removeItem("privatebeta02PatientAddressTown");
-  localStorage.removeItem("privatebeta02PatientPostcode");
-  localStorage.removeItem("privatebeta02PatientBuilding");
+  localStorage.removeItem("privatebeta03PatientAddressLine1");
+  localStorage.removeItem("privatebeta03PatientAddressTown");
+  localStorage.removeItem("privatebeta03PatientPostcode");
+  localStorage.removeItem("privatebeta03PatientBuilding");
 }
 function enterOrgAddressManually() {
   console.log('Enter patient address manually selected');
-  localStorage.removeItem("privatebeta02OrganisationName");
-  localStorage.removeItem("privatebeta02OrganisationAddressLine1");
-  localStorage.removeItem("privatebeta02OrganisationAddressLine2");
-  localStorage.removeItem("privatebeta02OrganisationAddressCounty");
-  localStorage.removeItem("privatebeta02TownOrCity");
-  localStorage.removeItem("privatebeta02Postcode");
-  localStorage.removeItem("privatebeta02MobileNumber");
+  localStorage.removeItem("privatebeta03OrganisationName");
+  localStorage.removeItem("privatebeta03OrganisationAddressLine1");
+  localStorage.removeItem("privatebeta03OrganisationAddressLine2");
+  localStorage.removeItem("privatebeta03OrganisationAddressCounty");
+  localStorage.removeItem("privatebeta03TownOrCity");
+  localStorage.removeItem("privatebeta03Postcode");
+  localStorage.removeItem("privatebeta03MobileNumber");
 }
 
 // ===================
@@ -18091,49 +18091,49 @@ function completedSR1Form() {
   localStorage.removeItem("privatebeta01AddDetails");
   localStorage.removeItem("privatebeta01NewForm");
   localStorage.removeItem("privatebeta01ResendingSR1Form");
-   // private-beta02
-   localStorage.removeItem("privatebeta02PatientFirstName");
-   localStorage.removeItem("privatebeta02PatientLastName");
-   localStorage.removeItem("privatebeta02PatientNameDefined");
-   localStorage.removeItem("privatebeta02DobDay");
-   localStorage.removeItem("privatebeta02DobMonth");
-   localStorage.removeItem("privatebeta02DobYear");
-   localStorage.removeItem("privatebeta02PatientAddressLine1");
-   localStorage.removeItem("privatebeta02PatientAddressLine2");
-   localStorage.removeItem("privatebeta02PatientAddressTown")
-   localStorage.removeItem("privatebeta02PatientAddressCounty")
-   localStorage.removeItem("privatebeta02PatientPostcode");
-   localStorage.removeItem("privatebeta02PatientBuilding");
-   localStorage.removeItem("privatebeta02PatientAddress");
-   localStorage.removeItem("privatebeta02NiNo");
-   localStorage.removeItem("privatebeta02DateofSpecialRulesDay");
-   localStorage.removeItem("privatebeta02DateofSpecialRulesMonth");
-   localStorage.removeItem("privatebeta02DateofSpecialRulesYear");
-   localStorage.removeItem("privatebeta02WhatIsTheDiagnosis");
-   localStorage.removeItem("privatebeta02OtherRelevantDiagnosis");
-   localStorage.removeItem("privatebeta02OtherRelevantDiagnosisinput");
-   localStorage.removeItem("privatebeta02AwareOfDiagnosis");
-   localStorage.removeItem("privatebeta02AwareOfPrognosis");
-   localStorage.removeItem("privatebeta02DodDay");
-   localStorage.removeItem("privatebeta02DodMonth");
-   localStorage.removeItem("privatebeta02DodYear");
-   localStorage.removeItem("privatebeta02DetailsOfClinicalFeatures");
-   localStorage.removeItem("privatebeta02Treatment");
-   localStorage.removeItem("privatebeta02Firstname");
-   localStorage.removeItem("privatebeta02Lastname");
-   localStorage.removeItem("privatebeta02Role");
-   localStorage.removeItem('privatebeta02ProfessionalRegistrationNumber');
-   localStorage.removeItem("privatebeta02MobileNumber");
-   localStorage.removeItem("privatebeta02OrganisationName");
-   localStorage.removeItem("privatebeta02OrganisationAddressLine1");
-   localStorage.removeItem("privatebeta02OrganisationAddressLine2");
-   localStorage.removeItem("privatebeta02OrganisationAddressCounty");
-   localStorage.removeItem("privatebeta02TownOrCity");
-   localStorage.removeItem("privatebeta02Postcode");
-   localStorage.removeItem("privatebeta02OrganisationAddress");
-   localStorage.removeItem("privatebeta02AddDetails");
-   localStorage.removeItem("privatebeta02NewForm");
-   localStorage.removeItem("privatebeta02ResendingSR1Form");
+   // private-beta03
+   localStorage.removeItem("privatebeta03PatientFirstName");
+   localStorage.removeItem("privatebeta03PatientLastName");
+   localStorage.removeItem("privatebeta03PatientNameDefined");
+   localStorage.removeItem("privatebeta03DobDay");
+   localStorage.removeItem("privatebeta03DobMonth");
+   localStorage.removeItem("privatebeta03DobYear");
+   localStorage.removeItem("privatebeta03PatientAddressLine1");
+   localStorage.removeItem("privatebeta03PatientAddressLine2");
+   localStorage.removeItem("privatebeta03PatientAddressTown")
+   localStorage.removeItem("privatebeta03PatientAddressCounty")
+   localStorage.removeItem("privatebeta03PatientPostcode");
+   localStorage.removeItem("privatebeta03PatientBuilding");
+   localStorage.removeItem("privatebeta03PatientAddress");
+   localStorage.removeItem("privatebeta03NiNo");
+   localStorage.removeItem("privatebeta03DateofSpecialRulesDay");
+   localStorage.removeItem("privatebeta03DateofSpecialRulesMonth");
+   localStorage.removeItem("privatebeta03DateofSpecialRulesYear");
+   localStorage.removeItem("privatebeta03WhatIsTheDiagnosis");
+   localStorage.removeItem("privatebeta03OtherRelevantDiagnosis");
+   localStorage.removeItem("privatebeta03OtherRelevantDiagnosisinput");
+   localStorage.removeItem("privatebeta03AwareOfDiagnosis");
+   localStorage.removeItem("privatebeta03AwareOfPrognosis");
+   localStorage.removeItem("privatebeta03DodDay");
+   localStorage.removeItem("privatebeta03DodMonth");
+   localStorage.removeItem("privatebeta03DodYear");
+   localStorage.removeItem("privatebeta03DetailsOfClinicalFeatures");
+   localStorage.removeItem("privatebeta03Treatment");
+   localStorage.removeItem("privatebeta03Firstname");
+   localStorage.removeItem("privatebeta03Lastname");
+   localStorage.removeItem("privatebeta03Role");
+   localStorage.removeItem('privatebeta03ProfessionalRegistrationNumber');
+   localStorage.removeItem("privatebeta03MobileNumber");
+   localStorage.removeItem("privatebeta03OrganisationName");
+   localStorage.removeItem("privatebeta03OrganisationAddressLine1");
+   localStorage.removeItem("privatebeta03OrganisationAddressLine2");
+   localStorage.removeItem("privatebeta03OrganisationAddressCounty");
+   localStorage.removeItem("privatebeta03TownOrCity");
+   localStorage.removeItem("privatebeta03Postcode");
+   localStorage.removeItem("privatebeta03OrganisationAddress");
+   localStorage.removeItem("privatebeta03AddDetails");
+   localStorage.removeItem("privatebeta03NewForm");
+   localStorage.removeItem("privatebeta03ResendingSR1Form");
 }
   // private-beta01
 function privatebeta01completedSR1Form() {
@@ -18198,37 +18198,37 @@ function privatebeta01TriggeredProfileDetails() {
   localStorage.removeItem("privatebeta01NewForm");
 }
 
-  // private-beta02
-function privatebeta02completedSR1Form() {
+  // private-beta03
+function privatebeta03completedSR1Form() {
   let PatientFullName = document.getElementById('PatientFullName');
-  localStorage.setItem("privatebeta02NewForm", 'New');
-  localStorage.removeItem("privatebeta02PatientFirstName");
-  localStorage.removeItem("privatebeta02PatientLastName");
-  localStorage.removeItem("privatebeta02PatientNameDefined");
-  localStorage.removeItem("privatebeta02DobDay");
-  localStorage.removeItem("privatebeta02DobMonth");
-  localStorage.removeItem("privatebeta02DobYear");
-  localStorage.removeItem("privatebeta02PatientAddressLine1");
-  localStorage.removeItem("privatebeta02PatientAddressLine2");
-  localStorage.removeItem("privatebeta02PatientAddressTown")
-  localStorage.removeItem("privatebeta02PatientAddressCounty")
-  localStorage.removeItem("privatebeta02PatientPostcode");
-  localStorage.removeItem("privatebeta02PatientBuilding");
-  localStorage.removeItem("privatebeta02PatientAddress");
-  localStorage.removeItem("privatebeta02NiNo");
-  localStorage.removeItem("privatebeta02DateofSpecialRulesDay");
-  localStorage.removeItem("privatebeta02DateofSpecialRulesMonth");
-  localStorage.removeItem("privatebeta02DateofSpecialRulesYear");
-  localStorage.removeItem("privatebeta02WhatIsTheDiagnosis");
-  localStorage.removeItem("privatebeta02OtherRelevantDiagnosis");
-  localStorage.removeItem("privatebeta02OtherRelevantDiagnosisinput");
-  localStorage.removeItem("privatebeta02AwareOfDiagnosis");
-  localStorage.removeItem("privatebeta02AwareOfPrognosis");
-  localStorage.removeItem("privatebeta02DodDay");
-  localStorage.removeItem("privatebeta02DodMonth");
-  localStorage.removeItem("privatebeta02DodYear");
-  localStorage.removeItem("privatebeta02DetailsOfClinicalFeatures");
-  localStorage.removeItem("privatebeta02Treatment");
+  localStorage.setItem("privatebeta03NewForm", 'New');
+  localStorage.removeItem("privatebeta03PatientFirstName");
+  localStorage.removeItem("privatebeta03PatientLastName");
+  localStorage.removeItem("privatebeta03PatientNameDefined");
+  localStorage.removeItem("privatebeta03DobDay");
+  localStorage.removeItem("privatebeta03DobMonth");
+  localStorage.removeItem("privatebeta03DobYear");
+  localStorage.removeItem("privatebeta03PatientAddressLine1");
+  localStorage.removeItem("privatebeta03PatientAddressLine2");
+  localStorage.removeItem("privatebeta03PatientAddressTown")
+  localStorage.removeItem("privatebeta03PatientAddressCounty")
+  localStorage.removeItem("privatebeta03PatientPostcode");
+  localStorage.removeItem("privatebeta03PatientBuilding");
+  localStorage.removeItem("privatebeta03PatientAddress");
+  localStorage.removeItem("privatebeta03NiNo");
+  localStorage.removeItem("privatebeta03DateofSpecialRulesDay");
+  localStorage.removeItem("privatebeta03DateofSpecialRulesMonth");
+  localStorage.removeItem("privatebeta03DateofSpecialRulesYear");
+  localStorage.removeItem("privatebeta03WhatIsTheDiagnosis");
+  localStorage.removeItem("privatebeta03OtherRelevantDiagnosis");
+  localStorage.removeItem("privatebeta03OtherRelevantDiagnosisinput");
+  localStorage.removeItem("privatebeta03AwareOfDiagnosis");
+  localStorage.removeItem("privatebeta03AwareOfPrognosis");
+  localStorage.removeItem("privatebeta03DodDay");
+  localStorage.removeItem("privatebeta03DodMonth");
+  localStorage.removeItem("privatebeta03DodYear");
+  localStorage.removeItem("privatebeta03DetailsOfClinicalFeatures");
+  localStorage.removeItem("privatebeta03Treatment");
   //localStorage.removeItem("privatebeta01Firstname");
   //localStorage.removeItem("privatebeta01Lastname");
   //localStorage.removeItem("privatebeta01Role");
@@ -18240,25 +18240,25 @@ function privatebeta02completedSR1Form() {
   //localStorage.removeItem("privatebeta01TownOrCity");
   //localStorage.removeItem("privatebeta01Postcode");
   //localStorage.removeItem("privatebeta01OrganisationAddress");
-  localStorage.removeItem("privatebeta02ResendingSR1Form");
+  localStorage.removeItem("privatebeta03ResendingSR1Form");
 }
-function privatebeta02NewProfileDetails() {
-  localStorage.removeItem("privatebeta02Firstname");
-  localStorage.removeItem("privatebeta02Lastname");
-  localStorage.removeItem("privatebeta02Role");
-  localStorage.removeItem('privatebeta02ProfessionalRegistrationNumber');
-  localStorage.removeItem("privatebeta02MobileNumber");
-  localStorage.removeItem("privatebeta02OrganisationName");
-  localStorage.removeItem("privatebeta02OrganisationAddressLine1");
-  localStorage.removeItem("privatebeta02OrganisationAddressLine2");
-  localStorage.removeItem("privatebeta02OrganisationAddressCounty");
-  localStorage.removeItem("privatebeta02TownOrCity");
-  localStorage.removeItem("privatebeta02Postcode");
-  localStorage.removeItem("privatebeta02OrganisationAddress");
-  localStorage.removeItem("privatebeta02NewForm");
+function privatebeta03NewProfileDetails() {
+  localStorage.removeItem("privatebeta03Firstname");
+  localStorage.removeItem("privatebeta03Lastname");
+  localStorage.removeItem("privatebeta03Role");
+  localStorage.removeItem('privatebeta03ProfessionalRegistrationNumber');
+  localStorage.removeItem("privatebeta03MobileNumber");
+  localStorage.removeItem("privatebeta03OrganisationName");
+  localStorage.removeItem("privatebeta03OrganisationAddressLine1");
+  localStorage.removeItem("privatebeta03OrganisationAddressLine2");
+  localStorage.removeItem("privatebeta03OrganisationAddressCounty");
+  localStorage.removeItem("privatebeta03TownOrCity");
+  localStorage.removeItem("privatebeta03Postcode");
+  localStorage.removeItem("privatebeta03OrganisationAddress");
+  localStorage.removeItem("privatebeta03NewForm");
 }
-function privatebeta02TriggeredProfileDetails() {
-  localStorage.removeItem("privatebeta02NewForm");
+function privatebeta03TriggeredProfileDetails() {
+  localStorage.removeItem("privatebeta03NewForm");
 }
 // ========
 // Cookies
@@ -18314,7 +18314,7 @@ function resendingSR1Form() {
   localStorage.setItem('hcpmvp02ResendingSR1Form', true);
   localStorage.setItem('hcpmvp03ResendingSR1Form', true);
   localStorage.setItem('privatebeta01ResendingSR1Form', true);
-  localStorage.setItem('privatebeta02ResendingSR1Form', true);
+  localStorage.setItem('privatebeta03ResendingSR1Form', true);
 }
 //Clear search
 function clearSearchTerms() {
@@ -18622,14 +18622,14 @@ function updateElementContent(document, elementId, newContent) {
 
 
 //PRIVATE BETA 02
-async function generateDynamicContentprivatebeta02() {
+async function generateDynamicContentprivatebeta03() {
   try {
     // Assuming there are functions to fetch dynamic data asynchronously
     const todayDate = await fetchDate();
-    const patientDetails = await fetchPatientDetailsprivatebeta02();
-    const diagnosisData = await fetchDiagnosisDataprivatebeta02();
-    const clinicalFeatures = await fetchClinicalFeaturesprivatebeta02();
-    const yourDetails = await fetchYourDetailsprivatebeta02();
+    const patientDetails = await fetchPatientDetailsprivatebeta03();
+    const diagnosisData = await fetchDiagnosisDataprivatebeta03();
+    const clinicalFeatures = await fetchClinicalFeaturesprivatebeta03();
+    const yourDetails = await fetchYourDetailsprivatebeta03();
 
     // Create a dynamic content object
     const dynamicContent = {
@@ -18648,25 +18648,25 @@ async function generateDynamicContentprivatebeta02() {
   }
 }
 
-async function fetchPatientDetailsprivatebeta02() {
+async function fetchPatientDetailsprivatebeta03() {
   // Simulated asynchronous data fetching
   return {
-    PatientFullName: localStorage.getItem("privatebeta02PatientFirstName") + ' ' + localStorage.getItem("privatebeta02PatientLastName"),
-    dob: localStorage.getItem("privatebeta02DobDay") + "/" + localStorage.getItem("privatebeta02DobMonth") + "/" + localStorage.getItem("privatebeta02DobYear"),
-    patientaddressline1: localStorage.getItem("privatebeta02PatientAddressLine1"),
-    patientaddresstown: localStorage.getItem("privatebeta02PatientAddressTown"),
-    patientPostcode: localStorage.getItem("privatebeta02PatientPostcode"),
-    niNo: localStorage.getItem("privatebeta02NiNoinput"),
+    PatientFullName: localStorage.getItem("privatebeta03PatientFirstName") + ' ' + localStorage.getItem("privatebeta03PatientLastName"),
+    dob: localStorage.getItem("privatebeta03DobDay") + "/" + localStorage.getItem("privatebeta03DobMonth") + "/" + localStorage.getItem("privatebeta03DobYear"),
+    patientaddressline1: localStorage.getItem("privatebeta03PatientAddressLine1"),
+    patientaddresstown: localStorage.getItem("privatebeta03PatientAddressTown"),
+    patientPostcode: localStorage.getItem("privatebeta03PatientPostcode"),
+    niNo: localStorage.getItem("privatebeta03NiNoinput"),
     // Other patient details
   };
 }
 
-async function fetchDiagnosisDataprivatebeta02() {
+async function fetchDiagnosisDataprivatebeta03() {
   // Simulated asynchronous data fetching
   return {
-    whatIsTheDiagnosis: localStorage.getItem("privatebeta02WhatIsTheDiagnosis"),
-    dateofDiagnosis: localStorage.getItem("privatebeta02DodDay") + "/" + localStorage.getItem("privatebeta02DodMonth") + "/" + localStorage.getItem("privatebeta02DodYear"),
-    dateofSpecialRules: localStorage.getItem("privatebeta02DateofSpecialRulesDay") + "/" + localStorage.getItem("privatebeta02DateofSpecialRulesMonth") + "/" + localStorage.getItem("privatebeta02DateofSpecialRulesYear"),
+    whatIsTheDiagnosis: localStorage.getItem("privatebeta03WhatIsTheDiagnosis"),
+    dateofDiagnosis: localStorage.getItem("privatebeta03DodDay") + "/" + localStorage.getItem("privatebeta03DodMonth") + "/" + localStorage.getItem("privatebeta03DodYear"),
+    dateofSpecialRules: localStorage.getItem("privatebeta03DateofSpecialRulesDay") + "/" + localStorage.getItem("privatebeta03DateofSpecialRulesMonth") + "/" + localStorage.getItem("privatebeta03DateofSpecialRulesYear"),
     otherRelevantDiagnosis: 'Not provided',
     awareOfDiagnosis: 'Yes',
     awareOfPrognosis: 'Yes',
@@ -18674,31 +18674,31 @@ async function fetchDiagnosisDataprivatebeta02() {
   };
 }
 
-async function fetchClinicalFeaturesprivatebeta02() {
+async function fetchClinicalFeaturesprivatebeta03() {
   // Simulated asynchronous data fetching
   return {
-    clinicalFeatures: localStorage.getItem("privatebeta02DetailsOfClinicalFeatures"),
-    treatment: localStorage.getItem("privatebeta02Treatment"),
+    clinicalFeatures: localStorage.getItem("privatebeta03DetailsOfClinicalFeatures"),
+    treatment: localStorage.getItem("privatebeta03Treatment"),
     // Other clinical features details
   };
 }
 
-async function fetchYourDetailsprivatebeta02() {
+async function fetchYourDetailsprivatebeta03() {
   // Simulated asynchronous data fetching
   return {
-    yourName: localStorage.getItem("privatebeta02Firstname") + ' ' + localStorage.getItem("privatebeta02Lastname"),
-    role: localStorage.getItem("privatebeta02Role"),
-    professionalRegNum: localStorage.getItem("privatebeta02ProfessionalRegistrationNumber"),
-    mobileNumber: localStorage.getItem("privatebeta02MobileNumber"),
-    organisationName: localStorage.getItem("privatebeta02OrganisationName"),
-    organisationAddressLine1: localStorage.getItem("privatebeta02OrganisationAddressLine1"),
-    organisationTownCity: localStorage.getItem("privatebeta02TownOrCity"),
-    organisationPostcode: localStorage.getItem("privatebeta02Postcode"),
+    yourName: localStorage.getItem("privatebeta03Firstname") + ' ' + localStorage.getItem("privatebeta03Lastname"),
+    role: localStorage.getItem("privatebeta03Role"),
+    professionalRegNum: localStorage.getItem("privatebeta03ProfessionalRegistrationNumber"),
+    mobileNumber: localStorage.getItem("privatebeta03MobileNumber"),
+    organisationName: localStorage.getItem("privatebeta03OrganisationName"),
+    organisationAddressLine1: localStorage.getItem("privatebeta03OrganisationAddressLine1"),
+    organisationTownCity: localStorage.getItem("privatebeta03TownOrCity"),
+    organisationPostcode: localStorage.getItem("privatebeta03Postcode"),
     // Other details
   };
 }
 
-function mergeHtmlprivatebeta02(staticHtml, dynamicContent) {
+function mergeHtmlprivatebeta03(staticHtml, dynamicContent) {
   // Use a DOMParser to convert the static HTML string into a DOM document
   const parser = new DOMParser();
   const staticDoc = parser.parseFromString(staticHtml, 'text/html');
