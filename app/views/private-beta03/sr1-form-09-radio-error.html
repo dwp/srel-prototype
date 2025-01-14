@@ -1,0 +1,145 @@
+{% extends "layout-gov-signed-in-private-beta03.html" %}
+
+{% block pageTitle %}
+Error: Does the patient have other relevant diagnoses? – Send an SR1 medical evidence form – GOV.UK
+{% endblock %}
+
+{% block content %}
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+        <form id="sendAnSR1Form" action="/private-beta03/sr1-form-09-radio/answer" method="post">
+
+            <!-- ERROR STATE -->
+            <div class="govuk-error-summary" data-module="govuk-error-summary">
+                <div role="alert">
+                    <h2 class="govuk-error-summary__title">
+                        There is a problem
+                    </h2>
+                    <div class="govuk-error-summary__body">
+                        <ul class="govuk-list govuk-error-summary__list">
+                            <li>
+                                <a href="#haveOtherDiagnoses-yes">Select if the patient has other relevant diagnoses</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="govuk-form-group govuk-form-group--error">
+                <fieldset class="govuk-fieldset">
+                    <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+                        <!--<span class="govuk-caption-l"> Question 4 of 6</span>-->
+                        <h1 class="govuk-fieldset__heading">
+                            Does the patient have other relevant diagnoses?
+                        </h1>
+                    </legend>
+
+                    <!--ERROR LEGEND -->
+                    <p id="haveOtherDiagnoses-error" class="govuk-error-message">
+                        <span class="govuk-visually-hidden">Error:</span> Select if the patient has other relevant diagnoses
+                    </p>
+                    <!-- END ERROR -->
+
+                    <!-- Receive reminder options -->
+                    <div class="govuk-radios govuk-radios--inline" data-module="govuk-radios">
+                        <div class="govuk-radios__item">
+                            <input class="govuk-radios__input" id="otherRelevantDiagnosis-yes" name="otherRelevantDiagnosis" type="radio" value="Yes" onclick="privatebeta01OtherDiagnosis(this)">
+                            <label class="govuk-label govuk-radios__label" for="otherRelevantDiagnosis-yes">
+                                Yes
+                            </label>
+                        </div>
+                        <div class="govuk-radios__item">
+                            <input class="govuk-radios__input" id="otherRelevantDiagnosis-no" name="otherRelevantDiagnosis" type="radio" value="Not provided" onclick="privatebeta01OtherDiagnosis(this)">
+                            <label class="govuk-label govuk-radios__label" for="otherRelevantDiagnosis-no">
+                                No
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- Other relevant diagnosis? (optional) 
+                    <div class="govuk-character-count" data-module="govuk-character-count" data-maxlength="250">
+                        <div class="govuk-form-group">
+                            <label class="govuk-label" for="otherRelevantDiagnosis">Include other relevant diagnosis
+                                (optional)
+                            </label>
+                            <textarea class="govuk-textarea govuk-input--width-20 govuk-js-character-count"
+                                id="otherRelevantDiagnosis" name="otherRelevantDiagnosis" rows="5"
+                                aria-describedby="otherRelevantDiagnosis-info" autocomplete="off"></textarea>
+                        </div>
+                        <div id="otherRelevantDiagnosis-info" class="govuk-hint govuk-character-count__message">You can
+                            enter up to 200 characters</div>
+                    </div>-->
+
+                </fieldset>
+                <!--
+                <div class="govuk-form-group">
+                    <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+                        <div class="govuk-checkboxes__item">
+                            <input class="govuk-checkboxes__input" id="completed-otherrelevantdiagnosis" name="completed-otherrelevantdiagnosis"
+                                type="checkbox" value="Completed Other Relevant Diagnosis">
+                            <label class="govuk-label govuk-checkboxes__label" for="completed-otherrelevantdiagnosis">
+                                I've completed this section
+                            </label>
+                        </div>
+                    </div>
+                </div>-->
+
+            </div>
+
+            <!-- Submit button -->
+            <div class="govuk-button-group">
+                <button id="" class="govuk-button" data-module="govuk-button"
+                    onclick="saveOtherDiagnosisradioSR1Formprivatebeta03()">Continue</button>
+                <a class="govuk-link" onclick="saveAndLeave()" style="color:#1d70b8;"
+                    aria-label="Return to SR1 form sections" href="#">Return to SR1 form sections</a>
+            </div>
+        </form>
+        <div class="govuk-!-padding-bottom-6"></div>
+
+        <!--Get help new-->
+        <hr class="govuk-section-break govuk-section-break--visible" aria-hidden="true">
+        <section class="govuk-width-container govuk-!-margin-top-7 govuk-!-margin-bottom-7 ">
+            <div class="govuk-grid-row">
+                <div class="govuk-grid-column-full">
+                    <h2 class="govuk-heading-m">Get help</h2>
+                    <p class="govuk-body">Email: <a class="govuk-link"
+                            href="mailto:online.sr1@dwp.gov.uk">online.sr1@dwp.gov.uk</a></p>
+                    <p class="govuk-body">We aim to respond within 3 working days.</p>
+                </div>
+                        <!--Feedback-->
+            </div>
+            <h2 class="govuk-heading-m">Feedback</h2>
+            <p class=govuk-body><a
+                    href="https://forms.office.com/Pages/ResponsePage.aspx?id=DpxP-knna0i8NIr6EGM3VupINvg8uK9KqwdHnbpPR49UNk5RTE1BQ0JXUEJFVTM5OUs4VFNQM1FINS4u">What
+                    did you think of this service?</a></p>
+    
+        </div>
+            </div>
+        </section>
+
+    </div>
+
+</div>
+
+<script>
+    //const saveOtherDiagnosisradioSR1Formprivatebeta01 = () => {
+    //    if (document.getElementById('otherRelevantDiagnosis-yes').checked) {
+    //        localStorage.setItem('privatebeta01OtherRelevantDiagnosis', ' ');
+    //    } else if (document.getElementById('otherRelevantDiagnosis-no').checked) {
+    //        localStorage.setItem('privatebeta01OtherRelevantDiagnosis', 'Not provided');
+    //    }
+    //}
+
+    // get and set in this order - this ensures what is sent in query is the same as what is in the localStorage
+    const saveAndLeave = () => {
+        //saveOtherDiagnosisSR1Formprivatebeta01();
+
+        const origin = window.location.origin;
+        const url = getUrlWithSR1DataAsQueryParamsprivatebeta03(origin, "/private-beta03/sr1-form-sections");
+
+        window
+            .location
+            .replace(url.toString());
+    }
+</script>
+{% endblock %}
