@@ -1,0 +1,124 @@
+{% extends "layout-gov-signed-in-private-beta03.html" %}
+
+{% block pageTitle %}
+Special Rules date – Send an SR1 medical evidence form – GOV.UK
+{% endblock %}
+
+{% block content %}
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+        <form id="sendAnSR1Form" action="/private-beta03/sr1-form-09-radio" method="post">
+            <div class="govuk-form-group">
+                <fieldset class="govuk-fieldset">   
+                    <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+                        <!--<span class="govuk-caption-l"> Question 3 of 6</span>-->
+                        <h1 class="govuk-fieldset__heading">
+                            Special Rules date
+                        </h1>
+                    </legend>
+                    <!--<legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+                        <span class="govuk-caption-l"> Question 3 of 6</span>
+                        <h1 class="govuk-fieldset__heading">
+                            What date is the patient thought to have met the Special Rules?
+                        </h1>
+                    </legend>-->
+                    <!-- Date from which the patient is thought to meet the Special Rules -->
+                    <p class="govuk-body">
+                        The date the patient met the Special Rules could be from the date of diagnosis to when you complete their SR1 form.
+                    </p>
+                    <p class="govuk-body">
+                        Providing this means your patient gets paid from the correct date.
+                    </p>
+                    <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+                        What date is the patient thought to have met the Special Rules?
+                    </legend>
+                    <div id="dateofSpecialRules-hint" class="govuk-hint">
+                        If you do not know the exact date, you can use the first day of the month. For example, 1 10 1960.
+                    </div>
+                    <div class="govuk-date-input" id="dateofSpecialRules">
+                        <div class="govuk-date-input__item">
+                            <div class="govuk-form-group">
+                                <label class="govuk-label govuk-date-input__label" for="dateofSpecialRules-day">
+                                    Day
+                                </label>
+                                <input autocomplete="off"
+                                    class="govuk-input govuk-date-input__input govuk-input--width-2"
+                                    id="dateofSpecialRules-day" name="dateofSpecialRules-day" type="text"
+                                    inputmode="numeric" onkeypress="return isNumberKey(event)" maxlength="2">
+                            </div>
+                        </div>
+                        <div class="govuk-date-input__item">
+                            <div class="govuk-form-group">
+                                <label class="govuk-label govuk-date-input__label" for="dateofSpecialRules-month">
+                                    Month
+                                </label>
+                                <input autocomplete="off"
+                                    class="govuk-input govuk-date-input__input govuk-input--width-2"
+                                    id="dateofSpecialRules-month" name="dateofSpecialRules-month" type="text"
+                                    inputmode="numeric" onkeypress="return isNumberKey(event)" maxlength="2">
+                            </div>
+                        </div>
+                        <div class="govuk-date-input__item">
+                            <div class="govuk-form-group">
+                                <label class="govuk-label govuk-date-input__label" for="dateofSpecialRules-year">
+                                    Year
+                                </label>
+                                <input autocomplete="off"
+                                    class="govuk-input govuk-date-input__input govuk-input--width-4"
+                                    id="dateofSpecialRules-year" name="dateofSpecialRules-year" type="text"
+                                    inputmode="numeric" onkeypress="return isNumberKey(event)" maxlength="4">
+                            </div>
+                        </div>
+                    </div>
+
+                </fieldset>
+            </div>
+
+            <!-- Submit button -->
+            <div class="govuk-button-group">
+                <button id="" class="govuk-button" data-module="govuk-button"
+                    onclick="saveDateofSpecialRulesSR1Formprivatebeta03()">
+                    Continue
+                </button>
+                <a class="govuk-link" onclick="saveAndLeave()" style="color:#1d70b8;" aria-label="Return to SR1 form sections" href="#">Return to SR1 form sections</a>
+            </div>
+        </form>
+        <div class="govuk-!-padding-bottom-6"></div>
+
+        <!--Get help new-->
+        <hr class="govuk-section-break govuk-section-break--visible" aria-hidden="true">
+        <section class="govuk-width-container govuk-!-margin-top-7 govuk-!-margin-bottom-7 ">
+            <div class="govuk-grid-row">
+                <div class="govuk-grid-column-full">
+                    <h2 class="govuk-heading-m">Get help</h2>
+                    <p class="govuk-body">Email: <a class="govuk-link"
+                            href="mailto:online.sr1@dwp.gov.uk">online.sr1@dwp.gov.uk</a></p>
+                    <p class="govuk-body">We aim to respond within 3 working days.</p>
+                </div>
+                        <!--Feedback-->
+            </div>
+            <h2 class="govuk-heading-m">Feedback</h2>
+            <p class=govuk-body><a
+                    href="https://forms.office.com/Pages/ResponsePage.aspx?id=DpxP-knna0i8NIr6EGM3VupINvg8uK9KqwdHnbpPR49UNk5RTE1BQ0JXUEJFVTM5OUs4VFNQM1FINS4u">What
+                    did you think of this service?</a></p>
+    
+        </div>
+            </div>
+        </section>
+
+    </div>
+
+</div>
+
+<script>
+    // get and set in this order - this ensures what is sent in query is the same as what is in the localStorage
+    const saveAndLeave = () => {
+       //saveDateofSpecialRulesSR1Formprivatebeta01();
+
+        const origin = window.location.origin;
+        const url = getUrlWithSR1DataAsQueryParamsprivatebeta03(origin, "/private-beta03/sr1-form-sections");
+
+        window.location.replace(url.toString());
+    }
+</script>
+{% endblock %}
