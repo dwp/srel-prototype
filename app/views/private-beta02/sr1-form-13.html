@@ -11,37 +11,26 @@ Tell us about the purpose of any treatment and the response – Send an SR1 medi
             <div class="govuk-form-group">
                 <fieldset class="govuk-fieldset">
                     <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
-                        <h1 class="govuk-heading-l">
-                            Treatment
+                        <h1 class="govuk-label-wrapper">
+                            <!--<span class="govuk-caption-l">Question 2 of 2</span>-->
+                            <label class="govuk-label govuk-label--l" for="treatment">
+                                Tell us about the purpose of any treatment and the response
+                            </label>
+                        </h1>
+                    </legend>
 
-                          </h1>
-                          <p class="govuk-body">
-                            We need to know about the patient's treatment and the response. 
-                          </p>
-                          <p class="govuk-body">This could include:</p>
-                          <ul class="govuk-list govuk-list--bullet">
-                            <li>ongoing plans</li>
-                            <li>palliative care</li>
-                            <li>symptom control</li>
-                            <li>psychosocial</li>
-                            <li>declined treatment</li>
-                          </ul>
-                          <form action="/form-handler" method="post" novalidate>
-                            <div class="govuk-form-group">
-                              <fieldset class="govuk-fieldset">
-                                <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
-                                    Give details of the clinical features that indicate a severe progressive condition
-                                </legend>
-                                <div class="govuk-character-count" data-module="govuk-character-count" data-maxlength="350">
-                                    <div class="govuk-form-group">
-                                        <textarea class="govuk-textarea  govuk-js-character-count"
-                                            id="treatment" name="treatment" rows="5" aria-describedby="treatment-info"></textarea>
-                                    </div>
-                                    <div id="treatment-info" class="govuk-hint govuk-character-count__message">You can enter up to
-                                        350 characters</div>
-                                </div>
-            
-                            </fieldset>
+                    <!-- Give the details of the clinical features that indicate a severe progressive condition -->
+                    <div class="govuk-character-count" data-module="govuk-character-count" data-maxlength="350">
+                        <div class="govuk-form-group">
+                            <div id="treatment-hint" class="govuk-hint">For example, treatment may be ongoing, palliative, symptom control, or psychosocial.</div>
+                            <textarea class="govuk-textarea  govuk-js-character-count"
+                                id="treatment" name="treatment" rows="5" aria-describedby="treatment-info"></textarea>
+                        </div>
+                        <div id="treatment-info" class="govuk-hint govuk-character-count__message">You can enter up to
+                            350 characters</div>
+                    </div>
+
+                </fieldset>
             </div>
 
             <!-- Submit button -->
