@@ -11,38 +11,34 @@ Give details of the clinical features that indicate a severe progressive conditi
             <div class="govuk-form-group">
                 <fieldset class="govuk-fieldset">
                     <legend class="govuk-fieldset__legend govuk-fieldset__legend--l" for="detailsOfClinicalFeatures">
-                        <h1 class="govuk-heading-l">
-                            Clinical features
+                        <h1 class="govuk-label-wrapper">
+                            <!--<span class="govuk-caption-l">Question 1 of 2</span>-->
+                            <label class="govuk-label govuk-label--l" for="detailsOfClinicalFeatures">
+                                Give details of the clinical features that indicate a severe progressive condition
+                            </label>
+                        </h1>
+                        <!--<span class="govuk-caption-l"> Question 1 of 2</span>
+                        <h1 class="govuk-fieldset__heading">
+                            Give details of the clinical features that indicate a severe progressive condition
+                        </h1>-->
+                    </legend>
 
-                          </h1>
-                          <p class="govuk-body">
-                            We need to know the patient's clinical features that suggest they are eligible for the Special Rules.
-                          </p>
-                          <p class="govuk-body">This could include:</p>
-                          <ul class="govuk-list govuk-list--bullet">
-                            <li>rate of progression</li>
-                            <li>recurrence</li>
-                            <li>staging</li>
-                            <li>tumour markers</li>
-                            <li>bulbar involvement</li>
-                            <li>end-stage disease</li>
-                          </ul>
-                          <form action="/form-handler" method="post" novalidate>
-                            <div class="govuk-form-group">
-                              <fieldset class="govuk-fieldset">
-                                <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
-                                    Give details of the clinical features that indicate a severe progressive condition
-                                </legend>
-                                <div class="govuk-character-count" data-module="govuk-character-count" data-maxlength="350">
-                                    <div class="govuk-form-group">
-                                        <textarea class="govuk-textarea  govuk-js-character-count"
-                                            id="treatment" name="treatment" rows="5" aria-describedby="treatment-info"></textarea>
-                                    </div>
-                                    <div id="treatment-info" class="govuk-hint govuk-character-count__message">You can enter up to
-                                        350 characters</div>
-                                </div>
-            
-                            </fieldset>
+                    <!-- Give the details of the clinical features that indicate a severe progressive condition -->
+                    <div class="govuk-character-count" data-module="govuk-character-count" data-maxlength="350">
+                        <div class="govuk-form-group">
+                            <div id="detailsOfClinicalFeatures-hint" class="govuk-hint">
+                                For example, rate of progression, recurrence, staging, tumour markers, bulbar
+                                involvement, end-stage disease.
+                            </div>
+                            <textarea class="govuk-textarea govuk-js-character-count"
+                                id="detailsOfClinicalFeatures" name="detailsOfClinicalFeatures" rows="5"
+                                aria-describedby="detailsOfClinicalFeatures-info"></textarea>
+                        </div>
+                        <div id="detailsOfClinicalFeatures-info" class="govuk-hint govuk-character-count__message">You
+                            can enter up to 250 characters</div>
+                    </div>
+
+                </fieldset>
             </div>
 
             <!-- Submit button -->
