@@ -874,7 +874,7 @@ router.post('/private-beta03/sr1-form-09-radio-saved/answer', function (req, res
 
 ////////Devolved nations//////
 
-router.post('/private-beta03/sr1-form-03', function (req, res) {
+router.post('/private-beta03/sr1-form-04', function (req, res) {
   var receiveReminder = req.session.data['organisationSignin']
 
   // Check whether the variable matches a condition
@@ -893,7 +893,7 @@ router.post('/private-beta03/sr1-form-03', function (req, res) {
   }
 })
 
-router.post('/private-beta03/profile-05', function (req, res) {
+router.post('/private-beta03/profile-06', function (req, res) {
   var receiveReminder = req.session.data['organisationSignin']
 
   // Check whether the variable matches a condition
@@ -909,5 +909,97 @@ router.post('/private-beta03/profile-05', function (req, res) {
   } else {
     // Send user to the account dashboard page
     res.redirect('/private-beta03/profile-06-NI')
+  }
+})
+
+
+router.post('/private-beta03/check-sr1-form', function (req, res) {
+  var receiveReminder = req.session.data['organisationSignin']
+  // Check whether the variable matches a condition
+  if (receiveReminder == "NHS England") {
+    // Send user to next reminder page
+    res.redirect('/private-beta03/check-sr1-form')
+  } else if (receiveReminder == "NHS Scotland") {
+    // Send user to next reminder page
+    res.redirect('/private-beta03/check-sr1-form-scotland')
+  } else if (receiveReminder == "NHS Wales") {
+    // Send user to next reminder page
+    res.redirect('/private-beta03/check-sr1-form-wales')
+  } else {
+    // Send user to the account dashboard page
+    res.redirect('/private-beta03/check-sr1-form-NI')
+  }
+})
+
+router.post('/private-beta03/personal-details', function (req, res) {
+  var receiveReminder = req.session.data['organisationSignin']
+  // Check whether the variable matches a condition
+  if (receiveReminder == "NHS England") {
+    // Send user to next reminder page
+    res.redirect('/private-beta03/personal-details')
+  } else if (receiveReminder == "NHS Scotland") {
+    // Send user to next reminder page
+    res.redirect('/private-beta03/personal-details-scotland')
+  } else if (receiveReminder == "NHS Wales") {
+    // Send user to next reminder page
+    res.redirect('/private-beta03/personal-details-wales')
+  } else {
+    // Send user to the account dashboard page
+    res.redirect('/private-beta03/personal-details-ni')
+  }
+})
+
+
+router.post('/private-beta03/sr1-form-04-b', function (req, res) {
+  var receiveReminder = req.session.data['organisationSignin']
+  // Check whether the variable matches a condition
+  if (receiveReminder == "NHS England") {
+    // Send user to next reminder page
+    res.redirect('/private-beta03/sr1-form-04-b')
+  } else if (receiveReminder == "NHS Scotland") {
+    // Send user to next reminder page
+    res.redirect('/private-beta03/sr1-form-04-b-scotland')
+  } else if (receiveReminder == "NHS Wales") {
+    // Send user to next reminder page
+    res.redirect('/private-beta03/sr1-form-04-b-wales')
+  } else {
+    // Send user to the account dashboard page
+    res.redirect('/private-beta03/sr1-form-04-b-NI')
+  }
+})
+
+router.post('/private-beta03/profile-06-adding-details', function (req, res) {
+  var receiveReminder = req.session.data['organisationSignin']
+  // Check whether the variable matches a condition
+  if (receiveReminder == "NHS England") {
+    // Send user to next reminder page
+    res.redirect('/private-beta03/profile-06-adding-details')
+  } else if (receiveReminder == "NHS Scotland") {
+    // Send user to next reminder page
+    res.redirect('/private-beta03/profile-06-adding-details-scotland')
+  } else if (receiveReminder == "NHS Wales") {
+    // Send user to next reminder page
+    res.redirect('/private-beta03/profile-06-adding-details-wales')
+  } else {
+    // Send user to the account dashboard page
+    res.redirect('/private-beta03/profile-06-adding-details-ni')
+  }
+})
+
+router.post('/private-beta03/personal-details-save', function (req, res) {
+  var receiveReminder = req.session.data['organisationSignin']
+  // Check whether the variable matches a condition
+  if (receiveReminder == "NHS England") {
+    // Send user to next reminder page
+    res.redirect('/private-beta03/personal-details-save')
+  } else if (receiveReminder == "NHS Scotland") {
+    // Send user to next reminder page
+    res.redirect('/private-beta03/personal-details-save-scotland')
+  } else if (receiveReminder == "NHS Wales") {
+    // Send user to next reminder page
+    res.redirect('/private-beta03/personal-details-save-wales')
+  } else {
+    // Send user to the account dashboard page
+    res.redirect('/private-beta03/personal-details-save-ni')
   }
 })
