@@ -889,7 +889,7 @@ router.post('/private-beta03/sr1-form-04', function (req, res) {
     res.redirect('/private-beta03/sr1-form-04-wales')
   } else {
     // Send user to the account dashboard page
-    res.redirect('/private-beta03/sr1-form-04-NI')
+    res.redirect('/private-beta03/sr1-form-04-ni')
   }
 })
 
@@ -908,7 +908,7 @@ router.post('/private-beta03/profile-06', function (req, res) {
     res.redirect('/private-beta03/profile-06-wales')
   } else {
     // Send user to the account dashboard page
-    res.redirect('/private-beta03/profile-06-NI')
+    res.redirect('/private-beta03/profile-06-ni')
   }
 })
 
@@ -927,7 +927,7 @@ router.post('/private-beta03/check-sr1-form', function (req, res) {
     res.redirect('/private-beta03/check-sr1-form-wales')
   } else {
     // Send user to the account dashboard page
-    res.redirect('/private-beta03/check-sr1-form-NI')
+    res.redirect('/private-beta03/check-sr1-form-ni')
   }
 })
 
@@ -964,7 +964,7 @@ router.post('/private-beta03/sr1-form-04-b', function (req, res) {
     res.redirect('/private-beta03/sr1-form-04-b-wales')
   } else {
     // Send user to the account dashboard page
-    res.redirect('/private-beta03/sr1-form-04-b-NI')
+    res.redirect('/private-beta03/sr1-form-04-b-ni')
   }
 })
 
