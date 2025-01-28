@@ -7,67 +7,66 @@ Select the patient's address – Send an SR1 medical evidence form – GOV.UK
 {% block content %}
 <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
-        <form id="sendAnSR1Form" action="/private-beta03/sr1-form-04-b" method="post">
-            <div class="govuk-form-group">
-                <fieldset class="govuk-fieldset">
-                    <legend class="govuk-fieldset__legend govuk-fieldset__legend--l" for="postcode">
-                        <!--<span class="govuk-caption-l">Section 6 of 6</span>-->
-                        <h1 class="govuk-fieldset__heading">
-                            5 addresses found 
-                        </h1>
+        <form id="sendAnSR1Form" action="/private-beta03/sr1-form-04-b-wales" method="post">
+            <div class="govuk-width-container">
+                <div class="govuk-form-group">
+                    <fieldset class="govuk-fieldset">
+                        <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+                            <h1 class="govuk-fieldset__heading">
+                                5 addresses found 
+                            </h1>
                         
-                    </legend>
-                    
-                    <p class="govuk-body"><br>Search results for LL30 3BB. <a href="/private-beta03/profile-05-adding-details">Search again</a></p>
-               
-                    <div class="govuk-form-group">
-                        <fieldset class="govuk-fieldset">
-                          <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
-                            Choose address
-                          </legend>
-                        <div class="govuk-radios__item">
-                            <input class="govuk-radios__input" id="AshfordHealthClinic" name="selectorganisationaddress"
-                                type="radio" value="17 Bryn Melyn, Conwy, LL30 3BB "
-                                onclick="privatebeta03OrganisationAddressFn(this)">
-                            <label class="govuk-label govuk-radios__label" for="AshfordHealthClinic">
-                                17 Bryn Melyn, Conwy, LL30 3BB 
-                            </label>
-                        </div>
-                        <div class="govuk-radios__item">
-                            <input class="govuk-radios__input" id="TheAshfordRam" name="selectorganisationaddress"
-                                type="radio" value="170 Bryn Melyn, Conwy, LL30 3BB "
-                                onclick="privatebeta03OrganisationAddressFn(this)">
-                            <label class="govuk-label govuk-radios__label" for="TheAshfordRam">
-                                170 Bryn Melyn, Conwy, LL30 3BB 
-                            </label>
-                        </div>
-                        
-                        <div class="govuk-radios__item">
-                            <input class="govuk-radios__input" id="171" name="selectorganisationaddress"
-                                type="radio" value="171 Bryn Melyn, Conwy, LL30 3BB" onclick="privatebeta03PatientAddressFn(this)">
-                            <label class="govuk-label govuk-radios__label" for="171">
-                                171 Bryn Melyn, Conwy, LL30 3BB 
-                            </label>
-                        </div>
-                        <div class="govuk-radios__item">
-                            <input class="govuk-radios__input" id="172" name="selectorganisationaddress"
-                                type="radio" value="172 Bryn Melyn, Conwy, LL30 3BB " onclick="privatebeta03PatientAddressFn(this)">
-                            <label class="govuk-label govuk-radios__label" for="172">
-                                172 Bryn Melyn, Conwy, LL30 3BB 
-                            </label>
-                        </div>
-                        <div class="govuk-radios__item">
-                            <input class="govuk-radios__input" id="173" name="selectorganisationaddress"
-                                type="radio" value="173 Bryn Melyn, Conwy, LL30 3BB " onclick="privatebeta03PatientAddressFn(this)">
-                            <label class="govuk-label govuk-radios__label" for="173">
-                                173 Bryn Melyn, Conwy, LL30 3BB 
-                            </label>
-                        </div>
+                        <p class="govuk-body"><br>Search results for LL30 3BB. <a href="/private-beta03/profile-05-adding-details">Search again</a></p>
+                   
+                        <div class="govuk-form-group">
+                            <fieldset class="govuk-fieldset">
+                              <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+                                Choose address
+                              </legend>
+                            <div class="govuk-radios__item">
+                                <input class="govuk-radios__input" id="AshfordHealthClinic" name="selectorganisationaddress"
+                                    type="radio" value="17 Bryn Melyn, Conwy, LL30 3BB "
+                                    onclick="privatebeta03OrganisationAddressFn(this)">
+                                <label class="govuk-label govuk-radios__label" for="AshfordHealthClinic">
+                                    17 Bryn Melyn, Conwy, LL30 3BB 
+                                </label>
+                            </div>
+                            <div class="govuk-radios__item">
+                                <input class="govuk-radios__input" id="TheAshfordRam" name="selectorganisationaddress"
+                                    type="radio" value="170 Bryn Melyn, Conwy, LL30 3BB "
+                                    onclick="privatebeta03OrganisationAddressFn(this)">
+                                <label class="govuk-label govuk-radios__label" for="TheAshfordRam">
+                                    170 Bryn Melyn, Conwy, LL30 3BB 
+                                </label>
+                            </div>
+                            
+                            <div class="govuk-radios__item">
+                                <input class="govuk-radios__input" id="171" name="selectorganisationaddress"
+                                    type="radio" value="171 Bryn Melyn, Conwy, LL30 3BB" onclick="privatebeta03PatientAddressFn(this)">
+                                <label class="govuk-label govuk-radios__label" for="171">
+                                    171 Bryn Melyn, Conwy, LL30 3BB 
+                                </label>
+                            </div>
+                            <div class="govuk-radios__item">
+                                <input class="govuk-radios__input" id="172" name="selectorganisationaddress"
+                                    type="radio" value="172 Bryn Melyn, Conwy, LL30 3BB " onclick="privatebeta03PatientAddressFn(this)">
+                                <label class="govuk-label govuk-radios__label" for="172">
+                                    172 Bryn Melyn, Conwy, LL30 3BB 
+                                </label>
+                            </div>
+                            <div class="govuk-radios__item">
+                                <input class="govuk-radios__input" id="173" name="selectorganisationaddress"
+                                    type="radio" value="173 Bryn Melyn, Conwy, LL30 3BB " onclick="privatebeta03PatientAddressFn(this)">
+                                <label class="govuk-label govuk-radios__label" for="173">
+                                    173 Bryn Melyn, Conwy, LL30 3BB 
+                                </label>
+                            </div>
                         
                     </div>
                 </fieldset>
             </div>
 
+                        </div>
                         </div>
                         <!--<label class="govuk-label" for="patientPostcode">Postcode</label>-->
 

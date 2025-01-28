@@ -596,138 +596,318 @@ router.post('/private-beta01/add-details-to-new-form/answer', function (req, res
 
 
 
-router.post('/private-beta02/sr1-form-09-radio/answer', function (req, res) {
+router.post('/private-beta03/sr1-form-09-radio/answer', function (req, res) {
   var otherRelevantDiagnosis = req.session.data['otherRelevantDiagnosis']
 
   // Check whether the variable matches a condition
   if (otherRelevantDiagnosis == "Yes") {
     // Send user to next reminder page
-    res.redirect('/private-beta02/sr1-form-09-input')
+    res.redirect('/private-beta03/sr1-form-09-input')
   } else {
     // Send user to the account dashboard page
-    res.redirect('/private-beta02/sr1-form-10')
+    res.redirect('/private-beta03/sr1-form-10')
   }
 })
 
-router.post('/private-beta02/sr1-form-05-radio/answer', function (req, res) {
+router.post('/private-beta03/sr1-form-05-radio/answer', function (req, res) {
   var niNo = req.session.data['niNo']
 
   // Check whether the variable matches a condition
   if (niNo == "Yes") {
     // Send user to next reminder page
-    res.redirect('/private-beta02/sr1-form-05-input')
+    res.redirect('/private-beta03/sr1-form-05-input')
   } else {
     // Send user to the account dashboard page
-    res.redirect('/private-beta02/sr1-form-sections');
+    res.redirect('/private-beta03/sr1-form-sections');
   }
 })
 
-router.post('/private-beta02/profile-02/answer', function (req, res) {
+router.post('/private-beta03/profile-02/answer', function (req, res) {
   var yourRole = req.session.data['yourRole']
 
   // Check whether the variable matches a condition
   if (yourRole == "Other") {
     // Send user to next reminder page
-    res.redirect('/private-beta02/profile-02-other')
+    res.redirect('/private-beta03/profile-02-other')
   } else {
     // Send user to the account dashboard page
-    res.redirect('/private-beta02/profile-03');
+    res.redirect('/private-beta03/profile-03');
   }
 })
 
-router.post('/private-beta02/signin-page/answer', function (req, res) {
+router.post('/private-beta03/signin-page/answer', function (req, res) {
   var receiveReminder = req.session.data['organisationSignin']
 
   // Check whether the variable matches a condition
   if (receiveReminder == "NHS England") {
     // Send user to next reminder page
-    res.redirect('/private-beta02/account-home')
+    res.redirect('/private-beta03/account-home')
   } else if (receiveReminder == "NHS Scotland") {
     // Send user to next reminder page
-    res.redirect('/private-beta02/account-home')
+    res.redirect('/private-beta03/account-home')
   } else if (receiveReminder == "NHS Wales") {
     // Send user to next reminder page
-    res.redirect('/private-beta02/account-home')
+    res.redirect('/private-beta03/account-home')
   } else {
     // Send user to the account dashboard page
-    res.redirect('/private-beta02/account-home')
+    res.redirect('/private-beta03/account-home')
   }
 })
 
-router.post('/private-beta02/cookies/answer', function (req, res) {
+router.post('/private-beta03/cookies/answer', function (req, res) {
   var cookiesselection = req.session.data['google_analytics']
 
   // Check whether the variable matches a condition
   if (cookiesselection == "yes") {
     // Send user to cookie accepted page
-    res.redirect('/private-beta02/cookies-accept')
+    res.redirect('/private-beta03/cookies-accept')
   } else {
     // Send user to cookies rejected page
-    res.redirect('/private-beta02/cookies-reject')
+    res.redirect('/private-beta03/cookies-reject')
   }
 })
 
-router.post('/private-beta02/cookies-reject/answer', function (req, res) {
+router.post('/private-beta03/cookies-reject/answer', function (req, res) {
   var cookiesselection = req.session.data['google_analytics']
 
   // Check whether the variable matches a condition
   if (cookiesselection == "yes") {
     // Send user to cookie accepted page
-    res.redirect('/private-beta02/cookies-accept')
+    res.redirect('/private-beta03/cookies-accept')
   } else {
     // Send user to cookies rejected page
-    res.redirect('/private-beta02/cookies-reject')
+    res.redirect('/private-beta03/cookies-reject')
   }
 })
 
-router.post('/private-beta02/cookies-accept/answer', function (req, res) {
+router.post('/private-beta03/cookies-accept/answer', function (req, res) {
   var cookiesselection = req.session.data['google_analytics']
 
   // Check whether the variable matches a condition
   if (cookiesselection == "yes") {
     // Send user to cookie accepted page
-    res.redirect('/private-beta02/cookies-accept')
+    res.redirect('/private-beta03/cookies-accept')
   } else {
     // Send user to cookies rejected page
-    res.redirect('/private-beta02/cookies-reject')
+    res.redirect('/private-beta03/cookies-reject')
   }
 })
 
-router.post('/private-beta02/sr1-form-use-same-profile-details/answer', function (req, res) {
+router.post('/private-beta03/sr1-form-use-same-profile-details/answer', function (req, res) {
   var useSameProfileDetails = req.session.data['useSameProfileDetails']
 
   // Check whether the variable matches a condition
   if (useSameProfileDetails == "Yes") {
     // Send user to next reminder page
-    res.redirect('/private-beta02/add-details-to-new-form')
+    res.redirect('/private-beta03/add-details-to-new-form')
   } else {
     // Send user to the account dashboard page
-    res.redirect('/private-beta02/profile-01');
+    res.redirect('/private-beta03/profile-01');
   }
 })
 
-router.post('/private-beta02/add-details-to-new-form/answer', function (req, res) {
+router.post('/private-beta03/add-details-to-new-form/answer', function (req, res) {
   var addDetails = req.session.data['addDetails']
 
   // Check whether the variable matches a condition
   if (addDetails == "Yes") {
     // Send user to next reminder page
-    res.redirect('/private-beta02/sr1-form-sections')
+    res.redirect('/private-beta03/sr1-form-sections')
   } else {
     // Send user to the account dashboard page
-    res.redirect('/private-beta02/profile-01');
+    res.redirect('/private-beta03/profile-01');
   }
 })
 
-router.post('/private-beta02/sr1-form-09-radio-saved/answer', function (req, res) {
+router.post('/private-beta03/sr1-form-09-radio-saved/answer', function (req, res) {
   var otherRelevantDiagnosis = req.session.data['otherRelevantDiagnosis']
 
   // Check whether the variable matches a condition
   if (otherRelevantDiagnosis == "Yes") {
     // Send user to next reminder page
-    res.redirect('/private-beta02/sr1-form-09-input-saved')
+    res.redirect('/private-beta03/sr1-form-09-input-saved')
   } else {
     // Send user to the account dashboard page
-    res.redirect('/private-beta02/sr1-form-10-saved')
+    res.redirect('/private-beta03/sr1-form-10-saved')
+  }
+})
+
+////////
+
+
+router.post('/private-beta03/sr1-form-09-radio/answer', function (req, res) {
+  var otherRelevantDiagnosis = req.session.data['otherRelevantDiagnosis']
+
+  // Check whether the variable matches a condition
+  if (otherRelevantDiagnosis == "Yes") {
+    // Send user to next reminder page
+    res.redirect('/private-beta03/sr1-form-09-input')
+  } else {
+    // Send user to the account dashboard page
+    res.redirect('/private-beta03/sr1-form-10')
+  }
+})
+
+router.post('/private-beta03/sr1-form-05-radio/answer', function (req, res) {
+  var niNo = req.session.data['niNo']
+
+  // Check whether the variable matches a condition
+  if (niNo == "Yes") {
+    // Send user to next reminder page
+    res.redirect('/private-beta03/sr1-form-05-input')
+  } else {
+    // Send user to the account dashboard page
+    res.redirect('/private-beta03/sr1-form-sections');
+  }
+})
+
+router.post('/private-beta03/profile-02/answer', function (req, res) {
+  var yourRole = req.session.data['yourRole']
+
+  // Check whether the variable matches a condition
+  if (yourRole == "Other") {
+    // Send user to next reminder page
+    res.redirect('/private-beta03/profile-02-other')
+  } else {
+    // Send user to the account dashboard page
+    res.redirect('/private-beta03/profile-03');
+  }
+})
+
+router.post('/private-beta03/signin-page/answer', function (req, res) {
+  var receiveReminder = req.session.data['organisationSignin']
+
+  // Check whether the variable matches a condition
+  if (receiveReminder == "NHS England") {
+    // Send user to next reminder page
+    res.redirect('/private-beta03/account-home')
+  } else if (receiveReminder == "NHS Scotland") {
+    // Send user to next reminder page
+    res.redirect('/private-beta03/account-home')
+  } else if (receiveReminder == "NHS Wales") {
+    // Send user to next reminder page
+    res.redirect('/private-beta03/account-home')
+  } else {
+    // Send user to the account dashboard page
+    res.redirect('/private-beta03/account-home')
+  }
+})
+
+router.post('/private-beta03/cookies/answer', function (req, res) {
+  var cookiesselection = req.session.data['google_analytics']
+
+  // Check whether the variable matches a condition
+  if (cookiesselection == "yes") {
+    // Send user to cookie accepted page
+    res.redirect('/private-beta03/cookies-accept')
+  } else {
+    // Send user to cookies rejected page
+    res.redirect('/private-beta03/cookies-reject')
+  }
+})
+
+router.post('/private-beta03/cookies-reject/answer', function (req, res) {
+  var cookiesselection = req.session.data['google_analytics']
+
+  // Check whether the variable matches a condition
+  if (cookiesselection == "yes") {
+    // Send user to cookie accepted page
+    res.redirect('/private-beta03/cookies-accept')
+  } else {
+    // Send user to cookies rejected page
+    res.redirect('/private-beta03/cookies-reject')
+  }
+})
+
+router.post('/private-beta03/cookies-accept/answer', function (req, res) {
+  var cookiesselection = req.session.data['google_analytics']
+
+  // Check whether the variable matches a condition
+  if (cookiesselection == "yes") {
+    // Send user to cookie accepted page
+    res.redirect('/private-beta03/cookies-accept')
+  } else {
+    // Send user to cookies rejected page
+    res.redirect('/private-beta03/cookies-reject')
+  }
+})
+
+router.post('/private-beta03/sr1-form-use-same-profile-details/answer', function (req, res) {
+  var useSameProfileDetails = req.session.data['useSameProfileDetails']
+
+  // Check whether the variable matches a condition
+  if (useSameProfileDetails == "Yes") {
+    // Send user to next reminder page
+    res.redirect('/private-beta03/add-details-to-new-form')
+  } else {
+    // Send user to the account dashboard page
+    res.redirect('/private-beta03/profile-01');
+  }
+})
+
+router.post('/private-beta03/add-details-to-new-form/answer', function (req, res) {
+  var addDetails = req.session.data['addDetails']
+
+  // Check whether the variable matches a condition
+  if (addDetails == "Yes") {
+    // Send user to next reminder page
+    res.redirect('/private-beta03/sr1-form-sections')
+  } else {
+    // Send user to the account dashboard page
+    res.redirect('/private-beta03/profile-01');
+  }
+})
+
+router.post('/private-beta03/sr1-form-09-radio-saved/answer', function (req, res) {
+  var otherRelevantDiagnosis = req.session.data['otherRelevantDiagnosis']
+
+  // Check whether the variable matches a condition
+  if (otherRelevantDiagnosis == "Yes") {
+    // Send user to next reminder page
+    res.redirect('/private-beta03/sr1-form-09-input-saved')
+  } else {
+    // Send user to the account dashboard page
+    res.redirect('/private-beta03/sr1-form-10-saved')
+  }
+})
+
+
+////////Devolved nations//////
+
+router.post('/private-beta03/sr1-form-03', function (req, res) {
+  var receiveReminder = req.session.data['organisationSignin']
+
+  // Check whether the variable matches a condition
+  if (receiveReminder == "NHS England") {
+    // Send user to next reminder page
+    res.redirect('/private-beta03/sr1-form-04')
+  } else if (receiveReminder == "NHS Scotland") {
+    // Send user to next reminder page
+    res.redirect('/private-beta03/sr1-form-04-scotland')
+  } else if (receiveReminder == "NHS Wales") {
+    // Send user to next reminder page
+    res.redirect('/private-beta03/sr1-form-04-wales')
+  } else {
+    // Send user to the account dashboard page
+    res.redirect('/private-beta03/sr1-form-04-NI')
+  }
+})
+
+router.post('/private-beta03/profile-05', function (req, res) {
+  var receiveReminder = req.session.data['organisationSignin']
+
+  // Check whether the variable matches a condition
+  if (receiveReminder == "NHS England") {
+    // Send user to next reminder page
+    res.redirect('/private-beta03/profile-06')
+  } else if (receiveReminder == "NHS Scotland") {
+    // Send user to next reminder page
+    res.redirect('/private-beta03/profile-06-scotland')
+  } else if (receiveReminder == "NHS Wales") {
+    // Send user to next reminder page
+    res.redirect('/private-beta03/profile-06-wales')
+  } else {
+    // Send user to the account dashboard page
+    res.redirect('/private-beta03/profile-06-NI')
   }
 })

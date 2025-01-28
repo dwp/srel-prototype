@@ -82,14 +82,12 @@ Tell us about the purpose of any detailsOfClinicalFeatures and the response – 
 <script>
     // get and set in this order - this ensures what is sent in query is the same as what is in the localStorage
     const saveAndLeave = () => {
-        //savedetailsOfClinicalFeaturesSR1Formprivatebeta01();
+        //saveClinicalFeaturesSR1Formprivatebeta01();
 
         const origin = window.location.origin;
         const url = getUrlWithSR1DataAsQueryParamsprivatebeta03(origin, "/private-beta03/sr1-form-sections");
 
-        window
-            .location
-            .replace(url.toString());
+        window.location.replace(url.toString());
     }
 </script>
 {% endblock %}
