@@ -34,7 +34,7 @@ SR1 form sent – Send an SR1 medical evidence form – GOV.UK
                 href="/private-beta03/download-html" target="_blank" download>download an accessible version of
                 <span id="PatientFullName2"></span> SR1 form (HTML, 1MB)</a>.</p>
         <p class="govuk-body">
-            <!--<a class="govuk-link gem-c-attachment__link" target="_self" href="./private-beta03/pdfs/SR1_fee_form_08_23.pdf" >Download your fee claim form (PDF, 1MB)</a>-->
+            <!--<a class="govuk-link gem-c-attachment__link" target="_self" href=".//pdfs/SR1_fee_form_08_23.pdf" >Download your fee claim form (PDF, 1MB)</a>-->
             <a href="/private-beta03/pdfs/SR1_fee_form_08_23.pdf" target="_self">Download your fee claim form (PDF,
                 1MB)</a>.
         </p>
@@ -44,7 +44,7 @@ SR1 form sent – Send an SR1 medical evidence form – GOV.UK
             document.getElementById('pdfButton').addEventListener('click', generatePDF);
 
             async function generatePDF() {
-                const url = '/private-beta03/download-html';
+                const url = '//download-html';
 
                 try {
                     const response = await fetch(url);

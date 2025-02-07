@@ -12,62 +12,48 @@ Select the patient's address – Send an SR1 medical evidence form – GOV.UK
                 <div class="govuk-form-group">
                     <fieldset class="govuk-fieldset">
                         <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
-                       <h1 class="govuk-fieldset__heading">
-                            5 addresses found 
-                        </h1>
-                        
-                    
-                    <p class="govuk-body"><br>Search results for SU1 5AS. <a href="/private-beta03/profile-05-adding-details">Search again</a></p>
-               
-                    <div class="govuk-form-group">
-                        <fieldset class="govuk-fieldset">
-                          <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
-                            Choose address
-                          </legend>
-                        <div class="govuk-radios__item">
-                            <input class="govuk-radios__input" id="AshfordHealthClinic" name="selectorganisationaddress"
-                                type="radio" value="Ashford Health Clinic, London Road, Ashford TW1 3AA"
-                                onclick="privatebeta03OrganisationAddressFn(this)">
-                            <label class="govuk-label govuk-radios__label" for="AshfordHealthClinic">
-                                17 Richmond Road, Staines-upon-Thames, SU1 5AS
-                            </label>
-                        </div>
-                        <div class="govuk-radios__item">
-                            <input class="govuk-radios__input" id="TheAshfordRam" name="selectorganisationaddress"
-                                type="radio" value="The Ashford Ram, London Road, Ashford TW1 3AA"
-                                onclick="privatebeta03OrganisationAddressFn(this)">
-                            <label class="govuk-label govuk-radios__label" for="TheAshfordRam">
-                                170 Richmond Road, Staines-upon-Thames, SU1 5AS
-                            </label>
-                        </div>
-                        
-                        <div class="govuk-radios__item">
-                            <input class="govuk-radios__input" id="171" name="selectorganisationaddress"
-                                type="radio" value="171 Richmond Road, Staines-upon-Thames, SU1 5AS" onclick="privatebeta03PatientAddressFn(this)">
-                            <label class="govuk-label govuk-radios__label" for="171">
-                                171 Richmond Road, Staines-upon-Thames, SU1 5AS
-                            </label>
-                        </div>
-                        <div class="govuk-radios__item">
-                            <input class="govuk-radios__input" id="172" name="selectorganisationaddress"
-                                type="radio" value="172 Richmond Road, Staines-upon-Thames, SU1 5AS" onclick="privatebeta03PatientAddressFn(this)">
-                            <label class="govuk-label govuk-radios__label" for="172">
-                                172 Richmond Road, Staines-upon-Thames, SU1 5AS
-                            </label>
-                        </div>
-                        <div class="govuk-radios__item">
-                            <input class="govuk-radios__input" id="173" name="selectorganisationaddress"
-                                type="radio" value="173 Richmond Road, Staines-upon-Thames, SU1 5AS" onclick="privatebeta03PatientAddressFn(this)">
-                            <label class="govuk-label govuk-radios__label" for="173">
-                                173 Richmond Road, Staines-upon-Thames, SU1 5AS
-                            </label>
-                        </div>
-                        
-                    </div>
-                </fieldset>
-            </div>
-
-                        </div>
+                            <h1 class="govuk-fieldset__heading">
+                                5 addresses found
+                            </h1>
+                        </legend>
+                        <p>5 addresses found for <b>SU1 5AS</b> and <b>17</b>. <a href="/private-beta03/sr1-form-03">Search again</a></p>
+                        <div class="govuk-radios" data-module="govuk-radios">
+                            <div class="govuk-radios__item">
+                                <input class="govuk-radios__input" id="17" name="selectpatientaddress"
+                                    type="radio" value="17 Richmond Road, Staines-upon-Thames, SU1 5AS" onclick="privatebeta03PatientAddressFn(this)">
+                                <label class="govuk-label govuk-radios__label" for="17">
+                                    17 Richmond Road, Staines-upon-Thames, SU1 5AS
+                                </label>
+                            </div>
+                            <div class="govuk-radios__item">
+                                <input class="govuk-radios__input" id="170" name="selectpatientaddress"
+                                    type="radio" value="170 Richmond Road, Staines-upon-Thames, SU1 5AS" onclick="privatebeta03PatientAddressFn(this)">
+                                <label class="govuk-label govuk-radios__label" for="170">
+                                    170 Richmond Road, Staines-upon-Thames, SU1 5AS
+                                </label>
+                            </div>
+                            <div class="govuk-radios__item">
+                                <input class="govuk-radios__input" id="171" name="selectpatientaddress"
+                                    type="radio" value="171 Richmond Road, Staines-upon-Thames, SU1 5AS" onclick="privatebeta03PatientAddressFn(this)">
+                                <label class="govuk-label govuk-radios__label" for="171">
+                                    171 Richmond Road, Staines-upon-Thames, SU1 5AS
+                                </label>
+                            </div>
+                            <div class="govuk-radios__item">
+                                <input class="govuk-radios__input" id="172" name="selectpatientaddress"
+                                    type="radio" value="172 Richmond Road, Staines-upon-Thames, SU1 5AS" onclick="privatebeta03PatientAddressFn(this)">
+                                <label class="govuk-label govuk-radios__label" for="172">
+                                    172 Richmond Road, Staines-upon-Thames, SU1 5AS
+                                </label>
+                            </div>
+                            <div class="govuk-radios__item">
+                                <input class="govuk-radios__input" id="173" name="selectpatientaddress"
+                                    type="radio" value="173 Richmond Road, Staines-upon-Thames, SU1 5AS" onclick="privatebeta03PatientAddressFn(this)">
+                                <label class="govuk-label govuk-radios__label" for="173">
+                                    173 Richmond Road, Staines-upon-Thames, SU1 5AS
+                                </label>
+                            </div>
+                           
                         </div>
                         <!--<label class="govuk-label" for="patientPostcode">Postcode</label>-->
 
@@ -122,7 +108,6 @@ Select the patient's address – Send an SR1 medical evidence form – GOV.UK
                     did you think of this service?</a></p>
     
         </div>
-            </div>
         </section>
 
     </div>
