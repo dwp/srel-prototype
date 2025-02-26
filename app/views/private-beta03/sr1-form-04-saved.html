@@ -9,15 +9,23 @@ Select the patient's address – Send an SR1 medical evidence form – GOV.UK
     <div class="govuk-grid-column-two-thirds">
         <form id="sendAnSR1Form" action="/private-beta03/sr1-form-04-b-saved" method="post">
             <div class="govuk-width-container">
-                <p>6 addresses found for <b>SU1 5AS</b> and <b>17</b>. <a href="/private-beta03/sr1-form-03-saved">Search again</a></p>
                 <div class="govuk-form-group">
                     <fieldset class="govuk-fieldset">
                         <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
                             <h1 class="govuk-fieldset__heading">
-                                Select the patient's address
+                                5 addresses found
                             </h1>
-                        </legend>
+
+                            <p class="govuk-body-m">
+                                <br>Search results for SU1 5AS. <a href="/private-beta03/sr1-form-03">Search again</a>
+                            </p>
+
+                            <h2 class=" govuk-heading-m">
+                                Choose address
+                            </h2>
+
                         <div class="govuk-radios" data-module="govuk-radios">
+
                             <div class="govuk-radios__item">
                                 <input class="govuk-radios__input" id="17" name="selectpatientaddress"
                                     type="radio" value="17 Richmond Road, Staines-upon-Thames, SU1 5AS" onclick="privatebeta03PatientAddressFn(this)">
