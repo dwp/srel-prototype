@@ -1169,7 +1169,7 @@ router.post('/private-beta03/sr1-form-04', function (req, res) {
     res.redirect('/private-beta03/sr1-form-04-wales')
   } else {
     // Send user to the account dashboard page
-    res.redirect('/private-beta03/sr1-form-04-ni')
+    res.redirect('/private-beta03/sr1-form-04')
   }
 })
 
@@ -1188,7 +1188,7 @@ router.post('/private-beta03/profile-06', function (req, res) {
     res.redirect('/private-beta03/profile-06-wales')
   } else {
     // Send user to the account dashboard page
-    res.redirect('/private-beta03/profile-06-ni')
+    res.redirect('/private-beta03/profile-06')
   }
 })
 
@@ -1207,7 +1207,7 @@ router.post('/private-beta03/check-sr1-form', function (req, res) {
     res.redirect('/private-beta03/check-sr1-form-wales')
   } else {
     // Send user to the account dashboard page
-    res.redirect('/private-beta03/check-sr1-form-ni')
+    res.redirect('/private-beta03/check-sr1-form')
   }
 })
 
@@ -1225,7 +1225,7 @@ router.post('/private-beta03/personal-details', function (req, res) {
     res.redirect('/private-beta03/personal-details-wales')
   } else {
     // Send user to the account dashboard page
-    res.redirect('/private-beta03/personal-details-ni')
+    res.redirect('/private-beta03/personal-details')
   }
 })
 
@@ -1244,7 +1244,7 @@ router.post('/private-beta03/sr1-form-04-b', function (req, res) {
     res.redirect('/private-beta03/sr1-form-04-b-wales')
   } else {
     // Send user to the account dashboard page
-    res.redirect('/private-beta03/sr1-form-04-b-ni')
+    res.redirect('/private-beta03/sr1-form-04-b')
   }
 })
 
@@ -1262,7 +1262,7 @@ router.post('/private-beta03/profile-06-adding-details', function (req, res) {
     res.redirect('/private-beta03/profile-06-adding-details-wales')
   } else {
     // Send user to the account dashboard page
-    res.redirect('/private-beta03/profile-06-adding-details-ni')
+    res.redirect('/private-beta03/profile-06-adding-details')
   }
 })
 
@@ -1280,7 +1280,7 @@ router.post('/private-beta03/personal-details-save', function (req, res) {
     res.redirect('/private-beta03/personal-details-save-wales')
   } else {
     // Send user to the account dashboard page
-    res.redirect('/private-beta03/personal-details-save-ni')
+    res.redirect('/private-beta03/personal-details-save')
   }
 })
 
@@ -1298,7 +1298,7 @@ router.post('/private-beta03/check-sr1-form-your-details', function (req, res) {
     res.redirect('/private-beta03/check-sr1-form-your-details-wales')
   } else {
     // Send user to the account dashboard page
-    res.redirect('/private-beta03/check-sr1-form-your-details-ni')
+    res.redirect('/private-beta03/check-sr1-form-your-details')
   }
 })
 
@@ -1316,7 +1316,7 @@ router.post('/private-beta03/check-sr1-form', function (req, res) {
     res.redirect('/private-beta03/check-sr1-form-wales')
   } else {
     // Send user to the account dashboard page
-    res.redirect('/private-beta03/check-sr1-form-ni')
+    res.redirect('/private-beta03/check-sr1-form')
   }
 })
 
@@ -1334,7 +1334,7 @@ router.post('/private-beta03/personal-details', function (req, res) {
     res.redirect('/private-beta03/personal-details-wales')
   } else {
     // Send user to the account dashboard page
-    res.redirect('/private-beta03/personal-details-ni')
+    res.redirect('/private-beta03/personal-details')
   }
 })
 
