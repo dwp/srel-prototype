@@ -1,0 +1,98 @@
+{% extends "layout-gov-signed-in-private-beta03.html" %}
+
+{% block pageTitle %}
+Check your answers before sending the SR1 form – Send an SR1 medical evidence form – GOV.UK
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+        <form id="profileSetupPage" action="/private-beta03/confirmation-page" method="post" autocomplete="off">
+            <div class="govuk-form-group">
+                <fieldset class="govuk-fieldset">
+                    <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+                        <h1 class="govuk-heading-l">
+                            Check your answers before sending the SR1 form
+                        </h1>
+                    </legend>
+
+                    <!--<p class="govuk-body govuk-!-margin-bottom-7">Accurate information will reduce delays to the patient's benefit claim.</p>-->
+
+                    <!-- ################# -->
+                    <!-- PATIENT'S DETAILS -->
+                    <!-- ################# -->
+                    <table class="govuk-table">
+                        <caption class="govuk-table__caption govuk-table__caption--m">Patient Details</caption>
+                        <tbody class="govuk-table__body">
+                          <tr class="govuk-table__row">
+                            <th scope="row" class="govuk-table__header">First 6 weeks</th>
+                            <td class="govuk-table__cell">£109.80 per week</td>
+                            <td class="govuk-table__cell">£59.10 per week</td>
+                          </tr>
+                          <tr class="govuk-table__row">
+                            <th scope="row" class="govuk-table__header">Next 33 weeks</th>
+                            <td class="govuk-table__cell">£159.80 per week</td>
+                            <td class="govuk-table__cell">£89.10 per week</td>
+                          </tr>
+                          <tr class="govuk-table__row">
+                            <th scope="row" class="govuk-table__header">Total estimated pay</th>
+                            <td class="govuk-table__header"> <div id="treatment"></div> </dd></td>
+                            <td class="govuk-table__cell">£2,182.20</td>
+                          </tr>
+                        </tbody>
+                      </table>
+
+                    <!-- ############## -->
+                    <!-- DECLARATION -->
+                    <!-- ############## -->
+                    <h2 class="govuk-heading-m">Declaration</h2>
+
+                    <p class="govuk-body">By sending this SR1 form, you confirm that:</p>
+
+                    <ul class="govuk-list govuk-list--bullet">
+                        <li>you have read the guidance on completing the form</li>
+                        <li>the person named in the form is your patient</li>
+                        <li>this is a full report of their condition and treatment</li>
+                        <li>you are satisfied that completing an SR1 form is correct for them</li>
+                    </ul>
+
+                </fieldset>
+            </div>
+
+            <!-- Submit button -->
+            <div class="govuk-button-group">
+                <button id="" class="govuk-button" data-module="govuk-button" onclick=storePage()>
+                    I agree &ndash; send the form
+                </button>
+            </div>
+
+        </form>
+
+        <div class="govuk-!-padding-bottom-6"></div>
+
+        <!--Get help new-->
+        <hr class="govuk-section-break govuk-section-break--visible" aria-hidden="true">
+        <section class="govuk-width-container govuk-!-margin-top-7 govuk-!-margin-bottom-7 ">
+            <div class="govuk-grid-row">
+                <div class="govuk-grid-column-full">
+                    <h2 class="govuk-heading-m">Get help</h2>
+                    <p class="govuk-body">Email: <a class="govuk-link"
+                            href="mailto:online.sr1@dwp.gov.uk">online.sr1@dwp.gov.uk</a></p>
+                    <p class="govuk-body">We aim to respond within 3 working days.</p>
+                </div>
+                        <!--Feedback-->
+            </div>
+            <h2 class="govuk-heading-m">Feedback</h2>
+            <p class=govuk-body><a
+                   href="https://forms.office.com/Pages/ResponsePage.aspx?id=DpxP-knna0i8NIr6EGM3VupINvg8uK9KqwdHnbpPR49UNk5RTE1BQ0JXUEJFVTM5OUs4VFNQM1FINS4u">What
+                    did you think of this service?</a></p>
+    
+        </div>
+            </div>
+        </section>
+
+    </div>
+
+</div>
+{% endblock %}
