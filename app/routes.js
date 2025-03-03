@@ -1337,5 +1337,3 @@ router.post('/private-beta03/personal-details', function (req, res) {
     res.redirect('/private-beta03/personal-details')
   }
 })
-
-
