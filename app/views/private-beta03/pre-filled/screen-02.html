@@ -1,51 +1,50 @@
 {% extends "layout-gov-signed-in-private-beta03.html" %}
 
 {% block pageTitle %}
-Delete your details – Send an SR1 medical evidence form – GOV.UK
+What is your name? – Send an SR1 medical evidence form – GOV.UK
 {% endblock %}
 
 {% block content %}
+
 <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
-        <form id="sendAnSR1Form" action="/private-beta03/account-home-delete-banner" method="post">
+        <form id="profileSetupPage" name="profileDetails" action="/private-beta03/pre-filled/screen-03" method="post">
             <div class="govuk-form-group">
                 <fieldset class="govuk-fieldset">
                     <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
-                        <!--<span class="govuk-caption-l"> Question 4 of 6</span>-->
+                        <!--<span class="govuk-caption-l"> Question 5 of 6</span>-->
                         <h1 class="govuk-fieldset__heading">
-                            Are you sure you want to delete your details?
+                            Is your name Nelson Noah?
                         </h1>
                     </legend>
 
-                    <!-- Receive reminder options -->
+                    <!-- Is the patient aware of their diagnosis? -->
                     <div class="govuk-radios govuk-radios--inline" data-module="govuk-radios">
                         <div class="govuk-radios__item">
-                            <input class="govuk-radios__input" id="otherRelevantDiagnosis-yes" name="otherRelevantDiagnosis" type="radio" value="Yes" onclick="privatebeta01OtherDiagnosis(this)">
-                            <label class="govuk-label govuk-radios__label" for="otherRelevantDiagnosis-yes">
+                            <input autocomplete="off" class="govuk-radios__input" id="awareOfDiagnosisYes" name="awareOfDiagnosis" type="radio" value="Yes" aria-label="Yes">
+                            <label class="govuk-label govuk-radios__label" for="awareOfDiagnosisYes">
                                 Yes
                             </label>
                         </div>
                         <div class="govuk-radios__item">
-                            <input class="govuk-radios__input" id="otherRelevantDiagnosis-no" name="otherRelevantDiagnosis" type="radio" value="Not provided" onclick="privatebeta01OtherDiagnosis(this)">
-                            <label class="govuk-label govuk-radios__label" for="otherRelevantDiagnosis-no">
+                            <input autocomplete="off" class="govuk-radios__input" id="awareOfDiagnosisNo" name="awareOfDiagnosis" type="radio" value="No" aria-label="No">
+                            <label class="govuk-label govuk-radios__label" for="awareOfDiagnosisNo">
                                 No
                             </label>
                         </div>
                     </div>
-
                 </fieldset>
-
-
-            </div>
+            </Div>
 
             <!-- Submit button -->
             <div class="govuk-button-group">
-                <button id="" class="govuk-button" data-module="govuk-button" onclick="saveOtherDiagnosisradioSR1Formprivatebeta03(); resetChangeFn();">Continue</button>
-                <a class="govuk-link" href="/private-beta03/personal-details">
-                    Return to your details<span class="govuk-visually-hidden"> Return to your details</span>
-                </a>
+                <button id="" class="govuk-button" data-module="govuk-button" onclick="saveHCPNameprivatebeta03(); resetChangeFn();">
+                    Continue
+                </button>
+                
             </div>
         </form>
+
         <div class="govuk-!-padding-bottom-6"></div>
 
         <!--Get help new-->
@@ -62,10 +61,11 @@ Delete your details – Send an SR1 medical evidence form – GOV.UK
             </div>
             <h2 class="govuk-heading-m">Feedback</h2>
             <p class=govuk-body><a
-                    href="https://forms.office.com/Pages/ResponsePage.aspx?id=DpxP-knna0i8NIr6EGM3VupINvg8uK9KqwdHnbpPR49UNk5RTE1BQ0JXUEJFVTM5OUs4VFNQM1FINS4u">What
+                   href="https://forms.office.com/Pages/ResponsePage.aspx?id=DpxP-knna0i8NIr6EGM3VupINvg8uK9KqwdHnbpPR49UNk5RTE1BQ0JXUEJFVTM5OUs4VFNQM1FINS4u">What
                     did you think of this service?</a></p>
     
         </div>
+            </div>
         </section>
 
     </div>
@@ -73,24 +73,14 @@ Delete your details – Send an SR1 medical evidence form – GOV.UK
 </div>
 
 <script>
-    //const saveOtherDiagnosisradioSR1Formprivatebeta01 = () => {
-    //    if (document.getElementById('otherRelevantDiagnosis-yes').checked) {
-    //        localStorage.setItem('privatebeta01OtherRelevantDiagnosis', ' ');
-    //    } else if (document.getElementById('otherRelevantDiagnosis-no').checked) {
-    //        localStorage.setItem('privatebeta01OtherRelevantDiagnosis', 'Not provided');
-    //    }
-    //}
-
     // get and set in this order - this ensures what is sent in query is the same as what is in the localStorage
     const saveAndLeave = () => {
-        //saveOtherDiagnosisSR1Formprivatebeta01();
+        //saveHCPNameprivatebeta01();
 
         const origin = window.location.origin;
         const url = getUrlWithSR1DataAsQueryParamsprivatebeta03(origin, "/private-beta03/sr1-form-sections");
 
-        window
-            .location
-            .replace(url.toString());
+        window.location.replace(url.toString());
     }
 </script>
 {% endblock %}
