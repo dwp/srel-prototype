@@ -1,0 +1,75 @@
+{% extends "layout-gov-signed-in-private-beta03.html" %}
+
+{% block pageTitle %}
+Does the patient have other relevant diagnosis? – Send an SR1 medical evidence form – GOV.UK
+{% endblock %}
+
+{% block content %}
+<form class="form" action="/private-beta03/diagnosis/have-other-diagnosis-answer" method="post" id="relevant-diagnosis-form" name="RelevantDiagnosisform">
+    <div class="govuk-form-group">
+      <fieldset class="govuk-fieldset">
+        <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+          <h1 class="govuk-fieldset__heading">
+            Does the patient have other relevant diagnosis?
+          </h1>
+        </legend>
+  
+        <div class="govuk-radios govuk-radios--inline" data-module="govuk-radios">
+          {% if data['RelevantDiagnosis']=='Yes' %}
+          <div class="govuk-radios__item">
+            <input
+            class="govuk-radios__input"
+            id="RelevantDiagnosis-yes"
+            name="RelevantDiagnosis"
+            type="radio"
+            value="Yes"
+            checked
+            >
+
+            {% else%}
+            <div class="govuk-radios__item">
+              <input
+              class="govuk-radios__input"
+              id="RelevantDiagnosis-yes"
+              name="RelevantDiagnosis"
+              type="radio"
+              value="Yes"
+              checked
+              >
+
+              {% endif %}
+             <label class="govuk-label govuk-radios__label" for="RelevantDiagnosis-yes">Yes</label>
+             
+          </div>
+
+          {% if data['RelevantDiagnosis']=='No' %}
+          <div class="govuk-radios__item">
+            <input 
+            class="govuk-radios__input"
+            id="RelevantDiagnosis-no"
+            name="RelevantDiagnosis"
+            type="radio"
+            value="No"
+            checked >
+
+            {% else%}
+
+            <div class="govuk-radios__item">
+              <input 
+              class="govuk-radios__input"
+              id="RelevantDiagnosis-no"
+              name="RelevantDiagnosis"
+              type="radio"
+              value="No">
+              {% endif %}
+            <label class="govuk-label govuk-radios__label" for="RelevantDiagnosis-no">No</label>
+          </div>
+        </div>
+      </fieldset>
+    </div>
+  
+    <div class="govuk-button-group">
+      <button type="submit" class="govuk-button" data-module="govuk-button">Continue</button>
+    </div>
+  </form>
+{% endblock %}

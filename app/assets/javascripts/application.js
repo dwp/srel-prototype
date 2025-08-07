@@ -101,15 +101,15 @@ window.GOVUKPrototypeKit.documentReady(function () {
     (pageUrlPath === '/hcp-e2e-journey-v04/start-page') ||
     (pageUrlPath === '/hcp-e2e-journey-v04/signin-page') ||
     (pageUrlPath === '/hcp-e2e-journey-v04/organisation-signin-page') ||
-    (pageUrlPath === '/hcp-e2e-journey-v04/profile-00') ||
-    (pageUrlPath === '/hcp-e2e-journey-v04/profile-01-new') ||
-    (pageUrlPath === '/hcp-e2e-journey-v04/profile-02-new') ||
-    (pageUrlPath === '/hcp-e2e-journey-v04/profile-03-new') ||
-    (pageUrlPath === '/hcp-e2e-journey-v04/profile-04-new') ||
-    (pageUrlPath === '/hcp-e2e-journey-v04/profile-05-new') ||
-    (pageUrlPath === '/hcp-e2e-journey-v04/profile-06-new') ||
-    (pageUrlPath === '/hcp-e2e-journey-v04/profile-07-new') ||
-    (pageUrlPath === '/hcp-e2e-journey-v04/profile-07-a-new') ||
+    (pageUrlPath === '/hcp-e2e-journey-v04/save-your-details/profile-00') ||
+    (pageUrlPath === '/hcp-e2e-journey-v04/save-your-details/profile-01-new') ||
+    (pageUrlPath === '/hcp-e2e-journey-v04/save-your-details/profile-02-new') ||
+    (pageUrlPath === '/hcp-e2e-journey-v04/save-your-details/profile-03-new') ||
+    (pageUrlPath === '/hcp-e2e-journey-v04/save-your-details/profile-04-new') ||
+    (pageUrlPath === '/hcp-e2e-journey-v04/save-your-details/profile-05-new') ||
+    (pageUrlPath === '/hcp-e2e-journey-v04/save-your-details/profile-06-new') ||
+    (pageUrlPath === '/hcp-e2e-journey-v04/save-your-details/profile-07-new') ||
+    (pageUrlPath === '/hcp-e2e-journey-v04/save-your-details/profile-07-a-new') ||
     (pageUrlPath === '/hcp-e2e-journey-v04/check-profile-details') ||
     (pageUrlPath === '/hcp-e2e-journey-v04/reminders-1-new') ||
     (pageUrlPath === '/hcp-e2e-journey-v04/reminders-2-new') ||
@@ -154,15 +154,15 @@ window.GOVUKPrototypeKit.documentReady(function () {
     (pageUrlPath === '/hcp-e2e-journey-v07/start-page') ||
     (pageUrlPath === '/hcp-e2e-journey-v07/signin-page') ||
     (pageUrlPath === '/hcp-e2e-journey-v07/organisation-signin-page') ||
-    (pageUrlPath === '/hcp-e2e-journey-v07/profile-00') ||
-    (pageUrlPath === '/hcp-e2e-journey-v07/profile-01-new') ||
-    (pageUrlPath === '/hcp-e2e-journey-v07/profile-02-new') ||
-    (pageUrlPath === '/hcp-e2e-journey-v07/profile-03-new') ||
-    (pageUrlPath === '/hcp-e2e-journey-v07/profile-04-new') ||
-    (pageUrlPath === '/hcp-e2e-journey-v07/profile-05-new') ||
-    (pageUrlPath === '/hcp-e2e-journey-v07/profile-06-new') ||
-    (pageUrlPath === '/hcp-e2e-journey-v07/profile-07-new') ||
-    (pageUrlPath === '/hcp-e2e-journey-v07/profile-07-a-new') ||
+    (pageUrlPath === '/hcp-e2e-journey-v07/save-your-details/profile-00') ||
+    (pageUrlPath === '/hcp-e2e-journey-v07/save-your-details/profile-01-new') ||
+    (pageUrlPath === '/hcp-e2e-journey-v07/save-your-details/profile-02-new') ||
+    (pageUrlPath === '/hcp-e2e-journey-v07/save-your-details/profile-03-new') ||
+    (pageUrlPath === '/hcp-e2e-journey-v07/save-your-details/profile-04-new') ||
+    (pageUrlPath === '/hcp-e2e-journey-v07/save-your-details/profile-05-new') ||
+    (pageUrlPath === '/hcp-e2e-journey-v07/save-your-details/profile-06-new') ||
+    (pageUrlPath === '/hcp-e2e-journey-v07/save-your-details/profile-07-new') ||
+    (pageUrlPath === '/hcp-e2e-journey-v07/save-your-details/profile-07-a-new') ||
     (pageUrlPath === '/hcp-e2e-journey-v07/check-profile-details') ||
     (pageUrlPath === '/hcp-e2e-journey-v07/reminders-1-new') ||
     (pageUrlPath === '/hcp-e2e-journey-v07/reminders-2-new') ||
@@ -208,15 +208,15 @@ window.GOVUKPrototypeKit.documentReady(function () {
     (pageUrlPath === '/hcp-e2e-journey-mvp01/signin-page') ||
     (pageUrlPath === '/hcp-e2e-journey-mvp01/feedback') ||
     (pageUrlPath === '/hcp-e2e-journey-mvp01/organisation-signin-page') ||
-    (pageUrlPath === '/hcp-e2e-journey-mvp01/profile-00') ||
-    (pageUrlPath === '/hcp-e2e-journey-mvp01/profile-01-new') ||
-    (pageUrlPath === '/hcp-e2e-journey-mvp01/profile-02-new') ||
-    (pageUrlPath === '/hcp-e2e-journey-mvp01/profile-03-new') ||
-    (pageUrlPath === '/hcp-e2e-journey-mvp01/profile-04-new') ||
-    (pageUrlPath === '/hcp-e2e-journey-mvp01/profile-05-new') ||
-    (pageUrlPath === '/hcp-e2e-journey-mvp01/profile-06-new') ||
-    (pageUrlPath === '/hcp-e2e-journey-mvp01/profile-07-new') ||
-    (pageUrlPath === '/hcp-e2e-journey-mvp01/profile-07-a-new') ||
+    (pageUrlPath === '/hcp-e2e-journey-mvp01/save-your-details/profile-00') ||
+    (pageUrlPath === '/hcp-e2e-journey-mvp01/save-your-details/profile-01-new') ||
+    (pageUrlPath === '/hcp-e2e-journey-mvp01/save-your-details/profile-02-new') ||
+    (pageUrlPath === '/hcp-e2e-journey-mvp01/save-your-details/profile-03-new') ||
+    (pageUrlPath === '/hcp-e2e-journey-mvp01/save-your-details/profile-04-new') ||
+    (pageUrlPath === '/hcp-e2e-journey-mvp01/save-your-details/profile-05-new') ||
+    (pageUrlPath === '/hcp-e2e-journey-mvp01/save-your-details/profile-06-new') ||
+    (pageUrlPath === '/hcp-e2e-journey-mvp01/save-your-details/profile-07-new') ||
+    (pageUrlPath === '/hcp-e2e-journey-mvp01/save-your-details/profile-07-a-new') ||
     (pageUrlPath === '/hcp-e2e-journey-mvp01/check-profile-details') ||
     (pageUrlPath === '/hcp-e2e-journey-mvp01/reminders-1-new') ||
     (pageUrlPath === '/hcp-e2e-journey-mvp01/reminders-2-new') ||
@@ -241,15 +241,15 @@ window.GOVUKPrototypeKit.documentReady(function () {
     (pageUrlPath === '/hcp-e2e-journey-mvp02/signin-page') ||
     (pageUrlPath === '/hcp-e2e-journey-mvp02/feedback') ||
     (pageUrlPath === '/hcp-e2e-journey-mvp02/organisation-signin-page') ||
-    (pageUrlPath === '/hcp-e2e-journey-mvp02/profile-00') ||
-    (pageUrlPath === '/hcp-e2e-journey-mvp02/profile-01-new') ||
-    (pageUrlPath === '/hcp-e2e-journey-mvp02/profile-02-new') ||
-    (pageUrlPath === '/hcp-e2e-journey-mvp02/profile-03-new') ||
-    (pageUrlPath === '/hcp-e2e-journey-mvp02/profile-04-new') ||
-    (pageUrlPath === '/hcp-e2e-journey-mvp02/profile-05-new') ||
-    (pageUrlPath === '/hcp-e2e-journey-mvp02/profile-06-new') ||
-    (pageUrlPath === '/hcp-e2e-journey-mvp02/profile-07-new') ||
-    (pageUrlPath === '/hcp-e2e-journey-mvp02/profile-07-a-new') ||
+    (pageUrlPath === '/hcp-e2e-journey-mvp02/save-your-details/profile-00') ||
+    (pageUrlPath === '/hcp-e2e-journey-mvp02/save-your-details/profile-01-new') ||
+    (pageUrlPath === '/hcp-e2e-journey-mvp02/save-your-details/profile-02-new') ||
+    (pageUrlPath === '/hcp-e2e-journey-mvp02/save-your-details/profile-03-new') ||
+    (pageUrlPath === '/hcp-e2e-journey-mvp02/save-your-details/profile-04-new') ||
+    (pageUrlPath === '/hcp-e2e-journey-mvp02/save-your-details/profile-05-new') ||
+    (pageUrlPath === '/hcp-e2e-journey-mvp02/save-your-details/profile-06-new') ||
+    (pageUrlPath === '/hcp-e2e-journey-mvp02/save-your-details/profile-07-new') ||
+    (pageUrlPath === '/hcp-e2e-journey-mvp02/save-your-details/profile-07-a-new') ||
     (pageUrlPath === '/hcp-e2e-journey-mvp02/check-profile-details') ||
     (pageUrlPath === '/hcp-e2e-journey-mvp02/reminders-1-new') ||
     (pageUrlPath === '/hcp-e2e-journey-mvp02/reminders-2-new') ||
@@ -274,8 +274,8 @@ window.GOVUKPrototypeKit.documentReady(function () {
     (pageUrlPath === '/hcp-e2e-journey-mvp03/signin-page') ||
     (pageUrlPath === '/hcp-e2e-journey-mvp03/feedback') ||
     (pageUrlPath === '/hcp-e2e-journey-mvp03/organisation-signin-page') ||
-    (pageUrlPath === '/hcp-e2e-journey-mvp03/profile-00') ||
-    (pageUrlPath === '/hcp-e2e-journey-mvp03/profile-07-a-new') ||
+    (pageUrlPath === '/hcp-e2e-journey-mvp03/save-your-details/profile-00') ||
+    (pageUrlPath === '/hcp-e2e-journey-mvp03/save-your-details/profile-07-a-new') ||
     (pageUrlPath === '/hcp-e2e-journey-mvp03/reminder-settings') ||
     (pageUrlPath === '/hcp-e2e-journey-mvp03/signout') ||
     (pageUrlPath === '/hcp-e2e-journey-mvp03/form-handler') ||
@@ -296,8 +296,8 @@ window.GOVUKPrototypeKit.documentReady(function () {
     (pageUrlPath === '/private-beta01/signin-page') ||
     (pageUrlPath === '/private-beta01/feedback') ||
     (pageUrlPath === '/private-beta01/organisation-signin-page') ||
-    (pageUrlPath === '/private-beta01/profile-00') ||
-    (pageUrlPath === '/private-beta01/profile-07-a-new') ||
+    (pageUrlPath === '/private-beta01/save-your-details/profile-00') ||
+    (pageUrlPath === '/private-beta01/save-your-details/profile-07-a-new') ||
     (pageUrlPath === '/private-beta01/reminder-settings') ||
     (pageUrlPath === '/private-beta01/signout') ||
     (pageUrlPath === '/private-beta01/form-handler') ||
@@ -318,8 +318,8 @@ window.GOVUKPrototypeKit.documentReady(function () {
     (pageUrlPath === '/private-beta03/signin-page') ||
     (pageUrlPath === '/private-beta03/feedback') ||
     (pageUrlPath === '/private-beta03/organisation-signin-page') ||
-    (pageUrlPath === '/private-beta03/profile-00') ||
-    (pageUrlPath === '/private-beta03/profile-07-a-new') ||
+    (pageUrlPath === '/private-beta03/save-your-details/profile-00') ||
+    (pageUrlPath === '/private-beta03/save-your-details/profile-07-a-new') ||
     (pageUrlPath === '/private-beta03/reminder-settings') ||
     (pageUrlPath === '/private-beta03/signout') ||
     (pageUrlPath === '/private-beta03/form-handler') ||
@@ -483,17 +483,17 @@ window.GOVUKPrototypeKit.documentReady(function () {
     (pageUrlPath === '/hcp-e2e-journey-mvp03/organisation-signin-page') ||
     (pageUrlPath === '/private-beta01/organisation-signin-page') ||
     (pageUrlPath === '/private-beta03/organisation-signin-page') ||
-    (pageUrlPath === '/hcp-e2e-journey-v04/profile-00') ||
-    (pageUrlPath === '/hcp-e2e-journey-v05/profile-00') ||
-    (pageUrlPath === '/hcp-e2e-journey-v06/profile-00') ||
-    (pageUrlPath === '/hcp-e2e-journey-v07/profile-00') ||
-    (pageUrlPath === '/hcp-e2e-journey-v08/profile-00') ||
-    (pageUrlPath === '/hcp-e2e-journey-v09/profile-00') ||
-    (pageUrlPath === '/hcp-e2e-journey-mvp01/profile-00') ||
-    (pageUrlPath === '/hcp-e2e-journey-mvp02/profile-00') ||
-    (pageUrlPath === '/hcp-e2e-journey-mvp03/profile-00') ||
-    (pageUrlPath === '/private-beta01/profile-00') ||
-    (pageUrlPath === '/private-beta03/profile-00') ||
+    (pageUrlPath === '/hcp-e2e-journey-v04/save-your-details/profile-00') ||
+    (pageUrlPath === '/hcp-e2e-journey-v05/save-your-details/profile-00') ||
+    (pageUrlPath === '/hcp-e2e-journey-v06/save-your-details/profile-00') ||
+    (pageUrlPath === '/hcp-e2e-journey-v07/save-your-details/profile-00') ||
+    (pageUrlPath === '/hcp-e2e-journey-v08/save-your-details/profile-00') ||
+    (pageUrlPath === '/hcp-e2e-journey-v09/save-your-details/profile-00') ||
+    (pageUrlPath === '/hcp-e2e-journey-mvp01/save-your-details/profile-00') ||
+    (pageUrlPath === '/hcp-e2e-journey-mvp02/save-your-details/profile-00') ||
+    (pageUrlPath === '/hcp-e2e-journey-mvp03/save-your-details/profile-00') ||
+    (pageUrlPath === '/private-beta01/save-your-details/profile-00') ||
+    (pageUrlPath === '/private-beta03/save-your-details/profile-00') ||
     (pageUrlPath === '/hcp-e2e-journey-v01/signout') ||
     (pageUrlPath === '/hcp-e2e-journey-v02/signout') ||
     (pageUrlPath === '/hcp-e2e-journey-v03/signout') ||
@@ -1027,41 +1027,41 @@ window.GOVUKPrototypeKit.documentReady(function () {
     (pageUrlPath === '/hcp-e2e-journey-v07/profile-details') ||
     (pageUrlPath === '/hcp-e2e-journey-v07/profile-setup') ||
     (pageUrlPath === '/hcp-e2e-journey-v07/profile-edit') ||
-    (pageUrlPath === '/hcp-e2e-journey-v07/profile-00') ||
-    (pageUrlPath === '/hcp-e2e-journey-v07/profile-01') ||
-    (pageUrlPath === '/hcp-e2e-journey-v07/profile-02') ||
-    (pageUrlPath === '/hcp-e2e-journey-v07/profile-02') ||
-    (pageUrlPath === '/hcp-e2e-journey-v07/profile-04') ||
-    (pageUrlPath === '/hcp-e2e-journey-v07/profile-05') ||
-    (pageUrlPath === '/hcp-e2e-journey-v07/profile-06') ||
-    (pageUrlPath === '/hcp-e2e-journey-v07/profile-07-a') ||
-    (pageUrlPath === '/hcp-e2e-journey-v07/profile-07') ||
+    (pageUrlPath === '/hcp-e2e-journey-v07/save-your-details/profile-00') ||
+    (pageUrlPath === '/hcp-e2e-journey-v07/save-your-details/profile-01') ||
+    (pageUrlPath === '/hcp-e2e-journey-v07/save-your-details/profile-02') ||
+    (pageUrlPath === '/hcp-e2e-journey-v07/save-your-details/profile-02') ||
+    (pageUrlPath === '/hcp-e2e-journey-v07/save-your-details/profile-04') ||
+    (pageUrlPath === '/hcp-e2e-journey-v07/save-your-details/profile-05') ||
+    (pageUrlPath === '/hcp-e2e-journey-v07/save-your-details/profile-06') ||
+    (pageUrlPath === '/hcp-e2e-journey-v07/save-your-details/profile-07-a') ||
+    (pageUrlPath === '/hcp-e2e-journey-v07/save-your-details/profile-07') ||
 
     (pageUrlPath === '/hcp-e2e-journey-v08/profile-details') ||
     (pageUrlPath === '/hcp-e2e-journey-v08/profile-setup') ||
     (pageUrlPath === '/hcp-e2e-journey-v08/profile-edit') ||
-    (pageUrlPath === '/hcp-e2e-journey-v08/profile-00') ||
-    (pageUrlPath === '/hcp-e2e-journey-v08/profile-01') ||
-    (pageUrlPath === '/hcp-e2e-journey-v08/profile-02') ||
-    (pageUrlPath === '/hcp-e2e-journey-v08/profile-02') ||
-    (pageUrlPath === '/hcp-e2e-journey-v08/profile-04') ||
-    (pageUrlPath === '/hcp-e2e-journey-v08/profile-05') ||
-    (pageUrlPath === '/hcp-e2e-journey-v08/profile-06') ||
-    (pageUrlPath === '/hcp-e2e-journey-v08/profile-07-a') ||
-    (pageUrlPath === '/hcp-e2e-journey-v08/profile-07') ||
+    (pageUrlPath === '/hcp-e2e-journey-v08/save-your-details/profile-00') ||
+    (pageUrlPath === '/hcp-e2e-journey-v08/save-your-details/profile-01') ||
+    (pageUrlPath === '/hcp-e2e-journey-v08/save-your-details/profile-02') ||
+    (pageUrlPath === '/hcp-e2e-journey-v08/save-your-details/profile-02') ||
+    (pageUrlPath === '/hcp-e2e-journey-v08/save-your-details/profile-04') ||
+    (pageUrlPath === '/hcp-e2e-journey-v08/save-your-details/profile-05') ||
+    (pageUrlPath === '/hcp-e2e-journey-v08/save-your-details/profile-06') ||
+    (pageUrlPath === '/hcp-e2e-journey-v08/save-your-details/profile-07-a') ||
+    (pageUrlPath === '/hcp-e2e-journey-v08/save-your-details/profile-07') ||
 
     (pageUrlPath === '/hcp-e2e-journey-v09/profile-details') ||
     (pageUrlPath === '/hcp-e2e-journey-v09/profile-setup') ||
     (pageUrlPath === '/hcp-e2e-journey-v09/profile-edit') ||
-    (pageUrlPath === '/hcp-e2e-journey-v09/profile-00') ||
-    (pageUrlPath === '/hcp-e2e-journey-v09/profile-01') ||
-    (pageUrlPath === '/hcp-e2e-journey-v09/profile-02') ||
-    (pageUrlPath === '/hcp-e2e-journey-v09/profile-02') ||
-    (pageUrlPath === '/hcp-e2e-journey-v09/profile-04') ||
-    (pageUrlPath === '/hcp-e2e-journey-v09/profile-05') ||
-    (pageUrlPath === '/hcp-e2e-journey-v09/profile-06') ||
-    (pageUrlPath === '/hcp-e2e-journey-v09/profile-07-a') ||
-    (pageUrlPath === '/hcp-e2e-journey-v09/profile-07')
+    (pageUrlPath === '/hcp-e2e-journey-v09/save-your-details/profile-00') ||
+    (pageUrlPath === '/hcp-e2e-journey-v09/save-your-details/profile-01') ||
+    (pageUrlPath === '/hcp-e2e-journey-v09/save-your-details/profile-02') ||
+    (pageUrlPath === '/hcp-e2e-journey-v09/save-your-details/profile-02') ||
+    (pageUrlPath === '/hcp-e2e-journey-v09/save-your-details/profile-04') ||
+    (pageUrlPath === '/hcp-e2e-journey-v09/save-your-details/profile-05') ||
+    (pageUrlPath === '/hcp-e2e-journey-v09/save-your-details/profile-06') ||
+    (pageUrlPath === '/hcp-e2e-journey-v09/save-your-details/profile-07-a') ||
+    (pageUrlPath === '/hcp-e2e-journey-v09/save-your-details/profile-07')
   ) {
     localStorage.setItem('linkLiId', 'yourProfileNavLiItem');
     localStorage.setItem('linkAnchorId', 'yourProfileNavLink');
@@ -1091,41 +1091,41 @@ window.GOVUKPrototypeKit.documentReady(function () {
   if ((pageUrlPath === '/hcp-e2e-journey-v04/profile-details') ||
     (pageUrlPath === '/hcp-e2e-journey-v04/profile-setup') ||
     (pageUrlPath === '/hcp-e2e-journey-v04/profile-edit') ||
-    (pageUrlPath === '/hcp-e2e-journey-v04/profile-00') ||
-    (pageUrlPath === '/hcp-e2e-journey-v04/profile-01') ||
-    (pageUrlPath === '/hcp-e2e-journey-v04/profile-02') ||
-    (pageUrlPath === '/hcp-e2e-journey-v04/profile-02') ||
-    (pageUrlPath === '/hcp-e2e-journey-v04/profile-04') ||
-    (pageUrlPath === '/hcp-e2e-journey-v04/profile-05') ||
-    (pageUrlPath === '/hcp-e2e-journey-v04/profile-06') ||
-    (pageUrlPath === '/hcp-e2e-journey-v04/profile-07-a') ||
-    (pageUrlPath === '/hcp-e2e-journey-v04/profile-07') ||
+    (pageUrlPath === '/hcp-e2e-journey-v04/save-your-details/profile-00') ||
+    (pageUrlPath === '/hcp-e2e-journey-v04/save-your-details/profile-01') ||
+    (pageUrlPath === '/hcp-e2e-journey-v04/save-your-details/profile-02') ||
+    (pageUrlPath === '/hcp-e2e-journey-v04/save-your-details/profile-02') ||
+    (pageUrlPath === '/hcp-e2e-journey-v04/save-your-details/profile-04') ||
+    (pageUrlPath === '/hcp-e2e-journey-v04/save-your-details/profile-05') ||
+    (pageUrlPath === '/hcp-e2e-journey-v04/save-your-details/profile-06') ||
+    (pageUrlPath === '/hcp-e2e-journey-v04/save-your-details/profile-07-a') ||
+    (pageUrlPath === '/hcp-e2e-journey-v04/save-your-details/profile-07') ||
 
     (pageUrlPath === '/hcp-e2e-journey-v05/profile-details') ||
     (pageUrlPath === '/hcp-e2e-journey-v05/profile-setup') ||
     (pageUrlPath === '/hcp-e2e-journey-v05/profile-edit') ||
-    (pageUrlPath === '/hcp-e2e-journey-v05/profile-00') ||
-    (pageUrlPath === '/hcp-e2e-journey-v05/profile-01') ||
-    (pageUrlPath === '/hcp-e2e-journey-v05/profile-02') ||
-    (pageUrlPath === '/hcp-e2e-journey-v05/profile-02') ||
-    (pageUrlPath === '/hcp-e2e-journey-v05/profile-04') ||
-    (pageUrlPath === '/hcp-e2e-journey-v05/profile-05') ||
-    (pageUrlPath === '/hcp-e2e-journey-v05/profile-06') ||
-    (pageUrlPath === '/hcp-e2e-journey-v05/profile-07-a') ||
-    (pageUrlPath === '/hcp-e2e-journey-v05/profile-07') ||
+    (pageUrlPath === '/hcp-e2e-journey-v05/save-your-details/profile-00') ||
+    (pageUrlPath === '/hcp-e2e-journey-v05/save-your-details/profile-01') ||
+    (pageUrlPath === '/hcp-e2e-journey-v05/save-your-details/profile-02') ||
+    (pageUrlPath === '/hcp-e2e-journey-v05/save-your-details/profile-02') ||
+    (pageUrlPath === '/hcp-e2e-journey-v05/save-your-details/profile-04') ||
+    (pageUrlPath === '/hcp-e2e-journey-v05/save-your-details/profile-05') ||
+    (pageUrlPath === '/hcp-e2e-journey-v05/save-your-details/profile-06') ||
+    (pageUrlPath === '/hcp-e2e-journey-v05/save-your-details/profile-07-a') ||
+    (pageUrlPath === '/hcp-e2e-journey-v05/save-your-details/profile-07') ||
 
     (pageUrlPath === '/hcp-e2e-journey-v06/profile-details') ||
     (pageUrlPath === '/hcp-e2e-journey-v06/profile-setup') ||
     (pageUrlPath === '/hcp-e2e-journey-v06/profile-edit') ||
-    (pageUrlPath === '/hcp-e2e-journey-v06/profile-00') ||
-    (pageUrlPath === '/hcp-e2e-journey-v06/profile-01') ||
-    (pageUrlPath === '/hcp-e2e-journey-v06/profile-02') ||
-    (pageUrlPath === '/hcp-e2e-journey-v06/profile-02') ||
-    (pageUrlPath === '/hcp-e2e-journey-v06/profile-04') ||
-    (pageUrlPath === '/hcp-e2e-journey-v06/profile-05') ||
-    (pageUrlPath === '/hcp-e2e-journey-v06/profile-06') ||
-    (pageUrlPath === '/hcp-e2e-journey-v06/profile-07-a') ||
-    (pageUrlPath === '/hcp-e2e-journey-v06/profile-07')
+    (pageUrlPath === '/hcp-e2e-journey-v06/save-your-details/profile-00') ||
+    (pageUrlPath === '/hcp-e2e-journey-v06/save-your-details/profile-01') ||
+    (pageUrlPath === '/hcp-e2e-journey-v06/save-your-details/profile-02') ||
+    (pageUrlPath === '/hcp-e2e-journey-v06/save-your-details/profile-02') ||
+    (pageUrlPath === '/hcp-e2e-journey-v06/save-your-details/profile-04') ||
+    (pageUrlPath === '/hcp-e2e-journey-v06/save-your-details/profile-05') ||
+    (pageUrlPath === '/hcp-e2e-journey-v06/save-your-details/profile-06') ||
+    (pageUrlPath === '/hcp-e2e-journey-v06/save-your-details/profile-07-a') ||
+    (pageUrlPath === '/hcp-e2e-journey-v06/save-your-details/profile-07')
 
   ) {
     localStorage.setItem('linkLiId', 'yourProfileNavLiItem');
@@ -1593,7 +1593,7 @@ window.GOVUKPrototypeKit.documentReady(function () {
 
     // Version v04
     if (pageUrlPath === '/hcp-e2e-journey-v04/organisation-signin-page') {
-      theHref.setAttribute('href', '/hcp-e2e-journey-v04/profile-00');
+      theHref.setAttribute('href', '/hcp-e2e-journey-v04/save-your-details/profile-00');
       localStorage.setItem('hcpv04HcpEmail', hcpEmailAddress);
     }
 
@@ -1641,7 +1641,7 @@ window.GOVUKPrototypeKit.documentReady(function () {
 
     // Version v07
     if (pageUrlPath === '/hcp-e2e-journey-v07/organisation-signin-page') {
-      theHref.setAttribute('href', '/hcp-e2e-journey-v07/profile-00');
+      theHref.setAttribute('href', '/hcp-e2e-journey-v07/save-your-details/profile-00');
       localStorage.setItem('hcpv07HcpEmail', hcpEmailAddress);
     }
 
@@ -1739,7 +1739,7 @@ window.GOVUKPrototypeKit.documentReady(function () {
       } else if ((counter == 0) && (pageUrlPath === '/hcp-e2e-journey-v04/organisation-signin-page')) {
         window.clearTimeout(timer);
         timer = null;
-        window.location.pathname = "/hcp-e2e-journey-v04/profile-00";
+        window.location.pathname = "/hcp-e2e-journey-v04/save-your-details/profile-00";
 
       } else if ((counter == 0) && (pageUrlPath === '/hcp-e2e-journey-v05/organisation-signin-page')) {
         window.clearTimeout(timer);
@@ -1754,7 +1754,7 @@ window.GOVUKPrototypeKit.documentReady(function () {
       } else if ((counter == 0) && (pageUrlPath === '/hcp-e2e-journey-v07/organisation-signin-page')) {
         window.clearTimeout(timer);
         timer = null;
-        window.location.pathname = "/hcp-e2e-journey-v07/profile-00";
+        window.location.pathname = "/hcp-e2e-journey-v07/save-your-details/profile-00";
 
       } else if ((counter == 0) && (pageUrlPath === '/hcp-e2e-journey-v08/organisation-signin-page')) {
         window.clearTimeout(timer);
@@ -1995,37 +1995,37 @@ window.GOVUKPrototypeKit.documentReady(function () {
   }
 
   // hcp-e2e-journey-v04-name
-  if (pageUrlPath === '/hcp-e2e-journey-v04/profile-01' || pageUrlPath === '/hcp-e2e-journey-v04/profile-01-new') {
+  if (pageUrlPath === '/hcp-e2e-journey-v04/save-your-details/profile-01' || pageUrlPath === '/hcp-e2e-journey-v04/save-your-details/profile-01-new') {
     let fullName = document.getElementById('fullName');
     if (localStorage.getItem("hcpv04Fullname")) fullName.value = localStorage.getItem("hcpv04Fullname");
   }
 
   // hcp-e2e-journey-v04-professional-registration-number
-  if (pageUrlPath === '/hcp-e2e-journey-v04/profile-03' || pageUrlPath === '/hcp-e2e-journey-v04/profile-03-new') {
+  if (pageUrlPath === '/hcp-e2e-journey-v04/save-your-details/profile-03' || pageUrlPath === '/hcp-e2e-journey-v04/save-your-details/profile-03-new') {
     let professionalRegistrationNumber = document.getElementById('professionalRegistrationNumber');
     if (localStorage.getItem("hcpv04ProfessionalRegistrationNumber")) professionalRegistrationNumber.value = localStorage.getItem("hcpv04ProfessionalRegistrationNumber");
   }
 
   // hcp-e2e-journey-v04-phone-number
-  if (pageUrlPath === '/hcp-e2e-journey-v04/profile-04' || pageUrlPath === '/hcp-e2e-journey-v04/profile-04-new') {
+  if (pageUrlPath === '/hcp-e2e-journey-v04/save-your-details/profile-04' || pageUrlPath === '/hcp-e2e-journey-v04/save-your-details/profile-04-new') {
     let mobileNumber = document.getElementById('mobileNumber');
     if (localStorage.getItem("hcpv04MobileNumber")) mobileNumber.value = localStorage.getItem("hcpv04MobileNumber");
   }
 
   // hcp-e2e-journey-v04-name-organisation
-  if (pageUrlPath === '/hcp-e2e-journey-v04/profile-05' || pageUrlPath === '/hcp-e2e-journey-v04/profile-05-new') {
+  if (pageUrlPath === '/hcp-e2e-journey-v04/save-your-details/profile-05' || pageUrlPath === '/hcp-e2e-journey-v04/save-your-details/profile-05-new') {
     let organisationName = document.getElementById('organisationName');
     if (localStorage.getItem("hcpv04OrganisationName")) organisationName.value = localStorage.getItem("hcpv04OrganisationName");
   }
 
   // hcp-e2e-journey-v04-postcode
-  if (pageUrlPath === '/hcp-e2e-journey-v04/profile-06' || pageUrlPath === '/hcp-e2e-journey-v04/profile-06-new' || pageUrlPath === '/hcp-e2e-journey-v04/profile-07-a' || pageUrlPath === '/hcp-e2e-journey-v04/profile-07-a-new' || pageUrlPath === '/hcp-e2e-journey-v04/profile-07' || pageUrlPath === '/hcp-e2e-journey-v04/profile-07-new') {
+  if (pageUrlPath === '/hcp-e2e-journey-v04/save-your-details/profile-06' || pageUrlPath === '/hcp-e2e-journey-v04/save-your-details/profile-06-new' || pageUrlPath === '/hcp-e2e-journey-v04/save-your-details/profile-07-a' || pageUrlPath === '/hcp-e2e-journey-v04/save-your-details/profile-07-a-new' || pageUrlPath === '/hcp-e2e-journey-v04/save-your-details/profile-07' || pageUrlPath === '/hcp-e2e-journey-v04/save-your-details/profile-07-new') {
     let postcode = document.getElementById('postcode');
     if (localStorage.getItem("hcpv04Postcode")) postcode.value = localStorage.getItem("hcpv04Postcode");
   }
 
   // hcp-e2e-journey-v04-postcode
-  if (pageUrlPath === '/hcp-e2e-journey-v04/profile-07-a' || pageUrlPath === '/hcp-e2e-journey-v04/profile-07-a-new' || pageUrlPath === '/hcp-e2e-journey-v04/profile-07' || pageUrlPath === '/hcp-e2e-journey-v04/profile-07-new') {
+  if (pageUrlPath === '/hcp-e2e-journey-v04/save-your-details/profile-07-a' || pageUrlPath === '/hcp-e2e-journey-v04/save-your-details/profile-07-a-new' || pageUrlPath === '/hcp-e2e-journey-v04/save-your-details/profile-07' || pageUrlPath === '/hcp-e2e-journey-v04/save-your-details/profile-07-new') {
     let organisationAddressLine1 = document.getElementById('organisationAddressLine1');
     let organisationAddressLine2 = document.getElementById('organisationAddressLine2');
     let townOrCity = document.getElementById('townOrCity');
@@ -2035,7 +2035,7 @@ window.GOVUKPrototypeKit.documentReady(function () {
   }
 
   // hcp-e2e-journey-v04-role
-  if (pageUrlPath === '/hcp-e2e-journey-v04/profile-02' || pageUrlPath === '/hcp-e2e-journey-v04/profile-02-new') {
+  if (pageUrlPath === '/hcp-e2e-journey-v04/save-your-details/profile-02' || pageUrlPath === '/hcp-e2e-journey-v04/save-your-details/profile-02-new') {
 
     if (localStorage.getItem("hcpv04Role")) {
       let role = localStorage.getItem("hcpv04Role");
@@ -2108,37 +2108,37 @@ window.GOVUKPrototypeKit.documentReady(function () {
   }
 
   // hcp-e2e-journey-v05-name
-  if (pageUrlPath === '/hcp-e2e-journey-v05/profile-01' || pageUrlPath === '/hcp-e2e-journey-v05/profile-01-new') {
+  if (pageUrlPath === '/hcp-e2e-journey-v05/save-your-details/profile-01' || pageUrlPath === '/hcp-e2e-journey-v05/save-your-details/profile-01-new') {
     let fullName = document.getElementById('fullName');
     if (localStorage.getItem("hcpv05Fullname")) fullName.value = localStorage.getItem("hcpv05Fullname");
   }
 
   // hcp-e2e-journey-v05-professional-registration-number
-  if (pageUrlPath === '/hcp-e2e-journey-v05/profile-03' || pageUrlPath === '/hcp-e2e-journey-v05/profile-03-new') {
+  if (pageUrlPath === '/hcp-e2e-journey-v05/save-your-details/profile-03' || pageUrlPath === '/hcp-e2e-journey-v05/save-your-details/profile-03-new') {
     let professionalRegistrationNumber = document.getElementById('professionalRegistrationNumber');
     if (localStorage.getItem("hcpv05ProfessionalRegistrationNumber")) professionalRegistrationNumber.value = localStorage.getItem("hcpv05ProfessionalRegistrationNumber");
   }
 
   // hcp-e2e-journey-v05-phone-number
-  if (pageUrlPath === '/hcp-e2e-journey-v05/profile-04' || pageUrlPath === '/hcp-e2e-journey-v05/profile-04-new') {
+  if (pageUrlPath === '/hcp-e2e-journey-v05/save-your-details/profile-04' || pageUrlPath === '/hcp-e2e-journey-v05/save-your-details/profile-04-new') {
     let mobileNumber = document.getElementById('mobileNumber');
     if (localStorage.getItem("hcpv05MobileNumber")) mobileNumber.value = localStorage.getItem("hcpv05MobileNumber");
   }
 
   // hcp-e2e-journey-v05-name-organisation
-  if (pageUrlPath === '/hcp-e2e-journey-v05/profile-05' || pageUrlPath === '/hcp-e2e-journey-v05/profile-05-new') {
+  if (pageUrlPath === '/hcp-e2e-journey-v05/save-your-details/profile-05' || pageUrlPath === '/hcp-e2e-journey-v05/save-your-details/profile-05-new') {
     let organisationName = document.getElementById('organisationName');
     if (localStorage.getItem("hcpv05OrganisationName")) organisationName.value = localStorage.getItem("hcpv05OrganisationName");
   }
 
   // hcp-e2e-journey-v05-postcode
-  if (pageUrlPath === '/hcp-e2e-journey-v05/profile-06' || pageUrlPath === '/hcp-e2e-journey-v05/profile-06-new' || pageUrlPath === '/hcp-e2e-journey-v05/profile-07' || pageUrlPath === '/hcp-e2e-journey-v05/profile-07-new' || pageUrlPath === '/hcp-e2e-journey-v05/profile-07-a' || pageUrlPath === '/hcp-e2e-journey-v05/profile-07-a-new') {
+  if (pageUrlPath === '/hcp-e2e-journey-v05/save-your-details/profile-06' || pageUrlPath === '/hcp-e2e-journey-v05/save-your-details/profile-06-new' || pageUrlPath === '/hcp-e2e-journey-v05/save-your-details/profile-07' || pageUrlPath === '/hcp-e2e-journey-v05/save-your-details/profile-07-new' || pageUrlPath === '/hcp-e2e-journey-v05/save-your-details/profile-07-a' || pageUrlPath === '/hcp-e2e-journey-v05/save-your-details/profile-07-a-new') {
     let postcode = document.getElementById('postcode');
     if (localStorage.getItem("hcpv05Postcode")) postcode.value = localStorage.getItem("hcpv05Postcode");
   }
 
   // hcp-e2e-journey-v05-postcode
-  if (pageUrlPath === '/hcp-e2e-journey-v05/profile-07-a' || pageUrlPath === '/hcp-e2e-journey-v05/profile-07-a-new' || pageUrlPath === '/hcp-e2e-journey-v05/profile-07' || pageUrlPath === '/hcp-e2e-journey-v05/profile-07-new') {
+  if (pageUrlPath === '/hcp-e2e-journey-v05/save-your-details/profile-07-a' || pageUrlPath === '/hcp-e2e-journey-v05/save-your-details/profile-07-a-new' || pageUrlPath === '/hcp-e2e-journey-v05/save-your-details/profile-07' || pageUrlPath === '/hcp-e2e-journey-v05/save-your-details/profile-07-new') {
     let organisationAddressLine1 = document.getElementById('organisationAddressLine1');
     let organisationAddressLine2 = document.getElementById('organisationAddressLine2');
     let townOrCity = document.getElementById('townOrCity');
@@ -2148,7 +2148,7 @@ window.GOVUKPrototypeKit.documentReady(function () {
   }
 
   // hcp-e2e-journey-v05-role
-  if (pageUrlPath === '/hcp-e2e-journey-v05/profile-02' || pageUrlPath === '/hcp-e2e-journey-v05/profile-02-new') {
+  if (pageUrlPath === '/hcp-e2e-journey-v05/save-your-details/profile-02' || pageUrlPath === '/hcp-e2e-journey-v05/save-your-details/profile-02-new') {
 
     if (localStorage.getItem("hcpv05Role")) {
       let role = localStorage.getItem("hcpv05Role");
@@ -2220,37 +2220,37 @@ window.GOVUKPrototypeKit.documentReady(function () {
   }
 
   // hcp-e2e-journey-v06-name
-  if (pageUrlPath === '/hcp-e2e-journey-v06/profile-01' || pageUrlPath === '/hcp-e2e-journey-v06/profile-01-new') {
+  if (pageUrlPath === '/hcp-e2e-journey-v06/save-your-details/profile-01' || pageUrlPath === '/hcp-e2e-journey-v06/save-your-details/profile-01-new') {
     let fullName = document.getElementById('fullName');
     if (localStorage.getItem("hcpv06Fullname")) fullName.value = localStorage.getItem("hcpv06Fullname");
   }
 
   // hcp-e2e-journey-v06-professional-registration-number
-  if (pageUrlPath === '/hcp-e2e-journey-v06/profile-03' || pageUrlPath === '/hcp-e2e-journey-v06/profile-03-new') {
+  if (pageUrlPath === '/hcp-e2e-journey-v06/save-your-details/profile-03' || pageUrlPath === '/hcp-e2e-journey-v06/save-your-details/profile-03-new') {
     let professionalRegistrationNumber = document.getElementById('professionalRegistrationNumber');
     if (localStorage.getItem("hcpv06ProfessionalRegistrationNumber")) professionalRegistrationNumber.value = localStorage.getItem("hcpv06ProfessionalRegistrationNumber");
   }
 
   // hcp-e2e-journey-v06-phone-number
-  if (pageUrlPath === '/hcp-e2e-journey-v06/profile-04' || pageUrlPath === '/hcp-e2e-journey-v06/profile-04-new') {
+  if (pageUrlPath === '/hcp-e2e-journey-v06/save-your-details/profile-04' || pageUrlPath === '/hcp-e2e-journey-v06/save-your-details/profile-04-new') {
     let mobileNumber = document.getElementById('mobileNumber');
     if (localStorage.getItem("hcpv06MobileNumber")) mobileNumber.value = localStorage.getItem("hcpv06MobileNumber");
   }
 
   // hcp-e2e-journey-v06-name-organisation
-  if (pageUrlPath === '/hcp-e2e-journey-v06/profile-05' || pageUrlPath === '/hcp-e2e-journey-v06/profile-05-new') {
+  if (pageUrlPath === '/hcp-e2e-journey-v06/save-your-details/profile-05' || pageUrlPath === '/hcp-e2e-journey-v06/save-your-details/profile-05-new') {
     let organisationName = document.getElementById('organisationName');
     if (localStorage.getItem("hcpv06OrganisationName")) organisationName.value = localStorage.getItem("hcpv06OrganisationName");
   }
 
   // hcp-e2e-journey-v06-postcode
-  if (pageUrlPath === '/hcp-e2e-journey-v06/profile-06' || pageUrlPath === '/hcp-e2e-journey-v06/profile-06-new' || pageUrlPath === '/hcp-e2e-journey-v06/profile-07' || pageUrlPath === '/hcp-e2e-journey-v06/profile-07-new') {
+  if (pageUrlPath === '/hcp-e2e-journey-v06/save-your-details/profile-06' || pageUrlPath === '/hcp-e2e-journey-v06/save-your-details/profile-06-new' || pageUrlPath === '/hcp-e2e-journey-v06/save-your-details/profile-07' || pageUrlPath === '/hcp-e2e-journey-v06/save-your-details/profile-07-new') {
     let postcode = document.getElementById('postcode');
     if (localStorage.getItem("hcpv06Postcode")) postcode.value = localStorage.getItem("hcpv06Postcode");
   }
 
   // hcp-e2e-journey-v06-postcode
-  if (pageUrlPath === '/hcp-e2e-journey-v06/profile-07-a' || pageUrlPath === '/hcp-e2e-journey-v06/profile-07-a-new') {
+  if (pageUrlPath === '/hcp-e2e-journey-v06/save-your-details/profile-07-a' || pageUrlPath === '/hcp-e2e-journey-v06/save-your-details/profile-07-a-new') {
     let organisationAddressLine1 = document.getElementById('organisationAddressLine1');
     let organisationAddressLine2 = document.getElementById('organisationAddressLine2');
     let townOrCity = document.getElementById('townOrCity');
@@ -2260,7 +2260,7 @@ window.GOVUKPrototypeKit.documentReady(function () {
   }
 
   // hcp-e2e-journey-v06-role
-  if (pageUrlPath === '/hcp-e2e-journey-v06/profile-02' || pageUrlPath === '/hcp-e2e-journey-v06/profile-02-new') {
+  if (pageUrlPath === '/hcp-e2e-journey-v06/save-your-details/profile-02' || pageUrlPath === '/hcp-e2e-journey-v06/save-your-details/profile-02-new') {
 
     if (localStorage.getItem("hcpv06Role")) {
       let role = localStorage.getItem("hcpv06Role");
@@ -2333,37 +2333,37 @@ window.GOVUKPrototypeKit.documentReady(function () {
   }
 
   // hcp-e2e-journey-v07-name
-  if (pageUrlPath === '/hcp-e2e-journey-v07/profile-01' || pageUrlPath === '/hcp-e2e-journey-v07/profile-01-new') {
+  if (pageUrlPath === '/hcp-e2e-journey-v07/save-your-details/profile-01' || pageUrlPath === '/hcp-e2e-journey-v07/save-your-details/profile-01-new') {
     let fullName = document.getElementById('fullName');
     if (localStorage.getItem("hcpv07Fullname")) fullName.value = localStorage.getItem("hcpv07Fullname");
   }
 
   // hcp-e2e-journey-v07-professional-registration-number
-  if (pageUrlPath === '/hcp-e2e-journey-v07/profile-03' || pageUrlPath === '/hcp-e2e-journey-v07/profile-03-new') {
+  if (pageUrlPath === '/hcp-e2e-journey-v07/save-your-details/profile-03' || pageUrlPath === '/hcp-e2e-journey-v07/save-your-details/profile-03-new') {
     let professionalRegistrationNumber = document.getElementById('professionalRegistrationNumber');
     if (localStorage.getItem("hcpv07ProfessionalRegistrationNumber")) professionalRegistrationNumber.value = localStorage.getItem("hcpv07ProfessionalRegistrationNumber");
   }
 
   // hcp-e2e-journey-v07-phone-number
-  if (pageUrlPath === '/hcp-e2e-journey-v07/profile-04' || pageUrlPath === '/hcp-e2e-journey-v07/profile-04-new') {
+  if (pageUrlPath === '/hcp-e2e-journey-v07/save-your-details/profile-04' || pageUrlPath === '/hcp-e2e-journey-v07/save-your-details/profile-04-new') {
     let mobileNumber = document.getElementById('mobileNumber');
     if (localStorage.getItem("hcpv07MobileNumber")) mobileNumber.value = localStorage.getItem("hcpv07MobileNumber");
   }
 
   // hcp-e2e-journey-v07-name-organisation
-  if (pageUrlPath === '/hcp-e2e-journey-v07/profile-05' || pageUrlPath === '/hcp-e2e-journey-v07/profile-04-new') {
+  if (pageUrlPath === '/hcp-e2e-journey-v07/save-your-details/profile-05' || pageUrlPath === '/hcp-e2e-journey-v07/save-your-details/profile-04-new') {
     let organisationName = document.getElementById('organisationName');
     if (localStorage.getItem("hcpv07OrganisationName")) organisationName.value = localStorage.getItem("hcpv07OrganisationName");
   }
 
   // hcp-e2e-journey-v07-postcode
-  if (pageUrlPath === '/hcp-e2e-journey-v07/profile-06' || pageUrlPath === '/hcp-e2e-journey-v07/profile-06-new' || pageUrlPath === '/hcp-e2e-journey-v07/profile-07' || pageUrlPath === '/hcp-e2e-journey-v07/profile-07-new' || pageUrlPath === '/hcp-e2e-journey-v07/profile-07-a' || pageUrlPath === '/hcp-e2e-journey-v07/profile-07-a-new') {
+  if (pageUrlPath === '/hcp-e2e-journey-v07/save-your-details/profile-06' || pageUrlPath === '/hcp-e2e-journey-v07/save-your-details/profile-06-new' || pageUrlPath === '/hcp-e2e-journey-v07/save-your-details/profile-07' || pageUrlPath === '/hcp-e2e-journey-v07/save-your-details/profile-07-new' || pageUrlPath === '/hcp-e2e-journey-v07/save-your-details/profile-07-a' || pageUrlPath === '/hcp-e2e-journey-v07/save-your-details/profile-07-a-new') {
     let postcode = document.getElementById('postcode');
     if (localStorage.getItem("hcpv07Postcode")) postcode.value = localStorage.getItem("hcpv07Postcode");
   }
 
   // hcp-e2e-journey-v07-postcode
-  if (pageUrlPath === '/hcp-e2e-journey-v07/profile-07-a' || pageUrlPath === '/hcp-e2e-journey-v07/profile-07-a-new' || pageUrlPath === '/hcp-e2e-journey-v07/profile-07' || pageUrlPath === '/hcp-e2e-journey-v07/profile-07-new') {
+  if (pageUrlPath === '/hcp-e2e-journey-v07/save-your-details/profile-07-a' || pageUrlPath === '/hcp-e2e-journey-v07/save-your-details/profile-07-a-new' || pageUrlPath === '/hcp-e2e-journey-v07/save-your-details/profile-07' || pageUrlPath === '/hcp-e2e-journey-v07/save-your-details/profile-07-new') {
     let organisationAddressLine1 = document.getElementById('organisationAddressLine1');
     let organisationAddressLine2 = document.getElementById('organisationAddressLine2');
     let townOrCity = document.getElementById('townOrCity');
@@ -2373,7 +2373,7 @@ window.GOVUKPrototypeKit.documentReady(function () {
   }
 
   // hcp-e2e-journey-v07-role
-  if (pageUrlPath === '/hcp-e2e-journey-v07/profile-02' || pageUrlPath === '/hcp-e2e-journey-v07/profile-02-new') {
+  if (pageUrlPath === '/hcp-e2e-journey-v07/save-your-details/profile-02' || pageUrlPath === '/hcp-e2e-journey-v07/save-your-details/profile-02-new') {
 
     if (localStorage.getItem("hcpv07Role")) {
       let role = localStorage.getItem("hcpv07Role");
@@ -2446,37 +2446,37 @@ window.GOVUKPrototypeKit.documentReady(function () {
   }
 
   // hcp-e2e-journey-v08-name
-  if (pageUrlPath === '/hcp-e2e-journey-v08/profile-01' || pageUrlPath === '/hcp-e2e-journey-v08/profile-01-new') {
+  if (pageUrlPath === '/hcp-e2e-journey-v08/save-your-details/profile-01' || pageUrlPath === '/hcp-e2e-journey-v08/save-your-details/profile-01-new') {
     let fullName = document.getElementById('fullName');
     if (localStorage.getItem("hcpv08Fullname")) fullName.value = localStorage.getItem("hcpv08Fullname");
   }
 
   // hcp-e2e-journey-v08-professional-registration-number
-  if (pageUrlPath === '/hcp-e2e-journey-v08/profile-03' || pageUrlPath === '/hcp-e2e-journey-v08/profile-03-new') {
+  if (pageUrlPath === '/hcp-e2e-journey-v08/save-your-details/profile-03' || pageUrlPath === '/hcp-e2e-journey-v08/save-your-details/profile-03-new') {
     let professionalRegistrationNumber = document.getElementById('professionalRegistrationNumber');
     if (localStorage.getItem("hcpv08ProfessionalRegistrationNumber")) professionalRegistrationNumber.value = localStorage.getItem("hcpv08ProfessionalRegistrationNumber");
   }
 
   // hcp-e2e-journey-v08-phone-number
-  if (pageUrlPath === '/hcp-e2e-journey-v08/profile-04' || pageUrlPath === '/hcp-e2e-journey-v08/profile-04-new') {
+  if (pageUrlPath === '/hcp-e2e-journey-v08/save-your-details/profile-04' || pageUrlPath === '/hcp-e2e-journey-v08/save-your-details/profile-04-new') {
     let mobileNumber = document.getElementById('mobileNumber');
     if (localStorage.getItem("hcpv08MobileNumber")) mobileNumber.value = localStorage.getItem("hcpv08MobileNumber");
   }
 
   // hcp-e2e-journey-v08-name-organisation
-  if (pageUrlPath === '/hcp-e2e-journey-v08/profile-05' || pageUrlPath === '/hcp-e2e-journey-v08/profile-05-new') {
+  if (pageUrlPath === '/hcp-e2e-journey-v08/save-your-details/profile-05' || pageUrlPath === '/hcp-e2e-journey-v08/save-your-details/profile-05-new') {
     let organisationName = document.getElementById('organisationName');
     if (localStorage.getItem("hcpv08OrganisationName")) organisationName.value = localStorage.getItem("hcpv08OrganisationName");
   }
 
   // hcp-e2e-journey-v08-postcode
-  if (pageUrlPath === '/hcp-e2e-journey-v08/profile-06' || pageUrlPath === '/hcp-e2e-journey-v08/profile-06-new' || pageUrlPath === '/hcp-e2e-journey-v08/profile-07' || pageUrlPath === '/hcp-e2e-journey-v08/profile-07-new' || pageUrlPath === '/hcp-e2e-journey-v08/profile-07-a' || pageUrlPath === '/hcp-e2e-journey-v08/profile-07-a-new') {
+  if (pageUrlPath === '/hcp-e2e-journey-v08/save-your-details/profile-06' || pageUrlPath === '/hcp-e2e-journey-v08/save-your-details/profile-06-new' || pageUrlPath === '/hcp-e2e-journey-v08/save-your-details/profile-07' || pageUrlPath === '/hcp-e2e-journey-v08/save-your-details/profile-07-new' || pageUrlPath === '/hcp-e2e-journey-v08/save-your-details/profile-07-a' || pageUrlPath === '/hcp-e2e-journey-v08/save-your-details/profile-07-a-new') {
     let postcode = document.getElementById('postcode');
     if (localStorage.getItem("hcpv08Postcode")) postcode.value = localStorage.getItem("hcpv08Postcode");
   }
 
   // hcp-e2e-journey-v08-postcode
-  if (pageUrlPath === '/hcp-e2e-journey-v08/profile-07' || pageUrlPath === '/hcp-e2e-journey-v08/profile-07-new' || pageUrlPath === '/hcp-e2e-journey-v08/profile-07-a' || pageUrlPath === '/hcp-e2e-journey-v08/profile-07-a-new') {
+  if (pageUrlPath === '/hcp-e2e-journey-v08/save-your-details/profile-07' || pageUrlPath === '/hcp-e2e-journey-v08/save-your-details/profile-07-new' || pageUrlPath === '/hcp-e2e-journey-v08/save-your-details/profile-07-a' || pageUrlPath === '/hcp-e2e-journey-v08/save-your-details/profile-07-a-new') {
     let organisationAddressLine1 = document.getElementById('organisationAddressLine1');
     let organisationAddressLine2 = document.getElementById('organisationAddressLine2');
     let townOrCity = document.getElementById('townOrCity');
@@ -2486,7 +2486,7 @@ window.GOVUKPrototypeKit.documentReady(function () {
   }
 
   // hcp-e2e-journey-v08-role
-  if (pageUrlPath === '/hcp-e2e-journey-v08/profile-02' || pageUrlPath === '/hcp-e2e-journey-v08/profile-02-new') {
+  if (pageUrlPath === '/hcp-e2e-journey-v08/save-your-details/profile-02' || pageUrlPath === '/hcp-e2e-journey-v08/save-your-details/profile-02-new') {
 
     if (localStorage.getItem("hcpv08Role")) {
       let role = localStorage.getItem("hcpv08Role");
@@ -2558,37 +2558,37 @@ window.GOVUKPrototypeKit.documentReady(function () {
   }
 
   // hcp-e2e-journey-v09-name
-  if (pageUrlPath === '/hcp-e2e-journey-v09/profile-01' || pageUrlPath === '/hcp-e2e-journey-v09/profile-01-new') {
+  if (pageUrlPath === '/hcp-e2e-journey-v09/save-your-details/profile-01' || pageUrlPath === '/hcp-e2e-journey-v09/save-your-details/profile-01-new') {
     let fullName = document.getElementById('fullName');
     if (localStorage.getItem("hcpv09Fullname")) fullName.value = localStorage.getItem("hcpv09Fullname");
   }
 
   // hcp-e2e-journey-v09-professional-registration-number
-  if (pageUrlPath === '/hcp-e2e-journey-v09/profile-03' || pageUrlPath === '/hcp-e2e-journey-v09/profile-03-new') {
+  if (pageUrlPath === '/hcp-e2e-journey-v09/save-your-details/profile-03' || pageUrlPath === '/hcp-e2e-journey-v09/save-your-details/profile-03-new') {
     let professionalRegistrationNumber = document.getElementById('professionalRegistrationNumber');
     if (localStorage.getItem("hcpv09ProfessionalRegistrationNumber")) professionalRegistrationNumber.value = localStorage.getItem("hcpv09ProfessionalRegistrationNumber");
   }
 
   // hcp-e2e-journey-v09-phone-number
-  if (pageUrlPath === '/hcp-e2e-journey-v09/profile-04' || pageUrlPath === '/hcp-e2e-journey-v09/profile-04-new') {
+  if (pageUrlPath === '/hcp-e2e-journey-v09/save-your-details/profile-04' || pageUrlPath === '/hcp-e2e-journey-v09/save-your-details/profile-04-new') {
     let mobileNumber = document.getElementById('mobileNumber');
     if (localStorage.getItem("hcpv09MobileNumber")) mobileNumber.value = localStorage.getItem("hcpv09MobileNumber");
   }
 
   // hcp-e2e-journey-v09-name-organisation
-  if (pageUrlPath === '/hcp-e2e-journey-v09/profile-05' || pageUrlPath === '/hcp-e2e-journey-v09/profile-05-new') {
+  if (pageUrlPath === '/hcp-e2e-journey-v09/save-your-details/profile-05' || pageUrlPath === '/hcp-e2e-journey-v09/save-your-details/profile-05-new') {
     let organisationName = document.getElementById('organisationName');
     if (localStorage.getItem("hcpv09OrganisationName")) organisationName.value = localStorage.getItem("hcpv09OrganisationName");
   }
 
   // hcp-e2e-journey-v09-postcode
-  if (pageUrlPath === '/hcp-e2e-journey-v09/profile-06' || pageUrlPath === '/hcp-e2e-journey-v09/profile-06-new' || pageUrlPath === '/hcp-e2e-journey-v09/profile-07' || pageUrlPath === '/hcp-e2e-journey-v09/profile-07-new' || pageUrlPath === '/hcp-e2e-journey-v09/profile-07-a' || pageUrlPath === '/hcp-e2e-journey-v09/profile-07-a-new') {
+  if (pageUrlPath === '/hcp-e2e-journey-v09/save-your-details/profile-06' || pageUrlPath === '/hcp-e2e-journey-v09/save-your-details/profile-06-new' || pageUrlPath === '/hcp-e2e-journey-v09/save-your-details/profile-07' || pageUrlPath === '/hcp-e2e-journey-v09/save-your-details/profile-07-new' || pageUrlPath === '/hcp-e2e-journey-v09/save-your-details/profile-07-a' || pageUrlPath === '/hcp-e2e-journey-v09/save-your-details/profile-07-a-new') {
     let postcode = document.getElementById('postcode');
     if (localStorage.getItem("hcpv09Postcode")) postcode.value = localStorage.getItem("hcpv09Postcode");
   }
 
   // hcp-e2e-journey-v09-postcode
-  if (pageUrlPath === '/hcp-e2e-journey-v09/profile-07-a' || pageUrlPath === '/hcp-e2e-journey-v09/profile-07' || pageUrlPath === '/hcp-e2e-journey-v09/profile-07-new' || pageUrlPath === '/hcp-e2e-journey-v09/profile-07-a-new') {
+  if (pageUrlPath === '/hcp-e2e-journey-v09/save-your-details/profile-07-a' || pageUrlPath === '/hcp-e2e-journey-v09/save-your-details/profile-07' || pageUrlPath === '/hcp-e2e-journey-v09/save-your-details/profile-07-new' || pageUrlPath === '/hcp-e2e-journey-v09/save-your-details/profile-07-a-new') {
     let organisationAddressLine1 = document.getElementById('organisationAddressLine1');
     let organisationAddressLine2 = document.getElementById('organisationAddressLine2');
     let townOrCity = document.getElementById('townOrCity');
@@ -2598,7 +2598,7 @@ window.GOVUKPrototypeKit.documentReady(function () {
   }
 
   // hcp-e2e-journey-v09-role
-  if (pageUrlPath === '/hcp-e2e-journey-v09/profile-02' || pageUrlPath === '/hcp-e2e-journey-v09/profile-02-new') {
+  if (pageUrlPath === '/hcp-e2e-journey-v09/save-your-details/profile-02' || pageUrlPath === '/hcp-e2e-journey-v09/save-your-details/profile-02-new') {
 
     if (localStorage.getItem("hcpv09Role")) {
       let role = localStorage.getItem("hcpv09Role");
@@ -2673,7 +2673,7 @@ window.GOVUKPrototypeKit.documentReady(function () {
   }
 
   // hcp-e2e-journey-mvp01-name
-  if (pageUrlPath === '/hcp-e2e-journey-mvp01/profile-01' || pageUrlPath === '/hcp-e2e-journey-mvp01/profile-01-new') {
+  if (pageUrlPath === '/hcp-e2e-journey-mvp01/save-your-details/profile-01' || pageUrlPath === '/hcp-e2e-journey-mvp01/save-your-details/profile-01-new') {
     let firstName = document.getElementById('firstName');
     //let middleName = document.getElementById('middleName');
     let lastName = document.getElementById('lastName');
@@ -2683,31 +2683,31 @@ window.GOVUKPrototypeKit.documentReady(function () {
   }
 
   // hcp-e2e-journey-mvp01-professional-registration-number
-  if (pageUrlPath === '/hcp-e2e-journey-mvp01/profile-03' || pageUrlPath === '/hcp-e2e-journey-mvp01/profile-03-new') {
+  if (pageUrlPath === '/hcp-e2e-journey-mvp01/save-your-details/profile-03' || pageUrlPath === '/hcp-e2e-journey-mvp01/save-your-details/profile-03-new') {
     let professionalRegistrationNumber = document.getElementById('professionalRegistrationNumber');
     if (localStorage.getItem("hcpmvp01ProfessionalRegistrationNumber")) professionalRegistrationNumber.value = localStorage.getItem("hcpmvp01ProfessionalRegistrationNumber");
   }
 
   // hcp-e2e-journey-mvp01-phone-number
-  if (pageUrlPath === '/hcp-e2e-journey-mvp01/profile-04' || pageUrlPath === '/hcp-e2e-journey-mvp01/profile-04-new') {
+  if (pageUrlPath === '/hcp-e2e-journey-mvp01/save-your-details/profile-04' || pageUrlPath === '/hcp-e2e-journey-mvp01/save-your-details/profile-04-new') {
     let mobileNumber = document.getElementById('mobileNumber');
     if (localStorage.getItem("hcpmvp01MobileNumber")) mobileNumber.value = localStorage.getItem("hcpmvp01MobileNumber");
   }
 
   // hcp-e2e-journey-mvp01-name-organisation
-  if (pageUrlPath === '/hcp-e2e-journey-mvp01/profile-05' || pageUrlPath === '/hcp-e2e-journey-mvp01/profile-05-new') {
+  if (pageUrlPath === '/hcp-e2e-journey-mvp01/save-your-details/profile-05' || pageUrlPath === '/hcp-e2e-journey-mvp01/save-your-details/profile-05-new') {
     let organisationName = document.getElementById('organisationName');
     if (localStorage.getItem("hcpmvp01OrganisationName")) organisationName.value = localStorage.getItem("hcpmvp01OrganisationName");
   }
 
   // hcp-e2e-journey-mvp01-postcode
-  if (pageUrlPath === '/hcp-e2e-journey-mvp01/profile-06' || pageUrlPath === '/hcp-e2e-journey-mvp01/profile-06-new' || pageUrlPath === '/hcp-e2e-journey-mvp01/profile-07-a' || pageUrlPath === '/hcp-e2e-journey-mvp01/profile-07-a-new' || pageUrlPath === '/hcp-e2e-journey-mvp01/profile-07' || pageUrlPath === '/hcp-e2e-journey-mvp01/profile-07-new') {
+  if (pageUrlPath === '/hcp-e2e-journey-mvp01/save-your-details/profile-06' || pageUrlPath === '/hcp-e2e-journey-mvp01/save-your-details/profile-06-new' || pageUrlPath === '/hcp-e2e-journey-mvp01/save-your-details/profile-07-a' || pageUrlPath === '/hcp-e2e-journey-mvp01/save-your-details/profile-07-a-new' || pageUrlPath === '/hcp-e2e-journey-mvp01/save-your-details/profile-07' || pageUrlPath === '/hcp-e2e-journey-mvp01/save-your-details/profile-07-new') {
     let postcode = document.getElementById('postcode');
     if (localStorage.getItem("hcpmvp01Postcode")) postcode.value = localStorage.getItem("hcpmvp01Postcode");
   }
 
   // hcp-e2e-journey-mvp01-postcode
-  if (pageUrlPath === '/hcp-e2e-journey-mvp01/profile-07-a' || pageUrlPath === '/hcp-e2e-journey-mvp01/profile-07-a-new' || pageUrlPath === '/hcp-e2e-journey-mvp01/profile-07' || pageUrlPath === '/hcp-e2e-journey-mvp01/profile-07-new') {
+  if (pageUrlPath === '/hcp-e2e-journey-mvp01/save-your-details/profile-07-a' || pageUrlPath === '/hcp-e2e-journey-mvp01/save-your-details/profile-07-a-new' || pageUrlPath === '/hcp-e2e-journey-mvp01/save-your-details/profile-07' || pageUrlPath === '/hcp-e2e-journey-mvp01/save-your-details/profile-07-new') {
     let organisationName = document.getElementById('organisationName');
     let organisationAddressLine1 = document.getElementById('organisationAddressLine1');
     let organisationAddressLine2 = document.getElementById('organisationAddressLine2');
@@ -2723,7 +2723,7 @@ window.GOVUKPrototypeKit.documentReady(function () {
   }
 
   // hcp-e2e-journey-mvp01-role
-  if (pageUrlPath === '/hcp-e2e-journey-mvp01/profile-02' || pageUrlPath === '/hcp-e2e-journey-mvp01/profile-02-new') {
+  if (pageUrlPath === '/hcp-e2e-journey-mvp01/save-your-details/profile-02' || pageUrlPath === '/hcp-e2e-journey-mvp01/save-your-details/profile-02-new') {
 
     if (localStorage.getItem("hcpmvp01Role")) {
       let role = localStorage.getItem("hcpmvp01Role");
@@ -2798,7 +2798,7 @@ window.GOVUKPrototypeKit.documentReady(function () {
   }
 
   // hcp-e2e-journey-mvp02-name
-  if (pageUrlPath === '/hcp-e2e-journey-mvp02/profile-01' || pageUrlPath === '/hcp-e2e-journey-mvp02/profile-01-new') {
+  if (pageUrlPath === '/hcp-e2e-journey-mvp02/save-your-details/profile-01' || pageUrlPath === '/hcp-e2e-journey-mvp02/save-your-details/profile-01-new') {
     let firstName = document.getElementById('firstName');
     //let middleName = document.getElementById('middleName');
     let lastName = document.getElementById('lastName');
@@ -2808,31 +2808,31 @@ window.GOVUKPrototypeKit.documentReady(function () {
   }
 
   // hcp-e2e-journey-mvp02-professional-registration-number
-  if (pageUrlPath === '/hcp-e2e-journey-mvp02/profile-03' || pageUrlPath === '/hcp-e2e-journey-mvp02/profile-03-new') {
+  if (pageUrlPath === '/hcp-e2e-journey-mvp02/save-your-details/profile-03' || pageUrlPath === '/hcp-e2e-journey-mvp02/save-your-details/profile-03-new') {
     let professionalRegistrationNumber = document.getElementById('professionalRegistrationNumber');
     if (localStorage.getItem("hcpmvp02ProfessionalRegistrationNumber")) professionalRegistrationNumber.value = localStorage.getItem("hcpmvp02ProfessionalRegistrationNumber");
   }
 
   // hcp-e2e-journey-mvp02-phone-number
-  if (pageUrlPath === '/hcp-e2e-journey-mvp02/profile-04' || pageUrlPath === '/hcp-e2e-journey-mvp02/profile-04-new') {
+  if (pageUrlPath === '/hcp-e2e-journey-mvp02/save-your-details/profile-04' || pageUrlPath === '/hcp-e2e-journey-mvp02/save-your-details/profile-04-new') {
     let mobileNumber = document.getElementById('mobileNumber');
     if (localStorage.getItem("hcpmvp02MobileNumber")) mobileNumber.value = localStorage.getItem("hcpmvp02MobileNumber");
   }
 
   // hcp-e2e-journey-mvp02-name-organisation
-  if (pageUrlPath === '/hcp-e2e-journey-mvp02/profile-05' || pageUrlPath === '/hcp-e2e-journey-mvp02/profile-05-new') {
+  if (pageUrlPath === '/hcp-e2e-journey-mvp02/save-your-details/profile-05' || pageUrlPath === '/hcp-e2e-journey-mvp02/save-your-details/profile-05-new') {
     let organisationName = document.getElementById('organisationName');
     if (localStorage.getItem("hcpmvp02OrganisationName")) organisationName.value = localStorage.getItem("hcpmvp02OrganisationName");
   }
 
   // hcp-e2e-journey-mvp02-postcode
-  if (pageUrlPath === '/hcp-e2e-journey-mvp02/profile-06' || pageUrlPath === '/hcp-e2e-journey-mvp02/profile-06-new' || pageUrlPath === '/hcp-e2e-journey-mvp02/profile-07-a' || pageUrlPath === '/hcp-e2e-journey-mvp02/profile-07-a-new' || pageUrlPath === '/hcp-e2e-journey-mvp02/profile-07' || pageUrlPath === '/hcp-e2e-journey-mvp02/profile-07-new') {
+  if (pageUrlPath === '/hcp-e2e-journey-mvp02/save-your-details/profile-06' || pageUrlPath === '/hcp-e2e-journey-mvp02/save-your-details/profile-06-new' || pageUrlPath === '/hcp-e2e-journey-mvp02/save-your-details/profile-07-a' || pageUrlPath === '/hcp-e2e-journey-mvp02/save-your-details/profile-07-a-new' || pageUrlPath === '/hcp-e2e-journey-mvp02/save-your-details/profile-07' || pageUrlPath === '/hcp-e2e-journey-mvp02/save-your-details/profile-07-new') {
     let postcode = document.getElementById('postcode');
     if (localStorage.getItem("hcpmvp02Postcode")) postcode.value = localStorage.getItem("hcpmvp02Postcode");
   }
 
   // hcp-e2e-journey-mvp02-postcode
-  if (pageUrlPath === '/hcp-e2e-journey-mvp02/profile-07-a' || pageUrlPath === '/hcp-e2e-journey-mvp02/profile-07-a-new' || pageUrlPath === '/hcp-e2e-journey-mvp02/profile-07' || pageUrlPath === '/hcp-e2e-journey-mvp02/profile-07-new') {
+  if (pageUrlPath === '/hcp-e2e-journey-mvp02/save-your-details/profile-07-a' || pageUrlPath === '/hcp-e2e-journey-mvp02/save-your-details/profile-07-a-new' || pageUrlPath === '/hcp-e2e-journey-mvp02/save-your-details/profile-07' || pageUrlPath === '/hcp-e2e-journey-mvp02/save-your-details/profile-07-new') {
     let organisationName = document.getElementById('organisationName');
     let organisationAddressLine1 = document.getElementById('organisationAddressLine1');
     let organisationAddressLine2 = document.getElementById('organisationAddressLine2');
@@ -2848,7 +2848,7 @@ window.GOVUKPrototypeKit.documentReady(function () {
   }
 
   // hcp-e2e-journey-mvp02-role
-  if (pageUrlPath === '/hcp-e2e-journey-mvp02/profile-02' || pageUrlPath === '/hcp-e2e-journey-mvp02/profile-02-new') {
+  if (pageUrlPath === '/hcp-e2e-journey-mvp02/save-your-details/profile-02' || pageUrlPath === '/hcp-e2e-journey-mvp02/save-your-details/profile-02-new') {
 
     if (localStorage.getItem("hcpmvp02Role")) {
       let role = localStorage.getItem("hcpmvp02Role");
@@ -2923,7 +2923,7 @@ window.GOVUKPrototypeKit.documentReady(function () {
   }
 
   // hcp-e2e-journey-mvp03-name
-  if (pageUrlPath === '/hcp-e2e-journey-mvp03/profile-01' || pageUrlPath === '/hcp-e2e-journey-mvp03/profile-01-new') {
+  if (pageUrlPath === '/hcp-e2e-journey-mvp03/save-your-details/profile-01' || pageUrlPath === '/hcp-e2e-journey-mvp03/save-your-details/profile-01-new') {
     let firstName = document.getElementById('firstName');
     //let middleName = document.getElementById('middleName');
     let lastName = document.getElementById('lastName');
@@ -2933,31 +2933,31 @@ window.GOVUKPrototypeKit.documentReady(function () {
   }
 
   // hcp-e2e-journey-mvp03-professional-registration-number
-  if (pageUrlPath === '/hcp-e2e-journey-mvp03/profile-03' || pageUrlPath === '/hcp-e2e-journey-mvp03/profile-03-new') {
+  if (pageUrlPath === '/hcp-e2e-journey-mvp03/save-your-details/profile-03' || pageUrlPath === '/hcp-e2e-journey-mvp03/save-your-details/profile-03-new') {
     let professionalRegistrationNumber = document.getElementById('professionalRegistrationNumber');
     if (localStorage.getItem("hcpmvp03ProfessionalRegistrationNumber")) professionalRegistrationNumber.value = localStorage.getItem("hcpmvp03ProfessionalRegistrationNumber");
   }
 
   // hcp-e2e-journey-mvp03-phone-number
-  if (pageUrlPath === '/hcp-e2e-journey-mvp03/profile-04' || pageUrlPath === '/hcp-e2e-journey-mvp03/profile-04-new') {
+  if (pageUrlPath === '/hcp-e2e-journey-mvp03/save-your-details/profile-04' || pageUrlPath === '/hcp-e2e-journey-mvp03/save-your-details/profile-04-new') {
     let mobileNumber = document.getElementById('mobileNumber');
     if (localStorage.getItem("hcpmvp03MobileNumber")) mobileNumber.value = localStorage.getItem("hcpmvp03MobileNumber");
   }
 
   // hcp-e2e-journey-mvp03-name-organisation
-  if (pageUrlPath === '/hcp-e2e-journey-mvp03/profile-05' || pageUrlPath === '/hcp-e2e-journey-mvp03/profile-05-new') {
+  if (pageUrlPath === '/hcp-e2e-journey-mvp03/save-your-details/profile-05' || pageUrlPath === '/hcp-e2e-journey-mvp03/save-your-details/profile-05-new') {
     let organisationName = document.getElementById('organisationName');
     if (localStorage.getItem("hcpmvp03OrganisationName")) organisationName.value = localStorage.getItem("hcpmvp03OrganisationName");
   }
 
   // hcp-e2e-journey-mvp03-postcode
-  if (pageUrlPath === '/hcp-e2e-journey-mvp03/profile-06' || pageUrlPath === '/hcp-e2e-journey-mvp03/profile-06-new' || pageUrlPath === '/hcp-e2e-journey-mvp03/profile-07-a' || pageUrlPath === '/hcp-e2e-journey-mvp03/profile-07-a-new' || pageUrlPath === '/hcp-e2e-journey-mvp03/profile-07' || pageUrlPath === '/hcp-e2e-journey-mvp03/profile-07-new') {
+  if (pageUrlPath === '/hcp-e2e-journey-mvp03/save-your-details/profile-06' || pageUrlPath === '/hcp-e2e-journey-mvp03/save-your-details/profile-06-new' || pageUrlPath === '/hcp-e2e-journey-mvp03/save-your-details/profile-07-a' || pageUrlPath === '/hcp-e2e-journey-mvp03/save-your-details/profile-07-a-new' || pageUrlPath === '/hcp-e2e-journey-mvp03/save-your-details/profile-07' || pageUrlPath === '/hcp-e2e-journey-mvp03/save-your-details/profile-07-new') {
     let postcode = document.getElementById('postcode');
     if (localStorage.getItem("hcpmvp03Postcode")) postcode.value = localStorage.getItem("hcpmvp03Postcode");
   }
 
   // hcp-e2e-journey-mvp03-postcode
-  if (pageUrlPath === '/hcp-e2e-journey-mvp03/profile-07-a' || pageUrlPath === '/hcp-e2e-journey-mvp03/profile-07-a-new' || pageUrlPath === '/hcp-e2e-journey-mvp03/profile-07' || pageUrlPath === '/hcp-e2e-journey-mvp03/profile-07-new') {
+  if (pageUrlPath === '/hcp-e2e-journey-mvp03/save-your-details/profile-07-a' || pageUrlPath === '/hcp-e2e-journey-mvp03/save-your-details/profile-07-a-new' || pageUrlPath === '/hcp-e2e-journey-mvp03/save-your-details/profile-07' || pageUrlPath === '/hcp-e2e-journey-mvp03/save-your-details/profile-07-new') {
     let organisationName = document.getElementById('organisationName');
     let organisationAddressLine1 = document.getElementById('organisationAddressLine1');
     let organisationAddressLine2 = document.getElementById('organisationAddressLine2');
@@ -2973,7 +2973,7 @@ window.GOVUKPrototypeKit.documentReady(function () {
   }
 
   // hcp-e2e-journey-mvp03-role
-  if (pageUrlPath === '/hcp-e2e-journey-mvp03/profile-02') {
+  if (pageUrlPath === '/hcp-e2e-journey-mvp03/save-your-details/profile-02') {
 
     if (localStorage.getItem("hcpmvp03Role")) {
       let role = localStorage.getItem("hcpmvp03Role");
@@ -2999,7 +2999,7 @@ window.GOVUKPrototypeKit.documentReady(function () {
     }
   }
 
-  if (pageUrlPath === '/hcp-e2e-journey-mvp03/profile-02' || pageUrlPath === '/hcp-e2e-journey-mvp03/profile-02-error') {
+  if (pageUrlPath === '/hcp-e2e-journey-mvp03/save-your-details/profile-02' || pageUrlPath === '/hcp-e2e-journey-mvp03/save-your-details/profile-02-error') {
     let otherRole = document.getElementById('otherRole');
     if (localStorage.getItem("hcpmvp03otherRole")) otherRole.value = localStorage.getItem("hcpmvp03otherRole");
   }
@@ -3053,7 +3053,7 @@ window.GOVUKPrototypeKit.documentReady(function () {
   }
 
   // private-beta01-name
-  if (pageUrlPath === '/private-beta01/profile-01' || pageUrlPath === '/private-beta01/profile-01-new') {
+  if (pageUrlPath === '/private-beta01/save-your-details/profile-01' || pageUrlPath === '/private-beta01/save-your-details/profile-01-new') {
     let firstName = document.getElementById('firstName');
     //let middleName = document.getElementById('middleName');
     let lastName = document.getElementById('lastName');
@@ -3063,25 +3063,25 @@ window.GOVUKPrototypeKit.documentReady(function () {
   }
 
   // private-beta01-professional-registration-number
-  if (pageUrlPath === '/private-beta01/profile-03' || pageUrlPath === '/private-beta01/profile-03-new') {
+  if (pageUrlPath === '/private-beta01/save-your-details/profile-03' || pageUrlPath === '/private-beta01/save-your-details/profile-03-new') {
     let professionalRegistrationNumber = document.getElementById('professionalRegistrationNumber');
     if (localStorage.getItem("privatebeta01ProfessionalRegistrationNumber")) professionalRegistrationNumber.value = localStorage.getItem("privatebeta01ProfessionalRegistrationNumber");
   }
 
   // private-beta01-phone-number
-  if (pageUrlPath === '/private-beta01/profile-04' || pageUrlPath === '/private-beta01/profile-04-new') {
+  if (pageUrlPath === '/private-beta01/save-your-details/profile-04' || pageUrlPath === '/private-beta01/save-your-details/profile-04-new') {
     let mobileNumber = document.getElementById('mobileNumber');
     if (localStorage.getItem("privatebeta01MobileNumber")) mobileNumber.value = localStorage.getItem("privatebeta01MobileNumber");
   }
 
   // private-beta01-name-organisation
-  if (pageUrlPath === '/private-beta01/profile-05' || pageUrlPath === '/private-beta01/profile-05-new') {
+  if (pageUrlPath === '/private-beta01/save-your-details/profile-05' || pageUrlPath === '/private-beta01/save-your-details/profile-05-new') {
     let organisationName = document.getElementById('organisationName');
     if (localStorage.getItem("privatebeta01OrganisationName")) organisationName.value = localStorage.getItem("privatebeta01OrganisationName");
   }
 
   // Address selection private-beta01
-  if (pageUrlPath === '/private-beta01/profile-06' || pageUrlPath === '/private-beta01/profile-06-error') {
+  if (pageUrlPath === '/private-beta01/save-your-details/profile-06' || pageUrlPath === '/private-beta01/save-your-details/profile-06-error') {
 
     if (localStorage.getItem("privatebeta01OrganisationAddress")) {
       let organisationAddress = localStorage.getItem("privatebeta01OrganisationAddress");
@@ -3100,7 +3100,7 @@ window.GOVUKPrototypeKit.documentReady(function () {
   }
 
   // private-beta01-postcode
-  if (pageUrlPath === '/private-beta01/profile-07-a' || pageUrlPath === '/private-beta01/profile-07-a-new' || pageUrlPath === '/private-beta01/profile-07' || pageUrlPath === '/private-beta01/profile-07-new') {
+  if (pageUrlPath === '/private-beta01/save-your-details/profile-07-a' || pageUrlPath === '/private-beta01/save-your-details/profile-07-a-new' || pageUrlPath === '/private-beta01/save-your-details/profile-07' || pageUrlPath === '/private-beta01/save-your-details/profile-07-new') {
     let organisationName = document.getElementById('organisationName');
     let organisationAddressLine1 = document.getElementById('organisationAddressLine1');
     let organisationAddressLine2 = document.getElementById('organisationAddressLine2');
@@ -3116,7 +3116,7 @@ window.GOVUKPrototypeKit.documentReady(function () {
   }
 
   // private-beta01-role
-  if (pageUrlPath === '/private-beta01/profile-02') {
+  if (pageUrlPath === '/private-beta01/save-your-details/profile-02') {
 
     if (localStorage.getItem("privatebeta01Role")) {
       let role = localStorage.getItem("privatebeta01Role");
@@ -3142,7 +3142,7 @@ window.GOVUKPrototypeKit.documentReady(function () {
     }
   }
 
-  if (pageUrlPath === '/private-beta01/profile-02' || pageUrlPath === '/private-beta01/profile-02-error') {
+  if (pageUrlPath === '/private-beta01/save-your-details/profile-02' || pageUrlPath === '/private-beta01/save-your-details/profile-02-error') {
     let otherRole = document.getElementById('otherRole');
     if (localStorage.getItem("privatebeta01otherRole")) otherRole.value = localStorage.getItem("privatebeta01otherRole");
   }
@@ -3197,7 +3197,7 @@ window.GOVUKPrototypeKit.documentReady(function () {
 }
 
 // private-beta03-name
-if (pageUrlPath === '/private-beta03/profile-01' || pageUrlPath === '/private-beta03/profile-01-new') {
+if (pageUrlPath === '/private-beta03/save-your-details/profile-01' || pageUrlPath === '/private-beta03/save-your-details/profile-01-new') {
   let firstName = document.getElementById('firstName');
   //let middleName = document.getElementById('middleName');
   let lastName = document.getElementById('lastName');
@@ -3207,25 +3207,25 @@ if (pageUrlPath === '/private-beta03/profile-01' || pageUrlPath === '/private-be
 }
 
 // private-beta03-professional-registration-number
-if (pageUrlPath === '/private-beta03/profile-03' || pageUrlPath === '/private-beta03/profile-03-new') {
+if (pageUrlPath === '/private-beta03/save-your-details/profile-03' || pageUrlPath === '/private-beta03/save-your-details/profile-03-new') {
   let professionalRegistrationNumber = document.getElementById('professionalRegistrationNumber');
   if (localStorage.getItem("privatebeta03ProfessionalRegistrationNumber")) professionalRegistrationNumber.value = localStorage.getItem("privatebeta03ProfessionalRegistrationNumber");
 }
 
 // private-beta03-phone-number
-if (pageUrlPath === '/private-beta03/profile-04' || pageUrlPath === '/private-beta03/profile-04-new') {
+if (pageUrlPath === '/private-beta03/save-your-details/profile-04' || pageUrlPath === '/private-beta03/save-your-details/profile-04-new') {
   let mobileNumber = document.getElementById('mobileNumber');
   if (localStorage.getItem("privatebeta03MobileNumber")) mobileNumber.value = localStorage.getItem("privatebeta03MobileNumber");
 }
 
 // private-beta03-name-organisation
-if (pageUrlPath === '/private-beta03/profile-05' || pageUrlPath === '/private-beta03/profile-05-new') {
+if (pageUrlPath === '/private-beta03/save-your-details/profile-05' || pageUrlPath === '/private-beta03/save-your-details/profile-05-new') {
   let organisationName = document.getElementById('organisationName');
   if (localStorage.getItem("privatebeta03OrganisationName")) organisationName.value = localStorage.getItem("privatebeta03OrganisationName");
 }
 
 // Address selection private-beta03
-if (pageUrlPath === '/private-beta03/profile-06' || pageUrlPath === '/private-beta03/profile-06-error') {
+if (pageUrlPath === '/private-beta03/save-your-details/profile-06' || pageUrlPath === '/private-beta03/save-your-details/profile-06-error') {
 
   if (localStorage.getItem("privatebeta03OrganisationAddress")) {
     let organisationAddress = localStorage.getItem("privatebeta03OrganisationAddress");
@@ -3244,7 +3244,7 @@ if (pageUrlPath === '/private-beta03/profile-06' || pageUrlPath === '/private-be
 }
 
 // private-beta01-postcode
-if (pageUrlPath === '/private-beta03/profile-07-a' || pageUrlPath === '/private-beta03/profile-07-a-new' || pageUrlPath === '/private-beta03/profile-07' || pageUrlPath === '/private-beta03/profile-07-new') {
+if (pageUrlPath === '/private-beta03/save-your-details/profile-07-a' || pageUrlPath === '/private-beta03/save-your-details/profile-07-a-new' || pageUrlPath === '/private-beta03/save-your-details/profile-07' || pageUrlPath === '/private-beta03/save-your-details/profile-07-new') {
   let organisationName = document.getElementById('organisationName');
   let organisationAddressLine1 = document.getElementById('organisationAddressLine1');
   let organisationAddressLine2 = document.getElementById('organisationAddressLine2');
@@ -3260,7 +3260,7 @@ if (pageUrlPath === '/private-beta03/profile-07-a' || pageUrlPath === '/private-
 }
 
 // private-beta03-role
-if (pageUrlPath === '/private-beta03/profile-02') {
+if (pageUrlPath === '/private-beta03/save-your-details/profile-02') {
 
   if (localStorage.getItem("privatebeta03Role")) {
     let role = localStorage.getItem("privatebeta03Role");
@@ -3286,7 +3286,7 @@ if (pageUrlPath === '/private-beta03/profile-02') {
   }
 }
 
-if (pageUrlPath === '/private-beta03/profile-02' || pageUrlPath === '/private-beta03/profile-02-error') {
+if (pageUrlPath === '/private-beta03/save-your-details/profile-02' || pageUrlPath === '/private-beta03/save-your-details/profile-02-error') {
   let otherRole = document.getElementById('otherRole');
   if (localStorage.getItem("privatebeta03otherRole")) otherRole.value = localStorage.getItem("privatebeta03otherRole");
 }
@@ -6600,7 +6600,7 @@ if (pageUrlPath === '/private-beta03/profile-02' || pageUrlPath === '/private-be
     if (localStorage.getItem("privatebeta01Treatment")) treatment.value = localStorage.getItem("privatebeta01Treatment");
   }
   // private-beta01
-  if (pageUrlPath === '/private-beta01/profile-07-manual') {
+  if (pageUrlPath === '/private-beta01/save-your-details/profile-07-manual') {
     let organisationName = document.getElementById('organisationName');
     let organisationAddressLine1 = document.getElementById('organisationAddressLine1');
     let organisationAddressLine2 = document.getElementById('organisationAddressLine2');
@@ -6907,7 +6907,7 @@ if (pageUrlPath === '/private-beta03/profile-02' || pageUrlPath === '/private-be
     if (localStorage.getItem("privatebeta03Treatment")) treatment.value = localStorage.getItem("privatebeta03Treatment");
   }
   // private-beta03
-  if (pageUrlPath === '/private-beta03/profile-07-manual') {
+  if (pageUrlPath === '/private-beta03/save-your-details/profile-07-manual') {
     let organisationName = document.getElementById('organisationName');
     let organisationAddressLine1 = document.getElementById('organisationAddressLine1');
     let organisationAddressLine2 = document.getElementById('organisationAddressLine2');
@@ -6953,47 +6953,47 @@ if (pageUrlPath === '/private-beta03/profile-02' || pageUrlPath === '/private-be
   // Profile
 
   // v04
-  if (pageUrlPath === '/hcp-e2e-journey-v04/profile-07-new' || pageUrlPath === '/hcp-e2e-journey-v04/profile-07') {
+  if (pageUrlPath === '/hcp-e2e-journey-v04/save-your-details/profile-07-new' || pageUrlPath === '/hcp-e2e-journey-v04/save-your-details/profile-07') {
     let patientPostcode = document.getElementById('postcode');
     if (localStorage.getItem("hcpv04Postcode")) patientPostcode.innerHTML = localStorage.getItem("hcpv04Postcode");
   }
   // v05
-  if (pageUrlPath === '/hcp-e2e-journey-v05/profile-07-new' || pageUrlPath === '/hcp-e2e-journey-v05/profile-07') {
+  if (pageUrlPath === '/hcp-e2e-journey-v05/save-your-details/profile-07-new' || pageUrlPath === '/hcp-e2e-journey-v05/save-your-details/profile-07') {
     let patientPostcode = document.getElementById('postcode');
     if (localStorage.getItem("hcpv05Postcode")) patientPostcode.innerHTML = localStorage.getItem("hcpv05Postcode");
   }
   // v06
-  if (pageUrlPath === '/hcp-e2e-journey-v06/profile-07-new' || pageUrlPath === '/hcp-e2e-journey-v06/profile-07') {
+  if (pageUrlPath === '/hcp-e2e-journey-v06/save-your-details/profile-07-new' || pageUrlPath === '/hcp-e2e-journey-v06/save-your-details/profile-07') {
     let patientPostcode = document.getElementById('postcode');
     if (localStorage.getItem("hcpv06Postcode")) patientPostcode.innerHTML = localStorage.getItem("hcpv06Postcode");
   }
   // v07
-  if (pageUrlPath === '/hcp-e2e-journey-v07/profile-07-new' || pageUrlPath === '/hcp-e2e-journey-v07/profile-07') {
+  if (pageUrlPath === '/hcp-e2e-journey-v07/save-your-details/profile-07-new' || pageUrlPath === '/hcp-e2e-journey-v07/save-your-details/profile-07') {
     let patientPostcode = document.getElementById('postcode');
     if (localStorage.getItem("hcpv07Postcode")) patientPostcode.innerHTML = localStorage.getItem("hcpv07Postcode");
   }
   // v08
-  if (pageUrlPath === '/hcp-e2e-journey-v08/profile-07-new' || pageUrlPath === '/hcp-e2e-journey-v08/profile-07') {
+  if (pageUrlPath === '/hcp-e2e-journey-v08/save-your-details/profile-07-new' || pageUrlPath === '/hcp-e2e-journey-v08/save-your-details/profile-07') {
     let patientPostcode = document.getElementById('postcode');
     if (localStorage.getItem("hcpv08Postcode")) patientPostcode.innerHTML = localStorage.getItem("hcpv08Postcode");
   }
   // v09
-  if (pageUrlPath === '/hcp-e2e-journey-v09/profile-07-new' || pageUrlPath === '/hcp-e2e-journey-v09/profile-07') {
+  if (pageUrlPath === '/hcp-e2e-journey-v09/save-your-details/profile-07-new' || pageUrlPath === '/hcp-e2e-journey-v09/save-your-details/profile-07') {
     let patientPostcode = document.getElementById('postcode');
     if (localStorage.getItem("hcpv09Postcode")) patientPostcode.innerHTML = localStorage.getItem("hcpv09Postcode");
   }
   // mvp01
-  if (pageUrlPath === '/hcp-e2e-journey-mvp01/profile-07-new' || pageUrlPath === '/hcp-e2e-journey-mvp01/profile-07') {
+  if (pageUrlPath === '/hcp-e2e-journey-mvp01/save-your-details/profile-07-new' || pageUrlPath === '/hcp-e2e-journey-mvp01/save-your-details/profile-07') {
     let patientPostcode = document.getElementById('postcode');
     if (localStorage.getItem("hcpmvp01Postcode")) patientPostcode.innerHTML = localStorage.getItem("hcpmvp01Postcode");
   }
   // mvp02
-  if (pageUrlPath === '/hcp-e2e-journey-mvp02/profile-07-new' || pageUrlPath === '/hcp-e2e-journey-mvp02/profile-07') {
+  if (pageUrlPath === '/hcp-e2e-journey-mvp02/save-your-details/profile-07-new' || pageUrlPath === '/hcp-e2e-journey-mvp02/save-your-details/profile-07') {
     let patientPostcode = document.getElementById('postcode');
     if (localStorage.getItem("hcpmvp02Postcode")) patientPostcode.innerHTML = localStorage.getItem("hcpmvp02Postcode");
   }
   // mvp03
-  if (pageUrlPath === '/hcp-e2e-journey-mvp03/profile-07-new' || pageUrlPath === '/hcp-e2e-journey-mvp03/profile-07') {
+  if (pageUrlPath === '/hcp-e2e-journey-mvp03/save-your-details/profile-07-new' || pageUrlPath === '/hcp-e2e-journey-mvp03/save-your-details/profile-07') {
     let patientPostcode = document.getElementById('postcode');
     if (localStorage.getItem("hcpmvp03Postcode")) patientPostcode.innerHTML = localStorage.getItem("hcpmvp03Postcode");
   }
@@ -10215,6 +10215,7 @@ function navLink(event) {
   localStorage.setItem('linkLiId', linkLiId);
   localStorage.setItem('linkAnchorId', linkAnchorId);
 }
+// signin-page
 
 // ===============
 // Log out JOURNEY
@@ -10236,6 +10237,7 @@ function logOutHcpE2e() {
   if (domainPathUrl === 'hcp-e2e-journey-mvp02') window.location.pathname = "/hcp-e2e-journey-mvp02/signout";
   if (domainPathUrl === 'hcp-e2e-journey-mvp03') window.location.pathname = "/hcp-e2e-journey-mvp03/signout";
   if (domainPathUrl === 'private-beta01') window.location.pathname = "/private-beta01/signout";
+  if (domainPathUrl === 'private-beta01') window.location.pathname = "/private-beta03/signout";
   if (domainPathUrl === 'private-beta03') window.location.pathname = "/private-beta03/signout";
   localStorage.removeItem('sentSR1_firstName');
   localStorage.removeItem('sentSR1_surname');
@@ -10998,19 +11000,19 @@ function logOutHcpE2e() {
    // Log out of version private-beta03
    localStorage.removeItem('privatebeta03SigninOrg');
    localStorage.removeItem('privatebeta03HcpEmail');
-   //localStorage.removeItem('privatebeta03Firstname');
-   //localStorage.removeItem('privatebeta03Lastname');
-   //localStorage.removeItem('privatebeta03Role');
-   //localStorage.removeItem('privatebeta03otherRole');
-   //localStorage.removeItem('privatebeta03ProfessionalRegistrationNumber');
-   //localStorage.removeItem('privatebeta03MobileNumber');
-   //localStorage.removeItem('privatebeta03OrganisationName');
-   //localStorage.removeItem('privatebeta03OrganisationAddressLine1');
-   //localStorage.removeItem('privatebeta03OrganisationAddressLine2');
-   //localStorage.removeItem('privatebeta03OrganisationAddressCounty');
-   //localStorage.removeItem('privatebeta03OrganisationAddress');
-   //localStorage.removeItem('privatebeta03TownOrCity');
-   //localStorage.removeItem('privatebeta03Postcode');
+   localStorage.removeItem('privatebeta03Firstname');
+   localStorage.removeItem('privatebeta03Lastname');
+   localStorage.removeItem('privatebeta03Role');
+   localStorage.removeItem('privatebeta03otherRole');
+   localStorage.removeItem('privatebeta03ProfessionalRegistrationNumber');
+   localStorage.removeItem('privatebeta03MobileNumber');
+   localStorage.removeItem('privatebeta03OrganisationName');
+   localStorage.removeItem('privatebeta03OrganisationAddressLine1');
+   localStorage.removeItem('privatebeta03OrganisationAddressLine2');
+   localStorage.removeItem('privatebeta03OrganisationAddressCounty');
+   localStorage.removeItem('privatebeta03OrganisationAddress');
+   localStorage.removeItem('privatebeta03TownOrCity');
+   localStorage.removeItem('privatebeta03Postcode');
    localStorage.removeItem('privatebeta03ChangingReceiveReminders');
    localStorage.removeItem('privatebeta03ReceiveReminder');
    localStorage.removeItem('privatebeta03ReminderType');
@@ -11696,7 +11698,7 @@ function privatebeta01SignIn() {
   }
 }
 
-// private-beta03
+// private-beta03//
 function privatebeta03SigninOrgFn(organisationSignin) {
   currentValueOfOrg = organisationSignin.value;
   localStorage.setItem('privatebeta03SigninOrg', currentValueOfOrg);
@@ -18526,7 +18528,7 @@ async function fetchPatientDetailsprivatebeta01() {
   // Simulated asynchronous data fetching
   return {
     PatientFullName: localStorage.getItem("privatebeta01PatientFirstName") + ' ' + localStorage.getItem("privatebeta01PatientLastName"),
-    dob: localStorage.getItem("privatebeta01DobDay") + "/" + localStorage.getItem("privatebeta01DobMonth") + "/" + localStorage.getItem("privatebeta01DobYear"),
+    dob: localStorage.getItem("") + "/" + localStorage.getItem("privatebeta01DobMonth") + "/" + localStorage.getItem("privatebeta01DobYear"),
     patientaddressline1: localStorage.getItem("privatebeta01PatientAddressLine1"),
     patientaddresstown: localStorage.getItem("privatebeta01PatientAddressTown"),
     patientPostcode: localStorage.getItem("privatebeta01PatientPostcode"),

@@ -1,0 +1,100 @@
+{% extends "layout-gov-signed-in-private-beta03.html" %}
+
+{% block pageTitle %}
+What is the patient's name? – Send an SR1 medical evidence form – GOV.UK
+{% endblock %}
+
+{% block content %}
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+        <form id="sendAnSR1Form" action="/private-beta03/patient-details/find-patient-address-saved" method="post">
+
+            <div class="govuk-form-group">
+                <fieldset class="govuk-fieldset" role="group" aria-describedby="patient-dateofbirth-hint">
+                  <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+                    <h1 class="govuk-fieldset__heading">
+                    What is the patient’s date of birth?
+                    </h1>
+                  </legend>
+                  <div id="patient-dateofbirth-hint" class="govuk-hint">
+                    For example, 27 3 2007
+                  </div>
+                  <div class="govuk-date-input" id="patient-dateofbirth" name="patientdateofbirth" value="{{data['patientdateofbirth']}}">
+                    <div class="govuk-date-input__item">
+                      <div class="govuk-form-group">
+                        <label class="govuk-label govuk-date-input__label" for="patientdateofbirthday" >
+                          Day
+                        </label>
+                        <input autocomplete="off" class="govuk-input govuk-date-input__input govuk-input--width-2" id="patient-dateofbirth-day" name="patientdateofbirthday" value="{{data['patientdateofbirthday']}}" type="text" inputmode="numeric">
+                      </div>
+                    </div>
+                    <div class="govuk-date-input__item">
+                      <div class="govuk-form-group">
+                        <label class="govuk-label govuk-date-input__label" for="patientdateofbirthmonth">
+                          Month
+                        </label>
+                        <input autocomplete="off" class="govuk-input govuk-date-input__input govuk-input--width-2" id="patient-dateofbirth-month" name="patientdateofbirthmonth" value="{{data['patientdateofbirthmonth']}}" type="text" inputmode="numeric">
+                      </div>
+                    </div>
+                    <div class="govuk-date-input__item">
+                      <div class="govuk-form-group">
+                        <label class="govuk-label govuk-date-input__label" for="patientdateofbirthyear">
+                          Year
+                        </label>
+                        <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="patient-dateofbirth-year" name="patientdateofbirthyear" value="{{data['patientdateofbirthyear']}}" type="text" inputmode="numeric">
+                      </div>
+                    </div>
+                  </div>
+                </fieldset>
+              </div>
+
+            <!-- Submit button -->
+            <div class="govuk-button-group">
+                <button id="" class="govuk-button" data-module="govuk-button" onclick="savePatientBirthSR1Formprivatebeta03()">
+                    Continue
+                </button>
+                <a class="govuk-link" onclick="saveAndLeave()" style="color:#1d70b8;"
+                    aria-label="Return to SR1 form sections" href="#">Return to SR1 form sections</a>
+            </div>
+        </form>
+        <div class="govuk-!-padding-bottom-6"></div>
+
+        <!--Get help new-->
+        <hr class="govuk-section-break govuk-section-break--visible" aria-hidden="true">
+        <section class="govuk-width-container govuk-!-margin-top-7 govuk-!-margin-bottom-7 ">
+            <div class="govuk-grid-row">
+                <div class="govuk-grid-column-full">
+                    <h2 class="govuk-heading-m">Get help</h2>
+                    <p class="govuk-body">Email: <a class="govuk-link"
+                            href="mailto:online.sr1@dwp.gov.uk">online.sr1@dwp.gov.uk</a></p>
+                    <p class="govuk-body">We aim to respond within 3 working days.</p>
+                </div>
+                        <!--Feedback-->
+            </div>
+            <h2 class="govuk-heading-m">Feedback</h2>
+            <p class=govuk-body><a
+                   href="https://forms.office.com/Pages/ResponsePage.aspx?id=DpxP-knna0i8NIr6EGM3VupINvg8uK9KqwdHnbpPR49UNk5RTE1BQ0JXUEJFVTM5OUs4VFNQM1FINS4u">What
+                    did you think of this service?</a></p>
+    
+        </div>
+            </div>
+        </section>
+
+    </div>
+</div>
+
+<script>
+    // get and set in this order - this ensures what is sent in query is the same as what is in the localStorage
+    const saveAndLeave = () => {
+        //savePatientNameSR1Formprivatebeta01();
+
+        const origin = window.location.origin;
+        const url = getUrlWithSR1DataAsQueryParamsprivatebeta03(origin, "/private-beta03/sr1-form-start-saved-your-details" );
+
+        window.location.replace(url.toString());
+    }
+</script>
+
+
+{% endblock %}

@@ -1,0 +1,127 @@
+{% extends "layout-gov-signed-in-private-beta03.html" %}
+
+{% block pageTitle %}
+What is your organisation’s address? – Send an SR1 medical evidence form – GOV.UK
+{% endblock %}
+
+{% block content %}
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+        <form id="profileSetupPage" name="profileDetails" action="/private-beta03/your-details/confirm-organisation-address" method="post">
+            
+            <div class="govuk-form-group">
+                <fieldset class="govuk-fieldset">
+                    <legend class="govuk-fieldset__legend govuk-fieldset__legend--l" for="postcode">
+                        <!--<span class="govuk-caption-l">Section 6 of 6</span>-->
+                        <h1 class="govuk-fieldset__heading">
+                            5 organisation addresses found
+                        </h1>
+                        
+                        <p class="govuk-body-m">
+                            <br>Search results for TW1 3AA. <a href="/private-beta03/save-your-details/find-organisation-address">Search again</a>
+                        </p>
+
+                        <h2 class=" govuk-heading-m">
+                            Choose address
+                        </h2>
+
+                    <div class="govuk-form-group">
+                        <fieldset class="govuk-fieldset">
+                        <div class="govuk-radios__item">
+                            <input class="govuk-radios__input" id="AshfordHealthClinic" name="selectorganisationaddress"
+                                type="radio" value="Ashford Health Clinic, London Road, Ashford TW1 3AA"
+                                onclick="privatebeta03OrganisationAddressFn(this)">
+                            <label class="govuk-label govuk-radios__label" for="AshfordHealthClinic">
+                                Ashford Health Clinic, London Road, Ashford TW1 3AA
+                            </label>
+                        </div>
+                        <div class="govuk-radios__item">
+                            <input class="govuk-radios__input" id="TheAshfordRam" name="selectorganisationaddress"
+                                type="radio" value="The Ashford Ram, London Road, Ashford TW1 3AA"
+                                onclick="privatebeta03OrganisationAddressFn(this)">
+                            <label class="govuk-label govuk-radios__label" for="TheAshfordRam">
+                                The Ashford Ram, London Road, Ashford TW1 3AA
+                            </label>
+                        </div>
+                        
+                        <div class="govuk-radios__item">
+                            <input class="govuk-radios__input" id="171" name="selectorganisationaddress"
+                                type="radio" value="171 Richmond Road, Staines-upon-Thames, SU1 5AS" onclick="privatebeta03PatientAddressFn(this)">
+                            <label class="govuk-label govuk-radios__label" for="171">
+                                The Ashford Hospital, London Road, Ashford TW1 3AA
+                            </label>
+                        </div>
+                        <div class="govuk-radios__item">
+                            <input class="govuk-radios__input" id="172" name="selectorganisationaddress"
+                                type="radio" value="172 Richmond Road, Staines-upon-Thames, SU1 5AS" onclick="privatebeta03PatientAddressFn(this)">
+                            <label class="govuk-label govuk-radios__label" for="172">
+                                Ashford General Practice, London Road, Ashford TW1 3AA
+                            </label>
+                        </div>
+                        <div class="govuk-radios__item">
+                            <input class="govuk-radios__input" id="173" name="selectorganisationaddress"
+                                type="radio" value="173 Richmond Road, Staines-upon-Thames, SU1 5AS" onclick="privatebeta03PatientAddressFn(this)">
+                            <label class="govuk-label govuk-radios__label" for="173">
+                                The Ashford House, London Road, Ashford TW1 3AA
+                            </label>
+                        </div>
+                        
+                    </div>
+                </fieldset>
+            </div>
+
+            <!-- Submit button -->
+            <div class="govuk-button-group">
+                <button id="" class="govuk-button" data-module="govuk-button"
+                    onclick="saveOrgAddressprivatebeta03(); resetChangeFn();">
+                    Use this address
+                </button>
+                <a class="govuk-link" onclick="saveAndLeave()" style="color:#1d70b8;"
+                    aria-label="Return to SR1 form sections">Return to SR1 form sections</a>
+            </div>
+            <!-- <p class="govuk-body"><a id="postcode-finder-link" class="govuk-link" rel="external" href="https://www.royalmail.com/find-a-postcode" target="_blank">Find a postcode on Royal Mail's postcode finder (open in a new tab)</a></p> -->
+            <div class="govuk-form-group">
+                <label class="govuk-label" for="cannot-find-address"><a id="postcode-finder-link" class="govuk-link"
+                        rel="external" href="/private-beta03/your-details/enter-organisation-address">Enter your organisation's address
+                        manually</a></label>
+            </div>
+        </form>
+        <div class="govuk-!-padding-bottom-6"></div>
+
+        <!--Get help new-->
+        <hr class="govuk-section-break govuk-section-break--visible" aria-hidden="true">
+        <section class="govuk-width-container govuk-!-margin-top-7 govuk-!-margin-bottom-7 ">
+            <div class="govuk-grid-row">
+                <div class="govuk-grid-column-full">
+                    <h2 class="govuk-heading-m">Get help</h2>
+                    <p class="govuk-body">Email: <a class="govuk-link"
+                            href="mailto:online.sr1@dwp.gov.uk">online.sr1@dwp.gov.uk</a></p>
+                    <p class="govuk-body">We aim to respond within 3 working days.</p>
+                </div>
+                        <!--Feedback-->
+            </div>
+            <h2 class="govuk-heading-m">Feedback</h2>
+            <p class=govuk-body><a
+                    href="https://forms.office.com/Pages/ResponsePage.aspx?id=DpxP-knna0i8NIr6EGM3VupINvg8uK9KqwdHnbpPR49UNk5RTE1BQ0JXUEJFVTM5OUs4VFNQM1FINS4u">What
+                    did you think of this service?</a></p>
+    
+        </div>
+        </section>
+
+    </div>
+</div>
+
+<script>
+    // get and set in this order - this ensures what is sent in query is the same as what is in the localStorage
+    const saveAndLeave = () => {
+        //saveOrgAddressprivatebeta01();
+
+        const origin = window.location.origin;
+        const url = getUrlWithSR1DataAsQueryParamsprivatebeta03(origin, "/private-beta03/sr1-form-sections");
+
+        window
+            .location
+            .replace(url.toString());
+    }
+</script>
+{% endblock %}

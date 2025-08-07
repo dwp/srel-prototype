@@ -23,7 +23,7 @@
                       <label class="govuk-label govuk-date-input__label" for="dob-day">
                         Day
                       </label>
-                      <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="dob-day" name="dob-day" type="number" min="1" max="31" step="1" inputmode="numeric" maxlength="2" oninput="maxLengthCheck(this)">
+                      <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="dob-day" name="dob-day" value="{{data['dob-day']}}" type="number" min="1" max="31" step="1" inputmode="numeric" maxlength="2" oninput="maxLengthCheck(this)">
                     </div>
                   </div>
                   <div class="govuk-date-input__item">
@@ -31,7 +31,7 @@
                       <label class="govuk-label govuk-date-input__label" for="dob-month">
                         Month
                       </label>
-                      <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="dob-month" name="dob-month" type="number" min="1" max="12" step="1" inputmode="numeric" maxlength="2" oninput="maxLengthCheck(this)">
+                      <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="dob-month" name="dob-month" value="{{data['dob-month']}}" type="number" min="1" max="12" step="1" inputmode="numeric" maxlength="2" oninput="maxLengthCheck(this)">
                     </div>
                   </div>
                   <div class="govuk-date-input__item">
@@ -39,7 +39,7 @@
                       <label class="govuk-label govuk-date-input__label" for="dob-year">
                         Year
                       </label>
-                      <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="dob-year" name="dob-year" type="number" min="0" max="2022" step="1" inputmode="numeric" maxlength="4" oninput="maxLengthCheck(this)">
+                      <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="dob-year" name="dob-year" value="{{data['dob-year']}}" type="number" min="0" max="2025" step="1" inputmode="numeric" maxlength="4" oninput="maxLengthCheck(this)">
                     </div>
                   </div>
                 </div>

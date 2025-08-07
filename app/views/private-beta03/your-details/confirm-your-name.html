@@ -1,0 +1,80 @@
+{% extends "layout-gov-signed-in-private-beta03.html" %}
+
+{% block pageTitle %}
+Is your name...? – Send an SR1 medical evidence form – GOV.UK
+{% endblock %}
+
+{% block content %}
+<form class="form" action="/private-beta03/your-details/your-name-answer" method="post" id="hcpnamechoice" name="profileDetails">
+
+  
+    <div class="govuk-form-group">
+      <fieldset class="govuk-fieldset">
+        <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+          <h1 class="govuk-fieldset__heading">
+           Is your name Nelson Noah?
+          </h1>
+        </legend>
+        <div id="contact-hint" class="govuk-hint">
+            This is the name linked to your current organisation's account details. 
+          </div>
+  
+        <div class="govuk-radios govuk-radios--inline" data-module="govuk-radios">
+          {% if data['hcpname']=='Yes' %}
+          <div class="govuk-radios__item">
+            <input
+            class="govuk-radios__input"
+            id="hcpname-yes" 
+            name="hcpname"
+            type="radio"
+            value="Yes"
+            checked
+          
+            >
+            {% else%}
+            <div class="govuk-radios__item">
+              <input
+              class="govuk-radios__input"
+              id="hcpname-yes" 
+              name="hcpname"
+              type="radio"
+              value="Yes"
+              >
+
+            {% endif %}
+             <label class="govuk-label govuk-radios__label" for="hcpname-yes">Yes</label>
+             
+          </div>
+          <div class="govuk-radios__item">
+            {% if data['hcpname']=='No' %}
+            <input 
+            class="govuk-radios__input"
+            id="hcpname-no"
+            name="hcpname"
+            type="radio"
+            value="No"
+            checked
+            >
+            {% else%}
+            <input 
+            class="govuk-radios__input"
+            id="hcpname-no"
+            name="hcpname"
+            type="radio"
+            value="No"
+           >
+            {% endif %}
+            <label class="govuk-label govuk-radios__label" for="hcpname-no">No</label>
+          </div>
+        </div>
+     
+      </fieldset>
+    </div>
+  
+    <div class="govuk-button-group">
+      <button type="submit" class="govuk-button" data-module="govuk-button">Continue</button> 
+       <a class="govuk-link" onclick="saveAndLeave()" style="color:#1d70b8;" aria-label="Return to SR1 form sections" href="#">Return to SR1 form sections</a>
+    </div>
+  </form>
+
+{% endblock %}

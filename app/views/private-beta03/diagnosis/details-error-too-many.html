@@ -1,0 +1,101 @@
+{% extends "layout-gov-signed-in-private-beta03.html" %}
+
+{% block pageTitle %}
+Error: What is the patient’s diagnosis? – Send an SR1 medical evidence form – GOV.UK
+{% endblock %}
+
+{% block content %}
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+        <form id="sendAnSR1Form" action="/private-beta03/diagnosis/date" method="post">
+
+            <!-- ERROR STATE -->
+            <div class="govuk-error-summary" data-module="govuk-error-summary">
+                <div role="alert">
+                    <h2 class="govuk-error-summary__title">
+                        There is a problem
+                    </h2>
+                    <div class="govuk-error-summary__body">
+                        <ul class="govuk-list govuk-error-summary__list">
+                            <li>
+                                <a href="#whatIsTheDiagnosis">Diagnosis must be 350 characters or less</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="govuk-form-group govuk-form-group--error">
+                <fieldset class="govuk-fieldset">
+                    <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+                        <!--<span class="govuk-caption-l"> Question 1 of 6</span>-->
+                        <h1 class="govuk-fieldset__heading">
+                            What is the patient’s diagnosis?
+                        </h1>
+                    </legend>
+
+                    <!-- What is the diagnosis? -->
+                    <div class="govuk-character-count" data-module="govuk-character-count" data-maxlength="350">
+                        <!--ERROR LEGEND -->
+                        <p id="whatIsTheDiagnosis-error" class="govuk-error-message">
+                            <span class="govuk-visually-hidden">Error:</span> Diagnosis must be =350 characters or
+                            less
+                        </p>
+                        <!-- END ERROR -->
+                        <div class="govuk-form-group">
+                            <textarea class="govuk-textarea govuk-js-character-count"
+                                 id="what-is-the-diagnosis" name="what-is-the-diagnosis" value="{{data['what-is-the-diagnosis']}}" rows="5"
+                                autocomplete="off">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</textarea>
+                        </div>
+                        <div id="what-is-the-diagnosis-info" name="what-is-the-diagnosis-info" value="{{data['what-is-the-diagnosis-info']}}"class="govuk-hint govuk-character-count__message govuk-textarea--error">You can enter up to 350 characters</div>
+                    </div>
+
+                </fieldset>
+            </div>
+
+            <!-- Submit button -->
+            <div class="govuk-button-group">
+                <button id="" class="govuk-button" data-module="govuk-button" onclick="saveDiagnosisSR1Formprivatebeta03()">
+                    Continue
+                </button>
+                <a class="govuk-link" onclick="saveAndLeave()" style="color:#1d70b8;" aria-label="Return to SR1 form sections" href="#">Return to SR1 form sections</a>
+            </div>
+        </form>
+        <div class="govuk-!-padding-bottom-6"></div>
+
+        <!--Get help new-->
+        <hr class="govuk-section-break govuk-section-break--visible" aria-hidden="true">
+        <section class="govuk-width-container govuk-!-margin-top-7 govuk-!-margin-bottom-7 ">
+            <div class="govuk-grid-row">
+                <div class="govuk-grid-column-full">
+                    <h2 class="govuk-heading-m">Get help</h2>
+                    <p class="govuk-body">Email: <a class="govuk-link"
+                            href="mailto:online.sr1@dwp.gov.uk">online.sr1@dwp.gov.uk</a></p>
+                    <p class="govuk-body">We aim to respond within 3 working days.</p>
+                </div>
+                        <!--Feedback-->
+            </div>
+            <h2 class="govuk-heading-m">Feedback</h2>
+            <p class=govuk-body><a
+                    href="https://forms.office.com/Pages/ResponsePage.aspx?id=DpxP-knna0i8NIr6EGM3VupINvg8uK9KqwdHnbpPR49UNk5RTE1BQ0JXUEJFVTM5OUs4VFNQM1FINS4u">What
+                    did you think of this service?</a></p>
+    
+        </div>
+        </section>
+
+    </div>
+
+</div>
+
+<script>
+    // get and set in this order - this ensures what is sent in query is the same as what is in the localStorage
+    const saveAndLeave = () => {
+        //saveDiagnosisSR1Formprivatebeta01();
+
+        const origin = window.location.origin;
+        const url = getUrlWithSR1DataAsQueryParamsprivatebeta03(origin, "/private-beta03/sr1-form-sections");
+
+        window.location.replace(url.toString());
+    }
+</script>
+{% endblock %}

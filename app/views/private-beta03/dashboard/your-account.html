@@ -1,0 +1,137 @@
+{% extends "dashboard-layout" %}
+
+{% block pageTitle %}
+Account home
+{% endblock %}
+
+{% block content %}
+
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+
+        <!-- <h1 class="govuk-heading-xl">
+                Your SR1 forms
+                <p class="govuk-body">
+                    <span id="fullName"></span>
+                    <span class="govuk-caption-m">GMC number: <span id="professionalRegistrationNumber"></span></span>
+                </p>
+            </h1> -->
+
+        <h1 class="govuk-heading-xl">
+            <span id="fullName" class="govuk-caption-l"></span>
+
+            <span>Your account</span>
+        </h1>
+
+        <!-- Body -->
+        <div class="govuk-form-group">
+
+            <!-- <pre>TODO: </pre>
+                    <p class="govuk-body">Jack's new 'best of both' version will go here.</p> -->
+
+            <!-- Select action -->
+
+
+            <div class="govuk-!-padding-bottom-6"></div>
+
+            <!-- Warning text -->
+
+
+            <!-- Select action -->
+            <h2 class="govuk-heading-l govuk-visually-hidden">Your SR1 forms and settings</h2>
+            <div class="govuk-grid-row">
+
+                
+                {% if (
+                    (not data['HCPfirstname'] or data['HCPfirstname'] == '') and
+                    (not data['HCPlastname'] or data['HCPlastname'] == '') and
+                    (not data['HCPRegistrationNumber'] or data['HCPRegistrationNumber'] == '') and
+                    (not data['HCPmobileNumber'] or data['HCPmobileNumber'] == '') and
+                    (not data['saveYourDetails'] or data['saveYourDetails'] == '')
+                    )%}
+
+                <div class="govuk-grid-column-one-third govuk-!-margin-bottom-5">
+                    <div class="card govuk-!-padding-5"
+                        style="height: 180px; color:white; border: 1px solid #b1b4b6; border-bottom-width: 4px;">
+                        <h3 class="govuk-heading-m"><a href="/private-beta03/sr1-form-sections" class="govuk-link">Start
+                                a new SR1 form</a></h3>
+                        <p class="govuk-body">Start a new SR1 form for a patient.</p>
+                    </div>
+                </div>
+
+                {% else %}
+
+                <div class="govuk-grid-column-one-third govuk-!-margin-bottom-5">
+                    <div class="card govuk-!-padding-5"
+                        style="height: 180px; color:white; border: 1px solid #b1b4b6; border-bottom-width: 4px;">
+                        <h3 class="govuk-heading-m"><a href="/private-beta03/sr1-form-start-saved-your-details" class="govuk-link">Start
+                                a new SR1 form</a></h3>
+                        <p class="govuk-body">Start a new SR1 form for a patient.</p>
+                    </div>
+                </div>
+
+                {% endif %}
+
+
+                {% if (
+                (not data['HCPfirstname'] or data['HCPfirstname'] == '') and
+                (not data['HCPlastname'] or data['HCPlastname'] == '') and
+                (not data['HCPRegistrationNumber'] or data['HCPRegistrationNumber'] == '') and
+                (not data['HCPmobileNumber'] or data['HCPmobileNumber'] == '') and
+                (not data['saveYourDetails'] or data['saveYourDetails'] == '')
+                )%}
+
+                <div class="govuk-grid-column-one-third govuk-!-margin-bottom-5">
+                    <div class="card govuk-!-padding-5"
+                        style="height: 180px; color:white; border: 1px solid #b1b4b6; border-bottom-width: 4px;">
+                        <h3 class="govuk-heading-m"><a href="/private-beta03/save-your-details/confirm-your-name"
+                                class="govuk-link">Save your details </a></h3>
+                        <p class="govuk-body">If you save your details, we will add them to all of your SR1 forms.</p>
+                    </div>
+                </div>
+
+                {% else %}
+
+                <div class="govuk-grid-column-one-third govuk-!-margin-bottom-5">
+                    <div class="card govuk-!-padding-5"
+                        style="height: 180px; color:white; border: 1px solid #b1b4b6; border-bottom-width: 4px;">
+                        <h3 class="govuk-heading-m"><a href="/private-beta03/save-your-details/check-your-details"
+                                class="govuk-link">Check your details</a></h3>
+                        <p class="govuk-body">View, update or delete your details.</p>
+                    </div>
+                </div>
+
+                {% endif %}
+
+            </div>
+
+
+
+
+
+        </div>
+        <!--Get help new-->
+        <hr class="govuk-section-break govuk-section-break--visible" aria-hidden="true">
+        <section class="govuk-width-container govuk-!-margin-top-7 govuk-!-margin-bottom-7 ">
+            <div class="govuk-grid-row">
+                <div class="govuk-grid-column-full">
+                    <h2 class="govuk-heading-m">Get help</h2>
+                    <p class="govuk-body">Email: <a class="govuk-link"
+                            href="mailto:online.sr1@dwp.gov.uk">online.sr1@dwp.gov.uk</a></p>
+                    <p class="govuk-body">We aim to respond within 3 working days.</p>
+                </div>
+                <!--Feedback-->
+            </div>
+            <h2 class="govuk-heading-m">Feedback</h2>
+            <p class=govuk-body><a
+                    href="https://forms.office.com/Pages/ResponsePage.aspx?id=DpxP-knna0i8NIr6EGM3VupINvg8uK9KqwdHnbpPR49UNk5RTE1BQ0JXUEJFVTM5OUs4VFNQM1FINS4u">What
+                    did you think of this service?</a></p>
+
+    </div>
+</div>
+</section>
+</div>
+</div>
+</div>
+{% endblock %}
