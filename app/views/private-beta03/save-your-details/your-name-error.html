@@ -1,14 +1,10 @@
 {% extends "layout-gov-signed-in-private-beta03.html" %}
 
 {% block pageTitle %}
-Error: Tell us what your role is – Send an SR1 medical evidence form – GOV.UK
+What is your name? – Save your details – Send an SR1 medical evidence form – GOV.UK
 {% endblock %}
 
 {% block content %}
-<div class="govuk-grid-row">
-    <div class="govuk-grid-column-two-thirds">
-        <form id="profileSetupPage" name="profileDetails" action="/private-beta03/your-details/professional-registration-number" method="post">
-
             <!-- ERROR STATE -->
             <div class="govuk-error-summary" data-module="govuk-error-summary">
                 <div role="alert">
@@ -18,39 +14,58 @@ Error: Tell us what your role is – Send an SR1 medical evidence form – GOV.U
                     <div class="govuk-error-summary__body">
                         <ul class="govuk-list govuk-error-summary__list">
                             <li>
-                                <a href="#otherRole">Enter your role</a>
+                                <a href="#PatientFullName">Enter your first name</a>
+                            </li>
+                        </ul>
+                        <ul class="govuk-list govuk-error-summary__list">
+                            <li>
+                                <a href="#PatientLastName">Enter your last name</a>
                             </li>
                         </ul>
                     </div>
                 </div>
             </div>
 
-            <div class="govuk-form-group govuk-form-group--error">
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+        <form id="profileSetupPage" name="profileDetails" action="/private-beta03/save-your-details/role" method="post">
+            <div class="govuk-form-group">
                 <fieldset class="govuk-fieldset">
                     <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
-                        <!--<span class="govuk-caption-l">Question 2 of 5</span>-->
+                        <!--<span class="govuk-caption-l">Question 1 of 5</span>-->
                         <h1 class="govuk-fieldset__heading">
-                            Tell us what your role is
+                            What is your name?
                         </h1>
                     </legend>
-                    <!--ERROR LEGEND -->
-                    <p id="other-role-error" class="govuk-error-message">
-                        <span class="govuk-visually-hidden">Error:</span>Enter your role
-                    </p>
-                    <!-- END ERROR -->
-                    <input class="govuk-input govuk-!-width-three-quarters govuk-input--error" id="otherRole" name="otherRole" type="text"
-                        autocomplete="off">
+                    <!-- Full name -->
+                    <div class="govuk-form-group">
+                        <label class="govuk-label" for="HCPfirstname">First name</label>
+                        <p id="PatientFirstName-error" class="govuk-error-message">
+                            <span class="govuk-visually-hidden">Error:</span> Enter your first name
+                        </p>
+                        <input class="govuk-input" id="hcp-first-name" name="HCPfirstname" value="{{data['HCPfirstname']}}" type="text" autocomplete="off">
+                    </div>
+                    <div class="govuk-form-group">
+                        <label class="govuk-label" for="HCPlastname">Last name</label>
+                        <p id="PatientLastName-error" class="govuk-error-message">
+                            <span class="govuk-visually-hidden">Error:</span> Enter your last name
+                        </p>
+                        <input class="govuk-input" id="hcp-last-name" name="HCPlastname" value="{{data['HCPlastname']}}" type="text" autocomplete="off">
+                    </div>
+
+                    
+
                 </fieldset>
             </div>
 
             <!-- Submit button -->
             <div class="govuk-button-group">
-                <button id="" class="govuk-button" data-module="govuk-button"
-                    onclick="saveOtherRoleprivatebeta03(); resetChangeFn();">
+                <button id="" class="govuk-button" data-module="govuk-button" onclick="saveHCPNameprivatebeta03(); resetChangeFn();">
                     Continue
                 </button>
-                <a class="govuk-link" onclick="saveAndLeave()" style="color:#1d70b8;"
-                    aria-label="Return to SR1 form sections" href="#">Return to SR1 form sections</a>
+                <a class="govuk-link" onclick="saveAndLeave()" style="color:#1d70b8;" aria-label="Return to your account"
+                href="#">Return to your account</a>
             </div>
         </form>
 
@@ -72,11 +87,8 @@ Error: Tell us what your role is – Send an SR1 medical evidence form – GOV.U
             <p class=govuk-body><a
                    href="https://forms.office.com/Pages/ResponsePage.aspx?id=DpxP-knna0i8NIr6EGM3VupINvg8uK9KqwdHnbpPR49UNk5RTE1BQ0JXUEJFVTM5OUs4VFNQM1FINS4u">What
                     did you think of this service?</a></p>
-    
-        </div>
-            </div>
-        </section>
 
+        </section>
 
     </div>
 
@@ -85,7 +97,7 @@ Error: Tell us what your role is – Send an SR1 medical evidence form – GOV.U
 <script>
     // get and set in this order - this ensures what is sent in query is the same as what is in the localStorage
     const saveAndLeave = () => {
-        //saveRoleprivatebeta01();
+        //saveHCPNameprivatebeta01();
 
         const origin = window.location.origin;
         const url = getUrlWithSR1DataAsQueryParamsprivatebeta03(origin, "/private-beta03/sr1-form-sections");

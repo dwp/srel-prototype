@@ -1,7 +1,7 @@
 {% extends "layout-gov-signed-in-private-beta03.html" %}
 
 {% block pageTitle %}
-Does the patient have other relevant diagnosis? – Send an SR1 medical evidence form – GOV.UK
+Error: Does the patient have other relevant diagnosis? – Save your details – Send an SR1 medical evidence form – GOV.UK
 {% endblock %}
 
 {% block content %}
@@ -96,26 +96,4 @@ Does the patient have other relevant diagnosis? – Send an SR1 medical evidence
 </div>
 
 </div>
-
-<script>
-    //const saveOtherDiagnosisradioSR1Formprivatebeta01 = () => {
-    //    if (document.getElementById('otherRelevantDiagnosis-yes').checked) {
-    //        localStorage.setItem('privatebeta01OtherRelevantDiagnosis', ' ');
-    //    } else if (document.getElementById('otherRelevantDiagnosis-no').checked) {
-    //        localStorage.setItem('privatebeta01OtherRelevantDiagnosis', 'Not provided');
-    //    }
-    //}
-
-    // get and set in this order - this ensures what is sent in query is the same as what is in the localStorage
-    const saveAndLeave = () => {
-        //saveOtherDiagnosisSR1Formprivatebeta01();
-
-        const origin = window.location.origin;
-        const url = getUrlWithSR1DataAsQueryParamsprivatebeta03(origin, "/private-beta03/sr1-form-sections");
-
-        window
-            .location
-            .replace(url.toString());
-    }
-</script>
 {% endblock %}

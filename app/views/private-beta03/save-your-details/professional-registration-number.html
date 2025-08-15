@@ -1,7 +1,7 @@
 {% extends "layout-gov-signed-in-private-beta03.html" %}
 
 {% block pageTitle %}
-What is your professional registration number? – Send an SR1 medical evidence form – GOV.UK
+What is your professional registration number? – Save your details – Send an SR1 medical evidence form – GOV.UK
 {% endblock %}
 
 {% block content %}
@@ -12,25 +12,25 @@ What is your professional registration number? – Send an SR1 medical evidence 
             <div class="govuk-form-group">
                 <fieldset class="govuk-fieldset">
                     <legend class="govuk-fieldset__legend govuk-fieldset__legend--l"
-                        for="professionalRegistrationNumber">
+                        for="professionalRegistrationnumbersaved">
                         <h1 class="govuk-label-wrapper">
                             <!--<span class="govuk-caption-l">Question 3 of 5</span>-->
-                            <label class="govuk-label govuk-label--l" for="professionalRegistrationNumber">
+                            <label class="govuk-label govuk-label--l" for="professionalRegistrationnumbersaved">
                                 What is your professional registration number?
                             </label>
                         </h1>
                     </legend>
                     <!--<legend class="govuk-fieldset__legend govuk-fieldset__legend--l"
-                        for="professionalRegistrationNumber">
+                        for="professionalRegistrationnumbersaved">
                         <span class="govuk-caption-l">Question 3 of 5</span>
                         <h1 class="govuk-fieldset__heading">
                             What is your professional registration number?
                         </h1>
                     </legend>-->
 
-                    <div id="event-name-hint" class="govuk-hint">This is your GMC or NMC number.</div>
-                    <input class="govuk-input govuk-input--width-10" id="professional-Registration-Number"
-                        name="HCPRegistrationNumber" value="{{data['HCPRegistrationNumber']}}" type="text" autocomplete="off">
+                    <div id="event-name-hint" class="govuk-hint">This is your GMC or NMC numbersaved.</div>
+                    <input class="govuk-input govuk-input--width-10" id="professional-Registration-numbersaved"
+                        name="HCPRegistrationnumbersaved" value="{{data['HCPRegistrationnumbersaved']}}" type="text" autocomplete="off">
 
 
                 </fieldset>
@@ -39,7 +39,7 @@ What is your professional registration number? – Send an SR1 medical evidence 
             <!-- Submit button -->
             <div class="govuk-button-group">
                 <button id="" class="govuk-button" data-module="govuk-button"
-                    onclick="saveHCPProfessionalNumberprivatebeta03(); resetChangeFn();">
+                    onclick="saveHCPProfessionalnumbersavedprivatebeta03(); resetChangeFn();">
                     Continue
                 </button>
                 <a class="govuk-link" onclick="saveAndLeave()" style="color:#1d70b8;"
@@ -77,7 +77,7 @@ What is your professional registration number? – Send an SR1 medical evidence 
 <script>
     // get and set in this order - this ensures what is sent in query is the same as what is in the localStorage
     const saveAndLeave = () => {
-        //saveHCPProfessionalNumberprivatebeta01();
+        //saveHCPProfessionalnumbersavedprivatebeta01();
 
         const origin = window.location.origin;
         const url = getUrlWithSR1DataAsQueryParamsprivatebeta03(origin, "/private-beta03/sr1-form-sections");

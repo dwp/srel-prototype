@@ -1,7 +1,7 @@
 {% extends "layout-gov-signed-in-private-beta03.html" %}
 
 {% block pageTitle %}
-Tell us about the purpose of any treatment and the response – Send an SR1 medical evidence form – GOV.UK
+Treatment and care – Send an SR1 medical evidence form – GOV.UK
 {% endblock %}
 
 {% block content %}
@@ -13,8 +13,6 @@ Tell us about the purpose of any treatment and the response – Send an SR1 medi
                     <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
                         <h1 class="govuk-heading-l">
                             Treatment and care
-
-
                           </h1>
                           <p class="govuk-body">
                             We need to know about the patient's treatment and the response. 
@@ -38,7 +36,7 @@ Tell us about the purpose of any treatment and the response – Send an SR1 medi
                                         <textarea class="govuk-textarea  govuk-js-character-count"
                                             id="treatment-details" name="treatmentdetails" Value="{data['treatmentdetails']}" rows="5" aria-describedby="treatment-info">{{data['treatmentdetails']}}</textarea>
                                     </div>
-                                    <div id="treatment-info" class="govuk-hint govuk-character-count__message">You can enter up to
+                                    <div id="treatment-details-info" class="govuk-hint govuk-character-count__message">You can enter up to
                                         350 characters</div>
                                 </div>
             

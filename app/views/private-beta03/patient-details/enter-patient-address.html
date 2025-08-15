@@ -7,7 +7,7 @@ Enter the patient’s address – Send an SR1 medical evidence form – GOV.UK
 {% block content %}
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
-    <form id="sendAnSR1Form" action="/private-beta03/patient-details/confirm-patient-address-manual" method="post">
+    <form id="sendAnSR1Form" action="/private-beta03/patient-details/confirm-patient-address" method="post">
       <div class="govuk-form-group">
         <fieldset class="govuk-fieldset">
           <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
@@ -22,30 +22,28 @@ Enter the patient’s address – Send an SR1 medical evidence form – GOV.UK
             <label class="govuk-label" for="patient-address-line-1">
               Address line 1
             </label>
-            <input class="govuk-input" id="patient-address-line-1" name="patient-address-line-1" value="{{data['patient-address-line-1’]}}"
+            <input class="govuk-input" id="patient-address-line-1" name="patient-address-line-1" value="{{data['patient-address-line-1']}}"
             type="text"
-              autocomplete="patient-address-line-1">
+autocomplete="patient-address-line-1">
           </div>
           <div class="govuk-form-group">
             <label class="govuk-label" for="patient-address-line-2">
               Address line 2 (optional)
             </label>
-            <input class="govuk-input" id="patient-address-line-2" name="patient-address-line-2" value="{{data['patient-address-line-2’]}}” 
-            type="text"
-              autocomplete="patient-address-line-2">
+            <input class="govuk-input" id="patient-address-line-2" name="patient-address-line-2" value="{{data['patient-address-line-2']}}" autocomplete= patient-address-line-2>
           </div>
           <div class="govuk-form-group">
             <label class="govuk-label" for="patient-address-town">
               Town or city
             </label>
-            <input class="govuk-input govuk-!-width-two-thirds" id="patient-address-town" name="patient-address-town" value="{{data['patient-address-town']}}”
+            <input class="govuk-input govuk-!-width-two-thirds" id="patient-address-town" name="patient-address-town" value="{{data['patient-address-town']}}" 
               type="text" autocomplete="patient-address-town">
           </div>
           <div class="govuk-form-group">
             <label class="govuk-label" for="patient-address-county">
               County (optional)
             </label>
-            <input class="govuk-input govuk-!-width-two-thirds" id="patient-address-county" name="patient-address-county" value="{{data['patient-address-county']}}”
+            <input class="govuk-input govuk-!-width-two-thirds" id="patient-address-county" name="patient-address-county" value="{{data['patient-address-county']}}" 
               type="text">
           </div>
           <div class="govuk-form-group">

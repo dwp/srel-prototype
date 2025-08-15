@@ -1,7 +1,7 @@
 {% extends "layout-gov-signed-in-private-beta03.html" %}
 
 {% block pageTitle %}
-What is your name? – Send an SR1 medical evidence form – GOV.UK
+What is your name? – Save your details – Send an SR1 medical evidence form – GOV.UK
 {% endblock %}
 
 {% block content %}
@@ -35,6 +35,8 @@ What is your name? – Send an SR1 medical evidence form – GOV.UK
                 <button id="" class="govuk-button" data-module="govuk-button" onclick="saveHCPNameprivatebeta03(); resetChangeFn();">
                     Continue
                 </button>
+                <a class="govuk-link" onclick="saveAndLeave()" style="color:#1d70b8;" aria-label="Return to your account"
+                  href="#">Return to your account</a>
             </div>
         </form>
 

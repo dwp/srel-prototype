@@ -5,6 +5,7 @@
 // ///Private beta03////
 
 
+
 module.exports = function (folderForViews, urlPrefix, router) {
 
   router.post('/private-beta03/your-details/your-name-answer', function (req, res) {
@@ -21,6 +22,37 @@ module.exports = function (folderForViews, urlPrefix, router) {
       res.redirect('/private-beta03/your-details/role');
     }
   })
+
+  //Delete your details/ 
+
+  router.post('/private-beta03/dashboard/your-account-delete', function (req, res) {
+    var deletedetailsoption = req.session.data['deletedetails']
+
+    // Check whether the variable matches a condition
+    if (deletedetailsoption  == "Yes") {
+      // 
+      req.session.data['HCPfirstname'] = ""
+      req.session.data['HCPlastname'] = ""
+      req.session.data['HCPRegistrationNumber'] = ""
+      req.session.data['HCPmobileNumber'] = ""
+      req.session.data['saveYourDetails'] = ""
+      res.redirect('/private-beta03/dashboard/your-account-delete-banner')
+    } else {
+      res.redirect('/private-beta03/save-your-details/check-your-details');
+    }
+  })
+
+  router.post('/private-beta03/sr1-form-sections', function (req, res) {
+    var formoption = req.session.data['HCPRegistrationnumbersaved'];
+  
+    // Check if the variable is considered "empty" (null, undefined, or an empty string after trimming whitespace)
+    if (!formoption || formoption.trim() === '') {
+      res.redirect('/private-beta03/sr1-form-sections');
+    } else {
+      res.redirect('/private-beta03/sr1-form-start-saved-your-details');
+    }
+  });
+  
 
   router.post('/private-beta03/save-your-details/your-name-answer', function (req, res) {
     var hcpnameoption = req.session.data['hcpname']

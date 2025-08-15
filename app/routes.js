@@ -401,16 +401,16 @@ router.post('/hcp-e2e-journey-mvp03/sr1-form-05-radio/answer', function (req, re
   }
 })
 
-router.post('/hcp-e2e-journey-mvp03/save-your-details/profile-02/answer', function (req, res) {
+router.post('/hcp-e2e-journey-mvp03/profile-02/answer', function (req, res) {
   var yourRole = req.session.data['yourRole']
 
   // Check whether the variable matches a condition
   if (yourRole == "Other") {
     // Send user to next reminder page
-    res.redirect('/hcp-e2e-journey-mvp03/save-your-details/profile-02-other')
+    res.redirect('/hcp-e2e-journey-mvp03/profile-02-other')
   } else {
     // Send user to the account dashboard page
-    res.redirect('/hcp-e2e-journey-mvp03/save-your-details/profile-03');
+    res.redirect('/hcp-e2e-journey-mvp03/profile-03');
   }
 })
 
@@ -526,16 +526,16 @@ router.post('/private-beta01/sr1-form-05-radio/answer', function (req, res) {
   }
 })
 
-router.post('/private-beta01/save-your-details/profile-02/answer', function (req, res) {
+router.post('/private-beta01/profile-02/answer', function (req, res) {
   var yourRole = req.session.data['yourRole']
 
   // Check whether the variable matches a condition
   if (yourRole == "Other") {
     // Send user to next reminder page
-    res.redirect('/private-beta01/save-your-details/profile-02-other')
+    res.redirect('/private-beta01/profile-02-other')
   } else {
     // Send user to the account dashboard page
-    res.redirect('/private-beta01/save-your-details/profile-03');
+    res.redirect('/private-beta01/profile-03');
   }
 })
 
@@ -606,7 +606,7 @@ router.post('/private-beta01/sr1-form-use-same-profile-details/answer', function
     res.redirect('/private-beta01/add-details-to-new-form')
   } else {
     // Send user to the account dashboard page
-    res.redirect('/private-beta01/save-your-details/profile-01');
+    res.redirect('/private-beta01/profile-01');
   }
 })
 
@@ -619,7 +619,7 @@ router.post('/private-beta01/add-details-to-new-form/answer', function (req, res
     res.redirect('/private-beta01/sr1-form-sections')
   } else {
     // Send user to the account dashboard page
-    res.redirect('/private-beta01/save-your-details/profile-01');
+    res.redirect('/private-beta01/profile-01');
   }
 })
 
@@ -641,16 +641,16 @@ router.post('/private-beta02/sr1-form-05-radio/answer', function (req, res) {
   }
 })
 
-router.post('/private-beta02/save-your-details/profile-02/answer', function (req, res) {
+router.post('/private-beta02/profile-02/answer', function (req, res) {
   var yourRole = req.session.data['yourRole']
 
   // Check whether the variable matches a condition
   if (yourRole == "Other") {
     // Send user to next reminder page
-    res.redirect('/private-beta02/save-your-details/profile-02-other')
+    res.redirect('/private-beta02/profile-02-other')
   } else {
     // Send user to the account dashboard page
-    res.redirect('/private-beta02/save-your-details/profile-03');
+    res.redirect('/private-beta02/profile-03');
   }
 })
 
@@ -721,7 +721,7 @@ router.post('/private-beta02/sr1-form-use-same-profile-details/answer', function
     res.redirect('/private-beta02/add-details-to-new-form')
   } else {
     // Send user to the account dashboard page
-    res.redirect('/private-beta02/save-your-details/profile-01');
+    res.redirect('/private-beta02/profile-01');
   }
 })
 
@@ -734,7 +734,7 @@ router.post('/private-beta02/add-details-to-new-form/answer', function (req, res
     res.redirect('/private-beta02/sr1-form-sections')
   } else {
     // Send user to the account dashboard page
-    res.redirect('/private-beta02/save-your-details/profile-01');
+    res.redirect('/private-beta02/profile-01');
   }
 })
 
@@ -767,16 +767,16 @@ router.post('/private-beta02/sr1-form-05-radio/answer', function (req, res) {
   }
 })
 
-router.post('/private-beta02/save-your-details/profile-02/answer', function (req, res) {
+router.post('/private-beta02/profile-02/answer', function (req, res) {
   var yourRole = req.session.data['yourRole']
 
   // Check whether the variable matches a condition
   if (yourRole == "Other") {
     // Send user to next reminder page
-    res.redirect('/private-beta02/save-your-details/profile-02-other')
+    res.redirect('/private-beta02/profile-02-other')
   } else {
     // Send user to the account dashboard page
-    res.redirect('/private-beta02/save-your-details/profile-03');
+    res.redirect('/private-beta02/profile-03');
   }
 })
 
@@ -847,7 +847,7 @@ router.post('/private-beta02/sr1-form-use-same-profile-details/answer', function
     res.redirect('/private-beta02/add-details-to-new-form')
   } else {
     // Send user to the account dashboard page
-    res.redirect('/private-beta02/save-your-details/profile-01');
+    res.redirect('/private-beta02/profile-01');
   }
 })
 
@@ -860,7 +860,7 @@ router.post('/private-beta02/add-details-to-new-form/answer', function (req, res
     res.redirect('/private-beta02/sr1-form-sections')
   } else {
     // Send user to the account dashboard page
-    res.redirect('/private-beta02/save-your-details/profile-01');
+    res.redirect('/private-beta02/profile-01');
   }
 })
 
@@ -893,16 +893,16 @@ router.post('/private-beta02/sr1-form-05-radio/answer', function (req, res) {
   }
 })
 
-router.post('/private-beta02/save-your-details/profile-02/answer', function (req, res) {
+router.post('/private-beta02/profile-02/answer', function (req, res) {
   var yourRole = req.session.data['yourRole']
 
   // Check whether the variable matches a condition
   if (yourRole == "Other") {
     // Send user to next reminder page
-    res.redirect('/private-beta02/save-your-details/profile-02-other')
+    res.redirect('/private-beta02/profile-02-other')
   } else {
     // Send user to the account dashboard page
-    res.redirect('/private-beta02/save-your-details/profile-03');
+    res.redirect('/private-beta02/profile-03');
   }
 })
 
@@ -973,7 +973,7 @@ router.post('/private-beta02/sr1-form-use-same-profile-details/answer', function
     res.redirect('/private-beta02/add-details-to-new-form')
   } else {
     // Send user to the account dashboard page
-    res.redirect('/private-beta02/save-your-details/profile-01');
+    res.redirect('/private-beta02/profile-01');
   }
 })
 
@@ -986,7 +986,7 @@ router.post('/private-beta02/add-details-to-new-form/answer', function (req, res
     res.redirect('/private-beta02/sr1-form-sections')
   } else {
     // Send user to the account dashboard page
-    res.redirect('/private-beta02/save-your-details/profile-01');
+    res.redirect('/private-beta02/profile-01');
   }
 })
 
@@ -1031,16 +1031,16 @@ router.post('/private-beta02/sr1-form-05-radio/answer', function (req, res) {
   }
 })
 
-router.post('/private-beta02/save-your-details/profile-02/answer', function (req, res) {
+router.post('/private-beta02/profile-02/answer', function (req, res) {
   var yourRole = req.session.data['yourRole']
 
   // Check whether the variable matches a condition
   if (yourRole == "Other") {
     // Send user to next reminder page
-    res.redirect('/private-beta02/save-your-details/profile-02-other')
+    res.redirect('/private-beta02/profile-02-other')
   } else {
     // Send user to the account dashboard page
-    res.redirect('/private-beta02/save-your-details/profile-03');
+    res.redirect('/private-beta02/profile-03');
   }
 })
 
@@ -1111,7 +1111,7 @@ router.post('/private-beta02/sr1-form-use-same-profile-details/answer', function
     res.redirect('/private-beta02/add-details-to-new-form')
   } else {
     // Send user to the account dashboard page
-    res.redirect('/private-beta02/save-your-details/profile-01');
+    res.redirect('/private-beta02/profile-01');
   }
 })
 
@@ -1124,7 +1124,7 @@ router.post('/private-beta02/add-details-to-new-form/answer', function (req, res
     res.redirect('/private-beta02/sr1-form-sections')
   } else {
     // Send user to the account dashboard page
-    res.redirect('/private-beta02/save-your-details/profile-01');
+    res.redirect('/private-beta02/profile-01');
   }
 })
 
@@ -1165,22 +1165,22 @@ router.post('/private-beta02/sr1-form-04', function (req, res) {
   }
 })
 
-router.post('/private-beta02/save-your-details/profile-06', function (req, res) {
+router.post('/private-beta02/profile-06', function (req, res) {
   var receiveReminder = req.session.data['organisationSignin']
 
   // Check whether the variable matches a condition
   if (receiveReminder == "NHS England") {
     // Send user to next reminder page
-    res.redirect('/private-beta02/save-your-details/profile-06')
+    res.redirect('/private-beta02/profile-06')
   } else if (receiveReminder == "NHS Scotland") {
     // Send user to next reminder page
-    res.redirect('/private-beta02/save-your-details/profile-06-scotland')
+    res.redirect('/private-beta02/profile-06-scotland')
   } else if (receiveReminder == "NHS Wales") {
     // Send user to next reminder page
-    res.redirect('/private-beta02/save-your-details/profile-06-wales')
+    res.redirect('/private-beta02/profile-06-wales')
   } else {
     // Send user to the account dashboard page
-    res.redirect('/private-beta02/save-your-details/profile-06')
+    res.redirect('/private-beta02/profile-06')
   }
 })
 
@@ -1252,21 +1252,21 @@ router.post('/private-beta02/sr1-form-03', function (req, res) {
   }
 })
 
-router.post('/private-beta02/save-your-details/profile-06-adding-details', function (req, res) {
+router.post('/private-beta02/profile-06-adding-details', function (req, res) {
   var receiveReminder = req.session.data['organisationSignin']
   // Check whether the variable matches a condition
   if (receiveReminder == "NHS England") {
     // Send user to next reminder page
-    res.redirect('/private-beta02/save-your-details/profile-06-adding-details')
+    res.redirect('/private-beta02/profile-06-adding-details')
   } else if (receiveReminder == "NHS Scotland") {
     // Send user to next reminder page
-    res.redirect('/private-beta02/save-your-details/profile-06-adding-details-scotland')
+    res.redirect('/private-beta02/profile-06-adding-details-scotland')
   } else if (receiveReminder == "NHS Wales") {
     // Send user to next reminder page
-    res.redirect('/private-beta02/save-your-details/profile-06-adding-details-wales')
+    res.redirect('/private-beta02/profile-06-adding-details-wales')
   } else {
     // Send user to the account dashboard page
-    res.redirect('/private-beta02/save-your-details/profile-06-adding-details')
+    res.redirect('/private-beta02/profile-06-adding-details')
   }
 })
 

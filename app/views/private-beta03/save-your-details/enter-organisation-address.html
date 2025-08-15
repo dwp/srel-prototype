@@ -1,13 +1,13 @@
 {% extends "layout-gov-signed-in-private-beta03.html" %}
 
 {% block pageTitle %}
-Enter your organisation’s address – Send an SR1 medical evidence form – GOV.UK
+Enter your organisation’s address – Save your details – Send an SR1 medical evidence form – GOV.UK
 {% endblock %}
 
 {% block content %}
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
-    <form id="profileSetupPage" name="profileDetails" action="/private-beta03/your-details/confirm-organisation-address-manual-adding-details" method="post">
+    <form id="profileSetupPage" name="profileDetails" action="/private-beta03/save-your-details/confirm-organisation-address" method="post">
       <div class="govuk-form-group">
         <fieldset class="govuk-fieldset">
           <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
@@ -72,8 +72,8 @@ Enter your organisation’s address – Send an SR1 medical evidence form – GO
         <button id="" class="govuk-button" data-module="govuk-button"
           onclick="saveHCPOrgAddressprivatebeta03(); resetChangeFn();">Continue
         </button>
-        <a class="govuk-link" onclick="saveAndLeave()" style="color:#1d70b8;" aria-label="Return to SR1 form sections"
-          href="#">Return to SR1 form sections</a>
+        <a class="govuk-link" onclick="saveAndLeave()" style="color:#1d70b8;" aria-label="Return to your account"
+          href="#">Return to your account</a>
       </div>
       <div class="govuk-form-group">
         <label class="govuk-label" for="find-patient-address"><a id="postcode-finder-link" class="govuk-link"

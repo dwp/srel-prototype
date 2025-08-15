@@ -1,7 +1,7 @@
 {% extends "layout-gov-signed-in-private-beta03.html" %}
 
 {% block pageTitle %}
-Check your answers before sending the SR1 form – Send an SR1 medical evidence form – GOV.UK
+Check your answers before sending the SR1 form – Save your details – Send an SR1 medical evidence form – GOV.UK
 {% endblock %}
 
 {% block content %}
@@ -13,7 +13,7 @@ Check your answers before sending the SR1 form – Send an SR1 medical evidence 
                 <fieldset class="govuk-fieldset">
                     <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
                         <h1 class="govuk-heading-l">
-                            Check your answers before saving your details
+                            Check your details before saving
                         </h1>
                     </legend>
 
@@ -60,7 +60,7 @@ Check your answers before sending the SR1 form – Send an SR1 medical evidence 
                                 Professional registration number
                             </dt>
                             <dd class="govuk-summary-list__value">
-                                {{data['HCPRegistrationNumber']}} 
+                                {{data['HCPRegistrationNumber']}} {{data['HCPRegistrationnumbersaved']}}
                             </dd>
                             <dd class="govuk-summary-list__actions">
                                 <a class="govuk-link" href="/private-beta03/save-your-details/professional-registration-number">

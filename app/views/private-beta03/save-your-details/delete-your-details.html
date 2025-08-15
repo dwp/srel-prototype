@@ -1,13 +1,13 @@
 {% extends "layout-gov-signed-in-private-beta03.html" %}
 
 {% block pageTitle %}
-Does the patient have other relevant diagnosis? – Send an SR1 medical evidence form – GOV.UK
+Are you sure you want to delete your details? – Check your details – Send an SR1 medical evidence form – GOV.UK
 {% endblock %}
 
 {% block content %}
 <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
-        <form id="sendAnSR1Form" action="/private-beta03/dashboard/your-account-delete-banner" method="post">
+        <form id="sendAnSR1Form" action="/private-beta03/dashboard/your-account-delete" method="post">
             <div class="govuk-form-group">
                 <fieldset class="govuk-fieldset">
                     <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
@@ -20,14 +20,14 @@ Does the patient have other relevant diagnosis? – Send an SR1 medical evidence
                     <!-- Receive reminder options -->
                     <div class="govuk-radios govuk-radios--inline" data-module="govuk-radios">
                         <div class="govuk-radios__item">
-                            <input class="govuk-radios__input" id="otherRelevantDiagnosis-yes" name="otherRelevantDiagnosis" type="radio" value="Yes" onclick="privatebeta01OtherDiagnosis(this)">
-                            <label class="govuk-label govuk-radios__label" for="otherRelevantDiagnosis-yes">
+                            <input class="govuk-radios__input" id="deletedetails-yes" name="deletedetails" type="radio" value="Yes" onclick="privatebeta01OtherDiagnosis(this)">
+                            <label class="govuk-label govuk-radios__label" for="deletedetails-yes">
                                 Yes
                             </label>
                         </div>
                         <div class="govuk-radios__item">
-                            <input class="govuk-radios__input" id="otherRelevantDiagnosis-no" name="otherRelevantDiagnosis" type="radio" value="Not provided" onclick="privatebeta01OtherDiagnosis(this)">
-                            <label class="govuk-label govuk-radios__label" for="otherRelevantDiagnosis-no">
+                            <input class="govuk-radios__input" id="deletedetails-no" name="deletedetails" type="radio" value="Not provided" onclick="privatebeta01OtherDiagnosis(this)">
+                            <label class="govuk-label govuk-radios__label" for="deletedetails-no">
                                 No
                             </label>
                         </div>
@@ -42,7 +42,7 @@ Does the patient have other relevant diagnosis? – Send an SR1 medical evidence
             <div class="govuk-button-group">
                 <button id="" class="govuk-button" data-module="govuk-button" onclick="saveOtherDiagnosisradioSR1Formprivatebeta03(); resetChangeFn();">Continue</button>
                 <a class="govuk-link" href="/private-beta03/save-your-details/check-your-details">
-                    Return to your details<span class="govuk-visually-hidden"> Return to your details</span>
+                    Return to check your details <span class="govuk-visually-hidden"> Return to check your details</span>
                 </a>
             </div>
         </form>
@@ -74,10 +74,10 @@ Does the patient have other relevant diagnosis? – Send an SR1 medical evidence
 
 <script>
     //const saveOtherDiagnosisradioSR1Formprivatebeta01 = () => {
-    //    if (document.getElementById('otherRelevantDiagnosis-yes').checked) {
-    //        localStorage.setItem('privatebeta01OtherRelevantDiagnosis', ' ');
-    //    } else if (document.getElementById('otherRelevantDiagnosis-no').checked) {
-    //        localStorage.setItem('privatebeta01OtherRelevantDiagnosis', 'Not provided');
+    //    if (document.getElementById('deletedetails-yes').checked) {
+    //        localStorage.setItem('privatebeta01deletedetails', ' ');
+    //    } else if (document.getElementById('deletedetails-no').checked) {
+    //        localStorage.setItem('privatebeta01deletedetails', 'Not provided');
     //    }
     //}
 
