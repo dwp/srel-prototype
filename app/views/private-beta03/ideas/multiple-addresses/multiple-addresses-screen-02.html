@@ -1,23 +1,25 @@
 {% extends "layout-gov-signed-in-private-beta03.html" %}
 
 {% block pageTitle %}
-Is the patient aware of their diagnosis? – Send an SR1 medical evidence form – GOV.UK
+What is your name? – Send an SR1 medical evidence form – GOV.UK
 {% endblock %}
 
 {% block content %}
+
 <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
-        <form id="sendAnSR1Form" action="/private-beta03/ideations/multiple-addresses/ideations/multiple-addresses-screen-10" method="post">
+        <form id="profileSetupPage" name="profileDetails" action="/private-beta03/ideas/multiple-addresses/multiple-addresses-screen-03" method="post">
             <div class="govuk-form-group">
                 <fieldset class="govuk-fieldset">
                     <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
-                        <!--<span class="govuk-caption-l"> Question 5 of 6</span>-->
+                        <!--<span class="govuk-caption-l">Question 1 of 5</span>-->
                         <h1 class="govuk-fieldset__heading">
-                            Do you have any other organisational addresses that you want to save?
+                            Is your name Nelson Noah?
                         </h1>
                     </legend>
-
-                    <!-- Is the patient aware of their diagnosis? -->
+                    <div id="contact-hint" class="govuk-hint">
+                        This is the name linked to your current organisation's account details. 
+                      </div>
                     <div class="govuk-radios govuk-radios--inline" data-module="govuk-radios">
                         <div class="govuk-radios__item">
                             <input autocomplete="off" class="govuk-radios__input" id="awareOfDiagnosisYes" name="awareOfDiagnosis" type="radio" value="Yes" aria-label="Yes">
@@ -32,17 +34,19 @@ Is the patient aware of their diagnosis? – Send an SR1 medical evidence form �
                             </label>
                         </div>
                     </div>
-
                 </fieldset>
-            </div>
+            </Div>
+
 
             <!-- Submit button -->
             <div class="govuk-button-group">
-                <button id="" class="govuk-button" data-module="govuk-button" onclick="save()">
+                <button id="" class="govuk-button" data-module="govuk-button" onclick="saveHCPNameprivatebeta03(); resetChangeFn();">
                     Continue
                 </button>
+                
             </div>
         </form>
+
         <div class="govuk-!-padding-bottom-6"></div>
 
         <!--Get help new-->
@@ -70,4 +74,15 @@ Is the patient aware of their diagnosis? – Send an SR1 medical evidence form �
 
 </div>
 
+<script>
+    // get and set in this order - this ensures what is sent in query is the same as what is in the localStorage
+    const saveAndLeave = () => {
+        //saveHCPNameprivatebeta01();
+
+        const origin = window.location.origin;
+        const url = getUrlWithSR1DataAsQueryParamsprivatebeta03(origin, "/private-beta03/sr1-form-sections");
+
+        window.location.replace(url.toString());
+    }
+</script>
 {% endblock %}

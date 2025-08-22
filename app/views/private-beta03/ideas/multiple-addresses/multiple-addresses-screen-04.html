@@ -1,49 +1,48 @@
 {% extends "layout-gov-signed-in-private-beta03.html" %}
 
 {% block pageTitle %}
-What is your name? – Send an SR1 medical evidence form – GOV.UK
+What is your professional registration number? – Send an SR1 medical evidence form – GOV.UK
 {% endblock %}
 
 {% block content %}
-
 <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
-        <form id="profileSetupPage" name="profileDetails" action="/private-beta03/ideations/multiple-addresses/ideations/multiple-addresses-screen-03" method="post">
+
+        <form id="profileSetupPage" name="profileDetails" action="/private-beta03/ideas/multiple-addresses/multiple-addresses-screen-05" method="post">
             <div class="govuk-form-group">
                 <fieldset class="govuk-fieldset">
-                    <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
-                        <!--<span class="govuk-caption-l">Question 1 of 5</span>-->
-                        <h1 class="govuk-fieldset__heading">
-                            Is your name Nelson Noah?
+                    <legend class="govuk-fieldset__legend govuk-fieldset__legend--l"
+                        for="professionalRegistrationNumber">
+                        <h1 class="govuk-label-wrapper">
+                            <!--<span class="govuk-caption-l">Question 3 of 5</span>-->
+                            <label class="govuk-label govuk-label--l" for="professionalRegistrationNumber">
+                                What is your professional registration number?
+                            </label>
                         </h1>
                     </legend>
-                    <div id="contact-hint" class="govuk-hint">
-                        This is the name linked to your current organisation's account details. 
-                      </div>
-                    <div class="govuk-radios govuk-radios--inline" data-module="govuk-radios">
-                        <div class="govuk-radios__item">
-                            <input autocomplete="off" class="govuk-radios__input" id="awareOfDiagnosisYes" name="awareOfDiagnosis" type="radio" value="Yes" aria-label="Yes">
-                            <label class="govuk-label govuk-radios__label" for="awareOfDiagnosisYes">
-                                Yes
-                            </label>
-                        </div>
-                        <div class="govuk-radios__item">
-                            <input autocomplete="off" class="govuk-radios__input" id="awareOfDiagnosisNo" name="awareOfDiagnosis" type="radio" value="No" aria-label="No">
-                            <label class="govuk-label govuk-radios__label" for="awareOfDiagnosisNo">
-                                No
-                            </label>
-                        </div>
-                    </div>
-                </fieldset>
-            </Div>
+                    <!--<legend class="govuk-fieldset__legend govuk-fieldset__legend--l"
+                        for="professionalRegistrationNumber">
+                        <span class="govuk-caption-l">Question 3 of 5</span>
+                        <h1 class="govuk-fieldset__heading">
+                            What is your professional registration number?
+                        </h1>
+                    </legend>-->
 
+                    <div id="event-name-hint" class="govuk-hint">This is your GMC or NMC number.</div>
+                    <input class="govuk-input govuk-input--width-10" id="professionalRegistrationNumber"
+                        name="professionalRegistrationNumber" type="text" autocomplete="off">
+
+
+                </fieldset>
+            </div>
 
             <!-- Submit button -->
             <div class="govuk-button-group">
-                <button id="" class="govuk-button" data-module="govuk-button" onclick="saveHCPNameprivatebeta03(); resetChangeFn();">
+                <button id="" class="govuk-button" data-module="govuk-button"
+                    onclick="saveHCPProfessionalNumberprivatebeta03(); resetChangeFn();">
                     Continue
                 </button>
-                
+               
             </div>
         </form>
 
@@ -77,7 +76,7 @@ What is your name? – Send an SR1 medical evidence form – GOV.UK
 <script>
     // get and set in this order - this ensures what is sent in query is the same as what is in the localStorage
     const saveAndLeave = () => {
-        //saveHCPNameprivatebeta01();
+        //saveHCPProfessionalNumberprivatebeta01();
 
         const origin = window.location.origin;
         const url = getUrlWithSR1DataAsQueryParamsprivatebeta03(origin, "/private-beta03/sr1-form-sections");
