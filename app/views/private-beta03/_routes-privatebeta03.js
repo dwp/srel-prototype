@@ -33,9 +33,12 @@ module.exports = function (folderForViews, urlPrefix, router) {
       // 
       req.session.data['HCPfirstname'] = ""
       req.session.data['HCPlastname'] = ""
+      req.session.data['HCPRegistrationnumbersaved'] = ""
       req.session.data['HCPRegistrationNumber'] = ""
       req.session.data['HCPmobileNumber'] = ""
       req.session.data['saveYourDetails'] = ""
+      req.session.data['yourRolename'] = ""
+      req.session.data['yourRole'] = ""
       res.redirect('/private-beta03/dashboard/your-account-delete-banner')
     } else {
       res.redirect('/private-beta03/save-your-details/check-your-details');
