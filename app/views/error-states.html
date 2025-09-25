@@ -11,7 +11,431 @@ Prototypes home - Special Rules for End of Life
     <!-- Current prototype(s) -->
     <!-- #################### -->
 
+    
     <div class="govuk-width-container">
+      <table class="govuk-table govuk-!-margin-bottom-9">
+        <caption class="govuk-table__caption govuk-table__caption--m">Errors in Private-Beta03</caption>
+        <thead class="govuk-table__head">
+          <tr class="govuk-table__row">
+            <th class="govuk-table__header" scope="col">Section</th>
+            <th class="govuk-table__header" scope="col">Page Title</th>
+            <th class="govuk-table__header" scope="col">Type</th>
+            <th class="govuk-table__header" scope="col">Problem</th>
+            <th class="govuk-table__header" scope="col">Link</th>
+          </tr>
+        </thead>
+        <tbody class="govuk-table__body">
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell" rowspan="6">Sign-in</td>
+            <td class="govuk-table__cell">Accessing the online service</td>
+            <td class="govuk-table__cell">Error</td>
+            <td class="govuk-table__cell">Unselected radio button</td>
+            <td class="govuk-table__cell"><a class="govuk-link" href="/private-beta03/sign-in/organisation-error">Open
+                page</a></td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">You cannot use the online service</td>
+            <td class="govuk-table__cell">Service page</td>
+            <td class="govuk-table__cell">Choosing Scotland for organisation login</td>
+            <td class="govuk-table__cell"><a class="govuk-link"
+                href="/private-beta03/errors/no-permission/no-permission-scotland">Open page</a></td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">You cannot use the online service</td>
+            <td class="govuk-table__cell">Service page</td>
+            <td class="govuk-table__cell">Choosing Northern Ireland for organisation login</td>
+            <td class="govuk-table__cell"><a class="govuk-link"
+                href="/private-beta03/errors/no-permission/no-permission-northern-ireland">Open page</a></td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">You cannot use the online service</td>
+            <td class="govuk-table__cell">Service page</td>
+            <td class="govuk-table__cell">Choosing Wales for organisation login</td>
+            <td class="govuk-table__cell"><a class="govuk-link"
+                href="/private-beta03/errors/no-permission/no-permission-wales">Open page</a></td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">The online SR1 form is only available to NHS England</td>
+            <td class="govuk-table__cell">Service page</td>
+            <td class="govuk-table__cell">Work in progress</td>
+            <td class="govuk-table__cell"><a class="govuk-link"
+                href="/private-beta03/other/errors/no-permissions/no-permission">Open page</a></td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">You cannot use the online service</td>
+            <td class="govuk-table__cell">Service page</td>
+            <td class="govuk-table__cell">Choosing NI in previous screen</td>
+            <td class="govuk-table__cell"><a class="govuk-link"
+                href="/private-beta03/errors/no-permission/no-permission-role">Open page</a></td>
+          </tr>
+        <tbody class="govuk-table__body">
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell" rowspan="11">Patient details</td>
+            <td class="govuk-table__cell" rowspan="2">
+              What is the patient's name?</td>
+            <td class="govuk-table__cell">Error</td>
+            <td class="govuk-table__cell">Empty text field</td>
+            <td class="govuk-table__cell"><a class="govuk-link" href="/private-beta03/patient-details/name-error">Open
+                page</a></td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">Error</td>
+            <td class="govuk-table__cell">Too many characters</td>
+            <td class="govuk-table__cell"><a class="govuk-link"
+                href="/private-beta03/patient-details/name-error-characters">Open
+                page</a></td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell" rowspan="3">
+              What is the patient’s date of birth?</td>
+            <td class="govuk-table__cell">Error</td>
+            <td class="govuk-table__cell">Empty text field</td>
+            <td class="govuk-table__cell"><a class="govuk-link"
+                href="/private-beta03/patient-details/date-of-birth-error">Open
+                page</a></td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">Error</td>
+            <td class="govuk-table__cell">Date of birth is later than date of diagnosis</td>
+            <td class="govuk-table__cell"><a class="govuk-link" href="WIP">Open page</a></td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">Error</td>
+            <td class="govuk-table__cell">Invalid entry (e..g. alphabet)</td>
+            <td class="govuk-table__cell"><a class="govuk-link"
+                href="/private-beta03/patient-details/date-of-birth-error-real-date">Open
+                page</a></td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">Find the patient’s address
+            </td>
+            <td class="govuk-table__cell">Error</td>
+            <td class="govuk-table__cell">Invalid postcode</td>
+            <td class="govuk-table__cell"><a class="govuk-link"
+                href="/private-beta03/patient-details/find-patient-address-error">Open
+                page</a></td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">Patient address not found</td>
+            <td class="govuk-table__cell">Service Page</td>
+            <td class="govuk-table__cell">Can't find an address related to postcode, maybe new postcode </td>
+            <td class="govuk-table__cell"><a class="govuk-link"
+                href="/private-beta03/patient-details/patient-address-results-not-found">Open
+                page</a></td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">
+              Patient address results</td>
+            <td class="govuk-table__cell">Error</td>
+            <td class="govuk-table__cell">Radio buttons not selected </td>
+            <td class="govuk-table__cell"><a class="govuk-link"
+                href="/private-beta03/patient-details/patient-address-results-error">Open
+                page</a></td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">
+              Enter the patient’s address</td>
+            <td class="govuk-table__cell">Error</td>
+            <td class="govuk-table__cell">Empty text field</td>
+            <td class="govuk-table__cell"><a class="govuk-link"
+                href="/private-beta03/patient-details/enter-patient-address-error">Open
+                page</a></td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">
+              Enter the patient’s address</td>
+            <td class="govuk-table__cell">Error</td>
+            <td class="govuk-table__cell">Too many characters</td>
+            <td class="govuk-table__cell"><a class="govuk-link"
+                href="/private-beta03/patient-details/enter-patient-address-error-characters">Open
+                page</a></td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">
+              Enter the patient’s address</td>
+            <td class="govuk-table__cell">Error</td>
+            <td class="govuk-table__cell">Invalid postcode</td>
+            <td class="govuk-table__cell"><a class="govuk-link" href="WIP">Open page</a></td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell" rowspan="14">Diagnosis</td>
+            <td class="govuk-table__cell" rowspan="2">
+              What is the patient’s diagnosis?</td>
+            <td class="govuk-table__cell" rowspan="2">Error</td>
+            <td class="govuk-table__cell">Too many characters</td>
+            <td class="govuk-table__cell"><a class="govuk-link"
+                href="/private-beta03/diagnosis/details-error-too-many">Open
+                page</a></td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">Empty text field</td>
+            <td class="govuk-table__cell"><a class="govuk-link" href="/private-beta03/diagnosis/details-error">Open
+                page</a></td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell" rowspan="4">
+              What was the date of the patient’s diagnosis?</td>
+            <td class="govuk-table__cell">Error</td>
+            <td class="govuk-table__cell">Empty text field</td>
+            <td class="govuk-table__cell"><a class="govuk-link" href="/private-beta03/diagnosis/date-error">Open
+                page</a></td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">Error</td>
+            <td class="govuk-table__cell">Date is before patient was born</td>
+            <td class="govuk-table__cell"><a class="govuk-link" href="WIP">Open page</a></td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">Error</td>
+            <td class="govuk-table__cell">Date is in future</td>
+            <td class="govuk-table__cell"><a class="govuk-link" href="WIP">Open page</a></td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">Error</td>
+            <td class="govuk-table__cell">Date is invalid format e.g. 25 instead of 2025</td>
+            <td class="govuk-table__cell"><a class="govuk-link"
+                href="/private-beta03/diagnosis/date-error-real-date">Open
+                page</a></td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell" rowspan="3">Special Rules date – Send an SR1 medical evidence form –
+              GOV.UK</td>
+            <td class="govuk-table__cell">Error</td>
+            <td class="govuk-table__cell">Empty text field</td>
+            <td class="govuk-table__cell"><a class="govuk-link"
+                href="/private-beta03/diagnosis/special-rules-date-error">Open
+                page</a></td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">Error</td>
+            <td class="govuk-table__cell">Date is in future</td>
+            <td class="govuk-table__cell"><a class="govuk-link" href="WIP">Open page</a></td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">Error</td>
+            <td class="govuk-table__cell">Date is invalid format e.g. 25 instead of 2025</td>
+            <td class="govuk-table__cell"><a class="govuk-link"
+                href="/private-beta03/diagnosis/special-rules-date-error-real-date">Open
+                page</a></td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">
+              Does the patient have other relevant diagnoses?</td>
+            <td class="govuk-table__cell">Error</td>
+            <td class="govuk-table__cell">Radio buttons not selected </td>
+            <td class="govuk-table__cell"><a class="govuk-link"
+                href="/private-beta03/diagnosis/other-diagnosis-error">Open
+                page</a></td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">
+              What are the other relevant diagnoses?</td>
+            <td class="govuk-table__cell">Error</td>
+            <td class="govuk-table__cell">Empty text field</td>
+            <td class="govuk-table__cell"><a class="govuk-link"
+                href="/private-beta03/diagnosis/have-other-diagnosis-error">Open
+                page</a></td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">
+              What are the other relevant diagnoses?</td>
+            <td class="govuk-table__cell">Error</td>
+            <td class="govuk-table__cell">Too many characters</td>
+            <td class="govuk-table__cell"><a class="govuk-link"
+                href="/private-beta03/diagnosis/other-diagnosis-error-too-many">Open
+                page</a></td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">
+              Is the patient aware of their diagnosis?</td>
+            <td class="govuk-table__cell">Error</td>
+            <td class="govuk-table__cell">Radio buttons not selected </td>
+            <td class="govuk-table__cell"><a class="govuk-link"
+                href="/private-beta03/diagnosis/aware-of-diagnosis-error">Open
+                page</a></td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">
+              Is the patient aware of their prognosis?</td>
+            <td class="govuk-table__cell">Error</td>
+            <td class="govuk-table__cell">Radio buttons not selected </td>
+            <td class="govuk-table__cell"><a class="govuk-link"
+                href="/private-beta03/diagnosis/aware-of-prognosis-error">Open
+                page</a></td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell" rowspan="4">Clinical features, treatment and care</td>
+            <td class="govuk-table__cell">
+              Clinical features</td>
+            <td class="govuk-table__cell">Error</td>
+            <td class="govuk-table__cell">Empty text field</td>
+            <td class="govuk-table__cell"><a class="govuk-link"
+                href="/private-beta03/clinical-features-treatment/clinical-features-error">Open
+                page</a></td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">
+              Clinical features</td>
+            <td class="govuk-table__cell">Error</td>
+            <td class="govuk-table__cell">Too many characters</td>
+            <td class="govuk-table__cell"><a class="govuk-link"
+                href="/private-beta03/clinical-features-treatment/clinical-features-error-too-many">Open
+                page</a></td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">
+              Treatment and care</td>
+            <td class="govuk-table__cell">Error</td>
+            <td class="govuk-table__cell">Too many characters</td>
+            <td class="govuk-table__cell"><a class="govuk-link"
+                href="/private-beta03/clinical-features-treatment/treatment-error-too-many">Open
+                page</a></td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">
+              Treatment and care</td>
+            <td class="govuk-table__cell">Error</td>
+            <td class="govuk-table__cell">Empty text field</td>
+            <td class="govuk-table__cell"><a class="govuk-link"
+                href="/private-beta03/clinical-features-treatment/treatment-error">Open
+                page</a></td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell" rowspan="20">Your Details</td>
+            <td class="govuk-table__cell">
+              Is your name wickey john?</td>
+            <td class="govuk-table__cell">Error</td>
+            <td class="govuk-table__cell">Radio button not selected</td>
+            <td class="govuk-table__cell"><a class="govuk-link"
+                href="/private-beta03/your-details/confirm-your-name-error">Open
+                page</a></td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell" rowspan="4">
+              What is your name?</td>
+            <td class="govuk-table__cell">Error</td>
+            <td class="govuk-table__cell" rowspan="2">Too many characters</td>
+            <td class="govuk-table__cell" rowspan="2"><a class="govuk-link"
+                href="/private-beta03/your-details/your-name-error-characters">Open
+                page</a></td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">Error</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">Error</td>
+            <td class="govuk-table__cell" rowspan="2">Text fields is empty</td>
+            <td class="govuk-table__cell" rowspan="2"><a class="govuk-link" href="WIP">Open page</a></td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">Error</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell" rowspan="3">
+              What is your role?</td>
+            <td class="govuk-table__cell">Error</td>
+            <td class="govuk-table__cell">Text fields is empty</td>
+            <td class="govuk-table__cell"><a class="govuk-link"
+                href="/private-beta03/your-details/role-other-error">Open
+                page</a></td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">Error</td>
+            <td class="govuk-table__cell">Too many characters</td>
+            <td class="govuk-table__cell"><a class="govuk-link"
+                href="/private-beta03/your-details/role-other-error-characters">Open
+                page</a></td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">Error</td>
+            <td class="govuk-table__cell">Radio button not selected</td>
+            <td class="govuk-table__cell"><a class="govuk-link" href="/private-beta03/your-details/role-error">Open
+                page</a></td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">
+              What is your professional registration number?</td>
+            <td class="govuk-table__cell">Error</td>
+            <td class="govuk-table__cell">Text fields is empty</td>
+            <td class="govuk-table__cell"><a class="govuk-link"
+                href="/private-beta03/your-details/professional-registration-number-error">Open
+                page</a></td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">
+              What is your organisation’s phone number?</td>
+            <td class="govuk-table__cell">Error</td>
+            <td class="govuk-table__cell">Text fields is empty</td>
+            <td class="govuk-table__cell"><a class="govuk-link"
+                href="/private-beta03/your-details/organisation-phone-number-error">Open
+                page</a></td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell" rowspan="2">
+              Find your organisation’s address</td>
+            <td class="govuk-table__cell">Error</td>
+            <td class="govuk-table__cell">Wrong postcode format</td>
+            <td class="govuk-table__cell"><a class="govuk-link"
+                href="/private-beta03/your-details/find-organisation-address-error-postcode">Open
+                page</a></td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">Error</td>
+            <td class="govuk-table__cell">Text fields is empty</td>
+            <td class="govuk-table__cell"><a class="govuk-link"
+                href="/private-beta03/your-details/find-organisation-address-error">Open
+                page</a></td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">
+              Organisation address not found</td>
+            <td class="govuk-table__cell">Service Page</td>
+            <td class="govuk-table__cell">Can't find an address related to postcode, maybe new postcode </td>
+            <td class="govuk-table__cell"><a class="govuk-link"
+                href="/private-beta03/your-details/find-organisation-address-error">Open
+                page</a></td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell" rowspan="6">
+              Enter your organisation’s address</td>
+            <td class="govuk-table__cell" rowspan="6">Error</td>
+            <td class="govuk-table__cell">Too many characters</td>
+            <td class="govuk-table__cell"><a class="govuk-link"
+                href="/private-beta03/your-details/enter-organisation-address-error-characters">Open
+                page</a></td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell" rowspan="4">Text fields is empty</td>
+            <td class="govuk-table__cell" rowspan="4"><a class="govuk-link"
+                href="/private-beta03/your-details/enter-organisation-address-error">Open
+                page</a></td>
+          </tr>
+          <tr class="govuk-table__row">
+          </tr>
+          <tr class="govuk-table__row">
+          </tr>
+          <tr class="govuk-table__row">
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">Invalid postcode</td>
+            <td class="govuk-table__cell"><a class="govuk-link" href="WIP">Open page</a></td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">
+              Organisation address results</td>
+            <td class="govuk-table__cell">Error</td>
+            <td class="govuk-table__cell">Radio button not selected</td>
+            <td class="govuk-table__cell"><a class="govuk-link"
+                href="/private-beta03/your-details/organisation-address-results-error">Open
+                page</a></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+
+
+    <div class=" govuk-width-container">
       <table class="govuk-table govuk-!-margin-bottom-9">
         <caption class="govuk-table__caption govuk-table__caption--m">Errors in MVP03</caption>
         <thead class="govuk-table__head">
@@ -56,7 +480,8 @@ Prototypes home - Special Rules for End of Life
           <tr class="govuk-table__row">
             <th scope="row" class="govuk-table__header">MVP03</th>
             <td class="govuk-table__cell govuk-table__cell--numeric">SR1 form</td>
-            <td class="govuk-table__cell govuk-table__cell--numeric">Patient’s date of birth (example with unreal date)</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">Patient’s date of birth (example with
+              unreal date)</td>
             <td class="govuk-table__cell govuk-table__cell--numeric"><a
                 href="/hcp-e2e-journey-mvp03/sr1-form-02-error-real-date">Open page</a>
             </td>
@@ -106,7 +531,8 @@ Prototypes home - Special Rules for End of Life
           <tr class="govuk-table__row">
             <th scope="row" class="govuk-table__header">MVP03</th>
             <td class="govuk-table__cell govuk-table__cell--numeric">SR1 form</td>
-            <td class="govuk-table__cell govuk-table__cell--numeric">Diagnosis (example too many characters)</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">Diagnosis (example too many characters)
+            </td>
             <td class="govuk-table__cell govuk-table__cell--numeric"><a
                 href="/hcp-e2e-journey-mvp03/sr1-form-07-error-too-many">Open page</a>
             </td>
@@ -126,7 +552,8 @@ Prototypes home - Special Rules for End of Life
           <tr class="govuk-table__row">
             <th scope="row" class="govuk-table__header">MVP03</th>
             <td class="govuk-table__cell govuk-table__cell--numeric">SR1 form</td>
-            <td class="govuk-table__cell govuk-table__cell--numeric">Date of the patient’s diagnosis (example with unreal date)</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">Date of the patient’s diagnosis (example
+              with unreal date)</td>
             <td class="govuk-table__cell govuk-table__cell--numeric"><a
                 href="/hcp-e2e-journey-mvp03/sr1-form-08-error-real-date">Open page</a>
             </td>
@@ -136,7 +563,8 @@ Prototypes home - Special Rules for End of Life
           <tr class="govuk-table__row">
             <th scope="row" class="govuk-table__header">MVP03</th>
             <td class="govuk-table__cell govuk-table__cell--numeric">SR1 form</td>
-            <td class="govuk-table__cell govuk-table__cell--numeric">Date the patient met the Special Rules</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">Date the patient met the Special Rules
+            </td>
             <td class="govuk-table__cell govuk-table__cell--numeric"><a
                 href="/hcp-e2e-journey-mvp03/sr1-form-06-error">Open page</a>
             </td>
@@ -146,7 +574,8 @@ Prototypes home - Special Rules for End of Life
           <tr class="govuk-table__row">
             <th scope="row" class="govuk-table__header">MVP03</th>
             <td class="govuk-table__cell govuk-table__cell--numeric">SR1 form</td>
-            <td class="govuk-table__cell govuk-table__cell--numeric">Date the patient met the Special Rules (example with unreal date)</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">Date the patient met the Special Rules
+              (example with unreal date)</td>
             <td class="govuk-table__cell govuk-table__cell--numeric"><a
                 href="/hcp-e2e-journey-mvp03/sr1-form-06-error-real-date">Open page</a>
             </td>
@@ -206,7 +635,8 @@ Prototypes home - Special Rules for End of Life
           <tr class="govuk-table__row">
             <th scope="row" class="govuk-table__header">MVP03</th>
             <td class="govuk-table__cell govuk-table__cell--numeric">SR1 form</td>
-            <td class="govuk-table__cell govuk-table__cell--numeric">Clinical features (example too many characters)</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">Clinical features (example too many
+              characters)</td>
             <td class="govuk-table__cell govuk-table__cell--numeric"><a
                 href="/hcp-e2e-journey-mvp03/sr1-form-12-error-too-many">Open page</a>
             </td>
@@ -226,7 +656,8 @@ Prototypes home - Special Rules for End of Life
           <tr class="govuk-table__row">
             <th scope="row" class="govuk-table__header">MVP03</th>
             <td class="govuk-table__cell govuk-table__cell--numeric">SR1 form</td>
-            <td class="govuk-table__cell govuk-table__cell--numeric">Treatment (example too many characters)</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">Treatment (example too many characters)
+            </td>
             <td class="govuk-table__cell govuk-table__cell--numeric"><a
                 href="/hcp-e2e-journey-mvp03/sr1-form-13-error-too-many">Open page</a>
             </td>
@@ -266,7 +697,8 @@ Prototypes home - Special Rules for End of Life
           <tr class="govuk-table__row">
             <th scope="row" class="govuk-table__header">MVP03</th>
             <td class="govuk-table__cell govuk-table__cell--numeric">SR1 form</td>
-            <td class="govuk-table__cell govuk-table__cell--numeric">HCP's professional registration number</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">HCP's professional registration number
+            </td>
             <td class="govuk-table__cell govuk-table__cell--numeric"><a
                 href="/hcp-e2e-journey-mvp03/profile-03-error">Open page</a>
             </td>
@@ -294,7 +726,7 @@ Prototypes home - Special Rules for End of Life
         </tbody>
       </table>
     </div>
-    
+
     <div class="govuk-width-container">
       <table class="govuk-table govuk-!-margin-bottom-9">
         <caption class="govuk-table__caption govuk-table__caption--m">Errors in MVP02</caption>
@@ -340,7 +772,8 @@ Prototypes home - Special Rules for End of Life
           <tr class="govuk-table__row">
             <th scope="row" class="govuk-table__header">MVP02</th>
             <td class="govuk-table__cell govuk-table__cell--numeric">SR1 form</td>
-            <td class="govuk-table__cell govuk-table__cell--numeric">Patient’s date of birth (example with unreal date)</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">Patient’s date of birth (example with unreal date)
+            </td>
             <td class="govuk-table__cell govuk-table__cell--numeric"><a
                 href="/hcp-e2e-journey-mvp02/sr1-form-02-error-real-date">Open page</a>
             </td>
@@ -400,7 +833,8 @@ Prototypes home - Special Rules for End of Life
           <tr class="govuk-table__row">
             <th scope="row" class="govuk-table__header">MVP02</th>
             <td class="govuk-table__cell govuk-table__cell--numeric">SR1 form</td>
-            <td class="govuk-table__cell govuk-table__cell--numeric">Date of the patient’s diagnosis (example with unreal date)</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">Date of the patient’s diagnosis (example with
+              unreal date)</td>
             <td class="govuk-table__cell govuk-table__cell--numeric"><a
                 href="/hcp-e2e-journey-mvp02/sr1-form-08-error-real-date">Open page</a>
             </td>
@@ -420,7 +854,8 @@ Prototypes home - Special Rules for End of Life
           <tr class="govuk-table__row">
             <th scope="row" class="govuk-table__header">MVP02</th>
             <td class="govuk-table__cell govuk-table__cell--numeric">SR1 form</td>
-            <td class="govuk-table__cell govuk-table__cell--numeric">Date the patient met the Special Rules (example with unreal date)</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">Date the patient met the Special Rules (example
+              with unreal date)</td>
             <td class="govuk-table__cell govuk-table__cell--numeric"><a
                 href="/hcp-e2e-journey-mvp02/sr1-form-06-error-real-date">Open page</a>
             </td>
@@ -460,7 +895,8 @@ Prototypes home - Special Rules for End of Life
           <tr class="govuk-table__row">
             <th scope="row" class="govuk-table__header">MVP02</th>
             <td class="govuk-table__cell govuk-table__cell--numeric">SR1 form</td>
-            <td class="govuk-table__cell govuk-table__cell--numeric">Clinical features (example too many characters)</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">Clinical features (example too many characters)
+            </td>
             <td class="govuk-table__cell govuk-table__cell--numeric"><a
                 href="/hcp-e2e-journey-mvp02/sr1-form-12-error-too-many">Open page</a>
             </td>
@@ -684,7 +1120,8 @@ Prototypes home - Special Rules for End of Life
           <tr class="govuk-table__row">
             <th scope="row" class="govuk-table__header">MVP01</th>
             <td class="govuk-table__cell govuk-table__cell--numeric">SR1 form</td>
-            <td class="govuk-table__cell govuk-table__cell--numeric">Clinical features (example too many characters)</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">Clinical features (example too many characters)
+            </td>
             <td class="govuk-table__cell govuk-table__cell--numeric"><a
                 href="/hcp-e2e-journey-mvp01/sr1-form-12-error-too-many">Open page</a>
             </td>
