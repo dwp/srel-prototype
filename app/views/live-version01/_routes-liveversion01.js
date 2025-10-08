@@ -51,8 +51,8 @@ module.exports = function (folderForViews, urlPrefix, router) {
     const journeyoptions = data['journeyoptions'];
 
     if (journeyoptions === "Journey 2" || journeyoptions === "Journey 3") {
-      // // List of fields to be emptied
-      // const fieldsToEmpty = [
+      // List of fields to be emptied
+      const fieldsToEmpty = [
       //   'PatientFirstName', 'PatientLastName',
       //   'patientdateofbirthday', 'patientdateofbirthmonth', 'patientdateofbirthyear',
       //   'the-diagnosis',
@@ -60,13 +60,14 @@ module.exports = function (folderForViews, urlPrefix, router) {
       //   'diagnosis-day', 'diagnosis-month', 'diagnosis-year',
       //   'ClinicalFeaturesdetails', 'treatmentdetails',
       //   'RelevantDiagnosis', 'RelevantDiagnosisinput',
-      //   'Diagnosisawareness', 'Prognosisawareness', 'confirmyourdetails'
-      // ];
+      //   'Diagnosisawareness', 'Prognosisawareness', 
+      'confirmyourdetails'
+      ];
 
-      // // Empty all specified fields
-      // fieldsToEmpty.forEach(field => {
-      //   data[field] = '';
-      // });
+      // Empty all specified fields
+      fieldsToEmpty.forEach(field => {
+        data[field] = '';
+      });
 
       res.redirect('/live-version01/sr1-form-sections-testing');
     } else {
