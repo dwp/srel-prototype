@@ -10,6 +10,7 @@ const router = govukPrototypeKit.requests.setupRouter()
 // Add your routes here
 
 require(`./views/private-beta03/_routes-privatebeta03`)('private-beta03', "beta", router)
+require(`./views/live-version01/_routes-liveversion01`)('live-version01', "beta", router)
 
 
 

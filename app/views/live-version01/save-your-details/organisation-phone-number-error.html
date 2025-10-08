@@ -1,0 +1,96 @@
+{% extends "layout-gov-signed-in-live-version01.html" %}
+
+{% block pageTitle %}
+Error: What is your organisation’s phone number? – Save your details – Send an SR1 medical evidence form – GOV.UK
+{% endblock %}
+
+{% block content %}
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+        <!-- ERROR STATE -->
+        <div class="govuk-error-summary" data-module="govuk-error-summary">
+            <div role="alert">
+              <h2 class="govuk-error-summary__title">
+                There is a problem
+              </h2>
+              <div class="govuk-error-summary__body">
+                <ul class="govuk-list govuk-error-summary__list">
+                  <li>
+                    <a href="#mobileNumber">Enter a telephone number, like 01632 960 001, 07700 900 982 or +44 808 157 0192</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+        <form id="profileSetupPage" name="profileDetails" action="/live-version01/save-your-details/enter-organisation-address" method="post">
+            <div class="govuk-form-group govuk-form-group--error">
+                <fieldset class="govuk-fieldset">
+                    <legend class="govuk-fieldset__legend govuk-fieldset__legend--l" for="mobileNumber">
+                    <!--<span class="govuk-caption-l">Question 4 of 5</span>-->
+                        <h1 class="govuk-fieldset__heading">
+                            What is your organisation's phone number?
+                        </h1>
+                    </legend>
+                    <label class="govuk-label" id="TelephoneNumber-hint" for="TelephoneNumber">UK Telephone number</label>
+                    <div id="mobileNumber-hint" class="govuk-hint">We will contact you if we need more information about a patient after you have sent their SR1 form.</div>
+                    <!--ERROR LEGEND -->
+                    <p id="mobilenumber-error" class="govuk-error-message">
+                        <span class="govuk-visually-hidden">Error:</span> Enter a telephone number, like 01632 960 001, 07700 900 982 or +44 808 157 0192
+                    </p>
+                    <!-- END ERROR -->
+                    <input class="govuk-input govuk-input--width-20 govuk-input--error" id="mobileNumber" name="mobileNumber" for="TelephoneNumber"
+                        type="text" autocomplete="off">
+
+
+                </fieldset>
+            </div>
+
+            <!-- Submit button -->
+            <div class="govuk-button-group">
+                <button id="" class="govuk-button" data-module="govuk-button" onclick="saveHCPMobilelNumberliveversion01(); resetChangeFn();">
+                    Continue
+                </button>
+                <a class="govuk-link" onclick="saveAndLeave()" style="color:#1d70b8;" aria-label="Return to your account" href="#">Return to your account</a>
+            </div>
+        </form>
+
+        <div class="govuk-!-padding-bottom-6"></div>
+
+        <!--Get help new-->
+        <hr class="govuk-section-break govuk-section-break--visible" aria-hidden="true">
+        <section class="govuk-width-container govuk-!-margin-top-7 govuk-!-margin-bottom-7 ">
+            <div class="govuk-grid-row">
+                <div class="govuk-grid-column-full">
+                    <h2 class="govuk-heading-m">Get help</h2>
+                    <p class="govuk-body">Email: <a class="govuk-link"
+                            href="mailto:online.sr1@dwp.gov.uk">online.sr1@dwp.gov.uk</a></p>
+                    <p class="govuk-body">We aim to respond within 3 working days.</p>
+                </div>
+                        <!--Feedback-->
+            </div>
+            <h2 class="govuk-heading-m">Feedback</h2>
+            <p class=govuk-body><a
+                    href="https://forms.office.com/Pages/ResponsePage.aspx?id=DpxP-knna0i8NIr6EGM3VupINvg8uK9KqwdHnbpPR49UNk5RTE1BQ0JXUEJFVTM5OUs4VFNQM1FINS4u">What
+                    did you think of this service?</a></p>
+    
+        </div>
+        </section>
+
+    </div>
+
+</div>
+
+<script>
+    // get and set in this order - this ensures what is sent in query is the same as what is in the localStorage
+    const saveAndLeave = () => {
+        //saveHCPMobilelNumberliveversion01();
+
+        const origin = window.location.origin;
+        const url = getUrlWithSR1DataAsQueryParamsliveversion01(origin, "/live-version01/sr1-form-sections");
+
+        window.location.replace(url.toString());
+    }
+</script>
+{% endblock %}

@@ -1,0 +1,125 @@
+{% extends "layout-gov-signed-in-live-version01.html" %}
+
+{% block pageTitle %}
+What is your role? – Send an SR1 medical evidence form – GOV.UK
+{% endblock %}
+
+{% block content %}
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+        <form id="profileSetupPage" name="profileDetails"
+            action="/live-version01/your-details/professional-registration-number" method="post">
+            <div class="govuk-form-group">
+                <fieldset class="govuk-fieldset">
+                    <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+                        <!--<span class="govuk-caption-l">Question 2 of 5</span>-->
+                        <h1 class="govuk-fieldset__heading">
+                            What is your role?
+                        </h1>
+                    </legend>
+                    <div class="govuk-form-group">
+                        <div id="role-Options" class="govuk-radios" data-module="govuk-radios">
+
+                            {% set roles = [
+                            { id: "hcp-consultant", value: "Consultant", label: "Consultant" },
+                            { id: "hcp-gp", value: "General practitioner", label: "General practitioner" },
+                            { id: "hcp-hospiceDoctor", value: "Hospice doctor", label: "Hospice doctor" },
+                            { id: "hcp-seniorSpecialistNurse", value: "Senior specialist nurse", label: "Senior
+                            specialist nurse", hint: "Such as a clinical nurse specialist or advanced nurse
+                            practitioner." },
+                            { id: "hcp-specialistDoctor", value: "Specialty doctor", label: "Specialty doctor" }
+                            ] %}
+
+                            {% for role in roles %}
+                            <div class="govuk-radios__item">
+                                <input class="govuk-radios__input" id="{{ role.id }}" name="yourRole" type="radio"
+                                    value="{{ role.value }}" {% if data.yourRole==role.value %}checked{% endif %}>
+                                <label class="govuk-label govuk-radios__label" for="{{ role.id }}">
+                                    {{ role.label }}
+                                </label>
+                                {% if role.hint %}
+                                <div id="{{ role.id }}-hint" class="govuk-hint govuk-radios__hint">
+                                    {{ role.hint }}
+                                </div>
+                                {% endif %}
+                            </div>
+                            {% endfor %}
+
+                            <div class="govuk-radios__divider">or</div>
+
+                            <div class="govuk-radios__item">
+                                <input class="govuk-radios__input" id="hcp-other" name="yourRole" type="radio"
+                                    value="Other" data-aria-controls="conditional-role" {% if data.yourRole=="Other"
+                                    %}checked{% endif %}>
+                                <label class="govuk-label govuk-radios__label" for="hcp-other">
+                                    Other
+                                </label>
+                            </div>
+
+                            <div class="govuk-radios__conditional {% if data.yourRole != 'Other' %}govuk-radios__conditional--hidden{% endif %}"
+                                id="conditional-role">
+                                <div class="govuk-form-group">
+                                    <label class="govuk-label" for="yourRolename">
+                                        Your role
+                                    </label>
+                                    <input class="govuk-input govuk-input--width-15" id="yourRolename"
+                                        name="yourRolename" type="text" value="{{ data.yourRolename | default('') }}"
+                                        autocomplete="off">
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </fieldset>
+            </div>
+
+            <!-- Submit button -->
+            <div class="govuk-button-group">
+                <button id="" class="govuk-button" data-module="govuk-button"
+                    onclick="saveRoleliveversion01(); saveyourRoleliveversion01(); resetChangeFn();">
+                    Continue
+                </button>
+                <a class="govuk-link" onclick="saveAndLeave()" style="color:#1d70b8;"
+                    aria-label="Return to SR1 form sections" href="/live-version01/usertestingoption">Return to SR1 form sections</a>
+            </div>
+        </form>
+
+        <div class="govuk-!-padding-bottom-6"></div>
+
+        <!--Get help new-->
+        <hr class="govuk-section-break govuk-section-break--visible" aria-hidden="true">
+        <section class="govuk-width-container govuk-!-margin-top-7 govuk-!-margin-bottom-7 ">
+            <div class="govuk-grid-row">
+                <div class="govuk-grid-column-full">
+                    <h2 class="govuk-heading-m">Get help</h2>
+                    <p class="govuk-body">Email: <a class="govuk-link"
+                            href="mailto:online.sr1@dwp.gov.uk">online.sr1@dwp.gov.uk</a></p>
+                    <p class="govuk-body">We aim to respond within 3 working days.</p>
+                </div>
+                <!--Feedback-->
+            </div>
+            <h2 class="govuk-heading-m">Feedback</h2>
+            <p class=govuk-body><a
+                    href="https://forms.office.com/Pages/ResponsePage.aspx?id=DpxP-knna0i8NIr6EGM3VupINvg8uK9KqwdHnbpPR49UNk5RTE1BQ0JXUEJFVTM5OUs4VFNQM1FINS4u">What
+                    did you think of this service?</a></p>
+
+    </div>
+</div>
+</section>
+
+</div>
+
+</div>
+<script>
+    // get and set in this order - this ensures what is sent in query is the same as what is in the localStorage
+    const saveAndLeave = () => {
+        //saveRoleliveversion01();
+
+        const origin = window.location.origin;
+        const url = getUrlWithSR1DataAsQueryParamsliveversion01(origin, "/live-version01/sr1-form-sections");
+
+        window.location.replace(url.toString());
+    }
+</script>
+{% endblock %}
