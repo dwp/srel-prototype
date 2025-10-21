@@ -14,7 +14,7 @@ Check your answers before sending the SR1 form – Send an SR1 medical evidence 
 
 <div class="govuk-grid-row">
     <div class="govuk-grid-column-full">
-        <form id="profileSetupPage" action="/live-version01/confirmation-page" method="post" autocomplete="off">
+        <form id="profileSetupPage" action="/live-version01/confirmation-page-testing" method="post" autocomplete="off">
             <div class="govuk-form-group">
                 <fieldset class="govuk-fieldset">
                     <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
@@ -243,24 +243,41 @@ Check your answers before sending the SR1 form – Send an SR1 medical evidence 
                     <!-- YOUR DETAILS -->
                     <!-- ############## -->
 
+<br>
 
-
-                    <h2 class="govuk-heading-m">Your details</h2>
+                  
                     <div>
                         <div class="govuk-summary-card">
                             <div class="govuk-summary-card__title-wrapper">
-                                <h2 class="govuk-summary-card__title">
-                                    Using the details saved to your account
+                                <h2 class=govuk-heading-m>
+                                   Your details
                                 </h2>
-                                <ul class="govuk-summary-card__actions">
+                             <!--   <ul class="govuk-summary-card__actions">
                                     <li class="govuk-summary-card__action">
                                         <a class="govuk-link" href="your-details/confirm-your-details">Change<span
                                                 class="govuk-visually-hidden"></span></a>
                                     </li>
-                                </ul>
+                                </ul>-->
                             </div>
                             <div class="govuk-summary-card__content">
                                 <dl class="govuk-summary-list">
+
+
+   <div class="govuk-summary-list__row">
+                            <dt class="govuk-summary-list__key">
+                               Use the details saved to your account
+                            </dt>
+                            <dd class="govuk-summary-list__value">
+                                <div>{{data['confirmyourdetails']}}</div>
+                            </dd>
+                                <dd class="govuk-summary-list__actions">
+                                <a class="govuk-link" href="your-details/confirm-your-details">
+                                    Change <span class="govuk-visually-hidden"> save youe details </span>
+                                </a>
+                            </dd>
+                        </div>
+
+
                                     <div class="govuk-summary-list__row">
                                         <dt class="govuk-summary-list__key">
                                             Name
@@ -268,6 +285,10 @@ Check your answers before sending the SR1 form – Send an SR1 medical evidence 
                                         <dd class="govuk-summary-list__value">
                                             {{data['HCPfirstname']}} {{data['HCPlastname']}}
                                         </dd>
+                                              <dd class="govuk-summary-list__actions">
+                             
+                               
+                            </dd>
                                     </div>
                                     <div class="govuk-summary-list__row">
                                         <dt class="govuk-summary-list__key">
@@ -277,6 +298,7 @@ Check your answers before sending the SR1 form – Send an SR1 medical evidence 
                                             {{ data.yourRole }}
                                             {{ data.yourRolename }}
                                         </dd>
+                                         <dd class="govuk-summary-list__actions"></dd>
                                     </div>
                                     <div class="govuk-summary-list__row">
                                         <dt class="govuk-summary-list__key">
@@ -285,6 +307,7 @@ Check your answers before sending the SR1 form – Send an SR1 medical evidence 
                                         <dd class="govuk-summary-list__value">
                                             {{data['HCPRegistrationNumber']}} {{data['HCPRegistrationnumbersaved']}}
                                         </dd>
+                                        <dd class="govuk-summary-list__actions"></dd>
                                     </div>
                                     <div class="govuk-summary-list__row">
                                         <dt class="govuk-summary-list__key">
@@ -293,6 +316,7 @@ Check your answers before sending the SR1 form – Send an SR1 medical evidence 
                                         <dd class="govuk-summary-list__value">
                                             {{data['HCPmobileNumber']}}
                                         </dd>
+                                        <dd class="govuk-summary-list__actions"></dd>
                                     </div>
                                     <div class="govuk-summary-list__row">
                                         <dt class="govuk-summary-list__key">
@@ -304,6 +328,7 @@ Check your answers before sending the SR1 form – Send an SR1 medical evidence 
                                             <div>Ashford</div>
                                             <div>TW1 3AA</div>
                                         </dd>
+                                        <dd class="govuk-summary-list__actions"></dd>
                                     </div>
                                 </dl>
                             </div>
@@ -311,7 +336,8 @@ Check your answers before sending the SR1 form – Send an SR1 medical evidence 
                         </div>
                     </div>
 
-
+<br>
+<br>
                     <!-- ############## -->
                     <!-- DECLARATION -->
                     <!-- ############## -->
@@ -356,6 +382,16 @@ Check your answers before sending the SR1 form – Send an SR1 medical evidence 
             <p class=govuk-body><a
                     href="https://forms.office.com/Pages/ResponsePage.aspx?id=DpxP-knna0i8NIr6EGM3VupINvg8uK9KqwdHnbpPR49UNk5RTE1BQ0JXUEJFVTM5OUs4VFNQM1FINS4u">What
                     did you think of this service?</a></p>
+
+
+
+<br>
+<br>
+<br>
+
+<p class="govuk-body">
+  Other option A <a href="/live-version01/check-your-answers" class="govuk-link">click here</a>.
+</p>
 
     </div>
 </div>
