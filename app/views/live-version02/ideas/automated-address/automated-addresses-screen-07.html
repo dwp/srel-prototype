@@ -1,0 +1,82 @@
+{% extends "layout-gov-signed-in-live-version01.html" %}
+
+{% block pageTitle %}
+What is your organisation’s address? – Send an SR1 medical evidence form – GOV.UK
+{% endblock %}
+
+{% block content %}
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+        <form id="profileSetupPage" name="profileDetails" action="/live-version01/automated-address/automated-addresses-screen-07b"method="post">
+           
+            <div class="govuk-form-group">
+                <fieldset class="govuk-fieldset">
+                    <legend class="govuk-fieldset__legend govuk-fieldset__legend--l" for="postcode">
+                        <!--<span class="govuk-caption-l">Section 6 of 6</span>-->
+                        <h1 class="govuk-fieldset__heading">
+                            What is your organisation address?
+                        </h1>
+                        
+                        <div id="contact-hint" class="govuk-hint">
+                            These are the organisation addresses linked to your account. Select all that apply 
+                          </div>
+
+
+                          <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+                            <div class="govuk-checkboxes__item">
+                              <input class="govuk-checkboxes__input" id="address-1" name="address-1" type="checkbox" value="{{data['address-1']}}">
+                              <label class="govuk-label govuk-checkboxes__label" for="countries">
+                                Ashford Health Clinic, London Road, Ashford TW1 3AA
+                              </label>
+                            </div>
+                            <div class="govuk-checkboxes__item">
+                              <input class="govuk-checkboxes__input" id="address-2" name="address-2" type="checkbox" value="{{data['address-2']}}">
+                              <label class="govuk-label govuk-checkboxes__label" for="countries-2">
+                                The Ashford Ram, London Road, Ashford TW1 3AA
+                              </label>
+                            </div>
+                            <div class="govuk-checkboxes__item">
+                                <input class="govuk-checkboxes__input" id="address-other" name="address-other" type="checkbox" value="{{data['address-other']}}">
+                                <label class="govuk-label govuk-checkboxes__label" for="countries-2">
+                                  Other
+                                </label>
+                              </div>
+                          </div>
+                </fieldset>
+            </div>
+
+            <!-- Submit button -->
+            <div class="govuk-button-group">
+                <button id="" class="govuk-button" data-module="govuk-button"
+                    onclick="saveOrgAddressliveversion01(); resetChangeFn();">
+                    Continue
+                </button>
+                
+            </div>
+
+        </form>
+        <div class="govuk-!-padding-bottom-6"></div>
+
+        <!--Get help new-->
+        <hr class="govuk-section-break govuk-section-break--visible" aria-hidden="true">
+        <section class="govuk-width-container govuk-!-margin-top-7 govuk-!-margin-bottom-7 ">
+            <div class="govuk-grid-row">
+                <div class="govuk-grid-column-full">
+                    <h2 class="govuk-heading-m">Get help</h2>
+                    <p class="govuk-body">Email: <a class="govuk-link"
+                            href="mailto:online.sr1@dwp.gov.uk">online.sr1@dwp.gov.uk</a></p>
+                    <p class="govuk-body">We aim to respond within 3 working days.</p>
+                </div>
+                        <!--Feedback-->
+            </div>
+            <h2 class="govuk-heading-m">Feedback</h2>
+            <p class=govuk-body><a
+                    href="https://forms.office.com/Pages/ResponsePage.aspx?id=DpxP-knna0i8NIr6EGM3VupINvg8uK9KqwdHnbpPR49UNk5RTE1BQ0JXUEJFVTM5OUs4VFNQM1FINS4u">What
+                    did you think of this service?</a></p>
+    
+        </div>
+        </section>
+
+    </div>
+</div>
+{% endblock %}

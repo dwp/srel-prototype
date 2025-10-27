@@ -1,0 +1,239 @@
+{% extends "layout-gov-signed-in-live-version01.html" %}
+
+{% block pageTitle %}
+Incomplete SR1 forms – Send an SR1 medical evidence form – GOV.UK
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <h1 class="govuk-heading-xl">Incomplete SR1 forms</h1>
+
+    <div class="govuk-warning-text">
+      <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+      <strong class="govuk-warning-text__text">
+        <span class="govuk-warning-text__assistive">Warning</span>
+        Incomplete SR1 forms will be deleted after 30 days. If the form is deleted, you will have to start it again.
+        <!-- An incomplete SR1 form can delay your patient's Special Rules claim. Complete them now. -->
+      </strong>
+    </div>
+
+    <div>
+      <div class="govuk-form-group">
+        <label class="govuk-label" for="event-name">
+          <strong>Search by patient name
+            <!-- or reference number -->
+          </strong>
+        </label>
+        <input class="govuk-input govuk-input--width-10" id="searchField" name="searchField" type="text">
+        &nbsp;&nbsp;
+        <button class="govuk-button govuk-button--secondary" data-module="govuk-button">
+          Search
+        </button>
+        &nbsp;&nbsp;
+        <a class="govuk-link" href="#" onclick="clearSearchTerms()">Clear search</a>
+      </div>
+
+    </div>
+
+    <table class="govuk-table">
+      <caption class="govuk-table__caption govuk-table__caption--m">Patients</caption>
+      <tbody class="govuk-table__body">
+        <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header">
+            <a class="govuk-link govuk-task-list__link govuk-heading-m" href="#"
+              aria-describedby="company-details-2-status">
+              Rachael Summers
+            </a>
+            <p id="dob-hint" class="govuk-hint">
+              Date of birth: 31 3 1980
+            </p>
+          </th>
+          <td class="govuk-table__cell govuk-!-text-align-right">
+            <div>
+              <p id="dob-hint" class="govuk-hint">
+                Days left to submit
+              </div><strong class="govuk-tag govuk-tag--red">3 Days</strong>
+            </div>
+          </td>
+        </tr>
+        <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header">
+            <div class="govuk-task-list__name-and-hint">
+              <a class="govuk-link govuk-task-list__link govuk-heading-m" href="#"
+                aria-describedby="company-details-2-status">
+                Rachael Summers
+              </a>
+              <div id="dob-hint" class="govuk-hint">
+                Date of birth: 31 3 1980
+              </div>
+            </div>
+          </th>
+          <td class="govuk-table__cell govuk-!-text-align-right">
+            <div id="dob-hint" class="govuk-hint">
+              Days left to submit
+            </div><strong class="govuk-tag govuk-tag--red">3
+              Days</strong>
+          </td>
+        </tr>
+        <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header">
+            <div class="govuk-task-list__name-and-hint">
+              <a class="govuk-link govuk-task-list__link govuk-heading-m" href="#"
+                aria-describedby="company-details-2-status">
+                Rachael Summers
+              </a>
+              <div id="dob-hint" class="govuk-hint">
+                Date of birth: 31 3 1980
+              </div>
+            </div>
+          </th>
+          <td class="govuk-table__cell govuk-!-text-align-right">
+            <div id="dob-hint" class="govuk-hint">
+              Days left to submit
+            </div><strong class="govuk-tag govuk-tag--red">3
+              Days</strong>
+          </td>
+        </tr>
+        <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header">
+            <div class="govuk-task-list__name-and-hint">
+              <a class="govuk-link govuk-task-list__link govuk-heading-m" href="#"
+                aria-describedby="company-details-2-status">
+                Rachael Summers
+              </a>
+              <div id="dob-hint" class="govuk-hint">
+                Date of birth: 31 3 1980
+              </div>
+            </div>
+          </th>
+          <td class="govuk-table__cell govuk-!-text-align-right">
+            <div id="dob-hint" class="govuk-hint">
+              Days left to submit
+            </div><strong class="govuk-tag govuk-tag--red">3
+              Days</strong>
+          </td>
+        </tr>
+        <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header">
+            <div class="govuk-task-list__name-and-hint">
+              <a class="govuk-link govuk-task-list__link govuk-heading-m" href="#"
+                aria-describedby="company-details-2-status">
+                Rachael Summers
+              </a>
+              <div id="dob-hint" class="govuk-hint">
+                Date of birth: 31 3 1980
+              </div>
+            </div>
+          </th>
+          <td class="govuk-table__cell govuk-!-text-align-right">
+            <div id="dob-hint" class="govuk-hint">
+              Days left to submit
+            </div><strong class="govuk-tag govuk-tag--red">3
+              Days</strong>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <table class="govuk-table">
+      <thead class="govuk-table__head">
+        <tr class="govuk-table__row">
+          <th class="govuk-table__header" scope="col"> Application </th>
+          <th class="govuk-table__header" scope="col"> Status </th>
+        </tr>
+      </thead>
+      <tbody class="govuk-table__body">
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell">
+            <p class="govuk-body">
+              <a href="#" class="govuk-link govuk-link--no-visited-state">Joshua Wessel</a>
+            </p>
+            Joshua Wessel
+          </td>
+          <td class="govuk-table__cell govuk-!-text-align-right">
+            <strong class="govuk-tag govuk-tag--red">
+              Urgent
+            </strong>
+          </td>
+        </tr>
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell">
+            Rachel Silver
+          </td>
+          <td class="govuk-table__cell">
+            <strong class="govuk-tag govuk-tag--blue">
+              New
+            </strong>
+          </td>
+        </tr>
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell">
+            Laura Frith
+          </td>
+          <td class="govuk-table__cell">
+            <strong class="govuk-tag govuk-tag--blue">
+              New
+            </strong>
+          </td>
+        </tr>
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell">
+            Paul French
+          </td>
+          <td class="govuk-table__cell">
+            <strong class="govuk-tag govuk-tag--blue">
+              New
+            </strong>
+          </td>
+        </tr>
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell">
+            Jesse Smith
+          </td>
+          <td class="govuk-table__cell">
+            <strong class="govuk-tag govuk-tag--blue">
+              New
+            </strong>
+          </td>
+        </tr>
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell">
+            Rachael Pepper
+          </td>
+          <td class="govuk-table__cell">
+            <strong class="govuk-tag govuk-tag--green">
+              Finished
+            </strong>
+          </td>
+        </tr>
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell">
+            Emma Tennant
+          </td>
+          <td class="govuk-table__cell">
+            <strong class="govuk-tag govuk-tag--yellow">
+              Waiting on
+            </strong>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="govuk-!-padding-bottom-6"></div>
+
+    <!--Get help new-->
+    <section class="govuk-width-container govuk-!-margin-top-7 govuk-!-margin-bottom-7 ">
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-full">
+          <h2 class="govuk-heading-m">Get help</h2>
+          <p class="govuk-body">Email: <a class="govuk-link"
+              href="mailto:online.sr1@dwp.gov.uk">online.sr1@dwp.gov.uk</a></p>
+          <p class="govuk-body">We aim to respond within 3 working days.</p>
+        </div>
+      </div>
+    </section>
+  </div>
+</div>
+
+{% endblock %}

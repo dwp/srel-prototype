@@ -1,0 +1,94 @@
+{% extends "layout-gov-signed-in-live-version01.html" %}
+
+{% block pageTitle %}
+Find your organisation’s address – Send an SR1 medical evidence form – GOV.UK
+{% endblock %}
+
+{% block content %}
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+        <form id="profileSetupPage" name="profileDetails" action="/live-version01/ideas/multiple-addresses/multiple-addresses-screen-11" method="post">
+            <div class="govuk-form-group">
+                <fieldset class="govuk-fieldset">
+                    <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+                        <!--<span class="govuk-caption-l"> Question 3 of 4</span>-->
+                        <h1 class="govuk-fieldset__heading">
+                            Find your organisation’s address
+                        </h1>
+                    </legend>
+
+                    <!-- Organisation postcode -->
+                    <div class="govuk-form-group">
+                        <label class="govuk-label" for="organisationPostcode">Postcode</label>
+                        <div id="enter-a-postcode" class="gem-c-hint govuk-hint govuk-!-margin-bottom-3">
+                            For example, SW1A 2AA.
+                        </div>
+                        <input aria-describedby="Enter a postcode" autocomplete="organisationPostcode"
+                            class="govuk-input govuk-input--width-10" id="organisationPostcode" name="organisationPostcode"
+                            type="text" spellcheck="false">
+                    </div>
+                    <!-- Building number -->
+                    <div class="govuk-form-group">
+                        <label class="govuk-label" for="OrgbuildingNumber">Organisation name (optional)</label>
+                        <div id="enter-building-number" class="gem-c-hint govuk-hint govuk-!-margin-bottom-3">
+                            This could be your Trust, Clinical Commissioning Group (CCG), or surgery. 
+                        </div>
+                        <input aria-describedby="Enter a postcode" autocomplete="organisationBuilding"
+                            class="govuk-input govuk-input--width-10" id="organisationBuilding" name="organisationBuilding"
+                            type="text" spellcheck="false">
+                    </div>
+                </fieldset>
+            </div>
+
+            <!-- Submit button -->
+            <div class="govuk-button-group">
+                <button id="" class="govuk-button" data-module="govuk-button"
+                    onclick="saveOrgNameliveversion01(); resetChangeFn();">
+                    Find address
+                </button>
+             
+            </div>
+            <div class="govuk-form-group">
+                <label class="govuk-label" for="cannot-find-address"><a id="postcode-finder-link" class="govuk-link"
+                        rel="external" href="/live-version01/your-details/enter-organisation-address-adding-details">Enter your organisation's address
+                        manually</a></label>
+            </div>
+        </form>
+
+        <div class="govuk-!-padding-bottom-6"></div>
+
+        <!--Get help new-->
+        <hr class="govuk-section-break govuk-section-break--visible" aria-hidden="true">
+        <section class="govuk-width-container govuk-!-margin-top-7 govuk-!-margin-bottom-7 ">
+            <div class="govuk-grid-row">
+                <div class="govuk-grid-column-full">
+                    <h2 class="govuk-heading-m">Get help</h2>
+                    <p class="govuk-body">Email: <a class="govuk-link"
+                            href="mailto:online.sr1@dwp.gov.uk">online.sr1@dwp.gov.uk</a></p>
+                    <p class="govuk-body">We aim to respond within 3 working days.</p>
+                </div>
+                        <!--Feedback-->
+            </div>
+            <h2 class="govuk-heading-m">Feedback</h2>
+            <p class=govuk-body><a
+                    href="https://forms.office.com/Pages/ResponsePage.aspx?id=DpxP-knna0i8NIr6EGM3VupINvg8uK9KqwdHnbpPR49UNk5RTE1BQ0JXUEJFVTM5OUs4VFNQM1FINS4u">What
+                    did you think of this service?</a></p>
+    
+        </div>
+        </section>
+
+    </div>
+
+</div>
+
+<script>
+    // get and set in this order - this ensures what is sent in query is the same as what is in the localStorage
+    const saveAndLeave = () => {
+
+        const origin = window.location.origin;
+        const url = getUrlWithSR1DataAsQueryParamsliveversion01(origin, "/live-version01/sr1-form-sections");
+
+        window.location.replace(url.toString());
+    }
+</script>
+{% endblock %}
