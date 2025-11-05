@@ -30,10 +30,10 @@ What was the date of the patient’s diagnosis? – Send an SR1 medical evidence
                                 <label class="govuk-label govuk-date-input__label" for="diagnosis-day">
                                     Day
                                 </label>
-                                <input autocomplete="off"
+                                <input autocomplete="off" value="13"
                                     class="govuk-input govuk-date-input__input govuk-input--width-2" id="diagnosis-day"
                                     name="diagnosis-day" value="{{data['diagnosis-day']}}" type="text" inputmode="numeric"
-                                    onkeypress="return isNumberKey(event)" maxlength="2">
+                                    onkeypress="return isNumberKey(event)" maxlength="2" >
                             </div>
                         </div>
                         <div class="govuk-date-input__item">
@@ -41,7 +41,7 @@ What was the date of the patient’s diagnosis? – Send an SR1 medical evidence
                                 <label class="govuk-label govuk-date-input__label" for="diagnosis-month">
                                     Month
                                 </label>
-                                <input autocomplete="off"
+                                <input autocomplete="off" value="02"
                                     class="govuk-input govuk-date-input__input govuk-input--width-2" id="diagnosis-month"
                                     name="diagnosis-month" value="{{data['diagnosis-month']}}" type="text" inputmode="numeric"
                                     onkeypress="return isNumberKey(event)" maxlength="2">
@@ -52,7 +52,7 @@ What was the date of the patient’s diagnosis? – Send an SR1 medical evidence
                                 <label class="govuk-label govuk-date-input__label" for="diagnosis-year">
                                     Year
                                 </label>
-                                <input autocomplete="off"
+                                <input autocomplete="off" value="2025"
                                     class="govuk-input govuk-date-input__input govuk-input--width-4" id="diagnosis-year"
                                     name="diagnosis-year" value="{{data['diagnosis-year']}}"  type="text" inputmode="numeric"
                                     onkeypress="return isNumberKey(event)" maxlength="4">
