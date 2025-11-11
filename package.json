@@ -10,10 +10,10 @@
     "@govuk-prototype-kit/step-by-step": "2.2.3",
     "@govuk-prototype-kit/task-list": "2.0.0",
     "@ministryofjustice/frontend": "6.0.0",
-    "axios": "1.12.2",
+    "axios": "1.13.2",
     "govuk-frontend": "5.13.0",
     "govuk-prototype-kit": "13.18.1",
-    "hmrc-frontend": "6.97.0",
+    "hmrc-frontend": "6.100.0",
     "html2pdf.js": "0.12.1",
     "jquery": "3.7.1",
     "notifications-node-client": "8.2.1"
