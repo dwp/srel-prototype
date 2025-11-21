@@ -1,0 +1,482 @@
+{% extends "layout-gov-signed-in-live-version01.html" %}
+
+{% block pageTitle %}
+Check your answers before sending the SR1 form – Send an SR1 medical evidence form – GOV.UK
+{% endblock %}
+
+
+<!-- I am setting the link text for Your details sections, depending on whethere they have saved their details -->
+{% set editlink %}
+{{ "" if data['confirmyourdetails']=='Yes' else "Change" }}
+{% endset %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+        <form id="profileSetupPage" action="/live-version03/confirmation-page" method="post" autocomplete="off">
+            <div class="govuk-form-group">
+                <fieldset class="govuk-fieldset">
+                    <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+                        <h1 class="govuk-heading-l">
+                            Check your answers before sending the SR1 form
+                        </h1>
+                    </legend>
+
+                    <!--<p class="govuk-body govuk-!-margin-bottom-7">Accurate information will reduce delays to the patient's benefit claim.</p>-->
+
+                    <!-- ################# -->
+                    <!-- PATIENT'S DETAILS -->
+                    <!-- ################# -->
+                    <h2 class="govuk-heading-m">Patient details</h2>
+
+                    <dl class="govuk-summary-list govuk-!-margin-bottom-9" id="patientDetailsContainer">
+                        <div class="govuk-summary-list__row">
+                            <dt class="govuk-summary-list__key">
+                                Name
+                            </dt>
+                            <dd class="govuk-summary-list__value">
+                                <div> {{data['PatientFirstName']}} {{data['PatientLastName']}} </div>
+                            </dd>
+                            <dd class="govuk-summary-list__actions">
+                                <a class="govuk-link" href="/live-version01/patient-details/name">
+                                    Change<span class="govuk-visually-hidden"> the patient's name</span>
+                                </a>
+                            </dd>
+                        </div>
+                        <div class="govuk-summary-list__row">
+                            <dt class="govuk-summary-list__key">
+                                Date of birth
+                            </dt>
+                            <dd class="govuk-summary-list__value">
+                                <div>
+                                    {{data['patientdateofbirthday']}}/{{data['patientdateofbirthmonth']}}/{{data['patientdateofbirthyear']}}
+                                </div>
+                            </dd>
+                            <dd class="govuk-summary-list__actions">
+                                <a class="govuk-link" href="/live-version01/patient-details/date-of-birth">
+                                    Change<span class="govuk-visually-hidden"> the patient's date of birth</span>
+                                </a>
+                            </dd>
+
+                        </div>
+                        <div class="govuk-summary-list__row">
+                            <dt class="govuk-summary-list__key">
+                                Address
+                            </dt>
+                            <dd class="govuk-summary-list__value">
+                                <div>17 Richmond Road</div>
+                                <div>Staines-upon-Thames</div>
+                                <div>SU1 5AS</div>
+                            </dd>
+                            <dd class="govuk-summary-list__actions">
+                                <a class="govuk-link" href="/live-version01//patient-details/find-patient-address">
+                                    Change<span class="govuk-visually-hidden"> the patient's address</span>
+                                </a>
+                            </dd>
+                        </div>
+                        <!--<div class="govuk-summary-list__row">
+                            <dt class="govuk-summary-list__key">
+                                National Insurance number
+                            </dt>
+                            <dd class="govuk-summary-list__value">
+                                <div id="niNo"></div>
+                            </dd>
+                            <dd class="govuk-summary-list__actions">
+                                <a class="govuk-link" href="/live-version01/sr1-form-05-radio">
+                                    Change<span class="govuk-visually-hidden"> the patient's National Insurance
+                                        number</span>
+                                </a>
+                            </dd>
+                        </div>-->
+                    </dl>
+
+
+                    <!-- ############## -->
+                    <!-- DIAGNOSIS -->
+                    <!-- ############## -->
+                    <h2 class="govuk-heading-m">Diagnosis</h2>
+
+                    <dl class="govuk-summary-list govuk-!-margin-bottom-9" id="diagnosisDataContainer">
+                        <div class="govuk-summary-list__row">
+                            <dt class="govuk-summary-list__key">
+                                Diagnosis
+                            </dt>
+                            <dd class="govuk-summary-list__value">
+                                <div>{{data['the-diagnosis']}}</div>
+                            </dd>
+                            <dd class="govuk-summary-list__actions">
+                                <a class="govuk-link" href="/live-version01/diagnosis/details">
+                                    Change<span class="govuk-visually-hidden"></span>
+                                </a>
+                            </dd>
+                        </div>
+                        <div class="govuk-summary-list__row">
+                            <dt class="govuk-summary-list__key">
+                                Date of diagnosis
+                            </dt>
+                            <dd class="govuk-summary-list__value">
+                                <div> {{data['diagnosis-day']}}/{{data['diagnosis-month']}}/{{data['diagnosis-year']}}
+                                </div>
+                            </dd>
+                            <dd class="govuk-summary-list__actions">
+                                <a class="govuk-link" href="/live-version01/diagnosis/date">
+                                    Change<span class="govuk-visually-hidden"> the date of diagnosis</span>
+                                </a>
+                            </dd>
+                        </div>
+                        <div class="govuk-summary-list__row">
+                            <dt class="govuk-summary-list__key">
+                                Special Rules date
+                            </dt>
+                            <dd class="govuk-summary-list__value">
+                                <div>
+                                    {{data['SpecialRulesDateday']}}/{{data['SpecialRulesDatemonth']}}/{{data['SpecialRulesDateyear']}}
+                                </div>
+                            </dd>
+                            <dd class="govuk-summary-list__actions">
+                                <a class="govuk-link" href="/live-version01/diagnosis/special-rules-date">
+                                    Change<span class="govuk-visually-hidden">Special Rules date</span>
+                                </a>
+                            </dd>
+                        </div>
+
+
+
+
+
+
+                        <div class="govuk-summary-list__row">
+                            <dt class="govuk-summary-list__key">
+                                Other relevant diagnosis
+                            </dt>
+                            <dd class="govuk-summary-list__value">
+                                <div>{{data['RelevantDiagnosisinput']}} </div>
+                            </dd>
+                            <dd class="govuk-summary-list__actions">
+                                <a class="govuk-link" href="/live-version01//diagnosis/have-other-diagnosis">
+                                    Change<span class="govuk-visually-hidden">other relevant diagnosis</span>
+                                </a>
+                            </dd>
+                        </div>
+                        <div class="govuk-summary-list__row">
+                            <dt class="govuk-summary-list__key">
+                                Patient aware of diagnosis
+                            </dt>
+                            <dd class="govuk-summary-list__value">
+                                <div>{{data['Diagnosisawareness']}} </div>
+                            </dd>
+                            <dd class="govuk-summary-list__actions">
+                                <a class="govuk-link" href="/live-version01/diagnosis/aware-of-diagnosis">
+                                    Change<span class="govuk-visually-hidden"> if the patient is aware of their
+                                        diagnosis</span>
+                                </a>
+                            </dd>
+                        </div>
+                        <div class="govuk-summary-list__row">
+                            <dt class="govuk-summary-list__key">
+                                Patient aware of prognosis
+                            </dt>
+                            <dd class="govuk-summary-list__value">
+                                <div>{{data['Prognosisawareness']}} </div>
+                            </dd>
+                            <dd class="govuk-summary-list__actions">
+                                <a class="govuk-link" href="/live-version01/diagnosis/aware-of-prognosis">
+                                    Change<span class="govuk-visually-hidden"> if the patient is aware of their
+                                        prognosis</span>
+                                </a>
+                            </dd>
+                        </div>
+                    </dl>
+
+
+                    <!-- ################# -->
+                    <!-- CLINICAL FEATURES -->
+                    <!-- ################# -->
+                    <h2 class="govuk-heading-m">Clinical features, treatment, and care</h2>
+                    <!--<h2 class="govuk-heading-m">Clinical features</h2>-->
+
+                    <dl class="govuk-summary-list govuk-!-margin-bottom-9" id="clicnicalFeaturesContainer">
+                        <div class="govuk-summary-list__row">
+                            <dt class="govuk-summary-list__key">
+                                Clinical features
+                            </dt>
+                            <dd class="govuk-summary-list__value">
+                                <div>{{data['ClinicalFeaturesdetails']}}</div>
+                            </dd>
+                            <dd class="govuk-summary-list__actions">
+                                <a class="govuk-link"
+                                    href="/live-version01/clinical-features-treatment/clinical-features">
+                                    Change<span class="govuk-visually-hidden"> clinical features</span>
+                                </a>
+                            </dd>
+                        </div>
+
+
+                        <!--
+                    </dl>-->
+
+
+                        <!-- ################# -->
+                        <!-- TREATMENT -->
+                        <!-- ################# 
+                    <h2 class="govuk-heading-m">Treatment</h2>
+
+                    <dl class="govuk-summary-list govuk-!-margin-bottom-9" id="treatmentContainer">-->
+                        <div class="govuk-summary-list__row">
+                            <dt class="govuk-summary-list__key">
+                                Treatment and care
+                            </dt>
+                            <dd class="govuk-summary-list__value">
+                                <div>{{data['treatmentdetails']}}</div>
+                            </dd>
+                            <dd class="govuk-summary-list__actions">
+                                <a class="govuk-link"
+                                    href="/live-version01/clinical-features-treatment/clinical-features">
+                                    Change<span class="govuk-visually-hidden"> treatment and response</span>
+                                </a>
+                            </dd>
+                        </div>
+                    </dl>
+
+                    <!-- ############## -->
+                    <!-- YOUR DETAILS -->
+                    <!-- ############## -->
+
+                    
+
+                    <h2 class="govuk-heading-m">Your details</h2>
+                    
+
+
+<div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
+      <div class="govuk-checkboxes__item" style="width:500px">
+        <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="hmrc">
+        <label class="govuk-label govuk-checkboxes__label" for="organisation">
+          Save your details to your account
+        </label>
+      </div>
+      </div>
+
+<br>
+                    <dl class="govuk-summary-list govuk-!-margin-bottom-9" id="yourDetailsData">
+
+                                                {% if (
+                        (data['confirmyourdetails'] == 'Yes')
+                        )%}
+
+                        <div class="govuk-summary-list__row">
+                            <dt class="govuk-summary-list__key">
+                               Use the details saved to your account
+                            </dt>
+                            <dd class="govuk-summary-list__value">
+                                <div>{{data['confirmyourdetails']}}</div>
+                            </dd>
+                            <dd class="govuk-summary-list__actions">
+                                <a class="govuk-link" href="your-details/confirm-your-details">
+                                    Change <span class="govuk-visually-hidden"> save youe details </span>
+                                </a>
+                            </dd>
+                        </div>
+
+                        {% else %}
+
+                        {% endif %}
+                        <div class="govuk-summary-list__row">
+                            <dt class="govuk-summary-list__key">
+                                Name
+                            </dt>
+                            <dd class="govuk-summary-list__value">
+                                <div>{{data['HCPfirstname']}} {{data['HCPlastname']}}</div>
+                            </dd>
+                            <dd class="govuk-summary-list__actions">
+                                <a class="govuk-link" href="/live-version01/your-details/confirm-your-name">
+                                    {{editlink}} <span class="govuk-visually-hidden"> your name</span>
+                                </a>
+                            </dd>
+                        </div>
+                        <div class="govuk-summary-list__row">
+                            <dt class="govuk-summary-list__key">
+                                Role
+                            </dt>
+                            <dd class="govuk-summary-list__value">
+                                {{ data.yourRole }}
+                                {{ data.yourRolename }}
+                            </dd>
+                            <dd class="govuk-summary-list__actions">
+                                <a class="govuk-link" href="/live-version01/your-details/role">
+                                    {{editlink}} <span class="govuk-visually-hidden"> your role</span>
+                                </a>
+                            </dd>
+                        </div>
+
+                        <div class="govuk-summary-list__row">
+                            <dt class="govuk-summary-list__key">
+                                Professional registration number
+                            </dt>
+                            <dd class="govuk-summary-list__value">
+                                <div>{{data['HCPRegistrationNumber']}} {{data['HCPRegistrationnumbersaved']}} </div>
+                            </dd>
+                            <dd class="govuk-summary-list__actions">
+                                <a class="govuk-link"
+                                    href="/live-version01/your-details/professional-registration-number">
+                                    {{editlink}} <span class="govuk-visually-hidden"> your professional registration
+                                        number</span>
+                                </a>
+                            </dd>
+                        </div>
+                        <div class="govuk-summary-list__row">
+                            <dt class="govuk-summary-list__key">
+                                Phone number
+                            </dt>
+                            <dd class="govuk-summary-list__value">
+                                <div>{{data['HCPmobileNumber']}}</div>
+                            </dd>
+                            <dd class="govuk-summary-list__actions">
+                                <a class="govuk-link" href="/live-version01/your-details/organisation-phone-number">
+                                    {{editlink}} <span class="govuk-visually-hidden"> your phone number</span>
+                                </a>
+                            </dd>
+                        </div>
+
+                        <div class="govuk-summary-list__row">
+                            <dt class="govuk-summary-list__key">
+                                Organisation’s address
+                            </dt>
+                            <dd class="govuk-summary-list__value">
+                                <div>Ashford Health Clinic</div>
+                                <div>London Road</div>
+                                <div>Ashford</div>
+                                <div>TW1 3AA</div>
+                            </dd>
+                            <dd class="govuk-summary-list__actions">
+                                <a class="govuk-link" href="/live-version01/your-details/find-organisation-address">
+                                    {{editlink}} <span class="govuk-visually-hidden"> your organisation's address</span>
+                                </a>
+                            </dd>
+                        </div>
+
+                    <!-- Not using saved details -->
+
+                        {% if (
+                        (data['confirmyourdetails'] == 'No')
+                        )%}
+
+                        <div class="govuk-summary-list__row">
+                            <dt class="govuk-summary-list__key">
+                                Save your new details to your account
+                            </dt>
+                            <dd class="govuk-summary-list__value">
+                                <div>{{data['saveyournewdetails']}}</div>
+                            </dd>
+                            <dd class="govuk-summary-list__actions">
+                                <a class="govuk-link" href="live-version01/your-details/save-your-new-details">
+                                    {{editlink}} <span class="govuk-visually-hidden"> save youe details </span>
+                                </a>
+                            </dd>
+                        </div>
+
+                        {% elseif (
+                        (data['confirmyourdetails'] == 'yes')
+                        )%}
+
+                        {% else %}
+
+                        {% endif %}
+
+                         {% if (
+                        (data['journeyoptions'] == 'Journey 1')
+                        )%}
+
+                        <div class="govuk-summary-list__row">
+                            <dt class="govuk-summary-list__key">
+                                Save your details to your account
+                            </dt>
+                            <dd class="govuk-summary-list__value">
+                                <div>{{data['saveyourdetails']}}</div>
+                            </dd>
+                            <dd class="govuk-summary-list__actions">
+                                <a class="govuk-link" href="your-details/save-your-details">
+                                    {{editlink}} <span class="govuk-visually-hidden"> save youe details </span>
+                                </a>
+                            </dd>
+                        </div>
+
+                        {% elseif (
+                        (data['confirmyourdetails'] == 'Yes')
+                        )%}
+
+                        {% else %}
+
+                        {% endif %}
+                    </dl>
+
+
+
+
+                    <!-- ############## -->
+                    <!-- DECLARATION -->
+                    <!-- ############## -->
+                    <h2 class="govuk-heading-m">Declaration</h2>
+
+                    <p class="govuk-body">By sending this SR1 form, you confirm that:</p>
+
+                    <ul class="govuk-list govuk-list--bullet">
+                        <li>you have read the guidance on completing the form</li>
+                        <li>the person named in the form is your patient</li>
+                        <li>this is a full report of their condition and treatment</li>
+                        <li>you are satisfied that completing an SR1 form is correct for them</li>
+                    </ul>
+
+                </fieldset>
+            </div>
+
+            <!-- Submit button -->
+            <div class="govuk-button-group">
+                <button id="" class="govuk-button" data-module="govuk-button" onclick=storePage()>
+                    I agree &ndash; send the form
+                </button>
+            </div>
+
+        </form>
+
+        <div class="govuk-!-padding-bottom-6"></div>
+
+        <!--Get help new-->
+        <hr class="govuk-section-break govuk-section-break--visible" aria-hidden="true">
+        <section class="govuk-width-container govuk-!-margin-top-7 govuk-!-margin-bottom-7 ">
+            <div class="govuk-grid-row">
+                <div class="govuk-grid-column-full">
+                    <h2 class="govuk-heading-m">Get help</h2>
+                    <p class="govuk-body">Email: <a class="govuk-link"
+                            href="mailto:online.sr1@dwp.gov.uk">online.sr1@dwp.gov.uk</a></p>
+                    <p class="govuk-body">We aim to respond within 3 working days.</p>
+                </div>
+                <!--Feedback-->
+            </div>
+            <h2 class="govuk-heading-m">Feedback</h2>
+            <p class=govuk-body><a
+                    href="https://forms.office.com/Pages/ResponsePage.aspx?id=DpxP-knna0i8NIr6EGM3VupINvg8uK9KqwdHnbpPR49UNk5RTE1BQ0JXUEJFVTM5OUs4VFNQM1FINS4u">What
+                    did you think of this service?</a></p>
+
+
+
+<br>
+<br>
+<br>
+
+<p class="govuk-body">
+  Other option A <a href="/live-version03/check-your-answers-a" class="govuk-link">click here</a>.
+</p>
+<p class="govuk-body">
+  Other option B <a href="/live-version03/check-your-answers-b" class="govuk-link">click here</a>.
+</p>
+
+    </div>
+</div>
+</section>
+
+</div>
+
+</div>
+{% endblock %}

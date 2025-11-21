@@ -1,0 +1,51 @@
+{% extends "layout-gov-signed-in-live-version01.html" %}
+
+{% block pageTitle %}
+User Journeys – Send an SR1 medical evidence form – GOV.UK
+{% endblock %}
+
+{% block content %}
+
+<div>
+  <h1 class="govuk-heading-xl">A/B testing</h1>
+</div>
+
+<div>
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+          <table class="govuk-table govuk-!-margin-bottom-9">
+            <thead class="govuk-table__head">
+              <tr class="govuk-table__row">
+                <th scope="col" class="govuk-table__header"> Journey 2</th>
+                <th scope="col" class="govuk-table__header "></th>
+                <th scope="col" class="govuk-table__header "></th>
+                <th scope="col" class="govuk-table__header "></th>
+              </tr>
+            </thead>
+            <tbody class="govuk-table__body">
+              <tr class="govuk-table__row">
+                <th scope="row" class="govuk-table__header">Confirm your details</th>
+                <td class="govuk-table__cell "><a href="/live-version01/usertesting/confirm-your-details-a"> Option A
+                  </a>
+                </td>
+                <td class="govuk-table__cell "><a href="/live-version01/usertesting/confirm-your-details-b"> Option B
+                  </a>
+                </td>
+              </tr>
+              <tr class="govuk-table__row">
+                <th scope="row" class="govuk-table__header">Check your answers</th>
+                <td class="govuk-table__cell "><a href="/live-version01/usertesting/check-your-answer-a"> Option A
+                  </a>
+                </td>
+                <td class="govuk-table__cell "><a href="/live-version01/usertesting/check-your-answer-b"> Option B
+                  </a>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+      </div>
+
+      {% endblock %}

@@ -1,0 +1,182 @@
+{% extends "layout-gov-signed-in-live-version01.html" %}
+
+{% block pageTitle %}
+Does the patient have other relevant diagnosis? – Send an SR1 medical evidence form – GOV.UK
+{% endblock %}
+
+{% block content %}
+{%if ((data['diagnosis-error']) and (data['diagnosis-error'].length > 0)) %}
+<div class="govuk-error-summary" data-module="govuk-error-summary">
+    <div role="alert">
+        <h2 class="govuk-error-summary__title">
+            There is a problem
+        </h2>
+        <div class="govuk-error-summary__body">
+            <ul class="govuk-list govuk-error-summary__list">
+                {%for error in data['diagnosis-error'] %}
+                <li>
+                    <a href="{{error.href}}">{{error.message}}</a>
+                </li>
+                {%endfor%}
+            </ul>
+        </div>
+    </div>
+</div>
+{%endif%}
+
+
+
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+        <form id="sendAnSR1Form" action="/live-version01/diagnosis/have-other-diagnosis/answer" method="post">
+            {%if ((data['diagnosis-error']) and (data['diagnosis-error'].length > 0)) %}
+
+            <div class="govuk-form-group govuk-form-group--error">
+                <fieldset class="govuk-fieldset">
+                    <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+                        <!--<span class="govuk-caption-l"> Question 4 of 6</span>-->
+                        <h1 class="govuk-fieldset__heading">
+                            Does the patient have other relevant diagnosis?
+                        </h1>
+                    </legend>
+                    <p id="whereDoYouLive-error" class="govuk-error-message">
+                        <span class="govuk-visually-hidden">Error:</span> {{data['diagnosis-error'][0].message}}
+                      </p>
+
+                    <!-- Receive reminder options -->
+                    <div class="govuk-radios govuk-radios--inline" data-module="govuk-radios" id="Relevanant-Diagnosis">
+                        <div class="govuk-radios__item">
+                            <input class="govuk-radios__input" id="RelevantDiagnosis-yes" name="RelevantDiagnosis"
+                                type="radio" value="Yes" onclick="liveversion01OtherDiagnosis(this)">
+                            <label class="govuk-label govuk-radios__label" for="RelevantDiagnosis-yes">
+                                Yes
+                            </label>
+                        </div>
+                        <div class="govuk-radios__item">
+                            <input class="govuk-radios__input" id="RelevantDiagnosis-no" name="RelevantDiagnosis"
+                                type="radio" value="Not provided" onclick="liveversion01OtherDiagnosis(this)">
+                            <label class="govuk-label govuk-radios__label" for="RelevantDiagnosis-no">
+                                No
+                            </label>
+                        </div>
+                    </div>
+
+                </fieldset>
+
+
+            </div>
+            {%else%}
+            <div class="govuk-form-group">
+                <fieldset class="govuk-fieldset">
+                    <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+                        <!--<span class="govuk-caption-l"> Question 4 of 6</span>-->
+                        <h1 class="govuk-fieldset__heading">
+                            Does the patient have other relevant diagnosis?
+                        </h1>
+                    </legend>
+                    {{data['diagnosis-error'][0].message}}
+                    <!-- Receive reminder options -->
+                    <div class="govuk-radios govuk-radios--inline" data-module="govuk-radios" id="Relevanant-Diagnosis">
+                        <div class="govuk-radios__item">
+                            <input class="govuk-radios__input" id="RelevantDiagnosis-yes" name="RelevantDiagnosis"
+                                type="radio" value="Yes" onclick="liveversion01OtherDiagnosis(this)">
+                            <label class="govuk-label govuk-radios__label" for="RelevantDiagnosis-yes">
+                                Yes
+                            </label>
+                        </div>
+                        <div class="govuk-radios__item">
+                            <input class="govuk-radios__input" id="RelevantDiagnosis-no" name="RelevantDiagnosis"
+                                type="radio" value="Not provided" onclick="liveversion01OtherDiagnosis(this)">
+                            <label class="govuk-label govuk-radios__label" for="RelevantDiagnosis-no">
+                                No
+                            </label>
+                        </div>
+                    </div>
+
+                </fieldset>
+
+
+            </div>
+            {%endif%}
+
+            <!-- Submit button -->
+            <div class="govuk-button-group">
+                <button id="" class="govuk-button" data-module="govuk-button"
+                    onclick="saveOtherDiagnosisradioSR1Formliveversion01(); resetChangeFn();">Continue</button>
+                <a class="govuk-link" onclick="saveAndLeave()" style="color:#1d70b8;"
+                    aria-label="Return to SR1 form sections" href="/live-version01/usertestingoption">Return to SR1 form sections</a>
+            </div>
+        </form>
+        <div class="govuk-!-padding-bottom-6"></div>
+
+        <!--Get help new-->
+        <hr class="govuk-section-break govuk-section-break--visible" aria-hidden="true">
+        <section class="govuk-width-container govuk-!-margin-top-7 govuk-!-margin-bottom-7 ">
+            <div class="govuk-grid-row">
+                <div class="govuk-grid-column-full">
+                    <h2 class="govuk-heading-m">Get help</h2>
+                    <p class="govuk-body">Email: <a class="govuk-link"
+                            href="mailto:online.sr1@dwp.gov.uk">online.sr1@dwp.gov.uk</a></p>
+                    <p class="govuk-body">We aim to respond within 3 working days.</p>
+                </div>
+                <!--Feedback-->
+            </div>
+            <h2 class="govuk-heading-m">Feedback</h2>
+            <p class=govuk-body><a
+                    href="https://forms.office.com/Pages/ResponsePage.aspx?id=DpxP-knna0i8NIr6EGM3VupINvg8uK9KqwdHnbpPR49UNk5RTE1BQ0JXUEJFVTM5OUs4VFNQM1FINS4u">What
+                    did you think of this service?</a></p>
+
+    </div>
+
+
+    </section>
+
+</div>
+
+</div>
+<!-- 
+<script>
+    const save = () => {
+        if (document.getElementById('RelevantDiagnosis-yes').checked) {
+            liveversion01RelevantDiagnosis(true);
+        } else if (document.getElementById('RelevantDiagnosis-no').checked) {
+            liveversion01RelevantDiagnosis(false);
+        }
+    }
+
+    // get and set in this order - this ensures what is sent in query is the same as what is in the localStorage
+    const saveAndLeave = () => {
+        //save();
+
+        const origin = window.location.origin;
+        const url = getUrlWithSR1DataAsQueryParamsliveversion01(origin, "/live-version01/sr1-form-sections");
+        console.log(url);
+
+        window
+            .location
+            .replace(url.toString());
+    }
+
+    const checkValue = () => {
+        const isPatientRelevantDiagnosis = localStorage.getItem('liveversion01RelevantDiagnosis');
+        console.log({isPatientRelevantDiagnosis });
+        if (isPatientRelevantDiagnosis === undefined) {
+            //dont set anything
+            return;
+        }
+
+        if (isPatientRelevantDiagnosis === 'true') {
+            document.getElementById('RelevantDiagnosis-yes').checked = true;
+        }
+
+        if (isPatientRelevantDiagnosis === 'false') {
+            document.getElementById('RelevantDiagnosis-no').checked = true;
+        }
+
+    }
+
+    checkValue();
+</script> -->
+
+{% endblock %}

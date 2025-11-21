@@ -1,0 +1,175 @@
+{% extends "layout-gov-signed-in-live-version01.html" %}
+
+{% block pageTitle %}
+Select the patient's address – Send an SR1 medical evidence form – GOV.UK
+{% endblock %}
+
+{% block content %}
+
+
+
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+        <form id="sendAnSR1Form" action="/live-version03/patient-details/find-patient-address-answer" method="post">
+            <div class="govuk-width-container">
+                <div class="govuk-form-group">
+                    <fieldset class="govuk-fieldset">
+                        <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+                            <h1 class="govuk-fieldset__heading">
+                                5 addresses found
+                            </h1>
+                            <p class="govuk-body-m">
+                                <br>Search results for SU1 5AS. <a href="/live-version03/patient-details/find-patient-address">Search again</a>
+                            </p>
+
+                            <h2 class=" govuk-heading-m">
+                                Choose address
+                            </h2>
+
+                            <div class="govuk-radios" data-module="govuk-radios">
+                              
+                                {% if data['addresslist']%}
+
+                                {% for addressitem in data['addresslist'] %}
+
+                                <div class="govuk-radios__item">
+                                    <input class="govuk-radios__input" id="17-richmond" name="choosepatientaddress"
+                                        value="{{data['choosepatientaddress']}}" type="radio"
+                                        value="17 Richmond Road, Staines-upon-Thames, SU1 5AS"
+                                        onclick="liveversion02PatientAddressFn(this)">
+                                    <label class="govuk-label govuk-radios__label" for="17-richmond">
+                                        {{ addressitem }}
+                                    </label>
+                                </div>
+
+                                {% endfor %}
+
+                                {% else %}
+
+                                
+
+                                <div class="govuk-radios__item">
+                                    <input class="govuk-radios__input" id="17-richmond" name="choosepatientaddress"
+                                        value="{{data['choosepatientaddress']}}" type="radio"
+                                        value="17 Richmond Road, Staines-upon-Thames, SU1 5AS"
+                                        onclick="liveversion02PatientAddressFn(this)">
+                                    <label class="govuk-label govuk-radios__label" for="17-richmond">
+                                        17 Richmond Road, Staines-upon-Thames, SU1 5AS
+                                    </label>
+                                </div>
+
+                                    <div class="govuk-radios__item">
+                                    <input class="govuk-radios__input" id="17-richmond" name="choosepatientaddress"
+                                        value="{{data['choosepatientaddress']}}" type="radio"
+                                        value="17 Richmond Road, Staines-upon-Thames, SU1 5AS"
+                                        onclick="liveversion02PatientAddressFn(this)">
+                                    <label class="govuk-label govuk-radios__label" for="17-richmond">
+                                        18 Richmond Road, Staines-upon-Thames, SU1 5AS
+                                    </label>
+                                </div>
+                                    <div class="govuk-radios__item">
+                                    <input class="govuk-radios__input" id="17-richmond" name="choosepatientaddress"
+                                        value="{{data['choosepatientaddress']}}" type="radio"
+                                        value="17 Richmond Road, Staines-upon-Thames, SU1 5AS"
+                                        onclick="liveversion02PatientAddressFn(this)">
+                                    <label class="govuk-label govuk-radios__label" for="17-richmond">
+                                        19 Richmond Road, Staines-upon-Thames, SU1 5AS
+                                    </label>
+                                </div>
+                                    <div class="govuk-radios__item">
+                                    <input class="govuk-radios__input" id="17-richmond" name="choosepatientaddress"
+                                        value="{{data['choosepatientaddress']}}" type="radio"
+                                        value="17 Richmond Road, Staines-upon-Thames, SU1 5AS"
+                                        onclick="liveversion02PatientAddressFn(this)">
+                                    <label class="govuk-label govuk-radios__label" for="17-richmond">
+                                        20 Richmond Road, Staines-upon-Thames, SU1 5AS
+                                    </label>
+                                </div>
+                                    <div class="govuk-radios__item">
+                                    <input class="govuk-radios__input" id="17-richmond" name="choosepatientaddress"
+                                        value="{{data['choosepatientaddress']}}" type="radio"
+                                        value="17 Richmond Road, Staines-upon-Thames, SU1 5AS"
+                                        onclick="liveversion02PatientAddressFn(this)">
+                                    <label class="govuk-label govuk-radios__label" for="17-richmond">
+                                        21 Richmond Road, Staines-upon-Thames, SU1 5AS
+                                    </label>
+                                </div>
+                                {% endif %}
+
+
+                            </div>
+                    </fieldset>
+                </div>
+
+                <!-- Submit button -->
+            
+              
+            </div>
+        
+
+            <!-- Submit button -->
+          
+            <!-- <p class="govuk-body"><a id="postcode-finder-link" class="govuk-link" rel="external" href="https://www.royalmail.com/find-a-postcode" target="_blank">Find a postcode on Royal Mail's postcode finder (open in a new tab)</a></p> -->
+          
+   <div class="govuk-form-group">
+                    <label class="govuk-label" for="cannot-find-address"><a id="postcode-finder-link" class="govuk-link"
+                            rel="external" onclick="enterAddressManually()" href="/live-version03/patient-details/enter-patient-address">Enter
+                            the patient’s address
+                            manually</a></label>
+                </div>
+
+            
+        </form>
+<br>
+        <div class="govuk-button-group">
+                 <a href="/live-version03/patient-details/confirm-patient-address"><button id="" class="govuk-button" data-module="govuk-button" onclick="saveAddressliveversion02(); resetChangeFn();">
+                    Use this address
+                </button></a>
+               <a href="/live-version03/dashboard/your-account-saved"> <button id="" class="govuk-button govuk-button--secondary" data-module="govuk-button" onclick="savePostcodeSR1Formliveversion02()">
+                    Save and complete later
+                </button></a> 
+                <br>
+                 
+            </div>
+
+
+        <div class="govuk-!-padding-bottom-6"></div>
+
+        <!--Get help new-->
+        <hr class="govuk-section-break govuk-section-break--visible" aria-hidden="true">
+        <section class="govuk-width-container govuk-!-margin-top-7 govuk-!-margin-bottom-7 ">
+            <div class="govuk-grid-row">
+                <div class="govuk-grid-column-full">
+                    <h2 class="govuk-heading-m">Get help</h2>
+                    <p class="govuk-body">Email: <a class="govuk-link"
+                            href="mailto:online.sr1@dwp.gov.uk">online.sr1@dwp.gov.uk</a></p>
+                    <p class="govuk-body">We aim to respond within 3 working days.</p>
+                </div>
+                <!--Feedback-->
+            </div>
+            <h2 class="govuk-heading-m">Feedback</h2>
+            <p class=govuk-body><a
+                    href="https://forms.office.com/Pages/ResponsePage.aspx?id=DpxP-knna0i8NIr6EGM3VupINvg8uK9KqwdHnbpPR49UNk5RTE1BQ0JXUEJFVTM5OUs4VFNQM1FINS4u">What
+                    did you think of this service?</a></p>
+
+    </div>
+    </section>
+
+</div>
+</div>
+
+<script>
+    // get and set in this order - this ensures what is sent in query is the same as what is in the localStorage
+    const saveAndLeave = () => {
+        //savePatientAddressSR1Formliveversion01();
+
+        const origin = window.location.origin;
+        const url = getUrlWithSR1DataAsQueryParamsliveversion02(origin, "/live-version02/sr1-form-sections");
+
+        window
+            .location
+            .replace(url.toString());
+    }
+</script>
+{% endblock %}

@@ -1,0 +1,65 @@
+{% extends "layout-gov-signed-in-live-version01.html" %}
+
+{% block pageTitle %}
+User Journeys – Send an SR1 medical evidence form – GOV.UK
+{% endblock %}
+
+{% block content %}
+
+<div>
+  <h1 class="govuk-heading-xl">User testing</h1>
+</div>
+
+<div>
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <form id="usertesting" action="/live-version01/dashboard/your-account" method="post">
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+              Save your details form-flows
+            </legend>
+
+            <!-- Sign in options -->
+            <div class="govuk-radios" data-module="govuk-radios">
+              <div class="govuk-radios__item">
+                <input autocomplete="off" class="govuk-radios__input" id="journey-one" name="journeyoptions"
+                  type="radio" value="Journey 1" onclick="privatebeta03SigninOrgFn(this)">
+                <label class="govuk-label govuk-radios__label" for="journey-one">Journey 1: Saving their details for the
+                  first time in the form</label>
+                <!--<div id="signIn-item-hint" class="govuk-hint govuk-radios__hint">
+                                You will sign in with your Care Identity details.
+                              </div>-->
+              </div>
+
+              <div class="govuk-radios__item">
+                <input autocomplete="off" class="govuk-radios__input" id="journey-two" name="journeyoptions"
+                  type="radio" value="Journey 2" onclick="privatebeta03SigninOrgFn(this)">
+                <label class="govuk-label govuk-radios__label" for="journey-two">
+                  Journey 2: Details already exist, and HCP uses saved details
+                </label>
+              </div>
+
+
+              <div class="govuk-radios__item">
+                <input autocomplete="off" class="govuk-radios__input" id="journey-three" name="journeyoptions"
+                  type="radio" value="Journey 3" onclick="privatebeta03SigninOrgFn(this)">
+                <label class="govuk-label govuk-radios__label" for="journey-three">
+                  Journey 3: Save new details
+                </label>
+              </div>
+
+            </div>
+          </fieldset>
+        </div>
+
+        <!-- Submit button -->
+        <div class="govuk-button-group">
+          <button id="" class="govuk-button" data-module="govuk-button">
+            Continue
+          </button>
+        </div>
+      </form>
+
+      {% endblock %}
