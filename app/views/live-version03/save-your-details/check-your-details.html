@@ -106,7 +106,8 @@ Check your answers before sending the SR1 form – Save your details – – Sen
 
             <!-- Submit button -->
             <div class="govuk-button-group">
-                <button id="confirmyourdetails" class="govuk-button" data-module="govuk-button" onclick=storePage() >
+                <input type="hidden" name="confirmdetails" value="completed">
+                <button id="confirmdetails" class="govuk-button" data-module="govuk-button" onclick=storePage() onclick="markTaskCompleted()" >
                     Continue
                 </button>
                 <a class="govuk-link" onclick="saveAndLeave()" style="color:#1d70b8;" aria-label="Delete your details" href="/live-version03/save-your-details/delete-your-details">Return to SR1 form sections</a>

@@ -12,6 +12,7 @@ const router = govukPrototypeKit.requests.setupRouter()
 require(`./views/private-beta03/_routes-privatebeta03`)('private-beta03', "beta", router)
 require(`./views/live-version01/_routes-liveversion01`)('live-version01', "beta", router)
 require(`./views/live-version02/_routes-liveversion02`)('live-version02', "beta", router)
+require(`./views/live-version03/_routes-liveversion03`)('live-version03', "beta", router)
 
 
 
