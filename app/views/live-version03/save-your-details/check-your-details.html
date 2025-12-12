@@ -15,9 +15,12 @@ Check your answers before sending the SR1 form – Save your details – – Sen
                         <h1 class="govuk-heading-l">
                             Confirm your details on the SR1 form
                         </h1>
+
+                           <p class="govuk-body">These are the details saved to your account.</p>
                     </legend>
 
-                   
+                
+                    
 
                     <!-- ############## -->
                     <!-- YOUR DETAILS -->
@@ -71,7 +74,7 @@ Check your answers before sending the SR1 form – Save your details – – Sen
                         </div>
                         <div class="govuk-summary-list__row">
                             <dt class="govuk-summary-list__key">
-                                Phone number
+                                Organisation’s phone number
                             </dt>
                             <dd class="govuk-summary-list__value">
                                 {{data['HCPmobileNumber']}} 
@@ -108,7 +111,7 @@ Check your answers before sending the SR1 form – Save your details – – Sen
             <div class="govuk-button-group">
                 <input type="hidden" name="confirmdetails" value="completed">
                 <button id="confirmdetails" class="govuk-button" data-module="govuk-button" onclick=storePage() onclick="markTaskCompleted()" >
-                    Continue
+                    Confirm and continue
                 </button>
                 <a class="govuk-link" onclick="saveAndLeave()" style="color:#1d70b8;" aria-label="Delete your details" href="/live-version03/save-your-details/delete-your-details">Return to SR1 form sections</a>
             </div>

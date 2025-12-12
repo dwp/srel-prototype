@@ -8,24 +8,24 @@
 
 module.exports = function (folderForViews, urlPrefix, router) {
 
-  router.post('/liveversion02/your-details/your-name-answer', function (req, res) {
+  router.post('/live-version02/your-details/your-name-answer', function (req, res) {
     var hcpnameoption = req.session.data['hcpname']
 
     // Check whether the variable matches a condition
     if (hcpnameoption == "No") {
       // 
-      res.redirect('/liveversion02/your-details/your-name')
+      res.redirect('/live-version02/your-details/your-name')
     } else {
       req.session.data['HCPfirstname'] = "Nelson"
       req.session.data['HCPlastname'] = "Noah"
       //
-      res.redirect('/liveversion02/your-details/role');
+      res.redirect('/live-version02/your-details/role');
     }
   })
 
   //Delete your details/ 
 
-  router.post('/liveversion02/dashboard/your-account-delete', function (req, res) {
+  router.post('/live-version02/dashboard/your-account-delete', function (req, res) {
     var deletedetailsoption = req.session.data['deletedetails']
 
     // Check whether the variable matches a condition
@@ -39,14 +39,14 @@ module.exports = function (folderForViews, urlPrefix, router) {
       req.session.data['saveyourdetails'] = ""
       req.session.data['yourRolename'] = ""
       req.session.data['yourRole'] = ""
-      res.redirect('/liveversion02/dashboard/your-account-delete-banner')
+      res.redirect('/live-version02/dashboard/your-account-delete-banner')
     } else {
-      res.redirect('/liveversion02/save-your-details/check-your-details');
+      res.redirect('/live-version02/save-your-details/check-your-details');
     }
   })
 
   //User testing//
-  router.get('/liveversion02/usertestingoption', function (req, res) {
+  router.get('/live-version02/usertestingoption', function (req, res) {
     const data = req.session.data;
     const journeyoptions = data['journeyoptions'];
 
@@ -69,25 +69,25 @@ module.exports = function (folderForViews, urlPrefix, router) {
         data[field] = '';
       });
 
-      res.redirect('/liveversion02/sr1-form-sections-testing');
+      res.redirect('/live-version02/sr1-form-sections-testing');
     } else {
-      res.redirect('/liveversion02/sr1-form-sections');
+      res.redirect('/live-version02/sr1-form-sections');
     }
   });
 
-  router.get('/liveversion02/index', function (req, res) {
+  router.get('/live-version02/index', function (req, res) {
     const data = req.session.data || {};
     const journeyoptions = data['journeyoptions'];
 
     // Intercept only if coming from confirmation page
     const referer = req.get('Referer') || '';
-    const cameFromConfirmation = referer.includes('/liveversion02/confirmation-page');
+    const cameFromConfirmation = referer.includes('/live-version02/confirmation-page');
 
     if (
       cameFromConfirmation &&
       ["Journey 1", "Journey 2", "Journey 3"].includes(journeyoptions)
     ) {
-      res.redirect('/liveversion02/usertesting');
+      res.redirect('/live-version02/usertesting');
     } else {
       res.render('index'); // Or whatever your index page logic is
     }
@@ -102,9 +102,9 @@ module.exports = function (folderForViews, urlPrefix, router) {
     const confirmyourdetails = req.session.data['confirmyourdetails'];
 
     if (confirmyourdetails === "No") {
-      res.redirect('liveversion02/your-details/confirm-your-name');
+      res.redirect('live-version02/your-details/confirm-your-name');
     } else {
-      res.redirect('liveversion02/sr1-form-sections-testing');
+      res.redirect('live-version02/sr1-form-sections-testing');
     }
   });
 
@@ -115,51 +115,51 @@ module.exports = function (folderForViews, urlPrefix, router) {
     const confirmyourdetails = req.session.data['confirmyourdetails'];
 
     if (confirmyourdetails === "No") {
-      res.redirect('liveversion02/your-details//save-your-new-details');
+      res.redirect('live-version02/your-details//save-your-new-details');
     } else {
-      res.redirect('liveversion02/your-details/save-your-details');
+      res.redirect('live-version02/your-details/save-your-details');
     }
   });
 
 
 
 
-  router.post('/liveversion02/save-your-details/your-name-answer', function (req, res) {
+  router.post('/live-version02/save-your-details/your-name-answer', function (req, res) {
     var hcpnameoption = req.session.data['hcpname']
 
     // Check whether the variable matches a condition
     if (hcpnameoption == "No") {
       // 
-      res.redirect('/liveversion02/save-your-details/your-name')
+      res.redirect('/live-version02/save-your-details/your-name')
     } else {
       req.session.data['HCPfirstname'] = "Nelson"
       req.session.data['HCPlastname'] = "Noah"
       //
-      res.redirect('/liveversion02/save-your-details/role');
+      res.redirect('/live-version02/save-your-details/role');
     }
   })
 
-  router.post('/liveversion02/diagnosis/have-other-diagnosis-answer', function (req, res) {
+  router.post('/live-version02/diagnosis/have-other-diagnosis-answer', function (req, res) {
     var relevantdiagnosisoption = req.session.data['RelevantDiagnosis']
 
     // Check whether the variable matches a condition
     if (relevantdiagnosisoption == "Yes") {
       // 
-      res.redirect('/liveversion02/diagnosis/other-diagnosis')
+      res.redirect('/live-version02/diagnosis/other-diagnosis')
     } else {
-      res.redirect('/liveversion02/diagnosis/aware-of-diagnosis');
+      res.redirect('/live-version02/diagnosis/aware-of-diagnosis');
     }
   })
 
-  router.post('/liveversion02/diagnosis/other-diagnosis-saved/answer', function (req, res) {
+  router.post('/live-version02/diagnosis/other-diagnosis-saved/answer', function (req, res) {
     var relevantdiagnosisoption = req.session.data['RelevantDiagnosis']
 
     // Check whether the variable matches a condition
     if (relevantdiagnosisoption == "Yes") {
       // 
-      res.redirect('/liveversion02/diagnosis/other-diagnosis-saved')
+      res.redirect('/live-version02/diagnosis/other-diagnosis-saved')
     } else {
-      res.redirect('/liveversion02/diagnosis/aware-of-diagnosis-saved');
+      res.redirect('/live-version02/diagnosis/aware-of-diagnosis-saved');
     }
   })
 

@@ -249,16 +249,7 @@ Check your answers before sending the SR1 form – Send an SR1 medical evidence 
                     
 
 
-<div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
-      <div class="govuk-checkboxes__item" style="width:800px">
-        <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="hmrc">
-        <label class="govuk-label govuk-checkboxes__label" for="organisation">
-          Save your details to your account so you can use them again
-        </label>
-      </div>
-      </div>
 
-<br>
                     <dl class="govuk-summary-list govuk-!-margin-bottom-9" id="yourDetailsData">
 
                                                 {% if (
@@ -319,7 +310,7 @@ Check your answers before sending the SR1 form – Send an SR1 medical evidence 
                             </dd>
                             <dd class="govuk-summary-list__actions">
                                 <a class="govuk-link"
-                                    href="/live-version01/your-details/professional-registration-number">
+                                    href="/live-version03/your-details/professional-registration-number">
                                     {{editlink}} <span class="govuk-visually-hidden"> your professional registration
                                         number</span>
                                 </a>
@@ -327,13 +318,13 @@ Check your answers before sending the SR1 form – Send an SR1 medical evidence 
                         </div>
                         <div class="govuk-summary-list__row">
                             <dt class="govuk-summary-list__key">
-                                Phone number
+                                Organisation’s phone number
                             </dt>
                             <dd class="govuk-summary-list__value">
                                 <div>{{data['HCPmobileNumber']}}</div>
                             </dd>
                             <dd class="govuk-summary-list__actions">
-                                <a class="govuk-link" href="/live-version01/your-details/organisation-phone-number">
+                                <a class="govuk-link" href="/live-version03/your-details/organisation-phone-number">
                                     {{editlink}} <span class="govuk-visually-hidden"> your phone number</span>
                                 </a>
                             </dd>
