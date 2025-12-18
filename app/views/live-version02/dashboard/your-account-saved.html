@@ -25,7 +25,7 @@ Account home
       <path d="M11.2869 24.6726L2.00415 15.3899L4.62189 12.7722L11.2869 19.4186L25.3781 5.32739L27.9958 7.96369L11.2869 24.6726Z" fill="currentColor" />
     </svg>
   </div>
-  <div class="moj-alert__content">Your SR1 form has been saved successfully.</div>
+  <div class="moj-alert__content">Your SR1 form has been saved to your account so you can complete it later.</div>
   <div class="moj-alert__action">
     <button class="moj-alert__dismiss" hidden>Dismiss</button>
   </div>
@@ -119,7 +119,7 @@ Account home
 <br>
 <h1 class="govuk-heading-l">Your saved SR1 forms</h1>
 <p class="govuk-body">An SR1 form is saved for <b>30 days</b> from when you start it.</p>
-<p class="govuk-body">If you do not submit it before the expiry date, it will be deleted.</p>
+<p class="govuk-body">If you do not send an SR1 form before the expiry date, it will be deleted.</p>
 <br>
 <table class="govuk-table">
   
@@ -128,8 +128,8 @@ Account home
       <th scope="col" class="govuk-table__header">Application for</th>
       <th scope="col" class="govuk-table__header govuk-table__header">Started on</th>
       <th scope="col" class="govuk-table__header govuk-table__header">Expires</th>
-      <th scope="col" class="govuk-table__header govuk-table__header"></th>
-      <th scope="col" class="govuk-table__header govuk-table__header"></th>
+      <th scope="col" class="govuk-table__header govuk-table__header">Next steps</th>
+ 
     </tr>
   </thead>
   <tbody class="govuk-table__body">
@@ -137,10 +137,17 @@ Account home
       <th scope="row" class="govuk-table__header"> {{data['PatientFirstName']}} {{data['PatientLastName']}} </th>
       <td class="govuk-table__cell govuk-table__cell">01 October 2025</td>
       <td class="govuk-table__cell govuk-table__cell">30 October 2025</td>
-       <td class="govuk-table__cell govuk-table__cell"><p class="govuk-body">
-  <a href="/live-version02/sr1-form-sections" class="govuk-link govuk-link--no-visited-state">Continue</a>
-</p></td>
-        <td class="govuk-table__cell govuk-table__cell"><p class="govuk-body"><a href="/live-version02/delete/delete-sr1-form-button" class="govuk-link govuk-link--no-visited-state">Delete</a></p></td>
+       <td class="govuk-table__cell govuk-table__cell">
+
+
+<div class="govuk-button-group">
+<p class="govuk-body"><a href="/live-version02/sr1-form-sections" class="govuk-link govuk-link--no-visited-state" style="margin-right:85px">Continue</a></p>
+<p class="govuk-body"><a href="/live-version02/delete/delete-sr1-form-button" class="govuk-link govuk-link--no-visited-state"> 
+          Delete</a></p>
+</div>
+
+</td>
+       
     </tr>
   </tbody>
   

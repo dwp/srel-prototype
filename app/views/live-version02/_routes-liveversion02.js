@@ -23,6 +23,13 @@ module.exports = function (folderForViews, urlPrefix, router) {
     }
   })
 
+
+
+
+
+
+
+
   //Delete your details/ 
 
   router.post('/live-version02/dashboard/your-account-delete', function (req, res) {

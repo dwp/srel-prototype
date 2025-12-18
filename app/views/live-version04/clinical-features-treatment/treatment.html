@@ -1,0 +1,94 @@
+{% extends "layout-gov-signed-in-live-version01.html" %}
+
+{% block pageTitle %}
+Treatment and care – Send an SR1 medical evidence form – GOV.UK
+{% endblock %}
+
+{% block content %}
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+        <form id="sendAnSR1Form" action="/live-version04/sr1-form-sections-testing" method="post">
+            <div class="govuk-form-group">
+                <fieldset class="govuk-fieldset">
+                    <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+                        <h1 class="govuk-heading-l">
+                            Treatment and care
+                          </h1>
+                          <p class="govuk-body">
+                            We need to know about the patient's treatment and the response. 
+                          </p>
+                          <p class="govuk-body">This could include:</p>
+                          <ul class="govuk-list govuk-list--bullet">
+                            <li>ongoing plans</li>
+                            <li>palliative care</li>
+                            <li>mobility needs</li>
+                            <li>symptom control or psychosocial support</li>
+                            <li>declined treatment</li>
+                          </ul>
+                          <form action="/form-handler" method="post" novalidate>
+                            <div class="govuk-form-group">
+                              <fieldset class="govuk-fieldset">
+                                <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+                                    Tell us about the purpose of any treatment and the response
+                                </legend>
+                                <div class="govuk-character-count" data-module="govuk-character-count" data-maxlength="350">
+                                    <div class="govuk-form-group">
+                                        <textarea class="govuk-textarea  govuk-js-character-count"
+                                            id="treatment-details" name="treatmentdetails" Value="{data['treatmentdetails']}" rows="5" aria-describedby="treatment-info">{{data['treatmentdetails']}} Order echocardiogram and B-type natriuretic peptide test to confirm or refute diagnosis.</textarea>
+                                    </div>
+                                    <div id="treatment-details-info" class="govuk-hint govuk-character-count__message">You can enter up to
+                                        350 characters</div>
+                                </div>
+            
+                            </fieldset>
+            </div>
+
+            <!-- Submit button -->
+            <div class="govuk-button-group">
+                <button id="" class="govuk-button" data-module="govuk-button" onclick="saveTreatmentSR1Formliveversion01()">
+                    Continue
+                </button>
+                <a class="govuk-link" onclick="saveAndLeave()" style="color:#1d70b8;" aria-label="Return to SR1 form sections" href="/live-version03/usertestingoption">Return to SR1 form sections</a>
+            </div>
+        </form>
+        <div class="govuk-!-padding-bottom-6"></div>
+
+        <!--Get help new-->
+        <hr class="govuk-section-break govuk-section-break--visible" aria-hidden="true">
+        <section class="govuk-width-container govuk-!-margin-top-7 govuk-!-margin-bottom-7 ">
+            <div class="govuk-grid-row">
+                <div class="govuk-grid-column-full">
+                    <h2 class="govuk-heading-m">Get help</h2>
+                    <p class="govuk-body">Email: <a class="govuk-link"
+                            href="mailto:online.sr1@dwp.gov.uk">online.sr1@dwp.gov.uk</a></p>
+                    <p class="govuk-body">We aim to respond within 3 working days.</p>
+                </div>
+                        <!--Feedback-->
+            </div>
+            <h2 class="govuk-heading-m">Feedback</h2>
+            <p class=govuk-body><a
+                    href="https://forms.office.com/Pages/ResponsePage.aspx?id=DpxP-knna0i8NIr6EGM3VupINvg8uK9KqwdHnbpPR49UNk5RTE1BQ0JXUEJFVTM5OUs4VFNQM1FINS4u">What
+                    did you think of this service?</a></p>
+    
+        </div>
+            </div>
+        </section>
+
+    </div>
+
+</div>
+
+<script>
+    // get and set in this order - this ensures what is sent in query is the same as what is in the localStorage
+    const saveAndLeave = () => {
+        //saveTreatmentSR1Formliveversion01();
+
+        const origin = window.location.origin;
+        const url = getUrlWithSR1DataAsQueryParamsliveversion01(origin, "/live-version01/sr1-form-sections");
+
+        window
+            .location
+            .replace(url.toString());
+    }
+</script>
+{% endblock %}

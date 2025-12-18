@@ -1,0 +1,168 @@
+{% extends "layout-gov-signed-in-live-version01.html" %}
+
+{% block pageTitle %}
+Check your answers before sending the SR1 form – Send an SR1 medical evidence form – GOV.UK
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+        <form id="profileSetupPage" action="" method="post" autocomplete="off">
+            <div class="govuk-form-group">
+                <fieldset class="govuk-fieldset">
+                    <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+                        <h1 class="govuk-heading-l">
+                            Confirm your details
+                        </h1>
+                     
+                        <div id="event-name-hint" class="govuk-hint">
+
+                        </div>
+                    </legend>
+
+
+
+                    <!-- ############## -->
+                    <!-- YOUR DETAILS -->
+                    <!-- ############## -->
+
+
+                    <dl class="govuk-summary-list govuk-!-margin-bottom-9" id="yourDetailsData">
+               
+                   
+                    <div>
+                        <div class="govuk-summary-card">
+                            <div class="govuk-summary-card__title-wrapper">
+                                <h2 class="govuk-summary-card__title">
+                                    Your details
+                                </h2>
+                                <ul class="govuk-summary-card__actions">
+                                </ul>
+                            </div>
+                            <div class="govuk-summary-card__content">
+                                <dl class="govuk-summary-list">
+
+
+                                    
+                                    <div class="govuk-summary-list__row">
+                                        <dt class="govuk-summary-list__key">
+                                            Name
+                                        </dt>
+                                        <dd class="govuk-summary-list__value">
+                                            {{data['HCPfirstname']}} {{data['HCPlastname']}}
+                                        </dd>
+                                    </div>
+                                    <div class="govuk-summary-list__row">
+                                        <dt class="govuk-summary-list__key">
+                                            Role
+                                        </dt>
+                                        <dd class="govuk-summary-list__value">
+                                            {{ data.yourRole }}
+                                            {{ data.yourRolename }}
+                                        </dd>
+                                    </div>
+                                    <div class="govuk-summary-list__row">
+                                        <dt class="govuk-summary-list__key">
+                                            Professional registration number
+                                        </dt>
+                                        <dd class="govuk-summary-list__value">
+                                            {{data['HCPRegistrationNumber']}} {{data['HCPRegistrationnumbersaved']}}
+                                        </dd>
+                                    </div>
+                                    <div class="govuk-summary-list__row">
+                                        <dt class="govuk-summary-list__key">
+                                            Phone number
+                                        </dt>
+                                        <dd class="govuk-summary-list__value">
+                                            {{data['HCPmobileNumber']}}
+                                        </dd>
+                                    </div>
+                                    <div class="govuk-summary-list__row">
+                                        <dt class="govuk-summary-list__key">
+                                            Organisation’s address
+                                        </dt>
+                                        <dd class="govuk-summary-list__value">
+                                            <div>Ashford Health Clinic</div>
+                                            <div>London Road</div>
+                                            <div>Ashford</div>
+                                            <div>TW1 3AA</div>
+                                        </dd>
+                                    </div>
+                                </dl>
+                            </div>
+                    </dl>
+                    
+                    {% from "govuk/components/button/macro.njk" import govukButton %}
+                    {% from "govuk/components/radios/macro.njk" import govukRadios %}
+
+                    {{ govukRadios({
+                    classes: "govuk-radios--inline",
+                    name: "confirmyourdetails",
+                    fieldset: {
+                    legend: {
+                    text: "Do you want to use the details saved to your account?",
+                    isPageHeading: false,
+                    classes: "govuk-fieldset__legend--m"
+                    }
+                    },
+                    items: [
+                    {
+                    value: "Yes",
+                    text: "Yes",
+                    checked: data.confirmyourdetails == "yes"
+                    },
+                    {
+                    value: "No",
+                    text: "No",
+                    checked: data.confirmyourdetails == "no"
+                    }
+                    ]
+                    }) }}
+
+
+                    <!-- Submit button -->
+                    <div class="govuk-button-group">
+                        <button id="" class="govuk-button" data-module="govuk-button" onclick=storePage()>
+                            Continue
+                        </button>
+                        <a class="govuk-link" onclick="saveAndLeave()" style="color:#1d70b8;"
+                            aria-label="Return to SR1 form sections" href="">Return to SR1 form
+                            sections</a>
+                    </div>
+
+        </form>
+
+        <div class="govuk-!-padding-bottom-6"></div>
+
+        <!--Get help new-->
+        <hr class="govuk-section-break govuk-section-break--visible" aria-hidden="true">
+        <section class="govuk-width-container govuk-!-margin-top-7 govuk-!-margin-bottom-7 ">
+            <div class="govuk-grid-row">
+                <div class="govuk-grid-column-full">
+                    <h2 class="govuk-heading-m">Get help</h2>
+                    <p class="govuk-body">Email: <a class="govuk-link"
+                            href="mailto:online.sr1@dwp.gov.uk">online.sr1@dwp.gov.uk</a></p>
+                    <p class="govuk-body">We aim to respond within 3 working days.</p>
+                </div>
+                <!--Feedback-->
+            </div>
+            <h2 class="govuk-heading-m">Feedback</h2>
+            <p class=govuk-body><a
+                    href="https://forms.office.com/Pages/ResponsePage.aspx?id=DpxP-knna0i8NIr6EGM3VupINvg8uK9KqwdHnbpPR49UNk5RTE1BQ0JXUEJFVTM5OUs4VFNQM1FINS4u">What
+                    did you think of this service?</a></p>
+
+                    <br>
+                      <br>
+                        <br>
+                    <p class="govuk-body">
+  Other option A <a href="/live-version01/your-details/confirm-your-details" class="govuk-link">click here</a>.
+</p>
+    </div>
+</div>
+</section>
+
+</div>
+
+</div>
+{% endblock %}

@@ -19,7 +19,7 @@ SR1 form sent – Send an SR1 medical evidence form – GOV.UK
     <div class="govuk-grid-column-two-thirds">
 
 
-
+{% if data['saveBannerPreferenceError'] == 'yes' %}
 <div role="region" class="moj-alert moj-alert--error" aria-label="error: This case has been assigned to someone else" data-module="moj-alert">
       <div>
         <svg class="moj-alert__icon" role="presentation" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30" height="30" width="30">
@@ -31,6 +31,11 @@ SR1 form sent – Send an SR1 medical evidence form – GOV.UK
         <button class="moj-alert__dismiss" hidden>Dismiss</button>
       </div>
     </div>
+
+{% endif %}
+
+
+
 
 
 

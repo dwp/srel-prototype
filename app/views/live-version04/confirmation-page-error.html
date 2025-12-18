@@ -1,0 +1,181 @@
+
+{% extends "layout-no-back.html" %}
+
+{% block pageTitle %}
+SR1 form sent – Send an SR1 medical evidence form – GOV.UK
+{% endblock %}
+
+{% block content %}
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generate PDF</title>
+    <script src=https://rawgit.com/eKoopmans/html2pdf/master/dist/html2pdf.bundle.js></script>
+</head>
+
+<div class="govuk-grid-row">
+
+    <div class="govuk-grid-column-two-thirds">
+
+
+
+{% if data['saveBannerPreferenceError'] == 'yes' %}
+<div role="region" class="moj-alert moj-alert--error" aria-label="error: This case has been assigned to someone else" data-module="moj-alert">
+      <div>
+        <svg class="moj-alert__icon" role="presentation" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30" height="30" width="30">
+          <path fill-rule="evenodd" clip-rule="evenodd" d="M20.1777 2.5H9.82233L2.5 9.82233V20.1777L9.82233 27.5H20.1777L27.5 20.1777V9.82233L20.1777 2.5ZM10.9155 8.87769L15.0001 12.9623L19.0847 8.87771L21.1224 10.9154L17.0378 15L21.1224 19.0846L19.0847 21.1222L15.0001 17.0376L10.9155 21.1223L8.87782 19.0846L12.9624 15L8.87783 10.9153L10.9155 8.87769Z" fill="currentColor" />
+        </svg>
+      </div>
+      <div class="moj-alert__content">We could not save your details. You can enter them again next time.</div>
+      <div class="moj-alert__action">
+        <button class="moj-alert__dismiss" hidden>Dismiss</button>
+      </div>
+    </div>
+
+{% endif %}
+
+
+
+
+
+ <!--
+<div role="region" class="moj-alert moj-alert--warning" aria-label="warning: Some information could not be imported" data-module="moj-alert">
+      <div>
+        <svg class="moj-alert__icon" role="presentation" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30" height="30" width="30">
+          <path fill-rule="evenodd" clip-rule="evenodd" d="M15 2.44922L28.75 26.1992H1.25L15 2.44922ZM13.5107 9.49579H16.4697L16.2431 17.7678H13.7461L13.5107 9.49579ZM13.1299 21.82C13.1299 21.5661 13.1787 21.3285 13.2764 21.1071C13.374 20.8793 13.5075 20.6807 13.6768 20.5114C13.8525 20.3421 14.0544 20.2087 14.2822 20.111C14.5101 20.0134 14.7542 19.9645 15.0146 19.9645C15.2686 19.9645 15.5062 20.0134 15.7275 20.111C15.9554 20.2087 16.154 20.3421 16.3232 20.5114C16.4925 20.6807 16.626 20.8793 16.7236 21.1071C16.8213 21.3285 16.8701 21.5661 16.8701 21.82C16.8701 22.0804 16.8213 22.3246 16.7236 22.5524C16.626 22.7803 16.4925 22.9789 16.3232 23.1481C16.154 23.3174 15.9554 23.4509 15.7275 23.5485C15.5062 23.6462 15.2686 23.695 15.0146 23.695C14.7542 23.695 14.5101 23.6462 14.2822 23.5485C14.0544 23.4509 13.8525 23.3174 13.6768 23.1481C13.5075 22.9789 13.374 22.7803 13.2764 22.5524C13.1787 22.3246 13.1299 22.0804 13.1299 21.82Z" fill="currentColor" />
+        </svg>
+      </div>
+      <div class="moj-alert__content">We could not save your details. You can enter them again next time.</div>
+      <div class="moj-alert__action">
+        <button class="moj-alert__dismiss" hidden>Dismiss</button>
+      </div>
+    </div>
+-->
+
+
+        <div class="govuk-panel govuk-panel--confirmation">
+            <h1 class="govuk-panel__title">SR1 form sent</h1>
+            <!--<h1 class="govuk-panel__title">SR1 form <span id="resubmittedH1" class="hidden">re</span>sent</h1>-->
+        </div>
+
+        <div class="govuk-!-padding-bottom-6"></div>
+        <h2 class="govuk-heading-m">Download a copy </h2>
+        <p class="govuk-body">This is the only time you can download the patient's completed SR1 form and your fee claim
+            form.</p>
+
+        <!--<p class="govuk-body"><a class="govuk-link gem-c-attachment__link" target="_self" onclick=printForm()
+                style="color:#1d70b8;">Download <span id="patientFullName"></span> SR1 form (PDF, 1MB)</a>.</p>-->
+        <p class="govuk-body"><a class="govuk-link gem-c-attachment__link" style="color:#1d70b8;" href="#"
+                id="pdfButton">Download <span id="patientFullName"></span> SR1 form (PDF, 1MB)</a>.</p>
+        <p class="govuk-body">If you use assistive software, you can <a class="govuk-link"
+                href="/live-version01/download-html" target="_blank" download>download an accessible version of
+                <span id="patientFullName2"></span> SR1 form (HTML, 1MB)</a>.</p>
+
+        <p class="govuk-body">
+            <!--<a class="govuk-link gem-c-attachment__link" target="_self" href="./live-version01/other/pdfs/SR1_fee_form_08_23.pdf" >Download your fee claim form (PDF, 1MB)</a>-->
+            <a href="#" target="_self">Download your fee claim form (PDF,
+                1MB)</a>.
+        </p>
+
+        <script>
+            // Attach click event to the PDF button
+            document.getElementById('pdfButton').addEventListener('click', generatePDF);
+
+            async function generatePDF() {
+                const url = '/live-version01/download-html';
+
+                try {
+                    const response = await fetch(url);
+                    const htmlContent = await response.text();
+
+                    const dynamicContent = await generateDynamicContentliveversion01(); // Replace with the actual function to generate dynamic content
+
+                    // Merge the static HTML content with the dynamic content
+                    const mergedHtml = mergeHtmlliveversion01(htmlContent, dynamicContent);
+
+                    // Use html2pdf library to generate PDF
+                    html2pdf(mergedHtml, {
+                        margin: 10,
+                        filename: 'Download SR1 form (PDF, 1MB)',
+                        jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' },
+                        html2canvas: { scale: 2 },
+                        pagebreak: { mode: 'avoid-all' }
+                    });
+                } catch (error) {
+                    console.error('Error fetching or generating PDF:', error);
+                }
+            }
+        </script>
+
+        <div class="govuk-!-padding-bottom-6"></div>
+
+        <h2 class="govuk-heading-m">What happens next</h2>
+
+        <p class="govuk-body">Tell the patient you have sent the SR1 form. You should encourage them to submit their
+            benefit claim if they have not already.</p>
+        <p class="govuk-body">We will contact the patient when we have made a decision on their claim.</p>
+        <p class="govuk-body">If we need more information about the patient, we will contact you.</p>
+        <!-- Submit button -->
+  
+
+        <br>
+
+
+
+
+
+{% from "govuk/components/button/macro.njk" import govukButton %}
+
+<div class="govuk-button-group">
+  {{ govukButton({
+    text: "Start a new SR1 form",
+    href: "/live-version03/sr1-form-sections-testing"
+  }) }}
+
+  {{ govukButton({
+    text: "Return to your account",
+    classes: "govuk-button--secondary",
+    href: "/live-version03/dashboard/your-account"
+  }) }}
+</div>
+
+<br>
+
+
+
+        <h3 class="govuk-heading-s">Support for your patient</h3>
+        <p class="govuk-body">GOV.UK has advice for patients on <a class="govuk-link"
+            href="https://www.gov.uk/benefits-end-of-life" target="_blank" download> making a benefit claim if they are nearing the end of life (opens in new tab)</a>.</p>
+            <div class="govuk-inset-text">
+                You have not made a benefit claim for your patient.
+              </div> <p class="govuk-body"></p>
+
+        <p class="govuk-body">The Department for Work and Pensions (DWP) will not contact your patient about making a benefit claim.</p>
+        <!-- Submit button -->
+
+        <div class="govuk-!-padding-bottom-6"></div>
+
+        <!--Get help new-->
+        <hr class="govuk-section-break govuk-section-break--visible" aria-hidden="true">
+        <section class="govuk-width-container govuk-!-margin-top-7 govuk-!-margin-bottom-6">
+            <div class="govuk-grid-row">
+                <div class="govuk-grid-column-full">
+                    <h2 class="govuk-heading-m">Get help</h2>
+                    <p class="govuk-body">Email: <a class="govuk-link"
+                            href="mailto:online.sr1@dwp.gov.uk">online.sr1@dwp.gov.uk</a></p>
+                    <p class="govuk-body">We aim to respond within 3 working days.</p>
+                </div>
+                        <!--Feedback-->
+            </div>
+            <h2 class="govuk-heading-m">Feedback</h2>
+            <p class=govuk-body><a
+                    href="https://forms.office.com/Pages/ResponsePage.aspx?id=DpxP-knna0i8NIr6EGM3VupINvg8uK9KqwdHnbpPR49UNk5RTE1BQ0JXUEJFVTM5OUs4VFNQM1FINS4u">What
+                    did you think of this service?</a></p>
+    
+        </div>
+
+</div>
+
+{% endblock %}
+

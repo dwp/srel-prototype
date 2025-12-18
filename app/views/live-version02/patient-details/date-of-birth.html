@@ -8,7 +8,7 @@ What is the patient’s date of birth? – Send an SR1 medical evidence form –
 <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
 
-        <form id="sendAnSR1Form" action="" method="post">
+        <form id="sendAnSR1Form" action="/live-version02/patient-details/find-patient-address"  method="post">
 
             <div class="govuk-form-group">
                 <fieldset class="govuk-fieldset" role="group" aria-describedby="patient-dateofbirth-hint">
@@ -50,20 +50,19 @@ What is the patient’s date of birth? – Send an SR1 medical evidence form –
               </div>
 
             <!-- Submit button -->
-        
+            <div class="govuk-button-group" style="align-items: normal;">
+                <button id="" class="govuk-button" data-module="govuk-button" onclick="savePatientBirthSR1Formliveversion02()">
+                  Continue
+              </button>
+              <a href="/live-version02/dashboard/your-account-saved"> <button type="button" id="" class="govuk-button govuk-button--secondary" data-module="govuk-button" onclick="savePatientBirthSR1Formliveversion02()">
+                  Save and complete later
+              </button></a> 
+              <br>
+            </div>
         </form>
 
 
-<div class="govuk-button-group">
-                 <a href="/live-version02/patient-details/find-patient-address"><button id="" class="govuk-button" data-module="govuk-button" onclick="savePatientBirthSR1Formliveversion01()">
-                    Continue
-                </button></a>
-               <a href="/live-version02/dashboard/your-account-saved"> <button id="" class="govuk-button govuk-button--secondary" data-module="govuk-button" onclick="savePatientBirthSR1Formliveversion01()">
-                    Save and complete later
-                </button></a> 
-                <br>
-                 
-            </div>
+
 
 <p class="govuk-body"><a class="govuk-link" onclick="saveAndLeave()" style="color:#1d70b8;"
                     aria-label="Return to SR1 form sections" href="/live-version02/usertestingoption">Return to SR1 form sections</a></p>

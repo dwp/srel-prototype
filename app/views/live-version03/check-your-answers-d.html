@@ -14,7 +14,7 @@ Check your answers before sending the SR1 form – Send an SR1 medical evidence 
 
 <div class="govuk-grid-row">
     <div class="govuk-grid-column-full">
-        <form id="profileSetupPage" action="/live-version03/confirmation-page" method="post" autocomplete="off">
+        <form id="profileSetupPage" action="/live-version03/confirmation-page-error" method="post" autocomplete="off">
             <div class="govuk-form-group">
                 <fieldset class="govuk-fieldset">
                     <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
@@ -349,58 +349,30 @@ Check your answers before sending the SR1 form – Send an SR1 medical evidence 
 
                     <!-- Not using saved details -->
 
-                        {% if (
-                        (data['confirmyourdetails'] == 'No')
-                        )%}
-
-                        <div class="govuk-summary-list__row">
+                     
+      <div class="govuk-summary-list__row">
                             <dt class="govuk-summary-list__key">
-                                Save your new details to your account
+                 <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">    <div class="govuk-checkboxes__item" style="width:800px">      
+                    
+                             <input class="govuk-checkboxes__input"
+id="saveBannerPreferenceError"
+name="saveBannerPreferenceError"
+type="checkbox"
+value="yes">
+<label class="govuk-label govuk-checkboxes__label" for="saveBannerPreferenceError">
+Save your details to your account so you can use them again
+</label>
+                     
                             </dt>
                             <dd class="govuk-summary-list__value">
-                                <div>{{data['saveyournewdetails']}}</div>
+                           
                             </dd>
                             <dd class="govuk-summary-list__actions">
-                                <a class="govuk-link" href="live-version01/your-details/save-your-new-details">
-                                    {{editlink}} <span class="govuk-visually-hidden"> save youe details </span>
-                                </a>
+                             
                             </dd>
-                        </div>
-
-                        {% elseif (
-                        (data['confirmyourdetails'] == 'yes')
-                        )%}
-
-                        {% else %}
-
-                        {% endif %}
-
-                         {% if (
-                        (data['journeyoptions'] == 'Journey 1')
-                        )%}
-
-                        <div class="govuk-summary-list__row">
-                            <dt class="govuk-summary-list__key">
-                                Save your details to your account
-                            </dt>
-                            <dd class="govuk-summary-list__value">
-                                <div>{{data['saveyourdetails']}}</div>
-                            </dd>
-                            <dd class="govuk-summary-list__actions">
-                                <a class="govuk-link" href="your-details/save-your-details">
-                                    {{editlink}} <span class="govuk-visually-hidden"> save youe details </span>
-                                </a>
-                            </dd>
-                        </div>
-
-                        {% elseif (
-                        (data['confirmyourdetails'] == 'Yes')
-                        )%}
-
-                        {% else %}
-
-                        {% endif %}
-                    </dl>
+                        </div>    
+                        </dl>
+                    
 
 
 
@@ -452,16 +424,6 @@ Check your answers before sending the SR1 form – Send an SR1 medical evidence 
 
 
 
-<br>
-<br>
-<br>
-
-<p class="govuk-body">
-  Other option A <a href="/live-version03/check-your-answers-a" class="govuk-link">click here</a>.
-</p>
-<p class="govuk-body">
-  Other option B <a href="/live-version03/check-your-answers-b" class="govuk-link">click here</a>.
-</p>
 
     </div>
 </div>

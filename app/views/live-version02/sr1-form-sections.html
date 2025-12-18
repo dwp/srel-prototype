@@ -69,25 +69,31 @@ SR1 form – Send an SR1 medical evidence form – GOV.UK
                 (not data['PatientLastName'] or data['PatientLastName'] == '') and
                 (not data['patientdateofbirthday'] or data['patientdateofbirthday'] == '') and
                 (not data['patientdateofbirthmonth'] or data['patientdateofbirthmonth'] == '') and
-                (not data['patientdateofbirthyear'] or data['patientdateofbirthyear'] == '')
+                (not data['patientdateofbirthyear'] or data['patientdateofbirthyear'] == '') and  
+                (not data['patientAddressComplete'] and data['patientAddressComplete'] != '')
               )%}
-                <div class="govuk-task-list__status" id="patientDetails-link-notstarted">
-                  <strong class="govuk-tag govuk-tag--light-blue">Not yet started</strong>
-                </div>
+               <div class="govuk-task-list__status" id="application-details-3-status">
+      <strong class="govuk-tag govuk-tag--blue">
+        Not yet started
+      </strong>
+    </div>
               {% elseif (
                 (data['PatientFirstName'] and data['PatientFirstName'] != '') and
                 (data['PatientLastName'] and data['PatientLastName'] != '') and
                 (data['patientdateofbirthday'] and data['patientdateofbirthday'] != '') and
                 (data['patientdateofbirthmonth'] and data['patientdateofbirthmonth'] != '') and
-                (data['patientdateofbirthyear'] and data['patientdateofbirthyear'] != '')
+                (data['patientdateofbirthyear'] and data['patientdateofbirthyear'] != '') and  
+                (data['patientAddressComplete'] and data['patientAddressComplete'] != '')
               )%}
-                <div class="govuk-task-list__status" id="patientDetails-status-completed" aria-hidden>  <strong class="govuk-tag govuk-tag--green">
-          Completed
-        </strong></div>
+            <div class="govuk-task-list__status" id="application-details-1-status">
+      Completed
+    </div>
               {% else %}
-                <div class="govuk-task-list__status" id="patientDetails-status-inprogress" aria-hidden>
-                  <strong class="govuk-tag govuk-tag--blue">In progress</strong>
-                </div>
+       <div class="govuk-task-list__status" id="application-details-2-status">
+      <strong class="govuk-tag govuk-tag--light-blue">
+        In progress
+      </strong>
+    </div>
               {% endif %}
 
           </li>
@@ -98,7 +104,7 @@ SR1 form – Send an SR1 medical evidence form – GOV.UK
  <ul class="govuk-task-list">
    <li class="govuk-task-list__item govuk-task-list__item--with-link" id="patientDiagnosis">
      <div class="govuk-task-list__name-and-hint" id="Diagnosis-link-notstarted">
-       <a class="govuk-link govuk-task-list__link" href="/live-version02/diagnosis/details"
+       <a class="govuk-link govuk-task-list__link" href=""
          aria-describedby="patientDiagnosis-status-notstarted">
          Complete diagnosis
        </a>
@@ -115,8 +121,11 @@ SR1 form – Send an SR1 medical evidence form – GOV.UK
       (not data['Diagnosisawareness'] or data['Diagnosisawareness'] == '') and
       (not data['Prognosisawareness'] or data['Prognosisawareness'] == '')
     )%}    
-     <div class="govuk-task-list__status" id="diagnosis-status-notstarted"><strong
-         class="govuk-tag govuk-tag--light-blue">Not yet started</strong></div>
+   <div class="govuk-task-list__status" id="application-details-3-status">
+      <strong class="govuk-tag govuk-tag--blue">
+        Not yet started
+      </strong>
+    </div>
          {% elseif (
           (data['the-diagnosis'] and data['the-diagnosis'] != '') and
           (data['SpecialRulesDateday'] and data['SpecialRulesDateday'] != '') and
@@ -129,12 +138,15 @@ SR1 form – Send an SR1 medical evidence form – GOV.UK
           (data['Diagnosisawareness'] and data['Diagnosisawareness'] != '') and
           (data['Prognosisawareness'] and data['Prognosisawareness'] != '') 
         )%}
-         <div class="govuk-task-list__status" id="diagnosis-status-completed" aria-hidden><strong class="govuk-tag govuk-tag--green">
-          Completed
-        </strong></div>
+    <div class="govuk-task-list__status" id="application-details-1-status">
+      Completed
+    </div>
          {% else %}
-         <div class="govuk-task-list__status" id="diagnosis-status-inprogress" aria-hidden><strong
-           class="govuk-tag govuk-tag--light-blue">In progress</strong></div>
+     <div class="govuk-task-list__status" id="application-details-2-status">
+      <strong class="govuk-tag govuk-tag--light-blue">
+        In progress
+      </strong>
+    </div>
      {% endif %}
    </li> 
 
@@ -142,7 +154,7 @@ SR1 form – Send an SR1 medical evidence form – GOV.UK
         <ul class="govuk-task-list">
           <li class="govuk-task-list__item govuk-task-list__item--with-link" id="patientClinicalFeatures">
             <div id="ClinicalFeatTreatment-link-notstarted" class="govuk-task-list__name-and-hint">
-              <a class="govuk-link govuk-task-list__link" href="/live-version02/clinical-features-treatment/clinical-features"
+              <a class="govuk-link govuk-task-list__link" href=""
                 aria-describedby="ClinicalFeatTreatment-status-notstarted">
                 Complete clinical features, treatment, and care
               </a>
@@ -151,20 +163,24 @@ SR1 form – Send an SR1 medical evidence form – GOV.UK
               (not data['ClinicalFeaturesdetails'] or data['ClinicalFeaturesdetails'] == '') and
               (not data['treatmentdetails'] or data['treatmentdetails'] == '')
             )%}
-              <div class="govuk-task-list__status" id=" ClinicalFeatTreatment-status-notstarted">
-                <strong class="govuk-tag govuk-tag--light-blue">Not yet started</strong>
-              </div>
+             <div class="govuk-task-list__status" id="application-details-3-status">
+      <strong class="govuk-tag govuk-tag--blue">
+        Not yet started
+      </strong>
+    </div>
             {% elseif (
               (data['ClinicalFeaturesdetails'] and data['ClinicalFeaturesdetails']!='') and
               (data['treatmentdetails'] and data['treatmentdetails']!='')
             )%}
-              <div class="govuk-task-list__status" id="ClinicalFeatTreatment-status-completed" aria-hidden><strong class="govuk-tag govuk-tag--green">
-          Completed
-        </strong></div>
+          <div class="govuk-task-list__status" id="application-details-1-status">
+      Completed
+    </div>
             {% else %}
-              <div class="govuk-task-list__status" id="ClinicalFeatTreatment-status-inprogress" aria-hidden>
-                <strong class="govuk-tag govuk-tag--blue">In progress</strong>
-              </div>
+              <div class="govuk-task-list__status" id="application-details-2-status">
+      <strong class="govuk-tag govuk-tag--light-blue">
+        In progress
+      </strong>
+    </div>
             {% endif %}
           </li>
         </ul>
@@ -173,7 +189,7 @@ SR1 form – Send an SR1 medical evidence form – GOV.UK
         <ul class="govuk-task-list">
           <li class="govuk-task-list__item govuk-task-list__item--with-link" id="name">
             <div id="yourDetails-link-notstarted" class="govuk-task-list__name-and-hint">
-              <a class="govuk-link govuk-task-list__link" href="/live-version02/your-details/confirm-your-name"
+              <a class="govuk-link govuk-task-list__link" href=""
                 aria-describedby="add-your-details">
                 Add your details
               </a>
@@ -185,9 +201,11 @@ SR1 form – Send an SR1 medical evidence form – GOV.UK
               (not data['HCPmobileNumber'] or data['HCPmobileNumber'] == '') and
               (not data['saveyourdetails'] or data['saveyourdetails'] == '')
             )%}
-              <div class="govuk-task-list__status" id="yourDetails-status-notstarted-first-click">
-                <strong class="govuk-tag govuk-tag--light-blue">Not yet started</strong>
-              </div>
+               <div class="govuk-task-list__status" id="application-details-3-status">
+      <strong class="govuk-tag govuk-tag--blue">
+        Not yet started
+      </strong>
+    </div>
             {% elseif (
               (data['HCPfirstname'] and data['HCPfirstname'] != '') and
               (data['HCPlastname'] and data['HCPlastname'] != '') and
@@ -195,13 +213,15 @@ SR1 form – Send an SR1 medical evidence form – GOV.UK
               (data['HCPmobileNumber'] and data['HCPmobileNumber'] != '') and
               (data['saveyourdetails'] and data['saveyourdetails'] != '')
             )%}
-              <div class="govuk-task-list__status" id="yourDetails-link-completed" aria-hidden><strong class="govuk-tag govuk-tag--green">
-          Completed
-        </strong></div>
+       <div class="govuk-task-list__status" id="application-details-1-status">
+      Completed
+    </div>
             {% else %}
-              <div class="govuk-task-list__status" id="yourDetails-link-inprogress" aria-hidden>
-                <strong class="govuk-tag govuk-tag--blue">In progress</strong>
-              </div>
+              <div class="govuk-task-list__status" id="application-details-2-status">
+      <strong class="govuk-tag govuk-tag--light-blue">
+        In progress
+      </strong>
+    </div>
             {% endif %}
 
 
@@ -240,7 +260,7 @@ SR1 form – Send an SR1 medical evidence form – GOV.UK
               <li class="govuk-task-list__item govuk-task-list__item--with-link" id="send-sr1">
                 {% if formComplete %}
                   <div class="govuk-task-list__name-and-hint">
-                    <a class="govuk-link govuk-task-list__link" href="/live-version02/check-your-answers" aria-describedby="sr1-send-status-notstarted">
+                    <a class="govuk-link govuk-task-list__link" href="" aria-describedby="sr1-send-status-notstarted">
                       Check your answers
                     </a>
                   </div>
@@ -251,11 +271,9 @@ SR1 form – Send an SR1 medical evidence form – GOV.UK
                   <div class="govuk-task-list__name-and-hint" aria-describedby="sr1-send-status-cannot-start">
                     <div>Check your answers</div>
                   </div>
-                  <div class="govuk-task-list__status govuk-task-list__status--cannot-start-yet" id="sr1-send-status-cannot-start">
-                     <strong class="govuk-tag govuk-tag--grey">
-          Cannot start yet
-        </strong>
-                  </div>
+                  <div class="govuk-task-list__status govuk-task-list__status--cannot-start-yet" id="application-details-3-status">
+      Cannot start yet
+    </div>
                 {% endif %}
               </li>
             </ul>

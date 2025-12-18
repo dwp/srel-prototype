@@ -350,14 +350,16 @@ Check your answers before sending the SR1 form – Send an SR1 medical evidence 
 
                           <div class="govuk-summary-list__row">
                             <dt class="govuk-summary-list__key">
-                         <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
-      <div class="govuk-checkboxes__item" style="width:800px">
-        <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="hmrc">
-        <label class="govuk-label govuk-checkboxes__label" for="organisation">
-          Save your details to your account so you can use them again
-        </label>
-      </div>
-      </div>
+                 <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">    <div class="govuk-checkboxes__item" style="width:800px">      
+                    
+           <input class="govuk-checkboxes__input"
+id="saveBannerPreference"
+name="saveBannerPreference"
+type="checkbox"
+value="yes">
+<label class="govuk-label govuk-checkboxes__label" for="saveBannerPreference">
+Save your details to your account so you can use them again
+</label>
                             </dt>
                             <dd class="govuk-summary-list__value">
                            
@@ -466,6 +468,13 @@ Check your answers before sending the SR1 form – Send an SR1 medical evidence 
             </div>
 
             <!-- Submit button -->
+
+
+
+
+
+
+
             <div class="govuk-button-group">
                 <button id="" class="govuk-button" data-module="govuk-button" onclick=storePage()>
                     I agree &ndash; send the form
@@ -494,23 +503,19 @@ Check your answers before sending the SR1 form – Send an SR1 medical evidence 
                     did you think of this service?</a></p>
 
 
+    
 
-<br>
-<br>
-<br>
-
-<p class="govuk-body">
-  Other option A <a href="/live-version03/check-your-answers-a" class="govuk-link">click here</a>.
-</p>
-<p class="govuk-body">
-  Other option C <a href="/live-version03/check-your-answers-c" class="govuk-link">click here</a>.
-</p>
 
     </div>
 </div>
 </section>
 
-</div>
+<script>  function storePage () {    const checked = document.getElementById('save-details-checkbox-unique-2025').checked;    sessionStorage.setItem('saveDetails', checked ? 'yes' : 'no');    window.location.href = '/submitted';  }</script></div>
 
 </div>
+
+
+
+
+
 {% endblock %}

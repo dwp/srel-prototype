@@ -1,0 +1,96 @@
+{% extends "layout-gov-signed-in-live-version01.html" %}
+
+{% block pageTitle %}
+Are you sure you want to delete your details? – Check your details – Send an SR1 medical evidence form – GOV.UK
+{% endblock %}
+
+{% block content %}
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+        <form id="sendAnSR1Form" action="/live-version01/dashboard/your-account-delete" method="post">
+            <div class="govuk-form-group">
+                <fieldset class="govuk-fieldset">
+                    <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+                        <!--<span class="govuk-caption-l"> Question 4 of 6</span>-->
+                        <h1 class="govuk-fieldset__heading">
+                            Are you sure you want to delete your details?
+                        </h1>
+                    </legend>
+
+                    <!-- Receive reminder options -->
+                    <div class="govuk-radios govuk-radios--inline" data-module="govuk-radios">
+                        <div class="govuk-radios__item">
+                            <input class="govuk-radios__input" id="deletedetails-yes" name="deletedetails" type="radio"
+                                value="Yes" onclick="liveversion01OtherDiagnosis(this)">
+                            <label class="govuk-label govuk-radios__label" for="deletedetails-yes">
+                                Yes
+                            </label>
+                        </div>
+                        <div class="govuk-radios__item">
+                            <input class="govuk-radios__input" id="deletedetails-no" name="deletedetails" type="radio"
+                                value="Not provided" onclick="liveversion01OtherDiagnosis(this)">
+                            <label class="govuk-label govuk-radios__label" for="deletedetails-no">
+                                No
+                            </label>
+                        </div>
+                    </div>
+
+                </fieldset>
+
+
+            </div>
+
+            <!-- Submit button -->
+            <div class="govuk-button-group">
+                <button id="" class="govuk-button" data-module="govuk-button"
+                    onclick="saveOtherDiagnosisradioSR1Formliveversion01(); resetChangeFn();">Continue</button>
+            </div>
+        </form>
+        <div class="govuk-!-padding-bottom-6"></div>
+
+        <!--Get help new-->
+        <hr class="govuk-section-break govuk-section-break--visible" aria-hidden="true">
+        <section class="govuk-width-container govuk-!-margin-top-7 govuk-!-margin-bottom-7 ">
+            <div class="govuk-grid-row">
+                <div class="govuk-grid-column-full">
+                    <h2 class="govuk-heading-m">Get help</h2>
+                    <p class="govuk-body">Email: <a class="govuk-link"
+                            href="mailto:online.sr1@dwp.gov.uk">online.sr1@dwp.gov.uk</a></p>
+                    <p class="govuk-body">We aim to respond within 3 working days.</p>
+                </div>
+                <!--Feedback-->
+            </div>
+            <h2 class="govuk-heading-m">Feedback</h2>
+            <p class=govuk-body><a
+                    href="https://forms.office.com/Pages/ResponsePage.aspx?id=DpxP-knna0i8NIr6EGM3VupINvg8uK9KqwdHnbpPR49UNk5RTE1BQ0JXUEJFVTM5OUs4VFNQM1FINS4u">What
+                    did you think of this service?</a></p>
+
+    </div>
+    </section>
+
+</div>
+
+</div>
+
+<script>
+    //const saveOtherDiagnosisradioSR1Formliveversion01 = () => {
+    //    if (document.getElementById('deletedetails-yes').checked) {
+    //        localStorage.setItem('liveversion01deletedetails', ' ');
+    //    } else if (document.getElementById('deletedetails-no').checked) {
+    //        localStorage.setItem('liveversion01deletedetails', 'Not provided');
+    //    }
+    //}
+
+    // get and set in this order - this ensures what is sent in query is the same as what is in the localStorage
+    const saveAndLeave = () => {
+        //saveOtherDiagnosisSR1Formliveversion01();
+
+        const origin = window.location.origin;
+        const url = getUrlWithSR1DataAsQueryParamsliveversion01(origin, "/live-version01/sr1-form-sections");
+
+        window
+            .location
+            .replace(url.toString());
+    }
+</script>
+{% endblock %}

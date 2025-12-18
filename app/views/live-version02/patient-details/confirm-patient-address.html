@@ -7,7 +7,7 @@ Confirm the patient's address – Send an SR1 medical evidence form – GOV.UK
 {% block content %}
 <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
-        <form id="sendAnSR1Form" action="/live-version02/sr1-form-sections" method="post">
+        <form id="sendAnSR1Form" action="/live-version02/sr1-form-sections" method="post"><input type="hidden" name="patientAddressComplete" value="yes">
             <div class="govuk-width-container">
                 <div class="govuk-form-group">
                     <h1 class="govuk-heading-l">
@@ -31,15 +31,17 @@ Confirm the patient's address – Send an SR1 medical evidence form – GOV.UK
         </form>
 
         <br>
-        <div class="govuk-button-group">
-                 <a href="/live-version02/sr1-form-sections"><button id="" class="govuk-button" data-module="govuk-button" rel="external" onclick="save()">
+
+        <form method="post" action="/live-version02/sr1-form-sections" style="display:inline;"> <input type="hidden" name="patientAddressComplete" value="yes">
+        <div class="govuk-button-group"> 
+                 <a href="/live-version02/sr1-form-sections"><button id="" class="govuk-button" data-module="govuk-button" rel="external" onclick="save()"><input type="hidden" name="patientAddressComplete" value="yes">
                     Use this address
                 </button></a>
                <a href="/live-version02/dashboard/your-account-saved"> <button id="" class="govuk-button govuk-button--secondary" data-module="govuk-button" onclick="savePostcodeSR1Formliveversion02()">
                     Save and complete later
                 </button></a> 
                 <br>
-                 
+                 </form>
             </div>
 
 <br>
