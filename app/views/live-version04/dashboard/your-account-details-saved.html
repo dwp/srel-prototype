@@ -18,17 +18,14 @@ Account home
                 </p>
             </h1> -->
 
-            <div role="region" class="moj-alert moj-alert--success" aria-label="success: Upload successful" data-module="moj-alert">
-  <div>
-    <svg class="moj-alert__icon" role="presentation" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30" height="30" width="30">
-      <path d="M11.2869 24.6726L2.00415 15.3899L4.62189 12.7722L11.2869 19.4186L25.3781 5.32739L27.9958 7.96369L11.2869 24.6726Z" fill="currentColor" />
-    </svg>
-  </div>
-  <div class="moj-alert__content">Your SR1 form has been deleted from your account.</div>
-  <div class="moj-alert__action">
-    <button class="moj-alert__dismiss" hidden>Dismiss</button>
-  </div>
-</div>
+
+
+<div id="save-alert" role="region" class="moj-alert moj-alert--success" aria-label="success: Upload successful" data-module="moj-alert" hidden>  <div>    
+    <svg class="moj-alert__icon" role="presentation" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30" height="30" width="30">     
+         <path d="M11.2869 24.6726L2.00415 15.3899L4.62189 12.7722L11.2869 19.4186L25.3781 5.32739L27.9958 7.96369L11.2869 24.6726Z" fill="currentColor" />  </svg>  
+        </div>  <div class="moj-alert__content">Your details have been saved to your account so you can use them again.</div> 
+         <div class="moj-alert__action">    <button class="moj-alert__dismiss" hidden>Dismiss</button>  </div></div>
+
 
         <h1 class="govuk-heading-xl">
             <span id="fullName" class="govuk-caption-l"></span>
@@ -60,7 +57,7 @@ Account home
                         style="height: 180px; color:white; border: 1px solid #b1b4b6; border-bottom-width: 4px;">
 
                         <h3 class="govuk-heading-m">
-                            <a href="/live-version02/name" class="govuk-link">Start
+                            <a href="/live-version04/sr1-form-sections-testing" class="govuk-link">Start
                                 a new SR1 form</a>
                         </h3>
                         <p class="govuk-body">Start a new SR1 form for a patient.</p>
@@ -81,9 +78,9 @@ Account home
                 <div class="govuk-grid-column-one-third govuk-!-margin-bottom-5">
                     <div class="card govuk-!-padding-5"
                         style="height: 180px; color:white; border: 1px solid #b1b4b6; border-bottom-width: 4px;">
-                        <h3 class="govuk-heading-m"><a href=""
-                                class="govuk-link">Save your details </a></h3>
-                        <p class="govuk-body">If you save your details, we will add them to all of your SR1 forms.</p>
+                        <h3 class="govuk-heading-m"><a href="/live-version02/save-your-details/confirm-your-name"
+                                class="govuk-link">Check your details </a></h3>
+                        <p class="govuk-body">View, update or delete your details.</p>
                     </div>
                 </div>
 
@@ -109,17 +106,7 @@ Account home
         </div>
 
 
-        <hr class="govuk-section-break govuk-section-break--visible" aria-hidden="true">
-
-
-
-<br>
-<br>
-<h1 class="govuk-heading-l">Your saved SR1 forms</h1>
-<p class="govuk-body">There are no SR1 forms currently saved.</p>
-
-<br>
-<br>
+      
 
         <!--Get help new-->
         <hr class="govuk-section-break govuk-section-break--visible" aria-hidden="true">
