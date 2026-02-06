@@ -6,20 +6,29 @@ Check your answers before sending the SR1 form – Save your details – – Sen
 
 {% block content %}
 
+
+
+
+
+
+
 <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
-        <form id="profileSetupPage" action="/live-version04/sr1-form-sections-testing" method="post" autocomplete="off">
+        <form id="profileSetupPage" action="" method="post" autocomplete="off">
             <div class="govuk-form-group">
                 <fieldset class="govuk-fieldset">
                     <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
                         <h1 class="govuk-heading-l">
                             Confirm your details on the SR1 form
                         </h1>
-<p class="govuk-body">These are the details saved to your account.</p>
+
+{% if not data.HCPmobileNumber or data.HCPmobileNumber == "07546352622" %}<p class="govuk-body">These are the details saved to your account.</p>{% endif %}
 
                     </legend>
 
-                
+
+
+      
                     
 
                     <!-- ############## -->
@@ -33,7 +42,7 @@ Check your answers before sending the SR1 form – Save your details – – Sen
                                 Name
                             </dt>
                             <dd class="govuk-summary-list__value">
-                             {{data['HCPfirstname']}} {{data['HCPlastname']}} 
+                              <p class="govuk-body">Nelson Noah</p>
                             </dd>
                             <dd class="govuk-summary-list__actions">
                                 <a class="govuk-link" href="">
@@ -46,14 +55,14 @@ Check your answers before sending the SR1 form – Save your details – – Sen
                                 Role
                             </dt>
                             <dd class="govuk-summary-list__value">
-                                {% if data.yourRolename %}
-                                {{ data.yourRolename }}
-                              {% else %}
-                                {{ data.yourRole }}
-                              {% endif %}
+                               
+
+   <p class="govuk-body">Consultant</p>
+
+
                             </dd>
                             <dd class="govuk-summary-list__actions">
-                                <a class="govuk-link" href="/live-version04/save-your-details/role">
+                                <a class="govuk-link" href="">
                                     Change<span class="govuk-visually-hidden"> your role</span>
                                 </a>
                             </dd>
@@ -63,8 +72,7 @@ Check your answers before sending the SR1 form – Save your details – – Sen
                                 Professional registration number
                             </dt>
                             <dd class="govuk-summary-list__value">
-                                {{data['HCPRegistrationNumber']}} {{data['HCPRegistrationnumbersaved']}}
-                            </dd>
+   <p class="govuk-body">1111111</p>                            </dd>
                             <dd class="govuk-summary-list__actions">
                                 <a class="govuk-link" href="">
                                     Change<span class="govuk-visually-hidden"> your professional registration
@@ -77,10 +85,10 @@ Check your answers before sending the SR1 form – Save your details – – Sen
                                 Organisation’s phone number
                             </dt>
                             <dd class="govuk-summary-list__value">
-                                {{data['HCPmobileNumber']}} 
+                                  {% if data.HCPmobileNumber %}    {{ data.HCPmobileNumber }}  {% else %}    <span class="govuk-body">07546352622</span>  {% endif %}
                             </dd>
                             <dd class="govuk-summary-list__actions">
-                                <a class="govuk-link" href="/live-version04/save-your-details/organisation-phone-number">
+                                <a class="govuk-link" href="/live-version04/confirm-details/organisation-phone-number">
                                     Change<span class="govuk-visually-hidden"> your phone number</span>
                                 </a>
                             </dd>

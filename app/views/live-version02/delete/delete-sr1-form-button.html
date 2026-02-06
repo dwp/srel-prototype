@@ -6,7 +6,7 @@ Are you sure you want to delete your details? – Check your details – Send an
 
 {% block content %}
 <div class="govuk-grid-row">
-    <div class="govuk-grid-column-two-thirds">
+    <div class="govuk-grid-column-three-quarters">
         <form id="sendAnSR1Form" action="/live-version02/dashboard/your-account-deleted" method="post">
             <div class="govuk-form-group">
                 <fieldset class="govuk-fieldset">
@@ -27,6 +27,7 @@ Are you sure you want to delete your details? – Check your details – Send an
   <thead class="govuk-table__head">
     <tr class="govuk-table__row">
       <th scope="col" class="govuk-table__header">Application for</th>
+      <th scope="col" class="govuk-table__header">Date of birth</th>
       <th scope="col" class="govuk-table__header govuk-table__header">Started on</th>
       <th scope="col" class="govuk-table__header govuk-table__header">Expires</th>
 
@@ -35,6 +36,7 @@ Are you sure you want to delete your details? – Check your details – Send an
   <tbody class="govuk-table__body">
     <tr class="govuk-table__row">
       <th scope="row" class="govuk-table__header"> {{data['PatientFirstName']}} {{data['PatientLastName']}} </th>
+            <td class="govuk-table__cell govuk-table__cell"> {{data['patientdateofbirthday']}}/{{data['patientdateofbirthmonth']}}/{{data['patientdateofbirthyear']}} </td>
       <td class="govuk-table__cell govuk-table__cell">01 October 2025</td>
       <td class="govuk-table__cell govuk-table__cell">30 October 2025</td>
 
