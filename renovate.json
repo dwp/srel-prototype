@@ -1,5 +1,17 @@
 {
   "extends": [
     "local>dwp/secure-development/renovate-bot//shared-configs/dwp-health-configuration-override"
+  ],
+  "packageRules": [
+    {
+      "description": "Bundle all major version updates into one MR",
+      "groupName": "Bundled_major_updates",
+      "matchUpdateTypes": ["major", "rollback", "replacement"]
+    },
+    {
+      "description": "Bundle all minor, patch version updates into one MR",
+      "groupName": "Bundled_minor_updates",
+      "matchUpdateTypes": ["minor", "patch", "pin", "digest", "pinDigest"]
+    }
   ]
 }
