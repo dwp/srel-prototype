@@ -50,13 +50,23 @@ What is the patient’s date of birth? – Send an SR1 medical evidence form –
               </div>
 
             <!-- Submit button -->
-            <div class="govuk-button-group" style="align-items: normal;">
-                <button id="" class="govuk-button" data-module="govuk-button" onclick="savePatientBirthSR1Formliveversion02()">
-                  Save and continue
-              </button>
-              <br>
-            </div>
-        </form>
+<br>
+
+
+
+
+<input type="hidden" >
+<button type="submit" onclick="savePatientBirthSR1Formliveversion02()"
+class="govuk-button js-flash-on-save"
+data-module="govuk-button"
+data-flash="draft-saved">
+Save and continue
+</button>
+</form>
+
+    
+
+       
 
 
 
@@ -104,5 +114,19 @@ What is the patient’s date of birth? – Send an SR1 medical evidence form –
     }
 </script>
 
+<script>
+(function () {
+// Progressive enhancement: attach to all "flash" save buttons
+var btns = document.querySelectorAll('.js-flash-on-save[data-flash]');
+btns.forEach(function (btn) {
+btn.addEventListener('click', function () {
+try {
+// Store the banner reason (e.g., 'draft-saved')
+sessionStorage.setItem('sr1Flash', btn.getAttribute('data-flash') || 'draft-saved');
+} catch (e) { /* storage blocked — safe to ignore */ }
+}, { capture: true }); // capture ensures it runs before form submission/redirect
+});
+})();
+</script>
 
 {% endblock %}

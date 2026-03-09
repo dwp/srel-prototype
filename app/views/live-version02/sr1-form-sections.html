@@ -28,29 +28,17 @@ SR1 form – Send an SR1 medical evidence form – GOV.UK
 
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
-    <div class="govuk-notification-banner" role="region" aria-labelledby="govuk-notification-banner-title"
-      data-module="govuk-notification-banner">
-      <div class="govuk-notification-banner__header">
-        <h2 class="govuk-notification-banner__title" id="govuk-notification-banner-title">
-          Important
-        </h2>
-      </div>
-      <div class="govuk-notification-banner__content">
-        <p class="govuk-notification-banner__heading">
-          If you sign out your answers will be deleted.
-        </p>
-        <p class="govuk-body">
-          You will be signed out if you do not do anything for 30 minutes.
-        </p>
-      </div>
-    </div>
+
+
+<div id="sr1-flash-banner"></div>
+
 
     <div class="govuk-grid-row">
       <div class="govuk-grid-column-full">
         <h1 class="govuk-heading-l">SR1 form sections</h1>
   
 <p class="govuk-body">
-  Complete as much of the application as possible. If you do not have all the information, you can <a href="/live-version02/dashboard/your-account-saved" class="govuk-link">save and complete later</a>.
+  You can complete this form now or <a href="/live-version02/dashboard/your-account-saved" class="govuk-link">return to your account and complete it later</a>.
 </p>
 
 
@@ -104,7 +92,7 @@ SR1 form – Send an SR1 medical evidence form – GOV.UK
  <ul class="govuk-task-list">
    <li class="govuk-task-list__item govuk-task-list__item--with-link" id="patientDiagnosis">
      <div class="govuk-task-list__name-and-hint" id="Diagnosis-link-notstarted">
-       <a class="govuk-link govuk-task-list__link" href=""
+       <a class="govuk-link govuk-task-list__link" href="/live-version02/diagnosis/details"
          aria-describedby="patientDiagnosis-status-notstarted">
          Complete diagnosis
        </a>
@@ -154,7 +142,7 @@ SR1 form – Send an SR1 medical evidence form – GOV.UK
         <ul class="govuk-task-list">
           <li class="govuk-task-list__item govuk-task-list__item--with-link" id="patientClinicalFeatures">
             <div id="ClinicalFeatTreatment-link-notstarted" class="govuk-task-list__name-and-hint">
-              <a class="govuk-link govuk-task-list__link" href=""
+              <a class="govuk-link govuk-task-list__link" href="clinical-features-treatment/clinical-features"
                 aria-describedby="ClinicalFeatTreatment-status-notstarted">
                 Complete clinical features, treatment, and care
               </a>
@@ -189,7 +177,7 @@ SR1 form – Send an SR1 medical evidence form – GOV.UK
         <ul class="govuk-task-list">
           <li class="govuk-task-list__item govuk-task-list__item--with-link" id="name">
             <div id="yourDetails-link-notstarted" class="govuk-task-list__name-and-hint">
-              <a class="govuk-link govuk-task-list__link" href=""
+              <a class="govuk-link govuk-task-list__link" href="/live-version02/your-details/confirm-your-name"
                 aria-describedby="add-your-details">
                 Add your details
               </a>
@@ -210,8 +198,7 @@ SR1 form – Send an SR1 medical evidence form – GOV.UK
               (data['HCPfirstname'] and data['HCPfirstname'] != '') and
               (data['HCPlastname'] and data['HCPlastname'] != '') and
               (data['HCPRegistrationNumber'] and data['HCPRegistrationNumber'] != '') and
-              (data['HCPmobileNumber'] and data['HCPmobileNumber'] != '') and
-              (data['saveyourdetails'] and data['saveyourdetails'] != '')
+              (data['HCPmobileNumber'] and data['HCPmobileNumber'] != '') 
             )%}
        <div class="govuk-task-list__status" id="application-details-1-status">
       Completed
@@ -260,7 +247,7 @@ SR1 form – Send an SR1 medical evidence form – GOV.UK
               <li class="govuk-task-list__item govuk-task-list__item--with-link" id="send-sr1">
                 {% if formComplete %}
                   <div class="govuk-task-list__name-and-hint">
-                    <a class="govuk-link govuk-task-list__link" href="" aria-describedby="sr1-send-status-notstarted">
+                    <a class="govuk-link govuk-task-list__link" href="check-your-answers-b.html" aria-describedby="sr1-send-status-notstarted">
                       Check your answers
                     </a>
                   </div>
@@ -312,6 +299,33 @@ SR1 form – Send an SR1 medical evidence form – GOV.UK
         </div>
             </div>
         </section>
+
+
+<script>
+(function () {
+try {
+var flag = sessionStorage.getItem('sr1Flash');
+if (!flag) return;
+sessionStorage.removeItem('sr1Flash');
+
+var el = document.getElementById('sr1-flash-banner');
+if (!el) return;
+
+el.innerHTML =
+'<div role="region" class="moj-alert moj-alert--success" aria-label="success" data-module="moj-alert">' +
+' <div>' +
+' <svg class="moj-alert__icon" role="presentation" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30" height="30" width="30">' +
+' <path d="M11.2869 24.6726L2.00415 15.3899L4.62189 12.7722L11.2869 19.4186L25.3781 5.32739L27.9958 7.96369L11.2869 24.6726Z" fill="currentColor" />' +
+' </svg>' +
+' </div>' +
+' <div class="moj-alert__content">Your SR1 form has been saved as a draft to your account.</div>' +
+'</div>';
+} catch (e) { /* ignore */ }
+})();
+</script>
+
+
+
 
   </div>
 

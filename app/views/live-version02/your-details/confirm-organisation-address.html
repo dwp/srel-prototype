@@ -7,7 +7,7 @@ Confirm your organisation’s address – Send an SR1 medical evidence form – 
 {% block content %}
 <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
-        <form id="sendAnSR1Form" action="/confirm-organisation-address-options" method="post">
+        <form id="sendAnSR1Form" action="" method="post">
             <div class="govuk-width-container">
                 <div class="govuk-form-group">
                     <h1 class="govuk-heading-l">
@@ -20,24 +20,33 @@ Confirm your organisation’s address – Send an SR1 medical evidence form – 
                 </div>
 
                 <!-- Submit button -->
-                <div class="govuk-button-group">
-                    <button id="" class="govuk-button" data-module="govuk-button"
-                        onclick="saveAddressliveversion01(); resetChangeFn();">Use this address</button>
-                    <!--<a class="govuk-link" onclick="saveAndLeave()" style="color:#1d70b8;"
-                        aria-label="Return to SR1 form sections">Return to SR1 form sections</a>-->
-                </div>
-                <div class="govuk-form-group">
-                    <label class="govuk-label" for="use-different-address"><a id="different-address-link" class="govuk-link"
-                            rel="external" href="/live-version01/your-details/organisation-address-results">Use a different address</a></label>
-                </div>
-                <div class="govuk-form-group">
-                    <label class="govuk-label" for="cannot-find-address"><a id="postcode-finder-link" class="govuk-link"
-                            rel="external" onclick="enterOrgAddressManually()" href="/live-version01/your-details/enter-organisation-address">Enter
+        
+
+
+
+         </form>
+
+        <br>
+
+      <form method="post" action="/live-version02/sr1-form-sections" style="display:inline;">
+<input type="hidden" name="patientAddressComplete" value="yes">
+<button type="submit"
+ onclick="saveAddressliveversion02(); resetChangeFn();"
+class="govuk-button js-flash-on-save"
+data-module="govuk-button"
+data-flash="draft-saved">
+Save and continue
+</button>
+</form>
+           
+
+<br>
+                     <div class="govuk-form-group">
+                    <label class="govuk-label" for="cannotfindaddress"><a id="postcodefinderlink" class="govuk-link"
+                            rel="external" onclick="enterOrgAddressManually()" href="/live-version02/your-details/enter-organisation-address">Enter
                             your organiation’s address
                             manually</a></label>
                 </div>
-            </div>
-        </form>
         <div class="govuk-!-padding-bottom-6"></div>
 
         <!--Get help new-->
@@ -76,4 +85,23 @@ Confirm your organisation’s address – Send an SR1 medical evidence form – 
             .replace(url.toString());
     }
 </script>
+
+
+<script>
+(function () {
+// Progressive enhancement: attach to all "flash" save buttons
+var btns = document.querySelectorAll('.js-flash-on-save[data-flash]');
+btns.forEach(function (btn) {
+btn.addEventListener('click', function () {
+try {
+// Store the banner reason (e.g., 'draft-saved')
+sessionStorage.setItem('sr1Flash', btn.getAttribute('data-flash') || 'draft-saved');
+} catch (e) { /* storage blocked — safe to ignore */ }
+}, { capture: true }); // capture ensures it runs before form submission/redirect
+});
+})();
+</script>
+
+
+
 {% endblock %}

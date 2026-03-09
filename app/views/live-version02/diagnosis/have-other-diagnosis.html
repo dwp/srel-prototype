@@ -5,7 +5,7 @@ Does the patient have other relevant diagnosis? – Send an SR1 medical evidence
 {% endblock %}
 
 {% block content %}
-<form class="form" action="/live-version01/diagnosis/have-other-diagnosis-answer" method="post" id="relevant-diagnosis-form" name="RelevantDiagnosisform">
+<form class="form" action="/live-version02/diagnosis/have-other-diagnosis-answer" method="post" id="relevant-diagnosis-form" name="RelevantDiagnosisform">
     <div class="govuk-form-group">
       <fieldset class="govuk-fieldset">
         <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
@@ -67,9 +67,48 @@ Does the patient have other relevant diagnosis? – Send an SR1 medical evidence
         </div>
       </fieldset>
     </div>
-  
-    <div class="govuk-button-group">
-      <button type="submit" class="govuk-button" data-module="govuk-button">Continue</button>
+ 
+
+
+ <div class="govuk-button-group" style="align-items: normal;">
+                <button id="" class="govuk-button" data-module="govuk-button" onclick="saveClinical-Features-detailsSR1Formliveversion02()">
+                  Continue
+              </button>
+              <a href="/live-version02/dashboard/your-account-saved"> <button type="button" id="" class="govuk-button govuk-button--secondary" data-module="govuk-button" onclick="saveClinical-Features-detailsSR1Formliveversion02()">
+                  Save and complete later
+              </button></a> 
+              <br>
+            </div>
+        </form>
+
+        <p class="govuk-body"><a class="govuk-link" onclick="saveAndLeave()" style="color:#1d70b8;"
+                    aria-label="Return to SR1 form sections" href="/live-version02/sr1-form-sections">Return to SR1 form sections</a></p>
+
+                     <div class="govuk-!-padding-bottom-6"></div>
+
+        <!--Get help new-->
+        <hr class="govuk-section-break govuk-section-break--visible" aria-hidden="true">
+        <section class="govuk-width-container govuk-!-margin-top-7 govuk-!-margin-bottom-7 ">
+            <div class="govuk-grid-row">
+                <div class="govuk-grid-column-full">
+                    <h2 class="govuk-heading-m">Get help</h2>
+                    <p class="govuk-body">Email: <a class="govuk-link"
+                            href="mailto:online.sr1@dwp.gov.uk">online.sr1@dwp.gov.uk</a></p>
+                    <p class="govuk-body">We aim to respond within 3 working days.</p>
+                </div>
+                        <!--Feedback-->
+            </div>
+            <h2 class="govuk-heading-m">Feedback</h2>
+            <p class=govuk-body><a
+                    href="https://forms.office.com/Pages/ResponsePage.aspx?id=DpxP-knna0i8NIr6EGM3VupINvg8uK9KqwdHnbpPR49UNk5RTE1BQ0JXUEJFVTM5OUs4VFNQM1FINS4u">What
+                    did you think of this service?</a></p>
+    
+        </div>
+            </div>
+        </section>
+
     </div>
-  </form>
+
+</div>
+
 {% endblock %}

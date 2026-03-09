@@ -5,7 +5,7 @@ Is the patient aware of their prognosis? â€“ Send an SR1 medical evidence form â
 {% endblock %}
 
 {% block content %}
-<form class="form" action="/live-version01/sr1-form-sections" method="post" id="prognosis-awareness-form" name="Pronosisawareness-form">
+<form class="form" action="/live-version02/sr1-form-sections" method="post" id="prognosis-awareness-form" name="Pronosisawareness-form">
     <div class="govuk-form-group">
       <fieldset class="govuk-fieldset">
         <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
@@ -67,14 +67,24 @@ Is the patient aware of their prognosis? â€“ Send an SR1 medical evidence form â
       </fieldset>
     </div>
   
-    <div class="govuk-button-group">
-      <button type="submit" class="govuk-button" data-module="govuk-button">Continue</button>
-      <a class="govuk-link" href="#" onclick="savePrognosisAndLeave()" aria-label="Return to SR1 form sections">
-        Return to SR1 form sections
-      </a>
-    </div>
+ 
+
+        <div class="govuk-button-group" style="align-items: normal;"><input type="hidden" name="patientAddressComplete" value="yes">
+               <button type="submit" onclick="savePrognosisAndLeave()"
+class="govuk-button js-flash-on-save"
+data-module="govuk-button"
+data-flash="draft-saved">
+                  Save and continue
+              </button>
+              <a href="/live-version02/dashboard/your-account-saved"> <button type="button" id="" class="govuk-button govuk-button--secondary" data-module="govuk-button" onclick="savePrognosisAndLeave()">
+                  Save and complete later
+              </button></a> 
+              <br>
+            </div>
   </form>
-  
+           <p class="govuk-body"><a class="govuk-link" onclick="saveAndLeave()" style="color:#1d70b8;"
+                    aria-label="Return to SR1 form sections" href="/live-version02/sr1-form-sections">Return to SR1 form sections</a></p>
+        <div class="govuk-!-padding-bottom-6"></div>
 
         <!--Get help new-->
         <hr class="govuk-section-break govuk-section-break--visible" aria-hidden="true">
@@ -100,5 +110,20 @@ Is the patient aware of their prognosis? â€“ Send an SR1 medical evidence form â
     </div>
 
 </div>
+
+<script>
+(function () {
+// Progressive enhancement: attach to all "flash" save buttons
+var btns = document.querySelectorAll('.js-flash-on-save[data-flash]');
+btns.forEach(function (btn) {
+btn.addEventListener('click', function () {
+try {
+// Store the banner reason (e.g., 'draft-saved')
+sessionStorage.setItem('sr1Flash', btn.getAttribute('data-flash') || 'draft-saved');
+} catch (e) { /* storage blocked â€” safe to ignore */ }
+}, { capture: true }); // capture ensures it runs before form submission/redirect
+});
+})();
+</script>
 
 {% endblock %} 

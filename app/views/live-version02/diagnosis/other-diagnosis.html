@@ -7,7 +7,7 @@ What are the other relevant diagnosis? – Send an SR1 medical evidence form –
 {% block content %}
 <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
-        <form id="sendAnSR1Form" action="/live-version01/diagnosis/aware-of-diagnosis" method="post">
+        <form id="sendAnSR1Form" action="/live-version02/diagnosis/aware-of-diagnosis" method="post">
             <div class="govuk-form-group">
                 <fieldset class="govuk-fieldset">
                     <legend class="govuk-fieldset__legend govuk-fieldset__legend--l" for="Relevant-Diagnosis-input">
@@ -41,14 +41,26 @@ What are the other relevant diagnosis? – Send an SR1 medical evidence form –
             </div>
 
             <!-- Submit button -->
-            <div class="govuk-button-group">
-                <button id="" class="govuk-button" data-module="govuk-button"
-                    onclick="saveOtherDiagnosisSR1Formliveversion01()">Continue</button>
-                <a class="govuk-link" onclick="saveAndLeave()" style="color:#1d70b8;"
-                    aria-label="Return to SR1 form sections" href="/live-version01/usertestingoption">Return to SR1 form sections</a>
+
+
+
+         <div class="govuk-button-group" style="align-items: normal;">
+                <button id="" class="govuk-button" data-module="govuk-button" onclick="saveOtherDiagnosisSR1Formliveversion02()">
+                  Continue
+              </button>
+              <a href="/live-version02/dashboard/your-account-saved"> <button type="button" id="" class="govuk-button govuk-button--secondary" data-module="govuk-button" onclick="saveOtherDiagnosisSR1Formliveversion02()">
+                  Save and complete later
+              </button></a> 
+              <br>
             </div>
         </form>
+
+        <p class="govuk-body"><a class="govuk-link" onclick="saveAndLeave()" style="color:#1d70b8;"
+                    aria-label="Return to SR1 form sections" href="/live-version02/sr1-form-sections">Return to SR1 form sections</a></p>
         <div class="govuk-!-padding-bottom-6"></div>
+
+
+
 
         <!--Get help new-->
         <hr class="govuk-section-break govuk-section-break--visible" aria-hidden="true">
