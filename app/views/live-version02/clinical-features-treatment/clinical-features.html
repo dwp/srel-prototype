@@ -7,7 +7,7 @@ Clinical features – Send an SR1 medical evidence form – GOV.UK
 {% block content %}
 <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
-        <form id="sendAnSR1Form" action="/live-version02/clinical-features-treatment/treatment" method="post">
+        <form id="sendAnSR1Form" action="" method="post">
             <div class="govuk-form-group">
                 <fieldset class="govuk-fieldset">
                     <legend class="govuk-fieldset__legend govuk-fieldset__legend--l" for="Clinical-Features-details">
@@ -43,18 +43,46 @@ Clinical features – Send an SR1 medical evidence form – GOV.UK
             
                             </fieldset>
             </div>
-
+    </form>
+    </form>
             <!-- Submit button -->
-              <div class="govuk-button-group" style="align-items: normal;">
-                <button id="" class="govuk-button" data-module="govuk-button" onclick="saveClinical-Features-detailsSR1Formliveversion02()">
-                  Continue
-              </button>
-              <a href="/live-version02/dashboard/your-account-saved"> <button type="button" id="" class="govuk-button govuk-button--secondary" data-module="govuk-button" onclick="saveClinical-Features-detailsSR1Formliveversion02()">
-                  Save and complete later
-              </button></a> 
-              <br>
-            </div>
-        </form>
+         <div class="govuk-button-group" style="align-items: normal;">
+
+<!-- Continue button (runs save function then navigates) -->
+<button 
+type="button" 
+class="govuk-button" 
+data-module="govuk-button"
+onclick="saveClinicalFeaturesAndGoNext()">
+Continue
+</button>
+
+<!-- Save and complete later (global handler will intercept this) -->
+<button 
+type="button" 
+class="govuk-button govuk-button--secondary js-save-later" 
+data-module="govuk-button"
+onclick="saveClinicalFeaturesOnly()">
+Save and complete later
+</button>
+
+</div>
+
+<script>
+function saveClinicalFeaturesOnly() {
+const id = sessionStorage.getItem("activeDraftId");
+if (!id) return;
+const val = document.getElementById("Clinical-Features-details").value;
+localStorage.setItem(`sr1_${id}_clinicalFeatures`, val);
+}
+
+function saveClinicalFeaturesAndGoNext() {
+saveClinicalFeaturesOnly();
+window.location.href = "/live-version02/clinical-features-treatment/treatment";
+}
+</script>
+
+           
 
         <p class="govuk-body"><a class="govuk-link" onclick="saveAndLeave()" style="color:#1d70b8;"
                     aria-label="Return to SR1 form sections" href="/live-version02/sr1-form-sections">Return to SR1 form sections</a></p>

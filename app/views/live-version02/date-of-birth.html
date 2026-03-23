@@ -129,4 +129,61 @@ sessionStorage.setItem('sr1Flash', btn.getAttribute('data-flash') || 'draft-save
 })();
 </script>
 
+
+<script>
+function savePatientBirthSR1Formliveversion02() {
+// Get form values
+const dob = {
+day: document.getElementById("patient-dateofbirth-day").value,
+month: document.getElementById("patient-dateofbirth-month").value,
+year: document.getElementById("patient-dateofbirth-year").value,
+};
+
+// Retrieve patient name if you already captured it earlier in the journey:
+const firstName = localStorage.getItem("patientFirstName") || "Unknown";
+const lastName = localStorage.getItem("patientLastName") || "Patient";
+
+// Build a draft SR1 object
+const draft = {
+firstName,
+lastName,
+dob: `${dob.day}/${dob.month}/${dob.year}`,
+created: new Date().toISOString(),
+expires: new Date(Date.now() + 30*24*60*60*1000).toISOString()
+};
+
+// Get existing drafts
+let drafts = JSON.parse(localStorage.getItem("sr1Drafts") || "[]");
+
+// Add new draft
+drafts.push(draft);
+
+// Save back
+localStorage.setItem("sr1Drafts", JSON.stringify(drafts));
+}
+</script>
+
+<script>
+(function () {
+if (window.location.search.includes("new=1")) {
+
+// Remove persisted DOB fields from localStorage
+localStorage.removeItem('patientdateofbirthday');
+localStorage.removeItem('patientdateofbirthmonth');
+localStorage.removeItem('patientdateofbirthyear');
+localStorage.removeItem('patientdateofbirth');
+
+// Clear the inputs directly (overrides Nunjucks prefill)
+const d = document.getElementById("patient-dateofbirth-day");
+const m = document.getElementById("patient-dateofbirth-month");
+const y = document.getElementById("patient-dateofbirth-year");
+
+if (d) d.value = "";
+if (m) m.value = "";
+if (y) y.value = "";
+}
+})();
+</script>
+
+
 {% endblock %}

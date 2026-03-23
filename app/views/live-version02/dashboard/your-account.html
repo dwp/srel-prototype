@@ -1,136 +1,252 @@
 {% extends "dashboard-layout" %}
-
 {% block pageTitle %}
 Account home
 {% endblock %}
-
 {% block content %}
+<div class="govuk-grid-row">
+<div class="govuk-grid-column-full">
 
+<div id="flashContainer"></div>
+
+<!-- Flash for SAVED -->
+<script>
+(function () {
+try {
+var flag = sessionStorage.getItem('sr1Flash');
+if (!flag) return;
+sessionStorage.removeItem('sr1Flash');
+var container = document.getElementById('flashContainer');
+if (!container) return;
+container.innerHTML = `
+<div role="region" class="moj-alert moj-alert--success" aria-label="success" data-module="moj-alert">
+<div>
+<svg class="moj-alert__icon" role="presentation" focusable="false"
+xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30" height="30" width="30">
+<path d="M11.2869 24.6726L2.00415 15.3899L4.62189 12.7722L11.2869 19.4186L25.3781 5.32739L27.9958 7.96369L11.2869 24.6726Z"
+fill="currentColor"/>
+</svg>
+</div>
+<div class="moj-alert__content">
+Your SR1 form has been saved to your account so you can complete it later.
+</div>
+</div>`;
+} catch (e) { }
+})();
+</script>
+
+<!-- Flash for DELETED -->
+<script>
+(function () {
+try {
+if (!sessionStorage.getItem('sr1FlashDelete')) return;
+sessionStorage.removeItem('sr1FlashDelete');
+const container = document.getElementById('flashContainer');
+if (!container) return;
+container.innerHTML = `
+<div role="region" class="moj-alert moj-alert--success"
+aria-label="success" data-module="moj-alert">
+<div>
+<svg class="moj-alert__icon" role="presentation" focusable="false"
+xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30"
+height="30" width="30">
+<path d="M11.2869 24.6726L2.00415 15.3899L4.62189 12.7722L11.2869 19.4186L25.3781 5.32739L27.9958 7.96369L11.2869 24.6726Z"
+fill="currentColor"/>
+</svg>
+</div>
+<div class="moj-alert__content">
+Your SR1 form has been deleted from your account.
+</div>
+</div>`;
+} catch (e) { }
+})();
+</script>
+
+<br>
+
+<h1 class="govuk-heading-xl">
+<span id="fullName" class="govuk-caption-l"></span>
+<span>Your account</span>
+</h1>
+
+<!-- ACTION CARDS -->
+<div class="govuk-form-group">
+<div class="govuk-!-padding-bottom-6"></div>
+
+<h2 class="govuk-heading-l govuk-visually-hidden">Your SR1 forms and settings</h2>
 
 <div class="govuk-grid-row">
-    <div class="govuk-grid-column-full">
 
-        <!-- <h1 class="govuk-heading-xl">
-                Your SR1 forms
-                <p class="govuk-body">
-                    <span id="fullName"></span>
-                    <span class="govuk-caption-m">GMC number: <span id="professionalRegistrationNumber"></span></span>
-                </p>
-            </h1> -->
+<!-- START NEW SR1 -->
+<div class="govuk-grid-column-one-third govuk-!-margin-bottom-5">
+<div class="card govuk-!-padding-5"
+style="height:180px;color:white;border:1px solid #b1b4b6;border-bottom-width:4px;">
+<h3 class="govuk-heading-m">
+<a href="/live-version02/name?new=1" class="govuk-link js-new-sr1">Start a new SR1 form</a>
+</h3>
+<p class="govuk-body">Start a new SR1 form for a patient.</p>
+</div>
+</div>
 
+<!-- EXISTING CARD LOGIC (UNCHANGED) -->
+{% if (
+(not data['HCPfirstname'] or data['HCPfirstname'] == '') and
+(not data['HCPlastname'] or data['HCPlastname'] == '') and
+(not data['HCPRegistrationNumber'] or data['HCPRegistrationNumber'] == '') and
+(not data['HCPmobileNumber'] or data['HCPmobileNumber'] == '') and
+(not data['saveYourDetails'] or data['saveYourDetails'] == '')
+) %}
+<div class="govuk-grid-column-one-third govuk-!-margin-bottom-5">
+<div class="card govuk-!-padding-5"
+style="height:180px;color:white;border:1px solid #b1b4b6;border-bottom-width:4px;">
+<h3 class="govuk-heading-m"><a href="" class="govuk-link">Save your details</a></h3>
+<p class="govuk-body">If you save your details, we will add them to all of your SR1 forms.</p>
+</div>
+</div>
+{% else %}
+<div class="govuk-grid-column-one-third govuk-!-margin-bottom-5">
+<div class="card govuk-!-padding-5"
+style="height:180px;color:white;border:1px solid #b1b4b6;border-bottom-width:4px;">
+<h3 class="govuk-heading-m"><a href="" class="govuk-link">Check your details</a></h3>
+<p class="govuk-body">View, update or delete your details.</p>
+</div>
+</div>
+{% endif %}
+</div>
+</div>
 
-        <h1 class="govuk-heading-xl">
-            <span id="fullName" class="govuk-caption-l"></span>
+<hr class="govuk-section-break govuk-section-break--visible" aria-hidden="true">
 
-            <span>Your account</span>
-        </h1>
-
-        <!-- Body -->
-        <div class="govuk-form-group">
-
-            <!-- <pre>TODO: </pre>
-                    <p class="govuk-body">Jack's new 'best of both' version will go here.</p> -->
-
-            <!-- Select action -->
-
-
-            <div class="govuk-!-padding-bottom-6"></div>
-
-            <!-- Warning text -->
-
-
-            <!-- Select action -->
-            <h2 class="govuk-heading-l govuk-visually-hidden">Your SR1 forms and settings</h2>
-            <div class="govuk-grid-row">
-
-
-                <div class="govuk-grid-column-one-third govuk-!-margin-bottom-5">
-                    <div class="card govuk-!-padding-5"
-                        style="height: 180px; color:white; border: 1px solid #b1b4b6; border-bottom-width: 4px;">
-
-                        <h3 class="govuk-heading-m">
-                            <a href="/live-version02/name" class="govuk-link">Start
-                                a new SR1 form</a>
-                        </h3>
-                        <p class="govuk-body">Start a new SR1 form for a patient.</p>
-                    </div>
-                </div>
-
-
-
-
-                {% if (
-                (not data['HCPfirstname'] or data['HCPfirstname'] == '') and
-                (not data['HCPlastname'] or data['HCPlastname'] == '') and
-                (not data['HCPRegistrationNumber'] or data['HCPRegistrationNumber'] == '') and
-                (not data['HCPmobileNumber'] or data['HCPmobileNumber'] == '') and
-                (not data['saveYourDetails'] or data['saveYourDetails'] == '')
-                )%}
-
-                <div class="govuk-grid-column-one-third govuk-!-margin-bottom-5">
-                    <div class="card govuk-!-padding-5"
-                        style="height: 180px; color:white; border: 1px solid #b1b4b6; border-bottom-width: 4px;">
-                        <h3 class="govuk-heading-m"><a href=""
-                                class="govuk-link">Save your details </a></h3>
-                        <p class="govuk-body">If you save your details, we will add them to all of your SR1 forms.</p>
-                    </div>
-                </div>
-
-                {% else %}
-
-                <div class="govuk-grid-column-one-third govuk-!-margin-bottom-5">
-                    <div class="card govuk-!-padding-5"
-                        style="height: 180px; color:white; border: 1px solid #b1b4b6; border-bottom-width: 4px;">
-                        <h3 class="govuk-heading-m"><a href=""
-                                class="govuk-link">Check your details</a></h3>
-                        <p class="govuk-body">View, update or delete your details.</p>
-                    </div>
-                </div>
-
-                {% endif %}
-
-            </div>
-
-
-
-
-
-        </div>
-
-
-        <hr class="govuk-section-break govuk-section-break--visible" aria-hidden="true">
-
-
-
-<br>
-<br>
+<br><br>
 <h1 class="govuk-heading-l">Your draft SR1 forms</h1>
-<p class="govuk-body">You have no saved draft forms.</p>
 
-<br>
-<br>
+<div id="draftContainer"></div>
 
-        <!--Get help new-->
-        <hr class="govuk-section-break govuk-section-break--visible" aria-hidden="true">
-        <section class="govuk-width-container govuk-!-margin-top-7 govuk-!-margin-bottom-7 ">
-              <div class="govuk-grid-row">
-                <div class="govuk-grid-column-full">
-                    <h2 class="govuk-heading-m">Get help</h2>
-               <p class="govuk-body"><a class="govuk-link"
-                    href="/live-version02/contact/contact-us-2.html">Contact DWP</a> if you have questions about sending an SR1 form.</p>
-                </div>
-                        <!--Feedback-->
-            </div>
-            <br>
-            <h2 class="govuk-heading-m">Feedback</h2>
-            <p class=govuk-body><a
-                    href="https://forms.office.com/Pages/ResponsePage.aspx?id=DpxP-knna0i8NIr6EGM3VupINvg8uK9KqwdHnbpPR49UNk5RTE1BQ0JXUEJFVTM5OUs4VFNQM1FINS4u">What
-                    did you think of this service?</a></p>
+<!-- RENDER DRAFTS + DELETE LINK HANDLING -->
+<script>
+function renderDrafts() {
+const container = document.getElementById("draftContainer");
+const draftsRaw = JSON.parse(localStorage.getItem("sr1Drafts") || "[]");
+const drafts = [...draftsRaw].sort((a, b) => new Date(b.created) - new Date(a.created));
 
-    </div>
+function formatUK(dateString) {
+const d = new Date(dateString);
+return `${String(d.getDate()).padStart(2, "0")}/${String(d.getMonth() + 1).padStart(2, "0")}/${d.getFullYear()}`;
+}
+
+// Capture deletion target
+document.addEventListener('click', function (evt) {
+if (evt.target.matches('.js-delete-draft')) {
+const id = evt.target.getAttribute('data-id');
+sessionStorage.setItem('deleteDraftId', id);
+}
+});
+
+if (drafts.length === 0) {
+container.innerHTML = `<p class="govuk-body">You have no saved draft forms.</p>`;
+return;
+}
+
+let html = `
+<p class="govuk-body">These are forms you have started but not sent.<br><br>
+When you start a form, you have <b>30 days</b> to send it.</p><br>
+<table class="govuk-table">
+<thead>
+<tr class="govuk-table__row">
+<th class="govuk-table__header">Application for</th>
+<th class="govuk-table__header">Date of birth</th>
+<th class="govuk-table__header">Started on</th>
+<th class="govuk-table__header">Expires</th>
+<th class="govuk-table__header">Next steps</th>
+</tr>
+</thead>
+<tbody>
+`;
+
+drafts.forEach((d) => {
+html += `
+<tr class="govuk-table__row">
+<th class="govuk-table__header">${d.firstName} ${d.lastName}</th>
+<td class="govuk-table__cell">${d.dob}</td>
+<td class="govuk-table__cell">${formatUK(d.created)}</td>
+<td class="govuk-table__cell">${formatUK(d.expires)}</td>
+<td class="govuk-table__cell">
+<div style="display:flex;gap:25px;align-items:center;">
+<a href="/live-version02/sr1-form-sections"
+class="govuk-link govuk-link--no-visited-state js-continue-draft"
+data-id="${d.created}">
+Continue
+</a>
+
+
+<a href="/live-version02/delete/delete-sr1-form-button"
+class="govuk-link govuk-link--no-visited-state js-delete-draft"
+data-id="${d.created}" style="margin-left: 40px;">
+Delete
+</a>
 </div>
+</td>
+</tr>
+`;
+});
+
+html += `</tbody></table>`;
+container.innerHTML = html;
+}
+
+renderDrafts();
+</script>
+
+<br><br>
+
+<!-- HELP & FEEDBACK -->
+<hr class="govuk-section-break govuk-section-break--visible" aria-hidden="true">
+<section class="govuk-width-container govuk-!-margin-top-7 govuk-!-margin-bottom-7 ">
+<div class="govuk-grid-row">
+<div class="govuk-grid-column-full">
+<h2 class="govuk-heading-m">Get help</h2>
+<p class="govuk-body"><a class="govuk-link"
+href="/live-version02/contact/contact-us-2.html">Contact DWP</a> if you have questions about sending
+an SR1 form.</p>
+</div>
+</div>
+
+<br>
+
+<h2 class="govuk-heading-m">Feedback</h2>
+<p class="govuk-body">
+<a href="https://forms.office.com/Pages/ResponsePage.aspx?id=DpxP-knna0i8NIr6EGM3VupINvg8uK9KqwdHnbpPR49UNk5RTE1BQ0JXUEJFVTM5OUs4VFNQM1FINS4u">
+What did you think of this service?
+</a>
+</p>
 </section>
+
 </div>
 </div>
-</div>
+
+<script>
+document.addEventListener('click', function(e){
+const link = e.target.closest('.js-continue-draft');
+if (!link) return;
+
+const id = link.getAttribute('data-id');
+
+// Set active draft
+sessionStorage.setItem("activeDraftId", id);
+
+}, {capture:true});
+</script>
+
+<script>
+document.addEventListener('click', function(evt){
+const link = evt.target.closest('.js-new-sr1');
+if (!link) return;
+
+// new draft ID
+const newId = Date.now().toString();
+sessionStorage.setItem("activeDraftId", newId);
+
+}, {capture:true});
+</script>
+
+
 {% endblock %}

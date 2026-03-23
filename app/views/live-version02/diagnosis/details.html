@@ -1,98 +1,120 @@
 {% extends "layout-gov-signed-in-live-version01.html" %}
-
 {% block pageTitle %}
 What is the patient’s diagnosis? – Send an SR1 medical evidence form – GOV.UK
 {% endblock %}
-
 {% block content %}
+
 <div class="govuk-grid-row">
-    <div class="govuk-grid-column-two-thirds">
-        <form id="sendAnSR1Form" action="/live-version02/diagnosis/date" method="post">
-            <div class="govuk-form-group">
-                <fieldset class="govuk-fieldset">
-                    <legend class="govuk-fieldset__legend govuk-fieldset__legend--l"
-                        for="the-diagnosis">
-                        <h1 class="govuk-label-wrapper">
-                            <!--<span class="govuk-caption-l">Question 1 of 6</span>-->
-                            <label class="govuk-label govuk-label--l" for="the-diagnosis">
-                                What is the patient’s diagnosis?
-                            </label>
-                        </h1>
-                    </legend>
-                    <!--<legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
-                        <span class="govuk-caption-l"> Question 1 of 6</span>
-                        <h1 class="govuk-fieldset__heading">
-                            What is the patient’s diagnosis?
-                        </h1>
-                    </legend>-->
+<div class="govuk-grid-column-two-thirds">
 
-                    <!-- What is the diagnosis? -->
-                    <div class="govuk-character-count" data-module="govuk-character-count" data-maxlength="350">
-                        <div class="govuk-form-group"> 
-                            <textarea class="govuk-textarea  govuk-js-character-count"
-                                 id="the-diagnosis" name="the-diagnosis" value="{{data['the-diagnosis']}}" rows="5"
-                                aria-describedby="whatIsTheDiagnosis-info">{{data['the-diagnosis']}}</textarea>
-                        </div>
-                        <div id="the-diagnosis-info" class="govuk-hint govuk-character-count__message">You can
-                            enter up to 350 characters</div>
-                    </div>
+<!-- START FORM -->
+<form method="post" action="/live-version02/diagnosis/date">
 
-                </fieldset>
-            </div>
+<div class="govuk-form-group">
+<fieldset class="govuk-fieldset">
 
-            <!-- Submit button -->
-         
+<legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+<h1 class="govuk-label-wrapper">
+<label class="govuk-label govuk-label--l" for="the-diagnosis">
+What is the patient’s diagnosis?
+</label>
+</h1>
+</legend>
 
-               <div class="govuk-button-group" style="align-items: normal;">
-                <button id="" class="govuk-button" data-module="govuk-button" onclick="saveDiagnosisSR1Formliveversion02()">
-                  Continue
-              </button>
-              <a href="/live-version02/dashboard/your-account-saved"> <button type="button" id="" class="govuk-button govuk-button--secondary" data-module="govuk-button" onclick="saveDiagnosisSR1Formliveversion02()">
-                  Save and complete later
-              </button></a> 
-              <br>
-            </div>
-        </form>
+<div class="govuk-character-count"
+data-module="govuk-character-count"
+data-maxlength="350">
 
-         <p class="govuk-body"><a class="govuk-link" onclick="saveAndLeave()" style="color:#1d70b8;"
-                    aria-label="Return to SR1 form sections" href="/live-version02/sr1-form-sections">Return to SR1 form sections</a></p>
-        <div class="govuk-!-padding-bottom-6"></div>
-
-        <!--Get help new-->
-        <hr class="govuk-section-break govuk-section-break--visible" aria-hidden="true">
-        <hr class="govuk-section-break govuk-section-break--visible" aria-hidden="true">
-        <section class="govuk-width-container govuk-!-margin-top-7 govuk-!-margin-bottom-7 ">
-            <div class="govuk-grid-row">
-                    <div class="govuk-grid-column-full">
-                    <h2 class="govuk-heading-m">Get help</h2>
-               <p class="govuk-body"><a class="govuk-link"
-                    href="/live-version02/contact/contact-us-2.html">Contact DWP</a> if you have questions about sending an SR1 form.</p>
-                </div>
-                        <!--Feedback-->
-            </div>
-            <br>
-            <h2 class="govuk-heading-m">Feedback</h2>
-            <p class=govuk-body><a
-                   href="https://forms.office.com/Pages/ResponsePage.aspx?id=DpxP-knna0i8NIr6EGM3VupINvg8uK9KqwdHnbpPR49UNk5RTE1BQ0JXUEJFVTM5OUs4VFNQM1FINS4u">What
-                    did you think of this service?</a></p>
-    
-        </div>
-            </div>
-        </section>
-
-
-    </div>
+<div class="govuk-form-group">
+<textarea
+class="govuk-textarea govuk-js-character-count"
+id="the-diagnosis"
+name="the-diagnosis"
+rows="5"
+aria-describedby="diagnosis-info"
+>{{ data['the-diagnosis'] }}</textarea>
 </div>
 
+<div id="diagnosis-info"
+class="govuk-hint govuk-character-count__message">
+You can enter up to 350 characters
+</div>
+</div>
+
+</fieldset>
+</div>
+
+<!-- BUTTONS -->
+<div class="govuk-button-group">
+
+<!-- SAVE AND CONTINUE (submits to next page + updates task list) -->
+<button
+type="submit"
+class="govuk-button js-flash-on-save"
+data-module="govuk-button"
+data-flash="draft-saved">
+Continue
+</button>
+
+<!-- SAVE AND COMPLETE LATER (global handler redirects to your-account) -->
+<button
+type="button"
+class="govuk-button govuk-button--secondary js-save-later"
+data-module="govuk-button">
+Save and complete later
+</button>
+
+</div>
+
+</form>
+
+<p class="govuk-body">
+<a class="govuk-link"
+onclick="saveAndLeave()"
+style="color:#1d70b8;"
+aria-label="Return to SR1 form sections"
+href="/live-version02/sr1-form-sections">
+Return to SR1 form sections
+</a>
+</p>
+
+<div class="govuk-!-padding-bottom-6"></div>
+
+<hr class="govuk-section-break govuk-section-break--visible" aria-hidden="true">
+
+<section class="govuk-width-container govuk-!-margin-top-7 govuk-!-margin-bottom-7">
+<div class="govuk-grid-row">
+<div class="govuk-grid-column-full">
+<h2 class="govuk-heading-m">Get help</h2>
+<p class="govuk-body">
+<a class="govuk-link"
+href="/live-version02/contact/contact-us-2.html">
+Contact DWP
+</a> if you have questions about sending an SR1 form.
+</p>
+</div>
+</div>
+
+<br>
+
+<h2 class="govuk-heading-m">Feedback</h2>
+<p class="govuk-body">
+<a href="https://forms.office.com/Pages/ResponsePage.aspx?id=DpxP-knna0i8NIr6EGM3VupINvg8uK9KqwdHnbpPR49UNk5RTE1BQ0JXUEJFVTM5OUs4VFNQM1FINS4u">
+What did you think of this service?
+</a>
+</p>
+</section>
+
+</div>
+</div>
+
+<!-- RETURN TO TASK LIST (existing PK code preserved) -->
 <script>
-    // get and set in this order - this ensures what is sent in query is the same as what is in the localStorage
-    const saveAndLeave = () => {
-        //saveDiagnosisSR1Formliveversion01();
-
-        const origin = window.location.origin;
-        const url = getUrlWithSR1DataAsQueryParamsliveversion01(origin, "/live-version01/sr1-form-sections");
-
-        window.location.replace(url.toString());
-    }
+const saveAndLeave = () => {
+const origin = window.location.origin;
+const url = getUrlWithSR1DataAsQueryParamsliveversion01(origin, "/live-version01/sr1-form-sections");
+window.location.replace(url.toString());
+}
 </script>
+
 {% endblock %}

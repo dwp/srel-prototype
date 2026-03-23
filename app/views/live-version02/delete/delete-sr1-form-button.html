@@ -5,9 +5,15 @@ Are you sure you want to delete your details? – Check your details – Send an
 {% endblock %}
 
 {% block content %}
+
+
+
+
+
+
 <div class="govuk-grid-row">
     <div class="govuk-grid-column-three-quarters">
-        <form id="sendAnSR1Form" action="/live-version02/dashboard/your-account-deleted" method="post">
+        <form id="sendAnSR1Form" action="/live-version02/dashboard/your-account" method="post">
             <div class="govuk-form-group">
                 <fieldset class="govuk-fieldset">
                     <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
@@ -22,31 +28,22 @@ Are you sure you want to delete your details? – Check your details – Send an
                     <br>
 
 
+
 <table class="govuk-table">
-  
-  <thead class="govuk-table__head">
-    <tr class="govuk-table__row">
-      <th scope="col" class="govuk-table__header">Application for</th>
-      <th scope="col" class="govuk-table__header">Date of birth</th>
-      <th scope="col" class="govuk-table__header govuk-table__header">Started on</th>
-      <th scope="col" class="govuk-table__header govuk-table__header">Expires</th>
-
-    </tr>
-  </thead>
-  <tbody class="govuk-table__body">
-    <tr class="govuk-table__row">
-      <th scope="row" class="govuk-table__header"> {{data['PatientFirstName']}} {{data['PatientLastName']}} </th>
-            <td class="govuk-table__cell govuk-table__cell"> {{data['patientdateofbirthday']}}/{{data['patientdateofbirthmonth']}}/{{data['patientdateofbirthyear']}} </td>
-      <td class="govuk-table__cell govuk-table__cell">01 October 2025</td>
-      <td class="govuk-table__cell govuk-table__cell">30 October 2025</td>
-
-    </tr>
-  </tbody>
-  
-
-
-  
+<thead class="govuk-table__head">
+<tr class="govuk-table__row">
+<th class="govuk-table__header">Application for</th>
+<th class="govuk-table__header">Date of birth</th>
+<th class="govuk-table__header">Started on</th>
+<th class="govuk-table__header">Expires</th>
+</tr>
+</thead>
+<tbody class="govuk-table__body" id="deleteDraftTable"></tbody>
 </table>
+
+
+
+
 
 <br>
 <br>
@@ -61,9 +58,13 @@ Are you sure you want to delete your details? – Check your details – Send an
 
                    
                     <!-- Receive reminder options -->
-                <button type="submit" class="govuk-button govuk-button--warning" data-module="govuk-button">
-  Delete SR1 form
+                     
+              <button type="button"
+class="govuk-button govuk-button--warning"
+onclick="deleteDraftAndReturn()">
+Delete SR1 form
 </button>
+
 
 <p class="govuk-body">
   <a href="#" class="govuk-link govuk-link--no-visited-state">Cancel</a>
@@ -107,24 +108,57 @@ Are you sure you want to delete your details? – Check your details – Send an
 </div>
 
 <script>
-    //const saveOtherDiagnosisradioSR1Formliveversion01 = () => {
-    //    if (document.getElementById('deletedetails-yes').checked) {
-    //        localStorage.setItem('liveversion01deletedetails', ' ');
-    //    } else if (document.getElementById('deletedetails-no').checked) {
-    //        localStorage.setItem('liveversion01deletedetails', 'Not provided');
-    //    }
-    //}
+function deleteDraftAndReturn() {
+const id = sessionStorage.getItem('deleteDraftId');
+let drafts = JSON.parse(localStorage.getItem('sr1Drafts') || '[]');
 
-    // get and set in this order - this ensures what is sent in query is the same as what is in the localStorage
-    const saveAndLeave = () => {
-        //saveOtherDiagnosisSR1Formliveversion01();
+// Remove the matching draft
+drafts = drafts.filter(x => x.created !== id);
 
-        const origin = window.location.origin;
-        const url = getUrlWithSR1DataAsQueryParamsliveversion01(origin, "/live-version01/sr1-form-sections");
+// Save updated list
+localStorage.setItem('sr1Drafts', JSON.stringify(drafts));
 
-        window
-            .location
-            .replace(url.toString());
-    }
+// Clean up + set flash message
+sessionStorage.removeItem('deleteDraftId');
+sessionStorage.setItem('sr1FlashDelete', 'true');
+
+// Redirect back to account page
+window.location.href = "/live-version02/dashboard/your-account";
+}
 </script>
+
+
+
+
+
+
+<script>
+(function () {
+const id = sessionStorage.getItem('deleteDraftId');
+const table = document.getElementById('deleteDraftTable');
+if (!table || !id) return;
+
+const drafts = JSON.parse(localStorage.getItem('sr1Drafts') || '[]');
+const d = drafts.find(x => x.created === id);
+if (!d) return;
+
+function formatUK(str) {
+const dt = new Date(str);
+return dt.toLocaleDateString("en-GB");
+}
+
+table.innerHTML = `
+<tr class="govuk-table__row">
+<th class="govuk-table__header">${d.firstName} ${d.lastName}</th>
+<td class="govuk-table__cell">${d.dob}</td>
+<td class="govuk-table__cell">${formatUK(d.created)}</td>
+<td class="govuk-table__cell">${formatUK(d.expires)}</td>
+</tr>
+`;
+})();
+</script>
+
+
+
+
 {% endblock %}

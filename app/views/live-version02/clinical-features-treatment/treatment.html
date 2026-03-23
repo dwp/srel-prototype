@@ -1,122 +1,78 @@
 {% extends "layout-gov-signed-in-live-version01.html" %}
-
 {% block pageTitle %}
 Treatment and care – Send an SR1 medical evidence form – GOV.UK
 {% endblock %}
-
 {% block content %}
-<div class="govuk-grid-row">
-    <div class="govuk-grid-column-two-thirds">
-        <form id="sendAnSR1Form" action="/live-version02/sr1-form-sections" method="post">
-            <div class="govuk-form-group">
-                <fieldset class="govuk-fieldset">
-                    <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
-                        <h1 class="govuk-heading-l">
-                            Treatment and care
-                          </h1>
-                          <p class="govuk-body">
-                            We need to know about the patient's treatment and the response. 
-                          </p>
-                          <p class="govuk-body">This could include:</p>
-                          <ul class="govuk-list govuk-list--bullet">
-                            <li>ongoing plans</li>
-                            <li>palliative care</li>
-                            <li>mobility needs</li>
-                            <li>symptom control or psychosocial support</li>
-                            <li>declined treatment</li>
-                          </ul>
-                          <form action="/form-handler" method="post" novalidate>
-                            <div class="govuk-form-group">
-                              <fieldset class="govuk-fieldset">
-                                <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
-                                    Tell us about the purpose of any treatment and the response
-                                </legend>
-                                <div class="govuk-character-count" data-module="govuk-character-count" data-maxlength="350">
-                                    <div class="govuk-form-group">
-                                        <textarea class="govuk-textarea  govuk-js-character-count"
-                                            id="treatment-details" name="treatmentdetails" Value="{data['treatmentdetails']}" rows="5" aria-describedby="treatment-info">{{data['treatmentdetails']}}</textarea>
-                                    </div>
-                                    <div id="treatment-details-info" class="govuk-hint govuk-character-count__message">You can enter up to
-                                        350 characters</div>
-                                </div>
-            
-                            </fieldset>
-            </div>
 
-            <!-- Submit button -->
-             <div class="govuk-button-group" style="align-items: normal;"><input type="hidden" name="patientAddressComplete" value="yes">
-               <button type="submit" onclick="saveTreatmentSR1Formliveversion02()"
+<div class="govuk-grid-row">
+<div class="govuk-grid-column-two-thirds">
+
+<form action="/live-version02/sr1-form-sections" method="post">
+
+<!-- Page heading -->
+<h1 class="govuk-heading-l">Treatment and care</h1>
+
+<p class="govuk-body">We need to know about the patient's treatment and the response.</p>
+
+<p class="govuk-body">This could include:</p>
+<ul class="govuk-list govuk-list--bullet">
+<li>ongoing plans</li>
+<li>palliative care</li>
+<li>mobility needs</li>
+<li>symptom control or psychosocial support</li>
+<li>declined treatment</li>
+</ul>
+
+<!-- textarea -->
+<div class="govuk-character-count" data-module="govuk-character-count" data-maxlength="350">
+<div class="govuk-form-group">
+<label class="govuk-label govuk-label--m" for="treatment-details">
+Tell us about the purpose of any treatment and the response
+</label>
+
+<textarea
+class="govuk-textarea govuk-js-character-count"
+id="treatment-details"
+name="treatmentdetails"
+rows="5"
+aria-describedby="treatment-details-info"
+>{{ data['treatmentdetails'] }}</textarea>
+</div>
+
+<div id="treatment-details-info" class="govuk-hint govuk-character-count__message">
+You can enter up to 350 characters
+</div>
+</div>
+
+<!-- BUTTONS -->
+<div class="govuk-button-group">
+
+<!-- SAVE AND CONTINUE (Submit form, update data[], show banner) -->
+<button
+type="submit"
 class="govuk-button js-flash-on-save"
 data-module="govuk-button"
 data-flash="draft-saved">
-                  Save and continue
-              </button>
-              <a href="/live-version02/dashboard/your-account-saved"> <button type="button" id="" class="govuk-button govuk-button--secondary" data-module="govuk-button" onclick="saveTreatmentSR1Formliveversion02()">
-                  Save and complete later
-              </button></a> 
-              <br>
-            </div>
-        </form>
+Save and continue
+</button>
 
-         <p class="govuk-body"><a class="govuk-link" onclick="saveAndLeave()" style="color:#1d70b8;"
-                    aria-label="Return to SR1 form sections" href="/live-version02/sr1-form-sections">Return to SR1 form sections</a></p>
-        <div class="govuk-!-padding-bottom-6"></div>
-
-        <!--Get help new-->
-        <hr class="govuk-section-break govuk-section-break--visible" aria-hidden="true">
-        <section class="govuk-width-container govuk-!-margin-top-7 govuk-!-margin-bottom-7 ">
-                 <div class="govuk-grid-row">
-                  
-                   <div class="govuk-grid-column-full">
-                    <h2 class="govuk-heading-m">Get help</h2>
-               <p class="govuk-body"><a class="govuk-link"
-                    href="/live-version02/contact/contact-us-2.html">Contact DWP</a> if you have questions about sending an SR1 form.</p>
-                </div>
-                        <!--Feedback-->
-            </div>
-            <br>
-            <h2 class="govuk-heading-m">Feedback</h2>
-            <p class=govuk-body><a
-                    href="https://forms.office.com/Pages/ResponsePage.aspx?id=DpxP-knna0i8NIr6EGM3VupINvg8uK9KqwdHnbpPR49UNk5RTE1BQ0JXUEJFVTM5OUs4VFNQM1FINS4u">What
-                    did you think of this service?</a></p>
-    
-        </div>
-            </div>
-        </section>
-
-    </div>
+<!-- SAVE AND COMPLETE LATER (global handler handles banner + redirect) -->
+<button
+type="button"
+class="govuk-button govuk-button--secondary js-save-later"
+data-module="govuk-button">
+Save and complete later
+</button>
 
 </div>
 
-<script>
-    // get and set in this order - this ensures what is sent in query is the same as what is in the localStorage
-    const saveAndLeave = () => {
-        //saveTreatmentSR1Formliveversion01();
+</form>
 
-        const origin = window.location.origin;
-        const url = getUrlWithSR1DataAsQueryParamsliveversion01(origin, "/live-version01/sr1-form-sections");
+<p class="govuk-body">
+/live-version02/sr1-form-sectionsReturn to SR1 form sections</a>
+</p>
 
-        window
-            .location
-            .replace(url.toString());
-    }
-</script>
-
-
-<script>
-(function () {
-// Progressive enhancement: attach to all "flash" save buttons
-var btns = document.querySelectorAll('.js-flash-on-save[data-flash]');
-btns.forEach(function (btn) {
-btn.addEventListener('click', function () {
-try {
-// Store the banner reason (e.g., 'draft-saved')
-sessionStorage.setItem('sr1Flash', btn.getAttribute('data-flash') || 'draft-saved');
-} catch (e) { /* storage blocked — safe to ignore */ }
-}, { capture: true }); // capture ensures it runs before form submission/redirect
-});
-})();
-</script>
-
+</div>
+</div>
 
 {% endblock %}

@@ -1,123 +1,150 @@
 {% extends "layout-gov-signed-in-live-version01.html" %}
-
 {% block pageTitle %}
 What was the date of the patient’s diagnosis? – Send an SR1 medical evidence form – GOV.UK
 {% endblock %}
 
 {% block content %}
+
 <div class="govuk-grid-row">
-    <div class="govuk-grid-column-two-thirds">
-        <form id="sendAnSR1Form" action="/live-version02/diagnosis/special-rules-date" method="post">
-            <div class="govuk-form-group">
-                <fieldset class="govuk-fieldset">
-                    <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
-                        <!--<span class="govuk-caption-l"> Question 2 of 6</span>-->
-                        <h1 class="govuk-fieldset__heading">
-                            What was the date of the patient’s diagnosis?
-                        </h1>
-                    </legend>
+<div class="govuk-grid-column-two-thirds">
 
-                    <!-- Date of diagnosis -->
-                    <!--<p class="govuk-body">
-                        If you do not know the exact date, you can use the first day of the month.
-                    </p>-->
-                    <div id="diagnosis-hint" class="govuk-hint">
-                        If you do not know the exact date, you can use the first day of the month. For example, 1 10 1960.
-                    </div>
-                    <div class="govuk-date-input" id="diagnosis-date"  name="diagnosisdate" value="{{data['diagnosisdate']}}">
-                        <div class="govuk-date-input__item">
-                            <div class="govuk-form-group">
-                                <label class="govuk-label govuk-date-input__label" for="diagnosis-day">
-                                    Day
-                                </label>
-                                <input autocomplete="off"
-                                    class="govuk-input govuk-date-input__input govuk-input--width-2" id="diagnosis-day"
-                                    name="diagnosis-day" value="{{data['diagnosis-day']}}" type="text" inputmode="numeric"
-                                    onkeypress="return isNumberKey(event)" maxlength="2">
-                            </div>
-                        </div>
-                        <div class="govuk-date-input__item">
-                            <div class="govuk-form-group">
-                                <label class="govuk-label govuk-date-input__label" for="diagnosis-month">
-                                    Month
-                                </label>
-                                <input autocomplete="off"
-                                    class="govuk-input govuk-date-input__input govuk-input--width-2" id="diagnosis-month"
-                                    name="diagnosis-month" value="{{data['diagnosis-month']}}" type="text" inputmode="numeric"
-                                    onkeypress="return isNumberKey(event)" maxlength="2">
-                            </div>
-                        </div>
-                        <div class="govuk-date-input__item">
-                            <div class="govuk-form-group">
-                                <label class="govuk-label govuk-date-input__label" for="diagnosis-year">
-                                    Year
-                                </label>
-                                <input autocomplete="off"
-                                    class="govuk-input govuk-date-input__input govuk-input--width-4" id="diagnosis-year"
-                                    name="diagnosis-year" value="{{data['diagnosis-year']}}"  type="text" inputmode="numeric"
-                                    onkeypress="return isNumberKey(event)" maxlength="4">
-                            </div>
-                        </div>
-                    </div>
+<!-- SINGLE VALID FORM -->
+<form method="post" action="/live-version02/diagnosis/special-rules-date">
 
-                </fieldset>
-            </div>
+<div class="govuk-form-group">
+<fieldset class="govuk-fieldset">
+<legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+<h1 class="govuk-fieldset__heading">
+What was the date of the patient’s diagnosis?
+</h1>
+</legend>
 
-            <!-- Submit button -->
-         
+<div id="diagnosis-hint" class="govuk-hint">
+If you do not know the exact date, you can use the first day of the month. For example, 1 10 1960.
+</div>
 
+<div class="govuk-date-input" id="diagnosis-date">
 
+<!-- DAY -->
+<div class="govuk-date-input__item">
+<div class="govuk-form-group">
+<label class="govuk-label govuk-date-input__label" for="diagnosis-day">Day</label>
+<input autocomplete="off"
+class="govuk-input govuk-date-input__input govuk-input--width-2"
+id="diagnosis-day"
+name="diagnosis-day"
+value="{{ data['diagnosis-day'] }}"
+type="text"
+inputmode="numeric"
+maxlength="2">
+</div>
+</div>
 
+<!-- MONTH -->
+<div class="govuk-date-input__item">
+<div class="govuk-form-group">
+<label class="govuk-label govuk-date-input__label" for="diagnosis-month">Month</label>
+<input autocomplete="off"
+class="govuk-input govuk-date-input__input govuk-input--width-2"
+id="diagnosis-month"
+name="diagnosis-month"
+value="{{ data['diagnosis-month'] }}"
+type="text"
+inputmode="numeric"
+maxlength="2">
+</div>
+</div>
 
-
-         <div class="govuk-button-group" style="align-items: normal;">
-                <button id="" class="govuk-button" data-module="govuk-button" onclick="saveDateDiagnosisSR1Formliveversion02()">
-                  Continue
-              </button>
-              <a href="/live-version02/dashboard/your-account-saved"> <button type="button" id="" class="govuk-button govuk-button--secondary" data-module="govuk-button" onclick="saveDateDiagnosisSR1Formliveversion02()">
-                  Save and complete later
-              </button></a> 
-              <br>
-            </div>
-        </form>
-
-        <p class="govuk-body"><a class="govuk-link" onclick="saveAndLeave()" style="color:#1d70b8;"
-                    aria-label="Return to SR1 form sections" href="/live-version02/sr1-form-sections">Return to SR1 form sections</a></p>
-
-        <!--Get help new-->
-        <hr class="govuk-section-break govuk-section-break--visible" aria-hidden="true">
-        <section class="govuk-width-container govuk-!-margin-top-7 govuk-!-margin-bottom-7 ">
-            <div class="govuk-grid-row">
-                  
-                   <div class="govuk-grid-column-full">
-                    <h2 class="govuk-heading-m">Get help</h2>
-               <p class="govuk-body"><a class="govuk-link"
-                    href="/live-version02/contact/contact-us-2.html">Contact DWP</a> if you have questions about sending an SR1 form.</p>
-                </div>
-                        <!--Feedback-->
-            </div>
-            <br>
-            <h2 class="govuk-heading-m">Feedback</h2>
-            <p class=govuk-body><a
-                    href="https://forms.office.com/Pages/ResponsePage.aspx?id=DpxP-knna0i8NIr6EGM3VupINvg8uK9KqwdHnbpPR49UNk5RTE1BQ0JXUEJFVTM5OUs4VFNQM1FINS4u">What
-                    did you think of this service?</a></p>
-    
-        </div>
-        </section>
-
-    </div>
+<!-- YEAR -->
+<div class="govuk-date-input__item">
+<div class="govuk-form-group">
+<label class="govuk-label govuk-date-input__label" for="diagnosis-year">Year</label>
+<input autocomplete="off"
+class="govuk-input govuk-date-input__input govuk-input--width-4"
+id="diagnosis-year"
+name="diagnosis-year"
+value="{{ data['diagnosis-year'] }}"
+type="text"
+inputmode="numeric"
+maxlength="4">
+</div>
+</div>
 
 </div>
 
+</fieldset>
+</div>
+
+<!-- BUTTONS (fixed) -->
+<div class="govuk-button-group" style="align-items: normal;">
+
+<!-- SAVE AND CONTINUE -->
+<button type="submit"
+class="govuk-button js-flash-on-save"
+data-module="govuk-button"
+data-flash="draft-saved">
+Continue
+</button>
+
+<!-- SAVE AND COMPLETE LATER -->
+<button type="button"
+class="govuk-button govuk-button--secondary js-save-later"
+data-module="govuk-button">
+Save and complete later
+</button>
+
+</div>
+
+</form>
+
+<p class="govuk-body">
+<a class="govuk-link"
+onclick="saveAndLeave()"
+style="color:#1d70b8;"
+aria-label="Return to SR1 form sections"
+href="/live-version02/sr1-form-sections">
+Return to SR1 form sections
+</a>
+</p>
+
+<div class="govuk-!-padding-bottom-6"></div>
+
+<hr class="govuk-section-break govuk-section-break--visible" aria-hidden="true">
+
+
+<section class="govuk-width-container govuk-!-margin-top-7 govuk-!-margin-bottom-7">
+<div class="govuk-grid-row">
+<div class="govuk-grid-column-full">
+<h2 class="govuk-heading-m">Get help</h2>
+<p class="govuk-body">
+<a class="govuk-link"
+href="/live-version02/contact/contact-us-2.html">
+Contact DWP
+</a> if you have questions about sending an SR1 form.
+</p>
+</div>
+</div>
+
+<br>
+
+<h2 class="govuk-heading-m">Feedback</h2>
+<p class="govuk-body">
+<a href="https://forms.office.com/Pages/ResponsePage.aspx?id=DpxP-knna0i8NIr6EGM3VupINvg8uK9KqwdHnbpPR49UNk5RTE1BQ0JXUEJFVTM5OUs4VFNQM1FINS4u">
+What did you think of this service?
+</a>
+</p>
+</section>
+
+</div>
+</div>
+
+<!-- RETURN TO TASK LIST (existing PK code preserved) -->
 <script>
-    // get and set in this order - this ensures what is sent in query is the same as what is in the localStorage
-    const saveAndLeave = () => {
-        //saveDateDiagnosisSR1Formliveversion01();
-
-        const origin = window.location.origin;
-        const url = getUrlWithSR1DataAsQueryParamsliveversion01(origin, "/live-version01/sr1-form-sections");
-
-        window.location.replace(url.toString());
-    }
+const saveAndLeave = () => {
+const origin = window.location.origin;
+const url = getUrlWithSR1DataAsQueryParamsliveversion01(origin, "/live-version01/sr1-form-sections");
+window.location.replace(url.toString());
+}
 </script>
+
 {% endblock %}

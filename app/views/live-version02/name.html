@@ -8,7 +8,7 @@ What is the patient's name? – Send an SR1 medical evidence form – GOV.UK
 <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
 
-        <form id="sendAnSR1Form" action="date-of-birth" method="post">
+        <form id="sendAnSR1Form" action="date-of-birth?new=1" method="post">
             <div class="govuk-form-group">
                 <fieldset class="govuk-fieldset">
                     <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
@@ -78,4 +78,42 @@ What is the patient's name? – Send an SR1 medical evidence form – GOV.UK
         window.location.replace(url.toString());
     }
 </script>
+
+<script>
+function savePatientNameSR1Formliveversion01() {
+// Get field values
+const first = document.getElementById("patient-first-name").value.trim();
+const last = document.getElementById("patient-last-name").value.trim();
+
+// Save to localStorage
+localStorage.setItem("patientFirstName", first);
+localStorage.setItem("patientLastName", last);
+}
+</script>
+
+<script>
+(function () {
+const isNew = window.location.search.includes("new=1");
+
+if (isNew) {
+// Clear localStorage (so DOB page is clean too)
+localStorage.removeItem('patientFirstName');
+localStorage.removeItem('patientLastName');
+localStorage.removeItem('patientdateofbirthday');
+localStorage.removeItem('patientdateofbirthmonth');
+localStorage.removeItem('patientdateofbirthyear');
+localStorage.removeItem('patientdateofbirth');
+
+// Clear the actual inputs so Nunjucks can't refill them
+const f = document.getElementById("patient-first-name");
+const l = document.getElementById("patient-last-name");
+if (f) f.value = "";
+if (l) l.value = "";
+}
+})();
+</script>
+
+
+
+
 {% endblock %}

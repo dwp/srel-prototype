@@ -46,7 +46,7 @@ What is the patient's name? – Send an SR1 medical evidence form – GOV.UK
                  <a href="/live-version02/patient-details/date-of-birth"><button id="" class="govuk-button" data-module="govuk-button" onclick="savePatientNameSR1Formliveversion02()">
                     Continue
                 </button></a>
-               <a href="/live-version02/dashboard/your-account-saved"> <button id="" class="govuk-button govuk-button--secondary" data-module="govuk-button" onclick="savePatientNameSR1Formliveversion02()">
+               <a href="/live-version02/dashboard/your-account"> <button id="" class="govuk-button govuk-button--secondary js-save-later"  data-module="govuk-button" onclick="savePatientNameSR1Formliveversion02()">
                     Save and complete later
                 </button></a> 
                 <br>
@@ -94,5 +94,25 @@ What is the patient's name? – Send an SR1 medical evidence form – GOV.UK
 
         window.location.replace(url.toString());
     }
+</script>
+
+<script>
+function getActiveDraftId() {
+return sessionStorage.getItem("activeDraftId");
+}
+
+// Load saved values for this draft
+function loadDraftAnswers(map) {
+const id = getActiveDraftId();
+if (!id) return;
+
+Object.keys(map).forEach(key => {
+const el = document.getElementById(map[key]);
+if (el) {
+const saved = localStorage.getItem(`sr1_${id}_${key}`);
+if (saved !== null) el.value = saved;
+}
+});
+}
 </script>
 {% endblock %}

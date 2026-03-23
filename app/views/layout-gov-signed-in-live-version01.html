@@ -180,6 +180,43 @@
   </div>
 </header>-->
 
+
+<script>
+// Global handler: any click on "save and continue later"
+document.addEventListener('click', function (e) {
+const btn = e.target.closest('.js-save-later');
+if (!btn) return;
+
+try {
+// Set the flash banner for the account page
+sessionStorage.setItem('sr1Flash', 'draft-saved');
+} catch (err) {
+// Storage blocked; safe to ignore
+}
+
+// Redirect to Your Account
+window.location.href = "/live-version02/dashboard/your-account";
+
+}, { capture: true });
+</script>
+
+<script>
+document.addEventListener('click', function(e){
+const saveBtn = e.target.closest('.js-save-later');
+if (!saveBtn) return;
+
+if (typeof window.saveCurrentPage === "function") {
+window.saveCurrentPage();
+}
+
+sessionStorage.setItem('sr1Flash','draft-saved');
+window.location.href = "/live-version02/dashboard/your-account";
+
+}, {capture:true});
+</script>
+
+
+
 {% endblock %}
 
 {% block beforeContent %}

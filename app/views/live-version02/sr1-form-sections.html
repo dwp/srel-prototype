@@ -38,7 +38,8 @@ SR1 form – Send an SR1 medical evidence form – GOV.UK
         <h1 class="govuk-heading-l">SR1 form sections</h1>
   
 <p class="govuk-body">
-  You can complete this form now or <a href="/live-version02/dashboard/your-account-saved" class="govuk-link">return to your account and complete it later</a>.
+  You can complete this form now or <a href="/live-version02/dashboard/your-account" class="govuk-link js-flash-on-save"
+data-flash="draft-saved">save and return to your account to complete it later</a>.
 </p>
 
 
@@ -330,4 +331,21 @@ el.innerHTML =
   </div>
 
 </div>
+
+
+<script>
+(function () {
+// Attach to any element marked to set a flash message before navigating
+var triggers = document.querySelectorAll('.js-flash-on-save[data-flash]');
+triggers.forEach(function (el) {
+el.addEventListener('click', function () {
+try {
+sessionStorage.setItem('sr1Flash', el.getAttribute('data-flash') || 'draft-saved');
+} catch (e) { /* storage might be blocked; safe to ignore */ }
+}, { capture: true });
+});
+})();
+</script>
+
+
 {% endblock %}
