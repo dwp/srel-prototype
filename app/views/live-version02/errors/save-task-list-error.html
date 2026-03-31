@@ -1,0 +1,353 @@
+{% extends "layout-gov-signed-in-live-version01.html" %}
+
+{% block pageTitle %}
+SR1 form – Send an SR1 medical evidence form – GOV.UK
+{% endblock %}
+
+{% block content %}
+
+{% macro subsectionStatus(idSuffix, dataVar, fullNameSet) %}
+{% if dataVar | isStringVarDefined %}
+<strong class="govuk-tag app-task-list__tag" id="{{idSuffix}}-completed" aria-hidden><strong class="govuk-tag govuk-tag--green">
+          Completed
+        </strong></strong>
+{% else %}
+<strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="{{idSuffix}}-status">Not started</strong>
+{% endif %}
+{% endmacro %}
+
+{% macro dateSubsectionStatus(idSuffix, day, month, year, fullNameSet) %}
+{% if day | isStringVarDefined and month | isStringVarDefined and year | isStringVarDefined %}
+<strong class="govuk-tag app-task-list__tag" id="{{idSuffix}}-completed" aria-hidden><strong class="govuk-tag govuk-tag--green">
+          Completed
+        </strong></strong>
+{% else %}
+<strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="{{idSuffix}}-status">Not started</strong>
+{% endif %}
+{% endmacro %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+
+<div id="sr1-flash-banner"></div>
+
+
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-full">
+
+
+   
+        <h1 class="govuk-heading-l">SR1 form sections</h1>
+  
+<div class="govuk-inset-text">
+  If you leave this form your answers will be lost.
+</div>
+
+
+        </ul>
+        <h2 class="govuk-heading-m govuk-!-margin-top-5">Patient details</h2>
+        <ul class="govuk-task-list">
+          <li class="govuk-task-list__item govuk-task-list__item--with-link" id="patientFullName">
+            <div class="govuk-task-list__name-and-hint" id="patientDetails-notstarted">
+              <a class="govuk-link govuk-task-list__link" href=""
+                aria-describedby="patientDetails-status-notstarted">
+                Complete patient details
+              </a>
+            </div>
+              {% if (
+                (not data['PatientFirstName'] or data['PatientFirstName'] == '') and
+                (not data['PatientLastName'] or data['PatientLastName'] == '') and
+                (not data['patientdateofbirthday'] or data['patientdateofbirthday'] == '') and
+                (not data['patientdateofbirthmonth'] or data['patientdateofbirthmonth'] == '') and
+                (not data['patientdateofbirthyear'] or data['patientdateofbirthyear'] == '') and  
+                (not data['patientAddressComplete'] and data['patientAddressComplete'] != '')
+              )%}
+               <div class="govuk-task-list__status" id="application-details-3-status">
+      <strong class="govuk-tag govuk-tag--blue">
+        Not yet started
+      </strong>
+    </div>
+              {% elseif (
+                (data['PatientFirstName'] and data['PatientFirstName'] != '') and
+                (data['PatientLastName'] and data['PatientLastName'] != '') and
+                (data['patientdateofbirthday'] and data['patientdateofbirthday'] != '') and
+                (data['patientdateofbirthmonth'] and data['patientdateofbirthmonth'] != '') and
+                (data['patientdateofbirthyear'] and data['patientdateofbirthyear'] != '') and  
+                (data['patientAddressComplete'] and data['patientAddressComplete'] != '')
+              )%}
+            <div class="govuk-task-list__status" id="application-details-1-status">
+      Completed
+    </div>
+              {% else %}
+       <div class="govuk-task-list__status" id="application-details-2-status">
+      <strong class="govuk-tag govuk-tag--light-blue">
+        In progress
+      </strong>
+    </div>
+              {% endif %}
+
+          </li>
+
+    
+     
+ <h2 class="govuk-heading-m govuk-!-margin-top-5">Diagnosis</h2>
+ <ul class="govuk-task-list">
+   <li class="govuk-task-list__item govuk-task-list__item--with-link" id="patientDiagnosis">
+     <div class="govuk-task-list__name-and-hint" id="Diagnosis-link-notstarted">
+       <a class="govuk-link govuk-task-list__link" href=""
+         aria-describedby="patientDiagnosis-status-notstarted">
+         Complete diagnosis
+       </a>
+     </div>
+     {% if (
+      (not data['the-diagnosis'] or data['the-diagnosis'] =='') and
+      (not data['SpecialRulesDateday'] or data['SpecialRulesDateday'] =='') and
+      (not data['SpecialRulesDatemonth'] or data['SpecialRulesDatemonth'] == '') and
+      (not data['SpecialRulesDateyear'] or data['SpecialRulesDateyear'] == '') and
+      (not data['diagnosis-day'] or data['diagnosis-day'] == '') and
+      (not data['diagnosis-month'] or data['diagnosis-month'] == '') and
+      (not data['diagnosis-year'] or data['diagnosis-year'] == '') and
+      (not data['RelevantDiagnosis'] or data['RelevantDiagnosis'] == '') and
+      (not data['Diagnosisawareness'] or data['Diagnosisawareness'] == '') and
+      (not data['Prognosisawareness'] or data['Prognosisawareness'] == '')
+    )%}    
+   <div class="govuk-task-list__status" id="application-details-3-status">
+      <strong class="govuk-tag govuk-tag--blue">
+        Not yet started
+      </strong>
+    </div>
+         {% elseif (
+          (data['the-diagnosis'] and data['the-diagnosis'] != '') and
+          (data['SpecialRulesDateday'] and data['SpecialRulesDateday'] != '') and
+          (data['SpecialRulesDatemonth'] and data['SpecialRulesDatemonth'] != '') and
+          (data['SpecialRulesDateyear'] and data['SpecialRulesDateyear'] != '') and
+          (data['diagnosis-day'] and data['diagnosis-day'] != '') and
+          (data['diagnosis-month'] and data['diagnosis-month'] != '') and
+          (data['diagnosis-year'] and data['diagnosis-year'] != '') and
+          (data['RelevantDiagnosis'] and data['RelevantDiagnosis'] != '') and
+          (data['Diagnosisawareness'] and data['Diagnosisawareness'] != '') and
+          (data['Prognosisawareness'] and data['Prognosisawareness'] != '') 
+        )%}
+    <div class="govuk-task-list__status" id="application-details-1-status">
+      Completed
+    </div>
+         {% else %}
+     <div class="govuk-task-list__status" id="application-details-2-status">
+      <strong class="govuk-tag govuk-tag--light-blue">
+        In progress
+      </strong>
+    </div>
+     {% endif %}
+   </li> 
+
+        <h2 class="govuk-heading-m govuk-!-margin-top-5">Clinical features, treatment, and care</h2>
+        <ul class="govuk-task-list">
+          <li class="govuk-task-list__item govuk-task-list__item--with-link" id="patientClinicalFeatures">
+            <div id="ClinicalFeatTreatment-link-notstarted" class="govuk-task-list__name-and-hint">
+              <a class="govuk-link govuk-task-list__link" href=""
+                aria-describedby="ClinicalFeatTreatment-status-notstarted">
+                Complete clinical features, treatment, and care
+              </a>
+            </div>
+            {% if (
+              (not data['ClinicalFeaturesdetails'] or data['ClinicalFeaturesdetails'] == '') and
+              (not data['treatmentdetails'] or data['treatmentdetails'] == '')
+            )%}
+             <div class="govuk-task-list__status" id="application-details-3-status">
+      <strong class="govuk-tag govuk-tag--blue">
+        Not yet started
+      </strong>
+    </div>
+            {% elseif (
+              (data['ClinicalFeaturesdetails'] and data['ClinicalFeaturesdetails']!='') and
+              (data['treatmentdetails'] and data['treatmentdetails']!='')
+            )%}
+          <div class="govuk-task-list__status" id="application-details-1-status">
+      Completed
+    </div>
+            {% else %}
+              <div class="govuk-task-list__status" id="application-details-2-status">
+      <strong class="govuk-tag govuk-tag--light-blue">
+        In progress
+      </strong>
+    </div>
+            {% endif %}
+          </li>
+        </ul>
+
+        <h2 class="govuk-heading-m govuk-!-margin-top-5">Your details</h2>
+        <ul class="govuk-task-list">
+          <li class="govuk-task-list__item govuk-task-list__item--with-link" id="name">
+            <div id="yourDetails-link-notstarted" class="govuk-task-list__name-and-hint">
+              <a class="govuk-link govuk-task-list__link" href=""
+                aria-describedby="add-your-details">
+                Add your details
+              </a>
+            </div>
+            {% if (
+              (not data['HCPfirstname'] or data['HCPfirstname'] == '') and
+              (not data['HCPlastname'] or data['HCPlastname'] == '') and
+              (not data['HCPRegistrationNumber'] or data['HCPRegistrationNumber'] == '') and
+              (not data['HCPmobileNumber'] or data['HCPmobileNumber'] == '') and
+              (not data['saveyourdetails'] or data['saveyourdetails'] == '')
+            )%}
+               <div class="govuk-task-list__status" id="application-details-3-status">
+      <strong class="govuk-tag govuk-tag--blue">
+        Not yet started
+      </strong>
+    </div>
+            {% elseif (
+              (data['HCPfirstname'] and data['HCPfirstname'] != '') and
+              (data['HCPlastname'] and data['HCPlastname'] != '') and
+              (data['HCPRegistrationNumber'] and data['HCPRegistrationNumber'] != '') and
+              (data['HCPmobileNumber'] and data['HCPmobileNumber'] != '') 
+            )%}
+       <div class="govuk-task-list__status" id="application-details-1-status">
+      Completed
+    </div>
+            {% else %}
+              <div class="govuk-task-list__status" id="application-details-2-status">
+      <strong class="govuk-tag govuk-tag--light-blue">
+        In progress
+      </strong>
+    </div>
+            {% endif %}
+
+
+            <!-- Check Your answers -->
+
+            {% set formComplete =
+              data['PatientFirstName'] and data['PatientFirstName'] != '' and
+              data['PatientLastName'] and data['PatientLastName'] != '' and
+              data['patientdateofbirthday'] and data['patientdateofbirthday'] != '' and
+              data['patientdateofbirthmonth'] and data['patientdateofbirthmonth'] != '' and
+              data['patientdateofbirthyear'] and data['patientdateofbirthyear'] != '' and
+              data['the-diagnosis'] and data['the-diagnosis'] != '' and
+              data['SpecialRulesDateday'] and data['SpecialRulesDateday'] != '' and
+              data['SpecialRulesDatemonth'] and data['SpecialRulesDatemonth'] != '' and
+              data['SpecialRulesDateyear'] and data['SpecialRulesDateyear'] != '' and
+              data['diagnosis-day'] and data['diagnosis-day'] != '' and
+              data['diagnosis-month'] and data['diagnosis-month'] != '' and
+              data['diagnosis-year'] and data['diagnosis-year'] != '' and
+              data['ClinicalFeaturesdetails'] and data['ClinicalFeaturesdetails'] != '' and
+              data['treatmentdetails'] and data['treatmentdetails'] != '' and
+              data['HCPfirstname'] and data['HCPfirstname'] != '' and
+              data['HCPlastname'] and data['HCPlastname'] != '' and
+              data['HCPRegistrationNumber'] and data['HCPRegistrationNumber'] != '' and
+              data['HCPmobileNumber'] and data['HCPmobileNumber'] != ''
+            %}
+
+                          <!-- and -->
+              <!-- data['RelevantDiagnosis'] and data['RelevantDiagnosis'] != '' and
+              data['Diagnosisawareness'] and data['Diagnosisawareness'] != '' and
+              data['Prognosisawareness'] and data['Prognosisawareness'] != '' and -->
+                            <!-- data['saveyourdetails'] and data['saveyourdetails'] != '' -->
+
+            </li>
+            <h2 class="govuk-heading-m govuk-!-margin-top-5">Send the SR1 form</h2>
+            <ul class="govuk-task-list">
+              <li class="govuk-task-list__item govuk-task-list__item--with-link" id="send-sr1">
+                {% if formComplete %}
+                  <div class="govuk-task-list__name-and-hint">
+                    <a class="govuk-link govuk-task-list__link" href="check-your-answers-b.html" aria-describedby="sr1-send-status-notstarted">
+                      Check your answers
+                    </a>
+                  </div>
+                  <div class="govuk-task-list__status" id="sr1-send-status-notstarted">
+                    <strong class="govuk-tag govuk-tag--light-blue">Not yet started</strong>
+                  </div>
+                {% else %}
+                  <div class="govuk-task-list__name-and-hint" aria-describedby="sr1-send-status-cannot-start">
+                    <div>Check your answers</div>
+                  </div>
+                  <div class="govuk-task-list__status govuk-task-list__status--cannot-start-yet" id="application-details-3-status">
+      Cannot start yet
+    </div>
+                {% endif %}
+              </li>
+            </ul>
+
+
+            
+
+     
+        
+        <!--<div class="govuk-button-group">
+          <button type="submit" class="govuk-button" data-module="govuk-button" id="send-sr1-form-button">
+            Send the SR1 form
+          </button>
+        </div>-->
+      </div>
+    </div>
+
+    <div class="govuk-!-padding-bottom-6"></div>
+        <!--Get help new-->
+        <hr class="govuk-section-break govuk-section-break--visible" aria-hidden="true">
+        <section class="govuk-width-container govuk-!-margin-top-7 govuk-!-margin-bottom-7 ">
+            <div class="govuk-grid-row">
+                     <div class="govuk-grid-column-full">
+                    <h2 class="govuk-heading-m">Get help</h2>
+               <p class="govuk-body"><a class="govuk-link"
+                    href="/live-version02/contact/contact-us-2.html">Contact DWP</a> if you have questions about sending an SR1 form.</p>
+                </div>
+                        <!--Feedback-->
+            </div>
+            <br>
+            <h2 class="govuk-heading-m">Feedback</h2>
+            <p class=govuk-body><a
+                    href="https://forms.office.com/Pages/ResponsePage.aspx?id=DpxP-knna0i8NIr6EGM3VupINvg8uK9KqwdHnbpPR49UNk5RTE1BQ0JXUEJFVTM5OUs4VFNQM1FINS4u">What
+                    did you think of this service?</a></p>
+    
+        </div>
+            </div>
+        </section>
+
+
+<script>
+(function () {
+try {
+var flag = sessionStorage.getItem('sr1Flash');
+if (!flag) return;
+sessionStorage.removeItem('sr1Flash');
+
+var el = document.getElementById('sr1-flash-banner');
+if (!el) return;
+
+el.innerHTML =
+'<div role="region" class="moj-alert moj-alert--success" aria-label="success" data-module="moj-alert">' +
+' <div>' +
+' <svg class="moj-alert__icon" role="presentation" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30" height="30" width="30">' +
+' <path d="M11.2869 24.6726L2.00415 15.3899L4.62189 12.7722L11.2869 19.4186L25.3781 5.32739L27.9958 7.96369L11.2869 24.6726Z" fill="currentColor" />' +
+' </svg>' +
+' </div>' +
+' <div class="moj-alert__content">Your SR1 form has been saved as a draft to your account.</div>' +
+'</div>';
+} catch (e) { /* ignore */ }
+})();
+</script>
+
+
+
+
+  </div>
+
+</div>
+
+
+<script>
+(function () {
+// Attach to any element marked to set a flash message before navigating
+var triggers = document.querySelectorAll('.js-flash-on-save[data-flash]');
+triggers.forEach(function (el) {
+el.addEventListener('click', function () {
+try {
+sessionStorage.setItem('sr1Flash', el.getAttribute('data-flash') || 'draft-saved');
+} catch (e) { /* storage might be blocked; safe to ignore */ }
+}, { capture: true });
+});
+})();
+</script>
+
+
+{% endblock %}
