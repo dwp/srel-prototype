@@ -70,11 +70,11 @@ Does the patient have other relevant diagnosis? – Send an SR1 medical evidence
  
 
 
- <div class="govuk-button-group" style="align-items: normal;">
-                <button id="" class="govuk-button" data-module="govuk-button" onclick="saveClinical-Features-detailsSR1Formliveversion02()">
+   <div class="govuk-button-group" style="align-items: normal;">
+                <button id="" class="govuk-button" data-module="govuk-button" onclick="saveAndLeave()">
                   Continue
               </button>
-              <a href="/live-version02/dashboard/your-account"> <button id="" class="govuk-button govuk-button--secondary js-save-later" data-module="govuk-button" onclick="saveClinical-Features-detailsSR1Formliveversion02()">
+              <a href="/live-version02/dashboard/your-account"> <button type="button" id="" class="govuk-button govuk-button--secondary js-save-later" data-module="govuk-button" onclick="saveAndLeave()">
                   Save and complete later
               </button></a> 
               <br>
@@ -111,5 +111,16 @@ Does the patient have other relevant diagnosis? – Send an SR1 medical evidence
     </div>
 
 </div>
+<script>
+    // get and set in this order - this ensures what is sent in query is the same as what is in the localStorage
+    const saveAndLeave = () => {
+       //saveDateofSpecialRulesSR1Formliveversion01();
+
+        const origin = window.location.origin;
+        const url = getUrlWithSR1DataAsQueryParamsliveversion01(origin, "/live-version01/sr1-form-sections");
+
+        window.location.replace(url.toString());
+    }
+</script>
 
 {% endblock %}

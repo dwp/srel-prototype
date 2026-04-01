@@ -76,7 +76,7 @@ data-module="govuk-button"
 data-flash="draft-saved">
                   Save and continue
               </button>
-              <a href="/live-version02/dashboard/your-account-saved"> <button type="button" id="" class="govuk-button govuk-button--secondary" data-module="govuk-button" onclick="savePrognosisAndLeave()">
+              <a href="/live-version02/dashboard/your-account"> <button type="button" id="" class="govuk-button govuk-button--secondary js-save-later" data-module="govuk-button" onclick="savePrognosisAndLeave()">
                   Save and complete later
               </button></a> 
               <br>
@@ -125,6 +125,18 @@ sessionStorage.setItem('sr1Flash', btn.getAttribute('data-flash') || 'draft-save
 }, { capture: true }); // capture ensures it runs before form submission/redirect
 });
 })();
+</script>
+
+<script>
+    // get and set in this order - this ensures what is sent in query is the same as what is in the localStorage
+    const saveAndLeave = () => {
+       //saveDateofSpecialRulesSR1Formliveversion01();
+
+        const origin = window.location.origin;
+        const url = getUrlWithSR1DataAsQueryParamsliveversion01(origin, "/live-version01/sr1-form-sections");
+
+        window.location.replace(url.toString());
+    }
 </script>
 
 {% endblock %} 

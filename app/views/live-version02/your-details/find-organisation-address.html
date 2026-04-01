@@ -57,7 +57,7 @@ Find your organisation’s address – Send an SR1 medical evidence form – GOV
                 <button id="" class="govuk-button" data-module="govuk-button" onclick="saveOrgNameliveversion02(); resetChangeFn();">
                   Find address
               </button>
-              <a href="/live-version02/dashboard/your-account-saved"> <button type="button" id="" class="govuk-button govuk-button--secondary" data-module="govuk-button" onclick="saveAndLeave()">
+              <a href="/live-version02/dashboard/your-account"> <button type="button" id="" class="govuk-button govuk-button--secondary js-save-later" data-module="govuk-button" onclick="saveAndLeave()">
                   Save and complete later
               </button></a> 
               <br>
@@ -98,6 +98,7 @@ Find your organisation’s address – Send an SR1 medical evidence form – GOV
 <script>
     // get and set in this order - this ensures what is sent in query is the same as what is in the localStorage
     const saveAndLeave = () => {
+       //saveDateofSpecialRulesSR1Formliveversion01();
 
         const origin = window.location.origin;
         const url = getUrlWithSR1DataAsQueryParamsliveversion01(origin, "/live-version01/sr1-form-sections");

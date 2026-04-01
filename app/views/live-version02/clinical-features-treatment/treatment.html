@@ -68,11 +68,49 @@ Save and complete later
 
 </form>
 
-<p class="govuk-body">
-/live-version02/sr1-form-sectionsReturn to SR1 form sections</a>
-</p>
+           <p class="govuk-body"><a class="govuk-link" onclick="saveAndLeave()" style="color:#1d70b8;"
+                    aria-label="Return to SR1 form sections" href="/live-version02/sr1-form-sections">Return to SR1 form sections</a></p>
+        <div class="govuk-!-padding-bottom-6"></div>
+
+        <!--Get help new-->
+        <hr class="govuk-section-break govuk-section-break--visible" aria-hidden="true">
+        <section class="govuk-width-container govuk-!-margin-top-7 govuk-!-margin-bottom-7 ">
+               <div class="govuk-grid-row">
+                  
+                   <div class="govuk-grid-column-full">
+                    <h2 class="govuk-heading-m">Get help</h2>
+               <p class="govuk-body"><a class="govuk-link"
+                    href="/live-version02/contact/contact-us-2.html">Contact DWP</a> if you have questions about sending an SR1 form.</p>
+                </div>
+                        <!--Feedback-->
+            </div>
+            <br>
+            <h2 class="govuk-heading-m">Feedback</h2>
+            <p class=govuk-body><a
+                   href="https://forms.office.com/Pages/ResponsePage.aspx?id=DpxP-knna0i8NIr6EGM3VupINvg8uK9KqwdHnbpPR49UNk5RTE1BQ0JXUEJFVTM5OUs4VFNQM1FINS4u">What
+                    did you think of this service?</a></p>
+    
+        </div>
+            </div>
+        </section>
+
+    </div>
 
 </div>
-</div>
+
+<script>
+(function () {
+// Progressive enhancement: attach to all "flash" save buttons
+var btns = document.querySelectorAll('.js-flash-on-save[data-flash]');
+btns.forEach(function (btn) {
+btn.addEventListener('click', function () {
+try {
+// Store the banner reason (e.g., 'draft-saved')
+sessionStorage.setItem('sr1Flash', btn.getAttribute('data-flash') || 'draft-saved');
+} catch (e) { /* storage blocked — safe to ignore */ }
+}, { capture: true }); // capture ensures it runs before form submission/redirect
+});
+})();
+</script>
 
 {% endblock %}

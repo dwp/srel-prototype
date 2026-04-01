@@ -15,7 +15,8 @@ Check your answers before sending the SR1 form – Save your details – – Sen
 <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
         <form id="profileSetupPage" action="/live-version02/sr1-form-sections" method="post" autocomplete="off">
-            <div class="govuk-form-group">
+<input type="hidden" name="confirmdetails" value="yes">
+         <div class="govuk-form-group">
                 <fieldset class="govuk-fieldset">
                     <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
                         <h1 class="govuk-heading-l">
@@ -41,8 +42,8 @@ Check your answers before sending the SR1 form – Save your details – – Sen
                             <dt class="govuk-summary-list__key">
                                 Name
                             </dt>
-                            <dd class="govuk-summary-list__value">
-                              <p class="govuk-body">Nelson Noah</p>
+                             <dd class="govuk-summary-list__value">
+                                <div>{{data['HCPfirstname']}} {{data['HCPlastname']}}</div>
                             </dd>
                             <dd class="govuk-summary-list__actions">
                                 <a class="govuk-link" href="">
@@ -54,12 +55,9 @@ Check your answers before sending the SR1 form – Save your details – – Sen
                             <dt class="govuk-summary-list__key">
                                 Role
                             </dt>
-                            <dd class="govuk-summary-list__value">
-                               
-
-   <p class="govuk-body">Consultant</p>
-
-
+                                 <dd class="govuk-summary-list__value">
+                                {{ data.yourRole }}
+                                {{ data.yourRolename }}
                             </dd>
                             <dd class="govuk-summary-list__actions">
                                 <a class="govuk-link" href="">
@@ -71,8 +69,9 @@ Check your answers before sending the SR1 form – Save your details – – Sen
                             <dt class="govuk-summary-list__key">
                                 Professional registration number
                             </dt>
-                            <dd class="govuk-summary-list__value">
-   <p class="govuk-body">1111111</p>                            </dd>
+           <dd class="govuk-summary-list__value">
+                                <div>{{data['HCPRegistrationNumber']}} {{data['HCPRegistrationnumbersaved']}} </div>
+                            </dd>
                             <dd class="govuk-summary-list__actions">
                                 <a class="govuk-link" href="">
                                     Change<span class="govuk-visually-hidden"> your professional registration
@@ -127,7 +126,7 @@ data-module="govuk-button"
 data-flash="draft-saved">
                   Save and continue
               </button>
-              <a href="/live-version02/dashboard/your-account-saved"> <button type="button" id="" class="govuk-button govuk-button--secondary" 
+              <a href="/live-version02/dashboard/your-account"> <button type="button" id="" class="govuk-button govuk-button--secondary js-save-later" 
                 data-module="govuk-button" onclick="saveAndLeave()">
                   Save and complete later
               </button></a> 
@@ -181,6 +180,18 @@ sessionStorage.setItem('sr1Flash', btn.getAttribute('data-flash') || 'draft-save
 }, { capture: true }); // capture ensures it runs before form submission/redirect
 });
 })();
+</script>
+
+<script>
+    // get and set in this order - this ensures what is sent in query is the same as what is in the localStorage
+    const saveAndLeave = () => {
+       //saveDateofSpecialRulesSR1Formliveversion01();
+
+        const origin = window.location.origin;
+        const url = getUrlWithSR1DataAsQueryParamsliveversion01(origin, "/live-version01/sr1-form-sections");
+
+        window.location.replace(url.toString());
+    }
 </script>
 
 

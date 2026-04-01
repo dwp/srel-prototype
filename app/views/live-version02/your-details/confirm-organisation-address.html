@@ -13,7 +13,7 @@ Confirm your organisation’s address – Send an SR1 medical evidence form – 
                     <h1 class="govuk-heading-l">
                         Confirm your organisation’s address
                     </h1>
-                    <p>5 addresses found for TW1 3AA. <a href="/live-version01/your-details/find-organisation-address">Search again</a></p>
+                    <p>5 addresses found for TW1 3AA. <a href="find-organisation-address">Search again</a></p>
                     <div class="govuk-inset-text">
                         Ashford Health Clinic<br>London Road<br>Ashford<br>TW1 3AA
                     </div>
@@ -30,6 +30,8 @@ Confirm your organisation’s address – Send an SR1 medical evidence form – 
 
       <form method="post" action="/live-version02/sr1-form-sections" style="display:inline;">
 <input type="hidden" name="patientAddressComplete" value="yes">
+    <input type="hidden" name="confirmdetails" value="yes">    
+    <input type="hidden" name="confirmdetailsfirsttime" value="yes">
 <button type="submit"
  onclick="saveAddressliveversion02(); resetChangeFn();"
 class="govuk-button js-flash-on-save"

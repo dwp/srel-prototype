@@ -7,7 +7,7 @@ Enter the patient’s address – Send an SR1 medical evidence form – GOV.UK
 {% block content %}
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
-    <form id="sendAnSR1Form" action="/live-version01/patient-details/confirm-patient-address" method="post">
+    <form id="sendAnSR1Form" action="/live-version02/patient-details/confirm-patient-address" method="post">
       <div class="govuk-form-group">
         <fieldset class="govuk-fieldset">
           <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
@@ -61,21 +61,24 @@ autocomplete="patient-address-line-1">
       </div>
 
       <!-- Submit button -->
-      <div class="govuk-button-group">
-        <button id="" class="govuk-button" data-module="govuk-button"
-          onclick="savePatientAddressSR1Formliveversion01()">
-          Continue
-        </button>
-        <a class="govuk-link" onclick="saveAndLeave()" style="color:#1d70b8;" aria-label="Return to SR1 form sections"
-          href="#">Return to SR1 form sections</a>
-      </div>
-      <div class="govuk-form-group">
-        <label class="govuk-label" for="find-patient-address"><a id="postcode-finder-link" class="govuk-link"
-            rel="external" href="/live-version01/patient-details/find-patient-address">Find the patient’s address</a></label>
-      </div>
-    </form>
+    <div class="govuk-button-group" style="align-items: normal;">
+                <button id="" class="govuk-button" data-module="govuk-button" onclick="saveOrgAddressliveversion01(); resetChangeFn();">
+                  Continue
+              </button>
+              <a href="/live-version02/dashboard/your-account"> <button type="button" id="" class="govuk-button govuk-button--secondary js-save-later" data-module="govuk-button" onclick="saveAndLeave()">
+                  Save and complete later
+              </button></a> 
+              <br>
+            </div>
+</form>
+           
 
-    <div class="govuk-!-padding-bottom-6"></div>
+<br>
+                      <p class="govuk-body"><a class="govuk-link" onclick="saveAndLeave()" style="color:#1d70b8;"
+                    aria-label="Return to SR1 form sections" href="/live-version02/sr1-form-sections">Return to SR1 form sections</a></p>
+        <div class="govuk-!-padding-bottom-6"></div>
+
+
 
     <!--Get help new-->
     <hr class="govuk-section-break govuk-section-break--visible" aria-hidden="true">

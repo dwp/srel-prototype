@@ -213,4 +213,20 @@ module.exports = function (folderForViews, urlPrefix, router) {
   )
 
 
+const YOUR_DETAILS_WHITELIST = new Set([  
+  'HCPfirstname', 
+   'HCPlastname',  
+   'HCPRegistrationnumbersaved', 
+    'HCPRegistrationNumber', 
+     'HCPmobileNumber',  
+     'saveyourdetails', 
+      'yourRolename',  
+      'yourRole']);function clearSr1FormDataPreservingYourDetails(sessionData) 
+      {  Object.keys(sessionData || {}).forEach((key) => {    
+        if (!YOUR_DETAILS_WHITELIST.has(key)) 
+          {      delete sessionData[key];    }  });}router.get('/live-version02/new-sr1', function (req, res) 
+        {  clearSr1FormDataPreservingYourDetails(req.session.data || {});  res.redirect('/live-version02/name');});``
+
+
+
 }

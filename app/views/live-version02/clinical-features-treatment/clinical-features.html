@@ -7,7 +7,7 @@ Clinical features – Send an SR1 medical evidence form – GOV.UK
 {% block content %}
 <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
-        <form id="sendAnSR1Form" action="" method="post">
+        <form id="sendAnSR1Form" action="/live-version02/clinical-features-treatment/treatment" method="post">
             <div class="govuk-form-group">
                 <fieldset class="govuk-fieldset">
                     <legend class="govuk-fieldset__legend govuk-fieldset__legend--l" for="Clinical-Features-details">
@@ -44,18 +44,19 @@ Clinical features – Send an SR1 medical evidence form – GOV.UK
                             </fieldset>
             </div>
     </form>
-    </form>
+  
             <!-- Submit button -->
          <div class="govuk-button-group" style="align-items: normal;">
 
 <!-- Continue button (runs save function then navigates) -->
-<button 
-type="button" 
-class="govuk-button" 
+<button type="submit"
+class="govuk-button js-flash-on-save"
 data-module="govuk-button"
-onclick="saveClinicalFeaturesAndGoNext()">
+data-flash="draft-saved"
+onclick="saveClinicalFeaturesSR1Formliveversion02()">
 Continue
 </button>
+
 
 <!-- Save and complete later (global handler will intercept this) -->
 <button 
@@ -65,7 +66,7 @@ data-module="govuk-button"
 onclick="saveClinicalFeaturesOnly()">
 Save and complete later
 </button>
-
+  
 </div>
 
 <script>
@@ -125,4 +126,18 @@ window.location.href = "/live-version02/clinical-features-treatment/treatment";
         window.location.replace(url.toString());
     }
 </script>
+
+<script>
+function saveClinicalFeaturesSR1Formliveversion02() {
+// Read textarea
+var val = document.getElementById("Clinical-Features-details").value;
+
+// Save into Prototype Kit session data
+if (window.sessionStorage) {
+window.sessionStorage.setItem("ClinicalFeaturesdetails", val);
+}
+}
+</script>
+
+
 {% endblock %}

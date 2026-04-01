@@ -32,6 +32,9 @@ router.post('/claimant-journey/who-is-applying/answer', function (req, res) {
 
 
 // VERSION-2
+
+
+
 router.post('/srel-branching-options/doctor-said-12-months/answer', function (req, res) {
   var doctorSaid12Months = req.session.data['doctor-said-12-months']
 
