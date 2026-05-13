@@ -75,37 +75,6 @@ Account home
 
 
 
-
-                {% if (
-                (not data['HCPfirstname'] or data['HCPfirstname'] == '') and
-                (not data['HCPlastname'] or data['HCPlastname'] == '') and
-                (not data['HCPRegistrationNumber'] or data['HCPRegistrationNumber'] == '') and
-                (not data['HCPmobileNumber'] or data['HCPmobileNumber'] == '') and
-                (not data['saveYourDetails'] or data['saveYourDetails'] == '')
-                )%}
-
-                <div class="govuk-grid-column-one-third govuk-!-margin-bottom-5">
-                    <div class="card govuk-!-padding-5"
-                        style="height: 180px; color:white; border: 1px solid #b1b4b6; border-bottom-width: 4px;">
-                        <h3 class="govuk-heading-m"><a href=""
-                                class="govuk-link">Save your details </a></h3>
-                        <p class="govuk-body">If you save your details, we will add them to all of your SR1 forms.</p>
-                    </div>
-                </div>
-
-                {% else %}
-
-                <div class="govuk-grid-column-one-third govuk-!-margin-bottom-5">
-                    <div class="card govuk-!-padding-5"
-                        style="height: 180px; color:white; border: 1px solid #b1b4b6; border-bottom-width: 4px;">
-                        <h3 class="govuk-heading-m"><a href=""
-                                class="govuk-link">Check your details</a></h3>
-                        <p class="govuk-body">View, update or delete your details.</p>
-                    </div>
-                </div>
-
-                {% endif %}
-
             </div>
 
 
