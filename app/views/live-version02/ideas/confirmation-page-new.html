@@ -1,0 +1,155 @@
+
+{% extends "layout-no-back.html" %}
+
+{% block pageTitle %}
+SR1 form sent – Send an SR1 medical evidence form – GOV.UK
+{% endblock %}
+
+{% block content %}
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generate PDF</title>
+    <script src=https://rawgit.com/eKoopmans/html2pdf/master/dist/html2pdf.bundle.js></script>
+</head>
+
+<div class="govuk-grid-row">
+
+    <div class="govuk-grid-column-two-thirds">
+
+
+{% if data['saveBannerPreference'] == 'yes' %}
+<div id="save-alert" role="region" class="moj-alert moj-alert--success" aria-label="success: Upload successful" data-module="moj-alert" hidden>  <div>    <svg class="moj-alert__icon" role="presentation" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30" height="30" width="30">      <path d="M11.2869 24.6726L2.00415 15.3899L4.62189 12.7722L11.2869 19.4186L25.3781 5.32739L27.9958 7.96369L11.2869 24.6726Z" fill="currentColor" />    </svg>  </div>  <div class="moj-alert__content">Your details have been saved to your account so you can use them again.</div>  <div class="moj-alert__action">    <button class="moj-alert__dismiss" hidden>Dismiss</button>  </div></div>
+
+
+{% endif %}
+
+
+
+        
+
+        <div class="govuk-panel govuk-panel--confirmation">
+<h1 class="govuk-panel__title">
+SR1 form sent
+</h1>
+</div>
+
+<div class="govuk-!-margin-top-6"></div>
+
+<h2 class="govuk-heading-m">Download a copy</h2>
+
+
+<div class="govuk-warning-text">
+  <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+  <strong class="govuk-warning-text__text">
+    <span class="govuk-visually-hidden">Warning</span>
+    This is the only time you can download the patient's completed SR1 form and your fee claim form.
+  </strong>
+</div>
+
+<p class="govuk-body">
+<a class="govuk-link" href="#" id="pdfButton">
+Download SR1 form (PDF, 1MB)
+</a>
+</p>
+
+
+
+
+<p class="govuk-body">
+<a class="govuk-link" href="/live-version01/download-html" target="_blank">
+Download SR1 form (HTML, 1MB)
+</a>
+</p>
+
+<p class="govuk-body">
+<a class="govuk-link" href="#">
+Download your fee claim form (PDF, 1MB)
+</a>
+</p>
+
+<div class="govuk-!-margin-top-6"></div>
+<br>
+<h2 class="govuk-heading-m">What happens next</h2>
+
+<p class="govuk-body">
+Tell the patient you have sent the SR1 form.
+</p>
+
+<div class="govuk-inset-text">
+Encourage the patient to make a benefit claim if they have not already.
+</div>
+
+<p class="govuk-body">
+This form is not a benefit claim and you have not made a benefit claim for your patient.
+The Department for Work and Pensions (DWP) will not contact your patient about making a benefit claim.
+</p>
+
+<p class="govuk-body">
+
+
+GOV.UK has advice for patients on
+<a class="govuk-link" href="https://www.gov.uk/benefits-end-of-life" target="_blank">
+making a benefit claim if they are nearing the end of life (opens in new tab)
+</a>.
+</p>
+
+<p class="govuk-body">
+We will contact the patient when we have made a decision on their claim.
+</p>
+
+<p class="govuk-body">
+If we need more information about the patient, we will contact you.
+</p>
+
+{% from "govuk/components/button/macro.njk" import govukButton %}
+
+<br>
+
+<div class="govuk-button-group">
+{{ govukButton({
+text: "Start a new SR1 form",
+href: "/live-version02/new-sr1"
+}) }}
+
+{{ govukButton({
+text: "Return to your account",
+classes: "govuk-button--secondary",
+href: "/live-version02/dashboard/your-account"
+}) }}
+</div>
+
+<hr class="govuk-section-break govuk-section-break--visible govuk-!-margin-top-7">
+
+        <!--Get help new-->
+        <hr class="govuk-section-break govuk-section-break--visible" aria-hidden="true">
+             <section class="govuk-width-container govuk-!-margin-top-7 govuk-!-margin-bottom-7 ">
+              <div class="govuk-grid-row">
+                  
+                   <div class="govuk-grid-column-full">
+                    <h2 class="govuk-heading-m">Get help</h2>
+               <p class="govuk-body"><a class="govuk-link"
+                    href="/live-version02/contact/contact-us-2.html">Contact DWP</a> if you have questions about sending an SR1 form.</p>
+                </div>
+                        <!--Feedback-->
+            </div>
+          <br>
+            <h2 class="govuk-heading-m">Feedback</h2>
+            <p class=govuk-body><a
+                    href="https://forms.office.com/Pages/ResponsePage.aspx?id=DpxP-knna0i8NIr6EGM3VupINvg8uK9KqwdHnbpPR49UNk5RTE1BQ0JXUEJFVTM5OUs4VFNQM1FINS4u">What
+                    did you think of this service?</a></p>
+
+    
+    
+
+
+<script>  (function () {    const flag = sessionStorage.getItem('saveDetails');    document.getElement;    document.getElementById('save-alert').hidden = (flag !== 'yes');  })();</script>
+
+        </div>
+
+</div>
+
+
+
+{% endblock %}
