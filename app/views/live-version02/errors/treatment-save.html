@@ -50,9 +50,9 @@ You can enter up to 350 characters
 <!-- SAVE AND CONTINUE (Submit form, update data[], show banner) -->
 <button
 type="submit"
-class="govuk-button js-flash-on-save"
+class="govuk-button"
 data-module="govuk-button"
-data-flash="draft-saved">
+onclick="sessionStorage.setItem('showErrorBanner', 'true')">
 Save and continue
 </button>
 
@@ -60,9 +60,10 @@ Save and continue
 <button
 type="button"
 class="govuk-button govuk-button--secondary"
-data-module="govuk-button">
-Save and complete later
-</button>
+data-module="govuk-button"
+onclick="sessionStorage.removeItem('showErrorBanner'); window.location.href='/live-version02/errors/save-later-error';">
+Save and complete later</button>
+
 
 </div>
 
