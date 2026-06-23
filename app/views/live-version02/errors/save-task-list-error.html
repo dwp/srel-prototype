@@ -50,17 +50,12 @@ SR1 form – Send an SR1 medical evidence form – GOV.UK
         <ul class="govuk-task-list">
           <li class="govuk-task-list__item govuk-task-list__item--with-link" id="patientFullName">
             <div class="govuk-task-list__name-and-hint" id="patientDetails-notstarted">
-              <a class="govuk-link govuk-task-list__link" href=""
+              <a class="govuk-link govuk-task-list__link" href="patient-details/name.html"
                 aria-describedby="patientDetails-status-notstarted">
                 Complete patient details
               </a>
             </div>
               {% if (
-                (not data['PatientFirstName'] or data['PatientFirstName'] == '') and
-                (not data['PatientLastName'] or data['PatientLastName'] == '') and
-                (not data['patientdateofbirthday'] or data['patientdateofbirthday'] == '') and
-                (not data['patientdateofbirthmonth'] or data['patientdateofbirthmonth'] == '') and
-                (not data['patientdateofbirthyear'] or data['patientdateofbirthyear'] == '') and  
                 (not data['patientAddressComplete'] and data['patientAddressComplete'] != '')
               )%}
                <div class="govuk-task-list__status" id="application-details-3-status">
@@ -95,7 +90,7 @@ SR1 form – Send an SR1 medical evidence form – GOV.UK
  <ul class="govuk-task-list">
    <li class="govuk-task-list__item govuk-task-list__item--with-link" id="patientDiagnosis">
      <div class="govuk-task-list__name-and-hint" id="Diagnosis-link-notstarted">
-       <a class="govuk-link govuk-task-list__link" href=""
+       <a class="govuk-link govuk-task-list__link" href="diagnosis/details"
          aria-describedby="patientDiagnosis-status-notstarted">
          Complete diagnosis
        </a>
@@ -281,7 +276,7 @@ SR1 form – Send an SR1 medical evidence form – GOV.UK
       </div>
     </div>
 
-    <div class="govuk-!-padding-bottom-6"></div>
+    <div class="govuk-!-padding-bottom-6">
         <!--Get help new-->
         <hr class="govuk-section-break govuk-section-break--visible" aria-hidden="true">
         <section class="govuk-width-container govuk-!-margin-top-7 govuk-!-margin-bottom-7 ">
@@ -333,6 +328,9 @@ el.innerHTML =
   </div>
 
 </div>
+
+
+
 
 
 <script>

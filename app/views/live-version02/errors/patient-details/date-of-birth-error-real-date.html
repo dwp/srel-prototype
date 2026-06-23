@@ -1,0 +1,168 @@
+{% extends "layout-gov-signed-in-live-version01.html" %}
+
+{% block pageTitle %}
+Error: What is the patient’s date of birth? – Send an SR1 medical evidence form – GOV.UK
+{% endblock %}
+
+{% block content %}
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+        <form id="sendAnSR1Form" action="/live-version01/patient-details/find-patient-address" method="post">
+
+            <!-- ERROR STATE -->
+            <div class="govuk-error-summary" data-module="govuk-error-summary">
+                <div role="alert">
+                    <h2 class="govuk-error-summary__title">
+                        There is a problem
+                    </h2>
+                    <div class="govuk-error-summary__body">
+                        <ul class="govuk-list govuk-error-summary__list">
+                            <li>
+                                <a href="#birth-day" class="govuk-visually-hidden">Enter the patient's date of birth</a>
+                            </li>
+                            <li>
+                                <a href="#birth-day" class="govuk-visually-hidden">The patient's date of birth must be in the past</a>
+                            </li>
+                            <li>
+                                <a href="#birth-day" class="govuk-visually-hidden">The patient's date of birth must
+                                    include a day</a>
+                            </li>
+                            <li>
+                                <a href="#birth-month" class="govuk-visually-hidden">The patient's date of birth must
+                                    include a month</a>
+                            </li>
+                            <li>
+                                <a href="#birth-year" class="govuk-visually-hidden">The patient's date of birth must
+                                    include a year</a>
+                            </li>
+                            <li>
+                                <a href="#birth-day" >The patient's date of birth must be a real date</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="govuk-form-group govuk-form-group--error">
+                <fieldset class="govuk-fieldset">
+                    <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+                        <!--<span class="govuk-caption-l"> Question 2 of 4</span>-->
+                        <h1 class="govuk-fieldset__heading">
+                            What is the patient’s date of birth?
+                        </h1>
+                    </legend>
+
+                    <!-- Date of birth -->
+                    <div id="dob-hint" class="govuk-hint">
+                        For example, 27 3 2007.
+                    </div>
+                    <!--ERROR LEGEND -->
+                    <p id="dob-error" class="govuk-error-message govuk-visually-hidden">
+                        <span class="govuk-visually-hidden">Error:</span> Enter the patient's date of birth
+                    </p>
+                    <p id="dob-past-error" class="govuk-error-message govuk-visually-hidden">
+                        <span class="govuk-visually-hidden">Error:</span> The patient's date of birth must be in the
+                        past
+                    </p>
+                    <p id="birth-day-error" class="govuk-error-message govuk-visually-hidden">
+                        <span class="govuk-visually-hidden">Error:</span> The patient's date of birth must include a day
+                    </p>
+                    <p id="birth-month-error" class="govuk-error-message govuk-visually-hidden">
+                        <span class="govuk-visually-hidden">Error:</span> The patient's date of birth must include a
+                        month
+                    </p>
+                    <p id="birth-year-error" class="govuk-error-message govuk-visually-hidden">
+                        <span class="govuk-visually-hidden">Error:</span> The patient's date of birth must include a
+                        year
+                    </p>
+                    <p id="real-dob-error" class="govuk-error-message">
+                        <span class="govuk-visually-hidden">Error:</span> The patient's date of birth must be a real date
+                    </p>
+                    <!-- END ERROR -->
+                    <div class="govuk-date-input"  id=“birth-date” name="birth-date" value="{{data['birth-date']}}>>
+                        <div class="govuk-date-input__item">
+                            <div class="govuk-form-group">
+                                <label class="govuk-label govuk-date-input__label" for="birth-day">
+                                    Day
+                                </label>
+                                <input autocomplete="off"
+                                    class="govuk-input govuk-date-input__input govuk-input--width-2 govuk-input--error" id="birth-day"
+                                    name="birth-day" type="text" inputmode="numeric"
+                                    onkeypress="return isNumberKey(event)" maxlength="2" value="9">
+                            </div>
+                        </div>
+                        <div class="govuk-date-input__item">
+                            <div class="govuk-form-group">
+                                <label class="govuk-label govuk-date-input__label" for="birth-month">
+                                    Month
+                                </label>
+                                <input autocomplete="off"
+                                    class="govuk-input govuk-date-input__input govuk-input--width-2 govuk-input--error" id="birth-month"
+                                    name="birth-month" type="text" inputmode="numeric"
+                                    onkeypress="return isNumberKey(event)" maxlength="2" value="14">
+                            </div>
+                        </div>
+                        <div class="govuk-date-input__item">
+                            <div class="govuk-form-group">
+                                <label class="govuk-label govuk-date-input__label" for="birth-year">
+                                    Year
+                                </label>
+                                <input autocomplete="off"
+                                    class="govuk-input govuk-date-input__input govuk-input--width-4 govuk-input--error" id="birth-year"
+                                    name="birth-year" type="text" inputmode="numeric"
+                                    onkeypress="return isNumberKey(event)" maxlength="4" value="1970">
+                            </div>
+                        </div>
+                    </div>
+
+                </fieldset>
+            </div>
+
+            <!-- Submit button -->
+            <div class="govuk-button-group">
+                <button id="" class="govuk-button" data-module="govuk-button" onclick="saveDOBSR1Formliveversion01()">
+                    Continue
+                </button>
+                <a class="govuk-link" onclick="saveAndLeave()" style="color:#1d70b8;" aria-label="Return to SR1 form sections" href="/live-version01/usertestingoption">Return to SR1 form sections</a>
+            </div>
+        </form>
+        <div class="govuk-!-padding-bottom-6"></div>
+        <!--Get help new-->
+        <hr class="govuk-section-break govuk-section-break--visible" aria-hidden="true">
+        <section class="govuk-width-container govuk-!-margin-top-7 govuk-!-margin-bottom-7 ">
+            <div class="govuk-grid-row">
+                <div class="govuk-grid-column-full">
+                    <h2 class="govuk-heading-m">Get help</h2>
+                    <p class="govuk-body">Email: <a class="govuk-link"
+                            href="mailto:online.sr1@dwp.gov.uk">online.sr1@dwp.gov.uk</a></p>
+                    <p class="govuk-body">We aim to respond within 3 working days.</p>
+                </div>
+                        <!--Feedback-->
+            </div>
+            <h2 class="govuk-heading-m">Feedback</h2>
+            <p class=govuk-body><a
+                   href="https://forms.office.com/Pages/ResponsePage.aspx?id=DpxP-knna0i8NIr6EGM3VupINvg8uK9KqwdHnbpPR49UNk5RTE1BQ0JXUEJFVTM5OUs4VFNQM1FINS4u">What
+                    did you think of this service?</a></p>
+    
+        </div>
+            </div>
+        </section>
+
+    </div>
+
+</div>
+
+<script>
+    // get and set in this order - this ensures what is sent in query is the same as what is in the localStorage
+    const saveAndLeave = () => {
+        //saveDOBSR1Formliveversion01();
+
+        const origin = window.location.origin;
+        const url = getUrlWithSR1DataAsQueryParamsliveversion01(origin, "/live-version01/sr1-form-sections");
+
+        window.location.replace(url.toString());
+    }
+
+        // old href="/live-version01/task-list-sr1-form" <- not sure why its different on different pages 
+</script>
+{% endblock %}

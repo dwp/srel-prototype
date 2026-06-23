@@ -1348,4 +1348,15 @@ router.post('/private-beta02/personal-details', function (req, res) {
   }
 })
 
+
+
+
+
+router.get('/live-version02/errors/reset-form', function (req, res) {
+req.session.data = {}; // ✅ clears ALL form data
+res.redirect('/live-version02/errors/save-task-list-error');
+});
+
+
+
 //
