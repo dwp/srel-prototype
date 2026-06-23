@@ -5,7 +5,7 @@ SR1 form – Send an SR1 medical evidence form – GOV.UK
 {% endblock %}
 
 {% block content %}
-
+<br>
 {% macro subsectionStatus(idSuffix, dataVar, fullNameSet) %}
 {% if dataVar | isStringVarDefined %}
 <strong class="govuk-tag app-task-list__tag" id="{{idSuffix}}-completed" aria-hidden><strong class="govuk-tag govuk-tag--green">
