@@ -12,7 +12,7 @@
     "@ministryofjustice/frontend": "6.0.0",
     "axios": "1.17.0",
     "govuk-frontend": "5.13.0",
-    "govuk-prototype-kit": "13.18.1",
+    "govuk-prototype-kit": "^13.20.2",
     "hmrc-frontend": "6.100.0",
     "html2pdf.js": "^0.9.3",
     "jquery": "3.7.1",
@@ -22,7 +22,13 @@
   },
   "overrides": {
     "uuid": "14.0.0",
-    "form-data": "^4.0.6",
-    "ws": "^8.21.0"
+    "form-data": "4.0.6",
+    "then-request": {
+      "form-data": "4.0.6"
+    },
+    "sync-request": {
+      "form-data": "4.0.6"
+    },
+    "ws": "8.21.0"
   }
 }
