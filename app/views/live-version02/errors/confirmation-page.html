@@ -30,74 +30,81 @@ SR1 form sent – Send an SR1 medical evidence form – GOV.UK
         
 
         <div class="govuk-panel govuk-panel--confirmation">
-            <h1 class="govuk-panel__title">SR1 form sent</h1>
-            <!--<h1 class="govuk-panel__title">SR1 form <span id="resubmittedH1" class="hidden">re</span>sent</h1>-->
-        </div>
+<h1 class="govuk-panel__title">
+SR1 form sent
+</h1>
+</div>
 
-        <div class="govuk-!-padding-bottom-6"></div>
-        <h2 class="govuk-heading-m">Download a copy </h2>
-        <p class="govuk-body">This is the only time you can download the patient's completed SR1 form and your fee claim
-            form.</p>
+<div class="govuk-!-margin-top-6"></div>
 
-        <!--<p class="govuk-body"><a class="govuk-link gem-c-attachment__link" target="_self" onclick=printForm()
-                style="color:#1d70b8;">Download <span id="patientFullName"></span> SR1 form (PDF, 1MB)</a>.</p>-->
-        <p class="govuk-body"><a class="govuk-link gem-c-attachment__link" style="color:#1d70b8;" href="#"
-                id="pdfButton">Download <span id="patientFullName"></span> SR1 form (PDF, 1MB)</a>.</p>
-        <p class="govuk-body">If you use assistive software, you can <a class="govuk-link"
-                href="/live-version01/download-html" target="_blank" download>download an accessible version of
-                <span id="patientFullName2"></span> SR1 form (HTML, 1MB)</a>.</p>
+<h2 class="govuk-heading-m">Download a copy</h2>
 
-        <p class="govuk-body">
-            <!--<a class="govuk-link gem-c-attachment__link" target="_self" href="./live-version01/other/pdfs/SR1_fee_form_08_23.pdf" >Download your fee claim form (PDF, 1MB)</a>-->
-            <a href="#" target="_self">Download your fee claim form (PDF,
-                1MB)</a>.
-        </p>
 
-        <script>
-            // Attach click event to the PDF button
-            document.getElementById('pdfButton').addEventListener('click', generatePDF);
+<div class="govuk-warning-text">
+  <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+  <strong class="govuk-warning-text__text">
+    <span class="govuk-visually-hidden">Warning</span>
+    This is the only time you can download the patient's completed SR1 form and your fee claim form.
+  </strong>
+</div>
 
-            async function generatePDF() {
-                const url = '/live-version01/download-html';
-
-                try {
-                    const response = await fetch(url);
-                    const htmlContent = await response.text();
-
-                    const dynamicContent = await generateDynamicContentliveversion01(); // Replace with the actual function to generate dynamic content
-
-                    // Merge the static HTML content with the dynamic content
-                    const mergedHtml = mergeHtmlliveversion01(htmlContent, dynamicContent);
-
-                    // Use html2pdf library to generate PDF
-                    html2pdf(mergedHtml, {
-                        margin: 10,
-                        filename: 'Download SR1 form (PDF, 1MB)',
-                        jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' },
-                        html2canvas: { scale: 2 },
-                        pagebreak: { mode: 'avoid-all' }
-                    });
-                } catch (error) {
-                    console.error('Error fetching or generating PDF:', error);
-                }
-            }
-        </script>
-
-        <div class="govuk-!-padding-bottom-6"></div>
-
-        <h2 class="govuk-heading-m">What happens next</h2>
-
-        <p class="govuk-body">Tell the patient you have sent the SR1 form. You should encourage them to submit their
-            benefit claim if they have not already.</p>
-        <p class="govuk-body">We will contact the patient when we have made a decision on their claim.</p>
-        <p class="govuk-body">If we need more information about the patient, we will contact you.</p>
-        <!-- Submit button -->
-  
-
-        <br>
+<p class="govuk-body">
+<a class="govuk-link" href="#" id="pdfButton">
+Download SR1 form (PDF, 1MB)
+</a>
+</p>
 
 
 
+
+<p class="govuk-body">
+<a class="govuk-link" href="/live-version01/download-html" target="_blank">
+Download SR1 form (HTML, 1MB)
+</a>
+</p>
+
+<p class="govuk-body">
+<a class="govuk-link" href="#">
+Download your fee claim form (PDF, 1MB)
+</a>
+</p>
+
+<div class="govuk-!-margin-top-6"></div>
+<br>
+<h2 class="govuk-heading-m">What happens next</h2>
+
+<p class="govuk-body">
+Tell the patient you have sent the SR1 form.
+</p>
+
+<div class="govuk-inset-text">
+Encourage the patient to make a benefit claim if they have not already.
+</div>
+
+<p class="govuk-body">
+This form is not a benefit claim and you have not made a benefit claim for your patient.
+The Department for Work and Pensions (DWP) will not contact your patient about making a benefit claim.
+</p>
+
+<p class="govuk-body">
+
+
+GOV.UK has advice for patients on
+<a class="govuk-link" href="https://www.gov.uk/benefits-end-of-life" target="_blank">
+making a benefit claim if they are nearing the end of life (opens in new tab)
+</a>.
+</p>
+
+<p class="govuk-body">
+We will contact the patient when we have made a decision on their claim.
+</p>
+
+<p class="govuk-body">
+If we need more information about the patient, we will contact you.
+</p>
+
+
+<br>
 
 
 {% from "govuk/components/button/macro.njk" import govukButton %}
@@ -120,17 +127,7 @@ href: ""})}}
 
 
 
-        <h3 class="govuk-heading-s">Support for your patient</h3>
-        <p class="govuk-body">GOV.UK has advice for patients on <a class="govuk-link"
-            href="https://www.gov.uk/benefits-end-of-life" target="_blank" download> making a benefit claim if they are nearing the end of life (opens in new tab)</a>.</p>
-            <div class="govuk-inset-text">
-                You have not made a benefit claim for your patient.
-              </div> <p class="govuk-body"></p>
-
-        <p class="govuk-body">The Department for Work and Pensions (DWP) will not contact your patient about making a benefit claim.</p>
-        <!-- Submit button -->
-
-        <div class="govuk-!-padding-bottom-6"></div>
+    
 
         <!--Get help new-->
         <hr class="govuk-section-break govuk-section-break--visible" aria-hidden="true">
